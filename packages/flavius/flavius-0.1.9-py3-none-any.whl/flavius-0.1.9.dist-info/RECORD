@@ -1,0 +1,12 @@
+flavius/__init__.py,sha256=klGiIZrgiCmeEQdsdSXg0Kxc_z4l4lQx0TiL2J4jPMc,734
+flavius/_client.py,sha256=L_D9Gav8YSdfXGk7UbZRAN6871CWs_6G8YGR53l8BQU,12940
+flavius/_client.pyc,sha256=w7xRh1PPjHy0xdVotAZXKlH6f4ZBzQ9YZOu8C3JY-ac,16078
+flavius/client.py,sha256=yeYtQlgekaZezNbWPGmslpT0rd2yPZla2SLA3mkeQPQ,10086
+flavius/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flavius/utils/json.py,sha256=t-HfvGKkMo9bV_jt-jTw1So4xsIFuJdkP3hX706w-F8,2088
+flavius/utils/json.pyc,sha256=rD4xoR31WTgCdlaNitNkQerfvqzIuPQjPb7tB9U_oJk,2418
+flavius/utils/utils.py,sha256=zEwswOZd56Zxs_0IGkTYYdOhAPJ1xRfJcXiXNys_o08,2130
+flavius-0.1.9.dist-info/METADATA,sha256=efhS6Dkwz8G8WVZ5SL23U_eP2R1-O88lMo0-LrllW_8,29352
+flavius-0.1.9.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+flavius-0.1.9.dist-info/top_level.txt,sha256=TSOAbcTpPaoBPMDQzVhQdVSgoOADKvLBvh-RX4sp_nc,8
+flavius-0.1.9.dist-info/RECORD,,
