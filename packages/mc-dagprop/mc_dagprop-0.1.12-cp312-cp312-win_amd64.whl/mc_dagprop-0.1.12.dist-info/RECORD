@@ -1,0 +1,12 @@
+mc_dagprop/__init__.py,sha256=NN8Gptep8PNrjUgBAAkDdtwyHb5k_umPuIFQxDqpSgo,239
+mc_dagprop/_core.cp312-win_amd64.pyd,sha256=JqTM_XumaAWvXM1ikyWoBq38QZPrECn02QQt_9UrBds,231936
+mc_dagprop/_core.cpp,sha256=2OfCHZ4zmAY6LdUhnvmyIw8VGEApRkNgV25lqm9GaTQ,11834
+mc_dagprop/_core.pyi,sha256=ZuokRKxMSGWNlui9DjmD5QIDX-WwSFHZ7kA25pYQlSk,2546
+mc_dagprop/py.typed.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mc_dagprop/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mc_dagprop/utils/demo_distributions.py,sha256=KGhjTZxq8H09K4exGYCbwDw4uIIpTTr_pFFgnwwK-QM,2980
+mc_dagprop-0.1.12.dist-info/licenses/LICENSE,sha256=ErVysT2KPtLgYmod6JTR7dfsuuqYR6qUOltp1idLcXo,1086
+mc_dagprop-0.1.12.dist-info/METADATA,sha256=quGTzUtZPn30-eazOCzD5-qtkAKScy2NR6lMAKQo1tE,5974
+mc_dagprop-0.1.12.dist-info/WHEEL,sha256=Jt89WmAJV88pNRHMaNesrLxovMec0KaUDI5oSN8rrpM,101
+mc_dagprop-0.1.12.dist-info/top_level.txt,sha256=VhWzDtWD8NINYQBpHAGwmNMjsiEk1zDvgfk_bwt1p04,11
+mc_dagprop-0.1.12.dist-info/RECORD,,
