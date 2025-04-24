@@ -1,0 +1,10 @@
+mobly/controllers/android_device_lib/services/__init__.py,sha256=EqO1RvfjaFVpErfBFvioKugkKuobPmNUfpwGl6SiHY8,577
+mobly/controllers/android_device_lib/services/screen_recorder.py,sha256=7yJTe_ZpHaIbeJXyPueoyplRkNgapfnkr4veLIr39qY,25059
+mobly/controllers/android_device_lib/services/data/scrcpy-server-v3.jar,sha256=CZzPpOdDlVh3uBveFVnt_631g5F8zJSR27ZYxiMfLl0,1266242
+mobly/controllers/android_device_lib/services/data/scrcpy-server.apk,sha256=B2am73w8FRGUujsIT7MuJ632G_E7dXtdqIrdlA8k-28,1212982
+mobly_android_screen_recorder-1.0.1.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+mobly_android_screen_recorder-1.0.1.dist-info/licenses/NOTICE,sha256=7EcJQjD_mbb01ZD4zZo9P_3V1CSPe_F6NbbhOrfJ3Gk,689
+mobly_android_screen_recorder-1.0.1.dist-info/METADATA,sha256=OK6TBGaR5RADJx84USDQuQ_WqQqzno_4Qd2mSFxxGBo,18150
+mobly_android_screen_recorder-1.0.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+mobly_android_screen_recorder-1.0.1.dist-info/top_level.txt,sha256=ZEZwk3q344R8DS6VMzOUc2pQgg3QIAQCixxG_F-FCvY,6
+mobly_android_screen_recorder-1.0.1.dist-info/RECORD,,
