@@ -1,0 +1,82 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "linkedin-discord-bot"
+description = "A Discord bot that posts LinkedIn job postings"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "linkedin-jobs-scraper>=5.0.2",
+    "prettytable>=3.16.0",
+    "py-cord>=2.6.1",
+    "pydantic>=2.11.3",
+    "pydantic-settings>=2.8.1",
+    "sqlalchemy>=2.0.40",
+    "sqlmodel>=0.0.24",
+    "typer>=0.15.2",
+    "typing-extensions>=4.13.2",
+]
+
+dynamic = ["version"]
+
+[project.scripts]
+lidb = "linkedin_discord_bot.cli.main:top_level_cli"
+
+[tool.hatch.version]
+path = "linkedin_discord_bot/__init__.py"
+
+[tool.uv]
+package = true
+
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+publish-url = "https://test.pypi.org/legacy/"
+explicit = true
+
+[dependency-groups]
+dev = [
+    "alembic>=1.15.2",
+    "black>=25.1.0",
+    "deptry>=0.23.0",
+    "flake8>=7.2.0",
+    "isort>=6.0.1",
+    "mypy>=1.15.0",
+    "pylint>=3.3.6",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.1.1",
+    "pytest-mock>=3.14.0",
+    "testcord>=0.0.1",
+]
+
+[tool.black]
+line-length = 100
+
+[tool.mypy]
+mypy_path = "stubs"
+python_version = "3.12"
+exclude = "tests/.*"
+strict = true
+disallow_untyped_decorators = false
+untyped_calls_exclude = "discord"
+
+[[tool.mypy.overrides]]
+module = "linkedin_jobs_scraper.*"
+ignore_missing_imports = true
+
+[tool.pylint.format]
+expected-line-ending-format = "LF"
+max-line-length = 100
+
+[tool.pylint."messages control"]
+disable = ["all"]
+enable = ["mixed-line-endings", "unexpected-line-ending-format"]
+
+[tool.pytest.ini_options]
+addopts = "-v --cov=linkedin_discord_bot --cov-report=term-missing --cov-fail-under=1 --cov-config=.coveragerc"
+testpaths = ["tests"]
+log_file = "pytest.log"
+log_file_level = "INFO"
+log_file_format = "%(asctime)s %(levelname)s %(message)s"
