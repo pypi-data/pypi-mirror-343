@@ -1,0 +1,11 @@
+splitpatch/__init__.py,sha256=LyYLO5ry9_-zaX7464fBK1qtYWpZMBDU6wDhz7T22fM,778
+splitpatch/__main__.py,sha256=r9t2CWkrI610MHzXq3dXQXXDR6T5eIrMZysHmmZhzXs,118
+splitpatch/cli.py,sha256=aqcQCF-r67-JoeVl3lGhQxMIMTHMGFK6Ba3Y23obDIQ,5955
+splitpatch/merge.py,sha256=dZsCqT7CQ03kXWty6Y7elvlJ3RWzcKKFHf_J8aF8E_Q,9916
+splitpatch/patch.py,sha256=nvtYUw3CthvzCtvs0zPmolFI0MNn24su-VT3sMmBEpk,3312
+splitpatch/tree.py,sha256=11nuF0D4ZikCDs8D2UdWGDatAlxtdyO53-TR-uLWnt0,6447
+splitpatch-1.0.dist-info/licenses/LICENSE,sha256=9biu8VaGTc4_r4P41vy5bzEpozb4pFg-vxz4-FXdpeQ,1063
+splitpatch-1.0.dist-info/METADATA,sha256=w7aoDvlZ4TjBpWXJpTCMQrWEc-HFBNhAEns64Z1btis,22548
+splitpatch-1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+splitpatch-1.0.dist-info/top_level.txt,sha256=FDWzgC13ZKB9II7cvogO1xiQeeSbDPWlVv6Rrg2N_hE,11
+splitpatch-1.0.dist-info/RECORD,,
