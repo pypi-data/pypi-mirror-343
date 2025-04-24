@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "falko_horn"
+version = "0.1.0"
+requires-python = ">=3.9"
+description = "My first package!"
+readme = "README.md"
+authors = [
+    {name = "Falko Horn", email = "falko_horn@gmx.de"},
+]
+maintainers = [
+  {name = "Falko Horn", email = "falko_horn@gmx.de"}
+]
+license = {file = "LICENSE.txt"}
+keywords = [
+    "Horn"
+]
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "License :: OSI Approved :: BSD License",
+    "Intended Audience :: Developers",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS",
+    "Operating System :: MacOS :: MacOS X",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/DerParby/falko_horn"
+Documentation = "https://github.com/DerParby/falko_horn/README.md"
+
+[project.scripts]
+falko_horn = "falko_horn.__main__:main"

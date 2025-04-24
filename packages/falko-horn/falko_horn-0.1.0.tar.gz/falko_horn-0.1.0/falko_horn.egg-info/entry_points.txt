@@ -1,0 +1,2 @@
+[console_scripts]
+falko_horn = falko_horn.__main__:main
