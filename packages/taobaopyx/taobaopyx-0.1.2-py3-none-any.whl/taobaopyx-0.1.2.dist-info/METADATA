@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: taobaopyx
+Version: 0.1.2
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: httpx
+
+# taobaopyx
+
+Asyncio version of taobaopy powered by httpx
+
+## Install
+
+```bash
+pip install -U taobaopyx
+```
+
+## Use
+
+```python
+from taobaopyx.taobao import APINode, AsyncTaobaoAPIClient
+import asyncio
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+
+
+client = AsyncTaobaoAPIClient(app_key="fake_key", app_secret="fake_sescret")
+
+taobao = APINode(client, "taobao")
+
+
+async def get():
+    res = await taobao.mixnick.get(nick="nick")
+    print(res)
+
+
+async def shutdown():
+    await client.aclose()
+
+
+asyncio.run(get())
+asyncio.run(shutdown())
+```
