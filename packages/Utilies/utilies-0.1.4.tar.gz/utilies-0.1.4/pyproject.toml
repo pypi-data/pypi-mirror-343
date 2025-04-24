@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools", "wheel","selenium"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Utilies"
+version = "0.1.4"
+authors = [{name = "Krishna Murthy S", email = "krishnamurthy.s@hpe.com"}]
+description = "A simple Python library"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+dependencies = []
