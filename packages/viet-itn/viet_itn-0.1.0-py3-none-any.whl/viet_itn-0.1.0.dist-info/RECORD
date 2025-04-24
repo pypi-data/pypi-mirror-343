@@ -1,0 +1,11 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/api.py,sha256=GKXKYREO9q7w085xE1-OTQNfm4rmToOAQ6CtqRnNZyU,1073
+src/cli.py,sha256=7rmuM6bm0n17LlebZWGDq0kgOETe-o9GY8QijFM4yXk,518
+src/normalize.py,sha256=svtti8UZKnhnwn2eL6YjZasG2IeMJNVP6Lro17MhnY0,723
+src/far/classify/tokenize_and_classify.far,sha256=iKoZJVNoZjKC_Dw1RmD07K5BbFG7SZTKbOVYJwiI4rg,1440743
+src/far/verbalize/verbalize.far,sha256=h-bpAfwL7RzO2elzMbya31LzmbUDITL7WzXweNjxJBI,252873
+viet_itn-0.1.0.dist-info/METADATA,sha256=UuWs8EYdLFl-09EvkpZxmhXEbPAtB3mcbJ1VyQp5xlU,267
+viet_itn-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+viet_itn-0.1.0.dist-info/entry_points.txt,sha256=J40v_iRJl_HCWDnI9DESIQr0hz-pGFZahwnWwLHkVVg,37
+viet_itn-0.1.0.dist-info/licenses/LICENSE,sha256=AfShiUAl1f66LEPtL4eERHADYZyibTjy-_hl7DF_Q-w,1065
+viet_itn-0.1.0.dist-info/RECORD,,
