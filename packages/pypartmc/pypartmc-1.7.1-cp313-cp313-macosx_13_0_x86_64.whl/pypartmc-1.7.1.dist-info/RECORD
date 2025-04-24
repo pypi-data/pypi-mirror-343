@@ -1,0 +1,10 @@
+_PyPartMC.cpython-313-darwin.so,sha256=ITBOp2CpONnGT7sav63LUzfRVNdzAnUyr-Cnm75PHso,8707344
+pypartmc-1.7.1.dist-info/RECORD,,
+pypartmc-1.7.1.dist-info/WHEEL,sha256=IY40GbnwzBhemc6FK07uHvMXQ4KjORBp3SdkGBP9Uwg,137
+pypartmc-1.7.1.dist-info/top_level.txt,sha256=PJxy22pTnxcBhqrb6r4AIL32rkxA61gzw7ohlzybgSM,19
+pypartmc-1.7.1.dist-info/METADATA,sha256=d8p7dsD8rjuJi7PZo3sc68dBwTS3vKczUa9mN4oUoXA,26985
+pypartmc-1.7.1.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+PyPartMC/__init__.py,sha256=VAqwePpJZEFJ7YieM1GbUvfluRhUyWXciP89pY9xIH4,2217
+PyPartMC/.dylibs/libgfortran.5.dylib,sha256=etyxz-8rqdtvJpasnCPJy-k3-n6i2SUipcUIWDe7mBA,3675456
+PyPartMC/.dylibs/libquadmath.0.dylib,sha256=g5Vj1SnflQyC0fbv3pq1wIF1yKp3-IQyrfRZF15az4c,379152
+PyPartMC/.dylibs/libgcc_s.1.1.dylib,sha256=VudTEH7JbLJcL0zve9xGpwFcz7raV-le_iuOzBw_AkI,282640
