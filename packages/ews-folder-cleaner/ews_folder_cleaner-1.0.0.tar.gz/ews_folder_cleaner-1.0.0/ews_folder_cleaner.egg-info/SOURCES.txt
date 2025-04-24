@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+ews_folder_cleaner/__init__.py
+ews_folder_cleaner/exchange_cleaner_linux_fixed.py
+ews_folder_cleaner.egg-info/PKG-INFO
+ews_folder_cleaner.egg-info/SOURCES.txt
+ews_folder_cleaner.egg-info/dependency_links.txt
+ews_folder_cleaner.egg-info/entry_points.txt
+ews_folder_cleaner.egg-info/requires.txt
+ews_folder_cleaner.egg-info/top_level.txt
