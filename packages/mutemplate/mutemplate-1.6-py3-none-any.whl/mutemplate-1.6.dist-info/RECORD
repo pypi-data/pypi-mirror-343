@@ -1,0 +1,10 @@
+mutemplate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mutemplate/__main__.py,sha256=RogC1LQ3z5QiI1uShhxXHkT7bEPcsRLD2pidlc6hZy4,138
+mutemplate/compiler.py,sha256=Ym_ll0eobMjmhlkC-9c-hDt35zAGN8p4H04repB7m28,5974
+mutemplate/mutemplate.py,sha256=iRVD-1kwTmvhEsvULAcbETqW8QanO--2d66tpNMpXU4,7212
+mutemplate/watcher.py,sha256=Z0fp8rJElKo9q0Ir4SU2YnbImCIFRlmYM89oku12ZBA,1170
+mutemplate-1.6.dist-info/METADATA,sha256=kRvjmaMdgEaKFL3om0T2BXWeLuqMRnk6L_CP6FkJHjI,12775
+mutemplate-1.6.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+mutemplate-1.6.dist-info/entry_points.txt,sha256=D5lwCEiDpVzKMkGb5jOJbKlauawts7ESL44TA9gkVfo,58
+mutemplate-1.6.dist-info/top_level.txt,sha256=lASv-CkyxXzoX7Kcf-C8OfMEfD3n-Y2LXhh8EJZJpBk,11
+mutemplate-1.6.dist-info/RECORD,,
