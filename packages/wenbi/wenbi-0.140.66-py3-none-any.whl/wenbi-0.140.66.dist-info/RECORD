@@ -1,0 +1,12 @@
+wenbi/__init__.py,sha256=NVqSqcUqq4yUGzOLqaSrLSgvn8KdY1wYVWI5hR8BrYA,72
+wenbi/batch.py,sha256=M5c4l2UpU7YLl1xjyiF2W8iM9YLjwCFlzUBWvK3Fwgk,4734
+wenbi/cli.py,sha256=ePm40P3sICj8B1V7Iw0tqFPKnPc76bVbp-tk4uk_O6M,4442
+wenbi/download.py,sha256=QXpWRyXAgwuWvq-_POxYbC2ggdLLkXyXqatAyORK3ks,648
+wenbi/main.py,sha256=NxZpl1g7oPmJb9rizsu6xbTNTzvOXPHINiKtdiGRctM,6749
+wenbi/model.py,sha256=ZoATrceUDWnku3voJVq5retEdwcn8-vSkHuhumijBz0,5360
+wenbi/mutilang.py,sha256=AGHhdMG7qv-CDqaws-qvx7rC7JwsafNEHI2qHhwtUlc,6558
+wenbi/utils.py,sha256=LO-tW_mvu94M6XdE65s7LPkM8wmd-6BTADAGduUoJsA,9647
+wenbi-0.140.66.dist-info/METADATA,sha256=0j1O0HQukIGX4DcX73GU_JEwlgEXN5q_y3GN9AvV-wI,6983
+wenbi-0.140.66.dist-info/WHEEL,sha256=C2FUgwZgiLbznR-k0b_5k3Ai_1aASOXDss3lzCUsUug,87
+wenbi-0.140.66.dist-info/entry_points.txt,sha256=9Ap3bBhhOHy78g-agvYXOGLOp4CQUur3fGk670whk2Y,72
+wenbi-0.140.66.dist-info/RECORD,,
