@@ -1,0 +1,8 @@
+malloc_tag/libs/mtag_graphviz_utils.py,sha256=ny4PcOmmO4XqKmjjWP4Kn0aUxLT0AM3T_qbECgKPLhA,911
+malloc_tag/libs/mtag_node.py,sha256=FNO-awbteBboqXtpQbyYpKqf5CJ4WpDC4MWcI6ydpOY,12725
+malloc_tag/libs/mtag_snapshot.py,sha256=ExeqMX_7C8Sz9m7JVXfXMVPjb48u0dOEIOdSJcqaU-c,9853
+malloc_tag/libs/mtag_tree.py,sha256=h_hv1w25Gee3bbTVZSHIpz6SJC4BfCQTism-0RMH-lU,5592
+malloctag_tools-1.5.4.dist-info/METADATA,sha256=FGQKQA4BRv4LVPhPFNnVRF6o4DFtlQQVsKN5HjLkgCU,3061
+malloctag_tools-1.5.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+malloctag_tools-1.5.4.dist-info/entry_points.txt,sha256=AuSv0YBuKktUl4T21_cXlojZFehE-iiTLzxl6932oIo,158
+malloctag_tools-1.5.4.dist-info/RECORD,,
