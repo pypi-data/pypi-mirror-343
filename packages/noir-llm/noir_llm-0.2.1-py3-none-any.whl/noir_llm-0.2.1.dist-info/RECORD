@@ -1,0 +1,15 @@
+noir/__init__.py,sha256=GmyaEXZHvEUwJt2w5yu_Td3O0NowFUvtVj68An3G98Q,442
+noir/__main__.py,sha256=gLb9RUcZ8pAeysGYAM3xHufcKLMSsd5x4e5GW64nHO0,241
+noir/client.py,sha256=O5XD2LbeZdJ8v7Eah-B3f9IHdYTQxjoU794r_GncfCo,3233
+noir/cli/__init__.py,sha256=uPqQHpD_rrufZG2fhZTg6QGzxElT8LS79EQyTE-tBLI,7070
+noir/models/__init__.py,sha256=bPVBQB1WCttrJzDx0PXYx1qEa3AAkhpL7g3Haxia0H0,2032
+noir/models/base.py,sha256=OiGZmJ3jfkshFcfDUQtU80GRBS31PDmxo1cr0IasXuA,2381
+noir/models/venice.py,sha256=XUFcpV081O3N1cM53CEqoHpBOHDNluLvObudeaqwQbU,17042
+noir/models/zai.py,sha256=Eg78qn-wkrpyRso_SOH3aPLkWTp1E2AR6WXHF4ji3GA,18190
+noir/utils/__init__.py,sha256=ziDr2p_CUb_fryVAn0APknwVsmTwJxAF-nBEk3R9_jg,2502
+noir_llm-0.2.1.dist-info/licenses/LICENSE,sha256=grWscIuT7LR-fP8P7m9Vj2ICGUN7BhQs8Myv00XFUTo,1066
+noir_llm-0.2.1.dist-info/METADATA,sha256=XS5ute19MO3Wm98U8ayxWSicOvGaqy6zS2_T5Y44Kp4,5912
+noir_llm-0.2.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+noir_llm-0.2.1.dist-info/entry_points.txt,sha256=Fh-1fykCydOb_frxWgY12aFKBcYr8AfWBk5289fb3Hs,43
+noir_llm-0.2.1.dist-info/top_level.txt,sha256=fTmPlpu7ueQuU7XFalxoVh-IJWkQeHkOx7Svq4hkuBI,5
+noir_llm-0.2.1.dist-info/RECORD,,
