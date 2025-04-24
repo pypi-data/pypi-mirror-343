@@ -1,0 +1,2 @@
+[console_scripts]
+ews-cleaner = ews_folder_cleaner.exchange_cleaner_linux_fixed:main
