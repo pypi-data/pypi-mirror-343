@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+myreze/__init__.py
+myreze.egg-info/PKG-INFO
+myreze.egg-info/SOURCES.txt
+myreze.egg-info/dependency_links.txt
+myreze.egg-info/top_level.txt
