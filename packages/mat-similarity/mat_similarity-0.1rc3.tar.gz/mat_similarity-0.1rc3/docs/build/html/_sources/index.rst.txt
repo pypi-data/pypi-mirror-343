@@ -1,0 +1,42 @@
+.. mat-similarity documentation master file, created by
+   sphinx-quickstart on Tue Oct  1 22:37:45 2024.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to mat-similarity's documentation!
+==========================================
+
+----
+
+.. include:: ../../matsimilarity/README.md
+   :parser: myst_parser.sphinx_
+
+----
+
+Module contents
+---------------
+
+.. automodule:: matsimilarity
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+.. toctree:: 
+   :maxdepth: 10
+   :caption: Modules in MAT-similarity:
+
+   Core Classes <matsimilarity.core>
+   For MAT <matsimilarity.methods.mat>   
+   
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+   :caption: Framework Documentation:
+
+   MAT-Tools <https://mat-analysis.github.io/mat-tools/>
+   
+----
+
+.. include:: ../../CHANGELOG.md
+   :parser: myst_parser.sphinx_
