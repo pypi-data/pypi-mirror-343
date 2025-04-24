@@ -1,0 +1,8 @@
+tinfoil/__init__.py,sha256=VVvOhx4xVgwf565XGCAUkn88yqNdgfZ9Op8bnu-UDIg,4814
+tinfoil/client.py,sha256=MMUMxOQ_rZZh9yRNCGdunwFU_Dp3t7TXBJmocPLxqgU,5467
+tinfoil/github.py,sha256=dQ86sNywX5RdU_vTEAUWUAxHJHGEeG7jDxAvyfNoNac,4955
+tinfoil/sigstore.py,sha256=vrVLNDOO_bRHSJlknw9top3TKqYlJ5RJteauVKI9QiY,4769
+tinfoil-0.1.0.dist-info/METADATA,sha256=cSxV-6sSrXLuho1DhWE3t4ft5Nk28uM7X2jUsILE7tI,2881
+tinfoil-0.1.0.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+tinfoil-0.1.0.dist-info/top_level.txt,sha256=rdndpu0MZ3aQpFtdegXKTMOGVo90Jx2v5e9pQXm7LLU,8
+tinfoil-0.1.0.dist-info/RECORD,,
