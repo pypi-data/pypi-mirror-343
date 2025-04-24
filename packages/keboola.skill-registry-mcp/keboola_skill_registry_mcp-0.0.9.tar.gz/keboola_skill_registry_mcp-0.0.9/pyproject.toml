@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "keboola.skill_registry_mcp"
+version = "0.0.9"
+description = "MCP server for interacting with Keboola Skill Registry"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "Keboola Dev", email = "dev@keboola.com" }
+]
+dependencies = [
+    "mcp[cli]",
+    "httpx"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "pytest-cov",
+    "pytest-mock",
+    "black",
+    "isort",
+    "mypy"
+]
+
+[project.scripts]
+keboola-sr-mcp = "keboola.skill_registry_mcp.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["keboola*"]
+namespaces = true
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = false
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+show_error_codes = true
+ignore_missing_imports = true
+namespace_packages = true
+explicit_package_bases = true
