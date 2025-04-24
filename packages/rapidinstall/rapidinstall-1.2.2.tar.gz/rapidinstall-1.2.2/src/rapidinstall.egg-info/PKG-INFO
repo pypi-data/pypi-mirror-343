@@ -1,0 +1,205 @@
+Metadata-Version: 2.4
+Name: rapidinstall
+Version: 1.2.2
+Summary: Downloads, Installs in paralell - A utility to run multiple shell command sequences (e.g., installations) in parallel with status updates.
+Author-email: Tom <chief-scouter0f@icloud.com>
+License-Expression: GPL-3.0-or-later
+Project-URL: Homepage, https://github.com/tomOfBerlin/rapidinstall
+Project-URL: Bug Tracker, https://github.com/tomOfBerlin/rapidinstall/issues
+Keywords: setup,parallel,subprocess,install,shell,script,automation,concurrent,colab
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: System :: Installation/Setup
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: download
+Requires-Dist: pySmartDL>=1.3.4; extra == "download"
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Dynamic: license-file
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/tomofberlin/rapidinstall/master/Bolt.png" alt="Bolt the Builder Bot - RapidInstall Mascot" width="200">
+</p>
+
+# rapidinstall
+
+[![PyPI version](https://badge.fury.io/py/rapidinstall.svg)](https://badge.fury.io/py/rapidinstall)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+<!-- ------------------------
+[![GitHub Repo stars](https://img.shields.io/github/stars/tomOfBerlin/rapidinstall?style=social)](https://github.com/tomOfBerlin/rapidinstall)
+-->
+A simple Python utility to run multiple shell command sequences (e.g., complex installations, downloads, build steps) in parallel, providing status updates and aggregated output directly to the console.
+
+## Features
+
+*   **Parallel Execution:** Runs multiple tasks concurrently using `subprocess`.
+*   **Real-time Output:** Captures stdout and stderr from tasks.
+*   **Status Updates:** Periodically shows which tasks are still running and recent output.
+*   **Clear Formatting:** Presents startup, status, and completion information in distinct blocks.
+*   **Simple API:** Easy to integrate into existing Python scripts.
+*   **Pure Python:** Relies only on the standard library with optionally requiring `pySmartDL` if you use the aria2-like download manager.
+
+
+## Installation
+
+```bash
+pip install rapidinstall pySmartDL # pySmartDL is optional
+```
+
+
+## Examples
+
+### Example: first look
+```python
+import rapidinstall
+
+my_tasks = [
+    {'name': 'Pip Update', 'commands': 'pip install --upgrade pip'},
+    {'name': 'Download Example', 'download': "echo 'Simulating download...'; sleep 30; echo 'Download complete!'"}, # using pySmartDL, similar to aria2
+    {'name': 'Run Setup', 'commands': "echo 'Running setup...'; sleep 20; echo 'Setup finished.'"}
+]
+
+rapidinstall.install(my_tasks)
+```
+Runs the 3 tasks in paralell and updates you on the progress and result.
+
+### Example: Git installs
+```python
+import rapidinstall
+
+clone_and_install = '''clone https://github.com/tomOfBerlin/rapidinstall
+cd rapidinstall
+python setup.py demo-install
+cd ..'''
+
+my_tasks = [
+    {'name': 'Pip Update', 'commands': 'pip install --upgrade pip'},
+    {'name': 'Download Example', 'commands': "echo 'Simulating download...'; sleep 30; echo 'Download complete!'"},
+    {'name': 'Run Setup', 'commands': clone_and_install}
+]
+
+rapidinstall.install(my_tasks)
+```
+
+
+### Example: Some Parameters
+
+```python
+# Completely silent - verbose is turned on by default
+rapidinstall.install(my_tasks, verbose=False)
+
+# Shows Updates every 60 seconds
+rapidinstall.install(my_tasks, update_interval=60)
+
+# No Updates
+results = rapidinstall.install(my_tasks, update_interval=0)
+
+# Show results your way
+rc = result.get('returncode')
+duration = result.get('duration_sec')
+status = "Success" if rc == 0 else f"Failed (RC={rc})"
+duration_str = f"{duration:.2f} sec" if duration is not None else "N/A"
+print(f"Task '{name}': {status} (Duration: {duration_str})")
+print(f"Full Stdout:\n{result['stdout']}") # full "console" output
+print(f"Full Stderr:\n{result['stderr']}") # full error output
+```
+
+## RapidInstaller Class
+### Example
+The class interface provides more flexibility, especially if tasks are generated dynamically. Tasks start *immediately* when added.
+
+```python
+from rapidinstall import RapidInstaller
+
+installer = RapidInstaller(verbose=True, update_interval=10)
+
+# Start the downloads even before basic setup.
+installer.add_download(name='HF model1', url='https://example.com/model1.zip')
+installer.add_download(name='HF model2', url='https://example.com/model1.zip')
+installer.add_download(name='HF model3', url='https://example.com/model1.zip')
+
+# Basic Setup, e.g. connect to gdrive on colab
+#
+#
+#
+
+# Rest of the install that for example requires a drive connection
+# Note: Please test if paralell pip installs work together or have conflicts.
+clone_and_install = '''clone https://github.com/tomOfBerlin/rapidinstall
+cd rapidinstall
+python setup.py demo-install
+pip install -r requirements.txt
+cd ..'''
+
+setup_tasks = [
+    {'name': 'Pip installs', 'commands': 'pip install a b c'},
+    {'name': 'Setup Demo', 'commands': clone_and_install}
+]
+
+installer.add_tasks(setup_tasks)
+
+# Some more setup that creates new directories
+#
+#
+#
+
+installer.add_download(name='extra model 123', url='https://example.com/model1.zip', directory='new_directory/models')
+
+# Wait for everything to finish
+installer.wait()
+```
+This example demonstrates adding tasks incrementally. The `wait()` call ensures the script doesn't exit until all tasks and downloads have completed execution.
+
+## Rapid Pip installs (Preview/Alpha)
+
+# Simple usage
+```python
+installer.add_pip("numpy pandas")
+```
+
+# With complex pip-like syntax including index URLs
+```python
+installer.add_pip("numpy>=1.18.0 pandas==1.0.0 -i https://pypi.org/simple --extra-index-url https://custom.pypi.org/simple")
+```
+
+# Also accepts array with version constraints
+```python
+installer.add_pip(["numpy>=1.18.0", "tensorflow==2.3.0"])
+```
+
+# With multiple index URLs via parameter
+```python
+installer.add_pip("private-pkg1 private-pkg2",
+                 extra_index_urls=["https://repo1.com/simple", "https://repo2.com/simple"])
+```
+# With other pip options
+```python
+installer.add_pip("numpy pandas --no-cache-dir --no-deps")
+```
+# Complex example with all features
+```python
+installer.add_pip("numpy>=1.18.0 -i https://pypi.org/simple",
+                 extra_index_urls=["https://private.repo/simple"],
+                 upgrade=True,
+                 pip_options={"timeout": 60})
+```
+## Error Handling
+
+*   `rapidinstall` (both the function and the class) runs all initiated tasks to completion, regardless of individual task failures (non-zero exit codes).
+*   Failure information (non-zero `returncode`, `stderr` output) is captured for each task and included in the final results dictionary returned by `install()` or `wait()`.
+*   If `verbose=True`, the console output during execution and in the final summary will typically highlight failed tasks with their return code and stderr.
+*   Programmatically check the `returncode` key in the results dictionary for each task to determine success or failure. A `returncode` of `0` indicates success.
+
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.◊

@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/rapidinstall/__init__.py
+src/rapidinstall/pip_concurrent.py
+src/rapidinstall/run.py
+src/rapidinstall.egg-info/PKG-INFO
+src/rapidinstall.egg-info/SOURCES.txt
+src/rapidinstall.egg-info/dependency_links.txt
+src/rapidinstall.egg-info/entry_points.txt
+src/rapidinstall.egg-info/requires.txt
+src/rapidinstall.egg-info/top_level.txt
+tests/test_install.py
+tests/test_pip_concurrent.py
+tests/test_rapidinstaller_pip.py
