@@ -1,0 +1,7 @@
+networkx
+pandas
+nbformat
+nbconvert
+
+[:python_version < "3.11"]
+typing_extensions

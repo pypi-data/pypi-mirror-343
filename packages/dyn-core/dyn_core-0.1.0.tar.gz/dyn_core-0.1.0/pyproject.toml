@@ -1,0 +1,39 @@
+[build-system]
+requires = [
+    "setuptools",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dyn-core"
+version = "0.1.0"
+authors = [
+  { name="Cécile Bothorel", email="cecile.bothorel@imt-atlantique.fr" },
+  { name="Laurent Brisson", email="laurent.brisson@imt-atlantique.fr" },
+  { name="Nicolas Duminy", email="nicolas.duminy@imt-atlantique.fr" },
+]
+description = "Core features of the 'dyn' namespace package"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = [
+    "networkx",
+    "pandas",
+    "nbformat",
+    "nbconvert",
+    "typing_extensions; python_version < '3.11'",
+]
+
+[project.urls]
+Homepage = "https://gitlab.imt-atlantique.fr/networks/dyn/core"
+Issues = "https://gitlab.imt-atlantique.fr/networks/dyn/core/issues"

@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/dyn/utils.py
+src/dyn/core/__init__.py
+src/dyn/core/aggregate_csv.py
+src/dyn/core/communities.py
+src/dyn/core/community_graphs.py
+src/dyn/core/files_io.py
+src/dyn_core.egg-info/PKG-INFO
+src/dyn_core.egg-info/SOURCES.txt
+src/dyn_core.egg-info/dependency_links.txt
+src/dyn_core.egg-info/requires.txt
+src/dyn_core.egg-info/top_level.txt
