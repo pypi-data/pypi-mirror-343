@@ -1,0 +1,227 @@
+Metadata-Version: 2.4
+Name: transforms84
+Version: 1.2.0
+Summary: Geographic system transformations with helper functions
+Author-email: Daniel Stoops <google@gmail.com>
+License: BSD-3-Clause license
+        Copyright (c) 2025, Daniel Stoops
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+          1. Redistributions of source code must retain the above copyright notice,
+             this list of conditions and the following disclaimer.
+          2. Redistributions in binary form must reproduce the above copyright
+             notice, this list of conditions and the following disclaimer in the
+             documentation and/or other materials provided with the distribution.
+          3. Neither the name of the copyright holder nor the names of its
+             contributors may be used to endorse or promote products derived from
+             this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+        ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR
+        ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+        LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+        OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+        DAMAGE.
+        
+Project-URL: Homepage, https://github.com/Stoops-ML/transforms84
+Project-URL: Repository, https://github.com/Stoops-ML/transforms84
+Project-URL: Issues, https://github.com/Stoops-ML/transforms84/issues
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy<3.0.0,>=1.0.0
+Provides-Extra: dev
+Requires-Dist: ruff>=0.9.7; extra == "dev"
+Requires-Dist: pytest>=8.3.2; extra == "dev"
+Requires-Dist: pytest-cov>=5.0.0; extra == "dev"
+Requires-Dist: mypy>=1.11.1; extra == "dev"
+Requires-Dist: tox>=4.17.1; extra == "dev"
+Requires-Dist: wheel>=0.44.0; extra == "dev"
+Requires-Dist: setuptools>=72.2.0; extra == "dev"
+Requires-Dist: setuptools-scm; extra == "dev"
+Requires-Dist: build>=1.2.1; extra == "dev"
+Requires-Dist: pandas>=2.0.0; extra == "dev"
+Requires-Dist: pandas-stubs>=2.0.0; extra == "dev"
+Provides-Extra: examples
+Requires-Dist: jupyterlab>=4.2.4; extra == "examples"
+Requires-Dist: shapely>=2.0.5; extra == "examples"
+Requires-Dist: czml3<3; extra == "examples"
+Requires-Dist: pandas>=2.0.0; extra == "examples"
+Dynamic: license-file
+
+# transforms84
+![PyPI - Version](https://img.shields.io/pypi/v/transforms84)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/transforms84)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/transforms84)
+![workflow-status](https://img.shields.io/github/actions/workflow/status/Stoops-ML/transforms84/workflow.yml)
+[![Documentation Status](https://readthedocs.org/projects/transforms84/badge)](https://transforms84.readthedocs.io/en)
+
+Python library for geographic system transformations with additional helper functions.
+
+This package focuses on:
+1. Performance
+2. Support for different number of inputs:
+   * Ideal array shape of `(3,1)` and `(nPoints,3,1)` (as well as `(3,)` and `(nPoints,3)`)
+   * Separate input for each axis in the coordinate system of size `(nPoints,)`
+3. Support for different inputs types:
+   * NumPy `ndarray`
+   * Pandas `Series`
+   * List
+   * Float/int
+4. Functions that adapt to differing input matrices shapes: one-to-one, many-to-many and one-to-many points. See [below](#many-to-many--one-to-many) for an example.
+
+## Installation
+`pip install transforms84`
+
+`transforms84` is supported on Windows, Linux and MacOS.
+
+## Operations
+### Coordinate Transformations
+The following coordinate transformations have been implemented:
+- geodetic &rarr; ECEF [🔗](https://en.wikipedia.org/wiki/Geographic_coordinate_conversion#From_geodetic_to_ECEF_coordinates)
+- ECEF &rarr; geodetic [🔗](https://en.wikipedia.org/wiki/Geographic_coordinate_conversion#From_ECEF_to_geodetic_coordinates)
+- ECEF &rarr; ENU [🔗](https://en.wikipedia.org/wiki/Geographic_coordinate_conversion#From_ECEF_to_ENU)
+- ENU &rarr; ECEF [🔗](https://en.wikipedia.org/wiki/Geographic_coordinate_conversion#From_ENU_to_ECEF)
+- ENU &rarr; AER [🔗](https://x-lumin.com/wp-content/uploads/2020/09/Coordinate_Transforms.pdf)
+- AER &rarr; ENU [🔗](https://x-lumin.com/wp-content/uploads/2020/09/Coordinate_Transforms.pdf)
+- ECEF &rarr; NED [🔗](https://en.wikipedia.org/wiki/Geographic_coordinate_conversion#From_ECEF_to_ENU) [🔗](https://en.wikipedia.org/wiki/Local_tangent_plane_coordinates)
+- NED &rarr; ECEF [🔗](https://en.wikipedia.org/wiki/Geographic_coordinate_conversion#From_ENU_to_ECEF) [🔗](https://en.wikipedia.org/wiki/Local_tangent_plane_coordinates)
+- NED &rarr; AER [🔗](https://x-lumin.com/wp-content/uploads/2020/09/Coordinate_Transforms.pdf) [🔗](https://en.wikipedia.org/wiki/Local_tangent_plane_coordinates)
+- AER &rarr; NED [🔗](https://x-lumin.com/wp-content/uploads/2020/09/Coordinate_Transforms.pdf) [🔗](https://en.wikipedia.org/wiki/Local_tangent_plane_coordinates)
+- geodetic &rarr; UTM [🔗](https://fypandroid.wordpress.com/2011/09/03/converting-utm-to-latitude-and-longitude-or-vice-versa/)
+- UTM &rarr; geodetic [🔗](https://fypandroid.wordpress.com/2011/09/03/converting-utm-to-latitude-and-longitude-or-vice-versa/)
+
+### Velocity Transformations
+The following velocity transformations have been implemented:
+- ECEF &rarr; NED
+- NED &rarr; ECEF
+- ENU &rarr; ECEF
+- ECEF &rarr; ENU
+
+### Distances
+The following distance formulae have been implemented:
+- Haversine [🔗](https://en.wikipedia.org/wiki/Haversine_formula#Formulation)
+
+### Additional Functions
+The following functions have been implemented:
+- Angular difference (smallest and largest)
+- [rad, rad, X] &rarr; [deg, deg, X]
+- [deg, deg, X] &rarr; [rad, rad, X]
+
+## Examples
+See the Jupyter notebooks in [examples](examples) to see how to use the transform84. Run `pip install transforms84[examples]` to run the examples locally.
+
+### Many-to-many & one-to-many
+The `transforms.ECEF2ENU` transformation accepts same and differing matrix shape sizes. Below showcases the many-to-many method where three target points, `rrm_target`, in the geodetic coordinate system are transformed to the local ENU coordinate system about the point `rrm_local`, where both matrices are of shape (3, 3, 1):
+```
+>>> import numpy as np
+>>> from transforms84.systems import WGS84
+>>> from transforms84.helpers import DDM2RRM
+>>> from transforms84.transforms import ECEF2ENU, geodetic2ECEF
+>>
+>>> rrm_local = DDM2RRM(
+>>>     np.array(
+>>>         [[[30], [31], [0]], [[30], [31], [0]], [[30], [31], [0]]], dtype=np.float64
+>>>     )
+>>> )  # convert each point from [deg, deg, X] to [rad, rad, X]
+>>> rrm_target = DDM2RRM(
+>>>     np.array(
+>>>         [[[31], [32], [0]], [[31], [32], [0]], [[31], [32], [0]]], dtype=np.float64
+>>>     )
+>>> )
+>>> ECEF2ENU(
+>>>     rrm_local, geodetic2ECEF(rrm_target, WGS84.a, WGS84.b), WGS84.a, WGS84.b
+>>> )  # geodetic2ECEF -> ECEF2ENU
+array(
+    [
+        [[95499.41373564], [111272.00245298], [-1689.19916788]],
+        [[95499.41373564], [111272.00245298], [-1689.19916788]],
+        [[95499.41373564], [111272.00245298], [-1689.19916788]],
+    ]
+)
+```
+
+We can achieve the same result using the one-to-many method with a single local point of shape (3, 1):
+```
+>>> rrm_local_one_point = DDM2RRM(np.array([[30], [31], [0]], dtype=np.float64))
+>>> ECEF2ENU(rrm_local_one_point, geodetic2ECEF(rrm_target, WGS84.a, WGS84.b), WGS84.a, WGS84.b)
+array(
+    [
+        [[95499.41373564], [111272.00245298], [-1689.19916788]],
+        [[95499.41373564], [111272.00245298], [-1689.19916788]],
+        [[95499.41373564], [111272.00245298], [-1689.19916788]],
+    ]
+)
+```
+
+Again, we can achieve the same result by splitting the arrays over each coordiante system axis:
+```
+>>> import pandas as pd
+>>> df = pd.DataFrame(
+>>>    {
+>>>        "radLatTarget": rrm_target[:, 0, 0],
+>>>        "radLonTarget": rrm_target[:, 1, 0],
+>>>        "mAltTarget": rrm_target[:, 2, 0],
+>>>    }
+>>> )
+>>> df["e"], df["n"], df["u"] = ECEF2ENU(
+>>>    np.deg2rad(30),
+>>>    np.deg2rad(31),
+>>>    0,
+>>>    *geodetic2ECEF(
+>>>        df["radLatTarget"],
+>>>        df["radLonTarget"],
+>>>        df["mAltTarget"],
+>>>        WGS84.a,
+>>>        WGS84.b,
+>>>    ),
+>>>    WGS84.a,
+>>>    WGS84.b,
+>>> )
+>>> df[["e", "n", "u"]]
+              e              n            u
+0  95499.413736  111272.002453 -1689.199168
+1  95499.413736  111272.002453 -1689.199168
+2  95499.413736  111272.002453 -1689.199168
+```
+
+### World Geodetic Systems Standards
+`transforms84.systems` includes the `WGS84` class, which is the [WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System#WGS_84) version of the standard. Other standards can be created:
+```
+>>> from transforms84.systems import WGS, WGS72
+>>> WGS72 == WGS(6378135.0, 6356750.520016094)
+True
+```
+
+## Helpful Resources
+...in no particular order:
+- [Geographic coordinate conversion](https://en.wikipedia.org/wiki/Geographic_coordinate_conversion)
+- [Local tangent plane coordinates](https://en.wikipedia.org/wiki/Local_tangent_plane_coordinates)
+- [Coordinate systems for navigation](https://www.mathworks.com/help/aerotbx/ug/coordinate-systems-for-navigation.html)
+- [Fundamental coordinate system concepts](https://www.mathworks.com/help/aerotbx/ug/fundamental-coordinate-system-concepts.html)
+- [Coordinate systems for modeling](https://www.mathworks.com/help/aerotbx/ug/coordinate-systems-for-modeling.html)
+- [Coordinate systems for display](https://www.mathworks.com/help/aerotbx/ug/coordinate-systems-for-display.html)
+
+## Contributing
+PRs are always welcome and appreciated!
+
+After forking the repo install the dev requirements: `pip install -e .[dev]`.
