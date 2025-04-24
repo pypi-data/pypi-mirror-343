@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "buildingsysid"
+version = "0.1.3"
+description = "System identification tools for building models"
+readme = "README.md"
+authors = [{name = "Michael Dahl Knudsen", email = "mdk@cae.au.dk"}]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "scipy",
+    "statsmodels",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/michael666nan/buildingsysid"
+"Bug Tracker" = "https://github.com/michael666nan/buildingsysid/issues"
