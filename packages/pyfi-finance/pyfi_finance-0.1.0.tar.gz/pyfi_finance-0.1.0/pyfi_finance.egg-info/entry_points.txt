@@ -1,0 +1,4 @@
+[console_scripts]
+compound-interest = pyfi_finance.cli:compound_interest_cli
+option-price = pyfi_finance.cli:option_price_cli
+portfolio-optimize = pyfi_finance.cli:portfolio_optimize_cli

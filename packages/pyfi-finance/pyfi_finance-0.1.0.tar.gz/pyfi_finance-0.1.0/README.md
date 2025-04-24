@@ -1,0 +1,113 @@
+# PyFi Finance
+
+A lightweight Python package for financial calculations.
+
+## Installation
+
+```bash
+pip install pyfi-finance
+```
+
+## Features
+
+- Core financial functions (compound interest, present value, NPV, IRR)
+- Loan calculations (monthly payments, amortization schedules)
+- Portfolio analysis (returns, volatility, Sharpe ratio, optimization)
+- Stock technical indicators (moving averages, RSI, Bollinger Bands, MACD)
+- Option pricing (Black-Scholes model)
+- Command-line tools for quick financial calculations
+
+## Usage Examples
+
+### Basic Financial Calculations
+
+```python
+from pyfi_finance.core import compound_interest, present_value
+
+# Calculate compound interest
+final_amount = compound_interest(principal=1000, rate=0.05, time=5, periods_per_year=1)
+print(f"Final amount after 5 years: ${final_amount:.2f}")
+
+# Calculate present value
+pv = present_value(future_value=1000, rate=0.05, time=5)
+print(f"Present value: ${pv:.2f}")
+```
+
+### Portfolio Analysis
+
+```python
+import numpy as np
+from pyfi_finance.portfolio import portfolio_return, portfolio_volatility, sharpe_ratio
+
+# Define portfolio parameters
+returns = [0.05, 0.1, 0.15]  # Expected returns
+weights = [0.4, 0.3, 0.3]    # Portfolio weights
+cov_matrix = np.array([
+    [0.04, 0.02, 0.01],
+    [0.02, 0.09, 0.03],
+    [0.01, 0.03, 0.16]
+])  # Covariance matrix
+
+# Calculate portfolio metrics
+expected_return = portfolio_return(returns, weights)
+volatility = portfolio_volatility(returns, weights, cov_matrix)
+sr = sharpe_ratio(expected_return, volatility, risk_free_rate=0.01)
+
+print(f"Expected Return: {expected_return:.2%}")
+print(f"Volatility: {volatility:.2%}")
+print(f"Sharpe Ratio: {sr:.2f}")
+```
+
+### Option Pricing
+
+```python
+from pyfi_finance.options import black_scholes, option_delta
+
+# Calculate option price using Black-Scholes
+price = black_scholes(
+    stock_price=100,
+    strike_price=95,
+    time_to_expiry=0.5,
+    risk_free_rate=0.02,
+    volatility=0.25,
+    option_type='call'
+)
+print(f"Call option price: ${price:.2f}")
+
+# Calculate option delta
+delta = option_delta(
+    stock_price=100,
+    strike_price=95,
+    time_to_expiry=0.5,
+    risk_free_rate=0.02,
+    volatility=0.25,
+    option_type='call'
+)
+print(f"Call option delta: {delta:.4f}")
+```
+
+## Command-Line Tools
+
+PyFi Finance provides the following command-line tools:
+
+### Compound Interest Calculator
+
+```bash
+compound-interest --principal 1000 --rate 0.05 --time 5 --periods 1
+```
+
+### Option Price Calculator
+
+```bash
+option-price --stock-price 100 --strike-price 95 --time 0.5 --rate 0.02 --volatility 0.25 --type call --show-delta
+```
+
+### Portfolio Optimizer
+
+```bash
+portfolio-optimize --returns 0.05 0.1 0.15 --cov-matrix 0.04 0.02 0.01 0.02 0.09 0.03 0.01 0.03 0.16 --risk-free-rate 0.01
+```
+
+## License
+
+MIT License 
