@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: umigrator
+Version: 0.0.1
+Summary: Custom Django migration and model manager for precise schema control.
+Author: umakaran
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: Django>=4.2
+Dynamic: author
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: summary
