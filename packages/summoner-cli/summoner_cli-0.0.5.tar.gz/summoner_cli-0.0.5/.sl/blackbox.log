@@ -1,0 +1,64 @@
+2025/04/23 16:37:43 aemiller @(unknown) (115567) [visibility]> read 0 heads: 
+2025/04/23 16:37:44 aemiller @(unknown) (115567) [visibility]> read 0 heads: 
+2025/04/23 16:37:44 aemiller @(unknown) (115567) [visibility]> read 0 heads: 
+2025/04/23 16:37:44 aemiller @(unknown) (115567) [command_finish]> clone 'https://github.com/adammillerio/smn.git' exited 0 after 1.02 seconds
+2025/04/23 16:38:28 aemiller @(unknown) (115889) [command]> diff
+2025/04/23 16:38:28 aemiller @9b39a53bc0f894cce51c1b30af1d59ca47c2f705 (115889) [command_finish]> diff exited 0 after 0.05 seconds
+2025/04/23 16:40:56 aemiller @(unknown) (116774) [command]> cat /home/aemiller/repos/smn/.pyre_configuration
+2025/04/23 16:40:56 aemiller @(unknown) (116775) [command]> cat /home/aemiller/repos/smn/.pyre_configuration
+2025/04/23 16:40:56 aemiller @9b39a53bc0f894cce51c1b30af1d59ca47c2f705 (116774) [command_finish]> cat /home/aemiller/repos/smn/.pyre_configuration exited 0 after 0.02 seconds
+2025/04/23 16:40:56 aemiller @9b39a53bc0f894cce51c1b30af1d59ca47c2f705 (116775) [command_finish]> cat /home/aemiller/repos/smn/.pyre_configuration exited 0 after 0.02 seconds
+2025/04/23 16:41:28 aemiller @(unknown) (117000) [command]> cat /home/aemiller/repos/smn/.pyre_configuration
+2025/04/23 16:41:28 aemiller @9b39a53bc0f894cce51c1b30af1d59ca47c2f705 (117000) [command_finish]> cat /home/aemiller/repos/smn/.pyre_configuration exited 0 after 0.02 seconds
+2025/04/23 16:41:31 aemiller @(unknown) (117056) [command]> cat /home/aemiller/repos/smn/.pyre_configuration
+2025/04/23 16:41:31 aemiller @9b39a53bc0f894cce51c1b30af1d59ca47c2f705 (117056) [command_finish]> cat /home/aemiller/repos/smn/.pyre_configuration exited 0 after 0.02 seconds
+2025/04/23 17:06:03 aemiller @(unknown) (124965) [command]> diff
+2025/04/23 17:06:03 aemiller @9b39a53bc0f894cce51c1b30af1d59ca47c2f705 (124965) [command_finish]> diff exited 0 after 0.06 seconds
+2025/04/23 17:06:42 aemiller @(unknown) (125059) [command]> sl
+2025/04/23 17:06:42 aemiller @9b39a53bc0f894cce51c1b30af1d59ca47c2f705 (125059) [visibility]> read 0 heads: 
+2025/04/23 17:06:42 aemiller @9b39a53bc0f894cce51c1b30af1d59ca47c2f705 (125059) [command_finish]> sl exited 0 after 0.05 seconds
+2025/04/23 17:06:48 aemiller @(unknown) (125093) [command]> diff
+2025/04/23 17:06:48 aemiller @9b39a53bc0f894cce51c1b30af1d59ca47c2f705 (125093) [command_finish]> diff exited 0 after 0.05 seconds
+2025/04/23 17:07:10 aemiller @(unknown) (125177) [command]> sl
+2025/04/23 17:07:10 aemiller @9b39a53bc0f894cce51c1b30af1d59ca47c2f705 (125177) [visibility]> read 0 heads: 
+2025/04/23 17:07:10 aemiller @9b39a53bc0f894cce51c1b30af1d59ca47c2f705 (125177) [command_finish]> sl exited 0 after 0.05 seconds
+2025/04/23 17:07:35 aemiller @(unknown) (125590) [command]> commit -i -m 'update pyre config for new path and fix some type errors'
+2025/04/23 17:07:35 aemiller @9b39a53bc0f894cce51c1b30af1d59ca47c2f705 (125590) [visibility]> read 0 heads: 
+2025/04/23 17:07:45 aemiller @9b39a53bc0f894cce51c1b30af1d59ca47c2f705 (125590) [visibility]> read 0 heads: 
+2025/04/23 17:07:45 aemiller @9b39a53bc0f894cce51c1b30af1d59ca47c2f705 (125590) [visibility]> removed 0 heads []; added 1 heads [f25b691383a2]
+2025/04/23 17:07:45 aemiller @f25b691383a2fae4d5ddaa36d7114c38c28e3014 (125590) [visibility]> wrote 1 heads: f25b691383a2
+2025/04/23 17:07:45 aemiller @f25b691383a2fae4d5ddaa36d7114c38c28e3014 (125590) [command_finish]> commit -i -m 'update pyre config for new path and fix some type errors' exited 0 after 9.61 seconds
+2025/04/23 17:07:47 aemiller @(unknown) (125702) [command]> pr submit
+2025/04/23 17:07:47 aemiller @f25b691383a2fae4d5ddaa36d7114c38c28e3014 (125702) [visibility]> read 1 heads: f25b691383a2
+2025/04/23 17:07:49 aemiller @f25b691383a2fae4d5ddaa36d7114c38c28e3014 (125702) [visibility]> read 1 heads: f25b691383a2
+2025/04/23 17:07:50 aemiller @f25b691383a2fae4d5ddaa36d7114c38c28e3014 (125702) [command_finish]> pr submit exited 0 after 3.63 seconds
+2025/04/23 17:08:30 aemiller @(unknown) (125966) [command]> diff
+2025/04/23 17:08:30 aemiller @f25b691383a2fae4d5ddaa36d7114c38c28e3014 (125966) [command_finish]> diff exited 0 after 0.05 seconds
+2025/04/23 17:09:36 aemiller @(unknown) (126666) [command]> commit -i -m 'add Context.exec for running with the exec syscall, ssh context manager'
+2025/04/23 17:09:36 aemiller @f25b691383a2fae4d5ddaa36d7114c38c28e3014 (126666) [visibility]> read 1 heads: f25b691383a2
+2025/04/23 17:09:38 aemiller @f25b691383a2fae4d5ddaa36d7114c38c28e3014 (126666) [visibility]> read 1 heads: f25b691383a2
+2025/04/23 17:09:38 aemiller @f25b691383a2fae4d5ddaa36d7114c38c28e3014 (126666) [visibility]> removed 1 heads [f25b691383a2]; added 1 heads [1b56627c195e]
+2025/04/23 17:09:38 aemiller @1b56627c195ec2341d8de244ddff5b709bd1d737 (126666) [visibility]> wrote 1 heads: 1b56627c195e
+2025/04/23 17:09:38 aemiller @1b56627c195ec2341d8de244ddff5b709bd1d737 (126666) [command_finish]> commit -i -m 'add Context.exec for running with the exec syscall, ssh context manager' exited 0 after 1.86 seconds
+2025/04/23 17:09:39 aemiller @(unknown) (126774) [command]> pr submit
+2025/04/23 17:09:39 aemiller @1b56627c195ec2341d8de244ddff5b709bd1d737 (126774) [visibility]> read 1 heads: 1b56627c195e
+2025/04/23 17:09:42 aemiller @1b56627c195ec2341d8de244ddff5b709bd1d737 (126774) [visibility]> read 1 heads: 1b56627c195e
+2025/04/23 17:09:43 aemiller @1b56627c195ec2341d8de244ddff5b709bd1d737 (126774) [command_finish]> pr submit exited 0 after 3.50 seconds
+2025/04/23 17:11:13 aemiller @(unknown) (127178) [command]> amend
+2025/04/23 17:11:13 aemiller @1b56627c195ec2341d8de244ddff5b709bd1d737 (127178) [visibility]> read 1 heads: 1b56627c195e
+2025/04/23 17:11:13 aemiller @1b56627c195ec2341d8de244ddff5b709bd1d737 (127178) [visibility]> read 1 heads: 1b56627c195e
+2025/04/23 17:11:13 aemiller @1b56627c195ec2341d8de244ddff5b709bd1d737 (127178) [visibility]> removed 0 heads []; added 1 heads [ff7023541457]
+2025/04/23 17:11:13 aemiller @ff70235414574365bf4e57d9657775727951e96f (127178) [visibility]> removed 1 heads [1b56627c195e]; added 0 heads []
+2025/04/23 17:11:13 aemiller @ff70235414574365bf4e57d9657775727951e96f (127178) [visibility]> wrote 1 heads: ff7023541457
+2025/04/23 17:11:13 aemiller @ff70235414574365bf4e57d9657775727951e96f (127178) [command_finish]> amend exited 0 after 0.09 seconds
+2025/04/23 17:11:15 aemiller @(unknown) (127242) [command]> pr submit
+2025/04/23 17:11:15 aemiller @ff70235414574365bf4e57d9657775727951e96f (127242) [visibility]> read 1 heads: ff7023541457
+2025/04/23 17:11:17 aemiller @ff70235414574365bf4e57d9657775727951e96f (127242) [command_finish]> pr submit exited 0 after 2.30 seconds
+2025/04/23 17:14:56 aemiller @(unknown) (127653) [command]> pull
+2025/04/23 17:14:56 aemiller @ff70235414574365bf4e57d9657775727951e96f (127653) [visibility]> read 1 heads: ff7023541457
+2025/04/23 17:14:56 aemiller @ff70235414574365bf4e57d9657775727951e96f (127653) [visibility]> read 0 heads: 
+2025/04/23 17:14:56 aemiller @ff70235414574365bf4e57d9657775727951e96f (127653) [pythonhook]> pythonhook-post-pull: sapling.ext.github.pr_marker.cleanup_landed_pr_hook finished in 0.00 seconds
+2025/04/23 17:14:56 aemiller @ff70235414574365bf4e57d9657775727951e96f (127653) [command_finish]> pull exited 0 after 0.41 seconds
+2025/04/23 17:14:56 aemiller @(unknown) (127691) [command]> rebase -d remote/main
+2025/04/23 17:14:56 aemiller @ff70235414574365bf4e57d9657775727951e96f (127691) [visibility]> read 0 heads: 
+2025/04/23 17:14:56 aemiller @59b3bc3094340edfffd341c169c876a537b5723d (127691) [command_finish]> rebase -d remote/main exited 0 after 0.06 seconds
