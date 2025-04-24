@@ -1,0 +1,3 @@
+[console_scripts]
+depmap_downloader = depmap_downloader.cli:main
+
