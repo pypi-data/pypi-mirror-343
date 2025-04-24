@@ -1,0 +1,12 @@
+[project]
+name = "uv-example"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "awslabs-aws-documentation-mcp-server>=0.1.2",
+    "boto3>=1.38.0",
+    "eb-mcp>=0.1.0",
+    "requests>=2.32.3",
+]
