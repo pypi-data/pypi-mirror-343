@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: TeleAds
+Version: 0.1.4
+Summary: TeleAds SDK
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: aiogram2
+Requires-Dist: aiogram <3.0.0,>=2.0.0 ; extra == 'aiogram2'
+
