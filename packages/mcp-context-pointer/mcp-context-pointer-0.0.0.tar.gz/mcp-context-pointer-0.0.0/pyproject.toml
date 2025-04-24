@@ -1,0 +1,29 @@
+[project]
+license = { text = "Apache-2.0" }
+name = "mcp-context-pointer"
+authors = [
+    { name = "Jasmine Poon", email = "jasminejpoon@gmail.com" }
+]
+version = "0.0.0"
+description = "Coming soon"
+requires-python = ">=3.9"
+readme = "README.md"
+keywords = ["mcp", "context pointer", "llm", "memory", "ai"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+]
+
+[project.urls]
+Homepage = "https://github.com/thirdplane/mcp-context-pointer"
+Source   = "https://github.com/thirdplane/mcp-context-pointer"
+Issues   = "https://github.com/thirdplane/mcp-context-pointer/issues"
+
+[build-system]
+requires = ["setuptools<68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+license-files = []
