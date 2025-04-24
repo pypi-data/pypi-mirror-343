@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/fowopy/__init__.py
+src/fowopy/fowo_client.py
+src/fowopy/fowo_config.py
+src/fowopy.egg-info/PKG-INFO
+src/fowopy.egg-info/SOURCES.txt
+src/fowopy.egg-info/dependency_links.txt
+src/fowopy.egg-info/requires.txt
+src/fowopy.egg-info/top_level.txt
+src/fowopy/schemas/__init__.py
+src/fowopy/schemas/schemas.py
+tests/test_fowopy.py
+tests/test_fowopy_expanded.py
