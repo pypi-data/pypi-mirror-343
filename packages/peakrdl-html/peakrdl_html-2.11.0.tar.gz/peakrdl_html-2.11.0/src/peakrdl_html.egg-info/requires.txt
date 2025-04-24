@@ -1,0 +1,8 @@
+systemrdl-compiler<2,>=1.13.0
+Jinja2>=2.9
+markdown
+git-me-the-url>=2.0.3
+python-markdown-math
+
+[cli]
+peakrdl-cli>=1.2.3
