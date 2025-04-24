@@ -1,0 +1,13 @@
+shiny
+shinywidgets
+anywidget
+pandas
+plotly
+kaleido
+Pillow
+faicons
+
+[dev]
+pytest
+pip
+pytest-cov
