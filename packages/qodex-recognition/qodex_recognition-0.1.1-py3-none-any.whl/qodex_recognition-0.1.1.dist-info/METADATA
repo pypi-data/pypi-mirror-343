@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: qodex_recognition
+Version: 0.1.1
+Author: PunchyArchy
+Author-email: ksmdrmvscthny@gmail.com
+License-File: LICENSE
+Requires-Dist: requests
+
+WHIKoperator - ������������������ ������ ������������ �� �������������� HV �� Gravity-core
