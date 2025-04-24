@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+pythonodejs/__init__.py
+pythonodejs/main.py
+pythonodejs.egg-info/PKG-INFO
+pythonodejs.egg-info/SOURCES.txt
+pythonodejs.egg-info/dependency_links.txt
+pythonodejs.egg-info/not-zip-safe
+pythonodejs.egg-info/top_level.txt
