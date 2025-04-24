@@ -1,0 +1,8 @@
+README.md
+setup.py
+hwl_stdlib.egg-info/PKG-INFO
+hwl_stdlib.egg-info/SOURCES.txt
+hwl_stdlib.egg-info/dependency_links.txt
+hwl_stdlib.egg-info/top_level.txt
+stdlib/__init__.py
+stdlib/stdlib.py
