@@ -1,0 +1,6 @@
+[server]
+#enableCORS = false
+headless = true
+
+[browser]
+gatherUsageStats = false

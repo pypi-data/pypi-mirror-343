@@ -1,0 +1,5 @@
+v0.3.2        Update docs, note PyPi install.
+v0.3.1        Deps for PyPi.
+v0.3.0        Add Streamlit front end.
+v0.2.0        Add FastAPI server.
+v0.1.0        MultiBrain initial setup.
