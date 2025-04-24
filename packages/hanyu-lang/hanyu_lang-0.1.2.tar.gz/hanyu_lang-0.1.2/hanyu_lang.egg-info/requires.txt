@@ -1,0 +1,11 @@
+pygments>=2.7
+watchdog>=2.0
+tkinterweb>=3.11
+
+[full]
+numpy>=1.21
+pandas>=1.3
+
+[secure]
+pyjwt>=2.0
+cryptography>=3.4

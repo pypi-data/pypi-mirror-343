@@ -1,0 +1,5 @@
+# MANIFEST.in 必须包含以下内容
+include README.md
+recursive-include src *
+recursive-include gui *
+recursive-include assets *
