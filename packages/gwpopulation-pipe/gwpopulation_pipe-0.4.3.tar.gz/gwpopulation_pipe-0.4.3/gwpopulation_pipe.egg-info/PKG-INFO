@@ -1,0 +1,52 @@
+Metadata-Version: 2.4
+Name: gwpopulation_pipe
+Version: 0.4.3
+Summary: A pipeline population inference
+Home-page: https://git.ligo.org/RatesAndPopulations/gwpopulation_pipe
+Author: Colm Talbot
+Author-email: colm.talbot@ligo.org
+License: MIT
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: dynesty>=2.0.0
+Requires-Dist: bilby>=2.3.0
+Requires-Dist: bilby_pipe
+Requires-Dist: gwpopulation>=1.1.0
+Requires-Dist: h5py
+Requires-Dist: matplotlib
+Requires-Dist: tqdm
+Requires-Dist: htcondor
+Requires-Dist: popsummary
+Requires-Dist: wcosmo
+Provides-Extra: pages
+Requires-Dist: ipykernel; extra == "pages"
+Requires-Dist: ipython; extra == "pages"
+Requires-Dist: jupyter; extra == "pages"
+Requires-Dist: sphinx-argparse; extra == "pages"
+Provides-Extra: test
+Requires-Dist: unxt; extra == "test"
+Requires-Dist: jax>=0.4.32; extra == "test"
+Dynamic: license-file
+
+`gwpopulation_pipe` provides a simple way to perform population analyses.
+
+More information can be found in the [online documentation](https://docs.ligo.org/RatesAndPopulations/gwpopulation_pipe).
+
+### Installation
+
+`gwpopulation_pipe` is available via pypi
+
+```console
+$ pip install gwpopulation_pipe
+```
+
+If you want to use the gpu acceleration the easiest way is to
+
+```console
+$ conda install cupy
+```
