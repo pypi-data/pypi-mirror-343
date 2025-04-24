@@ -1,0 +1,10 @@
+xpublish_opendap/__init__.py,sha256=--26NowgmW5LTsSECLeOGgUuIEBOMmqbg2NaELSt_Hg,236
+xpublish_opendap/_version.py,sha256=iB5DfB5V6YB5Wo4JmvS-txT42QtmGaWcWp3udRT7zCI,511
+xpublish_opendap/dap_xarray.py,sha256=9mk3NII-63GSHmTsiYcG3JwpjD_lvKMuf7YgeFwqaW0,3330
+xpublish_opendap/plugin.py,sha256=pYiz5ah8TNDRGVjYP73jOSj8NCUZloA4bfE4byfFP4w,3001
+xpublish_opendap-0.2.0.dist-info/licenses/LICENSE.txt,sha256=VWIXR6fejYnrrUQ94kUjWfKWCzdkLu8QxPzrXN7jjWQ,1472
+xpublish_opendap-0.2.0.dist-info/METADATA,sha256=EddtQEDJ764pZF_OI_vHmw1wr-mb9_XyL13oRzBFAkI,4092
+xpublish_opendap-0.2.0.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+xpublish_opendap-0.2.0.dist-info/entry_points.txt,sha256=bxUa3FYYiLCh0co2SPPrmScs7yuDmqDYM7iswVu9tg0,66
+xpublish_opendap-0.2.0.dist-info/top_level.txt,sha256=RFzzv60xW3_8zfHoRMXK39DJLqY6IsEf9s7UAxLAV7A,17
+xpublish_opendap-0.2.0.dist-info/RECORD,,
