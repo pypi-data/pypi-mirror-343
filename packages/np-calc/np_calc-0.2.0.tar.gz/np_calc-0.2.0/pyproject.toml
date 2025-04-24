@@ -1,0 +1,23 @@
+[project]
+name = "np-calc"
+version = "0.2.0"
+description = "np calc library"
+authors = [
+    {name = "esteban-rj",email = "estebanelias27@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy (>=2.2.5,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "np_calc", from = "src"}]
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
