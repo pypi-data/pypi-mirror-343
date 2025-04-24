@@ -1,0 +1,2 @@
+[console_scripts]
+xml2dicom = xml2dicom.main:main
