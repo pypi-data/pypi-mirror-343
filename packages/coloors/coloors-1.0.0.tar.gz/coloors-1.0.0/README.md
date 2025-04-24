@@ -1,0 +1,75 @@
+# Coloors
+
+A simple Python package to print/show colored text in the terminal.
+Developed it while doing some side projects.
+## Installation
+
+```bash
+pip install coloors
+```
+
+## Usage
+
+```python
+from coloors import printp, printb, printc, printg, printy, printr, printu, printbld
+from coloors import r, b, g, p, c, bld, u, ye
+
+printp("This is purple/rose!")
+printb("This is blue!")
+printc("This is cyan!")
+printg("This is green!")
+printy("This is yellow!")
+printr("This is red!")
+printu("This is underlined!")
+printbld("This is bold!")
+
+red_text = r("This text will be red.")
+blue_text = b("This text will be blue.")
+green_text = g("This text will be green.")
+purple_text = p("This text will be purple/rose.")
+cyan_text = c("This text will be cyan.")
+bold_text = bld("This text will be bold.")
+underline_text = u("This text will be underlined.")
+yellow_text = ye("This text will be yellow.")
+
+print(red_text)
+print(blue_text)
+print(green_text)
+print(purple_text)
+print(cyan_text)
+print(bold_text)
+print(underline_text)
+print(yellow_text)
+```
+
+## Functions
+
+The package provides the following functions for printing colored text:
+
+* `printp(s)`: Prints the string `s` in purple or rose (depends on your color blindness).
+* `printb(s)`: Prints the string `s` in blue.
+* `printc(s)`: Prints the string `s` in cyan.
+* `printg(s)`: Prints the string `s` in green.
+* `printy(s)`: Prints the string `s` in yellow.
+* `printr(s)`: Prints the string `s` in red.
+* `printu(s)`: Prints the string `s` with underline.
+* `printbld(s)`: Prints the string `s` in bold.
+
+It also provides functions to return colored strings without immediately printing them:
+
+* `r(s)`: Returns the string `s` in red.
+* `b(s)`: Returns the string `s` in blue.
+* `g(s)`: Returns the string `s` in green.
+* `p(s)`: Returns the string `s` in purple.
+* `c(s)`: Returns the string `s` in cyan.
+* `bld(s)`: Returns the string `s` in bold.
+* `u(s)`: Returns the string `s` with underline.
+* `ye(s)`: Returns the string `s` in yellow.
+
+## Dependencies
+
+Python, haha.
+
+## License
+
+*GNU GENERAL PUBLIC LICENSE*

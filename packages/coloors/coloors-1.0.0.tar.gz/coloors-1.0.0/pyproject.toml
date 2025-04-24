@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "coloors"
+version = "1.0.0"
+authors = [
+  { name="Ouassim Hamdani", email="o_hamdani@estin.dz" },
+]
+description = "Simple Python package to print & show colored text in the terminal."
+readme = "README.md"
+requires-python = ">=3.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Ouassim-Hamdani/coloors"
+Issues = "https://github.com/Ouassim-Hamdani/coloors"
