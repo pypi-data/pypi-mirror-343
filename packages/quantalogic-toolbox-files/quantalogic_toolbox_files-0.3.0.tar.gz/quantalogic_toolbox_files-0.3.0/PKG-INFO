@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: quantalogic-toolbox-files
+Version: 0.3.0
+Summary: A custom toolbox for Quantalogic
+Author: Raphael Mansuy
+Author-email: raphael.mansuy@quantalogic.app
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
