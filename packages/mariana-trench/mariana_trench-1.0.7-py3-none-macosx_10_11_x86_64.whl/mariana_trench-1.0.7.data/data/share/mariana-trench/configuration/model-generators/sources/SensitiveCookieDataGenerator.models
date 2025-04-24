@@ -1,0 +1,25 @@
+{
+  "model_generators": [
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_pattern",
+          "pattern": "Landroid/webkit/CookieManager;\\.getCookie:\\(Ljava/lang/String;\\)Ljava/lang/String;"
+        }
+      ],
+      "model": {
+        "sources": [
+          {
+            "kind": "SessionData",
+            "port": "Return"
+          },
+          {
+            "kind": "FBSessionCookie",
+            "port": "Return"
+          }
+        ]
+      }
+    }
+  ]
+}

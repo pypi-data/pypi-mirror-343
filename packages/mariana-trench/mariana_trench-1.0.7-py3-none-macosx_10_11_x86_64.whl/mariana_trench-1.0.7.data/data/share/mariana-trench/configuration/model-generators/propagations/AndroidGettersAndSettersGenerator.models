@@ -1,0 +1,777 @@
+{
+  "model_generators": [
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parent": "Landroid/content/Intent;",
+          "name": "putExtra"
+        }
+      ],
+      "model": {
+        "modes": [
+          "no-collapse-on-propagation",
+          "skip-analysis",
+          "strong-write-on-propagation",
+          "alias-memory-location-on-invoke"
+        ],
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(2)",
+            "output": "Argument(0)[<Argument(1)>]",
+            "features": [
+              "via-intent-extra-setter"
+            ]
+          },
+          {
+            "input": "Argument(2)",
+            "output": "Return[<Argument(1)>]",
+            "features": [
+              "via-intent-extra-setter"
+            ]
+          }
+        ],
+        "add_features_to_arguments": [
+          {
+            "features": [
+              "has-intent-extras"
+            ],
+            "port": "Argument(0)"
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "name",
+          "pattern": "build"
+        },
+        {
+          "constraint": "parent",
+          "inner": {
+            "constraint": "name",
+            "pattern": "Lcom/google/common/collect/[A-Za-z]+Map\\$Builder;"
+          }
+        }
+      ],
+      "model": {
+        "modes": [
+          "no-collapse-on-propagation",
+          "skip-analysis"
+        ],
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(0)",
+            "output": "Return"
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parents": [
+            "Ljava/util/Set;",
+            "Ljava/util/List;",
+            "Ljava/util/ArrayList",
+            "Ljava/util/HashSet;",
+            "Ljava/util/AbstractSequentialList;",
+            "Ljava/lang/Iterable;"
+          ],
+          "name": "iterator"
+        }
+      ],
+      "model": {
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(0)",
+            "output": "Return"
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parents": [
+            "Ljava/util/ArrayList;",
+            "Ljava/util/HashSet;",
+            "Ljava/util/List;",
+            "Ljava/util/LinkedList;",
+            "Ljava/util/Set;"
+          ],
+          "names": [
+            "add",
+            "addAll"
+          ]
+        },
+        {
+          "constraint": "number_parameters",
+          "inner": {
+            "constraint": "==",
+            "value": 2
+          }
+        }
+      ],
+      "model": {
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(1)",
+            "output": "Argument(0)"
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parents": [
+            "Ljava/util/ArrayList;",
+            "Ljava/util/HashSet;",
+            "Ljava/util/List;",
+            "Ljava/util/LinkedList;",
+            "Ljava/util/Set;"
+          ],
+          "names": [
+            "add",
+            "addAll"
+          ]
+        },
+        {
+          "constraint": "number_parameters",
+          "inner": {
+            "constraint": "==",
+            "value": 3
+          }
+        }
+      ],
+      "model": {
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(2)",
+            "output": "Argument(0)"
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parent": "Ljava/util/Iterator;",
+          "name": "next"
+        }
+      ],
+      "model": {
+        "modes": [
+          "skip-analysis"
+        ],
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(0)",
+            "output": "Return"
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parent": "Ljava/lang/StringBuilder;",
+          "name": "toString"
+        }
+      ],
+      "model": {
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(0)",
+            "output": "Return"
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parent": "Ljava/lang/StringBuilder;",
+          "name": "append"
+        }
+      ],
+      "model": {
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(0)",
+            "output": "Return"
+          },
+          {
+            "input": "Argument(1)",
+            "output": "Return"
+          },
+          {
+            "input": "Argument(1)",
+            "output": "Argument(0)"
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parent": "Ljava/lang/StringBuilder;",
+          "name": "setLength"
+        }
+      ],
+      "model": {
+        "freeze": [
+          "propagation"
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parent": "Landroid/content/Intent;",
+          "names": [
+            "getBooleanArrayExtra",
+            "getBooleanExtra",
+            "getBundleExtra",
+            "getByteArrayExtra",
+            "getByteExtra",
+            "getCharArrayExtra",
+            "getCharExtra",
+            "getCharSequenceArrayExtra",
+            "getCharSequenceArrayListExtra",
+            "getCharSequenceExtra",
+            "getDoubleArrayExtra",
+            "getDoubleExtra",
+            "getFloatArrayExtra",
+            "getFloatExtra",
+            "getIntArrayExtra",
+            "getIntExtra",
+            "getLongArrayExtra",
+            "getLongExtra",
+            "getShortArrayExtra",
+            "getShortExtra",
+            "getStringArrayExtra",
+            "getStringArrayListExtra",
+            "getStringExtra"
+          ]
+        }
+      ],
+      "model": {
+        "modes": [
+          "no-collapse-on-propagation",
+          "skip-analysis"
+        ],
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(0)[<Argument(1)>]",
+            "output": "Return",
+            "features": [
+              "via-intent-extra-getter"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parent": "Landroid/content/ComponentName;",
+          "name": "<init>"
+        },
+        {
+          "constraint": "number_parameters",
+          "inner": {
+            "constraint": "==",
+            "value": 3
+          }
+        }
+      ],
+      "model": {
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(2)",
+            "output": "Argument(0)"
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parent": "Landroid/content/Intent;",
+          "names": [
+            "getData",
+            "getDataString"
+          ]
+        }
+      ],
+      "model": {
+        "modes": [
+          "no-collapse-on-propagation",
+          "skip-analysis"
+        ],
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(0)",
+            "output": "Return",
+            "features": [
+              "via-intent-data-getter"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parent": "Landroid/content/Intent;",
+          "names": [
+            "getParcelableArrayExtra",
+            "getParcelableArrayListExtra",
+            "getParcelableExtra",
+            "getSerializableExtra"
+          ]
+        }
+      ],
+      "model": {
+        "modes": [
+          "no-collapse-on-propagation",
+          "skip-analysis"
+        ],
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(0)[<Argument(1)>]",
+            "output": "Return"
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parent": "Landroid/content/Intent;",
+          "name": "putExtras"
+        }
+      ],
+      "model": {
+        "modes": [
+          "no-collapse-on-propagation",
+          "skip-analysis",
+          "alias-memory-location-on-invoke"
+        ],
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(1)",
+            "output": "Argument(0)",
+            "features": [
+              "via-intent-extra-setter"
+            ]
+          },
+          {
+            "input": "Argument(1)",
+            "output": "Return",
+            "features": [
+              "via-intent-extra-setter"
+            ]
+          }
+        ],
+        "add_features_to_arguments": [
+          {
+            "features": [
+              "has-intent-extras"
+            ],
+            "port": "Argument(0)"
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parent": "Landroid/content/Intent;",
+          "name": "getExtras"
+        }
+      ],
+      "model": {
+        "modes": [
+          "no-collapse-on-propagation",
+          "skip-analysis"
+        ],
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(0)",
+            "output": "Return",
+            "features": [
+              "via-intent-extra-getter"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parents": [
+            "Landroid/os/Bundle;",
+            "Landroid/os/BaseBundle;"
+          ],
+          "names": [
+            "getChar",
+            "getString",
+            "getCharSequence",
+            "getCharSequenceArray",
+            "getShort",
+            "getLongArray",
+            "getIntegerArrayList",
+            "getParcelableArray",
+            "getByteArray",
+            "getBinder",
+            "getStringArrayList",
+            "getLong",
+            "getDouble",
+            "get",
+            "getParcelable",
+            "getStringArray",
+            "getFloat",
+            "getBundle",
+            "getIntArray",
+            "getSerializable",
+            "getShortArray",
+            "getByte",
+            "getCharArray",
+            "getBooleanArray",
+            "getInt",
+            "getParcelableArrayList",
+            "getCharSequenceArrayList",
+            "getFloatArray",
+            "getBoolean",
+            "getDoubleArray",
+            "getSparseParcelableArray"
+          ]
+        }
+      ],
+      "model": {
+        "modes": [
+          "no-collapse-on-propagation",
+          "skip-analysis"
+        ],
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(0)[<Argument(1)>]",
+            "output": "Return",
+            "features": [
+              "via-bundle-getter"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parents": [
+            "Landroid/os/Bundle;",
+            "Landroid/os/BaseBundle;"
+          ],
+          "names": [
+            "putString",
+            "putLong",
+            "putBoolean",
+            "putDoubleArray",
+            "putLongArray",
+            "putBooleanArray",
+            "putDouble",
+            "putInt",
+            "putIntArray",
+            "putStringArray",
+            "putCharArray",
+            "putIntegerArrayList",
+            "putStringArrayList",
+            "putCharSequenceArrayList",
+            "putByte",
+            "putParcelableArrayList",
+            "putFloat",
+            "putChar",
+            "putParcelableArray",
+            "putByteArray",
+            "putBinder",
+            "putParcelable",
+            "putCharSequenceArray",
+            "putSparseParcelableArray",
+            "putShort",
+            "putCharSequence",
+            "putFloatArray",
+            "putBundle",
+            "putShortArray"
+          ]
+        }
+      ],
+      "model": {
+        "modes": [
+          "no-collapse-on-propagation",
+          "skip-analysis",
+          "strong-write-on-propagation"
+        ],
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(2)",
+            "output": "Argument(0)[<Argument(1)>]",
+            "features": [
+              "via-bundle-setter"
+            ]
+          },
+          {
+            "input": "Argument(2)",
+            "output": "Return[<Argument(1)>]",
+            "features": [
+              "via-bundle-setter"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "extends": [
+            "Ljava/util/Map;",
+            "Lkotlin/collections/Map;"
+          ],
+          "name": "put"
+        },
+        {
+          "constraint": "number_parameters",
+          "inner": {
+            "constraint": "==",
+            "value": 3
+          }
+        }
+      ],
+      "model": {
+        "modes": [
+          "no-collapse-on-propagation",
+          "skip-analysis",
+          "strong-write-on-propagation"
+        ],
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(2)",
+            "output": "Argument(0)[<Argument(1)>]"
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parents": [
+            "Landroid/util/LruCache;",
+            "Landroidx/collection/SimpleArrayMap;",
+            "Landroidx/arch/core/internal/SafeIterableMap;",
+            "Landroidx/collection/LruCache;"
+          ],
+          "name": "put"
+        },
+        {
+          "constraint": "number_parameters",
+          "inner": {
+            "constraint": "==",
+            "value": 3
+          }
+        }
+      ],
+      "model": {
+        "modes": [
+          "no-collapse-on-propagation",
+          "skip-analysis",
+          "strong-write-on-propagation"
+        ],
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(2)",
+            "output": "Argument(0)[<Argument(1)>]"
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parent": "Landroid/os/Bundle;",
+          "name": "putAll"
+        }
+      ],
+      "model": {
+        "modes": [
+          "no-collapse-on-propagation",
+          "skip-analysis"
+        ],
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(1)",
+            "output": "Argument(0)"
+          },
+          {
+            "input": "Argument(1)",
+            "output": "Return"
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "extends": [
+            "Ljava/util/Map;",
+            "Lkotlin/collections/Map;"
+          ],
+          "name": "get"
+        }
+      ],
+      "model": {
+        "modes": [
+          "no-collapse-on-propagation",
+          "skip-analysis"
+        ],
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(0)[<Argument(1)>]",
+            "output": "Return"
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parents": [
+            "Landroid/util/LruCache;",
+            "Landroidx/collection/SimpleArrayMap;",
+            "Landroidx/arch/core/internal/SafeIterableMap;",
+            "Landroidx/collection/LruCache;"
+          ],
+          "name": "get"
+        }
+      ],
+      "model": {
+        "modes": [
+          "no-collapse-on-propagation",
+          "skip-analysis"
+        ],
+        "freeze": [
+          "propagation"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(0)[<Argument(1)>]",
+            "output": "Return"
+          }
+        ]
+      }
+    }
+  ]
+}

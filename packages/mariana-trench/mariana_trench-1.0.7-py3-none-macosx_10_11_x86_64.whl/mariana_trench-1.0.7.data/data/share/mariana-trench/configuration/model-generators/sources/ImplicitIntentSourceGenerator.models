@@ -1,0 +1,47 @@
+{
+  "model_generators": [
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "extends": "Landroid/content/Intent;",
+          "name": "<init>"
+        },
+        {
+          "constraint": "not",
+          "inner": {
+            "constraint": "signature_pattern",
+            "pattern": ".*Ljava/lang/Class;.*"
+          }
+        }
+      ],
+      "model": {
+        "generations": [
+          {
+            "kind": "IntentCreation",
+            "port": "Argument(0)"
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parent": "Landroidx/activity/result/contract/ActivityResultContracts$StartActivityForResult;",
+          "name": "<init>"
+        }
+      ],
+      "model": {
+        "generations": [
+          {
+            "kind": "StartActivityForResultContract",
+            "port": "Argument(0)"
+          }
+        ]
+      }
+    }
+  ]
+}
