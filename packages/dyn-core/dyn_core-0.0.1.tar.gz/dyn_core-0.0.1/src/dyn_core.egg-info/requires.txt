@@ -1,0 +1,11 @@
+numpy>=1.17
+scipy
+networkx
+pandas
+scikit-learn
+plotly
+seaborn
+matplotlib
+igraph
+tomli
+jupyter

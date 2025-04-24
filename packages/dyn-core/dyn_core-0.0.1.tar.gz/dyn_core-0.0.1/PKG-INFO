@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: dyn-core
+Version: 0.0.1
+Summary: Core features of the 'dyn' namespace package
+Author-email: Cécile Bothorel <cecile.bothorel@imt-atlantique.fr>, Laurent Brisson <laurent.brisson@imt-atlantique.fr>, Nicolas Duminy <nicolas.duminy@imt-atlantique.fr>
+License: Copyright IMT Atlantique, 2021
+        
+        Project leaders:
+          Cécile Bothorel <cecile.bothorel@imt-atlantique.fr>
+          Laurent Brisson <laurent.brisson@imt-atlantique.fr>
+          Nicolas Duminy <nicolas.duminy@imt-atlantique.fr>
+        
+        This software is a benchmark generator for the analysis of evolving communities.
+        
+        This software is licensed under the European Union Public Licence (EUPL) v1.2.
+        
+        The English version and the French version of this licence are in the
+        directory LICENCE.  The EUPL is available in 22 official languages of the
+        European Union; for more informations, please check its website:
+        https://joinup.ec.europa.eu/page/eupl-text-11-12
+        
+Project-URL: Homepage, https://gitlab.imt-atlantique.fr/networks/dyn/core
+Project-URL: Issues, https://gitlab.imt-atlantique.fr/networks/dyn/core/issues
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.17
+Requires-Dist: scipy
+Requires-Dist: networkx
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: plotly
+Requires-Dist: seaborn
+Requires-Dist: matplotlib
+Requires-Dist: igraph
+Requires-Dist: tomli
+Requires-Dist: jupyter
+Dynamic: license-file
