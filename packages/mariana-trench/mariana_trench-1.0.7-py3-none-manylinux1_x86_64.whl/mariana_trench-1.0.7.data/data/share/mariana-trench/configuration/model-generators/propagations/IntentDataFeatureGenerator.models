@@ -1,0 +1,70 @@
+{
+  "model_generators": [
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "parent",
+          "inner": {
+            "constraint": "name",
+            "pattern": "Landroid/content/Intent;"
+          }
+        },
+        {
+          "constraint": "name",
+          "pattern": "setData.*"
+        }
+      ],
+      "model": {
+        "propagation": [
+          {
+            "input": "Argument(1)",
+            "output": "Argument(0)",
+            "transforms": [
+              "IntentData"
+            ]
+          },
+          {
+            "input": "Argument(1)",
+            "output": "Return",
+            "transforms": [
+              "IntentData"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parent": "Landroid/content/Intent;",
+          "name": "<init>"
+        }
+      ],
+      "model": {
+        "for_all_parameters": [
+          {
+            "variable": "x",
+            "where": [
+              {
+                "constraint": "name",
+                "pattern": "Landroid/net/Uri;"
+              }
+            ],
+            "propagation": [
+              {
+                "input": "Argument(x)",
+                "output": "Argument(0)",
+                "transforms": [
+                  "IntentData"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
