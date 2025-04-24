@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+shuidi_data/__init__.py
+shuidi_data/api_tool.py
+shuidi_data/server.py
+shuidi_data_mcp_server.egg-info/PKG-INFO
+shuidi_data_mcp_server.egg-info/SOURCES.txt
+shuidi_data_mcp_server.egg-info/dependency_links.txt
+shuidi_data_mcp_server.egg-info/entry_points.txt
+shuidi_data_mcp_server.egg-info/requires.txt
+shuidi_data_mcp_server.egg-info/top_level.txt

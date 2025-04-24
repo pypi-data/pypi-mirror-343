@@ -1,0 +1,13 @@
+[project]
+name = "shuidi-data-mcp-server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "loguru>=0.7.3",
+    "mcp[cli]>=1.6.0",
+]
+
+[project.scripts]
+shuidi-data-mcp-server = "shuidi_data.server:main"
