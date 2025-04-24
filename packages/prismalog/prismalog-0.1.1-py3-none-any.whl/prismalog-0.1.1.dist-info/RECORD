@@ -1,0 +1,10 @@
+prismalog/__init__.py,sha256=Hr3ZNOGJLb8YvDTxViYuNUOKTlKridjFVmubnoCk1c4,998
+prismalog/argparser.py,sha256=p5sXHKyACYA2JBLoxT4pcfNvI_R5exUgyx6x9d6RYqw,7648
+prismalog/config.py,sha256=3pUeLoQgZitIa_5h0CP-By7CZrkvHZvw4r5wpUfaSz8,32024
+prismalog/log.py,sha256=hkLmMrlX1Ym9_l3L2cAHt-JnJtJpnrEpbvlykr6Rwqg,35462
+prismalog/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prismalog-0.1.1.dist-info/licenses/LICENSE,sha256=A1PgraGM1LCUsPVtfZk1lOVRM1TrxvGqfleCPm0hKKk,1071
+prismalog-0.1.1.dist-info/METADATA,sha256=5TkAlAuIOjNFUmmDZGIaIEqH44ZtKyqYhlSK6kQR23k,7725
+prismalog-0.1.1.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+prismalog-0.1.1.dist-info/top_level.txt,sha256=k65xN7XJxN3Z3UOJTQpDUkQnmRDv763tkgVneLrEesU,10
+prismalog-0.1.1.dist-info/RECORD,,
