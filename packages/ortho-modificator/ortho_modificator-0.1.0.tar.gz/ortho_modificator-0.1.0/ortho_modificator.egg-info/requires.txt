@@ -1,0 +1,10 @@
+folium
+geopandas
+ipyleaflet
+numpy
+
+[all]
+ortho_modificator[extra]
+
+[extra]
+pandas

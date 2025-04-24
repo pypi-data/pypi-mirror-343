@@ -1,0 +1,2 @@
+[console_scripts]
+ortho_modificator = ortho_modificator.cli:main
