@@ -1,0 +1,17 @@
+morca/__init__.py,sha256=JL_ou6Afb4LWVJMV_ON_vWZwkx_GMys8g2pWtXWJjiM,740
+morca/absorption_spectrum.py,sha256=CJwyasuFdQ8pQehAecOJdmdKbPb7Ghkao3OFN663kZQ,1397
+morca/active_space_orbitals.py,sha256=y6URVikNb-BABnFIrFkY_jhShcCmnnD57IgA6tg2U34,658
+morca/excited_states.py,sha256=npnVrPGcSmSVla09MURdzwd1HhbE0-bYGPZbs4_e7yU,2772
+morca/geometry.py,sha256=lyyHTwwWw9lqzqmqRuJiCWr_QU_qAkbukhYoC_sIDO4,1047
+morca/ir_spectrum.py,sha256=WSSUJSGvtQZVxpvE2wDFHph5RcxGFiWKhFVpglfxLGo,976
+morca/loewdin_orbital_composition.py,sha256=MDoGKJwK4eMn_nRsvFaALbkdKAGgUC0zFhEpbW4m610,4578
+morca/orbital_energies.py,sha256=JIPuRPPNtQZjGHDK1LAeTPi4xDFt720wWCxbMbmp5lE,2034
+morca/thermodynamics.py,sha256=aEuEsk5eJtkripgr8S1QInFuIj9FnkTq_KKVbCHWQWc,1269
+morca/tools/__init__.py,sha256=0GorRcGioXhOiD5P5SLBKDnLe2kmHqnsQltXVtFkScw,1130
+morca/tools/new_tddft.py,sha256=y8kdMPG_4xmZOW21dwUcZjhY0avjY5E8behldmZhzIA,11667
+morca/tools/orbitals.py,sha256=4cfSeW_Qj8H5BEUDYpnTOaGhZeYxl4fpY5mfDCjGZgw,8938
+morca/tools/tddft.py,sha256=VoobSjvu7iQhmW6Ikph84ZybavaHET0eC4QNonqyU2E,15242
+morca-0.1.13.dist-info/METADATA,sha256=OtPHFSkLU_T3-MI6Hr9P11gLanGQl_oifyDuzQOFbtI,587
+morca-0.1.13.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+morca-0.1.13.dist-info/entry_points.txt,sha256=IIP23_fszgeF0uklDzsfzzyxtIJdfB1wu3usA_vYg80,84
+morca-0.1.13.dist-info/RECORD,,
