@@ -1,0 +1,17 @@
+LICENSE.MD
+README.md
+pyproject.toml
+setup.py
+geopandas_ai.egg-info/PKG-INFO
+geopandas_ai.egg-info/SOURCES.txt
+geopandas_ai.egg-info/dependency_links.txt
+geopandas_ai.egg-info/requires.txt
+geopandas_ai.egg-info/top_level.txt
+geopandasai/__init__.py
+geopandasai/cache.py
+geopandasai/config.py
+geopandasai/geodataframe_ai.py
+geopandasai/prompt.py
+geopandasai/template.py
+geopandasai/types.py
+geopandasai/wrapper.py
