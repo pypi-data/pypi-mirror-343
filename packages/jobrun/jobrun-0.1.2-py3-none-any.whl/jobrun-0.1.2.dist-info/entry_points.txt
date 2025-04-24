@@ -1,0 +1,3 @@
+[console_scripts]
+jobrun-config = jobrun.config:main
+
