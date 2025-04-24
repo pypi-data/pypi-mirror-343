@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: urlify-simple
+Version: 0.1.0
+Summary: A simple URL shortener package using TinyURL
+Home-page: https://github.com/yourusername/urlify
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# urlify-simple
+
+A simple Python package that makes URL shortening super easy using TinyURL's API under the hood.
+
+## Installation
+
+```bash
+pip install urlify-simple
+```
+
+## Usage
+
+```python
+from urlify import shorten_url
+
+# Shorten a URL
+short_url = shorten_url('https://www.example.com/very/long/url')
+print(short_url)  # Outputs: http://tinyurl.com/xxxxx
+```
+
+## Features
+
+- Simple one-function interface
+- Uses reliable TinyURL service
+- No API key required
+- Clean error handling
+
+## Requirements
+
+- Python 3.6+
+- requests library (automatically installed with package)
+
+## License
+
+This project is licensed under the MIT License.

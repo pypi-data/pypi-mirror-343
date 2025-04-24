@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+tests/test_urlify.py
+urlify/__init__.py
+urlify_simple.egg-info/PKG-INFO
+urlify_simple.egg-info/SOURCES.txt
+urlify_simple.egg-info/dependency_links.txt
+urlify_simple.egg-info/requires.txt
+urlify_simple.egg-info/top_level.txt
