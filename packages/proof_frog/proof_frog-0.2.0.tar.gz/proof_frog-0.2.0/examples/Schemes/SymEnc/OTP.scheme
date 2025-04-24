@@ -1,0 +1,20 @@
+import 'examples/Primitives/SymEnc.primitive';
+
+Scheme OTP(Int lambda) extends SymEnc {
+    Set Key = BitString<lambda>;
+    Set Message = BitString<lambda>;
+    Set Ciphertext = BitString<lambda>;
+
+    Key KeyGen() {
+        Key k <- Key;
+        return k;
+    }
+
+    Ciphertext Enc(Key k, Message m) {
+        return k + m;
+    }
+
+    Message Dec(Key k, Ciphertext c) {
+        return k + c;
+    }
+}

@@ -1,0 +1,85 @@
+import 'examples/Primitives/PRG.primitive';
+import 'examples/Games/Misc/BitStringSampling.game';
+import 'examples/Book/5_Exercises/5_8_a.scheme';
+import 'examples/Book/5_Exercises/5_8_ThreePartBitStringSampling.game';
+import 'examples/Games/PRG/Security.game';
+
+Reduction R1(PRG G, PRG_5_8_a H) compose Security(G) against Security(H).Adversary {
+    BitString<H.lambda + H.stretch> Query() {
+        BitString<3 * H.lambda> result1 = challenger.Query();
+
+        BitString<H.lambda> x = result1[0 : H.lambda];
+        BitString<H.lambda> y = result1[H.lambda : 2*H.lambda];
+        BitString<H.lambda> z = result1[2*H.lambda : 3*H.lambda];
+
+        BitString<3 * H.lambda> result2 = G.evaluate(x);
+        BitString<3 * H.lambda> result3 = G.evaluate(z);
+
+        return result2 || result3;
+    }
+}
+
+Reduction R2(PRG G, PRG_5_8_a H, Int lambda) compose ThreePartBitStringSampling(lambda) against Security(H).Adversary {
+    BitString<H.lambda + H.stretch> Query() {
+        BitString<3 * H.lambda> result1 = challenger.Query();
+
+        BitString<H.lambda> x = result1[0 : H.lambda];
+        BitString<H.lambda> y = result1[H.lambda : 2*H.lambda];
+        BitString<H.lambda> z = result1[2*H.lambda : 3*H.lambda];
+
+        BitString<3 * H.lambda> result2 = G.evaluate(x);
+        BitString<3 * H.lambda> result3 = G.evaluate(z);
+
+        return result2 || result3;
+    }
+}
+
+Reduction R3(PRG G, PRG_5_8_a H) compose Security(G) against Security(H).Adversary {
+    BitString<H.lambda + H.stretch> Query() {
+        BitString<3 * H.lambda> result2 = challenger.Query();
+        BitString<3 * H.lambda> result3 = challenger.Query();
+        return result2 || result3;
+    }
+}
+
+Reduction R4(PRG_5_8_a H, Int lambda) compose BitStringSampling(3 * lambda, 3 * lambda) against Security(H).Adversary {
+    BitString<H.lambda + H.stretch> Query() {
+        return challenger.Query();
+    }
+}
+
+proof:
+
+let:
+    Int lambda;
+    PRG G = PRG(lambda, 2 * lambda);
+    PRG_5_8_a H = PRG_5_8_a(G);
+
+assume:
+    Security(G);
+    ThreePartBitStringSampling(lambda);
+    BitStringSampling(3 * lambda, 3 * lambda);
+
+theorem:
+    Security(H);
+
+games:
+    Security(H).Real against Security(H).Adversary;
+
+    Security(G).Real compose R1(G, H) against Security(H).Adversary;
+
+    Security(G).Random compose R1(G, H) against Security(H).Adversary;
+
+    ThreePartBitStringSampling(lambda).SampleDirectly compose R2(G, H, lambda) against Security(H).Adversary;
+
+    ThreePartBitStringSampling(lambda).Concatenate compose R2(G, H, lambda) against Security(H).Adversary;
+
+    Security(G).Real compose R3(G, H) against Security(H).Adversary;
+
+    Security(G).Random compose R3(G, H) against Security(H).Adversary;
+
+    BitStringSampling(3 * lambda, 3 * lambda).Concatenate compose R4(H, lambda) against Security(H).Adversary;
+
+    BitStringSampling(3 * lambda, 3 * lambda).SampleDirectly compose R4(H, lambda) against Security(H).Adversary;
+
+    Security(H).Random against Security(H).Adversary;

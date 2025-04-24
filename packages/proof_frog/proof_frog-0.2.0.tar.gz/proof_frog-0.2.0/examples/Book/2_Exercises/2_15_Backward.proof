@@ -1,0 +1,37 @@
+import 'examples/Primitives/SymEnc.primitive';
+import 'examples/Book/2_Exercises/2_15.game';
+import 'examples/Games/SymEnc/OneTimeSecrecy.game';
+
+Reduction R(SymEnc E) compose Foo(E) against OneTimeSecrecy(E).Adversary {
+    E.Ciphertext Eavesdrop(E.Message mL, E.Message mR) {
+        E.Ciphertext * E.Ciphertext c = challenger.Foo(mL, mR);
+        return c[0];
+    }
+}
+
+proof:
+
+let:
+    Set MessageSpace;
+    Set CiphertextSpace;
+    Set KeySpace;
+
+    SymEnc E = SymEnc(MessageSpace, CiphertextSpace, KeySpace);
+
+assume:
+    Foo(E);
+
+theorem:
+    OneTimeSecrecy(E);
+
+games:
+    OneTimeSecrecy(E).Left against OneTimeSecrecy(E).Adversary;
+    
+    // By codewise equivalency
+    Foo(E).Left compose R(E) against OneTimeSecrecy(E).Adversary;
+    
+    // By assumption
+    Foo(E).Right compose R(E) against OneTimeSecrecy(E).Adversary;
+
+    // By codewise equivalency
+    OneTimeSecrecy(E).Right against OneTimeSecrecy(E).Adversary;

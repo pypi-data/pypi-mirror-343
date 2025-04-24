@@ -1,0 +1,60 @@
+import 'examples/Primitives/PRG.primitive';
+import 'examples/Book/5_Exercises/5_8_f.scheme';
+import 'examples/Book/5/5_2_PseudoOTP.scheme';
+import 'examples/Games/Misc/BitStringSampling.game';
+import 'examples/Games/PRG/Security.game';
+import 'examples/Games/SymEnc/OneTimeUniformCiphertexts.game';
+
+Reduction R1(PRG G, PRG_5_8_f H) compose BitStringSampling(G.lambda, G.lambda) against Security(H).Adversary {
+    BitString<H.lambda + H.stretch> Query() {
+        BitString<H.lambda> s = challenger.Query();
+        BitString<G.lambda> sL = s[0 : G.lambda];
+        BitString<G.lambda> sR = s[G.lambda : H.lambda];
+        return G.evaluate(sL) + G.evaluate(sR);
+    }
+}
+
+Reduction R2(PRG G, PRG_5_8_f H) compose Security(G) against Security(H).Adversary {
+    BitString<H.lambda + H.stretch> Query() {
+        BitString<G.lambda> sR <- BitString<G.lambda>;
+        return challenger.Query() + G.evaluate(sR);
+    }
+}
+
+Reduction R3(PRG G, PRG_5_8_f H, PseudoOTP P) compose OneTimeUniformCiphertexts(P) against Security(H).Adversary {
+    BitString<H.lambda + H.stretch> Query() {
+        BitString<G.lambda> sR <- BitString<G.lambda>;
+        return challenger.CTXT(G.evaluate(sR));
+    }
+}
+
+proof:
+
+let:
+    Int lambda;
+    PRG G = PRG(lambda, 2 * lambda);
+    PRG_5_8_f H = PRG_5_8_f(G);
+    PseudoOTP P = PseudoOTP(lambda, 2 * lambda, G);
+
+assume:
+    Security(G);
+    BitStringSampling(lambda, lambda);
+    OneTimeUniformCiphertexts(P); // see 'examples/Book/5_Exercises/5_8_PseudoOTP_OTUC.proof'
+
+theorem:
+    Security(H);
+
+games:
+    Security(H).Real against Security(H).Adversary;
+
+    BitStringSampling(lambda, lambda).SampleDirectly compose R1(G, H) against Security(H).Adversary;
+
+    BitStringSampling(lambda, lambda).Concatenate compose R1(G, H) against Security(H).Adversary;
+
+    Security(G).Real compose R2(G, H) against Security(H).Adversary;
+
+    OneTimeUniformCiphertexts(P).Real compose R3(G, H, P) against Security(H).Adversary;
+
+    OneTimeUniformCiphertexts(P).Random compose R3(G, H, P) against Security(H).Adversary;
+
+    Security(H).Random against Security(H).Adversary;

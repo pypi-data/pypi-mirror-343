@@ -1,0 +1,17 @@
+import 'examples/Primitives/PRG.primitive';
+
+Scheme PRG_5_8_b(PRG G) extends PRG {
+    requires G.stretch == 2 * G.lambda;
+
+    Int lambda = G.lambda;
+    Int stretch = G.lambda;
+
+    BitString<lambda + stretch> evaluate(BitString<lambda> s) {
+        BitString<3 * lambda> result = G.evaluate(s);
+        
+        BitString<lambda> x = result[0 : lambda];
+        BitString<lambda> y = result[lambda : 2*lambda];
+        
+        return x || y;
+    }
+}

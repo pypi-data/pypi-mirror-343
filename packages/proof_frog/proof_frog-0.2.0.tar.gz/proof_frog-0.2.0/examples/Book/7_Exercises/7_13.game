@@ -1,0 +1,30 @@
+import 'examples/Primitives/SymEnc.primitive';
+
+Game Left(SymEnc E) {
+    E.Key k;
+
+    Void Initialize() {
+        k = E.KeyGen();
+    }
+
+    E.Ciphertext Challenge(E.Message m) {
+        E.Ciphertext c = E.Enc(k, m);
+        return c;
+    }
+}
+
+Game Right(SymEnc E) {
+    E.Key k;
+
+    Void Initialize() {
+        k = E.KeyGen();
+    }
+
+    E.Ciphertext Challenge(E.Message m) {
+        E.Message mPrime <- E.Message;
+        E.Ciphertext c = E.Enc(k, mPrime);
+        return c;
+    }
+}
+
+export as Challenge;

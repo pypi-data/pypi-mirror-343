@@ -1,0 +1,43 @@
+import 'examples/Primitives/SymEnc.primitive';
+import 'examples/Games/SymEnc/CCABook.game';
+import 'examples/Games/SymEnc/CCA$.game';
+
+Reduction R1(SymEnc E) compose CCA$(E) against CCA(E).Adversary {
+    E.Ciphertext Eavesdrop(E.Message mL, E.Message mR) {
+        return challenger.CTXT(mL);
+    }
+    E.Message? Decrypt(E.Ciphertext c) {
+        return challenger.Decrypt(c);
+    }
+}
+
+Reduction R2(SymEnc E) compose CCA$(E) against CCA(E).Adversary {
+    E.Ciphertext Eavesdrop(E.Message mL, E.Message mR) {
+        return challenger.CTXT(mR);
+    }
+    E.Message? Decrypt(E.Ciphertext c) {
+        return challenger.Decrypt(c);
+    }
+}
+
+proof:
+
+let:
+    Set MessageSpace;
+    Set CiphertextSpace;
+    Set KeySpace;
+    SymEnc E = SymEnc(MessageSpace, CiphertextSpace, KeySpace);
+
+assume:
+    CCA$(E);
+
+theorem:
+    CCA(E);
+
+games:
+    CCA(E).Left against CCA(E).Adversary;
+    CCA$(E).Real compose R1(E) against CCA(E).Adversary;
+    CCA$(E).Random compose R1(E) against CCA(E).Adversary;
+    CCA$(E).Random compose R2(E) against CCA(E).Adversary;
+    CCA$(E).Real compose R2(E) against CCA(E).Adversary;
+    CCA(E).Right against CCA(E).Adversary;

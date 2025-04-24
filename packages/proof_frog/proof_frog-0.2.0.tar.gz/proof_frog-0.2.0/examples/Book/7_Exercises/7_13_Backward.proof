@@ -1,0 +1,50 @@
+import 'examples/Primitives/SymEnc.primitive';
+import 'examples/Book/7_Exercises/7_13.game';
+import 'examples/Games/SymEnc/CPA.game';
+
+Reduction R1(SymEnc E) compose Challenge(E) against CPA(E).Adversary {
+    E.Ciphertext Eavesdrop(E.Message mL, E.Message mR) {
+        E.Ciphertext c = challenger.Challenge(mL);
+        return c;
+    }
+}
+
+Reduction R2(SymEnc E) compose Challenge(E) against CPA(E).Adversary {
+    E.Ciphertext Eavesdrop(E.Message mL, E.Message mR) {
+        E.Ciphertext c = challenger.Challenge(mR);
+        return c;
+    }
+}
+
+proof:
+
+let:
+    Set MessageSpace;
+    Set CiphertextSpace;
+    Set KeySpace;
+
+    SymEnc E = SymEnc(MessageSpace, CiphertextSpace, KeySpace);
+
+assume:
+    Challenge(E);
+
+theorem:
+    CPA(E);
+
+games:
+    CPA(E).Left against CPA(E).Adversary;
+    
+    // By codewise equivalency
+    Challenge(E).Left compose R1(E) against CPA(E).Adversary;
+    
+    // By assumption
+    Challenge(E).Right compose R1(E) against CPA(E).Adversary;
+
+    // mL argument is not used in R1, replace with mR
+    Challenge(E).Right compose R2(E) against CPA(E).Adversary;
+
+    // By assumption 
+    Challenge(E).Left compose R2(E) against CPA(E).Adversary;    
+    
+    // By codewise equivalency
+    CPA(E).Right against CPA(E).Adversary;
