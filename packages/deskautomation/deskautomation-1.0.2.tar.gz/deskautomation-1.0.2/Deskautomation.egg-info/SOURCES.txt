@@ -1,0 +1,13 @@
+README.md
+setup.py
+DeskAutomation/__init__.py
+Deskautomation.egg-info/PKG-INFO
+Deskautomation.egg-info/SOURCES.txt
+Deskautomation.egg-info/dependency_links.txt
+Deskautomation.egg-info/requires.txt
+Deskautomation.egg-info/top_level.txt
+deskautomation.egg-info/PKG-INFO
+deskautomation.egg-info/SOURCES.txt
+deskautomation.egg-info/dependency_links.txt
+deskautomation.egg-info/requires.txt
+deskautomation.egg-info/top_level.txt
