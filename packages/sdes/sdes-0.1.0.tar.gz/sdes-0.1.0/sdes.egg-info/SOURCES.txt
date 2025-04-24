@@ -1,0 +1,9 @@
+README.md
+setup.py
+sdes/__init__.py
+sdes/sdes.py
+sdes.egg-info/PKG-INFO
+sdes.egg-info/SOURCES.txt
+sdes.egg-info/dependency_links.txt
+sdes.egg-info/requires.txt
+sdes.egg-info/top_level.txt
