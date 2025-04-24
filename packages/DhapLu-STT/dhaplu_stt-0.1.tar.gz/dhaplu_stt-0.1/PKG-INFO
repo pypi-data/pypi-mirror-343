@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: DhapLu-STT
+Version: 0.1
+Summary: this is speech to text package created by subhadip sarkar
+Author: Subhadip Sarkar
+Author-email: subhadip021@gmail.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: summary
