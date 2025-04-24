@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+mcp_client/__init__.py
+mcp_client/server.py
+mcp_client_tools.egg-info/PKG-INFO
+mcp_client_tools.egg-info/SOURCES.txt
+mcp_client_tools.egg-info/dependency_links.txt
+mcp_client_tools.egg-info/entry_points.txt
+mcp_client_tools.egg-info/requires.txt
+mcp_client_tools.egg-info/top_level.txt
