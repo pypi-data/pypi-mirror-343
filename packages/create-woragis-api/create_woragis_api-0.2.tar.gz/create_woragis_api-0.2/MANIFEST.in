@@ -1,0 +1,7 @@
+# Include all files in the templates and extras directories
+include create_woragis_api/templates/*
+include create_woragis_api/extras/*
+
+# If you want to include any specific hidden files (e.g., .gitignore or other dotfiles)
+# you can also add them explicitly like this:
+# include create_woragis_api/.gitignore

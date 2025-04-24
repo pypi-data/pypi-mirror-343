@@ -1,0 +1,2 @@
+[console_scripts]
+create-woragis-api = create_woragis_api.main:cli
