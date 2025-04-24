@@ -1,0 +1,6 @@
+foscamcgi.py
+pyproject.toml
+foscamcgi.egg-info/PKG-INFO
+foscamcgi.egg-info/SOURCES.txt
+foscamcgi.egg-info/dependency_links.txt
+foscamcgi.egg-info/top_level.txt
