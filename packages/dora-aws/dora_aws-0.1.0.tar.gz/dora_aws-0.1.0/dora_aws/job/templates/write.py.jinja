@@ -1,0 +1,38 @@
+# -*- coding: utf-8 -*-
+
+"""Read job for AWS Glue."""
+
+from sys import argv
+
+from pyspark.context import SparkContext
+from awsglue.context import GlueContext
+from awsglue.job import Job
+from awsglue.utils import getResolvedOptions
+
+from dora_core.utils import logger
+from dora_core.asset import Job as JobDef, Table as TableDef
+from dora_core.engine import EngineType, Write
+
+log = logger('write')
+
+def get_table(job:JobDef) -> TableDef:
+    for table in job.tables:
+        if table.name == '{{ table }}':
+            return table
+
+arguments = getResolvedOptions(args=argv, options=dict())
+log.debug('arguments:%s', arguments)
+spark = GlueContext(SparkContext.getOrCreate())
+job = Job(spark)
+job.init("read", arguments)
+
+_sql = """
+{{ sql }}
+"""
+
+job_def = JobDef(name='{{ job_name }}', sql=_sql)
+eng = Write(table=get_table(job_def), job=job_def, engine=EngineType.SPARK)
+
+log.info(eng.read(input_file='s3://bucket/path/key/object.format'))
+
+job.commit()

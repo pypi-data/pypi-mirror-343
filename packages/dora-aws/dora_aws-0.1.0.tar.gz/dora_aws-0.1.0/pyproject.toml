@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "dora-aws"
+version = "0.1.0"
+description = "Dora for AWS"
+authors = ["Didone <tiago.didone@compass.uol>"]
+license = "Apache-2.0"
+readme = "README.md"
+packages = [
+    { include = "dora_aws" },
+    { include = "container" }
+]
+
+classifiers = [
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+pyiceberg = {extras = ["glue", "s3fs"], version = "^0.8.1"}
+dora-core = "^0.1.0"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+pyspark = "^3.5.4"
+aws-glue-libs = {git = "https://github.com/awslabs/aws-glue-libs.git"}
+duckdb = "^1.2.0"
+
+
+[tool.poetry.group.stack.dependencies]
+aws-cdk-lib = "^2.175.1"
+constructs = "^10.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
