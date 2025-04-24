@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: sphinx_bib_domain
+Version: 0.1.0
+Author-email: John Grey <jgrey.n.plus.one+bibdomain@gmail.com>
+Project-URL: homepage, https://github.com/jgrey4296/sphinx_bib_domain
+Project-URL: documentation, https://readthedocs.org/sphinx_bib_domain
+Project-URL: repository, https://github.com/jgrey4296/sphinx_bib_domain
+Project-URL: changelog, https://github.com//sphinx_bib_domain/blob/master/CHANGELOG.md
+Classifier: Programming Language :: Python
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: docutils>=0.21.2
+Requires-Dist: jgdv>=1.0.1
+Requires-Dist: sphinx>=8.2.3
+Provides-Extra: dev
+Requires-Dist: myst-parser>=4.0.1; extra == "dev"
+Requires-Dist: pytest>=8.3.5; extra == "dev"
+Requires-Dist: pytest-cov>=6.0.0; extra == "dev"
+Requires-Dist: pytest-mock>=3.14.0; extra == "dev"
+Requires-Dist: sphinx>=8.2.3; extra == "dev"
+Requires-Dist: sphinx-rtd-theme>=3.0.2; extra == "dev"
+Dynamic: license-file
+
+# sphinx_bib_domain
+
+Author: John Grey
+Date  : 2024-11-08
+
+## Overview
+
+
+## Examples
