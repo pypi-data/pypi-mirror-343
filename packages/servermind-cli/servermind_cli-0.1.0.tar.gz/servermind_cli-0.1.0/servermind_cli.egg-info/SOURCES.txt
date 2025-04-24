@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+install.sh
+main.py
+pyproject.toml
+requirements.txt
+setup.py
+start.sh
+servermind_cli.egg-info/PKG-INFO
+servermind_cli.egg-info/SOURCES.txt
+servermind_cli.egg-info/dependency_links.txt
+servermind_cli.egg-info/entry_points.txt
+servermind_cli.egg-info/requires.txt
+servermind_cli.egg-info/top_level.txt
