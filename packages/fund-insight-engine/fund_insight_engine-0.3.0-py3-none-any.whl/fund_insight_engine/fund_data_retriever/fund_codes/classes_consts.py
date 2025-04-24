@@ -1,0 +1,4 @@
+KEY_FOR_CLASS_CATEGORY = '클래스구분'
+KEY_FOR_FUND_CODE_IN_MENU2110 = '펀드코드'
+KEY_FOR_FUND_NAME_IN_MENU2110 = '펀드명'
+KEYS_FOR_CLASS = ['운용펀드', '일반', '클래스펀드', '-']
