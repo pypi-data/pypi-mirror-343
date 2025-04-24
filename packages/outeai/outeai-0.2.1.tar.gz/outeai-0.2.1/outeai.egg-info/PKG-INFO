@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: outeai
+Version: 0.2.1
+Summary: OuteAI
+Home-page: https://github.com/edwko/OuteAI
+Author: OuteAI
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: numpy
+Requires-Dist: loguru
+Requires-Dist: tqdm
+
+# OuteAI Early Access API - TTS Client
+
+A Python client for interacting with the [OuteAI](https://outeai.com/) Text-to-Speech (TTS) API.
+
+```python
+from outeai.api.v1 import TTSClient
+
+client = TTSClient(token="your_access_token_here")
+output = client.generate(
+    text="Hello, how are you doing today?",
+    temperature=0.4,
+    speaker={"default": "EN-FEMALE-1-NEUTRAL"}
+)
+# Save the audio
+output.save("output.flac")
+```
