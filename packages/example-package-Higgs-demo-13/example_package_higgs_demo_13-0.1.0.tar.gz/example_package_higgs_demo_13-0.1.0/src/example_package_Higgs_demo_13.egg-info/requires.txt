@@ -1,0 +1,11 @@
+google-api-python-client>=2.126.0
+google-auth-httplib2>=0.2
+google-auth-oauthlib>=1.2.0
+typer[all]>=0.9
+
+[dev]
+pytest
+pytest-cov
+ruff
+black
+python-dotenv
