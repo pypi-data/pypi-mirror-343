@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+tasadofi/__init__.py
+tasadofi/random_number.py
+tasadofi.egg-info/PKG-INFO
+tasadofi.egg-info/SOURCES.txt
+tasadofi.egg-info/dependency_links.txt
+tasadofi.egg-info/top_level.txt
+tests/__init__.py
