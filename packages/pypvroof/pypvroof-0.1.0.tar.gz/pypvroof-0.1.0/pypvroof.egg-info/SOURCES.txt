@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pypvroof/__init__.py
+pypvroof/main.py
+pypvroof/methods.py
+pypvroof/setup.py
+pypvroof/utils.py
+pypvroof.egg-info/PKG-INFO
+pypvroof.egg-info/SOURCES.txt
+pypvroof.egg-info/dependency_links.txt
+pypvroof.egg-info/requires.txt
+pypvroof.egg-info/top_level.txt
+pypvroof/data/lut_france.json
+tests/test_basic.py
