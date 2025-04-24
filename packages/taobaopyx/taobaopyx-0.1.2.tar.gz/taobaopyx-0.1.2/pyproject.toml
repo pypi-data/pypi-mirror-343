@@ -1,0 +1,39 @@
+[project]
+name = "taobaopyx"
+version = "0.1.2"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx",
+]
+
+[dependency-groups]
+dev = [
+    "asyncmock>=0.4.2",
+    "isort>=6.0.1",
+    "mypy>=1.15.0",
+    "pylint>=3.3.6",
+    "pytest>=8.3.5",
+    "pytest-asyncio>=0.26.0",
+]
+
+[tool.pylint.master]
+job = 0
+suggestion-mode = "yes"
+
+[tool.pylint.format]
+max-line-length = 120
+
+[tool.pylint.message_control]
+disable = ["missing-docstring", "logging-fstring-interpolation"]
+
+[tool.pylint.design]
+min-public-methods = 0
+
+[tool.pytest.ini_options]
+addopts = " -svv"
+minversion = "6.0"
+testpaths = [
+  "tests",
+]

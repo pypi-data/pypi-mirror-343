@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+taobaopyx/__init__.py
+taobaopyx/taobao.py
+taobaopyx.egg-info/PKG-INFO
+taobaopyx.egg-info/SOURCES.txt
+taobaopyx.egg-info/dependency_links.txt
+taobaopyx.egg-info/requires.txt
+taobaopyx.egg-info/top_level.txt
+tests/test_api_node.py
+tests/test_api_request.py
+tests/test_async_taobao_api_client.py
+tests/test_helper_funcs.py
