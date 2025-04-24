@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+mais/__init__.py
+mais.egg-info/PKG-INFO
+mais.egg-info/SOURCES.txt
+mais.egg-info/dependency_links.txt
+mais.egg-info/requires.txt
+mais.egg-info/top_level.txt
+tests/test_mais.py
