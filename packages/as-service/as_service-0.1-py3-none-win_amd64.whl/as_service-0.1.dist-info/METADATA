@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: as-service
+Version: 0.1
+Summary: function as windows service wrapper with threading
+Home-page: https://github.com/BeanLiu1994/as_service
+Author: beanliu
+Author-email: njueebeanliu@hotmail.com
+License: MIT
+Keywords: service windows svc
+Platform: UNKNOWN
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: pywin32
+
+UNKNOWN
+
