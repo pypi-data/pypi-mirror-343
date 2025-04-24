@@ -1,0 +1,29 @@
+[project]
+name = "spryx-core"
+version = "0.1.1"
+description = "Core utilities and types for Spryx projects"
+authors = [
+    {name = "Pedro Cantidio",email = "ppcantidio@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "python-ulid (>=3.0.0,<4.0.0)",
+    "pydantic (>=2.11.3,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-cov = "^6.1.1"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+pythonpath = ["."]
+addopts = "--cov=spryx_core --cov-report=term-missing"
+
