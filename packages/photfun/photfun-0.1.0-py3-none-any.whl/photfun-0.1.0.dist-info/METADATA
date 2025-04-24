@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: photfun
+Version: 0.1.0
+Summary: PHOTfun is an interactive adaptation of the DAOPHOT 
+Home-page: https://github.com/ciquezada/photfun
+Author: Carlos Quezada
+License: MIT
+Keywords: daophot,astronomical,python
+License-File: LICENSE
+Requires-Dist: astropy==7.0.1
+Requires-Dist: faicons==0.2.2
+Requires-Dist: imageio==2.37.0
+Requires-Dist: joblib==1.4.2
+Requires-Dist: matplotlib==3.10.1
+Requires-Dist: nest_asyncio==1.6.0
+Requires-Dist: numpy==2.2.5
+Requires-Dist: pandas==2.2.3
+Requires-Dist: Pillow==11.2.1
+Requires-Dist: scipy==1.15.2
+Requires-Dist: shiny==1.4.0
+Requires-Dist: tqdm==4.67.1
+Dynamic: author
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
