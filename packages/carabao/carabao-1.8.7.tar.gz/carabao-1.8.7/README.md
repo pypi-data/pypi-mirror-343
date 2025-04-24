@@ -1,0 +1,197 @@
+# Carabao
+
+```
+                                                           +:
+   -                                                        *-
+  -*                                                        +--
+ -*                                                          *=:
+-=*                                                         +=+-
+-+*                                                        +==*-
+++=*                                                      **=+-
+ *==*+                                                 -**==*-
+  -***=*++                                         -*=**=**-%
+   %-****=*===----------#*%*##+%#@#**-*---------===**+=-%-#
+      **=-***-=*==*==--****%#%%@*@@%#*-----+*=++%++++%%*
+          *%%%#%####%##%*#%%=##@++%@%%######%%%%#%@
+               + @%@@@@##%#=@#@@+++@@%
+             --+++++##%@%#=@@+@@%%@#@#++++=%
+           @+*@@@@@@##@##*=**+*@%%%@#@+@@#@++%
+              #*       *#**##+#%%%*@ %%%%++++#+
+                       *+****+#%%%*@
+                       **=*==+#%##*
+                        *=*=+*#%#*
+                        #=*****#*
+                       #@=***#@##
+                       %%=%%%#=#%#
+                       ####%%%#
+```
+
+A Python library for building robust publisher-subscriber (pub/sub) frameworks with built-in lanes for common tasks.
+
+## Features
+
+-   Core framework for managing pub/sub systems based on l2l (lane2lane)
+-   Built-in lanes for:
+    -   Database logging (`LogToDB`) - Records exceptions to MongoDB
+    -   Network health monitoring (`NetworkHealth`) - Tracks network ping times
+    -   Environment variable display (`PrettyEnv`) - Formats environment variables for debugging
+-   Automatic configuration management with settings system
+-   Error handling with custom error handlers
+-   Clean shutdown with exit handlers
+-   Command-line interface for management, including interactive selection
+-   Support for multiple database connections (MongoDB, Redis, Elasticsearch, PostgreSQL)
+-   Development and production mode support
+
+## Installation
+
+```sh
+pip install git+https://github.com/Talisik/carabao.git
+```
+
+## Requirements
+
+-   async-timeout
+-   dnspython
+-   fun-things
+-   generic-lane
+-   lazy-main
+-   python-dotenv
+-   simple-chalk
+-   typing-extensions
+
+## Usage
+
+### Basic Usage
+
+```python
+if __name__ == "__main__":
+    import carabao
+```
+
+### Environment Variables
+
+Carabao uses the following environment variables:
+
+-   `QUEUE_NAME`: (Required) Name of the queue to consume
+-   `CARABAO_AUTO_INITIALIZE`: Controls automatic initialization
+-   `CARABAO_AUTO_START`: Controls automatic starting
+-   `CARABAO_START_WITH_ERROR`: Whether to start even if errors occurred
+-   `SINGLE_RUN`: Run once then exit if `True`
+-   `TESTING`: Enable debug logging if `True`
+
+### CLI Usage
+
+Carabao provides a command-line interface for managing lanes:
+
+```sh
+# Run in production mode
+moo run
+
+# Run in development mode
+moo dev [queue_name]
+
+# Initialize a new project
+moo init [--skip]
+
+# Create a new lane
+moo new [lane_name]
+```
+
+The development mode (`dev`) command:
+
+-   If no queue name is provided, displays an interactive curses-based menu to select from available lanes
+-   Highlights the last run queue
+-   Provides navigation with arrow keys
+-   Allows selection with Enter key
+-   Exit option at the bottom
+
+## Built-in lanes
+
+Carabao comes with several built-in lanes that provide common functionality:
+
+### LogToDB
+
+A passive lane that logs exceptions to a MongoDB database.
+
+```python
+from carabao.lanes import LogToDB
+from pymongo import MongoClient
+
+# Configure MongoDB connection
+client = MongoClient("mongodb://localhost:27017/")
+db = client["my_database"]
+collection = db["error_logs"]
+
+# Configure LogToDB lane
+LogToDB.storage = collection
+LogToDB.label = "my_app"  # Optional, defaults to POD_NAME
+LogToDB.expiration_time = timedelta(days=7)  # Optional, defaults to 1 hour
+LogToDB.use_stacktrace = True  # Optional, defaults to True
+```
+
+Key features:
+
+-   Automatically captures and logs exceptions to MongoDB
+-   Configurable document expiration time
+-   Options to use stack traces or simple error messages
+-   Customizable document format
+
+### NetworkHealth
+
+Monitors network health by measuring ping times and stores the metrics in MongoDB.
+
+```python
+from carabao.lanes import NetworkHealth
+from pymongo import MongoClient
+
+# Configure MongoDB connection
+client = MongoClient("mongodb://localhost:27017/")
+db = client["my_database"]
+collection = db["network_health"]
+
+# Configure NetworkHealth lane
+NetworkHealth.storage = collection
+NetworkHealth.label = "api_service"  # Optional identifier
+```
+
+Key features:
+
+-   Tracks network ping times
+-   Stores metrics in a MongoDB collection
+-   Updates records with timestamps for monitoring
+
+### PrettyEnv
+
+Displays environment variables in a formatted way to aid in debugging and configuration.
+
+```python
+# Automatically called if enabled. No configuration needed for PrettyEnv.
+```
+
+Key features:
+
+-   Displays all accessed environment variables
+-   Formatted for easy reading
+-   Useful for debugging configuration issues
+
+## Development
+
+### Creating a New Project
+
+You can quickly initialize a new project with:
+
+```sh
+moo init
+```
+
+This will set up the necessary directory structure and configuration files.
+
+### Creating a New Lane
+
+To create a new lane for processing:
+
+```sh
+moo new MyLaneName
+```
+
+This will generate a file with proper naming conventions (snake_case for the filename, PascalCase for the class name).
