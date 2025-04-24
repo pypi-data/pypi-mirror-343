@@ -1,0 +1,74 @@
+Metadata-Version: 2.4
+Name: ykyos-mcp
+Version: 0.1.3
+Summary: MCP Server for URL Processing and Image Extraction
+Author: YKY
+Author-email: YKY <info@ykyos.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: mcp>=1.4.0
+Requires-Dist: aiohttp>=3.8.0
+Requires-Dist: aiofiles>=0.8.0
+Dynamic: author
+
+# YkyosMCP
+
+一个用于处理URL和提取图片的模型上下文协议(MCP)服务器。
+
+## 功能
+
+此MCP服务器提供三个主要工具：
+
+1. **fetch_markdown**: 使用Firecrawl API获取URL内容并返回其原始内容
+2. **extract_images**: 从markdown内容中提取所有图片URL
+3. **download_images**: 下载图片URL列表到指定目录
+
+## 安装
+
+```bash
+pip install ykyos-mcp
+```
+
+## Usage with Claude Desktop
+
+Add the following configuration to your Claude Desktop settings:
+
+```json
+{
+  "mcpServers": {
+    "YkeyMCP": {
+      "isActive": true,
+      "command": "uvx",
+      "args": [
+        "ykyos-mcp"
+      ],
+      "env": {
+        "DOWNLOAD_BASE_PATH": "/path/to/download/directory",
+        "FIRECRAWL_API_KEY": "your_firecrawl_api_key"
+      }
+    }
+  }
+}
+```
+
+Replace `/path/to/download/directory` with the directory where you want to save downloaded images.
+
+## Development
+
+To set up for development:
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/ykyos-mcp.git
+cd ykyos-mcp
+
+# Install in development mode
+pip install -e .
+```
+
+## License
+
+MIT License
