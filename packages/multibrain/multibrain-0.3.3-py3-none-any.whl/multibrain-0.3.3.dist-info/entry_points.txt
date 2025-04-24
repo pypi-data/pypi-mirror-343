@@ -1,0 +1,3 @@
+[console_scripts]
+multibrain-api = api.launch:run_fastapi
+multibrain-web = web.launch:run_streamlit
