@@ -1,0 +1,2 @@
+[airflow.plugins]
+airflow-config-viewer = airflow_config.ui:AirflowConfigViewerPlugin
