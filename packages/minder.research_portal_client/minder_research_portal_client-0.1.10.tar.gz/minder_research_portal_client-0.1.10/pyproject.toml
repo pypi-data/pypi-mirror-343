@@ -1,0 +1,37 @@
+[project]
+name = "minder.research_portal_client"
+version = "0.1.10"
+authors = [{ name = "UK DRI Care Research & Technology centre" }]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "aiohttp[speedups]>=3.8.1",
+    "backoff>=1.11.1",
+    "python-dateutil>=2.8.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=7.1.1",
+    "coverage[toml]>=6.3.2",
+    "flake8>=4.0.1",
+    "flake8-bugbear>=22.3.23",
+    "mypy>=0.942",
+    "black>=22.3.0",
+    "types-python-dateutil>=2.8.10",
+    "backoff-stubs>=1.11.1",
+]
+
+[tool.pytest.ini_options]
+python_files = "tests/test_*.py"
+
+[tool.coverage.run]
+omit = [".*", "tests/*", "*/site-packages/*"]
+
+[tool.black]
+line-length = 120
+
+[tool.mypy]
+namespace_packages = true
+explicit_package_bases = true
+no_implicit_optional = false
