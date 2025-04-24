@@ -1,0 +1,4 @@
+requests>=2.25.1
+# PEP 508 URL-style dependency
+sampleproject @ https://github.com/pypa/sampleproject/archive/refs/heads/main.zip
+

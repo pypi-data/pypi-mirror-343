@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+my_package/__init__.py
+my_project_require.egg-info/PKG-INFO
+my_project_require.egg-info/SOURCES.txt
+my_project_require.egg-info/dependency_links.txt
+my_project_require.egg-info/requires.txt
+my_project_require.egg-info/top_level.txt
