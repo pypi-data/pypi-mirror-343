@@ -1,0 +1,14 @@
+multisocks/__init__.py,sha256=eCTy1ItjPKB7fwhPXXQTFMidigRS_m8opDaRYPd5HAU,105
+multisocks/__main__.py,sha256=qnK_DP32nwNrSeYaM5SxpwwKKNzF3DwBYKtMmXtVOvk,176
+multisocks/bandwidth.py,sha256=ytxGAvSu3DzaBxrYGUHtIXzBIBkCiOyijSgbC3vS_Sw,4865
+multisocks/cli.py,sha256=7s_eyqcgvdSbJnpHS2d_bcdANFj7NMtcMcMAIapiBoM,6556
+multisocks/proxy/__init__.py,sha256=_Zkz0PmCEtQEStbjCeluDdt4rfHxTKY3EdbBfGpEX8E,162
+multisocks/proxy/proxy_info.py,sha256=TMYA0shUFhH9ASEZ1hFHXeNqvybQDn_bV9bpc_nrnuQ,2047
+multisocks/proxy/proxy_manager.py,sha256=mJTTuVuUANMBFqHwZBlzzbz6bdNjIL-4f8HecPHZPxo,9505
+multisocks/proxy/server.py,sha256=LqBv5bkwj6hs4ZZ-ptnIKgG0-3xSErnhLZWW1zlR7E4,14980
+multisocks-1.0.0.dist-info/licenses/LICENSE,sha256=TJu0khkAD-_0BFwbVjxyyKBzvtk7hQqpTiIOAh5zTZg,1065
+multisocks-1.0.0.dist-info/METADATA,sha256=_uzcv5ozBPeFvBakNSJSgS2CaFH3JXdIzalZ-QwXNrc,4184
+multisocks-1.0.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+multisocks-1.0.0.dist-info/entry_points.txt,sha256=utLEmdBQwdRMbUwSwhPH2GGJQLqO_Inue2ONAv0UpxI,51
+multisocks-1.0.0.dist-info/top_level.txt,sha256=h1mh9sxSsGYV1QBPxRyKzMjYzwp6eYBjIc_cCWlxT60,11
+multisocks-1.0.0.dist-info/RECORD,,
