@@ -1,0 +1,65 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "buscolite"
+version = "25.4.24"
+description = "busco analysis for gene predictions"
+readme = {file = "README.md", content-type = "text/markdown"}
+authors = [
+    {name = "Jon Palmer", email = "nextgenusfs@gmail.com"}
+]
+requires-python = ">=3.6.0"
+dependencies = [
+    "natsort",
+    "pyhmmer>=0.10.15",
+    "pyfastx>=2.0.0",
+    "packaging",
+]
+license = {file = "LICENSE.md"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Operating System :: Unix",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+keywords = ["bioinformatics", "genome", "annotation", "completeness", "BUSCO"]
+
+[project.urls]
+Homepage = "https://github.com/nextgenusfs/buscolite"
+Repository = "https://github.com/nextgenusfs/buscolite.git"
+
+[project.scripts]
+buscolite = "buscolite.__main__:main"
+
+[tool.hatch.build]
+include = [
+  "buscolite/*.py",
+  "buscolite/data/*",
+  "README.md",
+  "LICENSE.md"
+]
+exclude = [
+  "tests/*",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pre-commit>=3.5.0",
+  "black>=24.3.0",
+  "isort>=5.13.2",
+  "flake8>=7.0.0",
+  "pytest>=7.4.0",
+  "pytest-cov>=4.1.0",
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+line_length = 100
