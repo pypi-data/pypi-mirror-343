@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: tasadefi
+Version: 1.0.0
+Summary: Python random numbers
+Home-page: https://github.com/Raverss/Python-Random-Types
+Author: Vojtech Molek
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<h1 align="center">
+<img src="imgs/logo.png" width="800">
+</h1><br>
+
+# **Tasadafi** - random python numerical types
+
+This library wraps random number generation into classes inheriting from `int` and `float`. Every time a variable of random type is used, it has a different value, e.g. `1 + random_type` will have different return value everytime. This allows to inject randomness into code without having to alter it, i.e. making numerical parameter of a class random without changing class itself. The random type also remembers last n generated random values.
+
+## Installation
+
+TODO
+
+## Example
+
+Let us consider a demonstrative class that generates sine signal with fixed noise value.
+```
+import numpy as np
+from tasadefi.random_number import RndFloat
+
+class Signal:
+    def __init__(self, noise=0.1):
+        self.noise = noise
+        
+    def generate_signal(self, length=100):
+        # code to generate some signal
+        signal = np.linspace(0, length/2*np.pi, length)  # Example signal: a sine wave
+        signal = np.sin(signal)  # Example signal: a sine wave
+        signal += self.noise
+        return signal
+```
+
+Then generated signal will be identical each repetation. 
+
+```
+signal = Signal()
+for _ in range(2):
+    print(signal.generate_signal(length=5))
+    # [ 0.1 1.02387953 -0.60710678 -0.28268343  1.1 ]
+    # [ 0.1 1.02387953 -0.60710678 -0.28268343  1.1 ]
+```
+
+We can change this by using random type:
+
+```
+signal = Signal(noise=RndFloat('uniform', 0, 0.5))
+for _ in range(2):
+    print(signal.generate_signal(length=5))
+    # [ 0.28435962  1.20823915 -0.42274717 -0.09832382  1.28435962]
+    # [ 0.00813291  0.93201245 -0.69897387 -0.37455052  1.00813291]
+
+
