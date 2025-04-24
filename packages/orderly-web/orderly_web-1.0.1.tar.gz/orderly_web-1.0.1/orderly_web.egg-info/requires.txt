@@ -1,0 +1,7 @@
+Pillow
+docker
+docopt
+hvac
+pytest
+pyyaml
+vault_dev
