@@ -1,0 +1,15 @@
+fastapi
+httpx
+markdown2[all]
+ollama
+python-multipart
+streamlit
+toml
+uvicorn
+
+[dev]
+black
+build
+ruff
+setuptools-scm
+twine
