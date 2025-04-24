@@ -1,0 +1,14 @@
+wowool/build/codeartifact.py,sha256=i1jOpdz7Ma3EGaFYq31W70h72XguuVBIZM4SIqRvI6Q,11619
+wowool/build/exceptions.py,sha256=04fMZc_bRMdinIqKCOqiwfO_xqwp_ZqO_SUgXfq4i58,88
+wowool/build/git.py,sha256=D3CGusjza6bkdI0YbKk-7HumbaPwNYxRWu9M0kT-rHc,3253
+wowool/build/logging.py,sha256=4ycT471N7V6vrEBXURF0-lho1hbmWA7PJyCHhfHVjeA,4988
+wowool/build/platform.py,sha256=aSMkm5bcoDDCR38xPJrRivc5XJrxNhz1PVOVUYrtH_I,900
+wowool/build/pydist.py,sha256=j_OiN2G-RVsQ8NwEv2gn19IBpJEcALIFUeYiDn_4NPY,3924
+wowool/build/pypi.py,sha256=3nlqSu590F2vodUivIa7oz5g9ZTbHc8-cjTGnrGRI2Y,929
+wowool/build/pytask.py,sha256=wlwnQGfVkEUiA_IcRYnz9_BM7hNmzpT_1turmwYHFEM,2879
+wowool/build/pytest.py,sha256=8F1ZklSvpTAnwODXZvzhF6qcND-MlDVbl-e4F1Pf3mI,5304
+wowool/build/utility.py,sha256=q5RwGFD5O9pewuIUxbYt5sA7lj6u1CjWi6PVWQwCxnQ,890
+wowool_build-0.0.4.dev4.dist-info/METADATA,sha256=5QBmiv-2dhZfpBllOG2Z77roy-EdfdO5p8sVGXf1PJM,355
+wowool_build-0.0.4.dev4.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+wowool_build-0.0.4.dev4.dist-info/top_level.txt,sha256=zerqoDN-iHSHwsS1SN2h0q4H6RI1FOVeHW8fNQC9YdU,7
+wowool_build-0.0.4.dev4.dist-info/RECORD,,
