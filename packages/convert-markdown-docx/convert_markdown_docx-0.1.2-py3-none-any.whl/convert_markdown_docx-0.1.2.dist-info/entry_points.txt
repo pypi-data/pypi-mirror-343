@@ -1,0 +1,3 @@
+[console_scripts]
+convert=convert_markdown.cli:main
+
