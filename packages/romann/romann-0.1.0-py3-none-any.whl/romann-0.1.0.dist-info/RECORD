@@ -1,0 +1,9 @@
+romann/__init__.py,sha256=OGvvEbOuRLV2D-8UV7PJepPsAcTJ0y7fxAm2mWn_tac,80
+romann/hiragana_english.json,sha256=a0iYpefPgt432hl4-0ZT6gZwH909wGIyTNx1PVvDU8U,111146
+romann/katakana_english.json,sha256=fyfzyi9r43eNrTXJqYnZfFjIs1G2HYK3UBFKLvroYxs,87247
+romann/romann.py,sha256=tz3CJcHK9jNzaXLASAyvXyeddjv9h4TwX2N_O4xeaCc,3889
+romann-0.1.0.dist-info/licenses/LICENSE,sha256=ww3J56yFRD6Y09TjzjGE5dKVITWfIc5_UgSv8dh4RM0,1062
+romann-0.1.0.dist-info/METADATA,sha256=eB6IudwZEbL1E9lrdKc1lk2Jkvkcs4Qr5zdzIlgCt5I,5076
+romann-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+romann-0.1.0.dist-info/top_level.txt,sha256=NAhOaZvS1ofpfm0OrdvRm-5ZBawenYOlcgb7SLzaNz8,7
+romann-0.1.0.dist-info/RECORD,,
