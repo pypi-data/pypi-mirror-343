@@ -1,0 +1,5 @@
+setup.py
+lokall.egg-info/PKG-INFO
+lokall.egg-info/SOURCES.txt
+lokall.egg-info/dependency_links.txt
+lokall.egg-info/top_level.txt

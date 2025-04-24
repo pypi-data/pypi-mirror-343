@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: lokall
+Version: 0.1.0
+Summary: Moteur de recherche Lokall
+Author: Arthur ELLIES
+Author-email: lokall@openstudy.me
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-python
+Dynamic: summary
