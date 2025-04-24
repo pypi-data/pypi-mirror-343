@@ -1,0 +1,72 @@
+ Job Sequencing with deadlines problem using Greedy Method
+#include <stdio.h>
+#include <stdlib.h>
+
+
+typedef struct
+{
+    char id;
+    int deadline, profit;
+} Job;
+
+
+int compare(const void *a, const void *b)
+{
+    return ((Job *)b)->profit - ((Job *)a)->profit;
+}
+
+
+int main()
+{
+    int n, i, j, maxDeadline = 0, totalProfit = 0;
+    printf("Enter number of jobs: ");
+    scanf("%d", &n);
+
+
+    Job jobs[n];
+    for (i = 0; i < n; i++)
+    {
+        printf("Enter deadline and profit for job %d: ", i + 1);
+        scanf("%d %d", &jobs[i].deadline, &jobs[i].profit);
+        jobs[i].id = 'A' + i;
+        if (jobs[i].deadline > maxDeadline)
+            maxDeadline = jobs[i].deadline;
+    }
+
+
+    qsort(jobs, n, sizeof(Job), compare);
+
+
+    char result[maxDeadline];
+    int slot[maxDeadline];
+    for (i = 0; i < maxDeadline; i++)
+    {
+        slot[i] = 0;
+        result[i] = '-';
+    }
+
+
+    for (i = 0; i < n; i++)
+    {
+        for (j = jobs[i].deadline - 1; j >= 0; j--)
+        {
+            if (!slot[j])
+            {
+                slot[j] = 1;
+                result[j] = jobs[i].id;
+                totalProfit += jobs[i].profit;
+                break;
+            }
+        }
+    }
+
+
+    printf("\nJob sequence: ");
+    for (i = 0; i < maxDeadline; i++)
+        if (result[i] != '-')
+            printf("%c ", result[i]);
+
+
+    printf("\nTotal Profit: %d\n", totalProfit);
+    return 0;
+}

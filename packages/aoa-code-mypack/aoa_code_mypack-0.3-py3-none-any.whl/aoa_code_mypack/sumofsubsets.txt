@@ -1,0 +1,63 @@
+sum of subsets
+#include <stdio.h>
+#define MAX 100
+
+
+int subset[MAX];
+
+
+void printSubset(int subsetSize)
+{
+    printf("{ ");
+    for (int i = 0; i < subsetSize; i++)
+    {
+        printf("%d ", subset[i]);
+    }
+    printf("}\n");
+}
+
+
+void sumOfSubsets(int arr[], int n, int index, int currSum, int targetSum, int subsetSize)
+{
+    if (currSum == targetSum)
+    {
+        printSubset(subsetSize);
+        return;
+    }
+
+
+    for (int i = index; i < n; i++)
+    {
+        if (currSum + arr[i] <= targetSum)
+        {
+            subset[subsetSize] = arr[i];
+            sumOfSubsets(arr, n, i + 1, currSum + arr[i], targetSum, subsetSize + 1);
+        }
+    }
+}
+
+
+int main()
+{
+    int arr[MAX], targetSum, n;
+
+
+    // Input
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+    printf("Enter the elements: ");
+    for (int i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
+
+
+    printf("Enter target sum: ");
+    scanf("%d", &targetSum);
+
+
+    // Finding subsets
+    printf("\nSubsets with sum = %d: \n", targetSum);
+    sumOfSubsets(arr, n, 0, 0, targetSum, 0);
+
+
+    return 0;
+}

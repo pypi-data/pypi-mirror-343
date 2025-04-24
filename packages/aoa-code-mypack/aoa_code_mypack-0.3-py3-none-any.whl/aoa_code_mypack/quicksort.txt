@@ -1,0 +1,72 @@
+quick sort
+#include <stdio.h>
+#include <conio.h>
+#define MAX 100
+
+
+int partition(int x[], int lb, int ub)
+{
+    int pivot, down, up, temp;
+    pivot = x[lb];
+    down = lb;
+    up = ub;
+    while (down < up)
+    {
+        while (x[down] <= pivot && down < ub)
+            down++;
+        while (x[up] > pivot)
+            up--;
+        if (down < up)
+        {
+            temp = x[down];
+            x[down] = x[up];
+            x[up] = temp;
+        }
+    }
+    x[lb] = x[up];
+    x[up] = pivot;
+
+
+    return up;
+}
+
+
+void quick(int x[], int lb, int ub)
+{
+    int j;
+    if (lb >= ub)
+        return;
+    j = partition(x, lb, ub);
+    quick(x, lb, j - 1);
+    quick(x, j + 1, ub);
+}
+
+
+void main()
+{
+    int x[MAX], n, i;
+    // clrscr();
+
+
+    printf("\nEnter n ");
+    scanf("%d", &n);
+
+
+    printf("\nEnter elements ");
+    for (i = 0; i < n; i++)
+        scanf("%d", &x[i]);
+
+
+    printf("\nUnsorted ");
+    for (i = 0; i < n; i++)
+        printf(" %d ", x[i]);
+
+
+    quick(x, 0, n - 1);
+    printf("\nSorted ");
+    for (i = 0; i < n; i++)
+        printf(" %d ", x[i]);
+
+
+    getch();
+}
