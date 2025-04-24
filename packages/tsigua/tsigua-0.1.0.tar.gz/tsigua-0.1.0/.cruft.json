@@ -1,0 +1,26 @@
+{
+  "template": "/home/tshsu/Python/Cruft/cookiecutter-uv",
+  "commit": "4ff0b0a2ac3f946cfbe7b98c7e926babfbf46d0c",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "author": "Ting-Shuo Hsu",
+      "email": "tingshuo.hsu@gmail.com",
+      "author_github_handle": "remexemer",
+      "project_name": "tsigua",
+      "project_slug": "tsigua",
+      "project_description": "Test uv for management.",
+      "layout": "src",
+      "include_github_actions": "y",
+      "publish_to_pypi": "y",
+      "deptry": "y",
+      "mkdocs": "y",
+      "codecov": "y",
+      "dockerfile": "y",
+      "devcontainer": "y",
+      "open_source_license": "MIT license",
+      "_template": "/home/tshsu/Python/Cruft/cookiecutter-uv"
+    }
+  },
+  "directory": null
+}
