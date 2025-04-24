@@ -1,0 +1,9 @@
+# Dependencies helping for development
+jupyter
+jupyter_contrib_nbextensions
+autodocsumm
+sphinx-rtd-theme
+bump-my-version
+pipdeptree
+ipykernel
+notebook
