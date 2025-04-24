@@ -1,0 +1,6 @@
+object_storage_proxy-0.2.10.dist-info/METADATA,sha256=mobZ3uDgfwQ9vURGVzKpVRPtF036ekFLN7rYjfJ062E,12405
+object_storage_proxy-0.2.10.dist-info/WHEEL,sha256=_czbP61TsBkf9T201RekHMHlqESnWn7yJwXBJC9P-w0,104
+object_storage_proxy-0.2.10.dist-info/licenses/LICENSE,sha256=tndXe7D8H3gi7EPI3frJHaIuAQ3s5_sb95Vk4h5UmTY,1078
+object_storage_proxy/__init__.py,sha256=JVsCDxl4_KIGhApSbXzJNSKaO4AmqpJOX86F6WTn1Gg,163
+object_storage_proxy/object_storage_proxy.cpython-313-darwin.so,sha256=Hdiqy1U9gjZKXAU2E3aaa_JJBSZZecpIQ62nVzLYIMU,11126448
+object_storage_proxy-0.2.10.dist-info/RECORD,,
