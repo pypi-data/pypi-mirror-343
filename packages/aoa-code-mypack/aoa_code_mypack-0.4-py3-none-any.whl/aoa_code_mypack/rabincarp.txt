@@ -1,0 +1,82 @@
+rabin karp for pattern searching
+#include <stdio.h>
+#include <string.h>
+
+
+#define d 256 // Number of characters in the input alphabet
+
+
+// Function to implement Rabin-Karp algorithm for pattern searching
+void rabinKarp(char *text, char *pattern, int q)
+{
+    int M = strlen(pattern);
+    int N = strlen(text);
+    int i, j;
+    int patternHash = 0; // Hash value for pattern
+    int textHash = 0;    // Hash value for text
+    int h = 1;
+
+
+    // Calculate the value of h = d^(M-1) % q
+    for (i = 0; i < M - 1; i++)
+        h = (h * d) % q;
+
+
+    // Calculate initial hash values of pattern and text
+    for (i = 0; i < M; i++)
+    {
+        patternHash = (d * patternHash + pattern[i]) % q;
+        textHash = (d * textHash + text[i]) % q;
+    }
+
+
+    // Slide the pattern over the text one by one
+    for (i = 0; i <= N - M; i++)
+    {
+        // Check the hash values of current window of text and pattern
+        if (patternHash == textHash)
+        {
+            // Check for characters one by one if hash values match
+            for (j = 0; j < M; j++)
+            {
+                if (text[i + j] != pattern[j])
+                    break;
+            }
+            if (j == M) // Pattern found
+                printf("Pattern found at index %d\n", i);
+        }
+
+
+        // Calculate hash value for the next window of text
+        if (i < N - M)
+        {
+            textHash = (d * (textHash - text[i] * h) + text[i + M]) % q;
+
+
+            // We might get negative value of textHash, so convert it to positive
+            if (textHash < 0)
+                textHash = (textHash + q);
+        }
+    }
+}
+
+
+int main()
+{
+    char text[100], pattern[100];
+    int q = 101; // A prime number for modulus to reduce collisions
+
+
+    // Input the text and pattern
+    printf("Enter the text: ");
+    scanf("%s", text);
+    printf("Enter the pattern: ");
+    scanf("%s", pattern);
+
+
+    // Run Rabin-Karp pattern searching
+    rabinKarp(text, pattern, q);
+
+
+    return 0;
+}

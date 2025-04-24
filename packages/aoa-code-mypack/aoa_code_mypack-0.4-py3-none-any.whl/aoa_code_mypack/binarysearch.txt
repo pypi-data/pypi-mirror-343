@@ -1,0 +1,48 @@
+binary search
+#include <stdio.h>
+#include <conio.h>
+#define MAX 100
+
+
+int binary(int x[], int low, int high, int key)
+{
+    int mid;
+    if (low > high)
+        return -1;
+    mid = (low + high) / 2;
+    if (x[mid] == key)
+        return mid;
+    if (x[mid] > low)
+        return binary(x, mid + 1, high, key);
+    else
+        return binary(x, low, mid - 1, key);
+}
+
+
+void main()
+{
+    int x[MAX], n, i, key, index;
+
+
+    printf("\nEnter n ");
+    scanf("%d", &n);
+
+
+    printf("\nEnter elements ");
+    for (i = 0; i < n; i++)
+        scanf("%d", &x[i]);
+
+
+    printf("\nEnter element to be searched: ");
+    scanf("%d", &key);
+    index = binary(x, 0, n - 1, key);
+
+
+    if (index < 0)
+        printf("Element not found %d!", key);
+    else
+        printf("%d Element at %d index.", key, index);
+
+
+    getch();
+}

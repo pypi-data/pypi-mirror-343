@@ -1,0 +1,49 @@
+insertion sort
+#include <stdio.h>
+//#include <conio.h>
+#define MAX 1000
+
+
+void insert(int x[], int n)
+{
+    int i, j, numberToBeInserted;
+
+
+    for (i = 1; i < n; i++)
+    {
+        numberToBeInserted = x[i];
+
+
+        for (j = i - 1; j >= 0 && x[j] > numberToBeInserted; j--)
+        {
+            x[j + 1] = x[j];
+            x[j] = numberToBeInserted;
+        }
+    }
+}
+
+
+void main()
+{
+    int i, x[MAX], n;
+    printf("\n Enter no of elements for array: ");
+    scanf("%d", &n);
+
+
+    printf("\nEnter no.s one by one: ");
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &x[i]);
+    }
+
+
+    insert(x, n);
+
+
+    printf("\nSorted array is: ");
+    for (i = 0; i < n; i++)
+    {
+        printf("%d ", x[i]);
+    }
+   // getch();
+}
