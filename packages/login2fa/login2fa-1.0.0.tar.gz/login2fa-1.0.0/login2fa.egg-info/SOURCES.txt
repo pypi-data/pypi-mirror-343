@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+login2fa/__init__.py
+login2fa/modulo.py
+login2fa/setup.py
+login2fa.egg-info/PKG-INFO
+login2fa.egg-info/SOURCES.txt
+login2fa.egg-info/dependency_links.txt
+login2fa.egg-info/requires.txt
+login2fa.egg-info/top_level.txt

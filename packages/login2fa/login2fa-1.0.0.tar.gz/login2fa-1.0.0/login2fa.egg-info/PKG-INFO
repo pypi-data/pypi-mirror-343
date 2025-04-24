@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: login2fa
+Version: 1.0.0
+Summary: Sistema de login com dupla autenticação via ntfy e NiceGUI
+Author: Francisco Gonçalves
+License-File: LICENSE
+Requires-Dist: nicegui
+Requires-Dist: mysql-connector-python
+Requires-Dist: bcrypt
+Requires-Dist: requests
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
