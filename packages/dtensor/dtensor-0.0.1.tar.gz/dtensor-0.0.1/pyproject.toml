@@ -1,0 +1,47 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "dtensor"
+version = "0.0.1"
+description = "Facilities built around PyTorch DTensor"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Yi Wang", email = "yi.wang.2005@gmail.com"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+]
+
+dependencies = [
+    "torch>=2.6",
+    "tabulate",
+    "types-tabulate",
+    "matplotlib",
+    "rich",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/wangkuiyi/dtensor"
+"Bug Tracker" = "https://github.com/wangkuiyi/dtensor/issues"
+
+[tool.mypy]
+# strict = true # TODO(wyi): enable it ASAP.
+exclude =  ["experiments"]
+ignore_missing_imports = true	# https://stackoverflow.com/a/57815124/724872
+disallow_subclassing_any = false # https://stackoverflow.com/a/49990980/724872
+warn_return_any = false # Mypy is not smart enough to tell `a + b` is torch.Tensor if a is.
+# disallow_untyped_defs = true Enable it after we fix all the defs, or leave it here.
+check_untyped_defs = true
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
