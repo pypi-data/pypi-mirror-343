@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: mais
+Version: 0.1.1
+Summary: A Jupyter-compatible plugin that detects risky ML model and dataset loads.
+Author-email: Daniel Bardenstein <daniel@manifestcyber.com>
+Project-URL: Homepage, https://github.com/manifestcyber/mais
+Project-URL: Bug Tracker, https://github.com/manifestcyber/mais/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Framework :: Jupyter
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: ipython
+
+# mais
+
+A simple Python notebook plugin that watches for model or dataset loads using common ML libraries (e.g. `transformers`, `torch`, `sklearn`, etc.) and alerts if any argument starts with `"meta"`.
+
+### Installation
+
+```bash
+pip install -e .
