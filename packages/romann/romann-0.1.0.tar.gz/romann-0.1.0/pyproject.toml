@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "romann"
+version = "0.1.0"
+description = "日本語→自然なローマ字・英語変換ライブラリ（kakasi/SudachiPyベース＋外来語辞書対応）"
+authors = [
+    { name = "ykuwa" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+dependencies = [
+    "pykakasi",
+    "jaconv",
+    "sudachipy"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["romann"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+romann = ["hiragana_english.json", "katakana_english.json"]
