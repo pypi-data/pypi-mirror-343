@@ -1,0 +1,3 @@
+[robotframework.libraries]
+DomRetryLibrary = dom_retry_library:DomRetryLibrary
+
