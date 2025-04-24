@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: Deskautomation
+Version: 1.0.0
+Summary: Custom Robot Framework library for desktop automation
+Author: Mehabalan
+Author-email: majesticmehabalan@email.com
+Keywords: robotframework,automation,desktop,pyautogui,ocr
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: pyautogui
+Requires-Dist: opencv-python
+Requires-Dist: pillow
+Requires-Dist: numpy
+Requires-Dist: pygetwindow
+Requires-Dist: pytesseract
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: summary
+
+# MehaDeskAutomation
+
+This is a custom Robot Framework library for desktop automation.
+
+## Installation
+
+Install with pip:
+
+```bash
+pip install Deskautomation
