@@ -1,0 +1,10 @@
+scrapeer/__init__.py,sha256=CEbB9-SFh7oC0lZujSX9c_FRTz_lWPvy-Pgx1qD65v4,248
+scrapeer/http.py,sha256=xfrxz8o0v31Fsx1Wk4p4hPqCd2LF9ZzhyPmd80mSCv4,7386
+scrapeer/scraper.py,sha256=oteQ3lr4tnuTM4dTEQm6G1_HbWnDGy3oImjTQy6fFUI,4396
+scrapeer/udp.py,sha256=siocTAiJk0Yzgn4aBAPzrx_Hr4vS_W7vpYqmNInVzZ8,9492
+scrapeer/utils.py,sha256=NcRb7qpm8lTw_oNPqLKy5O4l5zrEf5jT5R02NRw4oU8,1754
+scrapeer-1.0.1.dist-info/licenses/LICENSE.txt,sha256=V9bGah4X7UJObtxj-JI2a7qiYUMvb8Lb_NMytizhheY,1065
+scrapeer-1.0.1.dist-info/METADATA,sha256=CGPa4fSKk98X-knJNFc8ZuwqyY5r7audvKKlTGcWtds,4253
+scrapeer-1.0.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+scrapeer-1.0.1.dist-info/top_level.txt,sha256=VNTe9BxiME59GQvQeI5pk7f-3yfScRkSckpRl3eQ1cg,9
+scrapeer-1.0.1.dist-info/RECORD,,
