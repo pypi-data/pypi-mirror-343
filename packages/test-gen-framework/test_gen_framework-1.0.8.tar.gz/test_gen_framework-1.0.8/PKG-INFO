@@ -1,0 +1,116 @@
+Metadata-Version: 2.4
+Name: test_gen_framework
+Version: 1.0.8
+Summary: Test Generation Framework
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: pytest
+Requires-Dist: PyYAML
+Requires-Dist: gitpython
+Requires-Dist: pygithub
+Requires-Dist: pytest-json
+Requires-Dist: pytest-json-report
+Requires-Dist: coverage
+Dynamic: license-file
+
+
+# Test Generation Framework
+
+The **Test Generation Framework** is a command-line interface (CLI) tool designed to generate and execute automated tests for pull requests (PRs) using AI models. It provides two main commands: `generate` for generating tests based on the PR number, and `execute` for running tests with prioritization.
+
+## Features
+
+- **Generate Test Cases**: Automatically generate test cases using an AI model based on the pull request.
+- **Dynamic Tests prioritization**: Dynamically generate tests prioritization based on previous execution data.
+- **Execute Tests**: Run generated tests with prioritization, making it easier to focus on the most important tests first.
+
+## Installation
+
+To install the framework, use the following command:
+
+```bash
+pip install test-gen-framework
+```
+
+## Usage
+
+### Command-Line Interface
+
+Once installed, you can use the `test-gen` command with the following syntax:
+
+```bash
+test-gen <command> <arguments>
+```
+
+### Available Commands
+
+#### 1. `init`
+
+Generates the config file and github actions workflow setup.
+
+**Usage:**
+
+```bash
+test-gen-init
+```
+
+#### 2. `generate`
+
+Generates test cases based on the provided pull request (PR) number.
+
+**Usage:**
+
+```bash
+test-gen generate <pr_number>
+```
+
+**Arguments:**
+
+- `pr_number`: The PR number for which to generate test cases.
+
+**Example:**
+
+```bash
+test-gen generate 123
+```
+
+This will generate test cases for PR number 123.
+
+#### 3. `execute`
+
+Executes the generated tests with prioritization.
+
+**Usage:**
+
+```bash
+test-gen execute <test_dir> <pr_number>
+```
+
+**Arguments:**
+
+- `test_dir`: The directory where the generated test cases are located.
+- `pr_number`: The PR number associated with the generated tests.
+
+**Example:**
+
+```bash
+test-gen execute tests/pr_123 123
+```
+
+This will execute the tests located in the `tests/pr_123` directory, corresponding to PR number 123.
+
+## How It Works
+
+1. **init Command**: The `init` command will generate and add neccesery config files to the project and it will also create the github actions worflow setup in your project.
+2. **Generate Command**: The `generate` command uses an AI model to generate automated tests for a given pull request. It leverages the PR number to gather relevant code and context.
+3. **Execute Command**: The `execute` command runs the generated tests on a specified directory, prioritizing tests based on their importance and relevance.
+
+## Contributing
+
+If you'd like to contribute to the project, feel free to fork the repository and submit a pull request. Contributions are always welcome!
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
