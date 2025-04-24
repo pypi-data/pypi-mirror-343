@@ -1,0 +1,90 @@
+Metadata-Version: 2.4
+Name: rearrange-pdf
+Version: 0.1.1
+Summary: A tool to rearrange PDF pages for printing booklets
+Home-page: https://github.com/yourusername/rearrange-pdf
+Author: htlin
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyPDF2>=2.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Rearrange PDF
+
+A Python tool to rearrange PDF pages for printing booklets.
+
+## Installation
+
+```bash
+# Using pip
+pip install rearrange-pdf
+
+# Using pipx (recommended for command-line tools)
+pipx install rearrange-pdf
+
+# Using uv
+uv tool install rearrange-pdf
+```
+
+## Usage
+
+### Command Line
+
+```bash
+# Rearrange PDF with 4 slides per page (default)
+rearrange-pdf your_document.pdf
+
+# Rearrange PDF with 2 slides per page
+rearrange-pdf your_document.pdf --per-page 2
+```
+
+### Python API
+
+```python
+from rearrange_pdf import rearrange_pages
+
+# Rearrange with 4 slides per page
+new_pdf = rearrange_pages("your_document.pdf", per_page=4)
+
+# Rearrange with 2 slides per page
+new_pdf = rearrange_pages("your_document.pdf", per_page=2)
+```
+
+## How it works
+
+This tool rearranges PDF pages to create a booklet layout:
+
+- For 4 slides per page: Pages are rearranged in the order [0, 2, 4, 6, 3, 1, 7, 5]
+- For 2 slides per page: Pages are rearranged in the order [0, 2, 1, 3]
+
+If the total number of pages is not divisible by the group size (8 for 4-per-page, 4 for 2-per-page), blank pages are added to complete the group.
+
+## Printing Instructions
+
+When printing the rearranged PDF:
+
+1. Select "Print on both sides" or "Double-sided printing" in your print dialog
+2. Select the "Multiple pages per sheet" option in your print dialog
+3. Choose either 2 or 4 pages per sheet depending on your preference
+4. For 4 pages per sheet: Select "Flip on short edge" for proper booklet orientation
+5. For 2 pages per sheet: Select "Flip on long edge" for proper booklet orientation
+
+This will ensure your booklet prints correctly and can be folded properly.
+
+## License
+
+MIT
