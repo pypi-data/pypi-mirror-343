@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+dslib/__init__.py
+dslib/gcs_utils.py
+dslib_wayfair.egg-info/PKG-INFO
+dslib_wayfair.egg-info/SOURCES.txt
+dslib_wayfair.egg-info/dependency_links.txt
+dslib_wayfair.egg-info/top_level.txt
