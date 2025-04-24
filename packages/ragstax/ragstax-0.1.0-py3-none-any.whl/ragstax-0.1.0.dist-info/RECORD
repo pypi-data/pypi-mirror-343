@@ -1,0 +1,7 @@
+ragstax/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ragstax/chunking/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ragstax/chunking/fixed_token_chunker.py,sha256=dylnAhlxb7M6sip9ef4A_AtoirA5_KAj49vLsSnm3Jk,561
+ragstax-0.1.0.dist-info/METADATA,sha256=QNKVoO3pDPVJN9eOBdh7I5uWlh1jd72gJvHgcnq75Aw,264
+ragstax-0.1.0.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+ragstax-0.1.0.dist-info/top_level.txt,sha256=gEl0-2RNW6VtpFDWohRHycqBx-2H_zd9x1cG5UbCCrI,8
+ragstax-0.1.0.dist-info/RECORD,,
