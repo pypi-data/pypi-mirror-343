@@ -1,0 +1,87 @@
+Metadata-Version: 2.4
+Name: orofacIAnalysis
+Version: 0.1.2
+Summary: A library for analyzing chewing patterns using computer vision
+Home-page: https://github.com/yourusername/orofacIAnalysis
+Author: Cameron Maloney
+Author-email: cameron.maloney@warriorlife.net
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: opencv-python>=4.5.0
+Requires-Dist: mediapipe>=0.8.10
+Requires-Dist: scipy>=1.7.0
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: matplotlib>=3.4.0
+Requires-Dist: PyEMD>=0.2.0
+Requires-Dist: statsmodels>=0.13.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# orofacIAnalysis
+
+orofacIAnalysis is a Python library for analyzing chewing patterns using computer vision and facial landmark detection. It uses MediaPipe to track jaw movements and provides tools for cycle detection and analysis.
+
+## Installation
+
+```bash
+pip install orofacIAnalysis
+```
+
+## Features
+
+- Jaw movement tracking using facial landmarks
+- Chewing cycle detection and analysis
+- Various signal smoothing methods
+- Utilities for data visualization and analysis
+
+## Usage
+
+```python
+from orofacIAnalysis import ChewAnnotator
+
+# Analyze a video file
+annotator = ChewAnnotator(video_path="path/to/video.mp4")
+cycles = annotator.analyze_chewing()
+
+# Print cycle information
+for cycle in cycles:
+    print(f"Chew count: {len(cycle['directions'])}")
+    print(f"Left: {cycle['left']}, Right: {cycle['right']}, Middle: {cycle['middle']}")
+```
+
+## Advanced Usage
+
+```python
+from orofacIAnalysis import Cycle, SmoothingMethods
+import numpy as np
+
+# Create a cycle manually
+cycle = Cycle(start_frame=10)
+cycle.jaw_movements = np.array([...])  # Your jaw movement data
+cycle.fit()
+
+# Print cycle stats
+print(cycle)
+
+# Apply different smoothing methods
+from orofacIAnalysis.smoothing import apply_smoothing
+
+smoothed_signal = apply_smoothing(jaw_movements, "butterworth")
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
