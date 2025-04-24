@@ -1,0 +1,27 @@
+[project]
+name = "wbauth"
+version = "0.1.0"
+description = "Библиотека для аутентификации в Wildberries API"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Артур", email = "doircat@gmail.com" }
+]
+dependencies = [
+    "aiohttp>=3.8.0",
+    "Pillow>=9.0.0"
+]
+
+[project.optional-dependencies]
+telegram = [
+    "python-telegram-bot>=20.0"
+]
+test = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.20"
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

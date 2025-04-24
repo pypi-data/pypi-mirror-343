@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: wbauth
+Version: 0.1.0
+Summary: Библиотека для аутентификации в Wildberries API
+Author-email: Артур <doircat@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp>=3.8.0
+Requires-Dist: Pillow>=9.0.0
+Provides-Extra: telegram
+Requires-Dist: python-telegram-bot>=20.0; extra == "telegram"
+Provides-Extra: test
+Requires-Dist: pytest>=7.0; extra == "test"
+Requires-Dist: pytest-asyncio>=0.20; extra == "test"
+
+# wbauth
+
+Библиотека для аутентификации в API Wildberries. Поддерживает асинхронную аутентификацию с обработкой капчи, SMS и email-кодов.
+
+## Установка
+
+```bash
+pip install wbauth
