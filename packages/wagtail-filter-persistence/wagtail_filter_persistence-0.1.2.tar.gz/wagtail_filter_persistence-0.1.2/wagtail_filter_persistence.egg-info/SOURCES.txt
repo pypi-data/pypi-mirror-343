@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+wagtail_filter_persistence/__init__.py
+wagtail_filter_persistence/apps.py
+wagtail_filter_persistence/middleware.py
+wagtail_filter_persistence/wagtail_hooks.py
+wagtail_filter_persistence.egg-info/PKG-INFO
+wagtail_filter_persistence.egg-info/SOURCES.txt
+wagtail_filter_persistence.egg-info/dependency_links.txt
+wagtail_filter_persistence.egg-info/requires.txt
+wagtail_filter_persistence.egg-info/top_level.txt
