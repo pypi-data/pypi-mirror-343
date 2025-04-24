@@ -1,0 +1,2 @@
+[airflow.plugins]
+airflow-balancer-viewer = airflow_balancer.ui:AirflowBalancerViewerPlugin
