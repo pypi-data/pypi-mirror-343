@@ -1,0 +1,11 @@
+reduce_binary/__init__.py,sha256=6ZIHA7sFNDdeBz-9iFJjty474X7AAAe7OA-xQUlyoUI,151
+reduce_binary/executable.py,sha256=6j8DclGLLX470PCDDVHJSOMx858ReThVsDaqez9qaRs,1221
+reduce_binary/executable.pyi,sha256=7RXTPQkssZeptBjJX583VFPRYG3F_0Y-xY1-NQ5QF8U,781
+reduce_binary/helpers.py,sha256=ehnKUrDWijE7efWJzxgFWPQby19ZCywK6v45zm9MRaY,1525
+reduce_binary/reduce_wwPDB_het_dict.txt,sha256=DaXsh6kJuw6430gMQs50vvkucQ_5OXZPlgpisNmzirk,66390773
+reduce_binary/bin/reduce,sha256=1L-5CszEHGgBLlxszNCKcgCChquFbcHnEQR_vgzWbaA,2522280
+reduce_binary-4.15.0.dist-info/licenses/LICENSE,sha256=6MyZtaZAX_BLngUWCwE6wseJZ3Kh5E-5Oh_x41KFw0w,11343
+reduce_binary-4.15.0.dist-info/METADATA,sha256=uomkPB2fxFS0yOAKo_5PFXGXvv0t2ThQMZjKWLIRvOY,17470
+reduce_binary-4.15.0.dist-info/WHEEL,sha256=6_es-qZEmyxaKcwdL6OXVYTzwKWLVM2MD4Lbzu30CYg,107
+reduce_binary-4.15.0.dist-info/top_level.txt,sha256=QTaYVu7iGuCz1qFVS21mpMEmOSzbpuScTrXR2oix0IE,14
+reduce_binary-4.15.0.dist-info/RECORD,,
