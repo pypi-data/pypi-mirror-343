@@ -1,0 +1,6 @@
+llm
+requests
+
+[test]
+pytest
+pytest-cov
