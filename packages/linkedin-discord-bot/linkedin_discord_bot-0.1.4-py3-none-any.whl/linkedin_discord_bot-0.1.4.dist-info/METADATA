@@ -1,0 +1,98 @@
+Metadata-Version: 2.4
+Name: linkedin-discord-bot
+Version: 0.1.4
+Summary: A Discord bot that posts LinkedIn job postings
+Project-URL: homepage, https://github.com/IAmSkweetis/linkedin-discord-bot
+Project-URL: source, https://github.com/IAmSkweetis/linkedin-discord-bot
+Project-URL: docs, https://github.com/IAmSkweetis/linkedin-discord-bot/README.md
+Project-URL: issues, https://github.com/IAmSkweetis/linkedin-discord-bot/issues
+License-Expression: MIT
+License-File: LICENSE.md
+Requires-Python: >=3.12
+Requires-Dist: linkedin-jobs-scraper>=5.0.2
+Requires-Dist: prettytable>=3.16.0
+Requires-Dist: psycopg[binary]>=3.2.6
+Requires-Dist: py-cord>=2.6.1
+Requires-Dist: pydantic-settings>=2.8.1
+Requires-Dist: pydantic>=2.11.3
+Requires-Dist: sqlalchemy>=2.0.40
+Requires-Dist: sqlmodel>=0.0.24
+Requires-Dist: typer>=0.15.2
+Requires-Dist: typing-extensions>=4.13.2
+Description-Content-Type: text/markdown
+
+# linkedin-discord-bot
+
+[![ci](https://github.com/IAmSkweetis/linkedin-discord-bot/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/IAmSkweetis/linkedin-discord-bot/actions/workflows/ci.yml)
+
+A simple little discord bot that will search LinkedIn job postings daily at post them to discord.
+
+## Installation
+
+The package is on PyPi and can be installed with pip:
+
+```bash
+pip install linkedin-discord-bot
+```
+
+## Usage
+
+Running the bot requires either a sqlite3 or postgres database to store state of jobs and queries. 
+
+You will need the following environment variables set:
+
+```bash
+LINKEDIN_DISCORD_BOT_DISCORD_TOKEN
+LINKEDIN_DISCORD_BOT_DISCORD_NOTIF_CHANNEL_ID
+LINKEDIN_DISCORD_BOT_DB_CONNECTION_STRING
+```
+
+For a local dev flow, you can put these values in a dotenv file.
+
+Then run the following command to start the bot. Note that the current implementation is running
+in the foreground.
+
+```bash
+lidb bot start
+```
+
+### Alternative - Docker Compose
+
+A docker compose file is provided in the repo. To use it, run:
+
+```bash
+docker compose build
+docker compose create
+docker compose start
+```
+
+The docker compose file will download a postgres container image and initiate a blank database using a local volume. It will also create an image based on the provided Dockerfile. The docker compose file references the image name. If you have built the container image using the Taskfile tasks, Docker compose will attempt to use that image before building a new one.
+
+## Dev Setup
+
+Requirements:
+- [uv](https://docs.astral.sh/uv/)
+- [Taskfile](https://taskfile.dev/)
+- sqlite3
+
+Clone the repo:
+```bash
+git clone git@github.com:IAmSkweetis/linkedin-discord-bot.git
+```
+
+Use uv to sync:
+```bash
+uv sync
+```
+
+Run the following scripts for local-dev setup:
+```bash
+# Install chromedriver
+task setup:chromedriver
+
+# Initialize the local db
+task db:init
+
+# Run any db migrations
+task db:migrate
+```

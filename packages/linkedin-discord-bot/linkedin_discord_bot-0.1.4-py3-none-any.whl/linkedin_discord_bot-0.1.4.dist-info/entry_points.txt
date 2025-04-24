@@ -1,0 +1,2 @@
+[console_scripts]
+lidb = linkedin_discord_bot.cli.main:top_level_cli
