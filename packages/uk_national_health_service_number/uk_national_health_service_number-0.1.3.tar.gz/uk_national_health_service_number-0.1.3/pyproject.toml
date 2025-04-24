@@ -1,0 +1,20 @@
+[project]
+name = "uk-national-health-service-number"
+version = "0.1.3"
+description = "Generate valid UK NHS number for testing"
+authors = [
+    {name = "msaleel",email = "mohammed.saleel0099@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
