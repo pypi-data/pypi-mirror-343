@@ -1,0 +1,9 @@
+homework/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+homework/cli.py,sha256=VN3KuRcyNuKGLxKxc1Y6z5CK6HrfyOY5kj-n-ZDZg6c,443
+homework/parser.py,sha256=mqnPFdJLfDxjDZknpcpg9vUt7yup0QpD--Y7jxgErF0,1963
+homework/prepare.py,sha256=73xykvhf78BbeOKKIPECwiFkXZZC33lMY2nRCuvgFAg,1220
+homework-1.0.0.dist-info/METADATA,sha256=iVhefUQhcSDFP9sOtP4Y1nifAid0PSyfwDoU6CrlRH4,1735
+homework-1.0.0.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+homework-1.0.0.dist-info/entry_points.txt,sha256=nJvlwOoQuoOmAc7DzvoFGpX0wbb6QnDieVqMngUG618,47
+homework-1.0.0.dist-info/top_level.txt,sha256=xv4lN3JW-p3CKQAkJJ7gNE8tTadl5YNuIy0bBxUDo2A,9
+homework-1.0.0.dist-info/RECORD,,
