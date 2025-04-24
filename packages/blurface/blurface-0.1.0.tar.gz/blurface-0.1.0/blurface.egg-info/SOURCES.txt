@@ -1,0 +1,11 @@
+README.md
+setup.py
+blurface/__init__.py
+blurface/__main__.py
+blurface/utils.py
+blurface.egg-info/PKG-INFO
+blurface.egg-info/SOURCES.txt
+blurface.egg-info/dependency_links.txt
+blurface.egg-info/entry_points.txt
+blurface.egg-info/requires.txt
+blurface.egg-info/top_level.txt
