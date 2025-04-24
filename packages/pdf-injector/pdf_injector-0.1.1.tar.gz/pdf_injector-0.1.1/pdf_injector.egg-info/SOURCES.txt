@@ -1,0 +1,10 @@
+README.md
+main.py
+pyproject.toml
+pdf_injector.egg-info/PKG-INFO
+pdf_injector.egg-info/SOURCES.txt
+pdf_injector.egg-info/dependency_links.txt
+pdf_injector.egg-info/entry_points.txt
+pdf_injector.egg-info/requires.txt
+pdf_injector.egg-info/top_level.txt
+tests/test_pdf_injector.py
