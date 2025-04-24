@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: charmlibs-pathops
+Version: 0.0.0
+Summary: A pathlib-like interface for Juju K8s charms to interact with files in their workload container.
+Author: The Charm Tech team at Canonical Ltd.
+Project-URL: Repository, https://github.com/canonical/charmtech-charmlibs
+Project-URL: Issues, https://github.com/canonical/charmtech-charmlibs/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: ops~=2.19
+
+# charmlibs-pathops
+
+`pathops` provides a `pathlib`-like interface for local filesystem and workload container paths for Juju Charms.
+
+To install, add `charmlibs-pathops` to your requirements. Then in your Python code, import as:
+
+```py
+from charmlibs import pathops
+```
+
+Check out the reference docs [here](https://canonical-charmlibs.readthedocs-hosted.com/reference/pathops/).
