@@ -1,0 +1,9 @@
+XGB_Tuner/__init__.py,sha256=d5lPXHFopvtrmQeMmfvDHR7aAbuopvHw3_IrFm2du4M,166
+XGB_Tuner/main.py,sha256=7n6JQvX7NSBPynY-TCEv1FULuwPzdN4i9sAJ54dEye4,9103
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_tuner.py,sha256=8zbA4B6-jLCqExxKF1FGhpgBi8dc_2OsYErmhyZ9tMo,4583
+xgboost_tuner_pack-0.1.5.dist-info/METADATA,sha256=Og9zL3FuXmU7j9Jh39N6rmaDG0HEanj8APGKkoozVG0,2170
+xgboost_tuner_pack-0.1.5.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+xgboost_tuner_pack-0.1.5.dist-info/entry_points.txt,sha256=CekNU38XqLnMMwNHt5Dgogs-Bh4lryoW9Dz1XYGtpSw,47
+xgboost_tuner_pack-0.1.5.dist-info/top_level.txt,sha256=3xq_6ZtxdIv5hX9jy7nlW-rBv8bXg-kc67Rk0Z4xJVI,16
+xgboost_tuner_pack-0.1.5.dist-info/RECORD,,
