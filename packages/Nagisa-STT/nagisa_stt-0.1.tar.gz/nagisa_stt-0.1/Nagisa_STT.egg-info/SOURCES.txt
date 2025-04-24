@@ -1,0 +1,7 @@
+setup.py
+Nagisa_STT/__init__.py
+Nagisa_STT.egg-info/PKG-INFO
+Nagisa_STT.egg-info/SOURCES.txt
+Nagisa_STT.egg-info/dependency_links.txt
+Nagisa_STT.egg-info/requires.txt
+Nagisa_STT.egg-info/top_level.txt
