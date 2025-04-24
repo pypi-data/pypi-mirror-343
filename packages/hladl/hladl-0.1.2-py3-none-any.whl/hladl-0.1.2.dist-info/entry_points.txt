@@ -1,0 +1,3 @@
+[console_scripts]
+hladl=hladl.main:app
+
