@@ -1,0 +1,40 @@
+[project]
+name = "nuclino"
+version = "0.1.0"
+description = "Python client for the Nuclino API"
+authors = [
+    {name = "Joonho Lee", email = "mynameisjune111@gmail.com"},
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ratelimit>=2.2.1",
+    "requests>=2.32.3",
+]
+keywords = ["nuclino", "api", "client"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.urls]
+Repository = "https://github.com/whatisyourname0/nuclino"
+Documentation = "https://github.com/whatisyourname0/nuclino#readme"
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "mypy>=1.15.0",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.1.1",
+    "pytest-mock>=3.14.0",
+    "ruff>=0.11.6",
+]
