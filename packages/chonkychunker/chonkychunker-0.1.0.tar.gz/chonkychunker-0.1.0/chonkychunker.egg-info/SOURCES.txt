@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+chonkychunker/__init__.py
+chonkychunker/chunker.py
+chonkychunker.egg-info/PKG-INFO
+chonkychunker.egg-info/SOURCES.txt
+chonkychunker.egg-info/dependency_links.txt
+chonkychunker.egg-info/requires.txt
+chonkychunker.egg-info/top_level.txt
+tests/test_chunker.py
