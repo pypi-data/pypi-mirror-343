@@ -1,0 +1,10 @@
+numpy
+pillow
+torch
+opencv-python
+matplotlib
+jupyter
+matplotlib
+cmapy
+torchvision
+xformers
