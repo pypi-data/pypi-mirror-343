@@ -1,0 +1,2 @@
+boto3
+azure-ai-documentintelligence>=1.0.0

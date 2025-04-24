@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+credeed_pdf_to_markdown/__init__.py
+credeed_pdf_to_markdown/converter.py
+credeed_pdf_to_markdown/utils.py
+credeed_pdf_to_markdown.egg-info/PKG-INFO
+credeed_pdf_to_markdown.egg-info/SOURCES.txt
+credeed_pdf_to_markdown.egg-info/dependency_links.txt
+credeed_pdf_to_markdown.egg-info/entry_points.txt
+credeed_pdf_to_markdown.egg-info/requires.txt
+credeed_pdf_to_markdown.egg-info/top_level.txt

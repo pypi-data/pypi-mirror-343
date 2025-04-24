@@ -1,0 +1,2 @@
+[console_scripts]
+credeed-pdf-to-markdown = cli:main
