@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: dagster-dora
+Version: 0.1.0
+Summary: Dagster’s software-defined asset abstractions make it simple to define data assets that depend on dora tables to define the computation and dependencies
+License: Apache-2.0
+Author: Didone
+Author-email: tiago.didone@compass.uol
+Requires-Python: >=3.10,<3.13
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: dora-aws (>=0.1.0,<0.2.0)
+Requires-Dist: dora-core (>=0.1.0,<0.2.0)
+Description-Content-Type: text/markdown
+
+# Dora Dagster
+
+Integration of [Dora](https://pypi.org/project/dora-core/) with [Dagster](https://dagster.io/) for data pipelines and orquestration.
+
+---
+
+[Dora Project](https://github.com/doraproject) is a recent open-source project based on technology developed at [Compasso UOL](https://compassouol.com/)
+
