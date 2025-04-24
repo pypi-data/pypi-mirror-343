@@ -1,0 +1,2 @@
+[console_scripts]
+servermind = servermind_cli.main:main

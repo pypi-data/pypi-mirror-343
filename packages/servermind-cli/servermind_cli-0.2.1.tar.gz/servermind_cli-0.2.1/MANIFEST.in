@@ -1,0 +1,9 @@
+include README.md
+include requirements.txt
+include .env.example
+include install.sh
+include start.sh
+include main.py
+include src/*.py
+include src/*.json
+include src/*.txt 

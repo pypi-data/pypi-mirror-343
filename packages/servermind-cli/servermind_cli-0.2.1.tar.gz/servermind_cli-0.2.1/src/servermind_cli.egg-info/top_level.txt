@@ -1,0 +1,1 @@
+servermind_cli
