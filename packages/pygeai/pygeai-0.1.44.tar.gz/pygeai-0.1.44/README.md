@@ -1,0 +1,68 @@
+# PyGEAI - SDK for Globant Enterprise AI
+
+PyGEAI is a Software Development Kit (SDK) for interacting with [Globant Enterprise AI](https://wiki.genexus.com/enterprise-ai/wiki?8,Table+of+contents%3AEnterprise+AI). It comprises libraries, tools, code samples, and documentation to simplify your experience with the platform.
+
+## Repository
+
+Find the PyGEAI source code and documentation in the following GitHub repository:
+
+[GitHub repository](https://github.com/RT-GEN029-GI/pygeai)
+
+## Configuration
+
+Before using the SDK, you need to define `GEAI_API_KEY` (`$SAIA_APITOKEN`) and `GEAI_API_BASE_URL` (`$BASE_URL`). You can achieve this in three ways:
+
+* **Environment variables:** Set `GEAI_API_KEY` and `GEAI_API_BASE_URL` as environment variables in your operating system.
+* **Credentials file:** Create a file named credentials in the `.geai` directory within your user home directory (`$USER_HOME/.geai/credentials`) and define `GEAI_API_KEY` and `GEAI_API_BASE_URL` within this file.
+* **Client instantiation:** Specify the `api_key` and `base_url` parameters directly when creating an instance of a client class.
+
+**Note:** If you plan to use the [Evaluation Module](https://wiki.genexus.com/enterprise-ai/wiki?896,Evaluation), you must also define `GEAI_API_EVAL_URL`
+
+## Modules
+
+The SDK consists of several modules, all accessible through a meta-package:
+
+- **`pygeai`**: This meta-package encapsulates all components of the SDK.
+- **`pygeai-cli`**: This package provides a command-line tool for interacting with the SDK.
+- **`pygeai-chat`**: This package offers an interactive version of the command-line tool.
+- **`pygeai-dbg`**: This package includes a debugger to troubleshoot potential SDK issues and gain detailed insights into its operations.
+- **`pygeai-core`**: This package handles interactions with the fundamental components of Globant Enterprise AI, including users, groups, permissions, API keys, organizations, and [Projects](https://wiki.genexus.com/enterprise-ai/wiki?565,Projects).
+- **`pygeai-admin`**: This package enables interactions with the Globant Enterprise AI instance.
+- **`pygeai-agent`**: This package facilitates interactions with Agent Studio.
+- **`pygeai-assistant`**: This package handles interactions with various Assistants, including [Data Analyst Assistants](https://wiki.genexus.com/enterprise-ai/wiki?886,Data+Analyst+Assistant+2.0), [RAG Assistants](https://wiki.genexus.com/enterprise-ai/wiki?44,RAG+Assistants+Introduction), [Chat with Data Assistants](https://wiki.genexus.com/enterprise-ai/wiki?159,Chat+with+Data+Assistant), [Chat with API Assistants](https://wiki.genexus.com/enterprise-ai/wiki?110,API+Assistant), and [Chat Assistants](https://wiki.genexus.com/enterprise-ai/wiki?708,Chat+Assistant).
+- **`pygeai-flows`**: This package enables interactions with [Flows](https://wiki.genexus.com/enterprise-ai/wiki?321,Flows+in+Globant+Enterprise+AI).
+
+## Usage
+
+### Install PyGEAI
+Use pip to install the package from PyPI:
+
+```
+(venv) ~$ pip install pygeai
+```
+
+### Verify installation
+To check the installed PyGEAI version, run:
+
+```
+(venv) ~$ geai v
+```
+
+### View help
+
+To access the general help menu:
+
+```
+(venv) ~$ geai h
+```
+To view help for a specific command:
+
+```
+(venv) ~$ geai <command> h
+```
+
+## Authors
+Copyright 2025, Globant. All rights reserved
+
+Developers:
+- Alejandro Trinidad <alejandro.trinidad@globant.com>

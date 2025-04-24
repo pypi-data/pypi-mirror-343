@@ -1,0 +1,9 @@
+requests
+pydantic
+packaging
+prompt_toolkit
+
+[docs]
+sphinx
+sphinx-rtd-theme
+sphinx-markdown-builder
