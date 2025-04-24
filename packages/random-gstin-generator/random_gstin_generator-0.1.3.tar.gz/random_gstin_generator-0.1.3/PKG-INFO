@@ -1,0 +1,33 @@
+Metadata-Version: 2.3
+Name: random-gstin-generator
+Version: 0.1.3
+Summary: Creates random India GSTIN numbers that pass validation. For testing purposes only.
+Author: Mohammed Saleel
+Author-email: mohammed.saleel0099@gmail.com
+Requires-Python: >=3.8
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# GSTIN Generator
+
+A Python package to generate random valid GSTIN numbers.
+
+## Installation
+
+```bash
+pip install gstin-generator
+
+
+## Usage
+```bash
+from gstin_generator import generate_gstin
+
+gstin = generate_gstin(num_gstin=10)
+print(f"Generated GSTIN: {gstin}")
+
