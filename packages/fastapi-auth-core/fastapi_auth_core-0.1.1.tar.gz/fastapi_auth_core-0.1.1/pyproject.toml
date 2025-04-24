@@ -1,0 +1,24 @@
+[project]
+name = "fastapi-auth-core"
+version = "0.1.1"
+description = "Authentication core utilities including JWT token management."
+authors = [
+    {name = "riya0865", email = "riya.dev0865@gmail.com"}
+]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.13"
+dependencies = [
+    "pyjwt (>=2.10.1,<3.0.0)",
+    "fastapi[standard] (>=0.115.12,<0.116.0)",
+    "passlib (>=1.7.4,<2.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [
+    { include = "auth" }
+]
