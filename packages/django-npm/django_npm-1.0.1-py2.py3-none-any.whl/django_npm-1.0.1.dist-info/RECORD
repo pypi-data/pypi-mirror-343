@@ -1,0 +1,10 @@
+npm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+npm/finders.py,sha256=UAk3kZqJxhRSntbuJ7LFYKog4sgd-6Lg9BIL8tPGkwU,4176
+npm/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+npm/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+npm/management/commands/npm_install.py,sha256=vona6SfJNOh8aVpgewKAbOjSlN_97biWOkTPFxcjWJI,210
+django_npm-1.0.1.dist-info/LICENSE,sha256=rxa77T_USZrEYjNDrMxvlCOGrprvRhLdmxR9l3eMCwg,1071
+django_npm-1.0.1.dist-info/METADATA,sha256=9zQCExQQ54iIsh6pLl_G6Nb_1D55Zb6X_7HO45meG30,935
+django_npm-1.0.1.dist-info/WHEEL,sha256=pxeNX5JdtCe58PUSYP9upmc7jdRPgvT0Gm9kb1SHlVw,109
+django_npm-1.0.1.dist-info/top_level.txt,sha256=ya_bMwftNve9OCojD4SyeBbiuU3CohabeSXk-uWZ4DY,4
+django_npm-1.0.1.dist-info/RECORD,,
