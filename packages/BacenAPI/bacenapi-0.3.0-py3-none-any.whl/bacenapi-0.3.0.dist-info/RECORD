@@ -1,0 +1,10 @@
+BacenAPI/__init__.py,sha256=rAm831M29NF7eskHphVenRZhYUGDGiQLoSOqAzfj9tg,114
+BacenAPI/bacen_search.py,sha256=WSO6NHxwlrk3KI9WBrhKYHgk7Y35ZOB8Gl6CxEEoaL4,896
+BacenAPI/bacen_series.py,sha256=a0OcR4H7Dx5k5nXYeJqOD7r2wL2VAB0l5rJIqvKI1Og,2254
+BacenAPI/bacen_url.py,sha256=epdiB6JyhdFdOEZZGnYqEwUzoao-exFumKeKLDHxNSQ,986
+BacenAPI/Date/dataset.txt,sha256=_8aoHurpCJI0FH6jUFBgizr8yWJ4VT0T4B7ex3HY_cI,2329170
+bacenapi-0.3.0.dist-info/licenses/License.md,sha256=EUiCDqXYtjxgxpJrSnorMIsBDzeg-5XuQtosoFyNvx8,1100
+bacenapi-0.3.0.dist-info/METADATA,sha256=nJScXB9voa_wEsuVBfYwawHe10ivnKJqI1JM8vuadxs,3345
+bacenapi-0.3.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+bacenapi-0.3.0.dist-info/top_level.txt,sha256=Ng96mSAH-q2VP1-GN6WCzbAGHD-HBpsLK3sopiJ6FLg,9
+bacenapi-0.3.0.dist-info/RECORD,,
