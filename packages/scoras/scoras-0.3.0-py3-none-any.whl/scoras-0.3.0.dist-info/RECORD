@@ -1,0 +1,15 @@
+scoras/__init__.py,sha256=W05yVyQIqmVAyVrVDnY7M2TO6qaPPr2fWin76r9ceww,293
+scoras/a2a.py,sha256=2iaqlxKcQOXJ7e_W84K8zxG2r7GthBIwxFM1VYye8pw,50317
+scoras/agents.py,sha256=n6yuo0nuj1SwD8uBZYm6HynS_obw3653HptI2iLhCsQ,30499
+scoras/core.py,sha256=eVA9Sx5tg_SuLQQ6RSuleu6BLyMzYrDcZe-rg5IwDF8,6757
+scoras/mcp.py,sha256=jYHbDrLQhSpYI4n0e4BcTJ8KZE8nu7-27dbTy1lQ70g,27889
+scoras/minimal_test.py,sha256=7I22RIRRmtprMALHIEF_4p-ESCz2TbB1XVXuJgfLJXY,1563
+scoras/rag.py,sha256=vcGIXi0K4-JnLDqpG_Q7oJInZ15qAoBlEAOajcxTMOc,21252
+scoras/tools.py,sha256=7ivkjhqy_dXg1CB6lMI3lsKJYJ_0W6QeI4hbCW_SF6c,24319
+scoras/scoring/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scoras/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scoras-0.3.0.dist-info/licenses/LICENSE,sha256=8ZI598Aak3onmHtEKygukSh1eX8ei8nPXGh635MpSjg,1075
+scoras-0.3.0.dist-info/METADATA,sha256=OMYiDvF0PnU8S2JpFPmvuMd3Vfi2pjume3B5pNqWJd4,13135
+scoras-0.3.0.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+scoras-0.3.0.dist-info/top_level.txt,sha256=TsMwuS7EX_g2QWxx0r_h8Sqs5PSzDiFD8AudDVHB4wY,7
+scoras-0.3.0.dist-info/RECORD,,
