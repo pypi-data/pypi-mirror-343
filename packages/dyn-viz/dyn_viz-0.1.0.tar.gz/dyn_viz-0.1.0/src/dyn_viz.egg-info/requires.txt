@@ -1,0 +1,6 @@
+dyn-core
+numpy>=1.17
+pandas
+plotly
+seaborn
+matplotlib
