@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+src/flavius/__init__.py
+src/flavius/_client.pyc
+src/flavius/client.py
+src/flavius.egg-info/PKG-INFO
+src/flavius.egg-info/SOURCES.txt
+src/flavius.egg-info/dependency_links.txt
+src/flavius.egg-info/requires.txt
+src/flavius.egg-info/top_level.txt
+src/flavius/utils/__init__.py
+src/flavius/utils/json.pyc
+src/flavius/utils/utils.py
