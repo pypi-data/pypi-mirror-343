@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: chat-assistant
+Version: 0.1.4
+Summary: Chat Assistant
+Home-page: https://github.com/sugarkwork/chat_assistant
+Author: sugarkwork
+Project-URL: Source, https://github.com/sugarkwork/chat_assistant
+Requires-Python: >=3.10
+Requires-Dist: skpmem
+Requires-Dist: litellm
+Requires-Dist: json_repair
+Dynamic: author
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
