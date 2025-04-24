@@ -1,0 +1,20 @@
+[project]
+name = "sec-agent-mcp-server"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "pip>=25.0.1",
+    "requests>=2.32.3",
+    "volcengine-python-sdk>=1.1.5",
+]
+
+
+[project.scripts]
+sec-agent-mcp-server = "sec_agent_mcp_server.server:main"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta:__legacy__"
