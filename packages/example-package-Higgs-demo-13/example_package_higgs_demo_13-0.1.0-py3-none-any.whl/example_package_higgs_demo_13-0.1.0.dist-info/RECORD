@@ -1,0 +1,11 @@
+calendar_app_package/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+calendar_app_package/calendar_api.py,sha256=n5gnKUdlQXrjDPNFGR3U2jVBDRGvTd91nVSS3Kh4z4Q,1759
+calendar_app_package/main.py,sha256=oou2c0QGlaD92pLbrKqfbW_bX7agpPDmVwHcx4f-WZo,2340
+calendar_app_package/manager.py,sha256=TInfpXSrEUBJviiyHQYudPF-n2LKcMZf0CIsKpgyib4,324
+calendar_app_package/task.py,sha256=bmOtBsjAqbrriSXAX-R5DUD7pxJrbHHZZDre9rSCwsQ,308
+example_package_higgs_demo_13-0.1.0.dist-info/licenses/LICENSE,sha256=eav2okRNJ1q3MOn8tin0ds5iRFpsW7Qyv2IK6HsGd3E,1076
+example_package_higgs_demo_13-0.1.0.dist-info/METADATA,sha256=PF_tHAT1uqFfR5QjGSHOkGq7mL72xTVYbWSME-88Dg8,4908
+example_package_higgs_demo_13-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+example_package_higgs_demo_13-0.1.0.dist-info/entry_points.txt,sha256=Fko7RjRlClULq7ilqa9g5lbH1O-8kF3rOQg44-25h74,64
+example_package_higgs_demo_13-0.1.0.dist-info/top_level.txt,sha256=6p1s5XWrKDR438PYm8xTQ2y2aIPKT3SWgYnEinN5fmw,21
+example_package_higgs_demo_13-0.1.0.dist-info/RECORD,,
