@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+tests/test_core.py
+zeropip/__init__.py
+zeropip/installer.py
+zeropip/saver.py
+zeropip.egg-info/PKG-INFO
+zeropip.egg-info/SOURCES.txt
+zeropip.egg-info/dependency_links.txt
+zeropip.egg-info/top_level.txt
