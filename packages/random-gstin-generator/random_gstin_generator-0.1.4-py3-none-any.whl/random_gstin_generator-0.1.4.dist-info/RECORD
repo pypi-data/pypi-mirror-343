@@ -1,0 +1,7 @@
+gstin_generator/__init__.py,sha256=3K3EHfcfZwlzVYMWRnKrFTAsFhaBTayYUHk7B6Fewfk,62
+gstin_generator/_internal.py,sha256=EemQICPtyH38pF5Bj-HgqYQR_eZdsZlVX5j_SQgIXRs,2268
+gstin_generator/core.py,sha256=UlUJ61_ZfizSgXl8aou7rNdjrg6qDEeAPyKDHL5rWF8,214
+gstin_generator/version.py,sha256=8oAxKUG747GUokmxjkrWejyJa5yPNEsoJDlXxoedxTw,21
+random_gstin_generator-0.1.4.dist-info/METADATA,sha256=NtIoeCRzRAJTcktZG0fvqffvicoLzkuw9btlAJqDz5E,909
+random_gstin_generator-0.1.4.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+random_gstin_generator-0.1.4.dist-info/RECORD,,
