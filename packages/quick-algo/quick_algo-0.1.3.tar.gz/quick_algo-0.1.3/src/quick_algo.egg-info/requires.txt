@@ -1,0 +1,13 @@
+
+[build]
+cython
+build
+setuptools
+py-cpuinfo
+wheel
+
+[test]
+pytest
+numpy
+scipy
+networkx
