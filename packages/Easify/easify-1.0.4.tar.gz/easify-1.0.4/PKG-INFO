@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: Easify
+Version: 1.0.4
+Summary: Prints preprocessing code for data engineering tasks
+Author: Sardar Khan
+Author-email: no@example.com
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Easify# Preprocessing Printer
+
+This package prints ready-to-use Python code for data preprocessing tasks such as handling missing values, duplicates, encoding, normalization, and visualization.
+
+## Installation
+
+```bash
+pip install preprocessing_printer
