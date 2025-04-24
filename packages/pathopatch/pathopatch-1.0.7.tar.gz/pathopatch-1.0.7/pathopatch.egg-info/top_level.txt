@@ -1,0 +1,9 @@
+debug
+debug-database-hannah
+dist
+docs
+examples
+local_debug
+pathopatch
+test_database
+test_output
