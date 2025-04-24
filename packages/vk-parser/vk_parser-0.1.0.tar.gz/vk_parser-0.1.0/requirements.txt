@@ -1,0 +1,4 @@
+vk_api>=11.9.9
+asyncio>=3.4.3
+aiohttp>=3.8.3
+tqdm>=4.62.3 

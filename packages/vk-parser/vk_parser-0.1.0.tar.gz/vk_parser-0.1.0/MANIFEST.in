@@ -1,0 +1,9 @@
+include LICENSE
+include README.md
+include requirements.txt
+include config.ini.example
+recursive-exclude data *
+recursive-exclude logs *
+recursive-exclude batch_temp *
+exclude vk_parser_state.json
+exclude config.ini 
