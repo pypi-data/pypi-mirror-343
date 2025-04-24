@@ -1,0 +1,3 @@
+[console_scripts]
+chesspal-mcp-engine=chesspal_mcp_engine.main:main_cli
+
