@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: dumpserver
+Version: 0.1.3
+Summary: dumpserver interfaces for python/jython
+Home-page: https://github.com/
+Author: yan wang
+Author-email: 1449349985@qq.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: asgiref==3.5.2
+Requires-Dist: blinker==1.4
+Requires-Dist: Brotli==1.0.9
+Requires-Dist: certifi==2025.1.31
+Requires-Dist: cffi==1.17.1
+Requires-Dist: click==8.1.8
+Requires-Dist: colorama==0.4.6
+Requires-Dist: cryptography==36.0.2
+Requires-Dist: Flask==2.0.3
+Requires-Dist: h11==0.13.0
+Requires-Dist: h2==4.1.0
+Requires-Dist: hpack==4.0.0
+Requires-Dist: hyperframe==6.0.1
+Requires-Dist: itsdangerous==2.2.0
+Requires-Dist: Jinja2==3.1.6
+Requires-Dist: kaitaistruct==0.9
+Requires-Dist: ldap3==2.9.1
+Requires-Dist: MarkupSafe==2.1.5
+Requires-Dist: msgpack==1.0.8
+Requires-Dist: passlib==1.7.4
+Requires-Dist: pip==24.3.1
+Requires-Dist: protobuf==3.19.6
+Requires-Dist: publicsuffix2==2.20191221
+Requires-Dist: pyasn1==0.6.1
+Requires-Dist: pycparser==2.22
+Requires-Dist: pydivert==2.1.0
+Requires-Dist: pyOpenSSL==22.0.0
+Requires-Dist: pyparsing==3.0.9
+Requires-Dist: pyperclip==1.8.2
+Requires-Dist: ruamel.yaml==0.17.40
+Requires-Dist: ruamel.yaml.clib==0.2.8
+Requires-Dist: setuptools==75.3.0
+Requires-Dist: sortedcontainers==2.4.0
+Requires-Dist: tornado==6.4.2
+Requires-Dist: urwid==2.1.2
+Requires-Dist: Werkzeug==2.0.0
+Requires-Dist: wheel==0.45.1
+Requires-Dist: wsproto==1.1.0
+Requires-Dist: zstandard==0.17.0
+
+
+Annotated burp interfaces for python/jython
+
+# Installation
+    pip install dumpserver
+    
+# Usage 1
+
+    import dumpserver
+
+    class ServerAddon:
+        def request(self, flow):
+            print({flow.request.method} {flow.request.url}")
+    
+        def response(self, flow):
+            print({flow.response.status_code} {flow.request.url}")
+    
+
+# Install Requires
+
+    python>=3.6.0
+
+
+
+    
