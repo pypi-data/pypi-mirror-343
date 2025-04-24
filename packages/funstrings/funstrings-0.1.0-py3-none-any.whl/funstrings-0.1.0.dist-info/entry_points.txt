@@ -1,0 +1,2 @@
+[console_scripts]
+funstrings = funstrings.__main__:main
