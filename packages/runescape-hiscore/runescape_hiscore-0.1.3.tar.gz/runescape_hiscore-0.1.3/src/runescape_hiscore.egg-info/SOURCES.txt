@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/osrs_hiscore/__init__.py
+src/osrs_hiscore/cli.py
+src/osrs_hiscore/core.py
+src/runescape_hiscore.egg-info/PKG-INFO
+src/runescape_hiscore.egg-info/SOURCES.txt
+src/runescape_hiscore.egg-info/dependency_links.txt
+src/runescape_hiscore.egg-info/entry_points.txt
+src/runescape_hiscore.egg-info/requires.txt
+src/runescape_hiscore.egg-info/top_level.txt
+tests/test_core.py
