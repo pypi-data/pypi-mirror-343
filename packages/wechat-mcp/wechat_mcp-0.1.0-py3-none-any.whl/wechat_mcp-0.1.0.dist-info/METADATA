@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: wechat-mcp
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.5.0
+Requires-Dist: pywxdump>=3.1.45
+Requires-Dist: wxauto>=3.9.11.17.5
+
+# init
+```bash
+git clone https://github.com/DarkNoah/wechat-mcp
+uv sync
+```
+
+# login wechat(pc)
+
+# start
+```bash
+# start sse
+uv run main.py --wxid "your_wechat_id" --port 8000
+
+# start stdio
+uv run main.py --wxid "your_wechat_id" --transport stdio
+```
