@@ -1,0 +1,11 @@
+GitPython
+httpx[http2]
+keyring
+pillow
+psutil
+rich
+soundfile
+keyrings.alt
+
+[full]
+keyrings.alt
