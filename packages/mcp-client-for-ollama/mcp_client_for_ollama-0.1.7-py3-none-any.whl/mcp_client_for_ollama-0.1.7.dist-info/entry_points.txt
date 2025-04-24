@@ -1,0 +1,2 @@
+[console_scripts]
+omcp = omcp.cli:run_cli
