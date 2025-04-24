@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: package-name-my-frame
+Version: 1.0.1
+Summary: Тут мой первый фрейм
+Home-page: https://github.com/DimaPlg/Diplom_progect
+Author: DimaPlP
+Author-email: pleshko.dima19@@gmail.com
+License: UNKNOWN
+Project-URL: Documentation, https://github.com/DimaPlg/Diplom_progect
+Keywords: example python
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+UNKNOWN
+

@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+package_name_my_frame.egg-info/PKG-INFO
+package_name_my_frame.egg-info/SOURCES.txt
+package_name_my_frame.egg-info/dependency_links.txt
+package_name_my_frame.egg-info/requires.txt
+package_name_my_frame.egg-info/top_level.txt
