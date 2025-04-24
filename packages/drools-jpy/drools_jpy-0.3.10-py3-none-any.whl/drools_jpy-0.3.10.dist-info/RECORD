@@ -1,0 +1,12 @@
+drools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+drools/dispatch.py,sha256=afuGHrMLNeoCGM0yi5M_1hUvBQKxpixNxAiTQXvCuJ0,1528
+drools/exceptions.py,sha256=sCgyBU78MHh25AQ9B1e5ghLb3pkq1Mtx72PMCjmeOV4,313
+drools/rule.py,sha256=Fgw1sKo79p_qj6guDWX6ga2rgO_gg23fRJtUqeoUR2k,254
+drools/ruleset.py,sha256=hgfX0_VyTJXb9mGLR-9EHrRZgDII8MMO9Jm_on3dBlw,9599
+drools/jars/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+drools/jars/drools-ansible-rulebook-integration-runtime-1.0.7-SNAPSHOT.jar,sha256=jSeHJZ1Z36yToqXZc4iGdeSFTiuPozZff5RhhslQT7Q,8244585
+drools_jpy-0.3.10.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+drools_jpy-0.3.10.dist-info/METADATA,sha256=jJFHdWpb7G85x1VyAxeGJ0p9s-xES2HnnxIVc8NDcro,15047
+drools_jpy-0.3.10.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+drools_jpy-0.3.10.dist-info/top_level.txt,sha256=kmr1dkRSC_AozHkJSir70YnUy41lfG6P3cdFLGddt10,7
+drools_jpy-0.3.10.dist-info/RECORD,,
