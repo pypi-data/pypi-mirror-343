@@ -1,0 +1,16 @@
+tsetsen/__init__.py,sha256=tmcCeG3umHpPgBD3yqe9_lb2DDUnx8AdKHnAaC6LGxk,1757
+tsetsen/client.py,sha256=ooW8bHnKzV-W1GP1_5r39siby0wxCassLipTlQRMs74,15504
+tsetsen/exceptions.py,sha256=BELJZubNfaPdGyXgQxLkeUEo9tc_AnThr0c9nMmVhp8,5436
+tsetsen/tsetsen_tts_pb2.py,sha256=zcXk6g_erqCC0jpmmbi7Tlvjr7bSGi1zeG1ppJze27U,5366
+tsetsen/tsetsen_tts_pb2_grpc.py,sha256=wk7a_G0EjEnAVjbOpRMNHsnJTjfWlS7reyVrdP10S04,8687
+tsetsen/auth/__init__.py,sha256=yi8FDIiip90uC-pmQzUDqSJrLa6QIEwsOg5Gd_nMY4s,140
+tsetsen/auth/api_key.py,sha256=y1UAOPtHCmrxp88kP_UzF6yBLO8XJPsiG88VkAD7aqE,3002
+tsetsen/models/__init__.py,sha256=YmF7VYLtNWbm3aOC9gENzI10Vmx2haMpPPpiQwOBzko,818
+tsetsen/models/requests.py,sha256=hsZTNYLEasOc-fQkwCI5Iw9G5do22TcDTkuvFHwfbdY,1793
+tsetsen/models/responses.py,sha256=rjDWzTQfC4Q6FXXSa0U8Scs0lbHg9SlAYywSQCywnN4,8067
+tsetsen/utils/__init__.py,sha256=Xk8UovriWNEbuGdPUwU8YEaNjNHls3b5anArM_1n8_w,116
+tsetsen/utils/retry.py,sha256=y-v87Wph1ynRLNigC-Sit13NsKkvrNcViUxT2HayC2E,4298
+tsetsen-0.1.0.dist-info/METADATA,sha256=6Z-V8L7MaeiGKAid5xwGtdt0fRfz0GS8AqTs627IEyc,14114
+tsetsen-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+tsetsen-0.1.0.dist-info/top_level.txt,sha256=L2f5DdVi9DF2V7hJxIZb3S-W7B8iOUo4fwagZ_vulOA,8
+tsetsen-0.1.0.dist-info/RECORD,,
