@@ -1,0 +1,3 @@
+xkits-lib>=0.2
+xlc>=1.1
+jinja2
