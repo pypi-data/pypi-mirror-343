@@ -1,0 +1,2 @@
+[console_scripts]
+print_preprocessing = Easify.main:ass1
