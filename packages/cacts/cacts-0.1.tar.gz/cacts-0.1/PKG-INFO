@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: cacts
+Version: 0.1
+Summary: A framework for configurable unit testing of a cmake-based project
+Author-email: Luca Bertagna <lbertag@sandia.gov>, James Foucar <jgfouca@sandia.gov>, Naser Mahfouz <naser.mahfouz@pnnl.gov>
+Maintainer-email: Luca Bertagna <lbertag@sandia.gov>, James Foucar <jgfouca@sandia.gov>, Naser Mahfouz <naser.mahfouz@pnnl.gov>
+Keywords: testing,cmake
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pyyaml
+Requires-Dist: psutil
+
+# CACTS: Cmake Application Configurable Testing System
+
+A set of python scripts (derived from EAMxx's testing infrastructure) that describe
+the unit testing of a project, abstracting concepts such as machine or build type.
