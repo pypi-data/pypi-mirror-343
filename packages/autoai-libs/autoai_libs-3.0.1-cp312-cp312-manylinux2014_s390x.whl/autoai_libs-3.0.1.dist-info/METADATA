@@ -1,0 +1,119 @@
+Metadata-Version: 2.4
+Name: autoai_libs
+Version: 3.0.1
+Summary: A library of transformers to support portable representations of AutoAI pipelines
+Author: IBM
+Author-email: Lukasz Cmielowski <lukasz.cmielowski@pl.ibm.com>, Daniel Ryszka <daniel.ryszka@pl.ibm.com>
+Maintainer-email: Łukasz Ćmielowski <lukasz.cmielowski@pl.ibm.com>, Marta Tomzik <marta.tomzik@ibm.com>
+License: See: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-AMCU-BYY6S5
+        
+Project-URL: homepage, https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/autoai-lib-python.html
+Keywords: AI,Watson,IBM,AutoAI,SDK,API,IBM Cloud,Machine Learning
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: Other/Proprietary License
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: ~=3.12
+Description-Content-Type: text/markdown
+License-File: licenses/LA_cs
+License-File: licenses/LA_de
+License-File: licenses/LA_el
+License-File: licenses/LA_en
+License-File: licenses/LA_es
+License-File: licenses/LA_fr
+License-File: licenses/LA_in
+License-File: licenses/LA_it
+License-File: licenses/LA_ja
+License-File: licenses/LA_ko
+License-File: licenses/LA_lt
+License-File: licenses/LA_pl
+License-File: licenses/LA_pt
+License-File: licenses/LA_ru
+License-File: licenses/LA_sl
+License-File: licenses/LA_tr
+License-File: licenses/LA_zh
+License-File: licenses/LA_zh_TW
+License-File: licenses/LI_cs
+License-File: licenses/LI_de
+License-File: licenses/LI_el
+License-File: licenses/LI_en
+License-File: licenses/LI_es
+License-File: licenses/LI_fr
+License-File: licenses/LI_in
+License-File: licenses/LI_it
+License-File: licenses/LI_ja
+License-File: licenses/LI_ko
+License-File: licenses/LI_lt
+License-File: licenses/LI_pl
+License-File: licenses/LI_pt
+License-File: licenses/LI_ru
+License-File: licenses/LI_sl
+License-File: licenses/LI_tr
+License-File: licenses/LI_zh
+License-File: licenses/LI_zh_TW
+Requires-Dist: numpy<2.1,>=2.0.2
+Requires-Dist: lale>=0.9.0
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: parameterized>=0.9
+Requires-Dist: scikit-learn<1.7,>=1.6.1
+Requires-Dist: xgboost<3.0.0,>=2.1.3
+Provides-Extra: test
+Requires-Dist: pytest<8.0.0; extra == "test"
+Requires-Dist: xgboost<3.0.0,>=2.1.3; extra == "test"
+Provides-Extra: code-check
+Requires-Dist: black; extra == "code-check"
+Requires-Dist: isort; extra == "code-check"
+Provides-Extra: dev
+Requires-Dist: autoai_libs[test]; extra == "dev"
+Requires-Dist: autoai_libs[code-check]; extra == "dev"
+Dynamic: license-file
+
+# autoai_libs
+
+A library of transformers to support portable representations of AutoAI pipelines.
+
+## Documentation
+
+Documentation can be found on IBM Watson Studio cloud documentation, [Using autoai-lib for Python](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/autoai-lib-python.html)
+
+## Pre-contribution requirements
+Run on your local machine to install pre-commit package:
+```bash
+brew install pre-commit
+```
+and in autoai directory apply the requirements set by `.pre-commit-config.yaml` file:
+```bash
+pre-commit autoupdate && pre-commit install
+```
+
+## Submitting PR's 
+
+During creation of a PR its author should follow Conventional Commits rules 
+(see: https://www.conventionalcommits.org/), however scope currently is not supported.
+
+Correct format of a PR title:
+
+<type>[#github-issue-id]: <commit name>
+where type is one of following:
+
+- `feat` - introduces a new feature
+- `fix` - fixes a bug
+- `chore` - changes that do not modify the source code or test files, like tweaking the build process or adding dependencies
+- `docs` - changes in documentation only
+- `style` - code changes that do not impact the functionality
+- `refactor` - code changes that neither fix a bug nor introduce a feature, typically improving code readability or structure
+- `perf` - code changes that improve performance
+- `test` - addition of missing tests or corrections to existing tests
+
+## License
+
+This library is delivered under the [International License Agreement for Non-Warranted Programs](https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-AMCU-BYY6S5).
