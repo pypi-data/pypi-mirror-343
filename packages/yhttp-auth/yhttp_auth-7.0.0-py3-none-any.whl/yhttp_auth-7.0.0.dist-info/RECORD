@@ -1,0 +1,9 @@
+yhttp/ext/auth/__init__.py,sha256=lId61ayA8noXGLHojDSR3pim4u3JkA0EA78rmLLMv0c,129
+yhttp/ext/auth/authentication.py,sha256=j9IuM8zrsXM-3tKcvU-H84fdX3v_3awObCm5SvW-b3s,10326
+yhttp/ext/auth/cli.py,sha256=c2cdG2AGOIwaY7HTXVab9_OJ1CvOIQvYlUsX10gURHc,799
+yhttp/ext/auth/install.py,sha256=bibCoihz4kF0xy2k3MN-Ko_2rkkdIqrvJHPvme69SPA,428
+yhttp_auth-7.0.0.dist-info/licenses/LICENSE,sha256=1lZ7neh4Es6earhYMwYaqsuS1Alohsrf9GZRVdl7l5o,1062
+yhttp_auth-7.0.0.dist-info/METADATA,sha256=Up5JLrWVgOxtW1Whff6b7e7i593HImJWuV56GeSSN5Y,3091
+yhttp_auth-7.0.0.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+yhttp_auth-7.0.0.dist-info/top_level.txt,sha256=efaJ4DfUOs7MO3pjIEyRhnQASGVyD6vH-SL3ogQxkeU,6
+yhttp_auth-7.0.0.dist-info/RECORD,,
