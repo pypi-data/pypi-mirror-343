@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+pyams_lib.egg-info/PKG-INFO
+pyams_lib.egg-info/SOURCES.txt
+pyams_lib.egg-info/dependency_links.txt
+pyams_lib.egg-info/top_level.txt
