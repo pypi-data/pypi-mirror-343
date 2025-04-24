@@ -1,0 +1,8 @@
+*__pycache__
+*.pyc
+*.cache
+*.log
+screenshot*.png
+*dist*
+*.toml
+*.sh
