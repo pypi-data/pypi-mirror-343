@@ -1,0 +1,11 @@
+binomial_cis/__init__.py,sha256=cciPtfdQWf837I5kcvMxceebb35guXYTIaRsiyrjKnA,768
+binomial_cis/binomial_helper.py,sha256=d4A6lkEpUEmwmNskVCrXzmqDNeQuyRHZU59YF03A5uk,2207
+binomial_cis/conf_intervals.py,sha256=s9tIy4Pbcd415ZI621Y3bus-QIHPDJJ3OI4iQ8RQjzU,21133
+binomial_cis/mixed_monotonic.py,sha256=CDmmtxw-FGuBBOwUBMDsEuXKG4R8UlYpybD--hCWVgg,5359
+binomial_cis/plotting.py,sha256=Zmx1ow6WLokePhi1lFUowKZZUr-F9zJDPuU06bW5Tcg,6629
+binomial_cis/volume.py,sha256=XUN8FKzOBg9oyisOqdBCWqfYX2lDEv0V4LMJ2se54Q0,8427
+binomial_cis-0.0.12.dist-info/licenses/LICENSE,sha256=Pslvi5LI4WsBQteVjccPUMxQ8tqJoyruv9m3jIjiCPU,1074
+binomial_cis-0.0.12.dist-info/METADATA,sha256=uum73uOFrlw2YkxmIqSRKUIhhH7bWjE6K-C1kFhwByE,4159
+binomial_cis-0.0.12.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+binomial_cis-0.0.12.dist-info/top_level.txt,sha256=1yWPoYn1E3spKFKOMtKcy4KXx7QhbNAY90ji2rgpZbc,13
+binomial_cis-0.0.12.dist-info/RECORD,,
