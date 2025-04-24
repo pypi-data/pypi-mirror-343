@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+Myosotis_Chinese_Dictionary.egg-info/PKG-INFO
+Myosotis_Chinese_Dictionary.egg-info/SOURCES.txt
+Myosotis_Chinese_Dictionary.egg-info/dependency_links.txt
+Myosotis_Chinese_Dictionary.egg-info/top_level.txt
+myosotis_chinese_dictionary/__init__.py
+myosotis_chinese_dictionary/dictionary.json
+myosotis_chinese_dictionary/dictionary.py
