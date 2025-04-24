@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "EarlyStoppingPy"
+version = "0.0.4"
+authors = [
+  { name="Eric Ziebell", email="ziebelle@hu-berlin.de" },
+  { name="Ratmir Miftachov", email="miftachr@hu-berlin.de"},
+  { name="Bernhard Stankewitz", email="bstankewitz@posteo.de"},
+  { name="Laura Hucker", email="huckerla@hu-berlin.de"},
+]
+description = "EarlyStopping: Implicit Regularisation for Iterative Learning Procedures in Python"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"  # ✅ Use SPDX identifier only
+dependencies = [
+    "joblib>=1.3.2",
+    "matplotlib>=3.8.2",
+    "numpy>=1.23.5",
+    "pandas>=1.5.3",
+    "scikit-learn>=1.4.0",
+    "scipy>=1.10.1",
+    "seaborn>=0.13.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/EarlyStop/EarlyStopping"
+Documentation = "https://earlystop.github.io/EarlyStopping/"
