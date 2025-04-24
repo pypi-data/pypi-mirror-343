@@ -1,0 +1,12 @@
+cper.cpython-313-aarch64-linux-musl.so,sha256=MqPBpAidl1LCFrbdmuJ2Afk4z0LOGJE4VBS5PfC3I3g,229912
+cper-0.0.4.data/headers/libcper/BaseTypes.h,sha256=pBXsBLtZ9plfV6VYhrfsL4DWKgXmwobBV6UW7Nj_uuw,2427
+cper-0.0.4.data/headers/libcper/Cper.h,sha256=MmBab47VfcMC4zqP0R9FWbjp_C91dNV6QOWrLvqKo_Q,52425
+cper-0.0.4.data/headers/libcper/common-utils.h,sha256=MxRoIIlGbUJ4HMCjuy-NFZSgaSI7bWS9ZdBb_l5aQRg,371
+cper-0.0.4.data/headers/libcper/cper-parse-str.h,sha256=zVQxHykD9-qBNtg10whm3asOvjQu_A6caP2JKLNb1rk,313
+cper-0.0.4.data/headers/libcper/cper-parse.h,sha256=773yavzfoblDgggL2t28J7u1Zb4Bhccao4UYwVVEwHU,1746
+cper-0.0.4.data/headers/libcper/cper-utils.h,sha256=NFH3yWAkn5fV4jhTrtixDTAztLcYeKB-ojWD4mffSt8,2964
+cper-0.0.4.data/headers/libcper/generator/cper-generate.h,sha256=ZyTWR6PcHghrm30rdCXpp6z1eIzAmmFPo5aTvSXjOqE,455
+cper-0.0.4.dist-info/LICENSE,sha256=DOwG4OVfvD3FzuT8qbYH9my49OTbzzs8ATWU3RVnMuk,10173
+cper-0.0.4.dist-info/METADATA,sha256=XmkgaV-jd4PEChltVWC1Ysx15yGkXAnANURKbhOVBYQ,11921
+cper-0.0.4.dist-info/WHEEL,sha256=SCqA-_pJ5oPn5twKbls1rZqxq7W4gIius8RtBiWAJLs,99
+cper-0.0.4.dist-info/RECORD,,
