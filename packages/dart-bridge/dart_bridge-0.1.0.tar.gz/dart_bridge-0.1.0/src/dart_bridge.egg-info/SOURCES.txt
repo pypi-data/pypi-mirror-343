@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/dart_bridge.c
+src/dart_api/dart_api_dl.c
+src/dart_api/dart_api_dl.c
+src/dart_bridge.egg-info/PKG-INFO
+src/dart_bridge.egg-info/SOURCES.txt
+src/dart_bridge.egg-info/dependency_links.txt
+src/dart_bridge.egg-info/top_level.txt
