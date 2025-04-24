@@ -1,0 +1,9 @@
+smol_db/__init__.py,sha256=-OjCiQnteB2k1sFvLGtR3zRIGHUPWBS32QO1iifpHgQ,275
+smol_db/core/database.py,sha256=SeKgDq0GNA6OrFMkXmM8kYSxsqR7aMM4Fqxnhvu4eDo,4828
+smol_db/core/index.py,sha256=_XCLEV65EnEm1ALctZ3bJr9a3QM-Zi_aCAdzDV7OOXQ,4396
+smol_db/core/table.py,sha256=8n2VBY4TuZfDD4yA1h_tSPUZ1GcpwkUW76wXig1-cSk,6535
+smol_db/storage/engine.py,sha256=5gfLFIi8fRZ-et1CmuG10NnaAmiCLMB3ZVsH1TMjn6o,7197
+smol_db-0.1.0.dist-info/METADATA,sha256=sIbx3HBUjQGxKxPD8obuzHVSZdHraMWsK_b6QdKPBwU,5717
+smol_db-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+smol_db-0.1.0.dist-info/licenses/LICENSE,sha256=X4IHyKHx8_YJjjmM_zwD5SHHpXGlwDGjhOTtfeIRhyI,1068
+smol_db-0.1.0.dist-info/RECORD,,
