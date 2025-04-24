@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+create_woragis_api.egg-info/PKG-INFO
+create_woragis_api.egg-info/SOURCES.txt
+create_woragis_api.egg-info/dependency_links.txt
+create_woragis_api.egg-info/entry_points.txt
+create_woragis_api.egg-info/requires.txt
+create_woragis_api.egg-info/top_level.txt
