@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+clwdevops/__init__.py
+clwdevops/aws.py
+clwdevops/connect.py
+clwdevops/csvutils.py
+clwdevops/utils.py
+clwdevops.egg-info/PKG-INFO
+clwdevops.egg-info/SOURCES.txt
+clwdevops.egg-info/dependency_links.txt
+clwdevops.egg-info/requires.txt
+clwdevops.egg-info/top_level.txt
