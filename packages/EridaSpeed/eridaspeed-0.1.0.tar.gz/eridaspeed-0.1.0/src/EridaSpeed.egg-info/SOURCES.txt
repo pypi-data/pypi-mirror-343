@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/EridaSpeed.egg-info/PKG-INFO
+src/EridaSpeed.egg-info/SOURCES.txt
+src/EridaSpeed.egg-info/dependency_links.txt
+src/EridaSpeed.egg-info/requires.txt
+src/EridaSpeed.egg-info/top_level.txt
+src/eridaspeed/__init__.py
+src/eridaspeed/optimizer.py

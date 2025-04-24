@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: EridaSpeed
+Version: 0.1.0
+Summary: ВУВ (Виртуальный Ускоритель Вычислений) - ускоряет работу и скорость обучения трансформерных нейросетей в x2-x6 раз (GPT2 - в 40 раз)
+Author: Clos-Rise
+Author-email: chernaev.alex@mail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: torch>=1.10.0
+Requires-Dist: transformers>=4.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Пример использования , на примере GPT 2-й версии :
+
+    from transformers import AutoModelForCausalLM
+
+    model = AutoModelForCausalLM.from_pretrained(
+        "gpt2",
+        quantization_bits=8,       #биты для квантования
+        sparsity_threshold=0.02    #обнуление малых весов (0.01 - 0.05)
+    )
+
+В разы ускоряет вычисления нейронных сетей (в основном рассматривается как для трансформеров)
