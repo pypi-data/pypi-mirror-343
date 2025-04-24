@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools", "wheel", "distfit"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fitdist"
+dynamic = ["version"]
+authors = [{ name = "Erdogan Taskesen", email = "erdogant@gmail.com" },]
+description = "fitdist is a Python package for probability density function fitting and hypothesis testing."
+readme = "README.md"
+requires-python = ">=3"
+license.file = "LICENSE"
+keywords = ["Python", ""]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    'numpy',
+    'matplotlib>=3.5.2',
+    'tqdm',
+    'datazets',
+    'distfit',
+]
+
+[project.urls]
+Homepage = "https://erdogant.github.io/distfit"
+Download = "https://github.com/erdogant/fitdist/archive/{version}.tar.gz"
+
+[tool.setuptools]
+packages = ["fitdist"]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = { attr = "fitdist.__version__" }
