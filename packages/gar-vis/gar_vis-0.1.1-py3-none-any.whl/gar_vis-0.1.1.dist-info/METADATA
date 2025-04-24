@@ -1,0 +1,104 @@
+Metadata-Version: 2.4
+Name: gar-vis
+Version: 0.1.1
+Summary: Visualisation tool for Corpus Graphs
+Author: Martijn Smits
+License: MIT License
+        
+        Copyright (c) 2025 Martijn Smits
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Repository, https://github.com/martijnsmits/gar_vis
+Keywords: information retrieval,corpus graph,visualisation
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-terrier<1,>=0.10.0
+Requires-Dist: pyterrier-adaptive<1,>=0.1.0
+Requires-Dist: pyterrier-pisa<1,>=0.1.0
+Requires-Dist: h5py<4,>=3.0.0
+Requires-Dist: matplotlib<4,>=3.7.0
+Requires-Dist: seaborn<1,>=0.13.2
+Requires-Dist: numpy<2,>=1.24.0
+Requires-Dist: pandas<3,>=2.0.3
+Dynamic: license-file
+
+# gar_vis
+Visualisation tool for [Corpus Graphs](https://arxiv.org/abs/2208.08942)
+
+## Installation
+Install the package via `pip`:
+```bash
+pip install gar-vis
+```
+
+## Getting Started
+
+Run the following code for a simple demo:
+```bash
+import pyterrier as pt
+from pyterrier_adaptive import CorpusGraph
+from pyterrier_pisa import PisaIndex
+
+from gar_vis import GarVis
+
+if __name__ == "__main__":
+    corpus_graph = CorpusGraph.from_hf("macavaney/msmarco-passage.corpusgraph.bm25.128")
+    bm25 = PisaIndex.from_dataset("msmarco_passage").bm25()
+    dataset = pt.get_dataset(f"irds:msmarco-passage/trec-dl-2019/judged")
+
+    file_path = GarVis.create_neighbourhood(corpus_graph, bm25, dataset)
+    GarVis.visualise_neighbourhood(file_path, dataset, min_rel=2)
+```
+
+Or use it with a different corpus graph, retriever and/or dataset (including qrels):
+```python
+import pyterrier as pt
+from pyterrier_adaptive import CorpusGraph
+from pyterrier_pisa import PisaIndex
+
+from gar_vis import GarVis
+
+if __name__ == "__main__":
+    corpus_graph = ...
+    retriever = ...
+    dataset = ...
+
+    # Create a new neighbourhood
+    file_path = GarVis.create_neighbourhood(corpus_graph, bm25, dataset, k=num_neighbours, run_id="file_name", save_dir = "path_to_file")
+
+    # Or use an existing neighbourhood
+    file_path = "path_to_file/file_name.h5"
+
+    # And start the visulisation tool (min_rel is used to set the minimum relevance label to consider the document relevant)
+    GarVis.visualise_neighbourhood(file_path, dataset, min_rel=2)
+```
+
+## Citation
+```bibtex
+@inproceedings{rear2025,
+    title = {Resource Efficient Adaptive Retrieval},
+    author = {Martijn Smits},
+    year = {2025},
+}
+```
