@@ -1,0 +1,10 @@
+zarrs-0.1.4.dist-info/METADATA,sha256=q4sHQ9CXNTlgcahnokhnY90Y4XVzUZmrtvdjeutOARA,8850
+zarrs-0.1.4.dist-info/WHEEL,sha256=01e51JOvEvJUJQqCcZk0wjS0i0fa8OY00VIU7NxNPPQ,108
+zarrs-0.1.4.dist-info/licenses/LICENSE,sha256=vwIsJjEfVFehyyqcb7B3dAXAniaFMmk8u7IoiJAfBJ4,1099
+zarrs/_internal.pyi,sha256=tw0ACM-zr0xu_Nma3hG7eCxU-xK6xXhdl2BL0dQiexs,1405
+zarrs/pipeline.py,sha256=GV6Z1xoMdLQpnp4iX4nCuIYZTK1bPDG9nO0-t23F0_I,8708
+zarrs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zarrs/utils.py,sha256=uKIDi2EKRJRFdlyCElEvZrooVXkbmO4ZoE5fTHFNHGo,6763
+zarrs/__init__.py,sha256=4oWtWDZO8r7z4Uh7Fy_brmkxXDpULQdgjlA0iFw98eA,573
+zarrs/_internal.abi3.so,sha256=brMln7FelZ918E-HK34InwrtRhKVpIoLlyfw0gvEY_k,7832232
+zarrs-0.1.4.dist-info/RECORD,,
