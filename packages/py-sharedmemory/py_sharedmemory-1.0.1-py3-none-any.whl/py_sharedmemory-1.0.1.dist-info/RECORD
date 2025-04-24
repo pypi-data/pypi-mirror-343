@@ -1,0 +1,10 @@
+memory/__init__.py,sha256=3FFTy2frl1KxNej5rvximE5z6oCVlORC2Ia8Ac9jTkQ,88
+memory/converter.py,sha256=S_zqjuaJpWzK2eGmBLUCPip32kSkZY82M7AVg_7Ryi0,2966
+memory/factory.py,sha256=PD1zdr9srMbbNYhkI8dRz_7e8Wq420uTX07WfExs4sQ,356
+memory/receiver.py,sha256=ZUFuP6GS1E-oAQmGpCF--vWjn_5Jb2dHi4aL2fb-8k0,2398
+memory/sender.py,sha256=CHB8-osP7a22xNB7H2W3jGMn8zsQLVPCPEBH0XJQGDU,4859
+py_sharedmemory-1.0.1.dist-info/licenses/LICENSE,sha256=h0J2LgUZdY3fXKnyBle1HiJoBrUk8dIZpXfVeBvgIe0,1090
+py_sharedmemory-1.0.1.dist-info/METADATA,sha256=gZpzAQfMuWJMCHYy_4ZHXuL5sn4ogxga_Zy_Z4cOmog,11346
+py_sharedmemory-1.0.1.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+py_sharedmemory-1.0.1.dist-info/top_level.txt,sha256=plUqRjD5ukqJEMYsc-bhdIrLgYnGmx3mALaoMw-3E8o,7
+py_sharedmemory-1.0.1.dist-info/RECORD,,
