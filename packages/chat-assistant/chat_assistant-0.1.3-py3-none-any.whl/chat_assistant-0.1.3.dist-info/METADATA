@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: chat-assistant
+Version: 0.1.3
+Summary: Chat Assistant
+Author: sugarkwork
+Requires-Python: >=3.10
+Requires-Dist: skpmem
+Requires-Dist: litellm
+Requires-Dist: json_repair
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
