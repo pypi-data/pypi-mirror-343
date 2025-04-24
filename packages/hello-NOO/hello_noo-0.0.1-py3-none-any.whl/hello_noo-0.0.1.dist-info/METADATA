@@ -1,0 +1,58 @@
+Metadata-Version: 2.4
+Name: hello-NOO
+Version: 0.0.1
+Summary: A small example package
+Author-email: NeonOrangeOrange <neonorangeorange@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/NeonOrangeOrange/hello-NOO
+Project-URL: Issues, https://github.com/NeonOrangeOrange/hello-NOO/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Dynamic: license-file
+
+
+# Hello-NOO
+
+This is an example repository for a python package, for my own reference.
+
+
+
+
+## Development: Things to remember
+
+### Make a source distribution
+
+```text
+python -m build --sdist
+```
+
+This makes a `*tar.gz` in the `dist/` folder
+
+
+### Make a wheel
+
+```text
+python -m build --wheel
+```
+
+This makes a `*.whl` in the `dist/` folder
+
+### Check with twine
+
+```text
+twine check dist/*
+```
+
+Checks the files in the `dist/` folder
+
+
+### Upload to PyPi
+
+```text
+twine upload --repository pypi dist/*
+```
