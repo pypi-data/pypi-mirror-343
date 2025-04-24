@@ -1,0 +1,6 @@
+requests>=2.0
+rich>=10.0
+
+[test]
+pytest
+flake8
