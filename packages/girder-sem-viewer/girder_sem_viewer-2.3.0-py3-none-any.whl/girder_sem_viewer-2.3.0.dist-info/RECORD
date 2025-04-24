@@ -1,0 +1,11 @@
+girder_sem_viewer/__init__.py,sha256=WwfSpXBX6VrCFkw9zmnkyh_P1Deef2JOAxdldlNZu-c,13627
+girder_sem_viewer/rest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+girder_sem_viewer/rest/amdee.py,sha256=rbF1dQaFZCio5u87WhyzfyfOztw8l3uV2EQ8bGJcYxA,2144
+girder_sem_viewer/web_client/dist/girder-plugin-sem-viewer.umd.cjs,sha256=GhYXFzcH7o_mYdj5Dp7BWg6SCJ2mHjfyCyeBwcUt1RQ,1243331
+girder_sem_viewer/web_client/dist/style.css,sha256=CdPFPeuZqJxSDFWs-NXPABG5xLQlNUtWqWRO7Ljwl8c,1912
+girder_sem_viewer-2.3.0.dist-info/licenses/LICENSE,sha256=WItJcB718vgenL-y66JYapoFB8wLHVjzPybAKP1HxqI,1491
+girder_sem_viewer-2.3.0.dist-info/METADATA,sha256=G25jfvdUH8lgPE3fYdz1ekB9ytCwCTCAHB8Tlrk7ako,4292
+girder_sem_viewer-2.3.0.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+girder_sem_viewer-2.3.0.dist-info/entry_points.txt,sha256=0njOZHft9xm1egFlQmuwyVQ4aczdqVv0FENkBGJFKd8,63
+girder_sem_viewer-2.3.0.dist-info/top_level.txt,sha256=z7GJBqdPAFgjZvZ1SC17H1f-mCW-9PayBf9L9vTlDK0,18
+girder_sem_viewer-2.3.0.dist-info/RECORD,,
