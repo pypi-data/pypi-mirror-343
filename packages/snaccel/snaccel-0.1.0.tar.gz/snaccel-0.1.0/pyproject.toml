@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "snaccel"
+version = "0.1.0"
+
+description = "A compiler that translates functional programs written in Python into C++ for HPC and machine learning"
+license = {text = "MIT"}
+
+authors = [
+    {name = "Peng Jiang", email = "pengjiang030@gmail.com"}
+]
+
+keywords = ["python", "compiler", "high-performance computing", "machine learning"]
+
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    'numpy',
+    'torch',
+    'multimethod',
+    'ninja',
+    'pyvis',
+    'decompyle3',
+]
+
+readme = "README.md"
+requires-python = ">=3.10"

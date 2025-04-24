@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+snaccel/__init__.py
+snaccel.egg-info/PKG-INFO
+snaccel.egg-info/SOURCES.txt
+snaccel.egg-info/dependency_links.txt
+snaccel.egg-info/requires.txt
+snaccel.egg-info/top_level.txt
