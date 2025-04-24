@@ -1,0 +1,2 @@
+[console_scripts]
+keboola-mcp = keboola_mcp_server.cli:main
