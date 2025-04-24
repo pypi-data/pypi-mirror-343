@@ -1,0 +1,11 @@
+mspeeps/__init__.py,sha256=oiIsV3d76bCcvqS5g5bu2anFnswYTXj7IM-eiF0T5jQ,588
+mspeeps/cli.py,sha256=rVjYzZ-9X4NcI08-RWqngZltis61x3ByOR9JcZHoCt0,3504
+mspeeps/core.py,sha256=lIH2aHjH21ZLoK6Bb5giVyyXBGQuiqTdGXwOKQi0Hco,14212
+mspeeps/formula_matching.py,sha256=QKz6RxoM1HErnCqMBaD-Xzyjt81YIvSQ6aQVQprxgEI,2856
+mspeeps/utils.py,sha256=SDh6cNcGvSRVu0CB_yFTrXT93pRTK5kGY0LANZd6jJ8,3365
+mspeeps-0.1.2.dist-info/licenses/LICENSE,sha256=iXyWAN2Yrm47jiZHo_PFicpX7QNRSp8Y90QycwlFXPo,1067
+mspeeps-0.1.2.dist-info/METADATA,sha256=jDHBeQG9Md4WW-X4MkH-dvzZb3l263XBkisErO1tHOs,6153
+mspeeps-0.1.2.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+mspeeps-0.1.2.dist-info/entry_points.txt,sha256=O6af1pB3tvL5PtR3uwigo37bD95MiG4Kmmlta5FRvKk,45
+mspeeps-0.1.2.dist-info/top_level.txt,sha256=7tqs0EMHsmOoQLMJzdYfHcpzs1iHgahvxvQCpCgHL4Y,8
+mspeeps-0.1.2.dist-info/RECORD,,
