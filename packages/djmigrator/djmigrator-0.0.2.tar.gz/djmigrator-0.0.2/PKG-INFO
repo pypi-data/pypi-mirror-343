@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: djmigrator
+Version: 0.0.2
+Summary: Smart Django migration manager.
+Home-page: https://github.com/yourusername/djmigrator
+Author: Your Name
+Author-email: you@example.com
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: Django>=4.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# djmigrator
+
+A smart Django migration manager with deep model diffing, custom migration commands, and automation support.
