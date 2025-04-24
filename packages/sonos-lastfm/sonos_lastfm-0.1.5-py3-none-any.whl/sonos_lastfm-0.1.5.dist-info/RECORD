@@ -1,0 +1,10 @@
+sonos_lastfm/__init__.py,sha256=a2XGaXQGf0le_YdBs6MUULU9esSO7MwzSp430XDpQ-k,163
+sonos_lastfm/cli.py,sha256=o0LXdHUiUP7m8MdmxZBuVEh09Wjw3E9BUj-Wa4yWoqY,14872
+sonos_lastfm/config.py,sha256=CqIEgZrxhaBumQZYhe48ZnbrywbbMhfJ5y4H0bdFG90,2588
+sonos_lastfm/sonos_lastfm.py,sha256=qW5HnqveFVfhrc739sn4l6NWCyi3OlbqIBuM8EdKtUs,17093
+sonos_lastfm/utils.py,sha256=E0yuOwKytDyAHNFxWMXga9odQ-Jr6S4m0cBNQaAXHes,5642
+sonos_lastfm-0.1.5.dist-info/METADATA,sha256=Tng-VxX9RD-RNVhyANZL-9Pq161XTbsIKux7uEBE_cg,6451
+sonos_lastfm-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sonos_lastfm-0.1.5.dist-info/entry_points.txt,sha256=geyM1QWwP-qt7YhgUbw55uw-akCnQgPoAwJ2uqnZjv8,51
+sonos_lastfm-0.1.5.dist-info/licenses/LICENSE,sha256=ysAn-coBcrBBz6ZiWxXMRa_RCwA0YT6jXTIpXU7Wcr0,1072
+sonos_lastfm-0.1.5.dist-info/RECORD,,
