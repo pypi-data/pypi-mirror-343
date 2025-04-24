@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: nultack
+Version: 1.8.0
+Summary: Nültack - Python Code Steganography Library
+Home-page: https://github.com/Eternals-Satya/Nultack
+Author: Eternals-Satya
+Author-email: Eternals-Satya <eternals.tolong@gmail.com>
+Project-URL: Homepage, https://github.com/Eternals-Satya/Nultack
+Project-URL: Repository, https://github.com/Eternals-Satya/Nultack
+Project-URL: Issues, https://github.com/Eternals-Satya/Nultack/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Security :: Cryptography
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# Nültack - Python Code Steganography  
+
+🔒 **Hide & Execute Python Code Securely**  
+
+## Installation  
+```bash
+pip install nlt
+```
+
+Github: [Eternals](github.com/Eternals-Satya)
+Tiktok: [Eternals](tiktok.com/@anakkecil_s)
