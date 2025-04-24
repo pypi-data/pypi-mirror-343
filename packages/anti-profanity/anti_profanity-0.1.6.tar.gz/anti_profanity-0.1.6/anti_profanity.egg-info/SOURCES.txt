@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+anti_profanity/__init__.py
+anti_profanity/main.py
+anti_profanity/test.py
+anti_profanity.egg-info/PKG-INFO
+anti_profanity.egg-info/SOURCES.txt
+anti_profanity.egg-info/dependency_links.txt
+anti_profanity.egg-info/top_level.txt
+anti_profanity/data/__init__.py
+anti_profanity/data/bn_profanity.py
+anti_profanity/data/en_profanity.py
+anti_profanity/data/hi_profanity.py
