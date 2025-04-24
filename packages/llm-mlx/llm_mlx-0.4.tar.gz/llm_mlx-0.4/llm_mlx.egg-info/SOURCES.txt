@@ -1,0 +1,11 @@
+LICENSE
+README.md
+llm_mlx.py
+pyproject.toml
+llm_mlx.egg-info/PKG-INFO
+llm_mlx.egg-info/SOURCES.txt
+llm_mlx.egg-info/dependency_links.txt
+llm_mlx.egg-info/entry_points.txt
+llm_mlx.egg-info/requires.txt
+llm_mlx.egg-info/top_level.txt
+tests/test_mlx.py

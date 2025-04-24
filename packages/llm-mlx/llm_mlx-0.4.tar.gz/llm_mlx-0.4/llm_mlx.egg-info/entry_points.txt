@@ -1,0 +1,2 @@
+[llm]
+mlx = llm_mlx
