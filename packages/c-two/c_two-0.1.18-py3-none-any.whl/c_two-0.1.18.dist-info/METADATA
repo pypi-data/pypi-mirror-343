@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: c-two
+Version: 0.1.18
+Summary: A python server to support communication between CRM and Component processes.
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: grpcio>=1.71.0
+Requires-Dist: grpcio-tools>=1.71.0
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: mypy-protobuf>=3.6.0
+Requires-Dist: pyarrow>=19.0.1
+Requires-Dist: zmq>=0.0.0
+Dynamic: license-file
+
+# C-Two
+
+<p align="center">
+<img align="center" width="150px" src="https://raw.githubusercontent.com/world-in-progress/c-two/main/doc/images/logo.png">
+</p>
+
+C-Two (CC) serves as a foundational framework designed to scaffold runtime interfaces (Core Resource Model, CRM) for agnostic resources, enabling seamless invocation of any Component to perform resource-related computations.
+
+The architecture of CC is depicted as follows.
+
+<img src="https://raw.githubusercontent.com/world-in-progress/c-two/main/doc/images/architecture.png" alt="Architecture" width="1500" />
