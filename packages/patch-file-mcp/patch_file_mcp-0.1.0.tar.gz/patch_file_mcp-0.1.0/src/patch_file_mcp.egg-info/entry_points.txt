@@ -1,0 +1,2 @@
+[console_scripts]
+patch-file-mcp = patch_file_mcp.server:main
