@@ -1,0 +1,36 @@
+Metadata-Version: 2.3
+Name: thai-identity-generator
+Version: 0.1.0
+Summary: Generate Thai National Identity Numbers programmatically for testing
+Author: mohammed.saleel0099@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# Thai Identity Number Generator
+
+This package generates random valid Thai National Identity Numbers (13-digit) for testing
+
+## Installation
+
+You can install the package via Poetry:
+
+```bash
+poetry add thai-identity-generator
+```
+
+## Usage
+```
+from thai_identity_generator import generate_thailand_identity_number
+
+# Generate a list of Thai ID numbers
+nric_numbers = generate_thailand_identity_number(num_records=5)
+
+for nric in nric_numbers:
+    print(nric)```

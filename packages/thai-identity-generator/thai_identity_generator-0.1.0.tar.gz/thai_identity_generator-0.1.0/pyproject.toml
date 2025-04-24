@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "thai-identity-generator"
+version = "0.1.0"
+description = "Generate Thai National Identity Numbers programmatically for testing"
+authors = ["mohammed.saleel0099@gmail.com"]
+packages = [{ include = "thai_identity_generator" }]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[poetry.group.dev-dependencies]
+pytest = "^8.0.0"
