@@ -1,0 +1,12 @@
+scenarios/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scenarios/vovka/__init__.py,sha256=-fKugTtIVCUR00MeUs7enB5ZNJrvv_qf1t5skHwmJS4,387
+scenarios/vovka/scenario.py,sha256=9p6A5h-nU0qQfIdhmEL3zZAfm-UF5fQaIz66dlaynV8,2507
+scenarios/vovka/session.py,sha256=2inl_0i8XdcFqnnzEX2eNCJN_9q5CzS5-5xwoRg2-Hs,2085
+scenarios/vovka/walking.py,sha256=mW3M0587YMFOz97E5nlDrIq-02taxg_d7wS8WoPW7pw,8196
+scenarios/vovka/static/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scenarios/vovka/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scenarios/vovka/utils/okko_card.py,sha256=4cqQscc9EC3OIkd0wRX8ZrgCHgeq5Sq54ItERJfRiCM,1700
+salute-0.0.0.dist-info/METADATA,sha256=I1gBRB4h988tPai8M1Xj7W4ZTJuiYGDj6C7NwAwXHzk,201
+salute-0.0.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+salute-0.0.0.dist-info/top_level.txt,sha256=6SVLhQkvnfHoMr61lkBwcH27foeRTrrlRT1sg2irwiE,10
+salute-0.0.0.dist-info/RECORD,,
