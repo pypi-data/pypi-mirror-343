@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+src/cpuspeed.py
+src/dtox.py
+src/main.py
+src/pingy.py
+src/sshconf.py
+src/verif_apt.py
+src/jusfltuls.egg-info/PKG-INFO
+src/jusfltuls.egg-info/SOURCES.txt
+src/jusfltuls.egg-info/dependency_links.txt
+src/jusfltuls.egg-info/entry_points.txt
+src/jusfltuls.egg-info/requires.txt
+src/jusfltuls.egg-info/top_level.txt
