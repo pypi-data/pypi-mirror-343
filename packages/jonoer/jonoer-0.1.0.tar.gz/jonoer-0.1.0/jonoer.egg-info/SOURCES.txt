@@ -1,0 +1,8 @@
+setup.py
+jonoer/__init__.py
+jonoer/jonoer.py
+jonoer.egg-info/PKG-INFO
+jonoer.egg-info/SOURCES.txt
+jonoer.egg-info/dependency_links.txt
+jonoer.egg-info/requires.txt
+jonoer.egg-info/top_level.txt
