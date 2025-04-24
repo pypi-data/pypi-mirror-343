@@ -1,0 +1,5 @@
+include README.md
+include LICENSE
+recursive-include ffmpegarm64v8a_mkkk *.py
+recursive-include ffmpegarm64v8a_mkkk *.json
+recursive-include ffmpegarm64v8a_mkkk *
