@@ -1,0 +1,7 @@
+click
+llm>=0.24
+pandas>=2.2
+pydantic_evals>=0.1.3
+
+[test]
+pytest

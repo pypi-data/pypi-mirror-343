@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+ai_yardstick/__init__.py
+ai_yardstick/__main__.py
+ai_yardstick/cli.py
+ai_yardstick.egg-info/PKG-INFO
+ai_yardstick.egg-info/SOURCES.txt
+ai_yardstick.egg-info/dependency_links.txt
+ai_yardstick.egg-info/entry_points.txt
+ai_yardstick.egg-info/requires.txt
+ai_yardstick.egg-info/top_level.txt
+tests/test_ai_yardstick.py
