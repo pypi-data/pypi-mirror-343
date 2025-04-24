@@ -1,0 +1,15 @@
+airflow_pydantic/__init__.py,sha256=ejypUM8uh8YLrS3Bj9UP_dmda8yc4U5JQxSP3xcu9wU,108
+airflow_pydantic/dag.py,sha256=sPoGtboHjoed9jFLEj4jbAgeStHU7vSCxQDrwSWxqAQ,6901
+airflow_pydantic/operators.py,sha256=HxtlVtnFootzOPIu4_71ThO9G56Z2Z00MlfmoqH4C-c,5505
+airflow_pydantic/task.py,sha256=9O3QuqkYczo_vN1h5sbsS8Mlhp70ecApBRHzuTYIDn0,14005
+airflow_pydantic/tests/test_all.py,sha256=uJE6vwt7hzEnS1hpmbpHDp0hJojROKvvSHiRJSDuj6I,73
+airflow_pydantic/tests/test_dag.py,sha256=4IQEtrRRjlCg4U6wURPrCswfqtY_eKF8ccLR2QYMsak,704
+airflow_pydantic/tests/test_operators.py,sha256=ZvWM649S0y9a2ZGtrIYohNDLadx_mbFY0InukSKysD0,1113
+airflow_pydantic/tests/test_task.py,sha256=zCaHveH2UL9jqoiOzbQMe_db0eZJq2zuOtqq7k6pOpY,833
+airflow_pydantic/utils/__init__.py,sha256=5wwjf69nAzQJn4scI_Ri5GhZJ6w8K1CXfZB1SdBTkn0,94
+airflow_pydantic/utils/common.py,sha256=Zgme31MMrKEFmTzkhfvMfNwxyfmgGbXHS7NG206eguY,1022
+airflow_pydantic/utils/importpath.py,sha256=8bzk_jXE9JqIouBEseWG80qFKx-kcr7bAQ1XBEqecSk,487
+airflow_pydantic-1.0.0.post0.dist-info/METADATA,sha256=jLy4fYQqWdgIbY9dLWueSPA28gf7Arjt0xVqty4ypqA,3260
+airflow_pydantic-1.0.0.post0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+airflow_pydantic-1.0.0.post0.dist-info/licenses/LICENSE,sha256=rQfXI0vSAS3ZvReJ1OAXhFE0jkDFaBpKQwWELVP2wdA,11358
+airflow_pydantic-1.0.0.post0.dist-info/RECORD,,
