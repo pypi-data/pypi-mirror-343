@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pymetranet
+Version: 0.3.0
+Summary: Python Metranet library
+Home-page: https://github.com/eldesradar/pymetranet
+Author: Eldes
+Author-email: info@eldes.t
+License: BSD-3-Clause license
+Keywords: pymetranet
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+
+# pymetranet
+Python Metranet Library
