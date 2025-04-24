@@ -1,0 +1,2 @@
+[console_scripts]
+llm-web-test = llm_auto_web_tester.src:run_test_suite
