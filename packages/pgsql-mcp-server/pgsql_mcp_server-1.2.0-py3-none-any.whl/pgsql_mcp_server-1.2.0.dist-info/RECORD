@@ -1,0 +1,6 @@
+pgsql_mcp_server/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgsql_mcp_server/app.py,sha256=4w_xrSm6tlxZvjrhHrPQGqduVNNGdj_VQ_lYo6_aro4,8107
+pgsql_mcp_server-1.2.0.dist-info/METADATA,sha256=FbH05lpSqTEfcrpJJ7Odfizu-Br7GydolYAVg8gmy58,3185
+pgsql_mcp_server-1.2.0.dist-info/WHEEL,sha256=C2FUgwZgiLbznR-k0b_5k3Ai_1aASOXDss3lzCUsUug,87
+pgsql_mcp_server-1.2.0.dist-info/entry_points.txt,sha256=Z3-MsUmk3TG-aQ6uTFcc7jLCjAa38msknabm0kF4axI,64
+pgsql_mcp_server-1.2.0.dist-info/RECORD,,
