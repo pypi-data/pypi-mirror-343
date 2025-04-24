@@ -1,0 +1,9 @@
+py_graspi/__init__.py,sha256=g99xmYusEESYtU4mSGJoUNsLOsDeb2BHWnw7VnBu_9s,1140
+py_graspi/descriptors.py,sha256=qB5_95UFk2FraB1lMvvgCbhOFpR5m3v_-pLzWZLSPng,16113
+py_graspi/graph.py,sha256=UIfn4C-ptkZLDrfFSOqplFbPYrRHcm8yfisccyZlAWc,38292
+py_graspi/graph_data_class.py,sha256=aJysQMNKr0su42_KE50fTzTBykYIA6udcuBlyfItUSo,2803
+py_graspi-0.2.0.5.dist-info/licenses/LICENSE,sha256=JBeFNnOeD4nyfirHpBr_649uSe6Oots8D3OIi10bDrY,1461
+py_graspi-0.2.0.5.dist-info/METADATA,sha256=SpULv5fEXwytCBZWRkwOACb1mcWd-CFXWE1VpCNtyCw,1765
+py_graspi-0.2.0.5.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+py_graspi-0.2.0.5.dist-info/top_level.txt,sha256=UmsN4ebRsF2bqNgB_5r1_tyd9quaYmjMd8jDWHzTSks,10
+py_graspi-0.2.0.5.dist-info/RECORD,,
