@@ -1,0 +1,85 @@
+{
+  "model_generators": [
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parent": "Landroid/app/Activity;",
+          "name": "getIntent"
+        }
+      ],
+      "model": {
+        "modes": [
+          "no-join-virtual-overrides"
+        ],
+        "sources": [
+          {
+            "kind": "ActivityUserInput"
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "any_of",
+          "inners": [
+            {
+              "constraint": "signature_match",
+              "parent": "Landroid/app/Fragment;",
+              "names": [
+                "getArguments",
+                "requireArguments"
+              ]
+            },
+            {
+              "constraint": "signature_match",
+              "parent": "Landroidx/fragment/app/Fragment;",
+              "names": [
+                "getArguments",
+                "requireArguments"
+              ]
+            }
+          ]
+        }
+      ],
+      "model": {
+        "modes": [
+          "skip-analysis",
+          "no-join-virtual-overrides"
+        ],
+        "propagation": [
+          {
+            "input": "Argument(0).mArguments",
+            "output": "Return"
+          }
+        ]
+      }
+    },
+    {
+      "find": "methods",
+      "where": [
+        {
+          "constraint": "signature_match",
+          "parent": "Landroid/app/Activity;",
+          "names": [
+            "getCaller",
+            "getCallingActivity",
+            "getCallingPackage",
+            "getLaunchedFromPackage",
+            "getCurrentCaller"
+          ]
+        }
+      ],
+      "model": {
+        "sources": [
+          {
+            "kind": "AndroidCallerIdentity"
+          }
+        ]
+      }
+    }
+  ]
+}
