@@ -1,0 +1,11 @@
+sensing_garden_client/__init__.py,sha256=Zkd8J4AcWagu0h74TzjWtRLipfXb6BJDszebhwu62jo,308
+sensing_garden_client/classifications.py,sha256=etNLefTGRh05F1gW2ORzS6A4LpzErnBwHkrSWGfH4vw,5134
+sensing_garden_client/client.py,sha256=1GlmA0t0k4BMy7UTTGXE6suouPYXdlKoWF3D3i55eq8,7969
+sensing_garden_client/detections.py,sha256=XBYE1N4krgWAY8xlqXRQHmDS7u_aPfL_EH3TjGFFG1U,4564
+sensing_garden_client/devices.py,sha256=jpE4VqJEivfdEDbiFkwlvtjHHFJSus1ooL8Ixfu4lsk,148
+sensing_garden_client/models.py,sha256=e3rqeS8SnPfkNV1gXsg1twxyYQlMsrYjBG2_vNPg0fc,4188
+sensing_garden_client/shared.py,sha256=uykUdlxOgtmmcGeCGwkRhLdyJHtgiun2Zte3YK4nrcQ,5472
+sensing_garden_client/videos.py,sha256=hCLgA0DY3XDilLUsScyR_Iov0WUaAR-qTfKsPyWFZtQ,18428
+sensing_garden_client-0.0.10.dist-info/METADATA,sha256=dgsizIX-_oOpVqex4S-TAvDKeF3QDOUXB5pUz2nvcWE,5718
+sensing_garden_client-0.0.10.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+sensing_garden_client-0.0.10.dist-info/RECORD,,
