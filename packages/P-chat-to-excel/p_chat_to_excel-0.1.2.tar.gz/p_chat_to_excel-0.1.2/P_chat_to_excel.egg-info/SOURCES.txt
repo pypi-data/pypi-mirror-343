@@ -1,0 +1,8 @@
+README.md
+chat_to_excel.py
+setup.py
+P_chat_to_excel.egg-info/PKG-INFO
+P_chat_to_excel.egg-info/SOURCES.txt
+P_chat_to_excel.egg-info/dependency_links.txt
+P_chat_to_excel.egg-info/requires.txt
+P_chat_to_excel.egg-info/top_level.txt
