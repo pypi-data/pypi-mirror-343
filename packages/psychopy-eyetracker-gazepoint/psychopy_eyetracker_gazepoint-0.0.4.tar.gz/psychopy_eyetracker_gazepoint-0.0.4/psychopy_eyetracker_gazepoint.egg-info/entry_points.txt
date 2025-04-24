@@ -1,0 +1,5 @@
+[psychopy.experiment.components.settings.eyetracking]
+GazePointEyetrackerBackend = psychopy_eyetracker_gazepoint.gazepoint.settings:GazePointEyetrackerBackend
+
+[psychopy.iohub.devices.eyetracker]
+gp3 = psychopy_eyetracker_gazepoint.gazepoint.gp3
