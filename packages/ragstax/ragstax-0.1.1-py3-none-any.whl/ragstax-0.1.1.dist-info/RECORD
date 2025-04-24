@@ -1,0 +1,8 @@
+ragstax/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ragstax/chunking/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ragstax/chunking/base.py,sha256=xSiE2DjN7lZuwYuoN3j4tJtDq3g61A_LyJJUutqEpd8,170
+ragstax/chunking/chunking_strategy.py,sha256=AKm2uUU4pVC7AMqBV4UCnOF_rcTSPHEpz9aMLyjgfE8,877
+ragstax-0.1.1.dist-info/METADATA,sha256=3xIqCnUxBgVix3ZnGlCJjzEqpwmTwgtHsrpSCbrMVBU,264
+ragstax-0.1.1.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+ragstax-0.1.1.dist-info/top_level.txt,sha256=gEl0-2RNW6VtpFDWohRHycqBx-2H_zd9x1cG5UbCCrI,8
+ragstax-0.1.1.dist-info/RECORD,,
