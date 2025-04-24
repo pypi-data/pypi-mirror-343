@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: rocketx-core
+Version: 0.1.0
+Summary: Core packages for Rocketx, schedule and API server
+Author-email: mingminyu <yu_mingm623@163.com>
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Provides-Extra: impala
+Requires-Dist: rocketx-providers-impala; extra == 'impala'
