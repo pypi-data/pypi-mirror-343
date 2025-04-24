@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+memory/__init__.py
+memory/converter.py
+memory/factory.py
+memory/receiver.py
+memory/sender.py
+py_sharedmemory.egg-info/PKG-INFO
+py_sharedmemory.egg-info/SOURCES.txt
+py_sharedmemory.egg-info/dependency_links.txt
+py_sharedmemory.egg-info/requires.txt
+py_sharedmemory.egg-info/top_level.txt
+tests/test_shared_memory.py
