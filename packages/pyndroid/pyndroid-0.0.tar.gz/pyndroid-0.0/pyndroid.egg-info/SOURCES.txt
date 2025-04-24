@@ -1,0 +1,7 @@
+setup.cfg
+setup.py
+pyndroid.egg-info/PKG-INFO
+pyndroid.egg-info/SOURCES.txt
+pyndroid.egg-info/dependency_links.txt
+pyndroid.egg-info/not-zip-safe
+pyndroid.egg-info/top_level.txt
