@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thonny-chatbot-plugin"          # PyPI 上的名稱 (確保唯一)
+version = "0.1.2"                     # 初始版本號 (每次更新需增加)
+authors = [
+  { name="pondahai", email="dahai.pon@gmail.com" }, # 請替換成您的資訊 (Email 需為 ASCII)
+]
+description = "一個在 Thonny IDE 中提供 AI 聊天介面的外掛程式" # 簡短描述
+readme = "README.md"                  # 指向 README 檔案
+requires-python = ">=3.7"             # 支援的 Python 最低版本
+license = "MIT"                       # 使用 SPDX 格式指定授權 (例如 "MIT", "Apache-2.0")
+keywords = ["thonny", "plugin", "ai", "chat", "chatbot", "llm", "openai"] # 搜尋關鍵字
+classifiers = [                       # PyPI 分類器
+    "Development Status :: 3 - Alpha", # 或 "4 - Beta", "5 - Production/Stable"
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Topic :: Software Development :: Build Tools",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+    "Environment :: Plugins", # 標明這是個外掛
+    # 不要再使用 "License :: ..." 分類器或 "Framework :: Thonny"
+]
+dependencies = [                      # 執行時依賴項
+    "requests>=2.20.0",
+]
+
+[project.urls]                        # (建議) 相關連結
+"Homepage" = "https://github.com/pondahai/thonny_chatbot_plugin" # 替換成您的 Repo URL
+"Bug Tracker" = "https://github.com/pondahai/thonny_chatbot_plugin/issues"
+
+# --- Setuptools 設定：告訴它在哪裡找到您的程式碼 ---
+[tool.setuptools.packages.find]
+where = ["src"]  # 指示 setuptools 在 'src' 目錄下尋找 Python 套件
+
+# --- (可選，但不確定 Thonny 是否使用) Entry Point ---
+# Entry points 是 Python 套件宣告 "插件" 的標準方式。
+# 如果 Thonny 使用 entry points 來發現透過 pip 安裝的外掛，
+# 您可能需要取消註解並設定下面這段。
+# "thonny" 或 "thonny.plugins" 是可能的 entry point 組名，需要查閱 Thonny 文件確認。
+# = 左邊是插件名稱 (可自訂)，右邊是 '套件名.模組名:函數名'
+# [project.entry-points."thonny"]
+# chatbot = "thonny_chatbot_plugin.AIChatView:load_plugin"
