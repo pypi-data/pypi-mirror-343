@@ -1,0 +1,17 @@
+sbanetwork/__init__.py,sha256=nE8jJjGJaKuJKCyuf6QLfrj8xPj8IqGKeH2VXP3FMzY,21
+sbanetwork/core/__init__.py,sha256=KxUu_L0_DDDCCup7b6TgJ5SDojBufJmyzVUKP0lnUaw,233
+sbanetwork/core/activations.py,sha256=jGKtz1G14HG0KSnfky_7shNuKt1LmljZx62QWK_dS2Y,9249
+sbanetwork/core/backprop.py,sha256=U1YiSDghWaNmagQ0esTUuTZZm6olH23EZDkVppn4Jnk,3431
+sbanetwork/core/batchnorm.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sbanetwork/core/callbacks.py,sha256=-RwnPFuNt_vJJWcSolbWsLeuf6tNMVISMGk9ulX9Un0,3099
+sbanetwork/core/initializers.py,sha256=KM7t7bGeRMu24623b1EDoXuSaY30fOkp89NK7Jkk-O0,5198
+sbanetwork/core/layers.py,sha256=d2DR_J2DUAP8Ds0Le24DoWViy_tQC8SzeM_z5Y6GFXg,8006
+sbanetwork/core/losses.py,sha256=UC3cZ5NuSDhxbSlU7bUSXVA384HMzXWNv7FeSNhNevs,3653
+sbanetwork/core/model.py,sha256=q4nO3ZQWHi2YHBHVXv7UjHordk_o17eiZMkO9NymXkw,23865
+sbanetwork/core/optimizers.py,sha256=4d2DR7JIi9kZiNxQjFtUm-BjMaoA81p17LwT3WuWOvw,7782
+sbanetwork/core/regularizers.py,sha256=F4zw2pYTIAbJBph12OKhwQVXjbzYeZD0zu6DdK9y6Zw,4885
+sbanetwork/core/utils.py,sha256=ZDu_UMOVJq7xcELNvzq4bxmlZBUtcQs-69AjbusYCEQ,3203
+sbanetwork-0.1.3.dist-info/METADATA,sha256=6IqW9P52oxEFgw3ple5dAOu42tuCkgqV36-ZQ2xzmR4,4444
+sbanetwork-0.1.3.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+sbanetwork-0.1.3.dist-info/top_level.txt,sha256=LEP8p0j1CuFY9A9mbzANFjf_MmATuKxuHpqyiMOWTs8,11
+sbanetwork-0.1.3.dist-info/RECORD,,
