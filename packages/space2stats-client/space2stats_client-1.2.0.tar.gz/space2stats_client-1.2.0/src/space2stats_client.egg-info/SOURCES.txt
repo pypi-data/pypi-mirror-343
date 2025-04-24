@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/space2stats_client/__init__.py
+src/space2stats_client/client.py
+src/space2stats_client.egg-info/PKG-INFO
+src/space2stats_client.egg-info/SOURCES.txt
+src/space2stats_client.egg-info/dependency_links.txt
+src/space2stats_client.egg-info/requires.txt
+src/space2stats_client.egg-info/top_level.txt
+tests/test_client.py
