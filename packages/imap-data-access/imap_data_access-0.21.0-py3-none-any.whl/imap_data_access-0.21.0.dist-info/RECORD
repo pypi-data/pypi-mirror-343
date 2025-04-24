@@ -1,0 +1,12 @@
+imap_data_access/__init__.py,sha256=KZTwhoLzWbTOma82MnL1Va_-n37wM7biJ1TlOq-I86c,3054
+imap_data_access/cli.py,sha256=6oIiFXNIganpyGip7_UBIZS7Is-1gS8l2b2FmMv-z4Q,14515
+imap_data_access/file_validation.py,sha256=nVXOdQAmOsCJ4LYtNSeUDt5R8pj4zntRd0QAt8Lzmw4,30587
+imap_data_access/io.py,sha256=Is-nZVn5eeu7G6i8N33yZxzzlrrPLe85eiQCH7fGJQU,9504
+imap_data_access/processing_input.py,sha256=IcgHzhw3l1aRAf_duHXZmcImj-bR3VNoT7puGx8Iq7Y,14538
+imap_data_access/webpoda.py,sha256=b6YkQi2kU1GBKA2gFs2lbc6C4jxle1oJtmQF85vyJUg,17392
+imap_data_access-0.21.0.dist-info/licenses/LICENSE,sha256=F2rxhvc6auEI0Dk9IGjglQSQQk60EvTe8M1dORMZPOg,1098
+imap_data_access-0.21.0.dist-info/METADATA,sha256=bUC970-2CLMtZnkoawJ3JABlvrhKLx_ZusGzDKqwixk,11460
+imap_data_access-0.21.0.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+imap_data_access-0.21.0.dist-info/entry_points.txt,sha256=xt1G1WQyjfK0xg7VAYnbTNH8suBlac2R-LPLj-QkBAM,63
+imap_data_access-0.21.0.dist-info/top_level.txt,sha256=bhRRaXYTLMWxOWKS9_Q4ZeIFkipUUIB1ItBkaiwTwJA,17
+imap_data_access-0.21.0.dist-info/RECORD,,
