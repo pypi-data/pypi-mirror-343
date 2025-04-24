@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: tfview
+Version: 0.1.0
+Summary: Coming eventually
+Author-email: Dave Pearson <davep@davep.org>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# tfview
+
+Describe your project here.
