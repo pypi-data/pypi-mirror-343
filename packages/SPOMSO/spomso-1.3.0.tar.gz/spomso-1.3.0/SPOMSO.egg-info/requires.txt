@@ -1,0 +1,16 @@
+numpy
+scipy
+
+[all]
+jax
+jaxlib
+matplotlib
+plotly
+
+[autodiff]
+jax
+jaxlib
+
+[plot]
+matplotlib
+plotly
