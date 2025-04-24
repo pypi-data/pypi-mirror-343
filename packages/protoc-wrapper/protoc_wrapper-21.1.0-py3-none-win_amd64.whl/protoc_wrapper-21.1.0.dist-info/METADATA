@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: protoc-wrapper
+Version: 21.1.0
+Summary: A Python wrapper around the protoc compiler
+Keywords: protobuf,protoc
+Author: j178
+Author-email: j178 <10510431+j178@users.noreply.github.com>
+License-Expression: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Code Generators
+Requires-Dist: protobuf==21.1.0 ; extra == 'runtime'
+Requires-Python: >=3.7
+Project-URL: Releases, https://github.com/j178/protoc-wrapper/releases
+Project-URL: Repository, https://github.com/j178/protoc-wrapper
+Provides-Extra: runtime
+Description-Content-Type: text/markdown
+
+A Python wrapper around the [`protoc`](https://github.com/protocolbuffers/protobuf) compiler, you can add it to your dev dependencies to make sure its version
+is compititable with the [`protobuf`](https://pypi.org/project/protobuf/) runtime.
+
+```console
+$ uv add 'protoc-wrapper==6.30.*' --dev
+$ uv add 'protobuf==6.30.*'
+$ uv run protoc -I <proto path> ...
+```
+
