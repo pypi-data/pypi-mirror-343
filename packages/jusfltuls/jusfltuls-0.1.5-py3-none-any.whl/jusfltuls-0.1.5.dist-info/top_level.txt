@@ -1,0 +1,6 @@
+cpuspeed
+dtox
+main
+pingy
+sshconf
+verif_apt
