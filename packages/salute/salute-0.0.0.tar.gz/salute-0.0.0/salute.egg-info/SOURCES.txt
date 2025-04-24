@@ -1,0 +1,15 @@
+README.md
+setup.py
+salute.egg-info/PKG-INFO
+salute.egg-info/SOURCES.txt
+salute.egg-info/dependency_links.txt
+salute.egg-info/requires.txt
+salute.egg-info/top_level.txt
+scenarios/__init__.py
+scenarios/vovka/__init__.py
+scenarios/vovka/scenario.py
+scenarios/vovka/session.py
+scenarios/vovka/walking.py
+scenarios/vovka/static/__init__.py
+scenarios/vovka/utils/__init__.py
+scenarios/vovka/utils/okko_card.py
