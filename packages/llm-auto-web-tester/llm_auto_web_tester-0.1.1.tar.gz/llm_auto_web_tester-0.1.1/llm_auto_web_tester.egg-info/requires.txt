@@ -1,0 +1,7 @@
+openai-agents
+python-dotenv
+openai
+playwright
+rich
+requests
+asyncio
