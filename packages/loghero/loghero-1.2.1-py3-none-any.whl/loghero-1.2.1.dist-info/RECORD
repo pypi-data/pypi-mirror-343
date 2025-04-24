@@ -1,0 +1,15 @@
+loghero/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+loghero/admin.py,sha256=PFSxIJdnmsGgxkhVqBK4kYwdusJwq0U1EzVLTRuGWS8,766
+loghero/apps.py,sha256=koEMVcO1EljeZVVJxcsxgGBxrEtUIdQZ5mW-emNyA5g,146
+loghero/manager.py,sha256=yiePC_q25fXK3h9W_2W79hfAbejqNpgRKEHLXTH6N44,4080
+loghero/models.py,sha256=GDkl9dKKfRm3G-JvdtnQUP1Y9Rh4KVXagYbo0WtGmSU,3795
+loghero/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+loghero/migrations/0001_initial.py,sha256=M2WfQ9f11KNhanj9QksXAQxuHtDGRkHSxRCiJZLwUCg,1757
+loghero/migrations/0002_alter_log_extra_data.py,sha256=imgFfvZYY70PIm1x_EO9c_ebYskBBtAS4ceOeJCSPcQ,477
+loghero/migrations/0003_alter_log_status.py,sha256=kUp_7o5X-tZHwZ4eD2jXcP0oqEXU6Oj1IeiZrFgWHio,672
+loghero/migrations/0004_log_actor_label.py,sha256=biZ_zumwvOZNbU6SbICdQW2ouITQ_fBtcEAGdkF0H1g,406
+loghero/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+loghero-1.2.1.dist-info/METADATA,sha256=b6wWpgYPns9c6gyWiOd11WNYhNWMIwmynG0SHcAxHs8,5258
+loghero-1.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+loghero-1.2.1.dist-info/licenses/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+loghero-1.2.1.dist-info/RECORD,,
