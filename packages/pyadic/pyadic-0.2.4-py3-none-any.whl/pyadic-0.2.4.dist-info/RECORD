@@ -1,0 +1,13 @@
+pyadic/__init__.py,sha256=AemPv5V2n4KxXEmWvXylU3ouffBWQkNZqVbfZc-GhZY,228
+pyadic/field_extension.py,sha256=9BwtZmoXGSJwHp3Tpcy9PPeFpyGQML8oUq7-Fqfuk9o,8624
+pyadic/finite_field.py,sha256=OK6FPPwAT3__SuIESeVJnw6ThzTpC3k1OQ4wYOy5IBg,14694
+pyadic/gaussian_rationals.py,sha256=7YODN_VImQpuavYd9lDoA2aMh7nnxjisiI3jykH4syY,5495
+pyadic/interpolation.py,sha256=pkdQHhPmZ9D5Q7WXQAo6FFdQKADo61prxDA3kBhKd_4,6528
+pyadic/padic.py,sha256=hB-cLpWKCUYCqW0XQqxG2ytMixD9t2kflNMa-mXoseM,14666
+pyadic/primes.py,sha256=5YrON98_OJ2OS8KrbiLBO4CJ0XGBfVmu4D3ws3iQgJE,1380
+pyadic/version.py,sha256=N5-p8dQB8uwuCMpS1ADLf_E6rvWovtRRp3vY9Cq2gw4,22
+pyadic-0.2.4.dist-info/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pyadic-0.2.4.dist-info/METADATA,sha256=Ittp3dqp9pT6Ms9S9brOLPGHykKOG4hEVux6XsWu1Ek,6518
+pyadic-0.2.4.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+pyadic-0.2.4.dist-info/top_level.txt,sha256=pMlHnKvbsW4l_7DrCR4Vbbhr66XZxZ8Dul59Nas-Hx0,7
+pyadic-0.2.4.dist-info/RECORD,,
