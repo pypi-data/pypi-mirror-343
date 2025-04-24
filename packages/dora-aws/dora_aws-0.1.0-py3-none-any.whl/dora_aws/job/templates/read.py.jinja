@@ -1,0 +1,117 @@
+# -*- coding: utf-8 -*-
+
+"""Read job for AWS Glue."""
+from datetime import datetime
+from typing import List, Tuple, Dict
+from pyspark.context import SparkContext
+from pyspark.sql import DataFrameReader
+from awsglue.job import Job
+from awsglue.context import GlueContext
+import boto3
+from dagster_pipes import (
+    PipesCliArgsParamsLoader,
+    PipesS3ContextLoader,
+    open_dagster_pipes,
+)
+
+from sqlglot import exp, Expression
+from dora_core.utils import logger
+from dora_core.asset import Job as JobDef, Table as TableDef
+from dora_core.engine import EngineType, Read
+
+client = boto3.client("s3")
+context_loader = PipesS3ContextLoader(client)
+params_loader = PipesCliArgsParamsLoader()
+
+SQL = """
+{{ sql }}
+"""
+log = logger('read')
+
+def _get_table(job_definition:JobDef) -> TableDef:
+    """Get table definition from the job sql"""
+    for table in job_definition.tables:
+        if table.name == '{{ table }}':
+            return table
+
+def _options(exps:List[Expression]) -> Tuple[str, Dict[str, str]]:
+    """Get options from the job sql"""
+    location = None
+    options = dict()
+    for idx, opt in enumerate(exps):
+        if idx == 0:
+            location = opt.find(exp.Literal).this
+        else:
+            _opt = opt.find(exp.Identifier)
+            if _opt is None:
+                continue
+            else:
+                options[_opt.this] = opt.expression.this
+    return (location, options)
+
+def _load_data(context:GlueContext, engine:Read, input_file:str=None) -> DataFrameReader:
+    """Load raw data into spark context"""
+    for _from in engine.table.ast.ddl.find(exp.Subquery | exp.Query).find_all(exp.From):
+        for _source in engine.table.ast._get_sources(_from): #pylint: disable=protected-access
+            if isinstance(_source, exp.Anonymous):
+                _loc, _opts =  _options(_source.expressions)
+                if input_file is not None:
+                    _loc = input_file
+                if str(_source.this).lower() == 'read_csv':
+                    return context.read.options(**_opts).format('csv').load(_loc)
+                if str(_source.this).lower() == 'read_json':
+                    return context.read.options(**_opts).format('json').load(_loc)
+                if str(_source.this).lower() == 'read_parquet':
+                    return context.read.options(**_opts).format('parquet').load(_loc)
+                raise NotImplementedError(f"Source {_source.this} not implemented")
+
+def main():
+    with open_dagster_pipes(
+        context_loader=context_loader,
+        params_loader=params_loader,
+    ) as pipes:
+        pipes.log.info(params_loader)
+        sc = SparkContext()
+        glue_context = GlueContext(sc)
+        spark = glue_context.spark_session
+        job = Job(glue_context)
+        job.init('{{ table }}', params_loader)
+        # Parameters
+        _input_file = params_loader.get('file')
+        log.info("Input file: %s", _input_file)
+        _input_time = params_loader.get('time', datetime.now().isoformat())
+        log.info("Input Time: %s", _input_time)
+        # Init job
+        job_def = JobDef(name='{{ job_name }}', sql=SQL)
+        eng = Read(table=_get_table(job_def), engine=EngineType.SPARK)
+        # Load raw data
+        _load_data(spark, eng, _input_file).createOrReplaceTempView(eng.raw_view.this)
+        # Reading data
+        read_sql = eng.read(eng.raw_view)
+        log.info("Read SQL: %s", read_sql)
+        spark.sql(read_sql)
+        desc_raw = spark.sql(eng.read_desc()).collect()
+        eng.set_raw_columns([r['col_name'] for r in desc_raw])
+        # Casting data
+        cast_sql = eng.cast(_input_file,_input_time)
+        log.info("Cast SQL: %s", cast_sql)
+        spark.sql(cast_sql)
+        desc_cast = spark.sql(eng.cast_desc()).collect()
+        eng.set_cast_columns([r['col_name'] for r in desc_cast])
+        # Testing data
+        test_sql = eng.test()
+        log.info("Test SQL: %s", test_sql)
+        spark.sql(test_sql)
+        for t_name, t_sql in eng.test_results(input_file='*'):
+            log.info(t_name)
+            spark.sql(t_sql).show()
+        # Result set
+        spark.sql(eng.resultset()).show()
+
+        pipes.report_asset_materialization(
+            metadata={"some_metric": {"raw_value": 0, "type": "int"}},
+            data_version="alpha",
+        )
+
+        job.commit()
+

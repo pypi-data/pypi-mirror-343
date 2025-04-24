@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: dora-aws
+Version: 0.1.0
+Summary: Dora for AWS
+License: Apache-2.0
+Author: Didone
+Author-email: tiago.didone@compass.uol
+Requires-Python: >=3.10,<3.13
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: dora-core (>=0.1.0,<0.2.0)
+Requires-Dist: pyiceberg[glue,s3fs] (>=0.8.1,<0.9.0)
+Description-Content-Type: text/markdown
+
+# dora-aws
+Dora for AWS
+
