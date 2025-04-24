@@ -1,0 +1,6 @@
+dslib/__init__.py,sha256=RPCWt6e2HbIHs91qJeWEt7Gl7OpV-3D1jckRanEbrk0,35
+dslib/gcs_utils.py,sha256=SXHrERVTtRVOQfZLsdwsP7BTc3PCUPwPJhwqpsV2rq8,655
+dslib_wayfair-0.1.1.dist-info/METADATA,sha256=KMcdshi_U_efm5bkZPShTAvlOMhIZQfvOYGkMAT__Jw,353
+dslib_wayfair-0.1.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+dslib_wayfair-0.1.1.dist-info/top_level.txt,sha256=H9rCUAl9K8nxFYU7ziDteTrFD2E-W2cA80tGw0gsxic,6
+dslib_wayfair-0.1.1.dist-info/RECORD,,
