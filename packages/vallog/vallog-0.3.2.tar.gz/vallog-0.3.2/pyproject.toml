@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vallog"
+version = "0.3.2"
+description = "Customizable Logging"
+readme = "README.md"
+authors = [
+    { name = "Valentin Reichenspurner", email = "v.reichenspurner@tum.de" }
+]
+license = { text = "MIT" }
+dependencies = []
+
+[tool.setuptools]
+packages = ["vallog"]
+
+[tool.setuptools.package-data]
+vallog = ["*"]
+
+

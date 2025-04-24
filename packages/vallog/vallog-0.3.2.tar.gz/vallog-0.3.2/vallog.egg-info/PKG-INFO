@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: vallog
+Version: 0.3.2
+Summary: Customizable Logging
+Home-page: https://github.com/vallereichi/vallog
+Author: Valentin Reichenspurner
+Author-email: Valentin Reichenspurner <v.reichenspurner@tum.de>
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+
+# vallog
+basic logging module for python
