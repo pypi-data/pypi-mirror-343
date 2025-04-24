@@ -1,0 +1,231 @@
+Metadata-Version: 2.4
+Name: crossfit
+Version: 0.0.9
+Summary: Offline inference and metric calculation library
+Home-page: https://github.com/rapidsai/crossfit/
+Author: NVIDIA Corporation
+License: Apache License, Version 2.0
+Project-URL: Issues, https://github.com/rapidsai/crossfit/issues
+Project-URL: CI, https://github.com/rapidsai/crossfit/actions/
+Project-URL: Changelog, https://github.com/rapidsai/crossfit/releases
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.10, <3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: astunparse
+Requires-Dist: pandas
+Requires-Dist: pyarrow
+Requires-Dist: numpy
+Requires-Dist: numba
+Requires-Dist: dask[dataframe]>=2024.12.1
+Requires-Dist: distributed>=2024.12.1
+Requires-Dist: scikit-learn>=1.2.0
+Requires-Dist: fsspec>=2022.7.1
+Requires-Dist: tensorflow_metadata
+Requires-Dist: typing_extensions
+Requires-Dist: typing_utils
+Requires-Dist: tqdm
+Requires-Dist: rich
+Provides-Extra: base
+Requires-Dist: astunparse; extra == "base"
+Requires-Dist: pandas; extra == "base"
+Requires-Dist: pyarrow; extra == "base"
+Requires-Dist: numpy; extra == "base"
+Requires-Dist: numba; extra == "base"
+Requires-Dist: dask[dataframe]>=2024.12.1; extra == "base"
+Requires-Dist: distributed>=2024.12.1; extra == "base"
+Requires-Dist: scikit-learn>=1.2.0; extra == "base"
+Requires-Dist: fsspec>=2022.7.1; extra == "base"
+Requires-Dist: tensorflow_metadata; extra == "base"
+Requires-Dist: typing_extensions; extra == "base"
+Requires-Dist: typing_utils; extra == "base"
+Requires-Dist: tqdm; extra == "base"
+Requires-Dist: rich; extra == "base"
+Provides-Extra: cuda12x
+Requires-Dist: cudf-cu12>=24.4; extra == "cuda12x"
+Requires-Dist: dask-cudf-cu12>=24.4; extra == "cuda12x"
+Requires-Dist: cuml-cu12>=24.4; extra == "cuda12x"
+Requires-Dist: pylibraft-cu12>=24.4; extra == "cuda12x"
+Requires-Dist: raft-dask-cu12>=24.4; extra == "cuda12x"
+Requires-Dist: cuvs-cu12>=24.4; extra == "cuda12x"
+Requires-Dist: dask-cuda>=24.6; extra == "cuda12x"
+Requires-Dist: torch>=2.0; extra == "cuda12x"
+Requires-Dist: transformers>=4.0; extra == "cuda12x"
+Requires-Dist: curated-transformers>=1.0; extra == "cuda12x"
+Requires-Dist: bitsandbytes>=0.30; extra == "cuda12x"
+Requires-Dist: sentence-transformers>=2.0; extra == "cuda12x"
+Requires-Dist: sentencepiece; extra == "cuda12x"
+Requires-Dist: tiktoken; extra == "cuda12x"
+Provides-Extra: dev
+Requires-Dist: black==24.3.0; extra == "dev"
+Requires-Dist: flake8==6.1.0; extra == "dev"
+Requires-Dist: isort==5.12.0; extra == "dev"
+Requires-Dist: bandit==1.7.0; extra == "dev"
+Requires-Dist: pytest>=5; extra == "dev"
+Requires-Dist: pytest-benchmark>=4.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=2; extra == "dev"
+Provides-Extra: tensorflow
+Requires-Dist: tensorflow>=2.8; extra == "tensorflow"
+Provides-Extra: pytorch
+Requires-Dist: torch>=1.0; extra == "pytorch"
+Requires-Dist: transformers; extra == "pytorch"
+Requires-Dist: curated-transformers; extra == "pytorch"
+Requires-Dist: bitsandbytes; extra == "pytorch"
+Requires-Dist: sentence-transformers; extra == "pytorch"
+Provides-Extra: jax
+Requires-Dist: jax; extra == "jax"
+Provides-Extra: cuda12x-dev
+Requires-Dist: cudf-cu12>=24.4; extra == "cuda12x-dev"
+Requires-Dist: dask-cudf-cu12>=24.4; extra == "cuda12x-dev"
+Requires-Dist: cuml-cu12>=24.4; extra == "cuda12x-dev"
+Requires-Dist: pylibraft-cu12>=24.4; extra == "cuda12x-dev"
+Requires-Dist: raft-dask-cu12>=24.4; extra == "cuda12x-dev"
+Requires-Dist: cuvs-cu12>=24.4; extra == "cuda12x-dev"
+Requires-Dist: dask-cuda>=24.6; extra == "cuda12x-dev"
+Requires-Dist: torch>=2.0; extra == "cuda12x-dev"
+Requires-Dist: transformers>=4.0; extra == "cuda12x-dev"
+Requires-Dist: curated-transformers>=1.0; extra == "cuda12x-dev"
+Requires-Dist: bitsandbytes>=0.30; extra == "cuda12x-dev"
+Requires-Dist: sentence-transformers>=2.0; extra == "cuda12x-dev"
+Requires-Dist: sentencepiece; extra == "cuda12x-dev"
+Requires-Dist: tiktoken; extra == "cuda12x-dev"
+Requires-Dist: black==24.3.0; extra == "cuda12x-dev"
+Requires-Dist: flake8==6.1.0; extra == "cuda12x-dev"
+Requires-Dist: isort==5.12.0; extra == "cuda12x-dev"
+Requires-Dist: bandit==1.7.0; extra == "cuda12x-dev"
+Requires-Dist: pytest>=5; extra == "cuda12x-dev"
+Requires-Dist: pytest-benchmark>=4.0.0; extra == "cuda12x-dev"
+Requires-Dist: pytest-cov>=2; extra == "cuda12x-dev"
+Provides-Extra: tensorflow-dev
+Requires-Dist: tensorflow>=2.8; extra == "tensorflow-dev"
+Requires-Dist: black==24.3.0; extra == "tensorflow-dev"
+Requires-Dist: flake8==6.1.0; extra == "tensorflow-dev"
+Requires-Dist: isort==5.12.0; extra == "tensorflow-dev"
+Requires-Dist: bandit==1.7.0; extra == "tensorflow-dev"
+Requires-Dist: pytest>=5; extra == "tensorflow-dev"
+Requires-Dist: pytest-benchmark>=4.0.0; extra == "tensorflow-dev"
+Requires-Dist: pytest-cov>=2; extra == "tensorflow-dev"
+Provides-Extra: pytorch-dev
+Requires-Dist: torch>=1.0; extra == "pytorch-dev"
+Requires-Dist: transformers; extra == "pytorch-dev"
+Requires-Dist: curated-transformers; extra == "pytorch-dev"
+Requires-Dist: bitsandbytes; extra == "pytorch-dev"
+Requires-Dist: sentence-transformers; extra == "pytorch-dev"
+Requires-Dist: black==24.3.0; extra == "pytorch-dev"
+Requires-Dist: flake8==6.1.0; extra == "pytorch-dev"
+Requires-Dist: isort==5.12.0; extra == "pytorch-dev"
+Requires-Dist: bandit==1.7.0; extra == "pytorch-dev"
+Requires-Dist: pytest>=5; extra == "pytorch-dev"
+Requires-Dist: pytest-benchmark>=4.0.0; extra == "pytorch-dev"
+Requires-Dist: pytest-cov>=2; extra == "pytorch-dev"
+Provides-Extra: jax-dev
+Requires-Dist: jax; extra == "jax-dev"
+Requires-Dist: black==24.3.0; extra == "jax-dev"
+Requires-Dist: flake8==6.1.0; extra == "jax-dev"
+Requires-Dist: isort==5.12.0; extra == "jax-dev"
+Requires-Dist: bandit==1.7.0; extra == "jax-dev"
+Requires-Dist: pytest>=5; extra == "jax-dev"
+Requires-Dist: pytest-benchmark>=4.0.0; extra == "jax-dev"
+Requires-Dist: pytest-cov>=2; extra == "jax-dev"
+Provides-Extra: all
+Requires-Dist: astunparse; extra == "all"
+Requires-Dist: pandas; extra == "all"
+Requires-Dist: pyarrow; extra == "all"
+Requires-Dist: numpy; extra == "all"
+Requires-Dist: numba; extra == "all"
+Requires-Dist: dask[dataframe]>=2024.12.1; extra == "all"
+Requires-Dist: distributed>=2024.12.1; extra == "all"
+Requires-Dist: scikit-learn>=1.2.0; extra == "all"
+Requires-Dist: fsspec>=2022.7.1; extra == "all"
+Requires-Dist: tensorflow_metadata; extra == "all"
+Requires-Dist: typing_extensions; extra == "all"
+Requires-Dist: typing_utils; extra == "all"
+Requires-Dist: tqdm; extra == "all"
+Requires-Dist: rich; extra == "all"
+Requires-Dist: cudf-cu12>=24.4; extra == "all"
+Requires-Dist: dask-cudf-cu12>=24.4; extra == "all"
+Requires-Dist: cuml-cu12>=24.4; extra == "all"
+Requires-Dist: pylibraft-cu12>=24.4; extra == "all"
+Requires-Dist: raft-dask-cu12>=24.4; extra == "all"
+Requires-Dist: cuvs-cu12>=24.4; extra == "all"
+Requires-Dist: dask-cuda>=24.6; extra == "all"
+Requires-Dist: torch>=2.0; extra == "all"
+Requires-Dist: transformers>=4.0; extra == "all"
+Requires-Dist: curated-transformers>=1.0; extra == "all"
+Requires-Dist: bitsandbytes>=0.30; extra == "all"
+Requires-Dist: sentence-transformers>=2.0; extra == "all"
+Requires-Dist: sentencepiece; extra == "all"
+Requires-Dist: tiktoken; extra == "all"
+Requires-Dist: black==24.3.0; extra == "all"
+Requires-Dist: flake8==6.1.0; extra == "all"
+Requires-Dist: isort==5.12.0; extra == "all"
+Requires-Dist: bandit==1.7.0; extra == "all"
+Requires-Dist: pytest>=5; extra == "all"
+Requires-Dist: pytest-benchmark>=4.0.0; extra == "all"
+Requires-Dist: pytest-cov>=2; extra == "all"
+Requires-Dist: tensorflow>=2.8; extra == "all"
+Requires-Dist: torch>=1.0; extra == "all"
+Requires-Dist: transformers; extra == "all"
+Requires-Dist: curated-transformers; extra == "all"
+Requires-Dist: bitsandbytes; extra == "all"
+Requires-Dist: sentence-transformers; extra == "all"
+Requires-Dist: jax; extra == "all"
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# crossfit
+
+[![PyPI](https://img.shields.io/pypi/v/crossfit.svg)](https://pypi.org/project/crossfit/)
+[![Changelog](https://img.shields.io/github/v/release/rapidsai/crossfit?include_prereleases&label=changelog)](https://github.com/rapidsai/crossfit/releases)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/rapidsai/crossfit/blob/main/LICENSE)
+
+Multi Node Multi GPU Offline Inference and metric calculation library
+
+## Installation
+
+Install this library using `pip`:
+
+    pip install crossfit
+
+### Installation from source (for cuda 12.x)
+
+```
+git clone https://github.com/rapidsai/crossfit.git
+cd crossfit
+pip install --extra-index-url https://pypi.nvidia.com ".[cuda12x]"
+```
+
+## Usage
+
+Usage instructions go here.
+
+## Development
+
+To contribute to this library, first create a conda environment with the necessary dependencies:
+```
+cd crossfit
+mamba env create -f conda/environments/cuda_dev.yaml
+conda activate crossfit_dev
+```
+
+Now install the dependencies and test dependencies:
+
+    pip install -e '.[test]'
+
+To run the tests:
+
+    pytest
