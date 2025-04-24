@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: camunda-rpa
+Version: 1.2.0.dev6
+Summary: Exposes RPA libraries under the Camunda namespace
+Author-email: Camunda Services GmbH <info@camunda.com>
+Project-URL: Homepage, https://github.com/camunda/rpa-python-libraries
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: rpaframework>=30
+Requires-Dist: rpaframework-pdf>=8
+Requires-Dist: rpaframework-windows>=9
+Dynamic: license-file
