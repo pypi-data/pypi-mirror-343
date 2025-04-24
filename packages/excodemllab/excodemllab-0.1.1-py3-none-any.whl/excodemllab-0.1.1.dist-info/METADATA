@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: excodemllab
+Version: 0.1.1
+Summary: A simple example package
+Author-email: Your Name <you@example.com>
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: nltk
+Dynamic: license-file

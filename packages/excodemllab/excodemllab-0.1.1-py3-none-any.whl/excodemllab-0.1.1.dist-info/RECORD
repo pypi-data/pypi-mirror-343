@@ -1,0 +1,14 @@
+excodemllab/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+excodemllab/abalone.py,sha256=mKFA0AQzkP6TMJu2RbTcHNhuVyVaXm-jUL89cTmpoh4,1629
+excodemllab/abalone2.py,sha256=uic6oNRwxCqVNI5P9YaS7jteSODn3OyW-i6i6jT23oo,2513
+excodemllab/cifar.py,sha256=WBfYL-8rIA7dZhCpSWMhbxZEJp1JWSewtVOZstD4JSE,1545
+excodemllab/kmeans.py,sha256=aMXHALiBVzDCzp16peiB74KB7_cBb47UCJ4m0BVWaqc,1997
+excodemllab/mnist.py,sha256=izh-qH2uMoKWszpuaXR1nIudxe5mMJ5jCh_t83OCQ4E,1548
+excodemllab/movie_review.py,sha256=XCl8imsF5K-oidhPHYOZAwqsnJkNo-unCxess_qYRdI,2437
+excodemllab/spam.py,sha256=xK3JTtD2ULfdrcmp3Ie9D6h_vMUChvTbyO3g5RPIstg,2018
+excodemllab-0.1.1.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_basic.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+excodemllab-0.1.1.dist-info/METADATA,sha256=tt4nbiul0mPABrbFJGdd3eBEEutYllTAHlFnnAaZM-I,383
+excodemllab-0.1.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+excodemllab-0.1.1.dist-info/top_level.txt,sha256=PXACEUwZ6YOhnv_smbSMegYFiNBtlO8S4znd_5B9F-c,18
+excodemllab-0.1.1.dist-info/RECORD,,
