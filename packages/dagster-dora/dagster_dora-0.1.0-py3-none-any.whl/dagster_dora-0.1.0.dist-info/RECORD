@@ -1,0 +1,10 @@
+dagster_dora/__init__.py,sha256=NoMSjsNTskngImk8SwvKAbdks2xk1C7XpsGX2oTfRrE,34
+dagster_dora/aws/__init__.py,sha256=eFQuYstUzekTLgomBi_eQbvd19SP9aPRi7x5JmUf0aE,146
+dagster_dora/aws/assets.py,sha256=NFBGEbNclHbf0XdtAThuDPqhWza_TLNr-nbK7RtQa4k,11502
+dagster_dora/aws/evaluators.py,sha256=mgAjY5M4o-7D13zjYnzFba6NJQt1D-vc9EjXYpnexJ8,5751
+dagster_dora/aws/operators.py,sha256=Lxg45sKuG8-t4BCdam2icqk3Sw_mzf3tZFXElwmJ0go,5950
+dagster_dora/aws/resources.py,sha256=jiB_hPcxeEdEBhx6d9KJjf_wBMcJb3DOMGHRDuM_6o4,1664
+dagster_dora-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dagster_dora-0.1.0.dist-info/METADATA,sha256=3XkDkBxEifKQlpwPZv3q_75wgsxTZAsAu4zBmtZ9cTI,1151
+dagster_dora-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+dagster_dora-0.1.0.dist-info/RECORD,,
