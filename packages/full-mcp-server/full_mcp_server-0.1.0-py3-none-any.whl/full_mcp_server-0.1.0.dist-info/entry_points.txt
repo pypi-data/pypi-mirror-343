@@ -1,0 +1,2 @@
+[console_scripts]
+full-mcp-server = full_mcp_server:main
