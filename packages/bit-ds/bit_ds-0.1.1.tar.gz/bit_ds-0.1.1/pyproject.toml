@@ -1,0 +1,30 @@
+[build-system]
+requires = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "bit_ds"
+requires-python = ">=3.8"
+version = "0.1.1"
+description = "A Python library for the Binary Indexed Tree data structure."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["binary indexed tree", "fenwick tree", "data structure", "python", "BIT", "pyo3", "rust"]
+Repository = "https://github.com/Slug-Boi/binary-indexed-tree.git"
+
+authors = [
+  {name = "Slug-Boi", email = "github.unshipped609@slmail.me"},
+  {name = "August-Brandt", email = "augustbrandt170@gmail.com"},
+]
+maintainers = [
+  {name = "Slug-Boi", email = "github.unshipped609@slmail.me"}
+]
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = ["version"]
+[tool.maturin]
+features = ["pyo3/extension-module"]
