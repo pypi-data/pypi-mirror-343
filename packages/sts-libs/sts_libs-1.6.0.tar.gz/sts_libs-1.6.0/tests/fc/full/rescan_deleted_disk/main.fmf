@@ -1,0 +1,20 @@
+summary: Host rescan for previously deleted FC disk(s)
+description: |
+    Objective: Verify that the host rescan can successfully detect a disk that was previously deleted from the system.
+    Preconditions:
+        A host is configured with multiple FC disks.
+        At least one disk has been deleted from the host, e.g. 'echo 1 > /sys/block/sdb/device/delete'
+    Steps:
+        Initiate a host rescan operation, e.g. run `echo "- - -" >/sys/class/scsi_host/host7/scan`
+        Monitor the scanning process to ensure it is functioning properly.
+        Check the disk status post-rescan.
+    Expectation:
+        The host rescan should identify and rediscover the disk that was previously deleted.
+        Validate that all data and configurations related to the rediscovered disk are intact and accessible.
+component:
+  - kernel
+test: pytest -o log_cli_level='debug' rescan_deleted_disk.py
+tag:
+  - fc
+tier: 2
+duration: 5m

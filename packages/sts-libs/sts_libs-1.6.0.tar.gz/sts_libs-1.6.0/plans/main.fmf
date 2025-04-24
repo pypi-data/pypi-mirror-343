@@ -1,0 +1,26 @@
+prepare:
+  - how: feature
+    epel: enabled
+    order: 40
+  - how: install
+    copr: "packit/gitlab.com-rh-kernel-stqe-sts-releases"
+    package: python3-sts-libs
+    order: 50
+adjust:
+  - when: distro ~= rhel-8
+    prepare:
+      - how: feature
+        epel: enabled
+        order: 40
+      - how: install
+        # Using different copr repo due to the custom el8 testinfra package there
+        copr: "mhoyer/python-testinfra-sts-libs-el8-py3.12"
+        package: python3.12-sts-libs
+        order: 50
+      - how: shell
+        script: "ln -s /usr/bin/pytest-3.12 /usr/local/bin/pytest"
+  - when: distro < rhel-8.8
+    enabled: false
+    because: "sts tests require RHEL-8.8"
+execute:
+  how: tmt
