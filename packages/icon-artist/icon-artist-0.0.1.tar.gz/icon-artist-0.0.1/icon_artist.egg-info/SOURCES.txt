@@ -1,0 +1,9 @@
+setup.py
+artist/__init__.py
+artist/accessor.py
+artist/utils.py
+icon_artist.egg-info/PKG-INFO
+icon_artist.egg-info/SOURCES.txt
+icon_artist.egg-info/dependency_links.txt
+icon_artist.egg-info/requires.txt
+icon_artist.egg-info/top_level.txt
