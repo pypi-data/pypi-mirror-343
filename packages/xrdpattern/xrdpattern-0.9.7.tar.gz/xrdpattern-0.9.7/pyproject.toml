@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xrdpattern"
+version = "0.9.7"
+description = "Python library for XrdPatterns including file import, file export and postprocessing functionalities"
+readme = "README.md"
+authors = [{ name = "Daniel Hollarek", email = "daniel.hollarek@googlemail.com" }]
+license = { file = "LICENSE.txt" }
+urls = { Homepage = "https://github.com/aimat-lab/xrdpattern" }
+dependencies = [
+    "numpy==1.26.4",
+    "scipy==1.15.1",
+    "matplotlib==3.10.0",
+    "pymatgen==2024.8.9",
+    "torch==2.6.0",
+    "gemmi==0.7.0",
+    "pandas==2.2.3",
+    "tensordict==0.7.0",
+    "orjson==3.10.15",
+    "openpyxl==3.1.5",
+    "pathvalidate==3.2.3",
+    "progressbar2==4.5.0",
+    "distlib==0.3.9"
+]
+
+
+
+[tool.deptry.per_rule_ignores]
+DEP002 = ["openpyxl"]
+DEP001 = ["mpl_toolkits", "xylib"]
+
+[tool.setuptools]
+ext-modules = [{name = "_xylib",sources = ["xylib/philips_udf.cpp","xylib/uxd.cpp","xylib/winspec_spe.cpp","xylib/xrdml.cpp","xylib/xfit_xdd.cpp","xylib/cache.cpp","xylib/bruker_raw.cpp","xylib/spectra.cpp","xylib/riet7.cpp","xylib/csv.cpp","xylib/specsxy.cpp","xylib/bruker_spc.cpp","xylib/pdcif.cpp","xylib/canberra_mca.cpp","xylib/xylib.cpp","xylib/philips_raw.cpp","xylib/vamas.cpp","xylib/rigaku_dat.cpp","xylib/util.cpp","xylib/cpi.cpp","xylib/text.cpp","xylib/dbws.cpp","xylib/canberra_cnf.cpp","xylib/xsyg.cpp","xylib/chiplot.cpp", "xylib.i"],include-dirs = ["."],language = "c++",swig-opts = ["-c++"]}]
+py-modules = ["xylib"]
+
+
+[tool.setuptools.packages.find]
+include = ["xrdpattern*"]
+
+
+[tool.setuptools.package-data]
+"xrdpattern.crystal.atomic_constants" = ["*"]
+"xrdpattern.crystal.spgs" = ["*"]
+"xrdpattern.crystal.examples" = ["*"]
+"xrdpattern.parsing.examples" = ["*"]
+"xrdpattern.tools" = ["*"]
