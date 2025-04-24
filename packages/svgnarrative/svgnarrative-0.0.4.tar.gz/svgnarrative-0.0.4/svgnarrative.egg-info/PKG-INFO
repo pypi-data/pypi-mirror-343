@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: svgnarrative
+Version: 0.0.4
+Summary: Creating narratives by performing sequences of operations on SVG files
+Home-page: https://github.com/aslakjohansen/svg-narrative
+Author: Aslak Johansen
+Author-email: aslakj@gmail.com
+License: GPLv3+
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary

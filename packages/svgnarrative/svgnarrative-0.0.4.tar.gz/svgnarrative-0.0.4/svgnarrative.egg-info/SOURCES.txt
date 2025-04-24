@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+svgnarrative/__init__.py
+svgnarrative/model.py
+svgnarrative.egg-info/PKG-INFO
+svgnarrative.egg-info/SOURCES.txt
+svgnarrative.egg-info/dependency_links.txt
+svgnarrative.egg-info/not-zip-safe
+svgnarrative.egg-info/top_level.txt
