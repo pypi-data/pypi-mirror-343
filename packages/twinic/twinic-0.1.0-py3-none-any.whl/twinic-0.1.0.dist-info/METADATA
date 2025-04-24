@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: twinic
+Version: 0.1.0
+Summary: Twinic Python SDK
+Author-email: va99 <va@twinic.dev>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: modelcontextprotocol
+Dynamic: license-file
+
+# rootstack
