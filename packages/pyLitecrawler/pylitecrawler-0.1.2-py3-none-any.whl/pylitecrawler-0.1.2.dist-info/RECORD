@@ -1,0 +1,10 @@
+pylitecrawler/__init__.py,sha256=KauJ-dl5h60TcUB38QG2LfR_gO6sVfAy5WETPdeOCPw,233
+pylitecrawler/crawling.py,sha256=hmeuDCBOxpl2zyGdtiel2gFsYm0Af7NeaFNgq1h8sv4,1222
+pylitecrawler/scraping.py,sha256=i0-Kelpztp301JNZ-AjCYute3GxtAiiwUIaHVVY5sGQ,1911
+pylitecrawler/status.py,sha256=uZBG6ODwb-NhTpyeXRMlP1dTV4ejz0G7sEPnX7L_j3k,1872
+pylitecrawler/utils.py,sha256=HBUxidgCMKQ5up9d4oWza2c80ps_PzcCKD_qoqPSgC8,888
+pylitecrawler-0.1.2.dist-info/licenses/LICENSE,sha256=W3YPsyGMw25__la_r94vb6jJkShALKSImxlLGRHUt9o,286
+pylitecrawler-0.1.2.dist-info/METADATA,sha256=DNDjW175OUoYnd3hBfx5JKSb7-nequhxXg1lSArw4pE,676
+pylitecrawler-0.1.2.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+pylitecrawler-0.1.2.dist-info/top_level.txt,sha256=qmnKwqbfUyRikPg-Qg7aO8VwuQe5JgnSLhGAsUo5jlM,14
+pylitecrawler-0.1.2.dist-info/RECORD,,
