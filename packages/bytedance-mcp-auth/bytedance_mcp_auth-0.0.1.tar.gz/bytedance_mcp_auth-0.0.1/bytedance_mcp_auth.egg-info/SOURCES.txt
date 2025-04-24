@@ -1,0 +1,6 @@
+README.md
+setup.py
+bytedance_mcp_auth.egg-info/PKG-INFO
+bytedance_mcp_auth.egg-info/SOURCES.txt
+bytedance_mcp_auth.egg-info/dependency_links.txt
+bytedance_mcp_auth.egg-info/top_level.txt
