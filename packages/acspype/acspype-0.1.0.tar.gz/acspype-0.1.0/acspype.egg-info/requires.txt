@@ -1,0 +1,9 @@
+bottleneck
+fsspec
+gsw
+pyserial
+netCDF4
+numpy
+pandas
+scipy
+xarray
