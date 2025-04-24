@@ -1,0 +1,10 @@
+upf_to_json/__init__.py,sha256=ueg9R8Sg9tFVIR-dX7Wtc-0NIChfqZTwL2735DPST1Q,88
+upf_to_json/upf1_to_json.py,sha256=8PNiofbCJ8WZo2XEMChATSK1JJ0JlQyCu9ZCwApvyek,16099
+upf_to_json/upf2_to_json.py,sha256=xsfpyESskV_6emjggQ_D1cbUVKcazxj3_AP1t8eMKxA,15260
+upf_to_json/upf_to_json.py,sha256=YTYfmSP68UmnmkzCPXEZwSz7YdSE125R985IuU467RQ,2700
+upf_to_json-1.0.0.dist-info/licenses/LICENSE,sha256=jINrWmbyGIcV_NvVx_KYAV9r5-cxmKiwXY--ZENVog8,1326
+upf_to_json-1.0.0.dist-info/METADATA,sha256=RQTuNP9k2DXQ1WbPuLjrqisIatEfiMY-w4jbNik-ZpA,3080
+upf_to_json-1.0.0.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+upf_to_json-1.0.0.dist-info/entry_points.txt,sha256=8LiCmFslUSoxI0-lCI02lOE3z8oROcSgSG9bJd47ktc,57
+upf_to_json-1.0.0.dist-info/top_level.txt,sha256=oqkNigZyp3k9N5XGbIcSaL4WrqeZjK-pcnDUmZ6Cqs8,12
+upf_to_json-1.0.0.dist-info/RECORD,,
