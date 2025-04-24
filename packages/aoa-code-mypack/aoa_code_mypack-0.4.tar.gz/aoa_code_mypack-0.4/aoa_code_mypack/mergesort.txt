@@ -1,0 +1,89 @@
+merge sort
+#include <stdio.h>
+#define MAX 1000
+
+// Merge two sorted parts
+void merge(int x[], int left, int mid, int right)
+{
+    int i, j, k;
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+
+    int L[MAX], R[MAX];
+
+    // Copy data into temporary arrays
+    for (i = 0; i < n1; i++)
+        L[i] = x[left + i];
+    for (j = 0; j < n2; j++)
+        R[j] = x[mid + 1 + j];
+
+    // Merge temporary arrays back into x
+    i = 0;
+    j = 0;
+    k = left;
+    while (i < n1 && j < n2)
+    {
+        if (L[i] <= R[j])
+        {
+            x[k] = L[i];
+            i++;
+        }
+        else
+        {
+            x[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    // Copy remaining elements
+    while (i < n1)
+    {
+        x[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2)
+    {
+        x[k] = R[j];
+        j++;
+        k++;
+    }
+}
+
+// Merge Sort function
+void mergeSort(int x[], int left, int right)
+{
+    if (left < right)
+    {
+        int mid = (left + right) / 2;
+
+        // Sort first and second halves
+        mergeSort(x, left, mid);
+        mergeSort(x, mid + 1, right);
+
+        // Merge sorted halves
+        merge(x, left, mid, right);
+    }
+}
+
+int main()
+{
+    int x[MAX], n, i;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter elements: ");
+    for (i = 0; i < n; i++)
+        scanf("%d", &x[i]);
+
+    mergeSort(x, 0, n - 1);
+
+    printf("Sorted array: ");
+    for (i = 0; i < n; i++)
+        printf("%d ", x[i]);
+
+    return 0;
+}

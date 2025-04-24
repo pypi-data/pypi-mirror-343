@@ -1,0 +1,98 @@
+N-queen problem
+
+#include <stdio.h>
+#include <stdbool.h>
+
+
+int board[100][100]; // Maximum size of board is 100 (change if needed)
+
+
+void printSolution(int N)
+{
+    static int count = 1;
+    printf("\nSolution %d: \n", count++);
+
+
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            printf("%c ", (board[i][j] ? 'Q' : '.'));
+        }
+        printf("\n");
+    }
+}
+
+
+bool isSafe(int row, int col, int N)
+{
+    int i, j;
+
+
+    // Check the same column
+    for (i = 0; i < row; i++)
+        if (board[i][col])
+            return false;
+
+
+    // Check upper-left diagonal
+    for (i = row, j = col; i >= 0 && j >= 0; i--, j--)
+        if (board[i][j])
+            return false;
+
+
+    // Check upper-right diagonal
+    for (i = row, j = col; i >= 0 && j < N; i--, j++)
+        if (board[i][j])
+            return false;
+
+
+    return true;
+}
+
+
+bool solveNQueens(int row, int N)
+{
+    if (row == N)
+    {
+        printSolution(N);
+        return true;
+    }
+
+
+    bool found = false;
+    for (int col = 0; col < N; col++)
+    {
+        if (isSafe(row, col, N))
+        {
+            board[row][col] = 1; // Place queen
+            found = solveNQueens(row + 1, N) || found;
+            board[row][col] = 0; // Backtrack
+        }
+    }
+    return found;
+}
+
+
+int main()
+{
+    int N;
+
+
+    // Ask for the value of N
+    printf("Enter the value of N (size of the board): ");
+    scanf("%d", &N);
+
+
+    // Initialize board to all 0
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < N; j++)
+            board[i][j] = 0;
+
+
+    if (!solveNQueens(0, N))
+        printf("\nNo Solution exists!\n");
+
+
+    return 0;
+}

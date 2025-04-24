@@ -1,0 +1,884 @@
+selection sort
+#include <stdio.h>
+//#include <conio.h>
+#define MAX 100
+
+
+// Push Down
+void select(int x[], int n)
+{
+    int large, index, i, j;
+    for (i = n - 1; i > 0; i--)
+    {
+        large = x[0];
+        index = 0;
+        for (j = 1; j <= i; j++)
+        {
+            if (x[j] > large)
+            {
+                large = x[j];
+                index = j;
+            }
+        }
+        x[index] = x[i];
+        x[i] = large;
+    }
+}
+
+
+void main()
+{
+    int x[MAX], n, i;
+   // clrscr();
+
+
+    printf("\nEnter n ");
+    scanf("%d", &n);
+
+
+    printf("\nEnter elements ");
+    for (i = 0; i < n; i++)
+        scanf("%d", &x[i]);
+
+
+    printf("\nUnsorted ");
+    for (i = 0; i < n; i++)
+        printf(" %d ", x[i]);
+
+
+    select(x, n);
+    printf("\nSorted ");
+    for (i = 0; i < n; i++)
+        printf(" %d ", x[i]);
+
+
+   // getch();
+}
+-----------------------------------------------------
+insertion sort
+#include <stdio.h>
+//#include <conio.h>
+#define MAX 1000
+
+
+void insert(int x[], int n)
+{
+    int i, j, numberToBeInserted;
+
+
+    for (i = 1; i < n; i++)
+    {
+        numberToBeInserted = x[i];
+
+
+        for (j = i - 1; j >= 0 && x[j] > numberToBeInserted; j--)
+        {
+            x[j + 1] = x[j];
+            x[j] = numberToBeInserted;
+        }
+    }
+}
+
+
+void main()
+{
+    int i, x[MAX], n;
+    printf("\n Enter no of elements for array: ");
+    scanf("%d", &n);
+
+
+    printf("\nEnter no.s one by one: ");
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &x[i]);
+    }
+
+
+    insert(x, n);
+
+
+    printf("\nSorted array is: ");
+    for (i = 0; i < n; i++)
+    {
+        printf("%d ", x[i]);
+    }
+   // getch();
+}
+-------------------------------------------------------------
+merge sort
+#include <stdio.h>
+#define MAX 1000
+
+// Merge two sorted parts
+void merge(int x[], int left, int mid, int right)
+{
+    int i, j, k;
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+
+    int L[MAX], R[MAX];
+
+    // Copy data into temporary arrays
+    for (i = 0; i < n1; i++)
+        L[i] = x[left + i];
+    for (j = 0; j < n2; j++)
+        R[j] = x[mid + 1 + j];
+
+    // Merge temporary arrays back into x
+    i = 0;
+    j = 0;
+    k = left;
+    while (i < n1 && j < n2)
+    {
+        if (L[i] <= R[j])
+        {
+            x[k] = L[i];
+            i++;
+        }
+        else
+        {
+            x[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    // Copy remaining elements
+    while (i < n1)
+    {
+        x[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2)
+    {
+        x[k] = R[j];
+        j++;
+        k++;
+    }
+}
+
+// Merge Sort function
+void mergeSort(int x[], int left, int right)
+{
+    if (left < right)
+    {
+        int mid = (left + right) / 2;
+
+        // Sort first and second halves
+        mergeSort(x, left, mid);
+        mergeSort(x, mid + 1, right);
+
+        // Merge sorted halves
+        merge(x, left, mid, right);
+    }
+}
+
+int main()
+{
+    int x[MAX], n, i;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter elements: ");
+    for (i = 0; i < n; i++)
+        scanf("%d", &x[i]);
+
+    mergeSort(x, 0, n - 1);
+
+    printf("Sorted array: ");
+    for (i = 0; i < n; i++)
+        printf("%d ", x[i]);
+
+    return 0;
+}
+-----------------------------------------------------
+quick sort
+#include <stdio.h>
+#include <conio.h>
+#define MAX 100
+
+
+int partition(int x[], int lb, int ub)
+{
+    int pivot, down, up, temp;
+    pivot = x[lb];
+    down = lb;
+    up = ub;
+    while (down < up)
+    {
+        while (x[down] <= pivot && down < ub)
+            down++;
+        while (x[up] > pivot)
+            up--;
+        if (down < up)
+        {
+            temp = x[down];
+            x[down] = x[up];
+            x[up] = temp;
+        }
+    }
+    x[lb] = x[up];
+    x[up] = pivot;
+
+
+    return up;
+}
+
+
+void quick(int x[], int lb, int ub)
+{
+    int j;
+    if (lb >= ub)
+        return;
+    j = partition(x, lb, ub);
+    quick(x, lb, j - 1);
+    quick(x, j + 1, ub);
+}
+
+
+void main()
+{
+    int x[MAX], n, i;
+    // clrscr();
+
+
+    printf("\nEnter n ");
+    scanf("%d", &n);
+
+
+    printf("\nEnter elements ");
+    for (i = 0; i < n; i++)
+        scanf("%d", &x[i]);
+
+
+    printf("\nUnsorted ");
+    for (i = 0; i < n; i++)
+        printf(" %d ", x[i]);
+
+
+    quick(x, 0, n - 1);
+    printf("\nSorted ");
+    for (i = 0; i < n; i++)
+        printf(" %d ", x[i]);
+
+
+    getch();
+}
+-------------------------------------------------------
+binary search
+#include <stdio.h>
+#include <conio.h>
+#define MAX 100
+
+
+int binary(int x[], int low, int high, int key)
+{
+    int mid;
+    if (low > high)
+        return -1;
+    mid = (low + high) / 2;
+    if (x[mid] == key)
+        return mid;
+    if (x[mid] > low)
+        return binary(x, mid + 1, high, key);
+    else
+        return binary(x, low, mid - 1, key);
+}
+
+
+void main()
+{
+    int x[MAX], n, i, key, index;
+
+
+    printf("\nEnter n ");
+    scanf("%d", &n);
+
+
+    printf("\nEnter elements ");
+    for (i = 0; i < n; i++)
+        scanf("%d", &x[i]);
+
+
+    printf("\nEnter element to be searched: ");
+    scanf("%d", &key);
+    index = binary(x, 0, n - 1, key);
+
+
+    if (index < 0)
+        printf("Element not found %d!", key);
+    else
+        printf("%d Element at %d index.", key, index);
+
+
+    getch();
+}
+-----------------------------------------------------
+single source shortest path using Dijkstra
+#include <stdio.h>
+#define INF 9999
+#define MAX 10
+
+
+void dijkstra(int graph[MAX][MAX], int n, int src)
+{
+    int dist[MAX], visited[MAX] = {0};
+
+
+    for (int i = 0; i < n; i++)
+        dist[i] = INF;
+    dist[src] = 0;
+
+
+    for (int count = 0; count < n - 1; count++)
+    {
+        int min = INF, u;
+
+
+        for (int i = 0; i < n; i++)
+            if (!visited[i] && dist[i] <= min)
+            {
+                min = dist[i];
+                u = i;
+            }
+
+
+        visited[u] = 1;
+
+
+        for (int v = 0; v < n; v++)
+            if (!visited[v] && graph[u][v] && dist[u] + graph[u][v] < dist[v])
+                dist[v] = dist[u] + graph[u][v];
+    }
+
+
+    printf("\nVertex\tDistance from Source %d\n", src);
+    for (int i = 0; i < n; i++)
+        printf("%d\t%d\n", i, dist[i]);
+}
+
+
+int main()
+{
+    int graph[MAX][MAX], n, src;
+
+
+    printf("Enter number of vertices: ");
+    scanf("%d", &n);
+
+
+    printf("Enter the adjacency matrix (use 0 for no edge):\n");
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            scanf("%d", &graph[i][j]);
+
+
+    printf("Enter the source vertex (0 to %d): ", n - 1);
+    scanf("%d", &src);
+
+
+    dijkstra(graph, n, src);
+
+
+    return 0;
+}
+----------------------------------------------
+minimum cost spanning tree uskin prims
+#include <stdio.h>
+#define INF 9999
+#define MAX 10
+
+
+int main()
+{
+    int n, cost[MAX][MAX], visited[MAX] = {0};
+    int i, j, edges = 0, min, u, v, total = 0;
+
+
+    printf("Enter number of vertices: ");
+    scanf("%d", &n);
+
+
+    printf("Enter the cost adjacency matrix (0 for no edge):\n");
+    for (i = 0; i < n; i++)
+        for (j = 0; j < n; j++)
+        {
+            scanf("%d", &cost[i][j]);
+            if (cost[i][j] == 0)
+                cost[i][j] = INF;
+        }
+
+
+    visited[0] = 1;
+
+
+    printf("\nEdges in Minimum Spanning Tree:\n");
+    while (edges < n - 1)
+    {
+        min = INF;
+        for (i = 0; i < n; i++)
+        {
+            if (visited[i])
+            {
+                for (j = 0; j < n; j++)
+                {
+                    if (!visited[j] && cost[i][j] < min)
+                    {
+                        min = cost[i][j];
+                        u = i;
+                        v = j;
+                    }
+                }
+            }
+        }
+
+
+        printf("Edge %d: (%d - %d) cost = %d\n", edges + 1, u, v, min);
+        total += min;
+        visited[v] = 1;
+        edges++;
+    }
+
+
+    printf("Total Minimum Cost = %d\n", total);
+    return 0;
+}
+----------------------------------------------------------
+ Job Sequencing with deadlines problem using Greedy Method
+#include <stdio.h>
+#include <stdlib.h>
+
+
+typedef struct
+{
+    char id;
+    int deadline, profit;
+} Job;
+
+
+int compare(const void *a, const void *b)
+{
+    return ((Job *)b)->profit - ((Job *)a)->profit;
+}
+
+
+int main()
+{
+    int n, i, j, maxDeadline = 0, totalProfit = 0;
+    printf("Enter number of jobs: ");
+    scanf("%d", &n);
+
+
+    Job jobs[n];
+    for (i = 0; i < n; i++)
+    {
+        printf("Enter deadline and profit for job %d: ", i + 1);
+        scanf("%d %d", &jobs[i].deadline, &jobs[i].profit);
+        jobs[i].id = 'A' + i;
+        if (jobs[i].deadline > maxDeadline)
+            maxDeadline = jobs[i].deadline;
+    }
+
+
+    qsort(jobs, n, sizeof(Job), compare);
+
+
+    char result[maxDeadline];
+    int slot[maxDeadline];
+    for (i = 0; i < maxDeadline; i++)
+    {
+        slot[i] = 0;
+        result[i] = '-';
+    }
+
+
+    for (i = 0; i < n; i++)
+    {
+        for (j = jobs[i].deadline - 1; j >= 0; j--)
+        {
+            if (!slot[j])
+            {
+                slot[j] = 1;
+                result[j] = jobs[i].id;
+                totalProfit += jobs[i].profit;
+                break;
+            }
+        }
+    }
+
+
+    printf("\nJob sequence: ");
+    for (i = 0; i < maxDeadline; i++)
+        if (result[i] != '-')
+            printf("%c ", result[i]);
+
+
+    printf("\nTotal Profit: %d\n", totalProfit);
+    return 0;
+}
+-------------------------------------------------------------
+all pair shortest path usking floy warshal
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+#define INF 99999
+#define MAX 10
+
+
+void floydWarshall(int graph[MAX][MAX], int n)
+{
+    int dist[MAX][MAX], i, j, k;
+
+
+    // Copy initial graph to distance matrix
+    for (i = 0; i < n; i++)
+        for (j = 0; j < n; j++)
+            dist[i][j] = graph[i][j];
+
+
+    // Floyd-Warshall Algorithm
+    for (k = 0; k < n; k++)
+        for (i = 0; i < n; i++)
+            for (j = 0; j < n; j++)
+                if (dist[i][k] + dist[k][j] < dist[i][j])
+                    dist[i][j] = dist[i][k] + dist[k][j];
+
+
+    // Print result
+    printf("\nAll-Pairs Shortest Path Matrix:\n");
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            if (dist[i][j] == INF)
+                printf("INF ");
+            else
+                printf("%3d ", dist[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+
+int main()
+{
+    int n, i, j, graph[MAX][MAX];
+    char input[10];
+
+
+    printf("Enter number of vertices: ");
+    scanf("%d", &n);
+
+
+    printf("Enter the adjacency matrix (use INF for infinity):\n");
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            scanf("%s", input);
+            if (strcmp(input, "INF") == 0)
+                graph[i][j] = INF;
+            else
+                graph[i][j] = atoi(input);
+        }
+    }
+
+
+    floydWarshall(graph, n);
+    return 0;
+}
+----------------------------------------------------------
+0/1 knapsack
+#include <stdio.h>
+
+
+int max(int a, int b)
+{
+    return (a > b) ? a : b;
+}
+
+
+int main()
+{
+    int n, W, i, w;
+    printf("Enter number of items and knapsack capacity: ");
+    scanf("%d %d", &n, &W);
+
+
+    int weight[n], profit[n];
+    printf("Enter weight and profit of each item:\n");
+    for (i = 0; i < n; i++)
+        scanf("%d %d", &weight[i], &profit[i]);
+
+
+    int dp[n + 1][W + 1];
+
+
+    for (i = 0; i <= n; i++)
+    {
+        for (w = 0; w <= W; w++)
+        {
+            if (i == 0 || w == 0)
+                dp[i][w] = 0;
+            else if (weight[i - 1] <= w)
+                dp[i][w] = max(profit[i - 1] + dp[i - 1][w - weight[i - 1]], dp[i - 1][w]);
+            else
+                dp[i][w] = dp[i - 1][w];
+        }
+    }
+
+
+    printf("Maximum Profit: %d\n", dp[n][W]);
+    return 0;
+}
+--------------------------------------------------------------
+sum of subsets
+#include <stdio.h>
+#define MAX 100
+
+
+int subset[MAX];
+
+
+void printSubset(int subsetSize)
+{
+    printf("{ ");
+    for (int i = 0; i < subsetSize; i++)
+    {
+        printf("%d ", subset[i]);
+    }
+    printf("}\n");
+}
+
+
+void sumOfSubsets(int arr[], int n, int index, int currSum, int targetSum, int subsetSize)
+{
+    if (currSum == targetSum)
+    {
+        printSubset(subsetSize);
+        return;
+    }
+
+
+    for (int i = index; i < n; i++)
+    {
+        if (currSum + arr[i] <= targetSum)
+        {
+            subset[subsetSize] = arr[i];
+            sumOfSubsets(arr, n, i + 1, currSum + arr[i], targetSum, subsetSize + 1);
+        }
+    }
+}
+
+
+int main()
+{
+    int arr[MAX], targetSum, n;
+
+
+    // Input
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+    printf("Enter the elements: ");
+    for (int i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
+
+
+    printf("Enter target sum: ");
+    scanf("%d", &targetSum);
+
+
+    // Finding subsets
+    printf("\nSubsets with sum = %d: \n", targetSum);
+    sumOfSubsets(arr, n, 0, 0, targetSum, 0);
+
+
+    return 0;
+}
+----------------------------------------------
+N-queen problem
+
+#include <stdio.h>
+#include <stdbool.h>
+
+
+int board[100][100]; // Maximum size of board is 100 (change if needed)
+
+
+void printSolution(int N)
+{
+    static int count = 1;
+    printf("\nSolution %d: \n", count++);
+
+
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            printf("%c ", (board[i][j] ? 'Q' : '.'));
+        }
+        printf("\n");
+    }
+}
+
+
+bool isSafe(int row, int col, int N)
+{
+    int i, j;
+
+
+    // Check the same column
+    for (i = 0; i < row; i++)
+        if (board[i][col])
+            return false;
+
+
+    // Check upper-left diagonal
+    for (i = row, j = col; i >= 0 && j >= 0; i--, j--)
+        if (board[i][j])
+            return false;
+
+
+    // Check upper-right diagonal
+    for (i = row, j = col; i >= 0 && j < N; i--, j++)
+        if (board[i][j])
+            return false;
+
+
+    return true;
+}
+
+
+bool solveNQueens(int row, int N)
+{
+    if (row == N)
+    {
+        printSolution(N);
+        return true;
+    }
+
+
+    bool found = false;
+    for (int col = 0; col < N; col++)
+    {
+        if (isSafe(row, col, N))
+        {
+            board[row][col] = 1; // Place queen
+            found = solveNQueens(row + 1, N) || found;
+            board[row][col] = 0; // Backtrack
+        }
+    }
+    return found;
+}
+
+
+int main()
+{
+    int N;
+
+
+    // Ask for the value of N
+    printf("Enter the value of N (size of the board): ");
+    scanf("%d", &N);
+
+
+    // Initialize board to all 0
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < N; j++)
+            board[i][j] = 0;
+
+
+    if (!solveNQueens(0, N))
+        printf("\nNo Solution exists!\n");
+
+
+    return 0;
+}
+--------------------------------------
+rabin karp for pattern searching
+#include <stdio.h>
+#include <string.h>
+
+
+#define d 256 // Number of characters in the input alphabet
+
+
+// Function to implement Rabin-Karp algorithm for pattern searching
+void rabinKarp(char *text, char *pattern, int q)
+{
+    int M = strlen(pattern);
+    int N = strlen(text);
+    int i, j;
+    int patternHash = 0; // Hash value for pattern
+    int textHash = 0;    // Hash value for text
+    int h = 1;
+
+
+    // Calculate the value of h = d^(M-1) % q
+    for (i = 0; i < M - 1; i++)
+        h = (h * d) % q;
+
+
+    // Calculate initial hash values of pattern and text
+    for (i = 0; i < M; i++)
+    {
+        patternHash = (d * patternHash + pattern[i]) % q;
+        textHash = (d * textHash + text[i]) % q;
+    }
+
+
+    // Slide the pattern over the text one by one
+    for (i = 0; i <= N - M; i++)
+    {
+        // Check the hash values of current window of text and pattern
+        if (patternHash == textHash)
+        {
+            // Check for characters one by one if hash values match
+            for (j = 0; j < M; j++)
+            {
+                if (text[i + j] != pattern[j])
+                    break;
+            }
+            if (j == M) // Pattern found
+                printf("Pattern found at index %d\n", i);
+        }
+
+
+        // Calculate hash value for the next window of text
+        if (i < N - M)
+        {
+            textHash = (d * (textHash - text[i] * h) + text[i + M]) % q;
+
+
+            // We might get negative value of textHash, so convert it to positive
+            if (textHash < 0)
+                textHash = (textHash + q);
+        }
+    }
+}
+
+
+int main()
+{
+    char text[100], pattern[100];
+    int q = 101; // A prime number for modulus to reduce collisions
+
+
+    // Input the text and pattern
+    printf("Enter the text: ");
+    scanf("%s", text);
+    printf("Enter the pattern: ");
+    scanf("%s", pattern);
+
+
+    // Run Rabin-Karp pattern searching
+    rabinKarp(text, pattern, q);
+
+
+    return 0;
+}

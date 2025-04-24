@@ -1,0 +1,2 @@
+[console_scripts]
+show-aoa-codes = aoa_code_mypack.main:cli
