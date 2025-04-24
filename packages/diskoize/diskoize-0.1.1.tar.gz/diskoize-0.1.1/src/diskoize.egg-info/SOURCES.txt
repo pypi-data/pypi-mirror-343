@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/diskoize.py
+src/persistent_map.py
+src/diskoize.egg-info/PKG-INFO
+src/diskoize.egg-info/SOURCES.txt
+src/diskoize.egg-info/dependency_links.txt
+src/diskoize.egg-info/top_level.txt
+tests/test_diskoize.py
+tests/test_persistent_map.py

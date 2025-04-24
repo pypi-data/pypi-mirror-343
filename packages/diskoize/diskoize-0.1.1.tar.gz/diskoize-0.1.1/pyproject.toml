@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diskoize"
+version = "0.1.1"
+authors = [
+  { name="Erik Aas", email="esraiak@gmail.com" },
+]
+description = "A memoize-like decorator that caches to disk."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.license]
+file = "LICENSE"
+
+
+[project.urls]
+Homepage = "https://github.com/esraiak/diskoize"
+Issues = "https://github.com/esraiak/diskoize/issues"
