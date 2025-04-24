@@ -1,0 +1,26 @@
+Metadata-Version: 2.3
+Name: picovdb
+Version: 0.1.0
+Summary: 
+Author: Wensheng Wang
+Author-email: wenshengwang@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: numpy
+Description-Content-Type: text/markdown
+
+# picovdb
+-----
+
+An extremely fast, ultra-lightweight local vector database
+
+## Install
+
+```shell
+pip install picovdb
+```
+
