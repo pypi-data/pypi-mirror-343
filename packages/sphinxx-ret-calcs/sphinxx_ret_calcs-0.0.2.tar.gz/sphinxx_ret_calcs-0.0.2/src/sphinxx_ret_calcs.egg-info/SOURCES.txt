@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/sphinxx/ret_calcs/__init__.py
+src/sphinxx/ret_calcs/taxes.py
+src/sphinxx_ret_calcs.egg-info/PKG-INFO
+src/sphinxx_ret_calcs.egg-info/SOURCES.txt
+src/sphinxx_ret_calcs.egg-info/dependency_links.txt
+src/sphinxx_ret_calcs.egg-info/requires.txt
+src/sphinxx_ret_calcs.egg-info/top_level.txt

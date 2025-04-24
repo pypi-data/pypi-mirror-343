@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["sphinxx*"]
+namespaces = true
+
+[project]
+name = "sphinxx-ret_calcs"
+version = "0.0.2"
+dependencies = ["sphinxx"]
+authors = [{name="Odysseus"}]
+readme = "README.md"
+description = "specific use-case retirement calculations: OAS, GIS, allowance, CPP and RRIF/annuity + taxes. Not intended for public use, though available under CC BY-NC 4.0 license (non-commercial use, attribution required, all rights reserved)"
+classifiers = [ "Programming Language :: Python :: 3",
+                "License :: OSI Approved",
+                "Operating System :: Microsoft :: Windows"]

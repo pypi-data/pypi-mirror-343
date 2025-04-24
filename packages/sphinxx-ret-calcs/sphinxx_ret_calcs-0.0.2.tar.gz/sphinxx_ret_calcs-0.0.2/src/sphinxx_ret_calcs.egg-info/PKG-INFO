@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: sphinxx-ret_calcs
+Version: 0.0.2
+Summary: specific use-case retirement calculations: OAS, GIS, allowance, CPP and RRIF/annuity + taxes. Not intended for public use, though available under CC BY-NC 4.0 license (non-commercial use, attribution required, all rights reserved)
+Author: Odysseus
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: sphinxx
+Dynamic: license-file
+
+#SPHINXX
+
+## RETIREMENT CALCULATIONS
+- personal use, specific use-case scripts
+- not intended for public use, though available under CC BY-NC 4.0 license (non-commercial use, attribution required, all rights reserved)
+
+**FUNCTIONALITY**
+part of the [SPHINXX](https://pypi.org/project/sphinxx/) namespace
+ - taxes
+ - OAS
+ - GIS
+ - allowance
+ - CPP
+ - annuitization
+ - some optimization
