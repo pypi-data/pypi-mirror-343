@@ -1,0 +1,2 @@
+[console_scripts]
+dclab-print = krithik_dclab.cli:print_java_files
