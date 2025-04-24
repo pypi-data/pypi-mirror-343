@@ -1,0 +1,9 @@
+setup.py
+aoa_code_mypack/__init__.py
+aoa_code_mypack/codes.txt
+aoa_code_mypack/main.py
+aoa_code_mypack.egg-info/PKG-INFO
+aoa_code_mypack.egg-info/SOURCES.txt
+aoa_code_mypack.egg-info/dependency_links.txt
+aoa_code_mypack.egg-info/entry_points.txt
+aoa_code_mypack.egg-info/top_level.txt
