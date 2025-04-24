@@ -1,0 +1,101 @@
+Metadata-Version: 2.4
+Name: jira-veya
+Version: 0.0.1
+Summary: collection of biblical humans and their family relations
+Author-email: Veya <kamit@veya.in>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+
+
+
+### `README.md` Content
+
+```markdown
+# jira_api_client
+
+A Python package for interacting with the Jira REST API, providing a simple function to fetch data from Jira endpoints.
+
+## Installation
+
+Install the package using pip:
+
+```bash
+pip install jira_api_client
+```
+
+This will automatically install the required dependency (`requests>=2.25.1`).
+
+## Requirements
+
+- Python 3.6 or higher
+- Access to a Jira instance with valid credentials (username and API token)
+
+## Usage
+
+The package provides a main function, `fetch_jira_data`, to retrieve data from Jira REST API endpoints.
+
+### Example: Fetch Issue Details
+
+```python
+from jira_api.jira_client import fetch_jira_data, HTTP_SUCCESS
+
+# Define the Jira URL, authentication, and parameters
+url = "https://your-jira-instance.atlassian.net/rest/api/2/issue/JIGY-29"
+auth = ("your_username", "your_api_token")  # Use your Jira username and API token
+params = {"fields": "summary,status,comment,worklog"}
+
+# Fetch data
+data = fetch_jira_data(url, auth, params)
+
+# Check if the request was successful
+if data and data.get('status_code', HTTP_SUCCESS) == HTTP_SUCCESS:
+    print("Issue data:", data)
+else:
+    print("Failed to fetch data")
+```
+
+### Function Details
+
+- **`fetch_jira_data(url, auth, params=None)`**:
+  - **Parameters**:
+    - `url` (str): The Jira REST API endpoint (e.g., `/rest/api/2/issue/{issueKey}`).
+    - `auth`: A tuple of (username, password) or (username, API token) for authentication.
+    - `params` (dict, optional): Query parameters for the API request (e.g., `{"fields": "summary"}`).
+  - **Returns**:
+    - `dict`: JSON response data if the request is successful (status code 200).
+    - `None`: If the request fails, with an error message printed.
+  - **HTTP_SUCCESS**: Constant for status code 200, imported as `HTTP_SUCCESS`.
+
+### Example: Fetch Sprint Issues
+
+```python
+from jira_api.jira_client import fetch_jira_data, HTTP_SUCCESS
+
+url = "https://your-jira-instance.atlassian.net/rest/agile/1.0/sprint/123/issue"
+auth = ("your_username", "your_api_token")
+params = {"jql": "status in (Done, Closed, Resolved)", "maxResults": 500, "fields": "key,customfield_10111"}
+
+data = fetch_jira_data(url, auth, params)
+if data:
+    issues = data.get('issues', [])
+    for issue in issues:
+        print(f"Issue {issue['key']}: {issue.get('fields', {}).get('customfield_10111', 'No story points')}")
+```
+
+
+## Version History
+
+- **0.1.0** (2025-04-20): Initial release with `fetch_jira_data` function for Jira API calls.
+```
+
+### Notes
+- **Customization**: Replace placeholders like `your-jira-instance.atlassian.net`, `your_username`, `your_api_token`, `Your Name`, and `your.email@example.com` with actual values.
+- **Examples**: The usage examples demonstrate fetching issue details and sprint issues, aligning with your `calculate_velocity.py` use case.
+- **License**: Add a `LICENSE` file (e.g., MIT) if you plan to distribute the package. The `README.md` references it.
+- **Version History**: Reflects the initial release date as April 20, 2025, based on our current interaction.
+- **Development Section**: Includes instructions for building and uploading, useful for you and potential contributors.
+
