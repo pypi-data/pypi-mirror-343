@@ -1,0 +1,16 @@
+# It is being used for configuration o=the python project. it is a alternative of the setup.cfg file.
+#Its containns configurationn related to the build system.
+#such as build tool used package name, version, licensea and dependencies.
+
+[build-system]
+requires = ['setuptools>=42.0', "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "src/tests"
+    ]
+
+[tool.mypy]
+mypy_path = "src"
+ignore_missing_imports = true
