@@ -1,0 +1,7 @@
+pyjnius==1.6.1
+dlt>=1.5.0
+
+[dev]
+testcontainers>=4.9.1
+dlt[duckdb]>=1.5.0
+apache-airflow>=2.10.4
