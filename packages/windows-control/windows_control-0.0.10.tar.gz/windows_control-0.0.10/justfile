@@ -1,0 +1,21 @@
+default: gen test
+
+LIB := "windows_control"
+
+env:
+    C:/Users/Administrator/AppData/Local/Programs/Python/Python311/python.exe -m venv .venv
+
+gen:
+    # 激活虚拟环境并构建
+    rm -f ./target/debug/{{LIB}}.dll ./target/debug/{{LIB}}.pyd
+    source .venv/Scripts/activate && maturin develop
+    mv -f ./target/debug/{{LIB}}.dll ./target/debug/{{LIB}}.pyd
+
+
+test:
+    # 激活虚拟环境并运行测试
+    source .venv/Scripts/activate && python ./test.py
+
+pub:
+    # 激活虚拟环境并发布
+    source .venv/Scripts/activate && maturin publish
