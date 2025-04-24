@@ -1,0 +1,11 @@
+LICENSE
+README.md
+llm_gemini_youtube.py
+pyproject.toml
+llm_gemini_youtube.egg-info/PKG-INFO
+llm_gemini_youtube.egg-info/SOURCES.txt
+llm_gemini_youtube.egg-info/dependency_links.txt
+llm_gemini_youtube.egg-info/entry_points.txt
+llm_gemini_youtube.egg-info/requires.txt
+llm_gemini_youtube.egg-info/top_level.txt
+tests/test_gemini_youtube.py
