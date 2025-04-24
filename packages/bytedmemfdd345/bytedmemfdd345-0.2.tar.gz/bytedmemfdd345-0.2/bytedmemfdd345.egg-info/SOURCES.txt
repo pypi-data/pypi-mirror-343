@@ -1,0 +1,8 @@
+LICENSE
+README.rst
+setup.py
+bytedmemfd/__init__.py
+bytedmemfdd345.egg-info/PKG-INFO
+bytedmemfdd345.egg-info/SOURCES.txt
+bytedmemfdd345.egg-info/dependency_links.txt
+bytedmemfdd345.egg-info/top_level.txt
