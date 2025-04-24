@@ -1,0 +1,9 @@
+aiogram==3.15.0
+
+tortoise-orm
+aerich
+cryptography
+
+rich==13.6.0
+pydantic
+pydantic-settings
