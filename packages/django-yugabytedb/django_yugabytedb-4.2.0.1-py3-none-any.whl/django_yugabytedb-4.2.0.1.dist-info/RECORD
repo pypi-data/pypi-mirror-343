@@ -1,0 +1,13 @@
+django_yugabytedb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_yugabytedb/base.py,sha256=IC2IwVeN_-Q1ddR2U31JrhVWm1TQU_YuttxL69lo-9I,2876
+django_yugabytedb/client.py,sha256=SJrcWJVH_PE-a7b90n9Ttl-ndD5dQEvjbTTYMqd6VwA,140
+django_yugabytedb/creation.py,sha256=UV0y_3Irp9GcIzIszHIee6F7It9RvnaiEWlmyq47K6o,153
+django_yugabytedb/features.py,sha256=hqTsZ0pqIJuO0eS6ARNUkQ31N1JUMJlpAhk4-tYoMlU,7748
+django_yugabytedb/introspection.py,sha256=we1fGr4Ir_JK2OPx0meiE5rO7gLMVJ34MK3-UuQ71Xo,291
+django_yugabytedb/operations.py,sha256=aUHdfNZYi99PPR8qJvrvHXM48IeRyA_s_vuu68QjxwY,163
+django_yugabytedb/schema.py,sha256=vIRjwiHvNmSFYLyvXhgVj5RpArf2uIIp3eYABxMVuOE,1464
+django_yugabytedb-4.2.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+django_yugabytedb-4.2.0.1.dist-info/METADATA,sha256=5UxCM4ypK924HYtKQ_IQ8xA4Xk08twHPY5U0EaaclsA,4318
+django_yugabytedb-4.2.0.1.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+django_yugabytedb-4.2.0.1.dist-info/top_level.txt,sha256=VdZHptfG5J_LknHsucwtA6UlXffmWVJn3V1YFgsYkgw,18
+django_yugabytedb-4.2.0.1.dist-info/RECORD,,
