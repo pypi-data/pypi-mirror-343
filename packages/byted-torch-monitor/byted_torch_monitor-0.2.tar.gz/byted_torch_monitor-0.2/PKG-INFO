@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: byted-torch-monitor
+Version: 0.2
+Summary: 吃枣药丸
+Home-page: 
+Author: xlzd
+Author-email: tellmewhy@gmail.com
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: license-file
+Dynamic: summary
