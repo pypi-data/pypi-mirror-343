@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: myreze
+Version: 0.0.0
+Summary: Placeholder for Myreze data and visualization package
+Author-email: Audun Skau Hansen <audunsh4@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# myreze
+Placeholder for Myreze data and visualization package
