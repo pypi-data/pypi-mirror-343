@@ -1,0 +1,6 @@
+torch
+einops
+PyWavelets
+timm
+torchvision
+pillow

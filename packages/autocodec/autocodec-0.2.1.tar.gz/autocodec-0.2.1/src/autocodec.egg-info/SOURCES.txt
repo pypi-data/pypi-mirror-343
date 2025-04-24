@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/autocodec/__init__.py
+src/autocodec/codec.py
+src/autocodec/evit.py
+src/autocodec/monarch.py
+src/autocodec.egg-info/PKG-INFO
+src/autocodec.egg-info/SOURCES.txt
+src/autocodec.egg-info/dependency_links.txt
+src/autocodec.egg-info/requires.txt
+src/autocodec.egg-info/top_level.txt
