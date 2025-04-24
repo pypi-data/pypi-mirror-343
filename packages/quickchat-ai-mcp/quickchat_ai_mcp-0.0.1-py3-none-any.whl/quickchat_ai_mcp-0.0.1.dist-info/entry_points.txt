@@ -1,0 +1,2 @@
+[console_scripts]
+quickchat_ai_mcp = src.__main__:run
