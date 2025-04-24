@@ -1,0 +1,16 @@
+LICENSE
+README.rst
+setup.cfg
+setup.py
+django_yugabytedb/__init__.py
+django_yugabytedb/base.py
+django_yugabytedb/client.py
+django_yugabytedb/creation.py
+django_yugabytedb/features.py
+django_yugabytedb/introspection.py
+django_yugabytedb/operations.py
+django_yugabytedb/schema.py
+django_yugabytedb.egg-info/PKG-INFO
+django_yugabytedb.egg-info/SOURCES.txt
+django_yugabytedb.egg-info/dependency_links.txt
+django_yugabytedb.egg-info/top_level.txt
