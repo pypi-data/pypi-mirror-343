@@ -1,0 +1,38 @@
+# Thonny Chatbot Plugin
+
+一個為 Thonny IDE 設計的 AI 聊天介面外掛，讓您可以在 IDE 中直接與 AI 互動並解釋程式碼。
+
+## 安裝 (Installation)
+
+1.  開啟 Thonny > `工具 (Tools)` > `管理外掛 (Manage plug-ins)...`
+2.  搜尋 `thonny-chatbot-plugin` 並安裝。
+3.  **重新啟動 Thonny**。
+
+## 設定 (Configuration)
+
+1.  重新啟動後，點擊頂部選單 `AI` > `Settings...`。
+2.  **API URL**: 輸入您的 AI 服務端點 (例如 `https://api.openai.com/v1` 或本地模型的 URL，如 `http://localhost:1234/v1`)。
+3.  **API Key**: 輸入您的 API 金鑰 (如果您的服務需要)。
+4.  **Model**: 點擊 `Refresh Models`，然後從下拉選單中選擇一個可用的模型。
+5.  點擊 `Save & Close`。
+
+*注意：需要存取一個相容 OpenAI API 標準的服務才能運作。*
+
+## 使用方法 (Usage)
+
+**聊天介面 (Chat Interface):**
+
+*   透過 `檢視 (View)` > `AI Chat Interface` 開啟視窗。
+*   在底部輸入框輸入文字，按 `Send` 或 `Ctrl/Cmd+Enter` 發送。
+*   點擊 `Clear` 清除當前對話。
+
+**解釋選取內容 (Explain Selection):**
+
+*   在 **編輯器 (Editor)** 或 **Shell** 中選取程式碼或文字。
+*   在選取的內容上 **按右鍵**。
+*   選擇 `🤖Explain Selection (AI Chat)`。
+*   解釋結果將顯示在聊天視窗中。
+
+---
+
+(詳細功能、限制和授權資訊請參考完整版 README 或程式碼註解。)
