@@ -1,0 +1,16 @@
+dankware/__init__.py,sha256=m4pkrtQzdxDQAe2Mi4P4EZXgNHlMwLpHjjJ3FgU2SyI,2716
+dankware/ctypes.py,sha256=OQwEHTDsB2fq5c-vUAUxmoHFCEPigRw7tlorY-PR7Ko,3780
+dankware/datetime.py,sha256=Hc7Gn0TxGxnsKVjacjcmnvbwzo6VQth-0xJXsvpsNcQ,3916
+dankware/multithread.py,sha256=9YtHd-teokpL0p_XAfNc763FIJ8mbpvNZKgS7Twrjr4,3209
+dankware/pillow.py,sha256=M8zxyuRCh5Y_RXPKGdhhO7uEr8cV5rj52to2Dct3MsE,2617
+dankware/requests.py,sha256=3m4PHbIq3fot2gXj9mByplYtLSfPR3wwd9lrMW9SejE,4542
+dankware/terminal.py,sha256=FzvGCUEPAzUKSYuEyJuxlF-_ywNw9E3UqrF1qg_kBcs,1199
+dankware/text.py,sha256=ZObAb3P9aS2eoThal8h65927XIB8FxVx9QJ8xrvMw-k,16764
+dankware/tkinter.py,sha256=LkTmr2NfcahOgeuvxbNibHjIjweK2lETwK5MWwav75A,972
+dankware/traceback.py,sha256=ThjP37ezwI9puzFI2UrP97u_k84h9gVU0SYnzqFf7Fk,1876
+dankware/winreg.py,sha256=KFU4r0QajUmv_NaRgmGPj4J8NIuHMGQAS0tbl2QTKo8,5451
+dankware-3.6.7.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+dankware-3.6.7.dist-info/METADATA,sha256=wYwujPHXMrY_u_mM3CJJC5nH57jLmNVVT5KnAGzNxaw,17617
+dankware-3.6.7.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+dankware-3.6.7.dist-info/top_level.txt,sha256=TMnJ-XC3PbT5hPjYudlaiKEh0qhO5AfzcZQ0PFCMhDQ,9
+dankware-3.6.7.dist-info/RECORD,,
