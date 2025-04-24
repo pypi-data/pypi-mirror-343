@@ -1,0 +1,4 @@
+[console_scripts]
+cpuspeed = cpuspeed:main
+dtox = dtox:main
+pingy = pingy:go
