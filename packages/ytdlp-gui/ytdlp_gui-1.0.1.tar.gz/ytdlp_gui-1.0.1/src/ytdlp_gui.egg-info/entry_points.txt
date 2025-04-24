@@ -1,0 +1,2 @@
+[console_scripts]
+ytdlpg = ytdlpg.main:python_main
