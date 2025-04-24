@@ -1,0 +1,57 @@
+[build-system]
+requires      = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name            = "calendar_app_package_demo_13"
+version         = "0.1.0"
+description     = "Google‑Calendar powered CLI task scheduler"
+readme          = "README.md"
+requires-python = ">=3.9"
+license         = { file = "LICENSE" }
+
+authors = [
+  { name = "Andrew Higgins", email = "ahiggin9@emich.edu" }
+]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Operating System :: OS Independent",
+  "License :: OSI Approved :: MIT License"
+]
+
+
+dependencies = [
+  "google-api-python-client>=2.126.0",
+  "google-auth-httplib2>=0.2",
+  "google-auth-oauthlib>=1.2.0",
+  "typer[all]>=0.9"
+]
+
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-cov",
+  "ruff",
+  "black",
+  "python-dotenv"
+]
+
+
+[project.scripts]
+calendar-app = "calendar_app_package.main:main"
+
+
+[project.urls]
+Homepage = "https://github.com/COSC381-2025Winter/lab13-sprint-full-stack-slop-llc"
+Issues   = "https://github.com/COSC381-2025Winter/lab13-sprint-full-stack-slop-llc/issues"
+
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/calendar_app_package/__init__.py
+src/calendar_app_package/calendar_api.py
+src/calendar_app_package/main.py
+src/calendar_app_package/manager.py
+src/calendar_app_package/task.py
+src/calendar_app_package_demo_13.egg-info/PKG-INFO
+src/calendar_app_package_demo_13.egg-info/SOURCES.txt
+src/calendar_app_package_demo_13.egg-info/dependency_links.txt
+src/calendar_app_package_demo_13.egg-info/entry_points.txt
+src/calendar_app_package_demo_13.egg-info/requires.txt
+src/calendar_app_package_demo_13.egg-info/top_level.txt
+tests/test_calendar_api.py
+tests/test_main.py
+tests/test_task_manager.py
