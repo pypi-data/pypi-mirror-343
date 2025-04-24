@@ -1,0 +1,26 @@
+# pyproject.toml
+
+[build-system]
+requires      = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "superutilities"
+version = "0.2.4"
+description = "A custom made python 3 file that adds some features that aim to streamline the coding process. This was made primarily for a python coding class, apologies it is a little out of the blue."
+readme = "README.md"
+authors = [{ name = "EnvyingGolem47", email = "envyinggolem47@projectnightfall.net" }]
+license = "MIT"
+license-files = ["LICENSE"]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["superutilities","super","utilities"]
+dependencies = [
+    "flask >= 3.0.0"
+]
+requires-python = ">=3.9"
+
+[project.urls]
+Homepage = "https://github.com/EnvyingGolem47/SuperUtilities-Python3"
