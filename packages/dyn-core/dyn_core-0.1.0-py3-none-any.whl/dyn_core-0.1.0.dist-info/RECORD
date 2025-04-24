@@ -1,0 +1,11 @@
+dyn/utils.py,sha256=esF2R7gFIRt9G3-QxfvgFxAzbjxsLygOKSGTiBHdvbA,4931
+dyn/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dyn/core/aggregate_csv.py,sha256=ET1HqPq6N1LRJSDdDetwF85-D7NnIW90WbhEnkOxl_Y,1663
+dyn/core/communities.py,sha256=bASQ6gHP-QPW7fwOx0NVhr4U_-X3h-P9F4nhbJpVo7I,17788
+dyn/core/community_graphs.py,sha256=iU4OMoRDV9O5EEcL2p6GSF4vBb7LqUEtkD_e_oFy4Oc,11413
+dyn/core/files_io.py,sha256=XDOIAIXq7FwjQxTQ1W9zxmNQKchcS4X_1SCoHFHFTzI,5047
+dyn_core-0.1.0.dist-info/licenses/LICENSE,sha256=khztmItrKvttEllKE-PARdTypQonTcCitbQStydhHvg,631
+dyn_core-0.1.0.dist-info/METADATA,sha256=e7wvkpa33qM0f8-SvGUI5fVbwbZAy8n69wiWrxM03_s,1823
+dyn_core-0.1.0.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+dyn_core-0.1.0.dist-info/top_level.txt,sha256=RFSVySqb_I5Lt81IGJHJ1CnvI0UVeo8O5mcgF9o7T3U,4
+dyn_core-0.1.0.dist-info/RECORD,,
