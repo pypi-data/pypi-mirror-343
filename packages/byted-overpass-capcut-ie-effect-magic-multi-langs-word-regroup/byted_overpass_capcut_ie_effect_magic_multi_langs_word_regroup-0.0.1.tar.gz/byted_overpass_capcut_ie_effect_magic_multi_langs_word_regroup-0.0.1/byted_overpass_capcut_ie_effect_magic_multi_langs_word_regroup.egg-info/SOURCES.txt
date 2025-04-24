@@ -1,0 +1,6 @@
+README.md
+setup.py
+byted_overpass_capcut_ie_effect_magic_multi_langs_word_regroup.egg-info/PKG-INFO
+byted_overpass_capcut_ie_effect_magic_multi_langs_word_regroup.egg-info/SOURCES.txt
+byted_overpass_capcut_ie_effect_magic_multi_langs_word_regroup.egg-info/dependency_links.txt
+byted_overpass_capcut_ie_effect_magic_multi_langs_word_regroup.egg-info/top_level.txt
