@@ -1,0 +1,10 @@
+LICENSE
+README.md
+cli.py
+setup.py
+gpt_clip.egg-info/PKG-INFO
+gpt_clip.egg-info/SOURCES.txt
+gpt_clip.egg-info/dependency_links.txt
+gpt_clip.egg-info/entry_points.txt
+gpt_clip.egg-info/requires.txt
+gpt_clip.egg-info/top_level.txt
