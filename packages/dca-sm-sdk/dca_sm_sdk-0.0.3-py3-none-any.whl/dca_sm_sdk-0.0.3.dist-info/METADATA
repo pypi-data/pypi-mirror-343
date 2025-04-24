@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: dca_sm_sdk
+Version: 0.0.3
+Summary: SDK для конечных автоматов
+Project-URL: Homepage, http://test.ru
+Project-URL: Issues, http://test.ru
+Author-email: Дьяков Максим <mdiakov@dc.ru>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
