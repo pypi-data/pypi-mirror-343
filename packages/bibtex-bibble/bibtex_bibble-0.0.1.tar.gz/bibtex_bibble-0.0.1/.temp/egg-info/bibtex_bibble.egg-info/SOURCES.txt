@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+.temp/egg-info/bibtex_bibble.egg-info/PKG-INFO
+.temp/egg-info/bibtex_bibble.egg-info/SOURCES.txt
+.temp/egg-info/bibtex_bibble.egg-info/dependency_links.txt
+.temp/egg-info/bibtex_bibble.egg-info/requires.txt
+.temp/egg-info/bibtex_bibble.egg-info/top_level.txt
+bibble/__init__.py
+bibble/_interface.py
+bibble/index.rst
+bibble/library.py
+bibble/model.py

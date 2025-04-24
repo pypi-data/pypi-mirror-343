@@ -1,0 +1,17 @@
+bibtexparser>=2.0.0b8
+internetarchive>=5.3.1
+isbn-hyphenate>=1.0.4
+jgdv>=1.0
+jsonlines>=4.0.0
+pyisbn>=1.3.1
+selenium>=4.30.0
+tqdm>=4.67.1
+waybackpy>=3.0.6
+
+[dev]
+myst-parser>=4.0.1
+pytest>=8.3.5
+pytest-cov>=6.0.0
+pytest-mock>=3.14.0
+sphinx>=8.2.3
+sphinx-rtd-theme>=3.0.2
