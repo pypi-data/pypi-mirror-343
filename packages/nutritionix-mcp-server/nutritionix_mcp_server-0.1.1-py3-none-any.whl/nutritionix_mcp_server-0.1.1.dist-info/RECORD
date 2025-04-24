@@ -1,0 +1,10 @@
+api_requests.py,sha256=sgItX0HK8nxiZjjw5ieNPqJEDprUqR-Z2feS-dhlYNA,1875
+config.py,sha256=PPqKqe8QWuzdAEYMo-lh4ev7z5NFzhnhYa08qlfbkHs,1115
+exceptions.py,sha256=F_nkVTh-UCRVfhTEFrVYeOeaZR4iHzi6yOGN-PZQw5E,130
+main.py,sha256=cMcTTLyrqFugga3H0wrhrfFIV3I2EosfLv5R9zdu8_o,2668
+utils.py,sha256=n8LjIvA9p3bqbvUJU8Sv0tJgN6dgiOhwc5SeN_L14Q0,1771
+nutritionix_mcp_server-0.1.1.dist-info/METADATA,sha256=5bPu-5WEVLElqAaCWPIe7OwUyEvxw1Ahd9_SWM_tUTU,3015
+nutritionix_mcp_server-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+nutritionix_mcp_server-0.1.1.dist-info/entry_points.txt,sha256=wwLuKCocnIaJ2ERNtj_ChLuqtXV3YowPxACyPbiUgZE,53
+nutritionix_mcp_server-0.1.1.dist-info/licenses/LICENSE,sha256=Ikc029a-uzpaIQXd5SW9CD1n2S-eo-wFBgjj7nwsimQ,1592
+nutritionix_mcp_server-0.1.1.dist-info/RECORD,,
