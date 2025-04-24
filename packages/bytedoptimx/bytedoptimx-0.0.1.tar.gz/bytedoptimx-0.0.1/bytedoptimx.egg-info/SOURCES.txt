@@ -1,0 +1,6 @@
+README.md
+setup.py
+bytedoptimx.egg-info/PKG-INFO
+bytedoptimx.egg-info/SOURCES.txt
+bytedoptimx.egg-info/dependency_links.txt
+bytedoptimx.egg-info/top_level.txt
