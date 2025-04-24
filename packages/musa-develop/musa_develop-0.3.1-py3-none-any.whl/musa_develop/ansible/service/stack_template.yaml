@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  task1:
+    image: registry.mthreads.com/mcconline/musa-pytorch-release-public:rc3.1.0-v1.3.0-S80-py310  # 替换为实际镜像
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["sleep infinity"]     # 例如: ["python", "task1.py"]
+    networks:
+      - host_net
+    environment:
+      - MTHREADS_VISIBLE_DEVICES=all
+    volumes:
+      - type: tmpfs
+        target: /dev/shm
+        tmpfs:
+          size: 85899345920  # 使用 tmpfs 挂载并设置共享内存大小
+          mode: 1777              # 可选：权限设置（如不指定则默认 1777）
+    #privileged: true  # 启用特权模式
+    deploy:
+      replicas: 1                  # 只运行1个副本（管理节点唯一性）
+      placement:
+        constraints:
+          - node.role == manager   # 约束条件：仅在管理节点运行
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+
+  task2:
+    image: sh-harbor.mthreads.com/mt-ai/musa-pytorch-dev-py38:rc3.1.0-v1.3.0-qy1  # 替换为实际镜像
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["sleep infinity"]     # 例如: ["python", "task1.py"]
+    networks:
+      - host_net
+    environment:
+      - MTHREADS_VISIBLE_DEVICES=all
+    volumes:
+      - type: tmpfs
+        target: /dev/shm
+        tmpfs:
+          size: 85899345920  # 使用 tmpfs 挂载并设置共享内存大小
+          mode: 1777              # 可选：权限设置（如不指定则默认 1777）
+    #privileged: true  # 启用特权模式
+    deploy:
+      replicas: 1                  # 根据工作节点数量调整
+      placement:
+        constraints:
+          - node.role == worker    # 约束条件：仅在工作节点运行
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+
+networks:
+  host_net:
+    external: true
+    name: host  # 显式声明使用主机网络

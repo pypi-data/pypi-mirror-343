@@ -1,0 +1,17 @@
+---
+- name: Initialize Docker Swarm Cluster
+  hosts: leader
+  gather_facts: no
+  become: yes
+
+  tasks:
+    - name: Copy stack.yaml to /tmp/
+      command: sudo musa-develop-ansible --generate-stack-yaml
+      register: swarm_status
+      changed_when: false
+      ignore_errors: yes
+
+    - name: Check Swarm status
+      shell: docker stack rm my_hello && docker stack deploy -c /tmp/stack_template.yaml my_hello
+      changed_when: false
+      ignore_errors: yes
