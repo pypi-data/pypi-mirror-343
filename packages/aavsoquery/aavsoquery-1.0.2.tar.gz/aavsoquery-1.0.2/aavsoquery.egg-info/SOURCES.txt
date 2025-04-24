@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+example.py
+setup.py
+test.py
+aavsoquery/__init__.py
+aavsoquery/aavso_query.py
+aavsoquery/plotter.py
+aavsoquery.egg-info/PKG-INFO
+aavsoquery.egg-info/SOURCES.txt
+aavsoquery.egg-info/dependency_links.txt
+aavsoquery.egg-info/requires.txt
+aavsoquery.egg-info/top_level.txt
