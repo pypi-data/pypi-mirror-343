@@ -1,0 +1,10 @@
+.venv/
+venv/
+.idea/
+__pycache__/
+config.*.json
+secrets/
+examples/config.kafka.json
+dist/
+build/
+.pytest_cache/
