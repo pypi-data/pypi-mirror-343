@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-client-tools = mcp_client.server:main
