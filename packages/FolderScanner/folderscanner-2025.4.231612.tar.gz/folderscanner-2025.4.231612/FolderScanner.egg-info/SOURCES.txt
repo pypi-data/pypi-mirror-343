@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+FolderScanner.egg-info/PKG-INFO
+FolderScanner.egg-info/SOURCES.txt
+FolderScanner.egg-info/dependency_links.txt
+FolderScanner.egg-info/requires.txt
+FolderScanner.egg-info/top_level.txt
+folder_scanner/__init__.py
+folder_scanner/scanner.py
