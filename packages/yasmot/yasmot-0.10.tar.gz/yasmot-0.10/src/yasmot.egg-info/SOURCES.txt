@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+src/yasmot/__init__.py
+src/yasmot/definitions.py
+src/yasmot/frames.py
+src/yasmot/main.py
+src/yasmot/parser.py
+src/yasmot/tracking.py
+src/yasmot.egg-info/PKG-INFO
+src/yasmot.egg-info/SOURCES.txt
+src/yasmot.egg-info/dependency_links.txt
+src/yasmot.egg-info/entry_points.txt
+src/yasmot.egg-info/requires.txt
+src/yasmot.egg-info/top_level.txt
