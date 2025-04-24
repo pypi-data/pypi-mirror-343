@@ -1,0 +1,5 @@
+[console_scripts]
+ube = folio_user_bulk_edit.cli:main
+
+[gui_scripts]
+

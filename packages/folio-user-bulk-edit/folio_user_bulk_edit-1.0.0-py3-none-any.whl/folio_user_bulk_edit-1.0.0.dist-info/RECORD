@@ -1,0 +1,15 @@
+folio_user_bulk_edit-1.0.0.dist-info/METADATA,sha256=8BJGckI2zjkrlOxxvDrEsIwjQoNAsaZPyM6Y-uMPmFI,3708
+folio_user_bulk_edit-1.0.0.dist-info/WHEEL,sha256=tSfRZzRHthuv7vxpI4aehrdN9scLjk-dCJkPLzkHxGg,90
+folio_user_bulk_edit-1.0.0.dist-info/entry_points.txt,sha256=V-Nya8REezPO9cz82MCBf6s8hFn6rV9cAu6VVKsA8AY,70
+folio_user_bulk_edit-1.0.0.dist-info/licenses/LICENSE,sha256=KIB_l82WuKYL2fyHJ7wmplIrXtW0ocreSGEsr5pJWDA,11348
+folio_user_bulk_edit/__init__.py,sha256=8Zk4q29jwSZfzoIX7tfa2HVUvzIII5ID57d66244tiU,73
+folio_user_bulk_edit/__main__.py,sha256=oU4h2yy1E8tPurf862bOg2nqnP2fpSv6yrr6oWc88oY,102
+folio_user_bulk_edit/_cli_log.py,sha256=kuG35BtqXwzqSgKa9y6mIutvlBlrJnuITOC9GVR7n-U,2053
+folio_user_bulk_edit/cli.py,sha256=kJkPq-VMUGxUv03X5OinbNkuylzU3k6nSrADfnwQbIw,11262
+folio_user_bulk_edit/commands/__init__.py,sha256=g_YZqR60EJcCoHfmB5bNdvDu0Ny7Z-nSSdyuq9FhT7U,66
+folio_user_bulk_edit/commands/check.py,sha256=_pI_rlIk5aDcxwTr7ysooVvCn6DMLlh1aJhaBQpN6Mk,2249
+folio_user_bulk_edit/commands/user_import.py,sha256=btBASSquV9VBYdrVjbjzO4xVW8x72Ve3ey552Rf7wK0,7902
+folio_user_bulk_edit/data.py,sha256=rJTIfr42FBWD341MJD5Vie1ILcYryo7NS5JiNQnkmx0,3369
+folio_user_bulk_edit/folio.py,sha256=fXAZMz4DJUcTkDgTvQeCdDX1zO3qlvhx5BvOVExT0Hc,1393
+folio_user_bulk_edit/schemas.py,sha256=0sxjPRcfZgnVTKNwe2crBDqttuc1680iOfCjRoytslA,8483
+folio_user_bulk_edit-1.0.0.dist-info/RECORD,,
