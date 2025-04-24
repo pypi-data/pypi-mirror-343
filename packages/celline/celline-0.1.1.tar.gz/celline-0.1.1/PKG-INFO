@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: celline
+Version: 0.1.1
+Summary: Add your description here
+Author-email: YUYA556223 <yuya.sato.jp@gmail.com>
+Requires-Python: >=3.10
+Requires-Dist: argparse>=1.4.0
+Requires-Dist: continuousvi>=0.1.5
+Requires-Dist: inquirer>=3.4.0
+Requires-Dist: iprogress>=0.4
+Requires-Dist: ipywidgets>=8.1.5
+Requires-Dist: multipledispatch>=1.0.0
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: polars>=1.26.0
+Requires-Dist: pyarrow>=19.0.1
+Requires-Dist: pyper>=1.1.2
+Requires-Dist: pysradb>=2.2.2
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: requests-html>=0.10.0
+Requires-Dist: rich>=14.0.0
+Requires-Dist: scanpy>=1.11.1
+Requires-Dist: scrublet>=0.2.3
+Requires-Dist: toml>=0.10.2
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: varname>=0.14.0
