@@ -1,0 +1,7 @@
+python_libsedml-2.0.33.dist-info/RECORD,,
+python_libsedml-2.0.33.dist-info/WHEEL,sha256=RvWRAv_96B4TXRrsjdYxQokrLY2tVCKmlQEuQajDQSc,135
+python_libsedml-2.0.33.dist-info/top_level.txt,sha256=UmLpm-AmG-1D4W7btbuJmbsFCzvQs9mdYJzH3fQVVeA,19
+python_libsedml-2.0.33.dist-info/METADATA,sha256=I7l9M6r2pkfE9NV4nJGNPx3h7AMSBFewnaswC_eHswQ,655
+python_libsedml-2.0.33.dist-info/licenses/LICENSE.txt,sha256=ovCoE-HwsuueVJszAs5tzbrgG7TU3bt9PQgfBQZ-k84,1357
+libsedml/__init__.py,sha256=7oIiY_VaPeA1eKIC6DY-X8QqHp0gkA98R3r0fMFBwoM,632385
+libsedml/_libsedml.cpython-39-darwin.so,sha256=ZKKNXJWfEddi7A043JNk-SUmmEBVOBHjWNsqYI8HNyc,8990936
