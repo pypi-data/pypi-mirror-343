@@ -1,0 +1,15 @@
+RNApysoforms/__init__.py,sha256=BkIBeyHrYHtCBHQrhDzc7mxl7tqoLeFL1xQu8JTG5o8,967
+RNApysoforms/calculate_exon_number.py,sha256=-PyjKLfvmOPGC0LWEoWeezDXXLe0tiP4zM-MFNjmRBQ,10795
+RNApysoforms/gene_filtering.py,sha256=rHubjmzv7YdTkt1RkS0BIwGAkQ2jYOsEGpt6sAe27hw,12781
+RNApysoforms/make_plot.py,sha256=HHl99hQ1GL4QVwHYgMGtY3RB7HmtkgNBCQEox7NnTTY,11762
+RNApysoforms/make_traces.py,sha256=cF57xmB1tnwoW-uVsgZQ8TRWbYsXM5yrsUSK8VFi53E,36846
+RNApysoforms/read_ensembl_gtf.py,sha256=zJ6xhYCfE_GjYmJlSbrhLRGXuFjuOegFCLdhChvRF4I,7813
+RNApysoforms/read_expression_matrix.py,sha256=zh2iSCW9ouCBh05DICg7w-UhcORycnHcB09U1nCvOh0,17646
+RNApysoforms/shorten_gaps.py,sha256=uK0i2119CaZcB091RbiZVpRpI4u-CTkGEUsjJy71mvA,31625
+RNApysoforms/to_intron.py,sha256=Q4MmFf9afZjr4ZEqOe2MXztVxiAIZWMh2GH9royZDYQ,9596
+RNApysoforms/utils.py,sha256=SmUc9WIuibQlXm3Bwpva3gKHNbtQIT8kSOXScA0_wX0,2529
+rnapysoforms-1.2.9.dist-info/licenses/LICENSE,sha256=xfczxOQ8Ui4BT7TK8GF_RwNE7b8dmBdr1zKAOqYSzzk,1123
+rnapysoforms-1.2.9.dist-info/METADATA,sha256=rL5d6IDbz1Rai596VWx0_yXgzkDn1KDn0_HCfYvCy3s,6299
+rnapysoforms-1.2.9.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+rnapysoforms-1.2.9.dist-info/top_level.txt,sha256=UoPspQd1UrX_cK9BjDgRpVnoYCGKKS1I62zDG2AhjJc,13
+rnapysoforms-1.2.9.dist-info/RECORD,,
