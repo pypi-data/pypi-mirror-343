@@ -1,0 +1,158 @@
+Metadata-Version: 2.4
+Name: quantllm
+Version: 1.0.0
+Summary: A lightweight library for quantized LLM fine-tuning and deployment
+Author: Dark Coder
+Author-email: codewithdark90@gmail.com
+Project-URL: Homepage, https://github.com/codewithdark-git/DiffusionLM
+Project-URL: Sponsor, https://github.com/sponsors/codewithdark-git
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: torch>=2.0.0
+Requires-Dist: transformers>=4.30.0
+Requires-Dist: datasets>=2.12.0
+Requires-Dist: accelerate>=0.20.0
+Requires-Dist: peft>=0.4.0
+Requires-Dist: bitsandbytes>=0.40.0
+Requires-Dist: scipy>=1.10.0
+Requires-Dist: scikit-learn>=1.0.0
+Requires-Dist: tqdm>=4.65.0
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: wandb>=0.15.0
+Requires-Dist: sentencepiece>=0.1.99
+Requires-Dist: protobuf>=3.20.0
+Requires-Dist: einops>=0.6.1
+Requires-Dist: evaluate>=0.4.0
+Requires-Dist: tensorboard>=2.13.0
+Provides-Extra: dev
+Requires-Dist: sphinx>=4.5.0; extra == "dev"
+Requires-Dist: sphinx-rtd-theme>=1.0.0; extra == "dev"
+Requires-Dist: sphinx-copybutton>=0.5.0; extra == "dev"
+Requires-Dist: sphinx-autodoc-typehints>=1.18.3; extra == "dev"
+Requires-Dist: myst-parser>=0.18.1; extra == "dev"
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=3.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: isort>=5.10.0; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# 🧠 QuantLLM: Lightweight Library for Quantized LLM Fine-Tuning and Deployment
+
+## 📌 Overview
+
+**QuantLLM** is a Python library designed for developers, researchers, and teams who want to fine-tune and deploy large language models (LLMs) **efficiently** using **4-bit and 8-bit quantization** techniques. It provides a modular and flexible framework for:
+
+- **Loading and quantizing models** with advanced configurations
+- **LoRA / QLoRA-based fine-tuning** with customizable parameters
+- **Dataset management** with preprocessing and splitting
+- **Training and evaluation** with comprehensive metrics
+- **Model checkpointing** and versioning
+- **Hugging Face Hub integration** for model sharing
+
+The goal of QuantLLM is to **democratize LLM training**, especially in low-resource environments, while keeping the workflow intuitive, modular, and production-ready.
+
+## 🎯 Key Features
+
+| Feature                          | Description |
+|----------------------------------|-------------|
+| ✅ Quantized Model Loading       | Load any HuggingFace model in 4-bit or 8-bit precision with customizable quantization settings |
+| ✅ Advanced Dataset Management   | Load, preprocess, and split datasets with flexible configurations |
+| ✅ LoRA / QLoRA Fine-Tuning      | Memory-efficient fine-tuning with customizable LoRA parameters |
+| ✅ Comprehensive Training        | Advanced training loop with mixed precision, gradient accumulation, and early stopping |
+| ✅ Model Evaluation             | Flexible evaluation with custom metrics and batch processing |
+| ✅ Checkpoint Management        | Save, resume, and manage training checkpoints with versioning |
+| ✅ Hub Integration              | Push models and checkpoints to Hugging Face Hub with authentication |
+| ✅ Configuration Management     | YAML/JSON config support for reproducible experiments |
+| ✅ Logging and Monitoring       | Comprehensive logging and Weights & Biases integration |
+
+## 🚀 Getting Started
+
+### Installation
+
+```bash
+pip install quantllm
+```
+
+For detailed usage examples and API documentation, please refer to our:
+- 📚 [Official Documentation](https://quantllm.readthedocs.io/)
+- 🎓 [Tutorials](https://quantllm.readthedocs.io/tutorials/)
+- 📖 [API Reference](https://quantllm.readthedocs.io/api/)
+
+## 💻 Hardware Requirements
+
+### Minimum Requirements
+- **CPU**: 4+ cores
+- **RAM**: 16GB
+- **Storage**: 20GB free space
+- **Python**: 3.8+
+
+### Recommended Requirements
+- **GPU**: NVIDIA GPU with 8GB+ VRAM
+- **RAM**: 32GB
+- **Storage**: 50GB+ SSD
+- **CUDA**: 11.7+
+
+### Resource Usage Guidelines
+| Model Size | 4-bit (GPU RAM) | 8-bit (GPU RAM) | CPU RAM (min) |
+|------------|----------------|-----------------|---------------|
+| 3B params  | ~6GB          | ~9GB           | 16GB         |
+| 7B params  | ~12GB         | ~18GB          | 32GB         |
+| 13B params | ~20GB         | ~32GB          | 64GB         |
+| 70B params | ~90GB         | ~140GB         | 256GB        |
+
+## 🔄 Version Compatibility
+
+| QuantLLM | Python | PyTorch | Transformers | CUDA  |
+|----------|--------|----------|--------------|-------|
+| 0.1.x    | ≥3.8   | ≥2.0.0   | ≥4.30.0     | ≥11.7 |
+| 0.2.x    | ≥3.9   | ≥2.1.0   | ≥4.31.0     | ≥11.8 |
+
+## 🗺 Roadmap
+
+- [ ] Multi-GPU training support
+- [ ] AutoML for hyperparameter tuning
+- [ ] More quantization methods
+- [ ] Custom model architecture support
+- [ ] Enhanced logging and visualization
+- [ ] Model compression techniques
+- [ ] Deployment optimizations
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [CONTRIBUTE.md](CONTRIBUTE.md) for guidelines and setup instructions.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [HuggingFace](https://huggingface.co/) for their amazing Transformers library
+- [bitsandbytes](https://github.com/TimDettmers/bitsandbytes) for quantization
+- [PEFT](https://github.com/huggingface/peft) for parameter-efficient fine-tuning
+- [Weights & Biases](https://wandb.ai/) for experiment tracking
+
+## 📫 Contact & Support
+
+- GitHub Issues: [Create an issue](https://github.com/yourusername/QuantLLM/issues)
+- Documentation: [Read the docs](https://quantllm.readthedocs.io/)
+- Discord: [Join our community](https://discord.gg/quantllm)
+- Email: support@quantllm.ai
