@@ -1,0 +1,55 @@
+#include <stdio.h>
+//#include <conio.h>
+#define MAX 100
+
+
+// Push Down
+void select(int x[], int n)
+{
+    int large, index, i, j;
+    for (i = n - 1; i > 0; i--)
+    {
+        large = x[0];
+        index = 0;
+        for (j = 1; j <= i; j++)
+        {
+            if (x[j] > large)
+            {
+                large = x[j];
+                index = j;
+            }
+        }
+        x[index] = x[i];
+        x[i] = large;
+    }
+}
+
+
+void main()
+{
+    int x[MAX], n, i;
+   // clrscr();
+
+
+    printf("\nEnter n ");
+    scanf("%d", &n);
+
+
+    printf("\nEnter elements ");
+    for (i = 0; i < n; i++)
+        scanf("%d", &x[i]);
+
+
+    printf("\nUnsorted ");
+    for (i = 0; i < n; i++)
+        printf(" %d ", x[i]);
+
+
+    select(x, n);
+    printf("\nSorted ");
+    for (i = 0; i < n; i++)
+        printf(" %d ", x[i]);
+
+
+   // getch();
+}
