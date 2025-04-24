@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: SuBha-STT
+Version: 0.1
+Summary: this is speech to text package created by subhadip sarkar
+Author: subhadip sarkar
+Author-email: subhadip021@gmail.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: summary
