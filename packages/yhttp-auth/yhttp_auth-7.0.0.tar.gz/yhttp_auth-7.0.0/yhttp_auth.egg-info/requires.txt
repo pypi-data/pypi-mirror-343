@@ -1,0 +1,3 @@
+yhttp<8,>=7
+pyjwt
+redis

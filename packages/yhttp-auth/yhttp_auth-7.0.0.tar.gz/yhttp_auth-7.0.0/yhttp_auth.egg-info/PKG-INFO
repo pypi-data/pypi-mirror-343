@@ -1,0 +1,133 @@
+Metadata-Version: 2.4
+Name: yhttp-auth
+Version: 7.0.0
+Summary: A very micro http framework.
+Home-page: http://github.com/yhttp/yhttp-auth
+Author: Vahid Mardani
+Author-email: vahid.mardani@gmail.com
+License: MIT
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: yhttp<8,>=7
+Requires-Dist: pyjwt
+Requires-Dist: redis
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# yhttp-auth
+
+[![PyPI](http://img.shields.io/pypi/v/yhttp-auth.svg)](https://pypi.python.org/pypi/yhttp-auth)
+[![Build](https://github.com/yhttp/yhttp-auth/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/yhttp/yhttp-auth/actions/workflows/build.yml)
+[![Coverage Status](https://coveralls.io/repos/github/yhttp/yhttp-auth/badge.svg?branch=master)](https://coveralls.io/github/yhttp/yhttp-auth?branch=master)
+
+
+Authentication extension for [yhttp](https://github.com/yhttp/yhttp).
+
+
+### Install
+
+```bash
+pip install yhttp-pony
+```
+
+
+### Usage
+
+```python
+from yhttp import Application
+from yhttp.ext.auth import install as auth_install
+
+
+app = Application('0.1.0', 'foo')
+auth = auth_install(app)
+app.settings.merge(f'''
+auth:
+  redis:
+    host: localhost
+    port: 6379
+    db: 0
+
+  token:
+    algorithm: HS256
+    secret: foobar
+
+  refresh:
+    key: yhttp-refresh-token
+    algorithm: HS256
+    secret: quxquux
+    secure: true
+    httponly: true
+    maxage: 2592000  # 1 Month
+    domain: example.com
+''')
+
+
+@app.route('/reftokens')
+@yhttp.statuscode(yhttp.statuses.created)
+def create(req):
+    app.auth.set_refreshtoken(req, 'alice', dict(baz='qux'))
+
+@app.route('/tokens')
+@yhttp.statuscode(yhttp.statuses.created)
+@yhttp.text
+def refresh(req):
+    reftoken = app.auth.verify_refreshtoken(req)
+    return app.auth.dump_from_refreshtoken(reftoken, dict(foo='bar'))
+
+@app.route('/admin')
+@auth(roles='admin, god')
+@yhttp.text
+def get(req):
+    return req.identity.roles
+
+app.ready()
+```
+
+### Command line interface
+
+setup.py
+
+```python
+
+setup(
+    ...
+    entry_points={
+        'console_scripts': [
+            'myapp = myapp:app.climain'
+        ]
+    },
+    ...
+)
+
+```
+
+```bash
+myapp auth --help
+```
+
+## Contribution
+
+### python-makelib
+Install [python-makelib](https://github.com/pylover/python-makelib).
