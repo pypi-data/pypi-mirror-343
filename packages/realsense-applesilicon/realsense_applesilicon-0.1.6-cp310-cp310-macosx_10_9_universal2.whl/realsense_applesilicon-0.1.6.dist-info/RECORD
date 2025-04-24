@@ -1,0 +1,10 @@
+realsense/__init__.py,sha256=usvI84Rk4G-QUw5G5T2c_5qxYwMTBy42rbBUdSaXZl8,152
+realsense/wrapper.cpp,sha256=CzdTi_jxdk-Gr2GD5Tg5E5YdUeUehHpSmJG7xuWniXY,711374
+realsense/wrapper.cpython-310-darwin.so,sha256=6EswX8nXMzijIgzSHvhjw62-UCFViKH2GWSEiiugK9A,365984
+realsense/wrapper.hpp,sha256=ol6KzbaXRzHM3m8BZhve-TCu8T3IETJx9BFcwbCU1pc,457
+realsense/wrapper.pyx,sha256=9byBfcLhdHC-5KuUMka8mqvamXMc9Oo-lgpAQQSmg0A,15846
+realsense_applesilicon-0.1.6.dist-info/licenses/LICENSE,sha256=v_CQC5qsBkUr3-WQozSDo4j1vSDe5rG29rq7WVPFGo0,1067
+realsense_applesilicon-0.1.6.dist-info/METADATA,sha256=nOczINjRa3c384DA2sG35kg0TiW0wJsGmFPp4jd82no,2402
+realsense_applesilicon-0.1.6.dist-info/WHEEL,sha256=oTfXQ1DyOJGMK8YJi23zHUJJoAHhWM8mE9vZQ69JUOU,114
+realsense_applesilicon-0.1.6.dist-info/top_level.txt,sha256=F2vCXnHjI6UZFCK2ugn3MM3B_5yaQtrr5roiIhneTMk,10
+realsense_applesilicon-0.1.6.dist-info/RECORD,,
