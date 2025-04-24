@@ -1,0 +1,6 @@
+build>=1.2.2.post1
+mcp[cli]>=1.6.0
+pyowm>=3.3.0
+pytz>=2025.2
+setuptools>=79.0.1
+twine>=6.1.0

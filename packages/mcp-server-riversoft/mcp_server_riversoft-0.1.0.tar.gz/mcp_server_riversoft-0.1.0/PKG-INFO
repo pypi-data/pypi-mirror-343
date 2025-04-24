@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: mcp-server-riversoft
+Version: 0.1.0
+Summary: Riversoft testing
+Author-email: Thomas Tan <thomas.tan@riversoft.com.tw>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: build>=1.2.2.post1
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: pyowm>=3.3.0
+Requires-Dist: pytz>=2025.2
+Requires-Dist: setuptools>=79.0.1
+Requires-Dist: twine>=6.1.0

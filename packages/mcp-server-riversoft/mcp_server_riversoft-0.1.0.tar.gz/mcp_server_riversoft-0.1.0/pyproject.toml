@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-server-riversoft"
+version = "0.1.0"
+description = "Riversoft testing"
+readme = "README.md"
+authors = [
+    {name = "Thomas Tan", email = "thomas.tan@riversoft.com.tw"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "build>=1.2.2.post1",
+    "mcp[cli]>=1.6.0",
+    "pyowm>=3.3.0",
+    "pytz>=2025.2",
+    "setuptools>=79.0.1",
+    "twine>=6.1.0",
+]
+requires-python = ">=3.10"
+
+[project.scripts]
+mcp-server-riversoft = "test.server:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
