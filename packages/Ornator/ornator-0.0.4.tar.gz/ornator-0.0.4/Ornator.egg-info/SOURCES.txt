@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+Ornator.egg-info/PKG-INFO
+Ornator.egg-info/SOURCES.txt
+Ornator.egg-info/dependency_links.txt
+Ornator.egg-info/top_level.txt
+ornator/__init__.py
+ornator/class_decorator.py
+ornator/decorator.py
