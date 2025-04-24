@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: algofins_broker_v2
+Version: 0.1.0
+Summary: Python Boilerplate contains all the boilerplate you need to create a Python package.
+Author-email: Rajdeep Agrawal <algofins@gmail.com>
+Maintainer-email: Rajdeep Agrawal <algofins@gmail.com>
+License: Not open source
+Project-URL: bugs, https://github.com/rajdeepa555/algofins_broker_v2/issues
+Project-URL: changelog, https://github.com/rajdeepa555/algofins_broker_v2/blob/master/changelog.md
+Project-URL: homepage, https://github.com/rajdeepa555/algofins_broker_v2
+Description-Content-Type: text/x-rst
+License-File: AUTHORS.rst
+Requires-Dist: typer
+Provides-Extra: dev
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Dynamic: license-file
+
+==================
+algofins_broker_v2
+==================
+
+
+
+
+
+
+Python Boilerplate contains all the boilerplate you need to create a Python package.
+
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
