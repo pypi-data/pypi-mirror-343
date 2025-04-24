@@ -1,0 +1,10 @@
+dyne:
+  patt:
+    - plugin
+
+import:
+  - time
+  - asyncio
+  - inspect
+  - random
+  - json

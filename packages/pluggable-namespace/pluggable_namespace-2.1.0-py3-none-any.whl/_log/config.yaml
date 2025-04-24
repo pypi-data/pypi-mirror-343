@@ -1,0 +1,76 @@
+
+cli_config:
+  log:
+    log_datefmt:
+      default: "%H:%M:%S"
+      os: PNS_LOG_DATEFMT
+      group: Logging Options
+      help: The date format to display in the logs
+      subcommands:
+      - __global__
+    log_file:
+      default: ~/.pns/pns.log
+      os: PNS_LOG_FILE
+      group: Logging Options
+      help: The location of the log file
+      subcommands:
+      - __global__
+    log_fmt:
+      default: "%(asctime)s,%(msecs)03d [%(name)-17s][%(levelname)-8s] %(message)s"
+      #default: "[%(levelname)-8s] %(message)s"
+      os: PNS_LOG_FMT
+      group: Logging Options
+      help: The log formatting used in the console
+      subcommands:
+      - __global__
+    log_level:
+      default: warning
+      os: PNS_LOG_LEVEL
+      group: Logging Options
+      help: Set the log level, either quiet, info, warning, debug or error
+      subcommands:
+      - __global__
+    log_plugin:
+      default: init
+      choices: log._loaded
+      group: Logging Options
+      help: The log plugin to use
+      subcommands:
+      - __global__
+  pns:
+    config:
+      default: ~/.pns/config.yaml
+      os: PNS_CONFIG
+      help: The config file used for PNS
+      group: Config Options
+      options:
+      - -c
+      subcommands:
+      - __global__
+
+dyne:
+  log:
+    - plugin
+
+import:
+  - aiologger.handlers.files
+  - argparse
+  - asyncio
+  - ast
+  - collections
+  - pns.contract
+  - pns.data
+  - pns.exc
+  - pns.hub
+  - importlib
+  - importlib.resources
+  - logging
+  - msgpack
+  - os
+  - pathlib
+  - pickle
+  - signal
+  - sys
+  - traceback
+  - yaml
+  - typing
