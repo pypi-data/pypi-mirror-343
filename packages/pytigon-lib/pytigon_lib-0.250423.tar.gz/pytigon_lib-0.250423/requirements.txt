@@ -1,0 +1,13 @@
+httpx
+fs
+Django
+django-environ
+pyexcel
+pyexcel-xlsx
+pyexcel-ods3
+xlsxwriter
+openpyxl
+python-docx
+python-dateutil
+markdown
+pyquery
