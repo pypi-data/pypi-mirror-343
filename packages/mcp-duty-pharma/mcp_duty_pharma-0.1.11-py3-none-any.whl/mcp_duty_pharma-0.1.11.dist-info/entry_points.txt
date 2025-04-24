@@ -1,0 +1,2 @@
+[console_scripts]
+mcp_duty_pharma = mcp_duty_pharma.__main__:entry_point
