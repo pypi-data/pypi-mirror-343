@@ -1,0 +1,15 @@
+scikit_learn_bench/CONST.py,sha256=YSEwtbrS9DvSu4XqqnoQfoqBFeWqV29Dh9vOLgoO-WM,101
+scikit_learn_bench/Timeout.py,sha256=rDPDxTfIdnJLUq0jVXkyysRpBjrQUUB12xjX2RJtyp0,1169
+scikit_learn_bench/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scikit_learn_bench/all_bench.py,sha256=hGNLXJizxTQD6UYoMTpK4nkoR5Hzlpl_ZA9SeSCabjE,1655
+scikit_learn_bench/cli.py,sha256=trFF16YcLesU6gQQmAO3BdRnCPHCgnm1rQYbo-KIuQQ,2724
+scikit_learn_bench/core.py,sha256=Q_rwx4awPvspOOKMHxVfS181agBg3ChYo17Vy54whPo,8118
+scikit_learn_bench/default_params.py,sha256=3gx4NwZ5MMf7ezQ0wWyW4AYEq51U8wKsStgmJzNCgeA,5013
+scikit_learn_bench/display.py,sha256=YCX4v0gkb-RIQ1v65-LDwLf7GdrMgVXxsq_jNGwLbIk,2503
+scikit_learn_bench/profiler.py,sha256=SuUrO68HH5yWwgKqFRp8HTqEjHdH5yz6vsYsLt7hBUk,3220
+scikit_learn_bench-0.0.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+scikit_learn_bench-0.0.1.dist-info/METADATA,sha256=9nYOVx_YwKKAt8_bfp7nG9UXA-g33mSinvPVsZgAtko,4652
+scikit_learn_bench-0.0.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+scikit_learn_bench-0.0.1.dist-info/entry_points.txt,sha256=GdWZcJU8WppEzzznKlGMN4PmPXy7mGlXdFlG3gyG5dM,67
+scikit_learn_bench-0.0.1.dist-info/top_level.txt,sha256=gnRyJYBdVelVRTRFDNDv_ULRBMvn74Vu9u4gKZn_PEE,19
+scikit_learn_bench-0.0.1.dist-info/RECORD,,
