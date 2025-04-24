@@ -1,0 +1,87 @@
+[
+  {
+    "timestamp": "2025-04-23 13:25:32",
+    "primary_locator": "css=#non_existent_username_id",
+    "ai_locator": "css=input[type='text']"
+  },
+  {
+    "timestamp": "2025-04-23 13:29:31",
+    "primary_locator": "css=#non_existent_username_id",
+    "ai_locator": "css=input[type='text']"
+  },
+  {
+    "timestamp": "2025-04-23 13:32:28",
+    "primary_locator": "css=#non_existent_username_id",
+    "ai_locator": "css=input[type='text']"
+  },
+  {
+    "timestamp": "2025-04-23 13:34:27",
+    "primary_locator": "css=#non_existent_username_id",
+    "ai_locator": "css=input[type='text']"
+  },
+  {
+    "timestamp": "2025-04-23 13:40:06",
+    "primary_locator": "css=#non_existent_username_id",
+    "ai_locator": "css=input[type='text']"
+  },
+  {
+    "timestamp": "2025-04-23 13:47:14",
+    "primary_locator": "css=#non_existent_username_id",
+    "ai_locator": "css=input[type='text']"
+  },
+  {
+    "timestamp": "2025-04-23 13:49:39",
+    "primary_locator": "css=#non_existent_username_id",
+    "ai_locator": "css=input[placeholder='Username']"
+  },
+  {
+    "timestamp": "2025-04-23 13:50:56",
+    "primary_locator": "css=#non_existent_username_id",
+    "ai_locator": "css=input[placeholder='Username']"
+  },
+  {
+    "timestamp": "2025-04-23 13:55:23",
+    "primary_locator": "css=#non_existent_username_id",
+    "ai_locator": "css=input[placeholder='Username']"
+  },
+  {
+    "timestamp": "2025-04-23 13:56:03",
+    "primary_locator": "css=#non_existent_username_id",
+    "ai_locator": "css=input[placeholder='Username']"
+  },
+  {
+    "timestamp": "2025-04-23 13:58:39",
+    "primary_locator": "css=#non_existent_username_id",
+    "ai_locator": "css=input[placeholder='Username']"
+  },
+  {
+    "timestamp": "2025-04-23 14:03:57",
+    "primary_locator": "css=#non_existent_username_id",
+    "ai_locator": "css=input[placeholder='Username']"
+  },
+  {
+    "timestamp": "2025-04-23 14:05:00",
+    "primary_locator": "css=#non_existent_username_id",
+    "ai_locator": "css=input[placeholder='Username']"
+  },
+  {
+    "timestamp": "2025-04-23 14:06:55",
+    "primary_locator": "css=#non_existent_username_id",
+    "ai_locator": "css=input[placeholder='Username']"
+  },
+  {
+    "timestamp": "2025-04-23 14:12:37",
+    "primary_locator": "css=#non_existent_username_id",
+    "ai_locator": "css=input[placeholder='Username']"
+  },
+  {
+    "timestamp": "2025-04-23 14:13:36",
+    "primary_locator": "css=#non_existent_username_id",
+    "ai_locator": "css=input[placeholder='Username']"
+  },
+  {
+    "timestamp": "2025-04-23 14:15:51",
+    "primary_locator": "css=#non_existent_username_id",
+    "ai_locator": "css=input[placeholder='Username']"
+  }
+]
