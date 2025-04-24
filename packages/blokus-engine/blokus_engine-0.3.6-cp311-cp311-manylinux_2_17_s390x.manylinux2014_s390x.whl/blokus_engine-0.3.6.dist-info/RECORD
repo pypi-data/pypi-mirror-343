@@ -1,0 +1,5 @@
+blokus_engine-0.3.6.dist-info/METADATA,sha256=cZjVyp5g6LGqjksUZLuTYncS0DFk7eNhxG1RcwdJToU,4703
+blokus_engine-0.3.6.dist-info/WHEEL,sha256=Vmeos7Nl4a2Pb7_0k0H15Q_fymkIK3XQKvyS1-Y7doA,127
+blokus_self_play/__init__.py,sha256=3RpU75hR6qDognmd8x8wF632M7m_mvHVmq58Umc61Js,147
+blokus_self_play/blokus_self_play.cpython-311-s390x-linux-gnu.so,sha256=jl_tQ5pmS5Klt6U7sQU21j6dzkeiyNJbVcOwhmw5b60,914696
+blokus_engine-0.3.6.dist-info/RECORD,,
