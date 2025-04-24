@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/uselessutilities/__init__.py
+src/uselessutilities/quaternary.py
+src/uselessutilities/quinary.py
+src/uselessutilities/senary.py
+src/uselessutilities/ternary.py
+src/uselessutilities.egg-info/PKG-INFO
+src/uselessutilities.egg-info/SOURCES.txt
+src/uselessutilities.egg-info/dependency_links.txt
+src/uselessutilities.egg-info/top_level.txt
+tests/test_pytest.py
+tests/test_ter-quat-quin-sen.py
