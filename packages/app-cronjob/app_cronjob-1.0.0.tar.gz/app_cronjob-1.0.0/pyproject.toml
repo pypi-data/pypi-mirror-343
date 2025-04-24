@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "app_cronjob"
+authors = [
+  { name="Yehuda Katz", email="yehuda@ymkatz.net" },
+]
+description = "Python implementation of Perl App::Cronjob"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "LGPL-3.0-or-later"
+dynamic = ["version", "dependencies"]
+
+[project.urls]
+Homepage = "https://github.com/YMKatz/py-app-cronjob"
+
+[project.scripts]
+cronjob = "app_cronjob.cronjob:cli"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.in"] }
+
+[tool.setuptools_scm]

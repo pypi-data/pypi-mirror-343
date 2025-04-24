@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: app_cronjob
+Version: 1.0.0
+Summary: Python implementation of Perl App::Cronjob
+Author-email: Yehuda Katz <yehuda@ymkatz.net>
+License-Expression: LGPL-3.0-or-later
+Project-URL: Homepage, https://github.com/YMKatz/py-app-cronjob
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: filelock
+
+# py-app-cronjob
+
+This is a python implementation of the Perl module [`App::Cronjob`](https://metacpan.org/pod/App::Cronjob)

@@ -1,0 +1,2 @@
+[console_scripts]
+cronjob = app_cronjob.cronjob:cli
