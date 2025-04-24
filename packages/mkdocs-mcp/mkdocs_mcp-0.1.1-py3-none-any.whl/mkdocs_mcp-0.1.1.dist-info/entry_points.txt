@@ -1,0 +1,5 @@
+[console_scripts]
+mkdocs-mcp = mkdocs_mcp.__main__:build_and_mcp
+
+[mkdocs.plugins]
+mcp = mkdocs_mcp.plugin:MkDocsMCP
