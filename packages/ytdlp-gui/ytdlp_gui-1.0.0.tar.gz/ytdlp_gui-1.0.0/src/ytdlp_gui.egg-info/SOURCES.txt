@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/ytdlp_gui.egg-info/PKG-INFO
+src/ytdlp_gui.egg-info/SOURCES.txt
+src/ytdlp_gui.egg-info/dependency_links.txt
+src/ytdlp_gui.egg-info/entry_points.txt
+src/ytdlp_gui.egg-info/requires.txt
+src/ytdlp_gui.egg-info/top_level.txt
+src/ytdlpg/__main__.py
+src/ytdlpg/main.py
+src/ytdlpg/manager.py
+src/ytdlpg/options.py
