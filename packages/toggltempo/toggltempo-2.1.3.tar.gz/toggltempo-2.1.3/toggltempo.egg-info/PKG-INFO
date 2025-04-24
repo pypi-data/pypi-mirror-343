@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: toggltempo
+Version: 2.1.3
+Summary: Synchronise your Toggl Track time entries into Jira Tempo plugin
+Home-page: https://github.com/melkamar/toggltempo
+Author: Martin Melka
+Author-email: martin.melka@gmail.com
+Requires-Dist: requests
+Requires-Dist: pyyaml
+Requires-Dist: tzlocal
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
