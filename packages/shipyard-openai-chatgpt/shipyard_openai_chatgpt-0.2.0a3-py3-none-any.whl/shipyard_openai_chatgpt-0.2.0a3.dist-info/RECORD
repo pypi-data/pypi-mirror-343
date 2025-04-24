@@ -1,0 +1,13 @@
+shipyard_openai_chatgpt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shipyard_openai_chatgpt/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shipyard_openai_chatgpt/cli/chatgpt_translation.py,sha256=DBEiZDF4x-AzvK1nuhYUashGQN-a9HKrOwF-UK5k5qM,740
+shipyard_openai_chatgpt/cli/comment_code.py,sha256=8xU-ZBhTrtV_OJhhxYph7am0GlgvrsusAtf23ASc7nk,835
+shipyard_openai_chatgpt/cli/data_dictionary.py,sha256=CqJqNtzH0IQz-xutQu5TCp2Si120OPyQmHUYVapuzMg,633
+shipyard_openai_chatgpt/cli/dummy_data.py,sha256=jXFPnFo8w9OIIHGuyRYDxLliO-EUK9NECCDfQ3D4j5E,795
+shipyard_openai_chatgpt/cli/generate_message.py,sha256=YTPXd2Q_bMDa_MethT4WSZVQglTf9B2KipV6wB7rTEA,1451
+shipyard_openai_chatgpt/cli/generate_response.py,sha256=2bOTSGqQT0GJxUvWgv9CaFPQSJYh08_lMvynaFtB7DE,1213
+shipyard_openai_chatgpt/cli/gpt_meeting_notes.py,sha256=qsFRPUzo7iwSDXtcbcVGl49goh9iTvu4Dg8GL5vD8ac,872
+shipyard_openai_chatgpt-0.2.0a3.dist-info/METADATA,sha256=OAQdtv-UzMsq5bWfmV1LZBVYkbRQ6E3kHQ8LTByFqyM,192
+shipyard_openai_chatgpt-0.2.0a3.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+shipyard_openai_chatgpt-0.2.0a3.dist-info/top_level.txt,sha256=ErnLRhqcYVtmxy0wP3oZG-gmoYxpaxETTtTYBZwiC8E,24
+shipyard_openai_chatgpt-0.2.0a3.dist-info/RECORD,,
