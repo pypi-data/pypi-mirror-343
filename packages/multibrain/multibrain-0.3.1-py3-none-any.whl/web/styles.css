@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #000000;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.data-container {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+pre {
+    background-color: #b1adcf;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.yellow-box, .light-blue-box, .green-box, .light-pink-box {
+    width: calc(100% - 2px); /* Adjust for border */
+    margin: 5px 0;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    color: black;
+}
+
+.yellow-box {
+    background-color: #ffff99; /* Yellow */
+}
+
+.light-blue-box {
+    background-color: #add8e6; /* Light Blue */
+}
+
+.green-box {
+    background-color: #90ee90; /* Light Green */
+}
+
+.light-pink-box {
+    background-color: #ffc0cb; /* Light Pink */
+}
+
+.light-blue-box ol,
+.light-blue-box ul,
+.green-box ol,
+.green-box ul,
+.light-pink-box ol,
+.light-pink-box ul {
+    list-style-position: inside; /* Ensures numbers are inside the box */
+}
