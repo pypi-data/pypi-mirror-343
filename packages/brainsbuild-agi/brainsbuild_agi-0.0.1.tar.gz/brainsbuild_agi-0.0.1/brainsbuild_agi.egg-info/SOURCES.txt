@@ -1,0 +1,5 @@
+pyproject.toml
+brainsbuild_agi.egg-info/PKG-INFO
+brainsbuild_agi.egg-info/SOURCES.txt
+brainsbuild_agi.egg-info/dependency_links.txt
+brainsbuild_agi.egg-info/top_level.txt
