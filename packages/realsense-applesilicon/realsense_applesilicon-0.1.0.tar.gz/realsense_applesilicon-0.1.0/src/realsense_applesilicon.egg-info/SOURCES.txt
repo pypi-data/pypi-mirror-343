@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+src/realsense/__init__.py
+src/realsense/wrapper.cpp
+src/realsense/wrapper.hpp
+src/realsense/wrapper.pyx
+src/realsense_applesilicon.egg-info/PKG-INFO
+src/realsense_applesilicon.egg-info/SOURCES.txt
+src/realsense_applesilicon.egg-info/dependency_links.txt
+src/realsense_applesilicon.egg-info/requires.txt
+src/realsense_applesilicon.egg-info/top_level.txt
+tests/test_realsense.py
