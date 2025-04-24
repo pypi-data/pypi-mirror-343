@@ -1,0 +1,2 @@
+[console_scripts]
+vk-parser = vk_parser.main:cli_main
