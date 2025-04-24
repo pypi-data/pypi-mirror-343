@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: autocodec
+Version: 0.2.2
+Summary: Automatic Neural Codecs
+Author-email: Dan Jacobellis <danjacobellis@utexas.edu>
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: torch
+Requires-Dist: einops
+Requires-Dist: PyWavelets
+Requires-Dist: timm
+Requires-Dist: torchvision
+Requires-Dist: pillow
+
+# autocodec
