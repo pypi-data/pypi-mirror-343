@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-jamie-test = mcp_jamie_test.main:main
