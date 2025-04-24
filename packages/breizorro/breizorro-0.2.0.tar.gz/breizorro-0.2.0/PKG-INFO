@@ -1,0 +1,107 @@
+Metadata-Version: 2.3
+Name: breizorro
+Version: 0.2.0
+Summary: Creates a binary mask given a FITS image
+License: GNU GPL v3
+Keywords: Astronomy,Masking,Imaging
+Author: Ian Heywood & RATT
+Author-email: ian.heywood@phyics.ox.ac.uk
+Requires-Python: >=3.9,<3.13
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Provides-Extra: all
+Provides-Extra: gui
+Provides-Extra: testing
+Requires-Dist: astropy
+Requires-Dist: bokeh ; extra == "all" or extra == "gui"
+Requires-Dist: numpy
+Requires-Dist: omegaconf
+Requires-Dist: photutils ; extra == "all"
+Requires-Dist: pytest ; extra == "testing"
+Requires-Dist: pytest-flake8 ; extra == "testing"
+Requires-Dist: regions (>=0.8)
+Requires-Dist: scikit-image ; extra == "all"
+Requires-Dist: scipy (>=1.13.1)
+Requires-Dist: stimela (>=2.0.2)
+Project-URL: Homepage, https://github.com/ratt-ru/breizorro
+Project-URL: Repository, https://github.com/ratt-ru/breizorro.git
+Description-Content-Type: text/x-rst
+
+=========
+breizorro
+=========
+|Pypi Version|
+|Python Versions|
+|Project License|
+
+A tool for creating a binary mask given a FITS image
+
+==============
+Installation
+==============
+
+Installation from source_,
+working directory where source is checked out
+
+.. code-block:: bash
+  
+    $ pip install .
+
+This package is available on *PYPI*, allowing
+
+.. code-block:: bash
+  
+    $ pip install breizorro
+
+To show help message and exit
+
+.. code-block:: bash
+   
+   $ breizorro --help
+
+=============
+Documentation
+=============
+
+Documentation is available on the GitHub page_.
+
+=======
+License
+=======
+
+This project is licensed under the GNU General Public License v3.0 - see license_ for details.
+
+=============
+Contribute
+=============
+
+Contributions are always welcome! Please ensure that you adhere to our coding
+standards pep8_.
+
+.. |Project License| image:: https://img.shields.io/badge/license-GPL-blue.svg
+                     :target: https://github.com/ratt-ru/breizorro/blob/main/LICENSE
+                     :alt:
+
+.. |Python Versions| image:: https://img.shields.io/pypi/pyversions/breizorro.svg
+                     :target: https://pypi.python.org/pypi/breizorro/
+                     :alt:
+
+.. |Pypi Version| image:: https://img.shields.io/pypi/v/breizorro.svg
+                  :target: https://pypi.python.org/pypi/breizorro
+                  :alt:
+
+.. _source: https://github.com/ratt-ru/breizorro
+.. _license: https://github.com/ratt-ru/breizorro/blob/main/LICENSE
+.. _pep8: https://www.python.org/dev/peps/pep-0008
+.. _page: https://ratt-ru.github.io/breizorro
+
