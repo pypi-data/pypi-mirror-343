@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+datagpa/__init__.py
+datagpa.egg-info/PKG-INFO
+datagpa.egg-info/SOURCES.txt
+datagpa.egg-info/dependency_links.txt
+datagpa.egg-info/top_level.txt
