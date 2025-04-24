@@ -1,0 +1,8 @@
+galaxygrad/__init__.py,sha256=Q1X75I1Jr1F1mnwJhVy82UBuh6opTPQgwV2AgYCoAEU,73
+galaxygrad/models_eqx.py,sha256=wTVT4Izfy5lBTl9dLJcTTtLrxRHFwFuwnPrRyRM78OE,2956
+galaxygrad/scorenet.py,sha256=GjYi7zz28L0jTaatLrZjpIiCAx0KRrW-CGtgK1kAVkQ,3170
+galaxygrad/utils.py,sha256=rNvANtsZLz--Hbwhbh2bBALAMY_M5UmjUQTMC-1xG-4,4838
+galaxygrad-0.3.0.dist-info/METADATA,sha256=KPQjBdJEi5x0cMoomU2AI-MiGGgVIGAVHYudJA5eGAY,730
+galaxygrad-0.3.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+galaxygrad-0.3.0.dist-info/top_level.txt,sha256=-CqogYVY9oqk0HcTkfWfOZ_419Y_77J-Zyngfxi-vIQ,11
+galaxygrad-0.3.0.dist-info/RECORD,,
