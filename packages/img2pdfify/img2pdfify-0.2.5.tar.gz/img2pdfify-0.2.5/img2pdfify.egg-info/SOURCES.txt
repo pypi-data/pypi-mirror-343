@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+img2pdfify/__main__.py
+img2pdfify.egg-info/PKG-INFO
+img2pdfify.egg-info/SOURCES.txt
+img2pdfify.egg-info/dependency_links.txt
+img2pdfify.egg-info/entry_points.txt
+img2pdfify.egg-info/requires.txt
+img2pdfify.egg-info/top_level.txt
