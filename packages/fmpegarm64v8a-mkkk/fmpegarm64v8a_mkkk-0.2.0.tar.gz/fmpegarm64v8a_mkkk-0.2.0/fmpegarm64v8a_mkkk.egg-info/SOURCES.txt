@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+ffmpegarm64v8a_mkkk/__init__.py
+ffmpegarm64v8a_mkkk/ffmpeg..bin
+ffmpegarm64v8a_mkkk/ffmpeg.so
+ffmpegarm64v8a_mkkk/libffmpeg.so
+ffmpegarm64v8a_mkkk/module1.py
+fmpegarm64v8a_mkkk.egg-info/PKG-INFO
+fmpegarm64v8a_mkkk.egg-info/SOURCES.txt
+fmpegarm64v8a_mkkk.egg-info/dependency_links.txt
+fmpegarm64v8a_mkkk.egg-info/requires.txt
+fmpegarm64v8a_mkkk.egg-info/top_level.txt
