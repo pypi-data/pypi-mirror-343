@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: camunda-utils
+Version: 1.2.0.dev1
+Summary: Offer keywords to interact with Camunda from the RPA worker
+Author-email: Camunda Services GmbH <info@camunda.com>
+Project-URL: Homepage, https://github.com/camunda/rpa-python-libraries
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: robotframework
+Dynamic: license-file
