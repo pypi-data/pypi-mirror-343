@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+cases/__init__.py
+pycases.egg-info/PKG-INFO
+pycases.egg-info/SOURCES.txt
+pycases.egg-info/dependency_links.txt
+pycases.egg-info/requires.txt
+pycases.egg-info/top_level.txt
