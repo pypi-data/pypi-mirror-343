@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+gestao_alunos/__init__.py
+gestao_alunos/gestao_alunos.py
+gestao_alunos.egg-info/PKG-INFO
+gestao_alunos.egg-info/SOURCES.txt
+gestao_alunos.egg-info/dependency_links.txt
+gestao_alunos.egg-info/requires.txt
+gestao_alunos.egg-info/top_level.txt
