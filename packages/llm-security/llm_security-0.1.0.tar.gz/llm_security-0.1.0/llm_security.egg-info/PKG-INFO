@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: llm-security
+Version: 0.1.0
+Summary: A package for LLM security features
+Home-page: https://github.com/lasso-security/prompt-guardrails
+Author: Lasso Security
+Author-email: research@lasso.security
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# LLM Security
+
+A Python package that provides security features for Large Language Models.
+
