@@ -1,0 +1,8 @@
+pymupdf4llm_mcp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymupdf4llm_mcp/app.py,sha256=1gm39uIX49GW8SOaost5i3e-oKffIhgZCdat8u3I9yI,3087
+pymupdf4llm_mcp/cli.py,sha256=F6kBpzSq23dXHM4FYEgMNiseI-wc2KIBLg-liKdc9tI,347
+pymupdf4llm_mcp-0.0.3.dist-info/METADATA,sha256=Mi_nJRKE_N-Brwb7K4TnSiBLWoh5mlTiUKUNj7p1WcI,2493
+pymupdf4llm_mcp-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pymupdf4llm_mcp-0.0.3.dist-info/entry_points.txt,sha256=R5bUuICucyjGDynFOMpZVmd_-grsLuujjht42HrucB8,60
+pymupdf4llm_mcp-0.0.3.dist-info/licenses/LICENSE,sha256=-gmHtA8FbTNdVEWtsrzAcJ31RJ6b53_KL6MKbp2Sowo,1495
+pymupdf4llm_mcp-0.0.3.dist-info/RECORD,,
