@@ -1,0 +1,14 @@
+pylibxdaq/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pylibxdaq/pyxdaq_device.cp312-win_amd64.pyd,sha256=bFBqHaAgQI5ukfjJB87NLkVB_ocpdv8d4BiYEf9SNu4,516096
+pylibxdaq/pyxdaq_device.pyi,sha256=8U0Ozq073wyvzt2nwV7xXPRSnSkS8L_n-kZlT0IKmmo,3730
+pylibxdaq/managers/__init__.py,sha256=ArMaDVKhqj8mnhxb8wGyjvRPcQw65_NFzgBGXzEzxxA,194
+pylibxdaq/managers/okFrontPanel.dll,sha256=dWF_Zc5bLfdPBmg87sQtpwpwG_4wzzm8w4KgmStD7xs,217600
+pylibxdaq/managers/ok_device_manager.dll,sha256=JuDwujik5e-QeGjr6_ghQFn3nqFgAS3t0frXJG1SDvQ,691200
+pylibxdaq/managers/thor_device_manager.dll,sha256=rnjy2hyYJBWT6ZF4NuesqcHKujx9jb3wi9okOJfLvrg,678400
+pylibxdaq/resources/rhd.bit,sha256=4KdXkPY0zWXAXoepJrSSKKyctG18zA_x4VBYgZPV97w,2482978
+pylibxdaq/resources/rhs.bit,sha256=xTA4zgum2pOS337TWiDWH_rtDS2s84H0miHUFNOCapc,2708046
+pylibxdaq-0.1.7.dist-info/licenses/LICENSE,sha256=RnJsOt_RndpLU_aXdlhTCjvWXhFfz_2tIWafnE10rjw,1074
+pylibxdaq-0.1.7.dist-info/METADATA,sha256=l6f9vIslfyEU7lSkoRhXwugGJ5z1Wzn0sTkEnLDI8io,383
+pylibxdaq-0.1.7.dist-info/WHEEL,sha256=IErMWh8lTWXYxjbFl4p6LfNdre5cbU2dHvRgl-GDPK8,99
+pylibxdaq-0.1.7.dist-info/top_level.txt,sha256=D9ZLsOOlNoq_TrXbYa4Xh1dzXcKsWO5kcdpKmkxzPkE,10
+pylibxdaq-0.1.7.dist-info/RECORD,,
