@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+shadowbot/__init__.py
+shadowbot/service_init.py
+shadowbot.egg-info/PKG-INFO
+shadowbot.egg-info/SOURCES.txt
+shadowbot.egg-info/dependency_links.txt
+shadowbot.egg-info/requires.txt
+shadowbot.egg-info/top_level.txt
+shadowbot/utils/__init__.py
+shadowbot/utils/_data_monitor.py
+shadowbot/utils/_data_storage.py
+shadowbot/utils/_function_doctor.py
+shadowbot/utils/_function_share.py
+tests/test_shadowbot.py

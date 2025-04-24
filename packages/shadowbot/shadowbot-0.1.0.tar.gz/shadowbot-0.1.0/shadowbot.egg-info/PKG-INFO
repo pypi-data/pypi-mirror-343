@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: shadowbot
+Version: 0.1.0
+Summary: A Python package for scientific management of RPA processes.
+Author-email: LKDD <lkddao@outlook.com>, LKDD <648429038@qq.com>
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.32.3
+Requires-Dist: pytz>=2024.2
+Requires-Dist: tzlocal>=5.2
+Dynamic: license-file
+
+# RPA Assistant
+
+RPA Assistant Client Configuration Tool, integrated with Streamlinet Server, provides a complete set of RPA management service applications.
+
+## Installation
+
+You can install this package using pip:
+```cmd
+pip install shadow_bot
+```
+
+## Usage
+
+```python
+import xbot
+from .import package
+from shadow_bot import SBA, service_init
+
+try:
+    sba = SBA(xbot, package)
+    service_init(sba, init=True)
+except Exception as e:
+    pytest.fail(f"shadow_bot raised an exception: {e}")
+```
