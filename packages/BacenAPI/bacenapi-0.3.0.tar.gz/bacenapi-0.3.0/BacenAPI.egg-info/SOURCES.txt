@@ -1,0 +1,15 @@
+License.md
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+BacenAPI/__init__.py
+BacenAPI/bacen_search.py
+BacenAPI/bacen_series.py
+BacenAPI/bacen_url.py
+BacenAPI.egg-info/PKG-INFO
+BacenAPI.egg-info/SOURCES.txt
+BacenAPI.egg-info/dependency_links.txt
+BacenAPI.egg-info/requires.txt
+BacenAPI.egg-info/top_level.txt
+BacenAPI/Date/dataset.txt
