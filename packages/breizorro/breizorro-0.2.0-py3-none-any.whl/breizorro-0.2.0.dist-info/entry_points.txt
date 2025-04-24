@@ -1,0 +1,3 @@
+[console_scripts]
+breizorro=breizorro.main:driver
+
