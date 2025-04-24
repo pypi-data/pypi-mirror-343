@@ -1,0 +1,26 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+tests/test.py
+trasyn/__init__.py
+trasyn/__main__.py
+trasyn/_version.py
+trasyn/gates.py
+trasyn/mps.py
+trasyn/synthesis copy.py
+trasyn/synthesis.py
+trasyn/unique_matrices.py
+trasyn/utils.py
+trasyn.egg-info/PKG-INFO
+trasyn.egg-info/SOURCES.txt
+trasyn.egg-info/dependency_links.txt
+trasyn.egg-info/entry_points.txt
+trasyn.egg-info/requires.txt
+trasyn.egg-info/top_level.txt
+trasyn/assets/tsh/duplicates_13.json
+trasyn/assets/tsh/sequences_13.json
+trasyn/assets/tsh/tensor_13.npy
+trasyn/assets/tshxyz/duplicates_13.json
+trasyn/assets/tshxyz/sequences_13.json
+trasyn/assets/tshxyz/tensor_13.npy

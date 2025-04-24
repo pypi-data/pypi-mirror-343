@@ -1,0 +1,11 @@
+numpy>=1.26.4
+psutil>=6
+
+[cupy-cuda11]
+cupy-cuda11x>=13.3.0
+
+[cupy-cuda12]
+cupy-cuda12x>=13.3.0
+
+[qiskit]
+qiskit>=1.2.4
