@@ -1,0 +1,4 @@
+numpy==2.2.*
+pyinstrument==5.*
+pyswmm>=2.0.1
+bmipy>=2.0.1
