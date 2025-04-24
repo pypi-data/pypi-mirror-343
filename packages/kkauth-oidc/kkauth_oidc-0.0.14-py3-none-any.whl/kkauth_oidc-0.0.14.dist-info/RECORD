@@ -1,0 +1,15 @@
+oidc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oidc/apps.py,sha256=L8bJg0nUUQOwUtNF3a5flD_sa-wiv4mt8q5MGiChvF4,575
+oidc/configure.html,sha256=vElkcjdSaIjV3gQvfya4OizDqNAMa2MSxhS-kMJ_LsI,146
+oidc/constants.py,sha256=yB-cSVKGA2AhInZ5tMFaQ4GAy4z2cd5ziWQ1399ADvg,1214
+oidc/provider.py,sha256=DKbT4ReHqVi2BxGebi1ETepTDci8VSQ4Iu7pb5HlIg4,4552
+oidc/views.py,sha256=3uGhGDU8A_6fuVUwRLb1kPqf1FYbiLP_QrekqJu70qo,2670
+oidc/oidc/configure.html,sha256=vElkcjdSaIjV3gQvfya4OizDqNAMa2MSxhS-kMJ_LsI,146
+oidc/template/oidc/configure.html,sha256=vElkcjdSaIjV3gQvfya4OizDqNAMa2MSxhS-kMJ_LsI,146
+oidc/templates/oidc/configure.html,sha256=vElkcjdSaIjV3gQvfya4OizDqNAMa2MSxhS-kMJ_LsI,146
+kkauth_oidc-0.0.14.dist-info/LICENSE,sha256=SMCNJXEW5cIpaWgC_DwSy8QkWqmlWGYcLwRYm7A0Pkc,10848
+kkauth_oidc-0.0.14.dist-info/METADATA,sha256=-OWwSCxsCn-Krz_H_umhpG5SJM_kynecYD48azUzi-E,667
+kkauth_oidc-0.0.14.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+kkauth_oidc-0.0.14.dist-info/entry_points.txt,sha256=7I4HLw4D_7bTRnYz3iwPLnDGvUP1ypm_gWDdBvEyhVA,39
+kkauth_oidc-0.0.14.dist-info/top_level.txt,sha256=HicvOTwxQwzNKdTfkBXQKhmpxx-we5tL_7yTHcCqYvo,5
+kkauth_oidc-0.0.14.dist-info/RECORD,,
