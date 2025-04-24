@@ -1,0 +1,19 @@
+[project]
+name = "salute"
+version = "0.3.2"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "asyncpg>=0.30.0",
+    "pydantic>=2.11.3",
+    "python-decouple>=3.8",
+    "sanic>=25.3.0",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "setuptools>=79.0.1",
+    "twine>=6.1.0",
+]
