@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "uk_national_health_service_number"
+version = "0.1.4"
+description = "Generate valid UK NHS Numbers"
+authors = ["mohammed.saleel0099@gmail.com"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "uk_national_health_service_number" }]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
