@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+html_table_takeout/__init__.py
+html_table_takeout/parser.py
+html_table_takeout/py.typed
+html_table_takeout/types.py
+html_table_takeout.egg-info/PKG-INFO
+html_table_takeout.egg-info/SOURCES.txt
+html_table_takeout.egg-info/dependency_links.txt
+html_table_takeout.egg-info/top_level.txt
