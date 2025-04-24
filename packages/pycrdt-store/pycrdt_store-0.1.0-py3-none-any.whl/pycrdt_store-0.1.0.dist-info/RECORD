@@ -1,0 +1,7 @@
+pycrdt/store/__init__.py,sha256=JFwolmoMkagAM3yxajSgZv0THpqHIWS2NqrcfpDiLXA,167
+pycrdt/store/store.py,sha256=qv_vAuVf9YDj9HdHQq7XIbG1rnYbp5RIHNVCIWwY24s,17827
+pycrdt/store/utils.py,sha256=nUzzLfcUFMNSWMhOFQ2CHwtSvCeyo1_CxLg17hEir9Y,326
+pycrdt_store-0.1.0.dist-info/METADATA,sha256=iolmPT2vsARmrEorJGn3h_pKx8eIk45mOHRKQ_BhwL4,2815
+pycrdt_store-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pycrdt_store-0.1.0.dist-info/licenses/LICENSE,sha256=pmG-JVX79jHySF7yebLqNCfMiqZA1UK6I_15iW47NlM,1071
+pycrdt_store-0.1.0.dist-info/RECORD,,
