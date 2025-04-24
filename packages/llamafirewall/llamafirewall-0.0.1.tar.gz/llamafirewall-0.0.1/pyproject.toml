@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling", "hatch-requirements-txt"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llamafirewall"
+version = "0.0.1"
+authors = [
+  {name = "Coming soon", email = "coming@soon.com"},
+]
+description = "Coming soon"
+dependencies = [
+    "codeshield",
+    "torch",
+    "huggingface_hub",
+    "transformers",
+    "pydantic",
+    "langchain-community",
+    "langchain-openai",
+    "langgraph"
+]
+
+[tool.hatch.build]
+include = [
+"src/*"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/llamafirewall"]

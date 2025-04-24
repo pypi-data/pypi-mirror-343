@@ -1,0 +1,14 @@
+load("@fbcode//buck2/cfg/experimental:set_cfg_modifiers.bzl", "set_cfg_modifiers")
+load("@fbcode_macros//build_defs/lib:third_party.bzl", "third_party")
+
+modifiers = third_party.gen_overrides({
+    "pypi/jsonschema": "4.23.0",
+    "pypi/llama-models": "0.1.4",
+    "pypi/llama-stack": "0.1.4",
+    "pypi/llama-stack-client": "0.1.4",
+    "pypi/pydantic": "2.10.6",
+    "pypi/sentence-transformers": "3.3.1",
+    "pypi/zstandard": "0.23.0",
+})
+
+set_cfg_modifiers(cfg_modifiers = modifiers)

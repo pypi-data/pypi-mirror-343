@@ -1,0 +1,30 @@
+load("@fbcode_macros//build_defs:python_library.bzl", "python_library")
+
+oncall("llamafirewall")
+
+python_library(
+    name = "llamafirewall",
+    srcs = [
+        "__init__.py",
+        "llamafirewall.py",
+    ],
+    # @lint-ignore BUCKLINT needed for OSS
+    base_module = "llamafirewall",
+    deps = [
+        "fbsource//third-party/pypi/typing-extensions:typing-extensions",
+        ":llamafirewall_data_types",
+        "//security/llamafirewall_pre_oss/src/llamafirewall/scanners:llamafirewall_scanners",
+        "//security/llamafirewall_pre_oss/src/llamafirewall/utils:base_llm",
+    ],
+)
+
+python_library(
+    name = "llamafirewall_data_types",
+    srcs = [
+        "llamafirewall_data_types.py",
+    ],
+    # @lint-ignore BUCKLINT needed for OSS
+    base_module = "llamafirewall",
+    deps = [
+    ],
+)
