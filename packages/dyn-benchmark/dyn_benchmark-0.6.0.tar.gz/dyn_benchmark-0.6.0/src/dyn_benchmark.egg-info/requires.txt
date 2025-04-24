@@ -1,0 +1,16 @@
+dyn-core>=0.1
+numpy>=1.17
+scipy
+networkx
+pandas
+scikit-learn
+nbformat
+
+[:python_version < "3.11"]
+typing_extensions
+
+[all]
+dyn-benchmark[pretty]
+
+[pretty]
+alive-progress>3
