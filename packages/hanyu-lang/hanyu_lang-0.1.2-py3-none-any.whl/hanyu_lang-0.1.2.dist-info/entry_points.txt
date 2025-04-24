@@ -1,0 +1,3 @@
+[console_scripts]
+hanyu = hanyu_lang.cli:main
+hanyu-gui = hanyu_gui.main_window:启动
