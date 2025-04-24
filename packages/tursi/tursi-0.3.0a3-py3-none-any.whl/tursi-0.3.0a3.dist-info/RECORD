@@ -1,0 +1,13 @@
+tursi/__init__.py,sha256=3RV4AhJ2UhM6ZQYIHdpb1oIeKk90nvKk55sif1g_YBs,150
+tursi/api.py,sha256=u6E-_5poPp0B7BE5FN1OmfR4VtkmcHoFQp3l5DxPSdI,6451
+tursi/cli.py,sha256=39IpLGfkgQ10oMoP13K1xiZRWcWFkfpMSm-4yhFo7cs,10001
+tursi/daemon.py,sha256=GY7yNgnJ5QMheWyyHYrqb9ZzhqHbQy1E9MyZ1Z7OvBI,15385
+tursi/db.py,sha256=LI90C8B7yIEG2NolGVFsEtjNHMUQzpjrQ44GzuNZzP0,12566
+tursi/engine.py,sha256=HS6g-FOyyhVxdOhLdqQY2ZMrOxiLwECROlK8hQcWyS8,8792
+tursi/model.py,sha256=algEF7gigRWAFHElIjJwEC54AH7QltYo6siUy1TphCQ,16702
+tursi/test.py,sha256=kMS5W5wuwsL9ST_TImxvzkcB-WU1y44FEKPts0WIOts,833
+tursi-0.3.0a3.dist-info/LICENSE,sha256=7zHV3LTQynX5IwmB5HaZHyK9RcRMCMt5OYnSIfj3f6A,1066
+tursi-0.3.0a3.dist-info/METADATA,sha256=SX7Ac4_SaTBKXJu28qLLJpItN0gqoVQw3F8W4aHKhTw,9017
+tursi-0.3.0a3.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+tursi-0.3.0a3.dist-info/entry_points.txt,sha256=4w0JcNcZ19zbr6f84zKVhT8tLa_eK1ieFW1JWwIs3JI,92
+tursi-0.3.0a3.dist-info/RECORD,,
