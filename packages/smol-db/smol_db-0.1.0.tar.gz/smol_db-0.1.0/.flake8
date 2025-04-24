@@ -1,0 +1,9 @@
+[flake8]
+max-line-length = 88
+extend-ignore = E203
+exclude = .git,__pycache__,build,dist,.venv
+per-file-ignores =
+  # Ignore line length in example files
+  examples/*.py:E501
+  # Ignore unused imports in example files
+  examples/*.py:E402
