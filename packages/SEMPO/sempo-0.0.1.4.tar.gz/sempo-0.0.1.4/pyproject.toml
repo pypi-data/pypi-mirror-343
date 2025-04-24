@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling", "torch", "numpy", "tqdm", "pandas", "seaborn", "matplotlib", "visdom"]
+build-backend = "hatchling.build"
+
+[project]
+name = "SEMPO"
+version = "0.0.1.4"
+authors = [
+  { name="Isam", email="isam.bensoltane@live.fr" },
+]
+description = "The 'Singularity Expansion Method - Parameter Optimizer' (SEMPO) package is a set of tools to retrieve the parameters of the Singularity Expansion in either its classical form, the Generalized Drude-Lorentz model (GDL) or the Möbius Transformations in the Singularity Expansion (MTSE), or of the Singularity and Zero Factorization (SZF). "
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]

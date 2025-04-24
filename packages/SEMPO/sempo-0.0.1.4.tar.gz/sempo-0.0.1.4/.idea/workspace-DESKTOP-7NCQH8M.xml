@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="633e63ad-f2ab-480d-85d8-213241cdc388" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2QBkykxlyMYTkwE4z2QcXk1uCDW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Ben Soltane/OneDrive/Fresnel/2021-2024_Thèse/04_Travaux/037_SEM_Extraction/Framework",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ben Soltane\OneDrive\Fresnel\2021-2024_Thèse\04_Travaux\037_SEM_Extraction\Framework" />
+      <recent name="C:\Users\Ben Soltane\OneDrive\Fresnel\2021-2024_Thèse\04_Travaux\034_MOSEM extension hors spectre" />
+      <recent name="C:\Users\Ben Soltane\OneDrive\Fresnel\2021-2024_Thèse\04_Travaux\034_MOSEM extension hors spectre\old" />
+      <recent name="C:\Users\Ben Soltane\OneDrive\Fresnel\2021-2024_Thèse\04_Travaux\033_Permittivity_Extend" />
+      <recent name="C:\Users\Ben Soltane\OneDrive\Fresnel\2021-2024_Thèse\04_Travaux\033_Permittivity_Extend\Tools" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ben Soltane\OneDrive\Fresnel\2021-2024_Thèse\04_Travaux\037_SEM_Extraction\data" />
+      <recent name="C:\Users\Ben Soltane\OneDrive\Fresnel\2021-2024_Thèse\04_Travaux\034_MOSEM extension hors spectre" />
+      <recent name="C:\Users\Ben Soltane\OneDrive\Fresnel\2021-2024_Thèse\04_Travaux\034_MOSEM extension hors spectre\old" />
+      <recent name="C:\Users\Ben Soltane\OneDrive\Fresnel\2021-2024_Thèse\04_Travaux\011_MOSEM_Permittivity\log\GDL" />
+      <recent name="C:\Users\Ben Soltane\OneDrive\Fresnel\2021-2024_Thèse\04_Travaux\011_MOSEM_Permittivity\old" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="633e63ad-f2ab-480d-85d8-213241cdc388" name="Changes" comment="" />
+      <created>1684834618518</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684834618518</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+</project>
