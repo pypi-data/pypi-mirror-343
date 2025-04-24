@@ -1,0 +1,10 @@
+pyco2stats/__init__.py,sha256=Vkk4UBoU6PMQIKmhMbPZZTKgnmuOXNMy19RgXcIfAO0,337
+pyco2stats/gaussian_mixtures.py,sha256=_zIp6BHdk65AsJlNR8lJ7RnSYUli13qzWctcGoRy02Q,17065
+pyco2stats/propagate_errors.py,sha256=ZMe0-MJNoW6_-Mz0ARGG-XPLIKEXcBcQduRBGAePLOc,18540
+pyco2stats/sinclair.py,sha256=1cLJvh5otwGPTdqMoWW9_fh99DCWxKnWfv_ziSv2cEk,4115
+pyco2stats/stats.py,sha256=KRsGPspybrpAptI0Sx_Q4aJm5qJWp_eZuFjEYE2-Y6s,46921
+pyco2stats/visualize.py,sha256=bBehvku-x6nMI-I-swfIJnL6WYTejWlBh4J0cdOlRIY,9337
+pyco2stats-0.1.4.dist-info/METADATA,sha256=V_4g1-HxoVYah6IT-Va1ChSyydP0Qqta5NmsNijhEj4,2661
+pyco2stats-0.1.4.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+pyco2stats-0.1.4.dist-info/top_level.txt,sha256=RyzxuBzvyhZJMM0l5tgWGTOTEN03KehaslLZ9HIh0jE,11
+pyco2stats-0.1.4.dist-info/RECORD,,
