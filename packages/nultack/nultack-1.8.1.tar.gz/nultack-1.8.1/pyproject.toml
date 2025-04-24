@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nultack"
+version = "1.8.1"
+authors = [
+    {name = "Eternals-Satya", email = "eternals.tolong@gmail.com"},
+]
+description = "Nültack - Python Code Steganography Library"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Security :: Cryptography",
+]
+
+[project.urls]
+Homepage = "https://github.com/Eternals-Satya/Nultack"
+Repository = "https://github.com/Eternals-Satya/Nultack"
+Issues = "https://github.com/Eternals-Satya/Nultack/issues"

@@ -1,0 +1,128 @@
+Metadata-Version: 2.4
+Name: nultack
+Version: 1.8.1
+Summary: Nültack - Python Code Steganography Library
+Home-page: https://github.com/Eternals-Satya/Nultack
+Author: Eternals-Satya
+Author-email: Eternals-Satya <eternals.tolong@gmail.com>
+Project-URL: Homepage, https://github.com/Eternals-Satya/Nultack
+Project-URL: Repository, https://github.com/Eternals-Satya/Nultack
+Project-URL: Issues, https://github.com/Eternals-Satya/Nultack/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Security :: Cryptography
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# Nültack - Python Code Steganography Library
+
+**Versi:** 1.8.0  
+**Lisensi:** MIT  
+**Author:** [Eternals-Satya](https://github.com/Eternals-Satya)
+
+## Apa Itu Nültack?
+
+**Nültack** adalah pustaka Python untuk menyembunyikan (`encode`), mengeksekusi (`execute`), dan melindungi (`protect`) kode Python dalam bentuk payload yang sulit dianalisis secara statis. Cocok untuk penggunaan seperti anti-debugging, anti-AI, dan sistem keamanan tingkat lanjut.
+
+---
+
+## Instalasi
+
+```bash
+pip install nultack
+```
+Atau untuk memastikan versi terbaru:
+```bash
+pip install --upgrade --no-cache-dir nultack==1.8.0
+```
+
+---
+
+## Fitur Utama
+
+**Encode:** Mengubah kode Python menjadi payload yang terenkripsi.
+**Execute:** Menjalankan payload terenkripsi tanpa perlu decode manual.
+**Protect:** Menyisipkan mekanisme perlindungan seperti anti-decode, anti-debugger, dan anti-AI static analyzer.
+**Hide:** Membuat payload siap eksekusi dengan satu baris.
+
+
+
+---
+
+## Contoh Penggunaan
+
+1. Encode Kode Python
+```
+import nultack
+
+source_code = '''
+print("Halo dari dalam payload!")
+'''
+
+payload = nultack.encode(source_code)
+print(payload)
+```
+2. Eksekusi Payload
+```
+import nultack
+
+payload = "<payload yang dihasilkan>"
+nultack.execute(payload)
+```
+3. Shortcut: hide()
+```
+import nultack
+
+source = '''
+print("Payload rahasia...")
+'''
+
+print(nultack.hide(source))
+```
+Output:
+```
+import nultack; nultack.execute("payload_terenkripsi_di_sini")
+```
+
+---
+
+## Fitur Perlindungan
+Kelas NültackProtector dapat digunakan untuk menyisipkan proteksi tambahan terhadap kode:
+```
+from nultack.protection import NültackProtector
+
+protected_code = NültackProtector().protect('''
+print("Coba bypass aku kalau bisa.")
+''')
+
+print(protected_code)
+```
+
+---
+
+### Docs
+GitHub: [Eternals](github.com/Eternals-Satya/Nultack)
+TikTok: [gw](@anakkecil_s)
+PyPI: pypi.org/project/nultack
+
+
+
+---
+
+## Contribute
+Pull request dan laporan isu sangat diterima! Jangan ragu untuk ikut serta dalam pengembangan.
+
+
+---
+
+Copyright © 2025
+Eternals dari [Vlazars](https://whatsapp.com/channel/0029VaZLpqf8aKvHckUi4f1z)
+
+---
+
