@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+mcp_context_pointer/__init__.py
+mcp_context_pointer/py.typed
+mcp_context_pointer.egg-info/PKG-INFO
+mcp_context_pointer.egg-info/SOURCES.txt
+mcp_context_pointer.egg-info/dependency_links.txt
+mcp_context_pointer.egg-info/requires.txt
+mcp_context_pointer.egg-info/top_level.txt
+tests/test_version.py

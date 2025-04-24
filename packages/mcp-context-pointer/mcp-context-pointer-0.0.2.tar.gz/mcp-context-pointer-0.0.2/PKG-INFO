@@ -1,0 +1,173 @@
+Metadata-Version: 2.1
+Name: mcp-context-pointer
+Version: 0.0.2
+Summary: Coming soon
+Author-email: Jasmine Poon <jasminejpoon@gmail.com>
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/thirdplane/mcp-context-pointer
+Project-URL: Source, https://github.com/thirdplane/mcp-context-pointer
+Project-URL: Issues, https://github.com/thirdplane/mcp-context-pointer/issues
+Keywords: mcp,context pointer,llm,memory,ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+
+# mcp_context_pointer
+
+**A plug-in extension for [Model Context Protocol (MCP)](https://modelcontextprotocol.io) enabling Cross-App Memory Pointers (ContextPointer block) and seamless use of vaulted memory with LLM agents.**  
+_Built by Third Plane._
+
+[![PyPI version](https://badge.fury.io/py/mcp-context-pointer.svg)](https://pypi.org/project/mcp-context-pointer/)
+[![MCP compatibility](https://img.shields.io/badge/mcp-v0.3+-green)](https://github.com/modelcontextprotocol/spec)
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache_2.0-blue.svg)](LICENSE)
+
+---
+
+## 🚀 What is this?
+
+`mcp_context_pointer` is an optional plug-in for the MCP Python SDK.  
+It provides the **ContextPointer block**—an efficient, privacy-stable, cross-application pointer for referencing conversation history, memory chunks, or arbitrary state, backed by a vault service.
+
+- **Save up to 40–60% on LLM context tokens**
+- **Enable compliance (GDPR, Consent Ledger) and auditability**
+- **Point to fast, managed vaults** or your own self-hosted instance
+
+Supports:
+- Adaptive inlining out-of-the-box (fallbacks when vault or network is slow)
+- Signature verification (Ed25519/PASETO or HMAC)
+- Works with **any** MCP-compliant service, agent, or app
+
+---
+
+## 🛠️ Installation
+
+```bash
+pip install mcp-context-pointer
+# or as an MCP extra:
+pip install "modelcontextprotocol[context-pointer]"
+```
+
+---
+
+## 💡 Quick Start
+
+```python
+from mcp_context_pointer.block import ContextPointerBlock
+from mcp.blocks.registry import get_block
+import requests
+
+# Compose a conversation:
+history = [
+    {"role": "user", "text": "Can you summarize our last meeting?"},
+    {"role": "assistant", "text": "Certainly, here's a short summary..."},
+    {"role": "user", "text": "What was the action item?"}
+]
+
+# Inline last N, pointerize the rest:
+from mcp_context_pointer.wrap import wrap_history_with_pointer
+
+new_blocks = wrap_history_with_pointer(
+    history=history,
+    n_inline=2,
+    vault_url="https://vault.thirdplane.io"          # managed or self-host
+)
+
+# Send new_blocks as your MCP resource.blocks[]
+```
+
+---
+
+## 🏛️ ContextPointer Block Spec (v1)
+
+```json
+{
+  "kind": "context_pointer",
+  "mrl":  "ocsv1://vault.thirdplane.io/u/1234/c/77#t0-4",
+  "sig":  "{signature}",
+  "privacy": "app_private",
+  "window": {"start": 0, "end": 256},
+  "maxCost": 512
+}
+```
+- **mrl:** Opaque, signed Memory Reference Locator. Supports privacy, region pinning, selectors.
+- **sig:** Signature (Ed25519/PASETO default, HMAC fallback)
+- **privacy:** Recommended: `'app_private'` (default: cross-app only if user explicit)
+- **window:** Optional byte or token range
+- **maxCost:** LLM context size hint
+
+---
+
+## 🔒 Security
+
+- All pointers must be signed and verified on-dereference.
+- `privacy` flags default to non-leaky mode; PII should *never* appear in `mrl`.
+- Vault fetch enforces same-site/tenant and access logging.
+- Supports Ed25519 signatures by default; accepts legacy HMAC.
+
+---
+
+## 🏎️ Performance
+
+- Fetch pointer blocks from edge-cached managed vaults in <35ms (p95, global).
+- Fallback: If vault unreachable, package will inline fallback for full compatibility ("never worse" policy).
+- Prometheus (or JSON) metrics on all pointer ops.
+
+---
+
+## 📝 License
+
+Apache-2.0 — matches MCP ecosystem, allows both independent & up-streaming use, and is enterprise-friendly.  
+Copyright (c) <Jasmine Poon>
+
+---
+
+## 📡 Roadmap
+
+- 🚀 Upstream into MCP core once the ContextPointer profile is standardized
+- Edge cache + multi-region support for managed vault
+- Optional Consent Ledger & Answer-Cache APIs
+- Thin wrappers for Node, Go, Rust
+
+---
+
+## 🤝 Acknowledgments
+
+Special thanks to the MCP community, spec maintainers, and early design partners.
+Questions? [Open an issue](https://github.com/thirdplane/mcp-context-pointer/issues) or DM <your handle>.
+
+---
+
+## ⭐ About Third Plane
+
+Third Plane is building the "Cloudflare for AI State"—portable, privacy-stable, edge-cached memory for every AI app.
+
+---
+
+## Legal
+
+This package is independent of, but interoperates with, the core MCP SDK.  
+No license or support is implied by the Model Context Protocol working group.
+
+---
+
+**Start saving tokens and gaining memory:**
+[Read the full docs ➔](https://github.com/thirdplane/mcp-context-pointer/)
+or
+[Try managed vault for free ➔](https://vault.thirdplane.io)
+
+---
+
+### FAQ
+
+**Q: Can I use this without a managed vault?**  
+A: Yes—just set `vault_url` to your own self-hosted endpoint.
+
+**Q: How do I upstream to MCP if the spec merges?**  
+A: Final API/class names will be stable; your `wrap()` just imports from MCP core once standardized.
+
+**Q: Does this lock me in?**  
+A: No. It is Apache-2.0, and all data is exportable via MRL. 
