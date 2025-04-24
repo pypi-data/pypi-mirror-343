@@ -1,0 +1,2 @@
+[console_scripts]
+medcalc = medcalc.__main__:main
