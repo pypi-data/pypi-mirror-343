@@ -1,0 +1,4 @@
+cpuspeed
+dtox
+main
+verif_apt
