@@ -1,0 +1,65 @@
+import logging
+import requests
+
+# from ..core.request_handler import RequestHandler
+from ..core.request_handler import RequestHandler
+from ..core.custom_exceptions import *
+from ..models.datasource_model import *
+
+LOGGER = logging.getLogger('allie_sdk_logger')
+
+class AlationDatasource(RequestHandler):
+    """Alation REST API Documents Methods."""
+
+    def __init__(self, access_token: str, session: requests.Session, host: str):
+        """Creates an instance of the Documents  object.
+        Args:
+            access_token (str): Alation REST API Access Token.
+            session (requests.Session): Python requests common session.
+            host (str): Alation URL.
+        """
+        super().__init__(session = session, host = host, access_token=access_token)
+
+    def get_ocf_datasources(self, query_params:OCFDatasourceParams = None) -> list[OCFDatasource]:
+        """Query multiple Alation datasources and return their details
+        
+        Args:
+            query_params (OCFDatasourceParams): REST API Datasources Query Parameters.
+            
+        Returns:
+            list[OCFDatasource]: Alation Datasources
+            
+        Raises:
+            requests.HTTPError: If the API returns a non-success status code.
+        """
+        validate_query_params(query_params, OCFDatasourceParams)
+        params = query_params.generate_params_dict() if query_params else None
+
+        datasources = self.get(url = '/integration/v2/datasource/', query_params = params)
+
+        if datasources:
+            datasources_checked = [OCFDatasource.from_api_response(datasource) for datasource in datasources]
+            return datasources_checked
+        return []
+
+    def get_native_datasources(self, query_params:NativeDatasourceParams = None) -> list[NativeDatasource]:
+        """Query multiple Alation datasources and return their details
+        
+        Args:
+            query_params (NativeDatasourceParams): REST API Datasources Query Parameters.
+            
+        Returns:
+            list[NativeDatasource]: Alation NativeDatasources
+            
+        Raises:
+            requests.HTTPError: If the API returns a non-success status code.
+        """
+        validate_query_params(query_params, NativeDatasourceParams)
+        params = query_params.generate_params_dict() if query_params else None
+
+        datasources = self.get(url = '/integration/v1/datasource/', query_params = params)
+
+        if datasources:
+            datasources_checked = [NativeDatasource.from_api_response(datasource) for datasource in datasources]
+            return datasources_checked
+        return []
