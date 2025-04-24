@@ -1,0 +1,12 @@
+dyn/_utils.py,sha256=es7ZzN-piwdkLcgJy4ggeyZvSPnGoo12goK_VVx9pSU,11086
+dyn/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dyn/core/aggregate_csv.py,sha256=oLVsNDpGTQiC0uhiJBCROT751snHNXlW2Pp6ve_sPcE,1664
+dyn/core/communities.py,sha256=FKNuTXZaCS6w9XDNnrqkhkpi7iTZ9hgqomJYdWT658U,17429
+dyn/core/community_graphs.py,sha256=SD0ucyH3IT5Ld9Aaq7BTHYYLjfzJSrJgDYZCYwRVPSo,10228
+dyn/core/files_io.py,sha256=D_1TLZHzIFGMtv6uaenv5jhPgRuy7YSMILfR_Hd0BmU,6461
+dyn/core/temporal_network.py,sha256=6NFuNSwqMEPFc8bXtqJBi6J0sJ_HzUUwxWrBgkctx-A,638
+dyn_core-0.0.1.dist-info/licenses/LICENSE,sha256=khztmItrKvttEllKE-PARdTypQonTcCitbQStydhHvg,631
+dyn_core-0.0.1.dist-info/METADATA,sha256=L5Czf_Acr1j-73HSxgpgNvhCech4RlntFzHSvFYtxfY,1929
+dyn_core-0.0.1.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+dyn_core-0.0.1.dist-info/top_level.txt,sha256=RFSVySqb_I5Lt81IGJHJ1CnvI0UVeo8O5mcgF9o7T3U,4
+dyn_core-0.0.1.dist-info/RECORD,,
