@@ -1,0 +1,11 @@
+pypvroof/__init__.py,sha256=2p1NtVg_q9owjp4wlNs0ERBo82XMju8HtQ0YdBsWJ3A,164
+pypvroof/main.py,sha256=DViyZjx2yWsVJXD_oaf4vIfKN8OjixBUUeRpmubGY4k,11124
+pypvroof/methods.py,sha256=3mPMG2QYDnH5ge2QD7_hLHoiJVsdFOuhhYUAFp-PjS4,9567
+pypvroof/setup.py,sha256=j6dV_mM1VT48gWn-N2OzGRqMgj3qVFkpYZA016wTueA,1038
+pypvroof/utils.py,sha256=mifRErrev413KveekgfIXNWCJRM4aqGJCOu2lQecLgc,19720
+pypvroof/data/lut_france.json,sha256=lNIb0DW_Pkv3BzMCZh635rM6BQmxdbQUHcN-6dC-e2k,115769
+pypvroof-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pypvroof-0.1.0.dist-info/METADATA,sha256=MSpMxN3IFb5LeFbYZQ2wkqt4MBrfYmoqP5WHWrZp0aM,6348
+pypvroof-0.1.0.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+pypvroof-0.1.0.dist-info/top_level.txt,sha256=DRsOdV9m_RyJEYZ6Stv9ZqgntnYA12nZecWPnT44mHE,9
+pypvroof-0.1.0.dist-info/RECORD,,
