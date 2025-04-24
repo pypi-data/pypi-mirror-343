@@ -1,0 +1,3 @@
+dashboard.devserver:
+  enabled: true  # default based on availability
+  port: 11111  # default to a high available port

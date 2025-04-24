@@ -1,0 +1,14 @@
+http_client:
+  # Timeout error will occur if the HTTP client does not receive a response within 10
+  # seconds (default is 30 seconds).
+  timeout: 10.0
+
+  # Transport configuration (optional)
+  transport:
+    # You can customize the default transport implementation. The values shown are the
+    # defaults, and you only need to set them if you want to provide different values.
+    type: httpx.AsyncHTTPTransport
+    retries: 0
+    verify: true
+    http1: true
+    http2: false
