@@ -1,0 +1,2 @@
+[girder.plugin]
+sem_viewer = girder_sem_viewer:SemViewerPlugin
