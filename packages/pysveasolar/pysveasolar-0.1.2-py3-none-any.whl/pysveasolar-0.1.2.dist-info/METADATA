@@ -1,0 +1,53 @@
+Metadata-Version: 2.3
+Name: pysveasolar
+Version: 0.1.2
+Summary: 
+Author: Johan Nenzén
+Author-email: johan.nanzen@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aiohttp (>=3.11.14,<4.0.0)
+Requires-Dist: dataclass-wizard (>=0.35.0,<0.36.0)
+Requires-Dist: poetry-core (>=2.1.2,<3.0.0)
+Requires-Dist: pyjwt (>=2.8.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# PySveaSolar
+
+PySveaSolar is a Python package for managing and interacting with Svea Solar systems. It provides models and utilities to handle various aspects of solar energy systems, electric vehicles, and related data.
+
+## Features
+
+- Manage battery and electric vehicle data
+- Handle badges and their statuses
+- Retrieve and update vehicle details
+- Access weather and spot price information
+- Monitor current status of sources and destinations
+
+## Installation
+
+To install the package, use `poetry`:
+
+```bash
+poetry add pysveasolar
+```
+
+### Usage
+```bash
+usage: cli.py [-h] {login,mydata,user,dashboard,system,details,battery,ws} ...
+
+positional arguments:
+  {login,mydata,user,dashboard,system,details,battery,ws}
+
+options:
+  -h, --help            show this help message and exit
+```
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request.
+
+### Disclaimer
+This client is not officially supported by Svea Solar. It is a community project, and it is not guaranteed to be up-to-date with the latest changes in the API.
+
