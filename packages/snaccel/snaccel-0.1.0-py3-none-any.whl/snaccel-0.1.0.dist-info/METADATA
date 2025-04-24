@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: snaccel
+Version: 0.1.0
+Summary: A compiler that translates functional programs written in Python into C++ for HPC and machine learning
+Author-email: Peng Jiang <pengjiang030@gmail.com>
+License: MIT
+Keywords: python,compiler,high-performance computing,machine learning
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: multimethod
+Requires-Dist: ninja
+Requires-Dist: pyvis
+Requires-Dist: decompyle3
+
+# Snaccel
+
+Snaccel is a Python-based compiler that translates Python code into high-performance CUDA, C++, or OpenCL code for scientific and machine learning applications.
+
