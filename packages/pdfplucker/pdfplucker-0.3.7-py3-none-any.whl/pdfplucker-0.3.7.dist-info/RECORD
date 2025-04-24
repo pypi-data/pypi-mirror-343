@@ -1,0 +1,10 @@
+pdfplucker/__init__.py,sha256=G4NqDH5tt9cTEghc3ynzDtm1cJFThfyJMkfGEtMzs1g,576
+pdfplucker/cli.py,sha256=W76Hxuwg0e7Z-IIsGwnq6XM02-4qOV46yGd-bXhxJR8,10249
+pdfplucker/core.py,sha256=kgCEvnDyyxPUtTZrtKdRHgOnmsCP8v1gflggH_YBHQM,3101
+pdfplucker/processor.py,sha256=BxHUeDVddcF5hQGgQBNguq3vkwXObTbPjZgPFUqoCZ4,11552
+pdfplucker/utils.py,sha256=MQSadS9SVjykyEBYlhFAklNXqZ9jMAvzRP681F_jxAQ,5455
+pdfplucker-0.3.7.dist-info/LICENSE.txt,sha256=9TLansCsb-8QO7-2DMG350B5W5uAmGLLhhqfanfSNE8,1075
+pdfplucker-0.3.7.dist-info/METADATA,sha256=OmVfiZXI0I6BcusO2XtfAs-QZCoLtoSSHGYOMGr00SY,8767
+pdfplucker-0.3.7.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+pdfplucker-0.3.7.dist-info/entry_points.txt,sha256=lnzlS2FcdU5-xELw2PGwnX07R2H3AUa3F47cQQ-me5U,50
+pdfplucker-0.3.7.dist-info/RECORD,,
