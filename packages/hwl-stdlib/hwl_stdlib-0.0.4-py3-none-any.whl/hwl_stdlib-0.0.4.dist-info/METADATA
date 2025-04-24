@@ -1,0 +1,125 @@
+Metadata-Version: 2.2
+Name: hwl-stdlib
+Version: 0.0.4
+Summary: A standard library used by me frequently. A gift from me, to me, by me.
+Home-page: https://github.com/davidplajner
+Author: David Plajner
+Author-email: dplajner@hellmann.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# stdlib
+
+A standard library used by me frequently. A gift from me, to me, by me. 🎁
+
+`stdlib` is my personal collection of Python functions, utilities, and snippets that I frequently use in my projects.
+
+## Features
+
+# Utility Library
+
+This library provides a set of utility functions for common tasks such as date manipulation, random data generation, and validation.
+
+
+### `help()`
+Prints a list of all available functions in the module.
+
+### `get_countries()`
+Returns a list of countries in alphabetical order.
+
+### `get_currencies()`
+Returns a list of currencies with their symbols.
+
+### `get_payment_terms()`
+Returns a list of common payment terms.
+
+### `get_shipping_metrics()`
+Returns a list of common shipping metrics.
+
+### `get_current_timestamp(timezone="Europe/Amsterdam")`
+Returns the current timestamp in the specified timezone (default is Europe/Amsterdam) in ISO string format.
+
+### `add_business_hours(start: datetime, hours: int) -> datetime`
+Adds business hours to a given datetime, excluding weekends.
+
+### `get_user_timestamp(user_timezone)`
+Returns a datetime stamp based on the user's timezone.
+
+### `generate_uuid()`
+Generates a unique UUID.
+
+### `generate_hashed_password(password)`
+Generates a hashed version of the given password.
+
+### `get_seasonal_message(today=None)`
+Generates a seasonal message based on the current date.
+
+### `get_today_day()`
+Returns the current day of the week as a string.
+
+### `validate_email(email: str) -> bool`
+Validates an email address using a regular expression.
+
+### `get_weekday_number(date: datetime) -> int`
+Returns the day of the week as a number (Monday is 0, Sunday is 6).
+
+### `get_first_day_of_month(year: int, month: int) -> date`
+Returns the first day of the specified month.
+
+### `get_random_color() -> str`
+Generates and returns a random color in hexadecimal format.
+
+### `is_weekend(date: datetime) -> bool`
+Returns `True` if the given date is a weekend (Saturday or Sunday), `False` otherwise.
+
+### `generate_unique_filename(filename: str) -> str`
+Generates a unique filename using a UUID and the original file extension.
+
+### `extract_domain_from_email(email: str) -> str`
+Extracts and returns the domain from an email address.
+
+### `get_day_of_year(date: date) -> int`
+Returns the day of the year (1 to 365 or 366).
+
+### `get_file_size(file_path: str) -> str`
+Returns the size of a file at the given path as a human-readable string.
+
+### `generate_random_string(length: int = 8) -> str`
+Generates a random alphanumeric string of a specified length.
+
+### `get_time_difference(start_time: datetime, end_time: datetime) -> timedelta`
+Returns the difference between two `datetime` objects as a `timedelta`.
+
+### `convert_timezone(dt: datetime, from_tz: str, to_tz: str) -> datetime`
+Converts a `datetime` object from one timezone to another.
+
+### `get_days_in_month(year: int, month: int) -> int`
+Returns the number of days in a specified month of a given year.
+
+### `get_age(birthdate: date) -> int`
+Calculates the age based on the provided birthdate.
+
+### `get_day_from_string(get_current_timestamp())`
+Returns the day of a given timestamp in the format of: 2025-04-23T14:47:45.437576+02:00
+
+This format is being returned by get_current_timestamp() so best to use it together
+
+## Installation
+
+You can install `stdlib` directly from your local repository and import it as 'import stdlib':
+
+```bash
+pip install hwl-stdlib
+
+
