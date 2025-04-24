@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: sushengjie
+Version: 0.0.1
+Summary: A simple example package
+Author: Zephyr
+Author-email: zephyrzhong248@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# SuShengJie Package
+
+This is an example Python package.
+
+## Installation
+
+```bash
+pip install sushengjie
+```
+
+## Usage
+
+```python
+import sushengjie.core
+
+message = sushengjie.core.greet("World")
+print(message)
+```
+
+## Features
+
+- Provides a simple greeting function.
+- (Add more features here)
+
+## License
+
+This project is licensed under the MIT License - see the `LICENSE` file for details.
