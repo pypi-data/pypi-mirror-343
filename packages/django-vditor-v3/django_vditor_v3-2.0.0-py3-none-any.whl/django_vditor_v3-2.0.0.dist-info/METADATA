@@ -1,0 +1,249 @@
+Metadata-Version: 2.1
+Name: django-vditor-v3
+Version: 2.0.0
+Summary: A WYSIWYG editor plugin made by vditor for django
+License: MIT
+Keywords: django,editor,django-application
+Author-email: mircool <ynyjyz@163.com>,pi-dal <hi@pi-dal.com>
+Requires-Python: >=3.8
+Requires-Dist: django<6.0,>=2.2
+Project-URL: Documentation, https://github.com/mircool/django-vditor-v3/blob/main/README.md
+Project-URL: Homepage, https://pypi.org/project/django-vditor-v3
+Project-URL: Repository, https://github.com/mircool/django-vditor-v3
+Description-Content-Type: text/markdown
+
+<h1 align="center">django-vditor-v3</h1>
+<p align="center">
+<img src="https://cdn.jsdelivr.net/gh/pi-dal/figure-bed@master/3A0F231C-4FF4-4041-A571-2CAA20CA5030.png" width="450" align="middle"></img>
+</p>
+<p align="center">
+<strong>django-vditor-v3</strong> 是一个基于 <a href="https://github.com/Vanessa219/vditor">vditor</a> 的 <a href="https://github.com/django/django">django</a> Markdown编辑器插件应用。
+<br>
+<strong>django-vditor-v3</strong> 是 <a href="https://github.com/pi-dal/django-vditor">django-vditor</a> 的分支版本，增加了对Django 5.0+的支持。
+<br><br>
+<a title="python-version" target="_blank" href="https://github.com/mircool/django-vditor-v3"><img alt="python-version" src="https://img.shields.io/badge/python-3.8+-purper.svg"></a>
+<a title="django-version" target="_blank" href="https://pdm.fming.dev"><img alt="django-version" src="https://img.shields.io/badge/django-2.2%20to%205.x-green.svg"></a>
+<a title="last-commit" target="_blank" href="https://github.com/mircool/django-vditor-v3/commits/main"><img src="https://img.shields.io/github/last-commit/mircool/django-vditor-v3?color=blue"></a>
+<a title="pdm-managed" target="_blank" href="https://github.com/frostming/pdm"><img src="https://img.shields.io/badge/pdm-managed-blueviolet"></a>
+<br>
+<a title="Codacy-Badge" target="_blank" href="https://www.codacy.com/gh/mircool/django-vditor-v3/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mircool/django-vditor-v3&amp;utm_campaign=Badge_Grade"><img src="https://img.shields.io/codacy/grade/d23000f233344a9891189a816b58f9b1"></a>
+<a title="Codacy-Coveralls-Badge" target="_blank" href="https://www.codacy.com/gh/mircool/django-vditor-v3/dashboard?utm_source=github.com&utm_medium=referral&utm_content=mircool/django-vditor-v3&utm_campaign=Badge_Coverage"><img src="https://img.shields.io/codacy/coverage/d23000f233344a9891189a816b58f9b1"></a>
+<a title="pypi" target="_blank" href="https://pypi.org/manage/project/django-vditor-v3/releases"><img src="https://img.shields.io/pypi/v/django-vditor-v3"></a><br>
+<a title="license" target="_blank" href="https://github.com/mircool/django-vditor-v3/blob/main/LICENSE"><img src="https://img.shields.io/github/license/mircool/django-vditor-v3"/></a>
+<br>
+<a title="GitHub-Watchers" target="_blank" href="https://github.com/mircool/django-vditor-v3/watchers"><img src="https://img.shields.io/github/watchers/mircool/django-vditor-v3.svg?label=Watchers&style=social"></a>
+<a title="GitHub-Stars" target="_blank" href="https://github.com/mircool/django-vditor-v3/stargazers"><img src="https://img.shields.io/github/stars/mircool/django-vditor-v3.svg?label=Stars&style=social"></a>
+<a title="GitHub-Forks" target="_blank" href="https://github.com/mircool/django-vditor-v3/network/members"><img src="https://img.shields.io/github/forks/mircool/django-vditor-v3.svg?label=Forks&style=social"></a>
+<a title="Author-GitHub-Followers" target="_blank" href="https://github.com/mircool"><img src="https://img.shields.io/github/followers/mircool.svg?label=Followers&style=social"></a>
+</p>
+
+## 特性
+
+- 几乎包含所有Vditor功能
+  - 支持三种编辑模式：所见即所得（wysiwyg）、即时渲染（ir）、分屏预览（sv）
+  - 支持大纲、数学公式、脑图、图表、流程图、甘特图、时序图、五线谱、多媒体、语音阅读、标题锚点、代码高亮和复制、graphviz渲染
+  - 内置安全过滤、导出、任务列表、多平台预览、多主题切换、复制到微信公众号/知乎功能
+  - 实现CommonMark和GFM规范，格式化Markdown并查看语法树，支持10+种配置
+  - 工具栏包含36+种操作。除了支持扩展外，还可以自定义每个项目的快捷键、提示、提示位置、图标、点击事件、类名和子工具栏
+  - 可以使用拖放、剪贴板粘贴上传，显示实时上传进度，并支持CORS跨域上传
+  - 粘贴的HTML会自动转换为Markdown。如果粘贴内容包含外部链接图片，可以通过指定接口上传到服务器
+  - 支持主窗口大小拖放、字符计数
+  - 多主题支持，内置三套黑白主题
+  - 多语言支持，内置中文、英文和韩文本地化
+  - 支持主流浏览器，对移动设备友好
+- 为模型提供VditorTextField字段，可以直接在django admin中显示
+- 为Form和ModelForm提供VditorTextFormField
+- 为Admin自定义小部件提供VditorWidget
+
+## 快速开始
+
+- 安装
+
+```bash
+    # pip (从PyPI安装)
+    pip install django-vditor-v3
+    # pipenv
+    pipenv install django-vditor-v3
+    # poetry
+    poetry add django-vditor-v3
+    # pdm
+    pdm add django-vditor-v3
+```
+
+- 从TestPyPI安装（用于测试最新开发版本）：
+
+```bash
+    # 从TestPyPI安装
+    pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ django-vditor-v3
+```
+
+- 将`vditor`添加到你的INSTALLED_APPS设置中，如下所示：
+
+```python
+    INSTALLED_APPS = [
+        ...
+        'vditor',
+    ]
+
+    # 对于Django 3.2+，指定DEFAULT_AUTO_FIELD以避免警告
+    DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'  # 或 'django.db.models.BigAutoField'
+```
+
+- 为django3.0+添加框架设置，如下所示：
+
+```python
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+```
+
+- 在你的设置中添加'media'url，如下所示：
+
+```python
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_URL = '/media/'
+
+```
+
+- 在你的urls.py中添加url，如下所示：
+
+```python
+from django.conf.urls import url, include
+from django.conf.urls.static import static
+from django.conf import settings
+...
+
+urlpatterns = [
+    ...
+    path('vditor/', include('vditor.urls'))
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+```
+
+- 编写你的模型，如下所示：
+
+```python
+from django.db import models
+from vditor.fields import VditorTextField
+
+class ExampleModel(models.Model):
+    name = models.CharField(max_length=10)
+    content = VditorTextField()
+```
+
+- 在`admin.py`中注册你的模型
+- 运行`python manage.py makemigrations`和`python manage.py migrate`来创建你的模型
+- 登录Admin，你可以看到一个如下所示的markdown编辑器文本字段：
+
+![django-vditor](https://github.com/pi-dal/figure-bed/blob/master/django-vditor.gif?raw=true)
+
+## 使用方法
+
+### 在模型中使用Markdown编辑字段
+
+使用Markdown编辑模型中的字段，我们只需将模型的`TextField`替换为`VditorTextField`。
+
+```python
+from django.db import models
+from vditor.fields import VditorTextField
+
+class ExampleModel(models.Model):
+    name = models.CharField(max_length = 10)
+    content = VditorTextField()
+```
+
+在后台Admin中，将自动显示markdown编辑富文本。
+
+在前端模板中使用时，可以像这样使用：
+
+```html
+{% load static %}
+<! DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta http-equiv = "Content-Type" content = "text/html; charset = utf-8" />
+    </head>
+    <body>
+        <form method = "post" action = "./">
+            {% csrf_token %}
+            {{ form.media }}
+            <ul style="display: flex">
+                {{ form.as_p }}
+            </ul>
+            <p> <input type = "submit" value = "post"> </p>
+        </form>
+    </body>
+</html>
+
+```
+
+### 在Form中使用markdown编辑字段
+
+在Form中使用markdown编辑字段，使用`VditorTextFormField`代替`forms.CharField`，如下所示：
+
+```python
+from vditor.fields import VditorTextFormField
+
+class VditorForm(forms.Form):
+    name = forms.CharField()
+    content = VditorTextFormField()
+```
+
+`ModelForm`可以自动将相应的模型字段转换为表单字段，可以正常使用：
+
+```python
+class VditorModleForm(forms.ModelForm):
+
+    class Meta:
+        model = ExampleModel
+        fields = '__all__'
+```
+
+### 在admin中使用markdown小部件
+
+在admin中使用markdown小部件，如下所示：
+
+```python
+from django.contrib import admin
+from django.db import models
+
+# Register your models here.
+from. import models as demo_models
+from vditor.widgets import VditorWidget
+
+
+class ExampleModelAdmin(admin.ModelAdmin):
+    formfield_overrides = {
+        models.TextField: {'widget': VditorWidget}
+    }
+
+
+admin.site.register(demo_models.ExampleModel, ExampleModelAdmin)
+```
+
+### 自定义工具栏
+
+在`settings`中添加以下配置：
+
+```python
+VDITOR_CONFIGS = { # 记得写"' '"
+  'default':{
+      "width": "%90", # 使用数字或百分比
+      "height": 360, # 使用数字
+      "preview_theme": "light", # 可以填写dark, light, wechat
+      "typewriterMode": "True", # 是否启用打字机模式
+      "mode": "ir", # 可选模式：sv, ir, wysiwyg
+      "debugger": "false", # 是否显示日志
+      "value": "", # 编辑器初始化值
+      "theme": "classic", # 可以填写classic, dark
+      "icon": "ant", # 可以填写ant, material
+      "outline": "false", # 显示大纲
+  }
+}
+```
+
+## 参考
+
+- [django-mdeditor](https://github.com/pylixm/django-mdeditor)
+
