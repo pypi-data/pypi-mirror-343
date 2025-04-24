@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: py-gandi-dns-dynip
+Version: 0.1.4
+Summary: Tool for updating Gandi DNS records with dynamic IP addresses
+License: MIT
+Author: Nicolas Olivier
+Author-email: nico@codeolivier.org
+Requires-Python: >=3.13,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: certifi (==2025.1.31)
+Requires-Dist: idna (>=3.7,<3.8)
+Requires-Dist: requests (>=2.32,<2.33)
+Requires-Dist: urllib3 (>=2.4.0,<2.5.0)
