@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+Easify/__init__.py
+Easify/main.py
+Easify.egg-info/PKG-INFO
+Easify.egg-info/SOURCES.txt
+Easify.egg-info/dependency_links.txt
+Easify.egg-info/entry_points.txt
+Easify.egg-info/requires.txt
+Easify.egg-info/top_level.txt
