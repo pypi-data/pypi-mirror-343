@@ -1,0 +1,59 @@
+Metadata-Version: 2.4
+Name: rational-functions
+Version: 0.1.1
+Summary: A Python library for working with rational functions.
+Project-URL: GitHub, https://github.com/stur86/rational-functions
+Project-URL: Documentation, https://stur86.github.io/rational-functions/
+License-File: LICENSE
+Keywords: algebra,mathematics,numpy,polynomials,python library,rational functions
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.10
+Requires-Dist: numpy>=2.2.4
+Description-Content-Type: text/markdown
+
+# rational-functions
+
+A Numpy-based Python package for the manipulation of rational functions.
+
+## Installation
+
+Install with:
+
+```bash
+pip install rational-functions
+```
+
+## Usage
+
+Import the main `RationalFunction` class directly from the package:
+
+```py
+from rational_functions import RationalFunction
+```
+
+For more information see [the documentation](https://stur86.github.io/rational-functions/).
+
+## Development
+
+Contributions are welcome! Please fork the repository and send a PR for any suggested improvements or fixes.
+
+The package uses UV as its package manager, [refer to their documentation](https://docs.astral.sh/uv/) for details about usage.
+
+After having the environment set up I recommend using the pre-commit hooks:
+
+```bash
+pre-commit install
+```
+
+You can also use Ruff and Black to clean up your code by using `uv run task lint` and `uv run task format`.
