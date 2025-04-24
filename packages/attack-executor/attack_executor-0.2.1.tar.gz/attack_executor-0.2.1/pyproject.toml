@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "attack-executor"
+version = "0.2.1"
+authors = [
+    {name = "Lexus Wang", email = "lingzhiwang2025@u.northwestern.edu"},
+]
+description = "A simple example module"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = [
+    "sliver-py>=0.0.19",
+    "pymetasploit3>=1.0.6"
+]
