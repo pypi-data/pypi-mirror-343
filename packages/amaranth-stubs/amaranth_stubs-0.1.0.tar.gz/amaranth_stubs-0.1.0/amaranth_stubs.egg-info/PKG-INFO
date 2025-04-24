@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: amaranth-stubs
+Version: 0.1.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: amaranth==0.5.3
+Provides-Extra: dev
+Requires-Dist: pyright==1.1.332; extra == "dev"
+Dynamic: license-file
