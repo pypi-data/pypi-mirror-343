@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/debulog/__init__.py
+src/debulog.egg-info/PKG-INFO
+src/debulog.egg-info/SOURCES.txt
+src/debulog.egg-info/dependency_links.txt
+src/debulog.egg-info/top_level.txt
