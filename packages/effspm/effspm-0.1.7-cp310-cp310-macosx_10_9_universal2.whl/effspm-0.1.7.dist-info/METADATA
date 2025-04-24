@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: effspm
+Version: 0.1.7
+Summary: Prefix‑Projection sequential pattern mining
+Home-page: https://github.com/yeshu999/effspm
+Author: yeshu999
+Author-email: yeshu999 <vootlayeswanth20@gmail.com>
+Project-URL: Homepage, https://github.com/yeshu999/effspm
+Project-URL: Source, https://github.com/yeshu999/effspm
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: C++
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pybind11>=2.6
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# effspm
+
+**Efficient Sequential Pattern Mining via Prefix‑Projection**
+
+This library provides a Python interface to mine sequential patterns using the prefix‑projection algorithm, implemented in C++ for performance and exposed via pybind11.
+
+## Installation
+
+```bash
+pip install effspm
