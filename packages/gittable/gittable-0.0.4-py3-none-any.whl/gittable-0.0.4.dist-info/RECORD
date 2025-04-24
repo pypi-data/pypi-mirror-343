@@ -1,0 +1,10 @@
+gittable/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gittable/__main__.py,sha256=fT2gt4SqI5okkI400bJXtvKS857Mq194CChBA0ubepU,1452
+gittable/_utilities.py,sha256=85lSC66woLS_Y9ewO2MMt4Ez2K5IuDC-iwsfeJmrmgw,2409
+gittable/download.py,sha256=25MxjilnEoYsi_WSdhsSWQlr1WbzvMButI38nJB682w,4809
+gittable/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gittable/tag_version.py,sha256=w2zd14-M3JBGufWlgKr_dgRfXLWq-s_XjT7qJKhP5Nk,6179
+gittable-0.0.4.dist-info/METADATA,sha256=InuLHz5vtYwFVy7v4ijlR9RBpNfGdcyfGLX4ubxyv1g,1087
+gittable-0.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gittable-0.0.4.dist-info/entry_points.txt,sha256=LeVLdPZ8y_W4G82l3IzXNV6u5UCETxtw7WTOg-hb2oo,52
+gittable-0.0.4.dist-info/RECORD,,
