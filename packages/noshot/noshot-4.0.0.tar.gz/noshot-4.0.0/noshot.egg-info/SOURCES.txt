@@ -1,0 +1,43 @@
+LICENSE.txt
+README.md
+setup.py
+noshot.egg-info/PKG-INFO
+noshot.egg-info/SOURCES.txt
+noshot.egg-info/dependency_links.txt
+noshot.egg-info/not-zip-safe
+noshot.egg-info/top_level.txt
+src/noshot/__init__.py
+src/noshot/main.py
+src/noshot/data/ML TS XAI/ML/Other Codes.ipynb
+src/noshot/data/ML TS XAI/ML/Rolls Royce AllinOne.ipynb
+src/noshot/data/ML TS XAI/ML/ML Lab CIA 2 (I Found Only This Check)/Copy_of_Pistachio_csv.ipynb
+src/noshot/data/ML TS XAI/ML/ML Lab CIA 2 (I Found Only This Check)/weatherAUS.ipynb
+src/noshot/data/ML TS XAI/ML/Main/1. EDA-PCA (Balance Scale Dataset).ipynb
+src/noshot/data/ML TS XAI/ML/Main/1. EDA-PCA (Rice Dataset).ipynb
+src/noshot/data/ML TS XAI/ML/Main/10. HMM Veterbi.ipynb
+src/noshot/data/ML TS XAI/ML/Main/2. KNN (Balance Scale Dataset).ipynb
+src/noshot/data/ML TS XAI/ML/Main/2. KNN (Iris Dataset).ipynb
+src/noshot/data/ML TS XAI/ML/Main/2. KNN (Sobar-72 Dataset).ipynb
+src/noshot/data/ML TS XAI/ML/Main/3. LDA (Balance Scale Dataset).ipynb
+src/noshot/data/ML TS XAI/ML/Main/3. LDA (NPHA Doctor Visits Dataset).ipynb
+src/noshot/data/ML TS XAI/ML/Main/4. Linear Regression (Machine Dataset).ipynb
+src/noshot/data/ML TS XAI/ML/Main/4. Linear Regression (Real Estate Dataset).ipynb
+src/noshot/data/ML TS XAI/ML/Main/5. Logistic Regression (Magic04 Dataset).ipynb
+src/noshot/data/ML TS XAI/ML/Main/5. Logistic Regression (Wine Dataset).ipynb
+src/noshot/data/ML TS XAI/ML/Main/6. Naive Bayes Classifier (Agaricus Lepiota Dataset).ipynb
+src/noshot/data/ML TS XAI/ML/Main/6. Naive Bayes Classifier (Wine Dataset).ipynb
+src/noshot/data/ML TS XAI/ML/Main/7. SVM (Rice Dataset).ipynb
+src/noshot/data/ML TS XAI/ML/Main/8. FeedForward NN (Sobar72 Dataset).ipynb
+src/noshot/data/ML TS XAI/ML/Main/9. CNN (Cifar10 Dataset).ipynb
+src/noshot/data/ML TS XAI/ML/Main/data/agaricus-lepiota.data
+src/noshot/data/ML TS XAI/ML/Main/data/balance-scale.txt
+src/noshot/data/ML TS XAI/ML/Main/data/doctor-visits.csv
+src/noshot/data/ML TS XAI/ML/Main/data/iris.csv
+src/noshot/data/ML TS XAI/ML/Main/data/machine-data.csv
+src/noshot/data/ML TS XAI/ML/Main/data/magic04.data
+src/noshot/data/ML TS XAI/ML/Main/data/real-estate.xlsx
+src/noshot/data/ML TS XAI/ML/Main/data/rice.arff
+src/noshot/data/ML TS XAI/ML/Main/data/sobar-72.csv
+src/noshot/data/ML TS XAI/ML/Main/data/wine-dataset.csv
+src/noshot/utils/__init__.py
+src/noshot/utils/shell_utils.py
