@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: automl-pipeline
+Version: 0.1.0
+Summary: Una descripción corta de tu proyecto
+Author-email: Tu Nombre <tu_email@example.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# automl-pipeline
+
+This package is a honeypot for monitoring slopsquatting attempts in the Python packaging ecosystem.
+**Do not use this package in production.**
