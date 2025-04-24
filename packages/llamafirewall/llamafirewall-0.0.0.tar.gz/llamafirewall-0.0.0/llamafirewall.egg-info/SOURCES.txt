@@ -1,0 +1,6 @@
+pyproject.toml
+llamafirewall/__init__.py
+llamafirewall.egg-info/PKG-INFO
+llamafirewall.egg-info/SOURCES.txt
+llamafirewall.egg-info/dependency_links.txt
+llamafirewall.egg-info/top_level.txt
