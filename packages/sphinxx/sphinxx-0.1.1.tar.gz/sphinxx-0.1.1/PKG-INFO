@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: sphinxx
+Version: 0.1.1
+Summary: Central Meta package for sphinxx namespace. Not intended for public use, though available under CC BY-NC 4.0 license (non-commercial use, attribution required, all rights reserved)
+Author: Odysseus
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Provides-Extra: ret-calcs
+Requires-Dist: sphinxx-ret_calcs; extra == "ret-calcs"
+Provides-Extra: all
+Requires-Dist: sphinxx-ret_calcs; extra == "all"
+Dynamic: license-file
+
+# SPHINX
+- personal use library of scripts / functions uploaded for ease of use
+- not intended for public use, though available under CC BY-NC 4.0 license (non-commercial use, attribution required, all rights reserved)
+
+## MODULE LISTING
+[retirement_calcs](https://pypi.org/project/sphinxx-ret_calcs/)
+ - taxes
+ - OAS
+ - GIS
+ - allowance
+ - CPP
+ - annuitization
