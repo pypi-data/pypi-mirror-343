@@ -1,0 +1,15 @@
+islamic_times/__init__.py,sha256=Xz-_jwvruOhYjaHASzKlmO36lU16Q49GwZQxMgwnBas,106
+islamic_times/_version.py,sha256=hCozQbSbcCyi2mONQeyKy9e0TOcHfg376VBw1GsXeVA,532
+islamic_times/astro_core.cp310-win32.pdb,sha256=k8KS3a2XKVSBaT5hRphSn79mECu2-4-mTGDZTSs-xpU,733184
+islamic_times/astro_core.cp310-win32.pyd,sha256=JdZ39Qse02KP4AoJAjEX7T9Uf8ganpSRn87oM20d6h0,84480
+islamic_times/calculation_equations.py,sha256=L87gKYJ24GafBxxChIS6RVKHSRclD5X2Ny56W2X-B4o,8853
+islamic_times/dataclasses.py,sha256=3pPCnpH_IS2bu0CyeA0fkIRrYUQEMvyyGEKVWagFg8g,21248
+islamic_times/islamic_times.py,sha256=nXQ9yjGk8QPK59umhNThF8HVYDHcIaubVJzTpQdtnhQ,34477
+islamic_times/moon_equations.py,sha256=xWxFX56YQTvvx2SNwMK3DvEVYVxcLV_v2XevEPEYymY,26664
+islamic_times/prayer_times.py,sha256=iIfOeWWhaZ0zttMhnBpq91SMFJZ6jzC4lP6I5UF-U4E,10853
+islamic_times/sun_equations.py,sha256=f947hKa5v2b_VKOyFBqx6_KjHyPjLFpVXr-vgKQH3YY,21196
+islamic_times/time_equations.py,sha256=mWrFEdpnToxGFCMdZykwWru0a2v3XdxDFgR2K8Ie_Cw,14043
+islamic_times-2.0.3.dist-info/METADATA,sha256=M91I2h4IMrEuRW0SueCcMkOtl3wvDnBxTol6Z7ObYG4,12148
+islamic_times-2.0.3.dist-info/WHEEL,sha256=CNoUkshc3SqngBVkyzktNNHC8941NRkLClTTB1cTnI8,97
+islamic_times-2.0.3.dist-info/top_level.txt,sha256=P7W7Cjdv_YCONyJbsfz1LT8iwDp6uIouoybGmL-7Rmc,14
+islamic_times-2.0.3.dist-info/RECORD,,
