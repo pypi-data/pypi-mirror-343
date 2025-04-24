@@ -1,0 +1,115 @@
+Metadata-Version: 2.1
+Name: sdes
+Version: 0.1.2
+Summary: Simplified Data Encryption Standard (S-DES) Implementation
+Author: Kerston Anto Singh
+Author-email: kerstonanto@karunya.edu.in
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+
+# S-DES (Simplified Data Encryption Standard)
+
+S-DES (Simplified Data Encryption Standard) is a lightweight block cipher that operates on 8-bit blocks. This package implements the encryption and decryption functionality of S-DES using a 10-bit key.
+
+## Installation
+
+To install the package, you can use the following `pip` command:
+
+```
+pip install sdes
+pip install bitarray
+```
+
+If you are developing locally, you can install the package in editable mode:
+
+```
+pip install -e .
+```
+
+## Usage
+
+You can use this package to perform encryption and decryption using the Simplified Data Encryption Standard (S-DES) algorithm.
+
+### Example Usage
+
+```python
+from sdes import encrypt, decrypt, generate_keys
+import bitarray
+
+# Example 10-bit key (must be 10-bits long)
+key = bitarray('1010000010')
+
+# Example 8-bit plaintext (must be 8-bits long)
+plaintext = bitarray('11010011')
+
+# Generate subkeys
+key1, key2 = generate_keys(key)
+
+# Encrypt the plaintext
+ciphertext = encrypt(plaintext, key1, key2)
+print("Encrypted:", ciphertext)
+
+# Decrypt the ciphertext
+decrypted_text = decrypt(ciphertext, key1, key2)
+print("Decrypted:", decrypted_text)
+```
+
+### Functions
+
+- **`generate_keys(key)`**  
+  Generates two 8-bit subkeys (`key1` and `key2`) from the provided 10-bit key.  
+
+  **Parameters:**  
+  - `key` (bitarray): The 10-bit key.
+
+  **Returns:**  
+  - `key1` (bitarray): First subkey.
+  - `key2` (bitarray): Second subkey.
+
+- **`encrypt(plaintext, key1, key2)`**  
+  Encrypts the 8-bit `plaintext` using the two subkeys (`key1` and `key2`) according to the S-DES algorithm.  
+
+  **Parameters:**  
+  - `plaintext` (bitarray): The 8-bit plaintext to encrypt.
+  - `key1` (bitarray): First subkey.
+  - `key2` (bitarray): Second subkey.
+
+  **Returns:**  
+  - `ciphertext` (bitarray): The encrypted 8-bit ciphertext.
+
+- **`decrypt(ciphertext, key1, key2)`**  
+  Decrypts the 8-bit `ciphertext` using the two subkeys (`key1` and `key2`) according to the S-DES algorithm.  
+
+  **Parameters:**  
+  - `ciphertext` (bitarray): The 8-bit ciphertext to decrypt.
+  - `key1` (bitarray): First subkey.
+  - `key2` (bitarray): Second subkey.
+
+  **Returns:**  
+  - `decrypted_text` (bitarray): The decrypted 8-bit plaintext.
+
+## Requirements
+
+This package requires the following libraries:
+
+- `bitarray`: A Python module for efficiently working with bit arrays.
+- `numpy`: A package for numerical computations (optional for your case but can be useful for optimization).
+
+You can install the dependencies using:
+
+```
+pip install bitarray numpy
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Feel free to open issues and submit pull requests. Contributions are welcome!
