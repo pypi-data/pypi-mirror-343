@@ -1,0 +1,12 @@
+README.md
+bullet.py
+enemy.py
+main.py
+player.py
+setup.py
+space_invaders_pygame.egg-info/PKG-INFO
+space_invaders_pygame.egg-info/SOURCES.txt
+space_invaders_pygame.egg-info/dependency_links.txt
+space_invaders_pygame.egg-info/entry_points.txt
+space_invaders_pygame.egg-info/requires.txt
+space_invaders_pygame.egg-info/top_level.txt
