@@ -1,0 +1,6 @@
+{
+  "notion.query_tasks": "toolz/notion/query_tasks.py",
+  "github.list_issues": "toolz/github/list_issues.py",
+  "github_tool": "tests/fastmcp_v2_example/github_tool.py",
+  "notion_tool": "tests/fastmcp_v2_example/notion_tool.py"
+}
