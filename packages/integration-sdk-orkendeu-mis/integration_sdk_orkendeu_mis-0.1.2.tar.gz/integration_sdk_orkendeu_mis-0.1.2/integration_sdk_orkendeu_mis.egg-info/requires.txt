@@ -1,0 +1,8 @@
+fastapi
+pydantic
+httpx
+lxml
+tenacity
+redis
+uvicorn
+pytest
