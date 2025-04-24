@@ -1,0 +1,11 @@
+pygoerrors/__init__.py,sha256=yqhF8Hg7yC4JKFR7qF-ua-CWJE7haPv7NrefDYinw_w,362
+pygoerrors/decorators.py,sha256=xnNBUod4Hj-FoLEdOV6hNabVxg5_O7C0jE3EL_dGk5g,876
+pygoerrors/errors.py,sha256=ichm1neWbgbavy591DZS8cfCAAy7pHWtE6pMElUBejw,1896
+pygoerrors/format.py,sha256=RxV-xBavP3oZTcS6B0C-Fa1zI6fMdWmIzPqoZ101QkE,823
+pygoerrors/helpers.py,sha256=XijsUmVf-nowYrHvKFMP_sc1ztBA2RYsi513gjj5CSY,462
+pygoerrors/iterators.py,sha256=Z-3601I_Xq84-62UA6id8hA1MowmAn3rStjUeJY_EOE,806
+pygoerrors/protocols.py,sha256=z8qW2JsAd58Jie6W7IizbgCTgDuSczYfYou7mSTOAWg,541
+pygoerrors-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pygoerrors-0.1.0.dist-info/METADATA,sha256=YIuiT0XtZrpAjujSSBn68cn0C_LsKMGLuR0xXhtbiq4,43755
+pygoerrors-0.1.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+pygoerrors-0.1.0.dist-info/RECORD,,
