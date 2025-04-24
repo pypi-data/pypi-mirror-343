@@ -1,0 +1,9 @@
+lgsv/__init__.py,sha256=QhpUeiTe_Won0wDcIAqiCnWy5Yh791SPwlD0rdsIV9k,33
+lgsv/cli.py,sha256=0nrDP3xKOoGWPzBFcSPUshtRqzCJmUZ3Ei7GI9exhtA,1293
+lgsv/luogu.py,sha256=Sbvgv0X-PdV9qUokTqRzDgaJTnWOPsabJa99tA5ASRs,7622
+lgsv/setting.py,sha256=DvU8PAGpwGtQLQd37s4u_SD_lwSdzM0sEnPkXBBrpeU,2306
+lgsv-0.1.3.dist-info/LICENSE,sha256=n6dLc9lcNkpI-O-WlEH_UV4Exjl8uidsfoT8m7BBmgk,1065
+lgsv-0.1.3.dist-info/METADATA,sha256=L2PD4jQCdsStzyK4wfE3lFITMokX4ty4WkqBNHhqUb0,2383
+lgsv-0.1.3.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+lgsv-0.1.3.dist-info/entry_points.txt,sha256=8g7mVzqjM6VMqTteqMFoB9VQ124u0vDyP7gyX5NEuo8,37
+lgsv-0.1.3.dist-info/RECORD,,
