@@ -1,0 +1,13 @@
+numpy
+pandas
+psutil
+skillNer
+scikit-learn
+spacy
+transformers
+tokenizers
+torch
+ipython
+python-dotenv
+vllm
+tqdm
