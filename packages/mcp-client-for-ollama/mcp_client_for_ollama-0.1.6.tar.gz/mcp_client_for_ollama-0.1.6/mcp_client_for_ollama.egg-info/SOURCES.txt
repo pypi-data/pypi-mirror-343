@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+mcp_client_for_ollama.egg-info/PKG-INFO
+mcp_client_for_ollama.egg-info/SOURCES.txt
+mcp_client_for_ollama.egg-info/dependency_links.txt
+mcp_client_for_ollama.egg-info/entry_points.txt
+mcp_client_for_ollama.egg-info/requires.txt
+mcp_client_for_ollama.egg-info/top_level.txt
+omcp/__init__.py
+omcp/cli.py
+omcp/client.py
