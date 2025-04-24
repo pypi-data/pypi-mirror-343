@@ -1,0 +1,14 @@
+dictionary_parser/__init__.py,sha256=7XRQv7M5K7a6TFNtmHNzUyvwExXNYsZ-Vpf8qY2jeE0,170
+dictionary_parser/__main__.py,sha256=2n80cpzJ3XLTbth8Ei7r3nGT2RCo5pfRviwrPWYV7cU,57
+dictionary_parser/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dictionary_parser/core/processor.py,sha256=51lPRYamH2ANogG5oovu6fF1DYo5mX9ur8V1h9vSA3o,4657
+dictionary_parser/main.py,sha256=1XwY6A_f-lVBC7UH2KhyCF9Yexgm0M8CDxkuM37btf0,2263
+dictionary_parser/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dictionary_parser/utils/case.py,sha256=TLAkGxiczNZDQ_Vr-tYCW3IuX6_tB1zKICYcamhb2HE,275
+dictionary_parser/utils/letters.py,sha256=e7Fs1R3jNb1-7lnu60CzlmmnKE-U89bMAv1BHTWV-fU,449
+dictionary_parser/utils/validations.py,sha256=1r8goOnIiuh_04XfglL1qWs151ZStyUSJqbj7dM3ino,110
+dictionary_parser-0.3.0.dist-info/LICENSE,sha256=Qinmf2b_NUs-jvl6oapOLZZbOmpvGE-ibM8NK-XMrZE,1071
+dictionary_parser-0.3.0.dist-info/METADATA,sha256=2T8P-4tcmJxTEfV99g8uF9iMu7HZpMizdquSU29czQI,3972
+dictionary_parser-0.3.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+dictionary_parser-0.3.0.dist-info/entry_points.txt,sha256=VBpXnHumJRkGCZRfIS6FrANyVrjxcg5WI8sSFtYmQj4,64
+dictionary_parser-0.3.0.dist-info/RECORD,,
