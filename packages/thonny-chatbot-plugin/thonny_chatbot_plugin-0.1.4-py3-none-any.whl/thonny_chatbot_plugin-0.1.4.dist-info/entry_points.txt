@@ -1,0 +1,2 @@
+[thonny]
+thonny_chatbot_plugin = thonnycontrib.AIChatView:load_plugin
