@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: create_woragis_api
+Version: 0.2
+Summary: Create FastAPI backends with templates: REST, gRPC, AI
+Author: Woragis
+Author-email: masteringthecode.woragis@gmail.com
+Requires-Dist: click
+Provides-Extra: rest
+Requires-Dist: fastapi; extra == "rest"
+Requires-Dist: uvicorn; extra == "rest"
+Provides-Extra: grpc
+Requires-Dist: grpcio; extra == "grpc"
+Requires-Dist: protobuf; extra == "grpc"
+Provides-Extra: ai-rest
+Requires-Dist: fastapi; extra == "ai-rest"
+Requires-Dist: uvicorn; extra == "ai-rest"
+Requires-Dist: openai; extra == "ai-rest"
+Provides-Extra: ai-grpc
+Requires-Dist: grpcio; extra == "ai-grpc"
+Requires-Dist: protobuf; extra == "ai-grpc"
+Requires-Dist: openai; extra == "ai-grpc"
+Provides-Extra: rest-grpc
+Requires-Dist: fastapi; extra == "rest-grpc"
+Requires-Dist: uvicorn; extra == "rest-grpc"
+Requires-Dist: grpcio; extra == "rest-grpc"
+Requires-Dist: protobuf; extra == "rest-grpc"
+Provides-Extra: ai-rest-grpc
+Requires-Dist: fastapi; extra == "ai-rest-grpc"
+Requires-Dist: uvicorn; extra == "ai-rest-grpc"
+Requires-Dist: grpcio; extra == "ai-rest-grpc"
+Requires-Dist: protobuf; extra == "ai-rest-grpc"
+Requires-Dist: openai; extra == "ai-rest-grpc"
+Provides-Extra: data-science
+Requires-Dist: pandas; extra == "data-science"
+Requires-Dist: numpy; extra == "data-science"
+Requires-Dist: scikit-learn; extra == "data-science"
+Requires-Dist: matplotlib; extra == "data-science"
+Provides-Extra: data-science-ml
+Requires-Dist: pandas; extra == "data-science-ml"
+Requires-Dist: numpy; extra == "data-science-ml"
+Requires-Dist: scikit-learn; extra == "data-science-ml"
+Requires-Dist: matplotlib; extra == "data-science-ml"
+Requires-Dist: tensorflow; extra == "data-science-ml"
+Dynamic: author
+Dynamic: author-email
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
