@@ -1,0 +1,90 @@
+Metadata-Version: 2.4
+Name: pymontrace
+Version: 0.1.0.dev2
+Summary: dynamic python tracing
+Author: Daniel Golding
+License: MIT License
+        
+        Copyright (c) 2024 Daniel Golding
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/cakemanny/pymontrace
+Project-URL: Repository, https://github.com/cakemanny/pymontrace.git
+Keywords: tracing
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Software Development :: Debuggers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Description-Content-Type: text/plain
+License-File: LICENSE.txt
+Provides-Extra: test
+Requires-Dist: pytest~=7.0; extra == "test"
+Requires-Dist: flake8~=7.0; extra == "test"
+Provides-Extra: dev
+Requires-Dist: black==23.12.1; extra == "dev"
+Requires-Dist: isort~=5.0; extra == "dev"
+Dynamic: license-file
+
+First Terminal
+
+    python3 examples/script_to_debug.py
+
+Second terminal
+
+    pymontrace -p "$(pgrep '[Pp]ython')" -e 'line:*/script_to_debug.py:13 {{ pmt.print("a", a, "b", b) }}'
+    Waiting for process to reach safepoint...
+    Probes installed. Hit CTRL-C to end...
+    a 4 b 3
+    a 3 b 7
+    a 7 b 1
+    a 1 b 8
+    a 8 b 0
+    ^CRemoving probes...
+    Waiting for process to reach safepoint...
+    .
+
+
+WARNING:
+
+  - This is under early development and is in no way safe to use against
+    production workloads.
+
+  - The interface will change wildly without warning. There are no versioning
+    guarantees at this point.
+
+
+CAVEATS:
+
+  - Use on macOS requires root. Use `sudo`.
+
+  - Probes will only fire if the function is entered after the probe has
+    been installed. This means that top level statements cannot be traced and
+    that the statements inside an outermost forever-loop cannot be traced.
