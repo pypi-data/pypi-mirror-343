@@ -1,0 +1,1 @@
+SERIAL_NUM_PATTERN = r'\d\d{2}\d{2}\d\d{4}'
