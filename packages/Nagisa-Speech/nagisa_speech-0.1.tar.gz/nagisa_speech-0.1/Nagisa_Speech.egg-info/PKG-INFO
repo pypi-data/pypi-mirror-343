@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: Nagisa_Speech
+Version: 0.1
+Summary: This is the official Nagisa SpeechToText package created by Manvendra Singh
+Author: Manvendra Singh 
+Author-email: techno99933@gmail.com
+Requires-Dist: selenium
+Requires-Dist: webdriver_manager
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: summary

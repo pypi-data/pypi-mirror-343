@@ -1,0 +1,6 @@
+setup.py
+Nagisa_Speech.egg-info/PKG-INFO
+Nagisa_Speech.egg-info/SOURCES.txt
+Nagisa_Speech.egg-info/dependency_links.txt
+Nagisa_Speech.egg-info/requires.txt
+Nagisa_Speech.egg-info/top_level.txt
