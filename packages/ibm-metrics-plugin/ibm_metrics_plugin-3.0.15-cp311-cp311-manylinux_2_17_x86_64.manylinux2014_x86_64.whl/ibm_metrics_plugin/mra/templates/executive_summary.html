@@ -1,0 +1,44 @@
+<h1>Score Snapshot</h1>
+<article id="metric details">
+  <h3></h3>
+</article>
+<br />
+<p class="medium">Here is a summary of the key results of the testing.</p>
+<br>
+<table class="snapshot">
+
+  <tr>
+    <th style="width: 50%; text-align: left;">Benchmark</th>
+    <th style="width: 25%; text-align: left;">Score/Error Margin</th>
+    <th style="width: 25%; text-align: center;">Range</th>
+
+  </tr>
+
+
+  {% for risk_dim, cards in executive_summary_data.items() %}
+    <tr><td><p class="medium bold" style=" padding: 20px 0 5px 0;"> {{risk_dim }}</p></td></tr>
+      {% for card_name, metrics in cards.items() %}
+      {% set score_category = metrics_interpretation.get(risk_dim,{}).get(card_name,{}).get("category") %}
+      <tr style="page-break-inside: avoid; break-inside: avoid;">
+        {% if score_category == "RED" %}
+        <td><span style="color:red; font-size: 17px;">● </span> {{metric_card_name_translation.get(card_name,card_name)}}</td>
+        {% elif score_category == "GREEN" %}
+        <td><span style="color: green;font-size: 17px;">● </span> {{metric_card_name_translation.get(card_name,card_name)}}</td>
+        {% elif score_category == "ORANGE" %}
+        <td><span style="color:rgb(255,165,0); font-size: 17px;">● </span> {{metric_card_name_translation.get(card_name,card_name)}}</td>
+        {% else %}
+        <td>{{metric_card_name_translation.get(card_name,card_name)}}</td>
+        {% endif %}
+        <td>{{metrics.get("score")}}</td>
+
+        {% if 'cards.safety' in card_name %}
+          {% set card_id = 'cards.safety.bbq.Age' %}
+        {% else %}
+          {% set card_id = card_name %}  
+        {% endif %}                            
+        <td>{{meta_data_based_on_id[card_id]['Methodology']["Desired_score"]}}</td>
+      </tr>
+    {% endfor %}
+  {% endfor %}
+</table>
+<br>
