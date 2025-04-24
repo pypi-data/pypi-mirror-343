@@ -1,0 +1,8 @@
+README.md
+setup.py
+scienkit/__init__.py
+scienkit/main.py
+scienkit.egg-info/PKG-INFO
+scienkit.egg-info/SOURCES.txt
+scienkit.egg-info/dependency_links.txt
+scienkit.egg-info/top_level.txt
