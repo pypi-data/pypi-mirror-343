@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: spooftool
+Version: 2.0
+Summary: email spoofing tool using spoofmail api
+Author: @xinerox
+Requires-Dist: requests
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary
