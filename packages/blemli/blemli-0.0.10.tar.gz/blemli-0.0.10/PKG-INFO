@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: blemli
+Version: 0.0.10
+Summary: more convenience
+Project-URL: Homepage, https://github.com/blemli/blemli_py
+Project-URL: Issues, https://github.com/blemli/blemli_py/issues
+Author-email: Problemli GmbH <info@problem.li>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: icecream>=2.1.3
+Description-Content-Type: text/markdown
+
+# blemli
+More convenience
+
+## usage
+
+### from and to date
+
+```python
+import blemli
+blemli.from_date(now())
+>>> "2025-01-31"
+blemli.to_date("2025-01-31")
+>>> (2025,1,31)
+```
+
