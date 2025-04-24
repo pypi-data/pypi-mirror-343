@@ -1,0 +1,14 @@
+xiaoya_downloader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xiaoya_downloader/alist.py,sha256=_ei7k6OLw1rrfTyfC8hxwwF27DjHbxh2pntnp_DEh60,1072
+xiaoya_downloader/attribute.py,sha256=5bqQ4ApLIrBwlqKnV0EsFZG985OZNpqfbJbACD1htZw,267
+xiaoya_downloader/command.py,sha256=Yhgr6avGmqHkHVYT-NeK7mBiYdpsYcB36-BNBBoqC-4,1279
+xiaoya_downloader/download.py,sha256=PxBPdVtCMRdWFybPcoYDjk8Pbz20ydFYIAH9v_cm0rU,1862
+xiaoya_downloader/resources.py,sha256=fvzOMhht31iwIowEaNl-JWrQHFsmsXzooi0efL-dWCE,8318
+xiaoya_downloader/webserver.py,sha256=McZsvrg8uhPKek1FWHEFH-NO85PEP74n6TOOLbBi7Uo,2642
+xiaoya_downloader-0.2.0.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+xiaoya_downloader-0.2.0.dist-info/METADATA,sha256=7HC8is_fChNYwnOZaQQixyYykN6oUzFT3hYVwsV-uZ8,801
+xiaoya_downloader-0.2.0.dist-info/WHEEL,sha256=pWvVuNuBTVmNV7Lp2jMAgt1NplTICeFdl1SW8U3MWN4,109
+xiaoya_downloader-0.2.0.dist-info/entry_points.txt,sha256=SlxitA9WG748FAyK2MeosP-eYcIchKNe_YJgLIgA9N0,69
+xiaoya_downloader-0.2.0.dist-info/top_level.txt,sha256=doMmvBwMRjOYKl5BaJ4GFFETnJPSF0jpGWM5Q1gNkLc,18
+xiaoya_downloader-0.2.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+xiaoya_downloader-0.2.0.dist-info/RECORD,,
