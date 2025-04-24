@@ -1,0 +1,10 @@
+violoncello/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+violoncello/crawl.py,sha256=SsDuhbYyd5wS5aL0ESRuWMb3nZi6_4i9C9gGkJOKeBY,737
+violoncello/data_pipeline.py,sha256=b_4WlIuMbEex_j5PmXq-SJci9Ku8gd5HsbbmD-8ajhY,6745
+violoncello/drivers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+violoncello/drivers/httpx_driver.py,sha256=6HdkW23cSH8_1mXWGL90FYmaOPDBJDUlbQVwdOr-wHE,3855
+violoncello/upload.py,sha256=v8Y2LdWwJLsKe-isyYUuGYzWsWLOiEo_zeDNed1ygFc,2828
+violoncello-0.3.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+violoncello-0.3.0.dist-info/METADATA,sha256=SINrH7vd1RhuWtDMNkjs4qKtBVU_GE2UhycU_RQAt6U,791
+violoncello-0.3.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+violoncello-0.3.0.dist-info/RECORD,,
