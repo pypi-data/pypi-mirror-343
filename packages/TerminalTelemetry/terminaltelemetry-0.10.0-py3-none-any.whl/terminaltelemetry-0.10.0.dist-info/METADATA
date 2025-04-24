@@ -1,0 +1,204 @@
+Metadata-Version: 2.4
+Name: TerminalTelemetry
+Version: 0.10.0
+Summary: A PyQt6 terminal emulator with SSH and telemetry capabilities
+Home-page: https://github.com/scottpeterman/terminaltelemetry
+Author: Scott Peterman
+Author-email: scottpeterman@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: X11 Applications :: Qt
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: backports.tarfile>=1.2.0
+Requires-Dist: bcrypt>=4.2.1
+Requires-Dist: certifi>=2025.1.31
+Requires-Dist: cffi>=1.17.1
+Requires-Dist: charset-normalizer>=3.4.1
+Requires-Dist: click>=8.1.8
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: cryptography>=44.0.1
+Requires-Dist: diff-match-patch>=20241021
+Requires-Dist: docutils>=0.21.2
+Requires-Dist: future>=1.0.0
+Requires-Dist: id>=1.5.0
+Requires-Dist: idna>=3.10
+Requires-Dist: importlib_metadata>=8.6.1
+Requires-Dist: jaraco.classes>=3.4.0
+Requires-Dist: jaraco.context>=6.0.1
+Requires-Dist: jaraco.functools>=4.1.0
+Requires-Dist: Jinja2>=3.1.5
+Requires-Dist: junos-eznc>=2.7.2
+Requires-Dist: keyring>=25.6.0
+Requires-Dist: logicmonitor-sdk>=3.0.222
+Requires-Dist: lxml>=5.3.1
+Requires-Dist: markdown-it-py>=3.0.0
+Requires-Dist: MarkupSafe>=3.0.2
+Requires-Dist: mdurl>=0.1.2
+Requires-Dist: more-itertools>=10.6.0
+Requires-Dist: napalm>=5.0.0
+Requires-Dist: ncclient>=0.6.15
+Requires-Dist: netaddr>=1.3.0
+Requires-Dist: netmiko>=4.5.0
+Requires-Dist: netutils>=1.12.0
+Requires-Dist: nh3>=0.2.20
+Requires-Dist: ntc_templates>=7.7.0
+Requires-Dist: packaging>=24.2
+Requires-Dist: paramiko>=3.5.1
+Requires-Dist: pkginfo>=1.12.0
+Requires-Dist: pycparser>=2.22
+Requires-Dist: pyeapi>=1.0.4
+Requires-Dist: Pygments>=2.19.1
+Requires-Dist: PyNaCl>=1.5.0
+Requires-Dist: pynetbox>=7.4.1
+Requires-Dist: pyparsing>=3.2.1
+Requires-Dist: PyQt6>=6.8.1
+Requires-Dist: PyQt6-Charts>=6.8.0
+Requires-Dist: PyQt6-Charts-Qt6>=6.8.2
+Requires-Dist: PyQt6-Qt6>=6.8.2
+Requires-Dist: PyQt6-WebEngine>=6.8.0
+Requires-Dist: PyQt6-WebEngine-Qt6>=6.8.2
+Requires-Dist: PyQt6_sip>=13.10.0
+Requires-Dist: pyserial>=3.5
+Requires-Dist: python-dateutil>=2.9.0.post0
+Requires-Dist: pywin32-ctypes>=0.2.3
+Requires-Dist: PyYAML>=6.0.2
+Requires-Dist: qasync>=0.27.1
+Requires-Dist: readme_renderer>=44.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: requests-toolbelt>=1.0.0
+Requires-Dist: rfc3986>=2.0.0
+Requires-Dist: rich>=13.9.4
+Requires-Dist: ruamel.yaml>=0.18.10
+Requires-Dist: ruamel.yaml.clib>=0.2.12
+Requires-Dist: scp>=0.15.0
+Requires-Dist: setuptools>=75.8.0
+Requires-Dist: six>=1.17.0
+Requires-Dist: textfsm>=1.1.3
+Requires-Dist: transitions>=0.9.2
+Requires-Dist: ttp>=0.9.5
+Requires-Dist: ttp-templates>=0.3.7
+Requires-Dist: twine>=6.1.0
+Requires-Dist: typing_extensions>=4.12.2
+Requires-Dist: urllib3>=2.3.0
+Requires-Dist: yamlordereddictloader>=0.4.2
+Requires-Dist: zipp>=3.21.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# TerminalTelemetry
+
+![Screenshot](https://github.com/scottpeterman/terminaltelemetry/blob/c9099e0a76fb67ead274f1b49cb539883996bd4e/screenshots/slides2.gif)
+![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
+![Python](https://img.shields.io/badge/python-3.9+-blue.svg)
+
+**TerminalTelemetry** is a fully themed terminal and telemetry platform inspired by retro computing aesthetics, powered by PyQt6. It fuses the real-time monitoring features of Terminal Telemetry with the session and credential management foundation of pyRetroTerm.
+
+## Highlights
+
+- 20+ included retro/modern themes (CRT, Doom, Borland, Cyber, etc.)
+- Dynamic corner styling with SVG-based HUD corners
+- Secure credential vault with Fernet encryption and keyring support
+- NetBox and LogicMonitor session importers (to YAML)
+- Native pyRetroTerm tab support
+- Live interface/telemetry paneling in multi-session layout
+- Theme editor with live preview, xterm palette editor, and border/glow control
+
+---
+
+## Key Features
+
+### 🔒 Secure Credential System
+- AES256 encrypted credentials
+- Machine-locked secrets via `keyring`
+- PBKDF2 key derivation with salt
+- Import/export credential bundles
+- GUI credential editor
+
+### 🚀 Session Importers
+- **NetBox Importer**:
+  - Pulls device data via pynetbox
+  - Groups sessions by site
+  - Saves to themed YAML structure
+
+- **LogicMonitor Importer**:
+  - Uses LogicMonitor SDK
+  - Site-based grouping, progress feedback
+  - SSL and Zscaler cert support
+
+### 🎨 Theme System
+- JSON-defined color themes
+- Corner design mapping per theme (e.g., "doom" -> "klingonTlh")
+- Theme editor GUI with real-time preview
+- Customize terminal palette, gridlines, scrollbars, borders
+- Live reload and preview support
+
+### 🔹 Core Telemetry
+- Real-time CPU, memory, temperature, fans, and power
+- Interface status table with UP/DOWN state
+- LLDP/CDP neighbor discovery
+- Routing table and default gateway
+- Log viewer with live updates
+
+### 🌐 Multi-Session Terminal
+- Tabbed terminals with session restoration
+- Per-session theme support
+- SSH support for Linux/IOS/EOS/NXOS/JUNOS
+- Quick Connect UI
+- Device cards with credentials
+
+### 🔧 Extensibility
+- Modular drivers for platform expansion
+- Plugin system for importers, UI extensions
+- YAML-based session definitions
+
+---
+
+## Installation
+
+```bash
+pip install TerminalTelemetry
+```
+
+Or clone and run from source:
+
+```bash
+git clone https://github.com/scottpeterman/terminaltelemetry.git
+cd TerminalTelemetry
+python TerminalTelemetry.py
+```
+
+---
+
+## Screenshots
+
+> Coming soon: screenshots of the Theme Editor, Telemetry Panels, and Credential Manager
+
+---
+
+## License
+
+TerminalTelemetry is licensed under the GPLv3 License. See the LICENSE file for details.
+
+---
+
+## Acknowledgments
+
+- Built on the foundation of pyRetroTerm
+- Doom-inspired theme engine originally from DOOM Terminal Telemetry
+- Special thanks to the open-source community for tools and libraries
+
+---
+
+*"CLI's Don't Die, They just change their prompt!" — TerminalTelemetry*
+
