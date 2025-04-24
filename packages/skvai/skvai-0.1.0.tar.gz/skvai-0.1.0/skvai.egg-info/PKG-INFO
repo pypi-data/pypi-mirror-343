@@ -1,0 +1,62 @@
+Metadata-Version: 2.4
+Name: skvai
+Version: 0.1.0
+Summary: A beginner-friendly Python package to simplify machine learning tasks with minimal code.
+Author-email: SIVAKANDASAMY VELUMANI <sivakandasamyv@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/bioluminance/skvai
+Project-URL: Documentation, https://github.com/bioluminance/skvai#readme
+Project-URL: Source, https://github.com/bioluminance/skvai
+Project-URL: Tracker, https://github.com/bioluminance/skvai/issues
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: tensorflow
+Requires-Dist: seaborn
+Requires-Dist: click
+Dynamic: license-file
+
+# SKV AI
+
+**SKV AI** is a Python package designed to simplify machine learning tasks like image classification, regression, and general classification. With simple functions, it allows users to load data, train models, and output results easily.
+
+## Installation
+
+To install `skvai` package, use pip:
+
+```bash
+pip install skvai
+```
+
+
+## Features
+* Image Classification (using CNNs)
+* Regression (using linear models)
+* Classification (using logistic regression)
+* Easy-to-use interface for common machine learning tasks
+
+## Usage Example
+```python
+from skvai.tasks.classification import Task
+
+# Load the dataset
+task = Task()
+task.load_data('data.csv')
+
+# Train and get output
+task.train_and_output('graph')
+```

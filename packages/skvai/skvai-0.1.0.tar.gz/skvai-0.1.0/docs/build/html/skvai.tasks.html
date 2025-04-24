@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>skvai.tasks package &#8212; skvai 0.1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=01f34227"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="skvai.utils package" href="skvai.utils.html" />
+    <link rel="prev" title="skvai package" href="skvai.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="skvai-tasks-package">
+<h1>skvai.tasks package<a class="headerlink" href="#skvai-tasks-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-skvai.tasks.classification">
+<span id="skvai-tasks-classification-module"></span><h2>skvai.tasks.classification module<a class="headerlink" href="#module-skvai.tasks.classification" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="skvai.tasks.classification.Task">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">skvai.tasks.classification.</span></span><span class="sig-name descname"><span class="pre">Task</span></span><a class="headerlink" href="#skvai.tasks.classification.Task" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="skvai.tasks.classification.Task.load_data">
+<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skvai.tasks.classification.Task.load_data" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="skvai.tasks.classification.Task.set_target">
+<span class="sig-name descname"><span class="pre">set_target</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">col_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skvai.tasks.classification.Task.set_target" title="Link to this definition">¶</a></dt>
+<dd><p>Call this <em>before</em> load_data() to override the default target column.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="skvai.tasks.classification.Task.train_and_output">
+<span class="sig-name descname"><span class="pre">train_and_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'graph'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skvai.tasks.classification.Task.train_and_output" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-skvai.tasks.clustering">
+<span id="skvai-tasks-clustering-module"></span><h2>skvai.tasks.clustering module<a class="headerlink" href="#module-skvai.tasks.clustering" title="Link to this heading">¶</a></h2>
+<p>Clustering task module for skvai.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="skvai.tasks.clustering.cluster">
+<span class="sig-prename descclassname"><span class="pre">skvai.tasks.clustering.</span></span><span class="sig-name descname"><span class="pre">cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="skvai.html#skvai.core.CSVData" title="skvai.core.CSVData"><span class="pre">CSVData</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'KMeans'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_clusters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">['labels']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'clusterer.pkl'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels_csv</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'labels.csv'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">42</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skvai.tasks.clustering.cluster" title="Link to this definition">¶</a></dt>
+<dd><p>Fit and apply a clustering model on CSVData.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<a class="reference internal" href="skvai.html#skvai.core.CSVData" title="skvai.core.CSVData"><em>CSVData</em></a>) – Loaded dataset with attribute X and df.</p></li>
+<li><p><strong>model</strong> (<em>str</em>) – Which clusterer: ‘KMeans’ or ‘DBSCAN’.</p></li>
+<li><p><strong>n_clusters</strong> (<em>int</em>) – Number of clusters for KMeans.</p></li>
+<li><p><strong>output</strong> (<em>list</em>) – What to output: ‘metrics’, ‘plot’, ‘csv’, ‘save’.</p></li>
+<li><p><strong>save_path</strong> (<em>str</em>) – Path to save the clusterer (.pkl).</p></li>
+<li><p><strong>labels_csv</strong> (<em>str</em>) – Path to save full-data labels (.csv).</p></li>
+<li><p><strong>random_state</strong> (<em>int</em>) – Random seed for reproducibility.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>{‘labels’, ‘model’}</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-skvai.tasks.regression">
+<span id="skvai-tasks-regression-module"></span><h2>skvai.tasks.regression module<a class="headerlink" href="#module-skvai.tasks.regression" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="skvai.tasks.regression.regress">
+<span class="sig-prename descclassname"><span class="pre">skvai.tasks.regression.</span></span><span class="sig-name descname"><span class="pre">regress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="skvai.html#skvai.core.CSVData" title="skvai.core.CSVData"><span class="pre">CSVData</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LinearRegression'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">['metrics']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'regressor.pkl'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prediction_csv</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'predictions.csv'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">42</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skvai.tasks.regression.regress" title="Link to this definition">¶</a></dt>
+<dd><p>Train and evaluate a regression model on CSVData.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<a class="reference internal" href="skvai.html#skvai.core.CSVData" title="skvai.core.CSVData"><em>CSVData</em></a>) – Loaded dataset with X, y, df.</p></li>
+<li><p><strong>model</strong> (<em>str</em>) – ‘LinearRegression’ or ‘RandomForestRegressor’.</p></li>
+<li><p><strong>output</strong> (<em>list</em>) – Options: ‘metrics’, ‘plot’, ‘csv’, ‘save’.</p></li>
+<li><p><strong>save_path</strong> (<em>str</em>) – Save path for model.</p></li>
+<li><p><strong>prediction_csv</strong> (<em>str</em>) – Save path for predictions.</p></li>
+<li><p><strong>test_size</strong> (<em>float</em>) – Split size for testing.</p></li>
+<li><p><strong>random_state</strong> (<em>int</em>) – Seed for reproducibility.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>mse, r2, predictions, model</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-skvai.tasks">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-skvai.tasks" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="skvai.tasks.Task">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">skvai.tasks.</span></span><span class="sig-name descname"><span class="pre">Task</span></span><a class="headerlink" href="#skvai.tasks.Task" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="skvai.tasks.Task.load_data">
+<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skvai.tasks.Task.load_data" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="skvai.tasks.Task.set_target">
+<span class="sig-name descname"><span class="pre">set_target</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">col_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skvai.tasks.Task.set_target" title="Link to this definition">¶</a></dt>
+<dd><p>Call this <em>before</em> load_data() to override the default target column.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="skvai.tasks.Task.train_and_output">
+<span class="sig-name descname"><span class="pre">train_and_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'graph'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skvai.tasks.Task.train_and_output" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="skvai.tasks.cluster">
+<span class="sig-prename descclassname"><span class="pre">skvai.tasks.</span></span><span class="sig-name descname"><span class="pre">cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="skvai.html#skvai.core.CSVData" title="skvai.core.CSVData"><span class="pre">CSVData</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'KMeans'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_clusters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">['labels']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'clusterer.pkl'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels_csv</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'labels.csv'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">42</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skvai.tasks.cluster" title="Link to this definition">¶</a></dt>
+<dd><p>Fit and apply a clustering model on CSVData.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<a class="reference internal" href="skvai.html#skvai.core.CSVData" title="skvai.core.CSVData"><em>CSVData</em></a>) – Loaded dataset with attribute X and df.</p></li>
+<li><p><strong>model</strong> (<em>str</em>) – Which clusterer: ‘KMeans’ or ‘DBSCAN’.</p></li>
+<li><p><strong>n_clusters</strong> (<em>int</em>) – Number of clusters for KMeans.</p></li>
+<li><p><strong>output</strong> (<em>list</em>) – What to output: ‘metrics’, ‘plot’, ‘csv’, ‘save’.</p></li>
+<li><p><strong>save_path</strong> (<em>str</em>) – Path to save the clusterer (.pkl).</p></li>
+<li><p><strong>labels_csv</strong> (<em>str</em>) – Path to save full-data labels (.csv).</p></li>
+<li><p><strong>random_state</strong> (<em>int</em>) – Random seed for reproducibility.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>{‘labels’, ‘model’}</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="skvai.tasks.regress">
+<span class="sig-prename descclassname"><span class="pre">skvai.tasks.</span></span><span class="sig-name descname"><span class="pre">regress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="skvai.html#skvai.core.CSVData" title="skvai.core.CSVData"><span class="pre">CSVData</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LinearRegression'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">['metrics']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'regressor.pkl'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prediction_csv</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'predictions.csv'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">42</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skvai.tasks.regress" title="Link to this definition">¶</a></dt>
+<dd><p>Train and evaluate a regression model on CSVData.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<a class="reference internal" href="skvai.html#skvai.core.CSVData" title="skvai.core.CSVData"><em>CSVData</em></a>) – Loaded dataset with X, y, df.</p></li>
+<li><p><strong>model</strong> (<em>str</em>) – ‘LinearRegression’ or ‘RandomForestRegressor’.</p></li>
+<li><p><strong>output</strong> (<em>list</em>) – Options: ‘metrics’, ‘plot’, ‘csv’, ‘save’.</p></li>
+<li><p><strong>save_path</strong> (<em>str</em>) – Save path for model.</p></li>
+<li><p><strong>prediction_csv</strong> (<em>str</em>) – Save path for predictions.</p></li>
+<li><p><strong>test_size</strong> (<em>float</em>) – Split size for testing.</p></li>
+<li><p><strong>random_state</strong> (<em>int</em>) – Seed for reproducibility.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>mse, r2, predictions, model</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">skvai</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">skvai</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="skvai.html">skvai package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">skvai</a><ul>
+  <li><a href="skvai.html">skvai package</a><ul>
+      <li>Previous: <a href="skvai.html" title="previous chapter">skvai package</a></li>
+      <li>Next: <a href="skvai.utils.html" title="next chapter">skvai.utils package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, sivakandasamy velumani.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/skvai.tasks.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

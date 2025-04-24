@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=60.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skvai"
+version = "0.1.0"
+description = "A beginner-friendly Python package to simplify machine learning tasks with minimal code."
+readme = "README.md"
+requires-python = ">=3.7"
+license = { text = "MIT" }
+
+authors = [
+    { name = "SIVAKANDASAMY VELUMANI", email = "sivakandasamyv@gmail.com" }
+]
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "scikit-learn",
+    "tensorflow",
+    "seaborn",
+    "click",
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://github.com/bioluminance/skvai"
+Documentation = "https://github.com/bioluminance/skvai#readme"
+Source = "https://github.com/bioluminance/skvai"
+Tracker = "https://github.com/bioluminance/skvai/issues"

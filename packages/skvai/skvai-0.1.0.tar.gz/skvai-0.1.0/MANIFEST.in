@@ -1,0 +1,16 @@
+# Include your README and license
+include README.md
+include LICENSE
+
+# Include requirements files
+include requirements.txt
+include requirements-dev.txt
+
+# Include example data or notebooks (if you add them later)
+recursive-include examples *.csv *.ipynb
+
+# Include your Sphinx docs
+recursive-include docs *
+
+# Exclude caches and build artifacts
+global-exclude __pycache__ *.py[cod] *.egg-info
