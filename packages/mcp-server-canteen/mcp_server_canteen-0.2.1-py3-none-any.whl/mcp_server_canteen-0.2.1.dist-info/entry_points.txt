@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-canteen = mcp_server_canteen:main
