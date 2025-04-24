@@ -1,0 +1,7 @@
+[project]
+name = "sbctl"
+authors = [
+  { name = "simplyblock", email = "info@simplyblock.io" }
+]
+version = "0.0.0"
+description = "Coming soon"
