@@ -1,0 +1,20 @@
+[project]
+name = "codexfix"
+version = "0.2.0"
+description = "Autofix code issues using Codex for dart, python, and typescript"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "rich>=14.0.0",
+    "mypy>=1.8.0",
+    "pyright>=1.1.350",
+    "asyncio>=3.4.3",
+    "typing-extensions>=4.7.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+codexfix = "codexfix.main:cli_entry_point"

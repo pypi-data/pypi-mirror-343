@@ -1,0 +1,15 @@
+CHANGELOG.md
+INSTALL.md
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+codexfix/__init__.py
+codexfix/main.py
+codexfix.egg-info/PKG-INFO
+codexfix.egg-info/SOURCES.txt
+codexfix.egg-info/dependency_links.txt
+codexfix.egg-info/entry_points.txt
+codexfix.egg-info/requires.txt
+codexfix.egg-info/top_level.txt

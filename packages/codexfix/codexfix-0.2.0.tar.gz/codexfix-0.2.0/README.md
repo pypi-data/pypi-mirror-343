@@ -1,0 +1,157 @@
+# CodexFix 🛠️
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Version](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/downloads/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Mypy: Checked](https://img.shields.io/badge/mypy-checked-brightgreen.svg)](http://mypy-lang.org/)
+
+A powerful type-aware linter runner and Codex orchestrator that automatically fixes code issues using AI. CodexFix combines static analysis with OpenAI's Codex to provide intelligent, automated code improvements while preserving behavior.
+
+> ⚠️ **Warning**: This tool was mostly implemented by VibeCoding 😊
+
+## Features
+
+- 🔍 Integrated type checking and linting with mypy, pyright, and ESLint
+- 🎯 Support for Python, TypeScript, and Dart/Flutter analysis
+- 🤖 AI-powered automatic code fixes using OpenAI's Codex
+- ⚡ Fast and efficient analysis with parallel processing
+- 🔄 Iterative improvement with automatic re-analysis
+- 🎨 Beautiful console output with rich formatting
+- 📊 Comprehensive JSON reporting of fixed issues
+
+## Installation
+
+### Prerequisites
+
+#### OpenAI API Key
+
+```bash
+# You must have a valid OpenAI API key set in your environment
+export OPENAI_API_KEY="your-openai-api-key"
+
+# For Windows PowerShell
+$env:OPENAI_API_KEY="your-openai-api-key"
+
+# For Windows Command Prompt
+set OPENAI_API_KEY=your-openai-api-key
+```
+
+#### Python Environment
+```bash
+# Install Python 3.13 or later
+# macOS
+brew install python@3.13
+
+# Linux
+sudo apt install python3.13 python3.13-venv python3.13-dev
+
+# Create and activate a virtual environment
+python3.13 -m venv venv
+source venv/bin/activate
+```
+
+#### Install Required Tools
+
+```bash
+# Install Codex CLI
+npm install -g @openai/codex
+
+# Python analysis tools
+pip install mypy==1.8.0 pyright==1.1.350
+
+# TypeScript analysis tools
+# Note: TypeScript must be installed first for ESLint to properly analyze TypeScript files
+npm install -g typescript
+npm install -g eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+
+# For Dart/Flutter analysis
+# Install Flutter SDK from https://docs.flutter.dev/get-started/install
+```
+
+#### Install CodexFix
+
+##### Install as a Python Package
+
+```bash
+# Install the package (installs the 'codexfix' command globally)
+pip install codexfix
+
+# Or install from source (development mode)
+git clone https://github.com/yourusername/codexfix.git
+cd codexfix
+pip install -e .
+```
+
+##### Global Installation
+
+After installing the package, the `codexfix` command will be automatically available in your PATH. You can run it from anywhere:
+
+```bash
+# Run from any directory
+codexfix --path /path/to/project
+
+# Run with various options
+codexfix --applyFix --language python
+```
+
+## Usage
+
+```bash
+# Run analysis only on current directory (without fixing)
+codexfix
+
+# Apply automatic fixes with Codex
+codexfix --applyFix
+
+# Run on specific path
+codexfix --path /path/to/project
+
+# Generate a comprehensive report
+codexfix --applyFix --report issues_report.json
+
+# Run with specific language
+codexfix --language python  # or typescript, dart
+
+# Different approval modes
+codexfix --approval-mode suggest  # or auto-edit, full-auto
+```
+
+## Configuration
+
+CodexFix supports various configuration options:
+
+- `--path`: Path to analyze (default: current directory)
+- `--language`: Choose between 'python', 'typescript', or 'dart' analysis (default: python)
+- `--approval-mode`: Control how fixes are applied ('suggest', 'auto-edit', 'full-auto')
+- `--max-iterations`: Stop after N Codex rounds (default: 3)
+- `--model`: Specify custom Codex model
+- `--verbose`: Enable verbose debug output
+- `--applyFix`: Apply automatic fixes using Codex (default: only show diagnostics)
+- `--analyze`: Severity levels to analyze ('default' or 'all')
+- `--report`: Filename to save a comprehensive report of all fixed issues
+
+## Requirements
+
+- Python 3.13+
+- OpenAI Codex CLI (`npm install -g @openai/codex`)
+- For Python analysis:
+  - mypy (`pip install mypy`)
+  - pyright (`pip install pyright`)
+- For TypeScript analysis:
+  - TypeScript (`npm install -g typescript`) - must be installed first
+  - ESLint (`npm install -g eslint`)
+  - TypeScript ESLint plugins (`npm install -g @typescript-eslint/parser @typescript-eslint/eslint-plugin`)
+- For Dart analysis:
+  - Flutter SDK (https://docs.flutter.dev/get-started/install)
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a list of changes and version history.
