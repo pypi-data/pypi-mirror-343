@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+alist_kits/__init__.py
+alist_kits/alistapi.py
+alist_kits/attribute.py
+alist_kits/objects.py
+alist_kits.egg-info/PKG-INFO
+alist_kits.egg-info/SOURCES.txt
+alist_kits.egg-info/dependency_links.txt
+alist_kits.egg-info/requires.txt
+alist_kits.egg-info/top_level.txt
+alist_kits.egg-info/zip-safe
