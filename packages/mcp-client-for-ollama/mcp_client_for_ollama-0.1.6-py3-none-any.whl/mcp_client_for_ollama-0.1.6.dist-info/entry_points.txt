@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-client-for-ollama = omcp.cli:run_cli
