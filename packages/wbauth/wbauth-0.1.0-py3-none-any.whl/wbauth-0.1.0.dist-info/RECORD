@@ -1,0 +1,9 @@
+wbauth/__init__.py,sha256=wFvOjs6Yd7M5XxQ2HKmCR9Y64o0pG_uHMsYZ5BTmuVo,221
+wbauth/authenticator.py,sha256=ZDphgBvmI2pOdBphF-On5rh90HLEqh2l632FjXahRKo,8315
+wbauth/constants.py,sha256=HqET83Xlya28O7nIhOKfDIXGwhZ-d3v9fJeobyfTNHc,303
+wbauth/utils.py,sha256=5hgXDYZX5rqoDOLgwlkXoR9uitkzydbh0HVKm0eB8LY,712
+wbauth/telegram/handlers.py,sha256=Nv6DZXEhqDWC0T3p96OdmpIDHYUcXr_QzKDMzOkq7lY,10630
+wbauth-0.1.0.dist-info/METADATA,sha256=E_0gjquhmxJ6jeSPa8Z9rn_NLvUXvuS3epJA003zxYY,807
+wbauth-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+wbauth-0.1.0.dist-info/top_level.txt,sha256=MDqLFzrSiIw7lps9BIQkhIEUAtkzGOfS9Jqs7kFzjcY,7
+wbauth-0.1.0.dist-info/RECORD,,
