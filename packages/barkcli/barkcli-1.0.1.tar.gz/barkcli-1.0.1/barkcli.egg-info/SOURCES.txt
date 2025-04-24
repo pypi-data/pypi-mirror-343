@@ -1,0 +1,11 @@
+README.md
+barkcli.py
+pyproject.toml
+setup.py
+barkcli/__init__.py
+barkcli.egg-info/PKG-INFO
+barkcli.egg-info/SOURCES.txt
+barkcli.egg-info/dependency_links.txt
+barkcli.egg-info/entry_points.txt
+barkcli.egg-info/requires.txt
+barkcli.egg-info/top_level.txt

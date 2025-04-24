@@ -1,0 +1,2 @@
+requests
+barknotificator>=1.0.0
