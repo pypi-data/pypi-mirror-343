@@ -1,0 +1,7 @@
+aiogram
+pydantic
+pydantic-settings
+watchdog
+cookiecutter
+click
+rich

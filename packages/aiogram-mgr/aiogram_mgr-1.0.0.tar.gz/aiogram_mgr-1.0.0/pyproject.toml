@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools >= 61.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aiogram-mgr"
+description = "A command-line tool used to create aiogram projects and maybe more things soon."
+readme = "README.md"
+version = "1.0.0"
+dependencies = [
+    "aiogram",
+    "pydantic",
+    "pydantic-settings",
+    "watchdog",
+    "cookiecutter",
+    "click",
+    "rich"
+]
+requires-python = ">=3.9"
+
+
+[project.scripts]
+aiogram_manager = "amgr.cli:cli"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"*" = ["*", "**/*"]

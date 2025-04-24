@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: aiogram-mgr
+Version: 1.0.0
+Summary: A command-line tool used to create aiogram projects and maybe more things soon.
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: aiogram
+Requires-Dist: pydantic
+Requires-Dist: pydantic-settings
+Requires-Dist: watchdog
+Requires-Dist: cookiecutter
+Requires-Dist: click
+Requires-Dist: rich
+
+# Aiogram_Manager
+
+Python library for creating and managing (not yet) aiogram projects
+
+## Installation
+
+1. `pip install aiogram_manager`
+
+## Usage
+
+1. Create a project
+
+`aiogram_manager create_project PROJECT_NAME`
+
+2. Create an app (inside the project folder)
+
+`aiogram_manager create_app APP_NAME`

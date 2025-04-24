@@ -1,0 +1,33 @@
+README.md
+pyproject.toml
+aiogram_mgr.egg-info/PKG-INFO
+aiogram_mgr.egg-info/SOURCES.txt
+aiogram_mgr.egg-info/dependency_links.txt
+aiogram_mgr.egg-info/entry_points.txt
+aiogram_mgr.egg-info/requires.txt
+aiogram_mgr.egg-info/top_level.txt
+amgr/cli.py
+amgr/manage.py
+amgr/templates/app_template/cookiecutter.json
+amgr/templates/app_template/{{ cookiecutter.app_name }}/__init__.py
+amgr/templates/app_template/{{ cookiecutter.app_name }}/callbacks.py
+amgr/templates/app_template/{{ cookiecutter.app_name }}/filters.py
+amgr/templates/app_template/{{ cookiecutter.app_name }}/handlers.py
+amgr/templates/app_template/{{ cookiecutter.app_name }}/keyboards.py
+amgr/templates/app_template/{{ cookiecutter.app_name }}/middlewares.py
+amgr/templates/app_template/{{ cookiecutter.app_name }}/models.py
+amgr/templates/app_template/{{ cookiecutter.app_name }}/states.py
+amgr/templates/main_app_template/cookiecutter.json
+amgr/templates/main_app_template/{{ cookiecutter.app_name }}/__init__.py
+amgr/templates/main_app_template/{{ cookiecutter.app_name }}/callbacks.py
+amgr/templates/main_app_template/{{ cookiecutter.app_name }}/handlers.py
+amgr/templates/main_app_template/{{ cookiecutter.app_name }}/states.py
+amgr/templates/project_template/cookiecutter.json
+amgr/templates/project_template/{{ cookiecutter.project_name }}/manage.py
+amgr/templates/project_template/{{ cookiecutter.project_name }}/requirements.txt
+amgr/templates/project_template/{{ cookiecutter.project_name }}/apps/__init__.py
+amgr/templates/project_template/{{ cookiecutter.project_name }}/core/__init__.py
+amgr/templates/project_template/{{ cookiecutter.project_name }}/core/config.py
+amgr/templates/project_template/{{ cookiecutter.project_name }}/core/db_config.py
+amgr/templates/project_template/{{ cookiecutter.project_name }}/core/run.py
+amgr/templates/project_template/{{ cookiecutter.project_name }}/utils/__init__.py
