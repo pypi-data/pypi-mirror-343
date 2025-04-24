@@ -1,0 +1,10 @@
+requests>=2.25.0
+keyring>=23.0.0
+markdown>=3.3.0
+
+[dev]
+black
+pytest
+pytest-cov
+twine
+build

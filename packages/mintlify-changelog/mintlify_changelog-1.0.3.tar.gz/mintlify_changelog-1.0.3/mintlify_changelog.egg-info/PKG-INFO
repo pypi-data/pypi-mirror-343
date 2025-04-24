@@ -1,0 +1,489 @@
+Metadata-Version: 2.4
+Name: mintlify-changelog
+Version: 1.0.3
+Summary: AI-powered, beautiful changelog generator for git repositories
+Home-page: https://github.com/mintlify/changelog
+Author: Mintlify
+Author-email: careers@mintlify.com
+Keywords: changelog,git,claude,ai,mintlify,documentation
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Version Control :: Git
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Requires-Dist: keyring>=23.0.0
+Requires-Dist: markdown>=3.3.0
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Mintlify Changelog Generator 🚀
+
+> **Generate beautiful, AI-powered changelogs directly from your git commits in seconds**
+
+[![PyPI version](https://img.shields.io/pypi/v/mintlify-changelog.svg)](https://pypi.org/project/mintlify-changelog/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/mintlify-changelog.svg)](https://pypi.org/project/mintlify-changelog/)
+[![License](https://img.shields.io/pypi/l/mintlify-changelog.svg)](https://github.com/arthurcolle/mintlify-changelog/blob/main/LICENSE)
+
+Transform your messy git log into beautifully formatted, contextual changelogs with the power of Claude AI. Simply run a single command in any git repository to create professional-quality release notes.
+
+**Before:**
+```
+e608884 Fix critical bug in feature.txt
+fad4d75 Add README.md
+9036e4c Add new feature.txt file
+...
+```
+
+**After:**
+```markdown
+# My Project Changelog
+### April 23, 2025
+
+#### ✨ New Features
+- Add user authentication system with OAuth support
+- Implement dark mode across all components
+- Add real-time notification system
+
+#### 🐛 Bug Fixes
+- Fix critical race condition in async data loading
+- Address security vulnerability in input validation
+
+...
+```
+
+## ⚡️ Quick Start (30 Seconds)
+
+```bash
+# 1. Install the package
+pip install mintlify-changelog
+
+# 2. Navigate to any git repository
+cd /path/to/your/repo
+
+# 3. Set your API key (one-time setup)
+mintlify-changelog --set-api-key "your-claude-api-key"
+
+# 4. Generate a changelog
+mintlify-changelog
+
+# 5. Or use the shorter aliases
+changelog
+cl
+```
+
+Or install directly from GitHub:
+
+```bash
+pip install git+https://github.com/arthurcolle/mintlify-changelog.git
+```
+
+## 🔥 Key Features
+
+- **AI-Powered Understanding** - Interprets commit messages to extract meaningful context
+- **Smart Categorization** - Automatically groups similar changes into logical categories
+- **Multiple Output Formats** - Generate as Markdown, HTML, JSON, or plain text
+- **Theme Support** - Choose from different styles (standard, conventional, minimal, detailed)
+- **Time-Based Grouping** - Organize by day, week, or month automatically
+- **Zero Configuration** - Works immediately with sensible defaults
+- **Emoji Categories** - Visual indicators make your changelog scannable
+- **Semantic Version Detection** - Suggests appropriate version bumps
+
+## 📋 Command Reference
+
+```
+Usage: mintlify-changelog [options]
+   or: changelog [options]
+   or: cl [options]
+```
+
+### Essential Options
+
+| Option | Description |
+|--------|-------------|
+| `-c, --count N` | Process last N commits (default: 20) |
+| `-o, --output FILE` | Save to file (e.g., CHANGELOG.md) |
+| `--title TITLE` | Set custom changelog title |
+| `--theme THEME` | Choose theme (standard, conventional, minimal, detailed) |
+| `--format FORMAT` | Output format (markdown, html, json, text) |
+| `--release-cycle CYCLE` | Time grouping (auto, daily, weekly, monthly, none) |
+| `--dry-run` | Preview prompt without API call |
+| `-q, --quiet` | Suppress progress output |
+| `--list-themes` | Show available themes |
+| `--set-config KEY=VALUE` | Set configuration value |
+
+## 📚 Example Usage Cookbook
+
+### Basic Usage
+
+```bash
+# Generate changelog for the last 20 commits (default)
+mintlify-changelog
+
+# Use the shorter aliases
+changelog
+cl
+
+# Generate changelog for a specific number of commits
+mintlify-changelog -c 10
+changelog --count 5
+cl -c 15
+
+# Save to a file
+mintlify-changelog -o CHANGELOG.md
+changelog --output release-notes.md
+cl -o docs/changelog.md
+
+# Combine options
+mintlify-changelog -c 30 -o CHANGELOG.md
+cl --count 25 --output latest-changes.md
+```
+
+### Customizing Output
+
+```bash
+# Set a custom title
+mintlify-changelog --title "Release v1.0.2"
+changelog --title "Sprint 42 Changelog"
+cl --title "Weekly Update (April 23-30)"
+
+# Generate HTML output
+mintlify-changelog --format html -o changelog.html
+changelog --format html --output docs/changes.html
+
+# Generate JSON output for further processing
+mintlify-changelog --format json -o changes.json
+changelog --format json > changes.json
+
+# Generate plain text output
+mintlify-changelog --format text
+cl --format text -o CHANGES.txt
+```
+
+### Using Different Themes
+
+```bash
+# Use conventional commits style
+mintlify-changelog --theme conventional
+changelog --theme conventional -o CHANGELOG.md
+
+# Use minimal style
+mintlify-changelog --theme minimal
+cl --theme minimal
+
+# Use detailed style with more context
+mintlify-changelog --theme detailed
+changelog --theme detailed -c 50
+
+# List available themes
+mintlify-changelog --list-themes
+```
+
+### Time-Based Grouping
+
+```bash
+# Group changes by day
+mintlify-changelog --release-cycle daily
+cl --release-cycle daily
+
+# Group changes by week
+mintlify-changelog --release-cycle weekly
+changelog --release-cycle weekly
+
+# Group changes by month
+mintlify-changelog --release-cycle monthly
+cl --release-cycle monthly
+
+# Don't use time-based grouping
+mintlify-changelog --release-cycle none
+```
+
+### Configuration and Setup
+
+```bash
+# Set your API key (one-time setup)
+mintlify-changelog --set-api-key "your-claude-api-key"
+
+# Set default configuration values
+mintlify-changelog --set-config defaults.count=30
+changelog --set-config defaults.theme=conventional
+cl --set-config defaults.release_cycle=weekly
+
+# Preview the prompt without making an API call
+mintlify-changelog --dry-run
+changelog --dry-run -c 10
+cl --dry-run --theme detailed
+```
+
+### Advanced Usage
+
+```bash
+# Combine multiple options
+mintlify-changelog -c 20 --theme conventional --format html -o docs/changelog.html --title "Sprint 42 Release"
+
+# Generate a standalone CLI tool
+mintlify-changelog --single-file-cli my-changelog.py
+
+# Generate HTML changelog and open it
+mintlify-changelog --format html -o changelog.html && open changelog.html
+
+# Suppress progress output
+mintlify-changelog -q
+changelog --quiet -c 15
+```
+
+## 🔧 Configuration
+
+### Setting Your API Key
+
+```bash
+# Option 1: Command-line setup (recommended)
+mintlify-changelog --set-api-key "your-claude-api-key"
+
+# Option 2: Environment variable
+export MINTLIFY_API_KEY="your-claude-api-key"
+```
+
+### Environment Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `MINTLIFY_API_KEY` | Your Claude API key | - |
+| `MINTLIFY_MODEL` | Claude model to use | claude-3-5-sonnet-latest |
+| `MINTLIFY_MAX_TOKENS` | Maximum tokens for response | 4096 |
+| `MINTLIFY_TEMPERATURE` | Temperature setting | 0.5 |
+| `MINTLIFY_BASE_URL` | API base URL | https://mintlify-take-home.com |
+| `MINTLIFY_API_ENDPOINT` | API endpoint path | /api/message |
+
+### Persistent Configuration
+
+```bash
+# Change default commit count
+mintlify-changelog --set-config defaults.count=30
+
+# Set default theme
+mintlify-changelog --set-config defaults.theme=conventional
+
+# Set default release cycle
+mintlify-changelog --set-config defaults.release_cycle=weekly
+```
+
+## 💡 Advanced Features & Examples
+
+### Theme Options
+
+View available themes:
+```bash
+mintlify-changelog --list-themes
+```
+
+| Theme | Description |
+|-------|-------------|
+| `standard` | Detailed, professional changelog with rich formatting |
+| `conventional` | Follows Conventional Commits standard with semantic versioning |
+| `minimal` | Concise, clean changelog with minimal formatting |
+| `detailed` | Comprehensive changelog with rich context and analysis |
+
+### Integration with Git Workflows
+
+```bash
+# Generate changelog for changes since last release tag
+LAST_TAG=$(git describe --tags --abbrev=0) && \
+  mintlify-changelog -c $(git log $LAST_TAG..HEAD --oneline | wc -l) \
+  --title "Changes since $LAST_TAG" -o unreleased-changes.md
+
+# Create changelog for current sprint (assuming tags like sprint-X)
+PREV_SPRINT=$(git tag | grep "sprint-" | sort -V | tail -2 | head -1) && \
+CURR_SPRINT=$(git tag | grep "sprint-" | sort -V | tail -1) && \
+mintlify-changelog -c $(git log $PREV_SPRINT..$CURR_SPRINT --oneline | wc -l) \
+  --title "Sprint $(echo $CURR_SPRINT | sed 's/sprint-//')" -o sprint-changelog.md
+
+# Generate changelog for a specific date range
+git log --since="2025-04-01" --until="2025-04-23" --format="%H" | head -1 | xargs -I{} \
+  mintlify-changelog -c $(git log --since="2025-04-01" --until="2025-04-23" --oneline | wc -l) \
+  --title "April 2025 Changelog"
+
+# Create changelog excluding merge commits
+mintlify-changelog -c $(git log --no-merges -n 30 --oneline | wc -l) \
+  --title "Non-merge commit changes"
+
+# Generate changelog for changes in specific directories only
+git log --format="%H" -- src/components lib/utils | head -20 | xargs -I{} \
+  mintlify-changelog -c 20 --title "Frontend Component Changes" -o frontend-changes.md
+```
+
+### Multi-Format and Multi-Output
+
+```bash
+# Generate changelog in multiple formats simultaneously
+for FORMAT in markdown html json text; do
+  mintlify-changelog -c 20 --format $FORMAT -o "changelog.$FORMAT"
+done
+
+# Create separate changelogs by category with different themes
+mintlify-changelog -c 50 --format json | jq -r '.sections.categories | keys[]' | \
+  xargs -I{} sh -c 'mintlify-changelog -c 50 --theme conventional --title "{}" -o "changelog-{}.md"'
+
+# Generate different granularity changelogs
+for CYCLE in daily weekly monthly; do
+  mintlify-changelog -c 50 --release-cycle $CYCLE -o "changelog-$CYCLE.md"
+done
+```
+
+### Enhanced Formatting and Post-Processing
+
+```bash
+# Generate HTML changelog with custom CSS
+mintlify-changelog --format html | \
+  sed 's/<\/head>/<style>body{font-family:Helvetica;max-width:800px;margin:0 auto;padding:20px;line-height:1.6}h1,h2,h3{color:#333}li{margin-bottom:8px}<\/style><\/head>/' > styled-changelog.html
+
+# Create markdown changelog with frontmatter for static site generators
+echo "---\ntitle: Changelog\ndate: $(date +%Y-%m-%d)\ndescription: Recent changes and updates\n---\n\n$(mintlify-changelog -c 30)" > docs/changelog.md
+
+# Generate changelog with GitHub commit links
+REPO_URL=$(git remote get-url origin | sed 's/\.git$//; s/^git@github\.com:/https:\/\/github.com\//') && \
+  mintlify-changelog -c 20 | \
+  sed -E "s/\`([a-f0-9]{7})\`/[\`\1\`]($REPO_URL\/commit\/\1)/g" > linked-changelog.md
+```
+
+### Notification and Communication Systems
+
+```bash
+# Generate changelog and send as Slack message
+mintlify-changelog -c 15 --format text | \
+  curl -X POST -H "Content-type: application/json" \
+  --data "{\"text\":\"$(cat)\"}" \
+  https://hooks.slack.com/services/XXX/YYY/ZZZ
+
+# Create email-friendly HTML changelog
+mintlify-changelog --format html --theme minimal | \
+  sed 's/<style>/<style>body{font-family:Arial;max-width:600px;margin:0 auto}li{margin-bottom:10px}/' > email-changelog.html
+
+# Generate and post to Discord webhook
+mintlify-changelog -c 10 | \
+  curl -X POST -H "Content-Type: application/json" \
+  --data "{\"content\":\"$(cat)\"}" \
+  https://discord.com/api/webhooks/XXX/YYY
+```
+
+### CI/CD Pipeline Integration
+
+```bash
+# Generate changelog as part of GitHub Actions workflow
+echo "CHANGELOG<<EOF" >> $GITHUB_ENV && \
+  mintlify-changelog -c 20 >> $GITHUB_ENV && \
+  echo "EOF" >> $GITHUB_ENV
+
+# Create versioned changelog in CI
+CURRENT_TAG=$(git describe --tags --abbrev=0) && \
+  mintlify-changelog -c 20 --title "Release $CURRENT_TAG" -o "changelogs/changelog-$CURRENT_TAG.md"
+```
+
+### Dynamic Version Management
+
+```bash
+# Calculate semantic version bump based on commit content
+CURRENT_VERSION=$(cat package.json | jq -r .version)
+COMMITS=$(git log $(git describe --tags --abbrev=0)..HEAD --pretty=format:"%s")
+
+if echo "$COMMITS" | grep -q "BREAKING CHANGE"; then
+  BUMP="major"
+  NEW_VERSION=$(echo $CURRENT_VERSION | awk -F. '{print $1+1".0.0"}')
+elif echo "$COMMITS" | grep -qE "^feat(\(.*\))?:"; then
+  BUMP="minor"
+  NEW_VERSION=$(echo $CURRENT_VERSION | awk -F. '{print $1"."($2+1)".0"}')
+else
+  BUMP="patch"
+  NEW_VERSION=$(echo $CURRENT_VERSION | awk -F. '{print $1"."$2"."($3+1)}')
+fi
+
+mintlify-changelog -c 30 --title "v$NEW_VERSION ($(date +%Y-%m-%d))" -o CHANGELOG.md
+```
+
+### Programmatic Usage
+
+Use the library in your Python code:
+
+```python
+from mintlify_changelog.core import generate_changelog
+
+# Basic usage
+changelog = generate_changelog(
+    count=10,                # Number of commits
+    theme="conventional",    # Theme style
+    output_format="markdown",  # Output format
+    output_file="CHANGELOG.md" # Optional: save to file
+)
+
+print(changelog)
+
+# More advanced example
+def generate_weekly_changelog():
+    """Generate weekly changelog and email to team."""
+    import subprocess
+    from datetime import datetime
+    
+    # Get number of commits in the last week
+    cmd = ["git", "log", "--since=1.week", "--oneline"]
+    result = subprocess.run(cmd, capture_output=True, text=True)
+    commit_count = len(result.stdout.splitlines())
+    
+    # Generate changelog with date title
+    week_date = datetime.now().strftime("%Y-W%W")
+    changelog = generate_changelog(
+        count=commit_count,
+        title=f"Weekly Update {week_date}",
+        theme="detailed",
+        output_format="html",
+        output_file=f"changelog-{week_date}.html"
+    )
+    
+    # Here you could add code to email the changelog
+    return changelog
+```
+
+## 🧑‍💻 Development
+
+Clone the repository and install in development mode:
+
+```bash
+git clone https://github.com/arthurcolle/mintlify-changelog.git
+cd mintlify-changelog
+pip install -e .
+```
+
+### Running Tests
+
+```bash
+python -m unittest discover tests
+```
+
+## 📜 License
+
+MIT
