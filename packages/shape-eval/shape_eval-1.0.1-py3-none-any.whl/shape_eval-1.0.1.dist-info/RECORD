@@ -1,0 +1,12 @@
+shape_eval/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shape_eval/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shape_eval/service.py,sha256=vInZ_nRvwy6nyOD2Jr0wcy0da-U1CzyfENC2i_lVbi0,9386
+shape_eval/Docs/changelog.txt,sha256=3IZX5Byf9p8SDGIUkAnzPhMnvaKOrSQrTG8DYSj8TdQ,55
+shape_eval/testing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shape_eval/testing/base_test.py,sha256=EpZuwt8Utc96yilkyj7IjXmmd1rz1w5ZYN68N5qT1Y8,253
+shape_eval/testing/civitai_sample.py,sha256=9ry8LByCj3cMVA_zFwUMaYCDDlNZz_ShSObIow-Fhso,329194
+shape_eval/testing/test_service.py,sha256=nKruUwlKVJ6nvwlwdekgC9IReRoKuaFgvqQzvaLdB5s,4450
+shape_eval-1.0.1.dist-info/METADATA,sha256=pgQyyJQfpP6TJ2nK_blUuO-wW3nuwPbhkfPpeU1jXoM,1186
+shape_eval-1.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+shape_eval-1.0.1.dist-info/licenses/LICENSE.txt,sha256=zIEM6VNcgDb39i6KfJqP3L_QH0wg7DHT5Mm3yHThqqk,34524
+shape_eval-1.0.1.dist-info/RECORD,,
