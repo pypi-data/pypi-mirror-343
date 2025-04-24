@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "dagster-dora"
+version = "0.0.1"
+description = "Dagster’s software-defined asset abstractions make it simple to define data assets that depend on dora tables to define the computation and dependencies"
+authors = ["Didone <tiago.didone@compass.uol>"]
+license = "Apache-2.0"
+readme = "README.md"
+classifiers = [
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+dora-core = "^0.1.0"
+dora-aws = "^0.1.0"
+
+[tool.poetry.group.dev.dependencies]
+dagster = "^1.9.11"
+dagster-aws = "^0.25.11"
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
