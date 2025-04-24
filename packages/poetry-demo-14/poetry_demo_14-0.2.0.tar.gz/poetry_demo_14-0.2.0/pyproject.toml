@@ -1,0 +1,16 @@
+[project]
+name = "poetry-demo-14"
+version = "0.2.0"
+description = "this is for testing purpose"
+
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "poetry_demo", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
