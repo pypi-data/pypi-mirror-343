@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "singapore-nric-generator"
+version = "0.1.1"
+description = "Generate Singapore National Registration Identity Card (NRIC) numbers programmatically."
+authors = ["mohammed.saleel0099@gmail.com"]
+packages = [{ include = "singapore_nric_generator" }]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pytest = "^8.3.5"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.0.0"
