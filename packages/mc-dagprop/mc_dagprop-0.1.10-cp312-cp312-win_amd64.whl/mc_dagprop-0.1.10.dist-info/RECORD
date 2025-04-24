@@ -1,0 +1,12 @@
+mc_dagprop/__init__.py,sha256=NN8Gptep8PNrjUgBAAkDdtwyHb5k_umPuIFQxDqpSgo,239
+mc_dagprop/_core.cp312-win_amd64.pyd,sha256=89F3w8jt0Eyna5h9P8d8Qmnjox5DvYhIjxFs9XZ8fuM,235520
+mc_dagprop/_core.cpp,sha256=ljIqRkJx3L0aLu7IFCB0yC4_P-GzIaE1WXEKQap6vpc,11919
+mc_dagprop/_core.pyi,sha256=Or1vaNemFtkKUAtYJpzy5mDj6YtufFU0XpkEi0NdeQ8,2518
+mc_dagprop/py.typed.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mc_dagprop/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mc_dagprop/utils/demo_distributions.py,sha256=KGhjTZxq8H09K4exGYCbwDw4uIIpTTr_pFFgnwwK-QM,2980
+mc_dagprop-0.1.10.dist-info/licenses/LICENSE,sha256=ErVysT2KPtLgYmod6JTR7dfsuuqYR6qUOltp1idLcXo,1086
+mc_dagprop-0.1.10.dist-info/METADATA,sha256=Iogi7AYtimGzE_kIe3Tc68mwX3dQT8VrHPORDvcyNDc,5974
+mc_dagprop-0.1.10.dist-info/WHEEL,sha256=YvQgr19VPpDKcQ70xCXIWyDmGnURmFmzZpp_Uw5rBS8,101
+mc_dagprop-0.1.10.dist-info/top_level.txt,sha256=VhWzDtWD8NINYQBpHAGwmNMjsiEk1zDvgfk_bwt1p04,11
+mc_dagprop-0.1.10.dist-info/RECORD,,
