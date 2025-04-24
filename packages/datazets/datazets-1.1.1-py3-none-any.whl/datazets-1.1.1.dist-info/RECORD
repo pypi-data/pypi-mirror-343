@@ -1,0 +1,14 @@
+datazets/__init__.py,sha256=Ot6-O0PnbmDEqXp-v_nXIp2Clip-ZLwH7sSivPKH_kU,1133
+datazets/datazets.py,sha256=9-hjIboRYxsMFFfFXo4ni_5RNPeqwd0p-iLbpdxZhT4,24033
+datazets/examples.py,sha256=b0FKJdeTBbS9yGqe2CP0xjrs2dMbZ9awzBNwFFaGMBI,8322
+datazets/data/RUS_2018_elections.zip,sha256=ylGP9lkoy2H-4GVweDIpIy0yKe1PgRQCI7sKdYXNkZw,2803707
+datazets/data/USA_2016_elections.zip,sha256=2NFxV0mx9h43pgJWo9Gy4rz7Bh_-3cjMsAvJp3r1V6M,248364
+datazets/data/ds_salaries.zip,sha256=MkedrQYIDBuwrD7yb35fuUaNtf-5F5hFoGosmR82I0A,28801
+datazets/data/facebook_stocks.zip,sha256=HFevR_SuF5ZkPP1lS-SNh3KQYWFuqQm9LEtIoMIJuJI,38517
+datazets/data/student_train.zip,sha256=sT30qC6MYw9iwTnYH6Ut7xI3LvHsDKQWzag_wdf9ReQ,11296
+datazets/data/surfspots.zip,sha256=yV6ivYQF3fP8cJD8Ckvvrn9wGhjOr8i8h3S9x7ahrdA,40504
+datazets-1.1.1.dist-info/licenses/LICENSE,sha256=BbiDYXR0i07Jlg5-99juWgul1WVivPFUvznfFJ1x-Ng,1121
+datazets-1.1.1.dist-info/METADATA,sha256=BrnIZkQkSF49ki8wXaQbVu8xq2sC2tmvEVwaNbB5prw,13122
+datazets-1.1.1.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+datazets-1.1.1.dist-info/top_level.txt,sha256=aUq0MH3V3d2_kblXPeGAWYdIsRKt4vKzCWgW_jUAlTc,9
+datazets-1.1.1.dist-info/RECORD,,
