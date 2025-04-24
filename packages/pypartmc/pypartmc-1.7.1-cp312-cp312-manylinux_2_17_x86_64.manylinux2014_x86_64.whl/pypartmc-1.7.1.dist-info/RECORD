@@ -1,0 +1,9 @@
+_PyPartMC.cpython-312-x86_64-linux-gnu.so,sha256=CjBNh99bIvPnmircf1Si9fdsb2z32a-pYZ_nWRszJkk,9384593
+PyPartMC/__init__.py,sha256=VAqwePpJZEFJ7YieM1GbUvfluRhUyWXciP89pY9xIH4,2217
+pypartmc.libs/libgfortran-040039e1.so.5.0.0,sha256=FK-zEpsai1C8QKOwggx_EVLqm8EBIaqxUpQ_cFdHKIY,2686065
+pypartmc.libs/libquadmath-96973f99.so.0.0.0,sha256=k0wi3tDn0WnE1GeIdslgUa3z2UVF2pYvYLQWWbB12js,247609
+pypartmc-1.7.1.dist-info/METADATA,sha256=d8p7dsD8rjuJi7PZo3sc68dBwTS3vKczUa9mN4oUoXA,26985
+pypartmc-1.7.1.dist-info/WHEEL,sha256=ht7nWdgL4juo3mGfaTc_sXnhdi8IVUViLk6AFiHNUks,151
+pypartmc-1.7.1.dist-info/top_level.txt,sha256=PJxy22pTnxcBhqrb6r4AIL32rkxA61gzw7ohlzybgSM,19
+pypartmc-1.7.1.dist-info/RECORD,,
+pypartmc-1.7.1.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
