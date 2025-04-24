@@ -1,0 +1,12 @@
+shadowbot/__init__.py,sha256=sQcfAJ1EJvI0WuXRGkUGRRDVs5PM4o_7SakVDm4wWjQ,91
+shadowbot/service_init.py,sha256=HZ5FqybcVECVzcq9Qj2VAiEsTf4LIwvmcte6czl825o,6370
+shadowbot/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shadowbot/utils/_data_monitor.py,sha256=92EiFuGUfCdy9-Ml-q00xk1Qozn_YvQcHyrzhhp0GK8,4289
+shadowbot/utils/_data_storage.py,sha256=CbonrIbB6x8Iq9jTOCqUcAsdjKT-9dWCkhvIFGXV2SE,4936
+shadowbot/utils/_function_doctor.py,sha256=bAKxQlT4mddQNVdUVmSlVJcy18LpTxceIwRVmI_rf-M,1816
+shadowbot/utils/_function_share.py,sha256=tBHb3hHqVy2NSN8J0JwRpUpoTtKDTTvW49foYbcv6UM,2318
+shadowbot-0.1.0.dist-info/licenses/LICENSE,sha256=-WaKctkel-LdYLAUU_IGA3UODhho6W2Zm0zJy9P7NQg,1080
+shadowbot-0.1.0.dist-info/METADATA,sha256=AXn1JHlvzMej1N-gGZQYj_KIU_JJPZz3Q91Usz_NaIs,1194
+shadowbot-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+shadowbot-0.1.0.dist-info/top_level.txt,sha256=N9ycnJBQfLxUQ9g82LIzhomEIS42fd6IBkZnJ01qdf4,10
+shadowbot-0.1.0.dist-info/RECORD,,
