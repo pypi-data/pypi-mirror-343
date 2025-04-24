@@ -1,0 +1,10 @@
+ytdlp_gui-1.0.1.dist-info/licenses/LICENSE,sha256=b-JyCiqNMQ1wba8Mif6wf3wCpofpBho9X79Qtv78aCo,1083
+ytdlpg/__main__.py,sha256=nrhqSlv1ngRmjIg5BebPbG9o0pydADQtv_1mj8oPzfc,54
+ytdlpg/main.py,sha256=mvBL6dnPHcFthMVy4uTEJqh-ZIEyYsRe8hHhjpJ6wA4,27791
+ytdlpg/manager.py,sha256=1TPhEzxrelSA55-gdidYyA0SKE_yFSdGjTqlXQn0Q48,2956
+ytdlpg/options.py,sha256=Du_almoRrP5ZxxyWIZoed2F714tTE3RiIh0H6DEEVM8,1469
+ytdlp_gui-1.0.1.dist-info/METADATA,sha256=TiJNytG5Fy0Kuh_bpC7xlI0bPv4pbt8e1kRBdaD-x38,1768
+ytdlp_gui-1.0.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+ytdlp_gui-1.0.1.dist-info/entry_points.txt,sha256=xe-mWV2_R_W7TfbUzXJpNZvi105b9WBhJIydpXCBFLE,51
+ytdlp_gui-1.0.1.dist-info/top_level.txt,sha256=K_loQk8bxlahy8BMJI2EAlq8pMkbekt93D2nN5wsA48,7
+ytdlp_gui-1.0.1.dist-info/RECORD,,
