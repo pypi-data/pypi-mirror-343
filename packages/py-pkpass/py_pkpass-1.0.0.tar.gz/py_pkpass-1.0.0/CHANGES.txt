@@ -1,0 +1,1 @@
+v.1.0.0 - Forked from original passbook repo, updated package versions, added additional tests
