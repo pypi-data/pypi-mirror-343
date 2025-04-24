@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: uk-national-health-service-number
+Version: 0.1.1
+Summary: Generate valid UK NHS number for testing
+Author: msaleel
+Author-email: mohammed.saleel0099@gmail.com
+Requires-Python: >=3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+
