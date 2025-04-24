@@ -1,0 +1,3 @@
+[robotframework_listener]
+AIRetrySmartLocator = domretrylibrary.core:AIRetrySmartLocator
+
