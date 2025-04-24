@@ -1,0 +1,7 @@
+dtensor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dtensor/visualize.py,sha256=2RN6t-74Co-XUnvsjnjxbcaxwciy1q6xJzwRVsb0ZT0,9079
+dtensor/visualize_example.py,sha256=6OkMlb0QW8oWIEg1tGGfZbZiI95q9If2dFwuwWbDv3A,3538
+dtensor-0.0.1.dist-info/licenses/LICENSE,sha256=xNcvRK0qX8OH2LrACkYAK4vghTsOe4xerDqrc4FwDiU,1076
+dtensor-0.0.1.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+dtensor-0.0.1.dist-info/METADATA,sha256=PNBmBsHhW__Y7uRZtmjyKr1y7OLkHOEmw9fGID3l9T8,2211
+dtensor-0.0.1.dist-info/RECORD,,
