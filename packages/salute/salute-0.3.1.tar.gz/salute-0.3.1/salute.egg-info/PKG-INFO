@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: salute
+Version: 0.3.1
+Summary: Add your description here
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: asyncpg>=0.30.0
+Requires-Dist: pydantic>=2.11.3
+Requires-Dist: python-decouple>=3.8
+Requires-Dist: sanic>=25.3.0
+
+# SALUTE
