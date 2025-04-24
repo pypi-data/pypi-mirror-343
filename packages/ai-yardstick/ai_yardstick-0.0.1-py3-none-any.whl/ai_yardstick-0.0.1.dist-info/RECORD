@@ -1,0 +1,9 @@
+ai_yardstick/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ai_yardstick/__main__.py,sha256=8hDtWlaFZK24KhfNq_ZKgtXqYHsDQDetukOCMlsbW0Q,59
+ai_yardstick/cli.py,sha256=jUti5vVfIHaOwRn_3OT7lL0Hlu2rnMazYj87ODKbu_4,22696
+ai_yardstick-0.0.1.dist-info/licenses/LICENSE,sha256=tfMOuEdP3jDFOvlrCZegy4oVN9DDYA8Moa_APsHgLJU,1069
+ai_yardstick-0.0.1.dist-info/METADATA,sha256=fAnTadgAeWLq4eWFHKk7Vg2FiakJREwlXGfbB7v1E4s,2136
+ai_yardstick-0.0.1.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+ai_yardstick-0.0.1.dist-info/entry_points.txt,sha256=4HtLnKT9syrVr5xTZ4ryydhpXGtez-F3DCW8QkSGvDo,54
+ai_yardstick-0.0.1.dist-info/top_level.txt,sha256=ZXuAX_fyqZNAYO4WSW88kVQyfQtWfDnHll8PCwDE08A,13
+ai_yardstick-0.0.1.dist-info/RECORD,,
