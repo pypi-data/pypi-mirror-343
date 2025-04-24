@@ -1,0 +1,10 @@
+neuroforge/__init__.py,sha256=5mDtfU2t04ATmg92S5B-scUcdjCy1ZBq620y3GmpdtQ,21
+neuroforge/loader.py,sha256=mf-HR66kZ85vnvZqfL3rjVMaWMl-7uYEUpHZC4LTwIg,1623
+neuroforge/ml.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+neuroforge/nns.py,sha256=iBDlAlTHPJ8o_BWPZ0FGlMu-huinyLvaoMEQ-fU6Bss,18090
+neuroforge/utils/config.py,sha256=Di6VFqEnQL0a_0tMORd4sdKvDFV_KUHoX_DJaqHIHSo,303
+neuroforge-0.3.0.dist-info/licenses/LICENSE,sha256=AZ--gsbvQUVuXMP1KdwSJN4WlMQo5o6gpV9TKn2OIck,1082
+neuroforge-0.3.0.dist-info/METADATA,sha256=U9E6DydBrIRTsS7IFhYUdSF5usUPEvR3NqFHHi13sA4,840
+neuroforge-0.3.0.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+neuroforge-0.3.0.dist-info/top_level.txt,sha256=Vbq44aho7UgGYWmgqQT4m1oCEomYCGFl2T0dZENSN9E,11
+neuroforge-0.3.0.dist-info/RECORD,,
