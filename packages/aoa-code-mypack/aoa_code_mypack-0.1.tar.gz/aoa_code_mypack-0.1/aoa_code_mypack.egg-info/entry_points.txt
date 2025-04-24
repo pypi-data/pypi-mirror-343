@@ -1,0 +1,2 @@
+[console_scripts]
+show-codes = aoa_code_mypack.main:show_codes
