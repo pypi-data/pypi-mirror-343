@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+qazaq_inflector/__init__.py
+qazaq_inflector/inflector.py
+qazaq_inflector.egg-info/PKG-INFO
+qazaq_inflector.egg-info/SOURCES.txt
+qazaq_inflector.egg-info/dependency_links.txt
+qazaq_inflector.egg-info/requires.txt
+qazaq_inflector.egg-info/top_level.txt
+tests/test_inflector.py
