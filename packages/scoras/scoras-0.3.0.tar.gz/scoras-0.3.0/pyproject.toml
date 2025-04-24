@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+
+[project]
+name = "scoras"
+version = "0.3.0"
+description = "Intelligent Agent Framework with Complexity Scoring"
+readme = "README.md"
+authors = [
+    {name = "Anderson L. Amaral", email = "luis.anderson.sp@gmail.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "pydantic>=2.0.0",
+    "httpx>=0.24.0",
+    "numpy>=1.20.0",
+    "typing-extensions>=4.0.0",
+    "asyncio>=3.4.3",
+    "aiohttp>=3.8.0",  # Added missing dependency
+]
+
+[project.urls]
+Homepage = "https://github.com/scorastecnologialtda/scoras"
+Documentation = "https://github.com/scorastecnologialtda/scoras/blob/main/README.md"
+"Bug Tracker" = "https://github.com/scorastecnologialtda/scoras/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.20.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mypy>=1.0.0",
+]
+openai = ["openai>=1.0.0"]
+anthropic = ["anthropic>=0.5.0"]
+
+[tool.black]
+line-length = 88
+target-version = ["py38", "py39", "py310", "py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["scoras/tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
