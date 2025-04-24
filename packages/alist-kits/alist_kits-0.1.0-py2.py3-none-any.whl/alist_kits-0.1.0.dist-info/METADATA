@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: alist-kits
+Version: 0.1.0
+Summary: AList Kits
+Home-page: https://github.com/podboy/AListKits/
+Author: Mingzhe Zou
+Author-email: zoumingzhe@outlook.com
+License: GPLv2
+Project-URL: Source Code, https://github.com/podboy/AListKits/
+Project-URL: Bug Tracker, https://github.com/podboy/AListKits/issues
+Project-URL: Documentation, https://github.com/podboy/AListKits/
+Keywords: command-line,argparse,argcomplete
+Platform: any
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: xkits-lib >=0.2.1
+
+# AListKits
+
+> AList Kits

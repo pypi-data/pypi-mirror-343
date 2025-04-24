@@ -1,0 +1,10 @@
+alist_kits/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alist_kits/alistapi.py,sha256=J9K5UiVp1a-gGQXjTYRnEDuldWgjuuj4DlC89vvXS_k,1605
+alist_kits/attribute.py,sha256=lqSBcC3tZvRJM_yyPWdXtOjanyKElzx_yH_nPE8gcMU,230
+alist_kits/objects.py,sha256=yvJS5Wdb9-TRrmSVUn83Pi6Hd_kqxB1MyeXPaQCRYIc,1253
+alist_kits-0.1.0.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+alist_kits-0.1.0.dist-info/METADATA,sha256=9COQ10G5jaQwp9m61wi7gQjpLDdCK5qvOAY7X-1hEuY,685
+alist_kits-0.1.0.dist-info/WHEEL,sha256=pWvVuNuBTVmNV7Lp2jMAgt1NplTICeFdl1SW8U3MWN4,109
+alist_kits-0.1.0.dist-info/top_level.txt,sha256=4KZWShQXyabkgq97WVA9X0UqA25T_PhqLrc7dBC3_hE,11
+alist_kits-0.1.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+alist_kits-0.1.0.dist-info/RECORD,,
