@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thonny-chatbot-plugin"  # <--- ***修改這裡***
+version = "0.1.0"
+authors = [
+  { name="pondahai", email="dahai.pon@gmail.com" },
+]
+description = "一個在 Thonny IDE 中提供 AI 聊天介面的外掛程式"
+readme = "README.md"
+requires-python = ">=3.7"
+license = { file="LICENSE" }
+keywords = ["thonny", "plugin", "ai", "chat", "chatbot", "llm", "openai"] # 可以加入 chatbot
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Topic :: Software Development :: Build Tools",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    # ... (其他分類器保持不變) ...
+    # "Framework :: Thonny",
+    "Operating System :: OS Independent",
+    "Environment :: Plugins",
+]
+dependencies = [
+    "requests>=2.20.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/your_username/thonny-chatbot-plugin" # <-- (建議) 更新 Repo 名稱
+"Bug Tracker" = "https://github.com/your_username/thonny-chatbot-plugin/issues" # <-- (建議) 更新 Repo 名稱
+
+# (如果使用 Entry Points，也需要更新路徑，但目前是註解掉的)
+# [project.entry-points."thonny"]
+# thonny_chatbot_plugin = "thonny_chatbot_plugin.AIChatView:load_plugin" # <-- 注意模組路徑也要對應
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
