@@ -1,0 +1,62 @@
+{% load static %}
+<br><br>
+<!-- 使用唯一ID避免编辑器实例冲突 -->
+<div id="VditorText_{{ id }}">
+</div>
+<!--<textarea> is blocked in Vditor, so use the external <textarea> value-->
+<textarea {{ final_attrs|safe }} style="display: none">{{ value }}</textarea>
+
+<script type="text/javascript">
+    // 清除可能存在的旧实例
+    if (window.vditorInstances && window.vditorInstances['{{ id }}']) {
+        window.vditorInstances['{{ id }}'].destroy();
+    }
+
+    // 获取textarea中的值作为编辑器初始值
+    const textareaValue = document.getElementById('{{ id }}').value;
+
+    // 确保vditorInstances对象存在
+    if (!window.vditorInstances) {
+        window.vditorInstances = {};
+    }
+
+    // 创建新的编辑器实例并存储在全局对象中
+    window.vditorInstances['{{ id }}'] = new Vditor("VditorText_{{ id }}", {
+        width: '{{ config.width|safe }}',
+        height: '{{ config.height }}',
+        lang: '{{ config.lang|safe }}',
+        typewriterMode: '{{ config.typewriterMode|safe }}',
+        mode: '{{ config.mode|safe }}',
+        debugger: '{{ config.debugger|safe }}',
+        value: textareaValue,
+        theme: '{{ config.theme|safe }}',
+        icon: '{{ config.icon|safe }}',
+        outline: '{{config.outline }}',
+        cdn: '/static',
+        preview: {
+            theme: {
+                current: '{{ config.preview_theme|safe }}',
+                path: '/static/dist/css/content-theme'
+            },
+        },
+        upload: {
+            url: '/vditor/uploads/',
+            linkToImgUrl: '/vditor/uploads/',
+            accept: '.jpg,.png,.gif,.jpeg',
+            filename(name) {
+                return name.replace(/\?|\\|\/|:|\||<|>|\*|\[|\]|\s+/g, '-')
+            },
+        },
+        input(md) {
+            document.getElementById('{{ id }}').value = md
+        },
+    })
+
+    // 清除缓存
+    window.vditorInstances['{{ id }}'].clearCache();
+
+    // 强制重新设置值以确保显示正确
+    setTimeout(function() {
+        window.vditorInstances['{{ id }}'].setValue(textareaValue);
+    }, 100);
+</script>
