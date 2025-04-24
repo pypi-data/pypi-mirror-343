@@ -1,0 +1,87 @@
+from dataclasses import dataclass
+from typing import ClassVar, Dict, List
+
+from sigma.rule import SigmaRule, SigmaLogSource
+from sigma.validators.base import (
+    SigmaRuleValidator,
+    SigmaValidationIssue,
+    SigmaValidationIssueSeverity,
+)
+
+from .config import ConfigHQ
+
+config = ConfigHQ()
+
+
+@dataclass
+class SigmahqLogsourceUnknownIssue(SigmaValidationIssue):
+    description: ClassVar[str] = "Rule uses an unknown logsource"
+    severity: ClassVar[SigmaValidationIssueSeverity] = SigmaValidationIssueSeverity.HIGH
+    logsource: SigmaLogSource
+
+
+class SigmahqLogsourceUnknownValidator(SigmaRuleValidator):
+    """Checks if a rule uses an unknown logsource."""
+
+    def validate(self, rule: SigmaRule) -> List[SigmaValidationIssue]:
+        core_logsource = SigmaLogSource(
+            rule.logsource.category, rule.logsource.product, rule.logsource.service
+        )
+        if not core_logsource in config.sigma_fieldsname:
+            return [SigmahqLogsourceUnknownIssue(rule, rule.logsource)]
+        else:
+            return []
+
+
+@dataclass
+class SigmahqSysmonMissingEventidIssue(SigmaValidationIssue):
+    description: ClassVar[str] = (
+        "Rule uses the windows sysmon service logsource without the EventID field"
+    )
+    severity: ClassVar[SigmaValidationIssueSeverity] = SigmaValidationIssueSeverity.HIGH
+
+
+class SigmahqSysmonMissingEventidValidator(SigmaRuleValidator):
+    """Checks if a rule uses the windows sysmon service logsource without the EventID field."""
+
+    def validate(self, rule: SigmaRule) -> List[SigmaValidationIssue]:
+        if rule.logsource.service == "sysmon":
+            find = False
+            for selection in rule.detection.detections.values():
+                for item in selection.detection_items:
+                    if item.field == "EventID":
+                        find = True
+            if find:
+                return []
+            else:
+                return [SigmahqSysmonMissingEventidIssue(rule)]
+        else:
+            return []
+
+
+@dataclass
+class SigmahqLogsourceDefinitionIssue(SigmaValidationIssue):
+    description: ClassVar[str] = "Rule uses an unknown logsource definition"
+    severity: ClassVar[SigmaValidationIssueSeverity] = SigmaValidationIssueSeverity.MEDIUM
+    logsource: SigmaLogSource
+
+
+class SigmahqLogsourceDefinitionValidator(SigmaRuleValidator):
+    """Checks if a rule uses the unknown logsource definition."""
+
+    def validate(self, rule: SigmaRule) -> List[SigmaValidationIssue]:
+        if rule.logsource.definition:
+            core_logsource = SigmaLogSource(
+                rule.logsource.category, rule.logsource.product, rule.logsource.service
+            )
+            if (
+                core_logsource in config.sigma_taxonomy
+                and config.sigma_taxonomy[core_logsource]["logsource"]["definition"]
+            ):
+                if (
+                    rule.logsource.definition
+                    != config.sigma_taxonomy[core_logsource]["logsource"]["definition"]
+                ):
+                    return [SigmahqLogsourceDefinitionIssue(rule, rule.logsource)]
+
+        return []
