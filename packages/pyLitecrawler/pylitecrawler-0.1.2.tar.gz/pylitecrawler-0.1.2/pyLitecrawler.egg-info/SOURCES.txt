@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+pyLitecrawler.egg-info/PKG-INFO
+pyLitecrawler.egg-info/SOURCES.txt
+pyLitecrawler.egg-info/dependency_links.txt
+pyLitecrawler.egg-info/requires.txt
+pyLitecrawler.egg-info/top_level.txt
+pylitecrawler/__init__.py
+pylitecrawler/crawling.py
+pylitecrawler/scraping.py
+pylitecrawler/status.py
+pylitecrawler/utils.py
