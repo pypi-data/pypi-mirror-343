@@ -1,0 +1,9 @@
+trame_image_tools/__init__.py,sha256=QvlVh4JTl3JL7jQAja76yKtT-IvF4631ASjWY1wS6AQ,22
+trame_image_tools/widgets.py,sha256=9qIkBaHIXgH8IsxMsiXiF6anXfz_sO-86m6o21iDf_A,5939
+trame_image_tools/module/__init__.py,sha256=suH2Uy-05rxAACaZdi-_l8mkD6zJ60zl44PNQf4KMss,620
+trame_image_tools/module/serve/trame_image_tools.umd.js,sha256=KauGcewfzRFzdLn5HqgUDe2W-JkkJ_T7kHrCl-azoPw,15782
+trame_image_tools/module/serve/trame_image_tools.umd.js.map,sha256=MyYQ6l9CmqdTwk0RSfKSdBnWS0lMXPSyryQ4IWREwEs,44195
+trame_image_tools-0.0.2.dist-info/METADATA,sha256=MPz0-z6FzZg-VtA0YW2zpogJULAb5SVkvo0-dkDHRZk,2092
+trame_image_tools-0.0.2.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+trame_image_tools-0.0.2.dist-info/top_level.txt,sha256=skuWHnN3GHsOAZ0xEHuyJjPRv2OeSHMZvV3ItrsllAQ,18
+trame_image_tools-0.0.2.dist-info/RECORD,,
