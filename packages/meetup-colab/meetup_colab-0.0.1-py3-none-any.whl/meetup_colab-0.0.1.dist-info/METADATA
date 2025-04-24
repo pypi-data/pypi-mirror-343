@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: meetup_colab
+Version: 0.0.1
+Summary: colab utils
+Project-URL: Homepage, https://github.com/dougc333/meetup_colab
+Project-URL: Issues, https://github.com/dougc333/meetup_colab/issues
+Author-email: dc <dougchang25@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
