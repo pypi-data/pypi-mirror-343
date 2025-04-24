@@ -1,0 +1,11 @@
+auto_file_organizer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+auto_file_organizer/autoorganizer.py,sha256=A3gcHm0aywH8D46VrhM77FevsyCXsT5ewI3-OF3gZf4,3644
+auto_file_organizer/file_ignore.py,sha256=35U4z3vs9X6GgdbrD-yqgPyd4Jo9hYgEEcO2BEt0fJQ,990
+auto_file_organizer/main.py,sha256=72o6smLr9c3ILnDt7jlJ5E_d5fkIfOclp_gj7wSkNdY,1512
+auto_file_organizer/model.py,sha256=kQyVR5bky-owMQPYzUvbNqSX6CTg0yE5qX1jyfodmu4,274
+auto_file_organizer/type_map.py,sha256=4QKR6j0AMWIAPqQK9Ms1MZtqpntZcLm-Zz8YGdn4k3s,2658
+auto_file_organizer/undo.py,sha256=_f2l31TDVzbQSzK4nX5Fk_TY4-kMkMKljUNy8Wej6nc,1638
+auto_file_organizer-1.0.0.dist-info/entry_points.txt,sha256=BIdhRhZLhwjuXm_HXUCFNX-0xQwS8muvAwriQ4usLqU,57
+auto_file_organizer-1.0.0.dist-info/METADATA,sha256=dp6ItD5XQmAcXggMY1DXKa9lD4DSJsJf9Uzsjm5C1C4,1556
+auto_file_organizer-1.0.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+auto_file_organizer-1.0.0.dist-info/RECORD,,

@@ -1,0 +1,3 @@
+[console_scripts]
+organize=auto_file_organizer.main:cli
+
