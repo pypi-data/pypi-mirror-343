@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: create-woragis-api
+Version: 0.1
+Summary: Create FastAPI backends with templates: REST, gRPC, AI
+Author: Woragis
+Author-email: Woragis <masteringthecode.woragis@gmail.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Provides-Extra: rest
+Requires-Dist: fastapi; extra == "rest"
+Requires-Dist: uvicorn; extra == "rest"
+Provides-Extra: grpc
+Requires-Dist: grpcio; extra == "grpc"
+Requires-Dist: protobuf; extra == "grpc"
+Provides-Extra: ai-rest
+Requires-Dist: fastapi; extra == "ai-rest"
+Requires-Dist: uvicorn; extra == "ai-rest"
+Requires-Dist: openai; extra == "ai-rest"
+Provides-Extra: ai-grpc
+Requires-Dist: grpcio; extra == "ai-grpc"
+Requires-Dist: protobuf; extra == "ai-grpc"
+Requires-Dist: openai; extra == "ai-grpc"
+Provides-Extra: mixed
+Requires-Dist: fastapi; extra == "mixed"
+Requires-Dist: uvicorn; extra == "mixed"
+Requires-Dist: grpcio; extra == "mixed"
+Requires-Dist: protobuf; extra == "mixed"
+Provides-Extra: ai-mixed
+Requires-Dist: fastapi; extra == "ai-mixed"
+Requires-Dist: uvicorn; extra == "ai-mixed"
+Requires-Dist: grpcio; extra == "ai-mixed"
+Requires-Dist: protobuf; extra == "ai-mixed"
+Requires-Dist: openai; extra == "ai-mixed"
+Dynamic: author
