@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: scau_jwxt_auth
+Version: 0.1.0
+Summary: A package for authenticating with SCAU JWXT system.
+Author-email: CBYellowstone <administrator@mail.ystone.top>
+Project-URL: Homepage, https://github.com/CberYellowstone/SCAU_JWXT_Auth
+Project-URL: Issues, https://github.com/CberYellowstone/SCAU_JWXT_Auth/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ddddocr>=1.5.6
+Requires-Dist: requests>=2.32.3
+Requires-Dist: Pillow>=11.2.0
+Requires-Dist: playwright>=1.51.0
+Dynamic: license-file
+
+# SCAU JWXT Auth
+
+这个包用于华南农业大学教务系统（SCAU JWXT）的身份认证。
+
+## 安装
+
+```bash
+pip install scau-jwxt-auth
+```
+
+## 使用方法
+
+```python
+
+from scau_jwxt_auth import JWXT
+
+client = JWXT(user_code="your_student_id", password="your_password",  sso_password="your_sso_password")
+
+```
+
+## 许可证
+
+[AGPLv3](LICENSE)
