@@ -1,0 +1,15 @@
+keboola/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+keboola/skill_registry_mcp/__init__.py,sha256=5Ze_8zOMpo2wIQHnp9G9H7Ovf83pSq7D_Nf38ZVsIF4,57
+keboola/skill_registry_mcp/__main__.py,sha256=3SBLrg-pIqqmdiO7soCFYPMTmlbU4BsEKi_933Xc0ss,113
+keboola/skill_registry_mcp/cli.py,sha256=G0Nn7eVkdrrsy-HINU2YVdJ3CC3a7EbNyPER522jOsg,1876
+keboola/skill_registry_mcp/client.py,sha256=_R9b9MDVm10HwiQ3FklUQS4TwCWH_1Qc6e8PGptYFOI,6019
+keboola/skill_registry_mcp/config.py,sha256=s2ToFkTAxhkFYjyXGUzGUV84t-rFPsgfU13kaenvnVI,792
+keboola/skill_registry_mcp/mcp.py,sha256=LHEcmAbCfqRVfzy3Es13usTiyxdMNZkJ-evVOfMHKRQ,3625
+keboola/skill_registry_mcp/server.py,sha256=DF-Jx04Qd6WNqWdEfkuH2q4VmLTo6QegFVO55_MPsiw,1555
+keboola/skill_registry_mcp/sr_tools.py,sha256=QEiYBWRu0CS5NvexvoPxeIHbsaZYcgOCgxTNmMFzqOw,3479
+keboola_skill_registry_mcp-0.0.9.dist-info/licenses/LICENSE,sha256=u1HsZjaV7jZLsmx6QA3hZ-D03i9VeB_gWMy_wMMB9Xc,1070
+keboola_skill_registry_mcp-0.0.9.dist-info/METADATA,sha256=ZJzuCB3JdYCbYBF2Er7x4zjSLmsjeRZvFSs0n5vvE38,5120
+keboola_skill_registry_mcp-0.0.9.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+keboola_skill_registry_mcp-0.0.9.dist-info/entry_points.txt,sha256=GA55uQwMwsRiba9m5heZJwsrKNG5hrHiQIHHo4CmKvY,71
+keboola_skill_registry_mcp-0.0.9.dist-info/top_level.txt,sha256=1TnbEAlaLTkaGvBq953CKE610TCyDVi7GUtCRyPm1cU,8
+keboola_skill_registry_mcp-0.0.9.dist-info/RECORD,,
