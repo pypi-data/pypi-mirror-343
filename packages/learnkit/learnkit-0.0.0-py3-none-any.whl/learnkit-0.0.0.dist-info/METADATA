@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: learnkit
+Version: 0.0.0
+Summary: Machine Learning Toolkit
+Author-email: Furechan <furechan@xsmail.com>
+License-File: LICENSE.txt
+Keywords: utility
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
