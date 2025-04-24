@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: gadasyncblock
+Version: 0.0.1
+Summary: Event loop lock detector for Python
+Home-page: https://github.com/AlexDemure/gadasyncblock
+Author: Alexander Grishchenko
+Author-email: alexanderdemure@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<p align="center">
+  <a href="https://github.com/AlexDemure/gadasyncblock">
+    <a href="https://ibb.co/4gMDDpK7"><img src="https://i.ibb.co/JF2bbHmK/logo.png" alt="logo" border="0"></a>
+  </a>
+</p>
+
+<p align="center">
+  Event loop lock detector for Python.
+</p>
+
+---
+
+### Installation
+
+```
+pip install gadasyncblock
+```
+
+### Usage
+
+```python
+import contextlib
+
+from fastapi import FastAPI
+
+from gadasyncblock import AsyncBlock
+
+detector = AsyncBlock(timeout=1)
+
+@contextlib.asynccontextmanager
+async def lifespan(_: FastAPI):
+    await detector.start()
+    yield
+    await detector.shutdown()
+
+
+app = FastAPI(lifespan=lifespan)
+
+@app.post("/run")
+async def run():
+    time.sleep(2)
+    return {"message": "Blocked"}
+```
