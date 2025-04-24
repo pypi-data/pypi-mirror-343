@@ -1,0 +1,8 @@
+stopuhr/__init__.py,sha256=7utOEYXwKs1wVtRP6rrdXdHcqPHLTVcpm4KgS1xsrQg,452
+stopuhr/chrono.py,sha256=ur1eZBVG9VZNbskQve0WJVIIHGcE4E3wvrTwzNldaas,16085
+stopuhr/funkuhr.py,sha256=P_xJ2cFOOnJ752UGBxPURRR1jRMANcnUKaMJ7y8OpSU,10200
+stopuhr/stopuhr.py,sha256=7rfCQ-L5K1l7jRTpb6P-tuL0c_C-7poyo1w79Zq8UYo,7600
+stopuhr-0.0.5.dist-info/METADATA,sha256=pWBfIiVrb5fJcXWiiEnaC1yUTdR64vnkem7gbao6KMM,1302
+stopuhr-0.0.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+stopuhr-0.0.5.dist-info/licenses/LICENSE,sha256=yz9I89_EuKyCa0KCsAxBt89TSlHhDD4nqP0Po_i_nUY,1071
+stopuhr-0.0.5.dist-info/RECORD,,
