@@ -1,0 +1,2 @@
+[console_scripts]
+upf2json = upf_to_json.upf_to_json:cli
