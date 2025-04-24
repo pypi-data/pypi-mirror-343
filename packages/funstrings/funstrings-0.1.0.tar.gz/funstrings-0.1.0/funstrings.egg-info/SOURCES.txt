@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+docs/api.md
+docs/getting_started.md
+examples/basic_usage.py
+examples/new_functions_demo.py
+funstrings/__init__.py
+funstrings/__main__.py
+funstrings/operations.py
+tests/__init__.py
+tests/test_new_operations.py
+tests/test_operations.py
+tutorials/string_manipulation_basics.py
