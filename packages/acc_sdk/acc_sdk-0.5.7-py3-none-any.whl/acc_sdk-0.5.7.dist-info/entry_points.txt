@@ -1,0 +1,3 @@
+[console_scripts]
+dashboard=tests.test_3legged:run
+
