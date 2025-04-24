@@ -1,0 +1,15 @@
+dyn/benchmark/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dyn/benchmark/assess.py,sha256=zo-PlAP4UPj5Hb21Fa5L31EMCjtDJzc6puY5t6zwSxI,19718
+dyn/benchmark/metrics.py,sha256=rvhdQN78pncSqinsX-AwRcDNJljmDvNNrO2-MFTB6i8,35327
+dyn/benchmark/generator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dyn/benchmark/generator/_interfaces.py,sha256=RRg4-QYNe2_GiLfpoTRi_BQgEnPdfXYk6rflu15SCGY,3435
+dyn/benchmark/generator/communities_generator.py,sha256=_BQJd22SI-WjJwKcRPAoGVWZLoQNrN0ztmgRORvOL3A,26724
+dyn/benchmark/generator/edges_generator.py,sha256=KaNDVXfarAr3r1jm_7WefsjxMqOYlTJrK3O56eh39K8,19084
+dyn/benchmark/generator/events_generator.py,sha256=pIS_GBCKGcB2OGFudBixyI1hk_xsin660x6RLXHcLnY,1712
+dyn/benchmark/generator/groundtruth_generator.py,sha256=YOOsCcMdwHjK4lHk0jP2uyZIJJHNl9Idrz6G_YEhPbw,8565
+dyn/benchmark/generator/nodes_generator.py,sha256=Iog46wqcU83VKnDjj1dRYh2p8JPVRRB0sT6tvKkQjRM,6591
+dyn_benchmark-0.6.0.dist-info/licenses/LICENSE,sha256=khztmItrKvttEllKE-PARdTypQonTcCitbQStydhHvg,631
+dyn_benchmark-0.6.0.dist-info/METADATA,sha256=UtPOGkbGFCEXnG1wiquj91-i5Uq5TJqvJDSTEYPSW7I,5796
+dyn_benchmark-0.6.0.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+dyn_benchmark-0.6.0.dist-info/top_level.txt,sha256=RFSVySqb_I5Lt81IGJHJ1CnvI0UVeo8O5mcgF9o7T3U,4
+dyn_benchmark-0.6.0.dist-info/RECORD,,
