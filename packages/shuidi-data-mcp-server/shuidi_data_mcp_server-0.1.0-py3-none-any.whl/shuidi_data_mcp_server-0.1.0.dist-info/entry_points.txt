@@ -1,0 +1,2 @@
+[console_scripts]
+shuidi-data-mcp-server = shuidi_data.server:main
