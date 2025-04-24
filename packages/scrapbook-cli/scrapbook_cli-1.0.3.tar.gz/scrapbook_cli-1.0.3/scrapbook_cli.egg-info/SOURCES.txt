@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+scrapbook_cli.egg-info/PKG-INFO
+scrapbook_cli.egg-info/SOURCES.txt
+scrapbook_cli.egg-info/dependency_links.txt
+scrapbook_cli.egg-info/entry_points.txt
+scrapbook_cli.egg-info/requires.txt
+scrapbook_cli.egg-info/top_level.txt
+src/scrapbook/main.py
