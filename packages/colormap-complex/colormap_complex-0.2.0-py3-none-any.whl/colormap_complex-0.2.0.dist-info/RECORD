@@ -1,0 +1,15 @@
+colormap_complex/__init__.py,sha256=QPaeSv5wNjLD0w7ORN-lvwZKr8wN6tqOO-YF8Mkq7bQ,178
+colormap_complex/_main.py,sha256=B7SdWd76vM7ZXGJ0Z8I-T8DxuQ5Tzy076ChNAPwjUbU,6255
+colormap_complex/matplotlib.py,sha256=nP33Awmn-URJ6vHFY-akZUjt7yxyJ4iPh1g-VxQOPK0,1611
+colormap_complex/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+colormap_complex/data/bremm.npy,sha256=0ccaTgLkhWlH2ygmMY64Lt5pOaYQi4r0VPGhWqazdd0,786560
+colormap_complex/data/cubediagonal.npy,sha256=8OKYLJ3P6YDBK3U7Uy_21VRaXU7aO6wRYgJoQIxPj5k,786560
+colormap_complex/data/schumann.npy,sha256=00o2EvuI73oTmlmSJXAi0r3oLjgFyXPBWFxQ_sClTrs,786560
+colormap_complex/data/steiger.npy,sha256=00IZ6AoOYn2xMpaq8t2fHPCFHXvOIpIu5UwM8Y4v0ig,786560
+colormap_complex/data/teulingfig2.npy,sha256=ZOT9-30_5R61O1JoW4n54SV5go9wzVn8xhEz_YPjtyo,786560
+colormap_complex/data/ziegler.npy,sha256=2BhdiUhfu4Hq28QuwUSVPELTttnBzn76s-QT8HXHZVs,786560
+colormap_complex-0.2.0.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+colormap_complex-0.2.0.dist-info/METADATA,sha256=N6K2i1vUaYJPdGgcdStPsq-sVICaWliSYLt3cHkXWFk,5925
+colormap_complex-0.2.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+colormap_complex-0.2.0.dist-info/top_level.txt,sha256=98yceMt4rECmT0OUdP8_8ttZx_Q3WbuI-DnHMFSEFl8,17
+colormap_complex-0.2.0.dist-info/RECORD,,
