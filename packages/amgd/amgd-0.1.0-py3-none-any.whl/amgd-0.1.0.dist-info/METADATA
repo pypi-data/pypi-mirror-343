@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: amgd
+Version: 0.1.0
+Summary: Adaptive Momentum Gradient Descent (AMGD) for Penalized Poisson Regression
+Home-page: https://github.com/elbakari01/amgd-Poisson-regression
+Author: Ibrahim Bakari
+Author-email: acbrhmbakari@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.18.0
+Requires-Dist: scipy>=1.4.0
+Requires-Dist: matplotlib>=3.1.0
+Requires-Dist: scikit-learn>=0.22.0
+Requires-Dist: pandas>=1.0.0
+Requires-Dist: seaborn>=0.10.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
