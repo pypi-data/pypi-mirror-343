@@ -1,0 +1,32 @@
+Metadata-Version: 2.3
+Name: singapore-nric-generator
+Version: 0.1.1
+Summary: Generate Singapore National Registration Identity Card (NRIC) numbers programmatically.
+Author: mohammed.saleel0099@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pytest (>=8.3.5,<9.0.0)
+Description-Content-Type: text/markdown
+
+# Singapore NRIC Generator
+
+Generate Singapore National Registration Identity Card (NRIC) numbers programmatically.
+
+## Installation
+
+```bash
+pip install singapore-nric-generator
+```
+
+### usage
+```
+from singapore_nric_generator import generate_nric
+
+print(generate_nric(10))
+```
