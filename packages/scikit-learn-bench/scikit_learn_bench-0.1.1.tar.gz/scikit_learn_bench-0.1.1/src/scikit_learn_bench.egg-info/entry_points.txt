@@ -1,0 +1,2 @@
+[console_scripts]
+scikit_learn_bench = scikit_learn_bench.cli:main
