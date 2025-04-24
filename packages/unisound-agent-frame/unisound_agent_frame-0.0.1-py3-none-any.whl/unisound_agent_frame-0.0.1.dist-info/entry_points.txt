@@ -1,0 +1,2 @@
+[console_scripts]
+unisound-agent-frame-init = unisound_agent_frame.cli:init
