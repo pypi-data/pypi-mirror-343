@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+JSONGrapherRC/JSONRecordCreator.py
+JSONGrapherRC/__init__.py
+JSONGrapherRC/units_list.py
+JSONGrapherRC.egg-info/PKG-INFO
+JSONGrapherRC.egg-info/SOURCES.txt
+JSONGrapherRC.egg-info/dependency_links.txt
+JSONGrapherRC.egg-info/requires.txt
+JSONGrapherRC.egg-info/top_level.txt
