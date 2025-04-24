@@ -1,0 +1,4 @@
+[console_scripts]
+changelog = mintlify_changelog.cli:main
+cl = mintlify_changelog.cli:main
+mintlify-changelog = mintlify_changelog.cli:main

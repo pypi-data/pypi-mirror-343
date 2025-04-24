@@ -1,0 +1,191 @@
+Metadata-Version: 2.4
+Name: mintlify-changelog
+Version: 1.0.2
+Summary: AI-powered, beautiful changelog generator for git repositories
+Home-page: https://github.com/mintlify/changelog
+Author: Mintlify
+Author-email: careers@mintlify.com
+Keywords: changelog,git,claude,ai,mintlify,documentation
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Version Control :: Git
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Requires-Dist: keyring>=23.0.0
+Requires-Dist: markdown>=3.3.0
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Mintlify Changelog Generator 🚀
+
+Generate beautiful, AI-powered changelogs directly from your git commits.
+
+[![PyPI version](https://img.shields.io/pypi/v/mintlify-changelog.svg)](https://pypi.org/project/mintlify-changelog/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/mintlify-changelog.svg)](https://pypi.org/project/mintlify-changelog/)
+[![License](https://img.shields.io/pypi/l/mintlify-changelog.svg)](https://github.com/mintlify/changelog/blob/main/LICENSE)
+
+## Features
+
+✨ **Smart Grouping** - Intelligently groups related changes under clear categories  
+🔄 **Enhanced Context** - Uses repository data to provide richer context  
+🐛 **Emoji Categories** - Visually appealing headings with emoji indicators  
+📚 **Multiple Output Formats** - Export as Markdown, HTML, JSON, or plain text  
+🧠 **AI-Powered** - Leverages Claude AI for natural language understanding  
+🎨 **Theme Support** - Choose from different styles to match your preferences  
+🔄 **Semantic Version Detection** - Automatically suggests version bumps  
+📅 **Release Cycles** - Support for daily, weekly, or monthly release cycles  
+🌐 **Zero Config** - Works immediately without complex setup  
+
+## Installation
+
+```bash
+pip install mintlify-changelog
+```
+
+Or install directly from GitHub:
+
+```bash
+pip install git+https://github.com/mintlify/changelog.git
+```
+
+## Quick Start
+
+1. Navigate to any git repository
+2. Set your API key (one-time setup):
+   ```bash
+   mintlify-changelog --set-api-key "your-api-key"
+   ```
+3. Generate a changelog:
+   ```bash
+   mintlify-changelog
+   ```
+
+## Usage
+
+```
+mintlify-changelog [options]
+```
+
+### Basic Options
+
+- `-c, --count N` - Generate changelog for the last N commits (default: 20)
+- `-o, --output FILE` - Save changelog to a file (e.g., CHANGELOG.md)
+- `--title TITLE` - Custom title for the changelog
+- `--dry-run` - Preview the prompt without calling the API
+- `-q, --quiet` - Suppress progress output
+- `-h, --help` - Show help message
+- `--version` - Show version information
+
+### Format Options
+
+- `--format FORMAT` - Output format (markdown, html, json, text)
+- `--theme THEME` - Theme style (standard, conventional, minimal, detailed)
+- `--release-cycle CYCLE` - Time-based grouping (auto, daily, weekly, monthly, none)
+- `--list-themes` - See available themes with descriptions
+
+### Configuration
+
+- `--set-api-key KEY` - Set your Claude API key securely
+- `--set-config KEY=VALUE` - Set a configuration value (e.g., defaults.count=30)
+
+### Examples
+
+Generate for last 10 commits:
+```bash
+mintlify-changelog -c 10
+```
+
+Save to a file:
+```bash
+mintlify-changelog -o CHANGELOG.md
+```
+
+Generate HTML changelog:
+```bash
+mintlify-changelog --format html -o changelog.html
+```
+
+Use Conventional Commits style:
+```bash
+mintlify-changelog --theme conventional
+```
+
+Group changes by week:
+```bash
+mintlify-changelog --release-cycle weekly
+```
+
+## Example Output
+
+```markdown
+# My Project Changelog
+### April 23, 2025
+
+#### ✨ New Features
+- Add user authentication system with OAuth support
+- Implement dark mode across all components
+- Add real-time notification system
+
+#### 🐛 Bug Fixes
+- Fix critical race condition in async data loading
+- Address security vulnerability in input validation
+- Resolve file upload issues on Safari browsers
+
+#### 📚 Documentation
+- Add comprehensive API documentation
+- Create user onboarding guide with screenshots
+
+---
+
+This release introduces major new features including authentication, dark mode, and real-time notifications while addressing several critical bugs and improving documentation.
+```
+
+## Environment Variables
+
+- `MINTLIFY_API_KEY` - Your Claude API key
+- `MINTLIFY_BASE_URL` - API base URL
+- `MINTLIFY_API_ENDPOINT` - API endpoint path
+- `MINTLIFY_MODEL` - Claude model to use
+- `MINTLIFY_MAX_TOKENS` - Maximum tokens for API response
+- `MINTLIFY_TEMPERATURE` - Temperature setting for API
+
+## Developing
+
+Clone the repository and install in development mode:
+
+```bash
+git clone https://github.com/mintlify/changelog.git
+cd changelog
+pip install -e .
+```
+
+## License
+
+MIT
