@@ -1,0 +1,2 @@
+amaranth-stubs
+amaranth_types
