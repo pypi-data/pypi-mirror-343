@@ -1,0 +1,10 @@
+discord_progress_bar/__init__.py,sha256=1YvA7NYd8s4Lmw4MKKGZOB2J5PDRVOMRcDE7F-TRaXg,397
+discord_progress_bar/_version.py,sha256=J1Sd2Cctym1r9cHPV-_hh70z3-e0USNq-2XHcCXnFQo,519
+discord_progress_bar/default_bars.py,sha256=NXdKGRUdq126JPijq-iOSAk4ZxRXR9lwRhtWVqHl_5M,753
+discord_progress_bar/progress_bar.py,sha256=nlpd8M9WI6sneS49Zi0i53Zp7dVHK8Flc6SM9yBOnZE,4404
+discord_progress_bar/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+discord_progress_bar/types.py,sha256=pY4mFMD8lIfGfIxwciiVOU2V49TpC9XJOmzrRcnBoRI,602
+discord_progress_bar-0.1.0a2.dist-info/METADATA,sha256=DH0366kdyBRb2QKhpHaMeQm8qabzYC9rZDhpGb3z50o,11568
+discord_progress_bar-0.1.0a2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+discord_progress_bar-0.1.0a2.dist-info/licenses/LICENSE,sha256=XiXiX6IrqSWb6ICytZIdLl6gqjJqHz8ABd7QZ_jveGc,1064
+discord_progress_bar-0.1.0a2.dist-info/RECORD,,
