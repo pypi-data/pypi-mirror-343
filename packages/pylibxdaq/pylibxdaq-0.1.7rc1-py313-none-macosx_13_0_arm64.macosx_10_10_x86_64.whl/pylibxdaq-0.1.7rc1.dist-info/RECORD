@@ -1,0 +1,14 @@
+pylibxdaq-0.1.7rc1.dist-info/RECORD,,
+pylibxdaq-0.1.7rc1.dist-info/WHEEL,sha256=cbOkB3e8hCZqkEGlZF3PgW0ebPATf-luYYOQzSoqpYY,170
+pylibxdaq-0.1.7rc1.dist-info/top_level.txt,sha256=D9ZLsOOlNoq_TrXbYa4Xh1dzXcKsWO5kcdpKmkxzPkE,10
+pylibxdaq-0.1.7rc1.dist-info/METADATA,sha256=38y8TsibBp_HbHM5H8lnWuTd2EuM7zDkPfrUPEgDvJ0,375
+pylibxdaq-0.1.7rc1.dist-info/licenses/LICENSE,sha256=q1CZihyHngozuUXcQO-bee2sALBv6TkqkylPzI8nlLM,1066
+pylibxdaq/pyxdaq_device.pyi,sha256=MUa7jdcf-OQmKLjfYuGsr4QxkJ2u5jx3ROd6dozHb3I,3616
+pylibxdaq/pyxdaq_device.cpython-313-darwin.so,sha256=D36v6PM4PvnvoL5yZ1KTYW977oN11G8bOuSLTEmx_Yg,593712
+pylibxdaq/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pylibxdaq/resources/rhd.bit,sha256=4KdXkPY0zWXAXoepJrSSKKyctG18zA_x4VBYgZPV97w,2482978
+pylibxdaq/resources/rhs.bit,sha256=xTA4zgum2pOS337TWiDWH_rtDS2s84H0miHUFNOCapc,2708046
+pylibxdaq/managers/__init__.py,sha256=21j4wx3QD363OvC821Gxx5660ibTveuYLqLsboVsfzU,186
+pylibxdaq/managers/libthor_device_manager.dylib,sha256=sCAumxf6Uko7jOi32BjNAzHv4tAISHhqQ_flS_SzNHo,1096352
+pylibxdaq/managers/libok_device_manager.dylib,sha256=eXlANQ-1QeGT-bi3FIFgEG3f6MUXHh7HcB8dpLsUYBk,1153968
+pylibxdaq/managers/libokFrontPanel.dylib,sha256=QOrW2gnZoRlbyEdHjX8IqDKfdWZPuuuKucvcyk-789A,3907432
