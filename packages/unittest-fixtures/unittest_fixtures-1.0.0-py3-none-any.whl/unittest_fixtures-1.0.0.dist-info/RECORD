@@ -1,0 +1,10 @@
+unittest_fixtures-1.0.0.dist-info/METADATA,sha256=VNTvijG7j8_TXNn9NCLCJHCcA_rcuSSgWIrmPXVbGNI,6639
+unittest_fixtures-1.0.0.dist-info/WHEEL,sha256=tSfRZzRHthuv7vxpI4aehrdN9scLjk-dCJkPLzkHxGg,90
+unittest_fixtures-1.0.0.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+unittest_fixtures-1.0.0.dist-info/licenses/LICENSE,sha256=G3Spx2-Zbmk2mfrejijTQwZ2XMMSkL1pKjydukmgvRw,1506
+unittest_fixtures/__init__.py,sha256=C3b8N0rZqS_NGtnmZFkDblvCpbFwTELOR86tUO3tsBQ,451
+unittest_fixtures/fixtures.py,sha256=3J5mDDvL-v6lg_WoedghApyJAHnpfZWpuqB052Clt7s,6375
+unittest_fixtures/parametrized.py,sha256=1asx3LMrsSZr8b3Bw9ZyGpWVUDvP2xHK92ltGSq30Mc,799
+unittest_fixtures/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unittest_fixtures/types.py,sha256=L3OFhe2SKgTSirx0dPNbr8bjVLoaAvnRvthw-r0S6K8,371
+unittest_fixtures-1.0.0.dist-info/RECORD,,
