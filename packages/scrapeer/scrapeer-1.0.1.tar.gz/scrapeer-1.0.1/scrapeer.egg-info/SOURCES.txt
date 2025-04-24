@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.py
+scrapeer/__init__.py
+scrapeer/http.py
+scrapeer/scraper.py
+scrapeer/udp.py
+scrapeer/utils.py
+scrapeer.egg-info/PKG-INFO
+scrapeer.egg-info/SOURCES.txt
+scrapeer.egg-info/dependency_links.txt
+scrapeer.egg-info/top_level.txt
