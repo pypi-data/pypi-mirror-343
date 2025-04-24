@@ -1,0 +1,2 @@
+[console_scripts]
+mortal-bases-api = mortal_bases.bases.auth_base:auth_api
