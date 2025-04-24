@@ -1,0 +1,11 @@
+setup.py
+rlalc/CLI.py
+rlalc/ImageHandler.py
+rlalc/__init__.py
+rlalc/main.py
+rlalc.egg-info/PKG-INFO
+rlalc.egg-info/SOURCES.txt
+rlalc.egg-info/dependency_links.txt
+rlalc.egg-info/entry_points.txt
+rlalc.egg-info/requires.txt
+rlalc.egg-info/top_level.txt

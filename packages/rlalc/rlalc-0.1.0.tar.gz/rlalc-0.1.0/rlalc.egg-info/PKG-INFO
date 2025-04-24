@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: rlalc
+Version: 0.1.0
+Summary: Roboflow Local Auto Labeling CLI
+Author: Jan Schlegel
+Requires-Python: >=3.12
+Requires-Dist: questionary>=2.1.0
+Requires-Dist: rich==14.0.0
+Requires-Dist: roboflow==1.1.61
+Requires-Dist: ultralytics>=8.3.113
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
