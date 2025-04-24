@@ -1,0 +1,7 @@
+libhans-0.1.6.dist-info/METADATA,sha256=WhyTqnHUp-cf2gvfkB9ZK_mFG9vIgptbT8Si4oyQIa0,782
+libhans-0.1.6.dist-info/WHEEL,sha256=77DqkvxB4HqZitBRK_M49NRS207JKb0MotMEjnxEWQ8,96
+libhans/__init__.py,sha256=tSvEYDbN2vFcbwxRaVi55ZtN1g_4WFVTqQn-2niO1sE,111
+libhans/__init__.pyi,sha256=QgL1I1PLE4KwkkdXVnhtOLoeHWjH5zzM5fi0BIO41xw,2425
+libhans/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libhans/libhans.cp310-win_amd64.pyd,sha256=cCNLmiU7ouyAJL9BftcbPk8H-daXMtJD5mEprjpc5Pg,1255936
+libhans-0.1.6.dist-info/RECORD,,
