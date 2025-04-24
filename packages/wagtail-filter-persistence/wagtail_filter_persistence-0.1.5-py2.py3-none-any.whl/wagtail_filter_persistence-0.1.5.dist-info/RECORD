@@ -1,0 +1,9 @@
+wagtail_filter_persistence/__init__.py,sha256=d8DfpbVNwf7ODK5anFeZBYJs0Nvb5D43zZhiCfp4oRs,108
+wagtail_filter_persistence/apps.py,sha256=3Pc17rFgZjtduH0zFLdcCGNe4c3tPAZkUC5pg0fvpJ8,213
+wagtail_filter_persistence/middleware.py,sha256=wq38qF8w2psO-2_r9XMm18Q50ba3iRHgYkd1mGtffvs,3860
+wagtail_filter_persistence/wagtail_hooks.py,sha256=JDnivZnkOHTv1mFEGbGlv0q_Ncnqus0MvIi5a5m32aQ,259
+wagtail_filter_persistence-0.1.5.dist-info/licenses/LICENSE,sha256=ipYxCe9YIHh2MMKhru4-9E41EHcTScLiye9_t8nFdvA,1078
+wagtail_filter_persistence-0.1.5.dist-info/METADATA,sha256=RCmNwnkj1GtLpup8ZOtTLUYgeqzUMtHkdT2g0sU853Q,3562
+wagtail_filter_persistence-0.1.5.dist-info/WHEEL,sha256=AeO2BvogYWm3eGaHCvhzmUYt8ia7KfURiHzO_1atlys,109
+wagtail_filter_persistence-0.1.5.dist-info/top_level.txt,sha256=XyXeHrlqQg6H_InBhz8RMzzigOWe1ql_t69xv7lC7PY,27
+wagtail_filter_persistence-0.1.5.dist-info/RECORD,,
