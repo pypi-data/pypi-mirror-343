@@ -1,0 +1,3 @@
+pmem@ git+https://github.com/sugarkwork/pmem.git
+litellm
+json_repair
