@@ -1,0 +1,3 @@
+[quantalogic.tools]
+quantalogic-toolbox-files=quantalogic_toolbox_files
+
