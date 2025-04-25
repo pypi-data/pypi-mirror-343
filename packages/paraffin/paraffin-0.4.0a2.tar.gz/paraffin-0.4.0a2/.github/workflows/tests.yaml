@@ -1,0 +1,43 @@
+name: tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+  schedule:
+    - cron: '14 3 * * 1'  # at 03:14 on Monday.
+
+jobs:
+  pytest:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version:
+          - "3.13"
+          - "3.12"
+          - "3.11"
+        os:
+          - ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install uv and set the python version
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: build frontend
+        run: |
+          npm install -g bun
+          cd app && bun install && bun vite build && cd ..
+      - name: Install the project
+        run: uv sync --all-extras --dev
+      - name: Setup git user
+        run: |
+          git config --global user.name "John Doe"
+          git config --global user.email johndoe@example.com
+          git config --global init.defaultBranch "main"
+      - name: Pytest
+        run: |
+          uv run python --version
+          uv run coverage run -m pytest -vv
