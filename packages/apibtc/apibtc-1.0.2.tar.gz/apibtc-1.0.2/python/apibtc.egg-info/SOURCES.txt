@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+python/apibtc.egg-info/PKG-INFO
+python/apibtc.egg-info/SOURCES.txt
+python/apibtc.egg-info/dependency_links.txt
+python/apibtc.egg-info/requires.txt
+python/apibtc.egg-info/top_level.txt
