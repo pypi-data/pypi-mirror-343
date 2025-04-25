@@ -1,0 +1,2 @@
+[console_scripts]
+cc = coocan.cmd.cli:main
