@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: autopm
+Version: 0.1.0
+Summary: Auto-install and track Python packages during runtime
+Author: Saptarshi
+Author-email: Saptarshi Borgohain <saptarshiborgohain6@gmail.com>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: requires-python
