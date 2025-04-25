@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "src/version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[project]
+name = "m_250424_test"
+dynamic = ["version"]
+authors = [{ name="lwmacct", email="lwmacct@icloud.com" }]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [ "Programming Language :: Python :: 3", "Operating System :: OS Independent" ]
+license = "MIT"
+license-files = ["LICENSE"]
+
+[project.urls]
+Homepage = "https://github.com/pypa/sampleproject"
+Issues = "https://github.com/pypa/sampleproject/issues"
