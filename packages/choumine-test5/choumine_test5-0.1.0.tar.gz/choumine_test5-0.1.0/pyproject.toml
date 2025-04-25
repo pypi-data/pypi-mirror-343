@@ -1,0 +1,19 @@
+[project]
+name = "choumine-test5"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "choumine", email = "569908115@qq.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+]
+
+[project.scripts]
+choumine-test5 = "choumine_test5:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
