@@ -1,0 +1,14 @@
+aws_sso_lite/__init__.py,sha256=fZ2YCGqhj45qrDH_mymx1OrAMGQvcvxCG8HlzumvOis,106
+aws_sso_lite/token.py,sha256=fwuOihwZNbDeQX-j3hHKuo1z--hTfk86Flsnif_fIuU,1425
+aws_sso_lite/vendored/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_sso_lite/vendored/awscli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_sso_lite/vendored/awscli/sso/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_sso_lite/vendored/awscli/sso/utils.py,sha256=T2f6Xg9UCxkVETTlA4_zSpcuQFfcJrLReoyE4oiL4E8,2120
+aws_sso_lite/vendored/botocore/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_sso_lite/vendored/botocore/exceptions.py,sha256=0XgB6YX7201iWb1H5--WKo6cYzGjufaL7b1QgPb2U9U,915
+aws_sso_lite/vendored/botocore/utils.py,sha256=ghgDpm-4Z9NksR2ntNaIwY-dSEkWOBm9mZqiJb4GnZg,8627
+aws_sso_lite-0.0.4.dist-info/licenses/LICENSE,sha256=h5_P8E2d_fOGHKjiJ3xF3SxMjSuMYyFD99kFgow4Nc8,1063
+aws_sso_lite-0.0.4.dist-info/METADATA,sha256=PJPp8o_SjI3USSiMEMIEANfV-O_tkPtzFydJGWAIBHg,1699
+aws_sso_lite-0.0.4.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+aws_sso_lite-0.0.4.dist-info/top_level.txt,sha256=RXu5N_viimiQacZvBAbSCDFRk-cscOl8T-IuHMwmeq4,13
+aws_sso_lite-0.0.4.dist-info/RECORD,,
