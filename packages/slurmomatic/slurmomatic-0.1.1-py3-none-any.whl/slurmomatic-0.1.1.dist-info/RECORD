@@ -1,0 +1,10 @@
+slurmomatic/__init__.py,sha256=RkL4KgvvkR-Z0oS139BbVr_8XLlP21m95NaGzNvkalM,187
+slurmomatic/core.py,sha256=NQafHZT6TZBapL9HreItq8yc0Rb3FCCLbKt1H-XMeGY,3496
+slurmomatic/hpo.py,sha256=Kfrv7eRsD7HaMCIvzT25H-_dr6eIeKSYUn2jWaHKaGQ,3933
+slurmomatic/ml.py,sha256=YXfRRmMc9VT1KO0_uEb3bYduz3xntmCk8roJtU_vOo4,6180
+slurmomatic/utils.py,sha256=apgOmOHzev1XjCAWCDKE6hfAI4A6WizxiaHP5ovdBms,850
+slurmomatic-0.1.1.dist-info/METADATA,sha256=SxRJnovuM7qlU8RjeS4hAvR6Baq8Q9chg0K3lXDDxGU,3296
+slurmomatic-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+slurmomatic-0.1.1.dist-info/entry_points.txt,sha256=IngEselizond709F0W006H-dLAVWRaZcu0UjPPWZHEs,49
+slurmomatic-0.1.1.dist-info/licenses/LICENSE,sha256=L9ER_V-AKP-QLiu8OOi0zKsbvwHTjyd_IFGBVWpjDio,1061
+slurmomatic-0.1.1.dist-info/RECORD,,
