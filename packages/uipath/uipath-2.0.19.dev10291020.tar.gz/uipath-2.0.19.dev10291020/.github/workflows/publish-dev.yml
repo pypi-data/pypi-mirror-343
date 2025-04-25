@@ -1,0 +1,116 @@
+name: Publish to Azure DevOps Feed
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled]
+    secrets:
+      AZURE_ARTIFACTS_USERNAME:
+        required: true
+      AZURE_ARTIFACTS_PASSWORD:
+        required: true
+      AZURE_ARTIFACTS_URL:
+        required: true
+      PYPI_TOKEN:
+        required: true
+
+
+jobs:
+  publish-dev:
+    runs-on: ubuntu-latest
+    
+    # Only run if PR has the build:dev label
+    if: contains(github.event.pull_request.labels.*.name, 'build:dev')
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: astral-sh/setup-uv@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+
+      - name: Setup venv
+        run: |
+          uv venv
+          uv sync --all-extras
+
+      - name: Install dependencies
+        run: |
+          uv add twine
+      
+      - name: Set development version
+        shell: pwsh
+        run: |
+          # Extract current version from pyproject.toml
+          $null = (Get-Content pyproject.toml -Raw) -match '(?m)^\[(project|tool\.poetry)\][^\[]*?version\s*=\s*"([^"]*)"'
+          $CURRENT_VERSION = $Matches[2]
+          # Get PR number and run number with proper padding
+          $PADDED_PR = "{0:D4}" -f [int]"${{ github.event.pull_request.number }}"
+          $PADDED_RUN = "{0:D3}" -f [int]"${{ github.run_number }}"
+          
+          # Create unique dev version with PR number and run ID
+          # $DEV_VERSION = "$CURRENT_VERSION.dev0+pr.$PR_NUM.$RUN_ID"
+          # $DEV_VERSION = "$CURRENT_VERSION.dev$PR_NUM.$RUN_ID"
+          $DEV_VERSION = "$CURRENT_VERSION.dev1$PADDED_PR$PADDED_RUN"
+
+          # Update version in pyproject.toml
+          (Get-Content pyproject.toml) -replace "version = `"$CURRENT_VERSION`"", "version = `"$DEV_VERSION`"" | Set-Content pyproject.toml
+          
+          Write-Output "Package version set to $DEV_VERSION"
+      
+      - name: Build package
+        run: uv build
+
+      - name: Publish
+        run: |
+          uv publish
+        env:
+          UV_PUBLISH_TOKEN: ${{ secrets.PYPI_TOKEN }}
+      
+      # - name: Publish to Azure DevOps
+      #   shell: pwsh
+      #   env:
+      #     TWINE_USERNAME: ${{ secrets.AZURE_ARTIFACTS_USERNAME }}
+      #     TWINE_PASSWORD: ${{ secrets.AZURE_ARTIFACTS_PASSWORD }}
+      #     TWINE_REPOSITORY_URL: ${{ secrets.AZURE_ARTIFACTS_URL }}
+      #   run: |
+      #     uv run twine upload dist/*
+          
+      #     # Output installation instructions
+      #     $VERSION = (Get-Content pyproject.toml | Select-String -Pattern 'version = "([^"]*)"').Matches.Groups[1].Value
+      #     $FEED_URL = "${{ secrets.AZURE_ARTIFACTS_URL }}" -replace "/upload", "/simple"
+          
+      #     $message = @"          
+      #     Example usage in pyproject.toml:
+      #     [project]
+      #     dependencies = [
+      #       "uipath==$VERSION"
+      #     ]
+      #     "@
+
+      #     Write-Host $message
+
+      # - name: Publish to TestPyPI
+      #   shell: pwsh
+      #   env:
+      #     TWINE_USERNAME: __token__
+      #     TWINE_PASSWORD: ${{ secrets.TESTPYPI_TOKEN }}
+      #     TWINE_REPOSITORY_URL: https://test.pypi.org/legacy/
+      #   run: |
+      #     uv run twine upload dist/*
+          
+      #     # Output installation instructions
+      #     $null = (Get-Content pyproject.toml -Raw) -match '(?m)^\[(project|tool\.poetry)\][^\[]*?version\s*=\s*"([^"]*)"'
+      #     $VERSION = $Matches[2]
+      #     $FEED_URL = "${{ secrets.AZURE_ARTIFACTS_URL }}" -replace "/upload", "/simple"
+          
+      #     $message = @"          
+      #     Example usage in pyproject.toml:
+      #     [project]
+      #     dependencies = [
+      #       "uipath==$VERSION"
+      #     ]
+      #     "@
+
+      #     Write-Host $message
