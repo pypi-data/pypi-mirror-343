@@ -1,0 +1,2 @@
+[console_scripts]
+hatch_test = hatch_test:main
