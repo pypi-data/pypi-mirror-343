@@ -1,0 +1,9 @@
+README.md
+setup.py
+okayletsgo/__init__.py
+okayletsgo/sound.mp3
+okayletsgo.egg-info/PKG-INFO
+okayletsgo.egg-info/SOURCES.txt
+okayletsgo.egg-info/dependency_links.txt
+okayletsgo.egg-info/requires.txt
+okayletsgo.egg-info/top_level.txt
