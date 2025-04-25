@@ -1,0 +1,2 @@
+[console_scripts]
+tagwriting = tagwriting.main:main
