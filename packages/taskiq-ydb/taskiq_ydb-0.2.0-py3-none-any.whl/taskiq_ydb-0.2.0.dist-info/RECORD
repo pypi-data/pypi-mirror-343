@@ -1,0 +1,10 @@
+taskiq_ydb/__init__.py,sha256=iZ_5kC5jVBWEcNCMlp-3rvUM9GMr4w18G9hKrGwuVO8,152
+taskiq_ydb/broker.py,sha256=Em_D3fmMyh69v_6Ky3rp7yw88P8_o-cr751W4FofOYE,3513
+taskiq_ydb/exceptions.py,sha256=4ewYJ-J4UBFyXfxbnoIb0hDAuF7QKVF7_69N5eUfj6M,308
+taskiq_ydb/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+taskiq_ydb/result_backend.py,sha256=uZNY7s-OvzMt3PnjKkL1RPI06IzyXQmjeGRi3pPWqQg,6336
+taskiq_ydb-0.2.0.dist-info/licenses/LICENSE,sha256=2hyGO1fL0gsh9ExFeS6_QE-egvs03mgAHzehMS6q3rQ,1072
+taskiq_ydb-0.2.0.dist-info/METADATA,sha256=O8HNtJKcf3qZXfqXUwXLPWxQ8ogcoApFREUaQtpCZyc,4044
+taskiq_ydb-0.2.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+taskiq_ydb-0.2.0.dist-info/top_level.txt,sha256=ESQYA7dDlujSiDhcFeekA-9JrFpI2yF2kTYL9NPl-Hs,11
+taskiq_ydb-0.2.0.dist-info/RECORD,,
