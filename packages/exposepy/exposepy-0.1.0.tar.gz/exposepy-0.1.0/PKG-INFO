@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: exposepy
+Version: 0.1.0
+Summary: Minimalist decorator for exposing public APIs
+Project-URL: Homepage, https://github.com/yourusername/expose
+Author-email: Your Name <you@example.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# expose
+Expose – minimal public‑API helper.
+
+[![PyPI](https://img.shields.io/pypi/v/expose.svg)](https://pypi.org/project/expose/)
+[![CI](https://github.com/El3ssar/expose/actions/workflows/ci.yml/badge.svg)](https://github.com/El3ssar/expose/actions/workflows/ci.yml)
+[![Docs](https://img.shields.io/badge/docs-online-brightgreen.svg)](https://El3ssar.github.io/expose/)
+

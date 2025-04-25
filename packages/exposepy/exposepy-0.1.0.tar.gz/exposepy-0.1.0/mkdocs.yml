@@ -1,0 +1,6 @@
+site_name: expose
+repo_url: https://github.com/El3ssar/expose
+site_url: https://El3ssar.github.io/expose/
+theme:
+  name: readthedocs
+
