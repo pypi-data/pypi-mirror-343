@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: odefinterp
+Version: 0.1.37
+Summary: ODEFormer but tweaked to aid interpretability
+Author: Soumyadeep Bose
+Author-email: soumyadeepboseee@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+License-File: LICENSE.txt
