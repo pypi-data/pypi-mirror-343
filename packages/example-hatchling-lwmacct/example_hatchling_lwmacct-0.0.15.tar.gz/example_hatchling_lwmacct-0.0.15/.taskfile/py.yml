@@ -1,0 +1,37 @@
+# https://taskfile.dev
+# https://packaging.python.org/en/latest/tutorials/installing-packages/
+# https://packaging.python.org/en/latest/tutorials/packaging-projects/#
+
+version: "3"
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  pip:requirements:
+    desc: 安装 python 依赖
+    cmds:
+      - python3 -m pip install -r requirements.txt --break-system-packages
+
+  build:
+    desc: 构建
+    cmds:
+      - task: build:clean
+      - python3 -m build
+
+  build:clean:
+    desc: 清理
+    cmds:
+      - rm -rf dist/*
+
+  build:upload:
+    desc: 上传
+    cmds:
+      - python3 -m twine upload dist/*
+
+  build:next:
+    desc: 发布
+    cmds:
+      - task git:tag:next
+      - task: build
+      - task: build:upload
