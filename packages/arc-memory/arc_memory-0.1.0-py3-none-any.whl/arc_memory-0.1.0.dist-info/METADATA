@@ -1,0 +1,258 @@
+Metadata-Version: 2.4
+Name: arc-memory
+Version: 0.1.0
+Summary: Arc Memory - Local bi-temporal knowledge graph for code repositories
+Project-URL: Homepage, https://www.arc.computer
+Project-URL: Repository, https://github.com/Arc-Computer/arc-memory
+Project-URL: Bug Tracker, https://github.com/Arc-Computer/arc-memory/issues
+Author-email: Jarrod Barnes <jbarnes850@gmail.com>
+License: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Version Control :: Git
+Requires-Python: >=3.10
+Requires-Dist: apsw>=3.40.0
+Requires-Dist: cryptography>=43.0.0
+Requires-Dist: gitpython>=3.1.30
+Requires-Dist: keyring>=23.13.1
+Requires-Dist: markdown-it-py>=2.2.0
+Requires-Dist: networkx>=3.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: pyjwt>=2.6.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: requests>=2.28.0
+Requires-Dist: tqdm>=4.65.0
+Requires-Dist: typer>=0.9.0
+Requires-Dist: zstandard>=0.20.0
+Provides-Extra: dev
+Requires-Dist: black>=23.3.0; extra == 'dev'
+Requires-Dist: isort>=5.12.0; extra == 'dev'
+Requires-Dist: mypy>=1.3.0; extra == 'dev'
+Requires-Dist: pre-commit>=3.3.2; extra == 'dev'
+Requires-Dist: pytest-cov>=4.1.0; extra == 'dev'
+Requires-Dist: pytest>=7.3.1; extra == 'dev'
+Requires-Dist: responses>=0.23.1; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# Arc Memory SDK
+
+<p align="center">
+  <img src="public/arc_logo.png" alt="Arc Logo" width="200"/>
+</p>
+
+<p align="center">
+  <a href="https://www.arc.computer"><img src="https://img.shields.io/badge/website-arc.computer-blue" alt="Website"></a>
+  <a href="https://github.com/Arc-Computer/arc-memory/actions"><img src="https://img.shields.io/badge/tests-passing-brightgreen" alt="Tests"></a>
+  <a href="https://pypi.org/project/arc-memory/"><img src="https://img.shields.io/pypi/v/arc-memory" alt="PyPI"></a>
+  <a href="https://pypi.org/project/arc-memory/"><img src="https://img.shields.io/pypi/pyversions/arc-memory" alt="Python"></a>
+  <a href="https://github.com/Arc-Computer/arc-memory/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Arc-Computer/arc-memory" alt="License"></a>
+</p>
+
+At Arc, we're building the foundational memory layer for modern software engineering. Our mission is simple but powerful: ensure engineering teams never lose the critical "why" behind their code. Our mission is to bridge the gap between human decisions and machine understanding, becoming the temporal source-of-truth for every engineering team and their agents.
+
+## Overview
+
+Arc Memory is a comprehensive SDK (Software Development Kit) that embeds a local, bi-temporal knowledge graph (TKG) in every developer's workspace. It surfaces verifiable decision trails during code-review and exposes the same provenance to any LLM-powered agent through VS Code's Agent Mode.
+
+## Features
+
+- **Extensible Plugin Architecture** - Easily add new data sources beyond Git, GitHub, and ADRs
+- **Comprehensive Knowledge Graph** - Build a local graph from Git commits, GitHub PRs, issues, and ADRs
+- **Trace History Algorithm** - Fast BFS algorithm to trace history from file+line to related entities
+- **High Performance** - Trace history queries complete in under 200ms (typically ~100μs)
+- **Incremental Builds** - Efficiently update the graph with only new data
+- **Rich CLI** - Command-line interface for building graphs and tracing history
+- **Privacy-First** - All data stays on your machine; no code or IP leaves your repo
+- **CI Integration** - Team-wide graph updates through CI workflows
+
+## Installation
+
+Arc Memory requires Python 3.10 or higher and is compatible with Python 3.10, 3.11, and 3.12.
+
+```bash
+pip install arc-memory
+```
+
+Or using UV:
+
+```bash
+uv pip install arc-memory
+```
+
+## Quick Start
+
+```bash
+# Authenticate with GitHub
+arc auth gh
+
+# Build the full knowledge graph
+arc build
+
+# Or update incrementally
+arc build --incremental
+
+# Check the graph status
+arc doctor
+
+# Trace history for a specific file and line
+arc trace file path/to/file.py 42
+
+# Trace with more hops in the graph
+arc trace file path/to/file.py 42 --max-hops 3
+```
+
+## Documentation
+
+### CLI Commands
+- [Authentication](./docs/cli/auth.md) - GitHub authentication commands
+- [Build](./docs/cli/build.md) - Building the knowledge graph
+- [Trace](./docs/cli/trace.md) - Tracing history for files and lines
+- [Doctor](./docs/cli/doctor.md) - Checking graph status and diagnostics
+
+### Usage Examples
+- [Building Graphs](./docs/examples/building-graphs.md) - Examples of building knowledge graphs
+- [Tracing History](./docs/examples/tracing-history.md) - Examples of tracing history
+- [Custom Plugins](./docs/examples/custom-plugins.md) - Creating custom data source plugins
+
+### API Documentation
+- [Build API](./docs/api/build.md) - Build process API
+- [Trace API](./docs/api/trace.md) - Trace history API
+- [Models](./docs/api/models.md) - Data models
+- [Plugins](./docs/api/plugins.md) - Plugin architecture API
+
+For additional documentation, visit [arc.computer](https://www.arc.computer).
+
+## Architecture
+
+Arc Memory consists of three components:
+
+1. **arc-memory** (this SDK) - Python SDK and CLI for graph building and querying
+   - **Plugin Architecture** - Extensible system for adding new data sources
+   - **Trace History Algorithm** - BFS-based algorithm for traversing the knowledge graph
+   - **CLI Commands** - Interface for building graphs and tracing history
+
+2. **arc-memory-mcp** - Local daemon exposing API endpoints (future milestone)
+   - Will provide HTTP API for VS Code extension and other tools
+   - Will be implemented as a static binary in Go
+
+3. **vscode-arc-hover** - VS Code extension for displaying decision trails (future milestone)
+   - Will integrate with the MCP server to display trace history
+   - Will provide hover cards with decision trails
+
+See our [Architecture Decision Records](./docs/adr/) for more details on design decisions, including:
+- [ADR-001: Knowledge Graph Schema](./docs/adr/001-knowledge-graph-schema.md)
+- [ADR-002: Data Model Refinements](./docs/adr/002-data-model-refinements.md)
+- [ADR-003: Plugin Architecture](./docs/adr/003-plugin-architecture.md)
+
+## Development
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/arc-computer/arc-memory.git
+cd arc-memory
+
+# Create a virtual environment with UV
+uv venv
+
+# Activate the environment
+source .venv/bin/activate  # On Unix/macOS
+.venv\Scripts\activate     # On Windows
+
+# Install dependencies
+uv pip install -e ".[dev]"
+
+# Install pre-commit hooks
+pre-commit install
+```
+
+### Testing
+
+```bash
+# Run unit tests
+python -m unittest discover
+
+# Run integration tests
+python -m unittest discover tests/integration
+
+# Run performance benchmarks
+python tests/benchmark/benchmark.py --repo-size small
+```
+
+### Creating a Plugin
+
+Arc Memory uses a plugin architecture to support additional data sources. To create a new plugin:
+
+1. Create a class that implements the `IngestorPlugin` protocol
+2. Register your plugin using entry points
+3. Package and distribute your plugin
+
+For detailed instructions and examples, see:
+- [Custom Plugins Guide](./docs/examples/custom-plugins.md) - Step-by-step guide with examples
+- [Plugin Architecture](./docs/api/plugins.md) - Technical details of the plugin system
+- [Plugins API](./docs/api/plugins.md) - API reference for plugin development
+
+Basic example:
+
+```python
+from arc_memory.plugins import IngestorPlugin
+from arc_memory.schema.models import Node, Edge, NodeType, EdgeRel
+
+class MyCustomPlugin(IngestorPlugin):
+    def get_name(self) -> str:
+        return "my-custom-source"
+
+    def get_node_types(self) -> List[str]:
+        return ["custom_node"]
+
+    def get_edge_types(self) -> List[str]:
+        return [EdgeRel.MENTIONS]
+
+    def ingest(self, last_processed=None):
+        # Your implementation here
+        return nodes, edges, metadata
+```
+
+Register in `pyproject.toml`:
+```toml
+[project.entry-points."arc_memory.plugins"]
+my-custom-source = "my_package.my_module:MyCustomPlugin"
+```
+
+### Performance
+
+Arc Memory is designed for high performance, with trace history queries completing in under 200ms (typically ~100μs). See our [performance benchmarks](./docs/performance-benchmarks.md) for more details.
+
+### Publishing to PyPI
+
+To publish the package to PyPI:
+
+```bash
+# Build the package
+python -m build
+
+# Upload to PyPI
+python -m twine upload dist/*
+```
+
+Users can then install the package with:
+
+```bash
+# Using pip
+pip install arc-memory
+
+# Using uv
+uv pip install arc-memory
+```
+
+## License
+
+MIT
