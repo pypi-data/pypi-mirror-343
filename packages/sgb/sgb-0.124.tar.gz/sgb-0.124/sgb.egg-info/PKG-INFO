@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: sgb
+Version: 0.124
+Summary: SGB package
+Home-page: https://none.com/
+Author: Nikita Karachentsev
+Author-email: n.karachencev@sf-m.biz
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: isgb
+Dynamic: author
+Dynamic: author-email
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
