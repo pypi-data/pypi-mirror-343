@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/mcp_axe/__init__.py
+src/mcp_axe/api.py
+src/mcp_axe/cli.py
+src/mcp_axe/client.py
+src/mcp_axe/core.py
+src/mcp_axe/server.py
+src/mcp_axe.egg-info/PKG-INFO
+src/mcp_axe.egg-info/SOURCES.txt
+src/mcp_axe.egg-info/dependency_links.txt
+src/mcp_axe.egg-info/entry_points.txt
+src/mcp_axe.egg-info/requires.txt
+src/mcp_axe.egg-info/top_level.txt
+src/mcp_axe/static/axe.min.js
+tests/test_core.py
