@@ -1,0 +1,9 @@
+lavender_sscc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lavender_sscc/ccs.txt,sha256=uIYGaa0AqactP9_nXtwdp1_CEKf9fuluLCrfCAciF2Q,62976
+lavender_sscc/distance.py,sha256=aLIoU4uh5vx6hhWvri-TzbYqO8RBWctGE5hocod0Lbk,831
+lavender_sscc/features_pca.npy,sha256=ZzgQwgRfVIrsHVJ7_UkQ2T8CQ0KKNNWxZz_niAdh03E,5374080
+lavender_sscc-0.0.5.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+lavender_sscc-0.0.5.dist-info/METADATA,sha256=GkEu-9rlkKhmhLdKi7VH87AvN9hU4a1uEFpJ95g9U0o,875
+lavender_sscc-0.0.5.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+lavender_sscc-0.0.5.dist-info/top_level.txt,sha256=Gok9laiKJDcUFgD0_kXdBng-TdSF0VqhTKWe-yYTtNo,14
+lavender_sscc-0.0.5.dist-info/RECORD,,
