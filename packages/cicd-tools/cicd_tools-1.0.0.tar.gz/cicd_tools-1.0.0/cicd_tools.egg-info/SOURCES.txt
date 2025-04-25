@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+cicd_tools/__init__.py
+cicd_tools/cli.py
+cicd_tools.egg-info/PKG-INFO
+cicd_tools.egg-info/SOURCES.txt
+cicd_tools.egg-info/dependency_links.txt
+cicd_tools.egg-info/entry_points.txt
+cicd_tools.egg-info/requires.txt
+cicd_tools.egg-info/top_level.txt
+tests/test_config_manager.py
+tests/test_development_project_release.py
+tests/test_env_manager.py
+tests/test_menu_system.py
+tests/test_project_types.py
+tests/test_template_management.py
