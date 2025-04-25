@@ -1,0 +1,122 @@
+[build-system]
+requires = ["setuptools>=54", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "control-lab-ly"
+version = "2.0.0-a0"
+description = "Lab Equipment Automation Package"
+readme = "docs/README.md"
+authors = [
+    {name="Chang Jie Leong", email="changjie.leong@outlook.com"}
+]
+license = "MIT"
+keywords = [
+    "python",
+    "lab automation"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    # "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering"
+]
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib>=3.9",
+    "numpy>=2.0",
+    "opencv_python>=4.5.0",
+    "pandas>=1.2",
+    "parse>=1.20",
+    "PyMeasure>=0.15",
+    "pyModbusTCP>=0.2",
+    "pyserial>=3.5",
+    "PyVISA>=1.12",
+    "PyVISA-py>=0.7",
+    "PyYAML>=6.0",
+    "scipy>=1.14"
+]
+
+[project.urls]
+Homepage = "https://github.com/kylejeanlewis/control-lab-le"
+GitHub = "https://github.com/kylejeanlewis/control-lab-le"
+Documentation = "https://github.com/kylejeanlewis/control-lab-le/blob/main/docs/README.md"
+Changelog = "https://github.com/kylejeanlewis/control-lab-le/blob/main/docs/CHANGELOG.md"
+Tracker = "https://github.com/kylejeanlewis/control-lab-le/issues"
+
+[project.optional-dependencies]
+testing = [
+    "mypy>=0.910",
+    "pytest>=6.2",
+    "pytest-cov>=2.11",
+    "pytest-xdist>=3.6",
+    "tox>=3.24"
+]
+
+[tool.setuptools]
+# package-dir = {"" = "src"}
+include-package-data = true
+zip-safe = false
+
+[tool.setuptools.packages.find]
+# where = ["src"]
+include = ["controllably*", "docs*"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.json", "*.yaml", "*.png", "*.md", "*.rst"]
+
+
+[tool.pytest.ini_options]
+addopts = "-v"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+
+[tool.mypy]
+mypy_path = "controllably"
+check_untyped_defs = true
+disallow_any_generics = true
+ignore_missing_imports = true
+no_implicit_optional = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+no_implicit_reexport = true
+
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+minversion = 3.10.0
+envlist = py310, py311, py312, mypy
+isolated_build = true
+
+[gh-actions]
+python =
+    3.10: py310
+    3.11: py311
+    3.12: py312, mypy
+
+[testenv]
+setenv =
+    PYTHONPATH = {toxinidir}
+deps =
+    -r {toxinidir}/dev/requirements_dev.txt
+commands =
+    pytest --cov=controllably -n auto {posargs}
+
+[testenv:mypy]
+basepython = python3.10
+deps =
+    -r {toxinidir}/dev/requirements_dev.txt
+commands = 
+    mypy controllably
+"""
