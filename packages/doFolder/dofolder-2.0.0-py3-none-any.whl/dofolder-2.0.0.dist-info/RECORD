@@ -1,0 +1,11 @@
+doFolder/__init__.py,sha256=t-NNBKkS4oAKskCQjYM1hUXYHxgkKyYsvM1kWs8RoiE,164
+doFolder/exception.py,sha256=pspIwgB4agOyYKpNq_GhheLjgdoFCWWyMVtimWmH96c,233
+doFolder/fileSystem.py,sha256=ODN7WCpHUEYq7kpd1J3bqYzAlhmLVcwUvvGCf-p9uE8,6356
+doFolder/globalType.py,sha256=6SZcGknRrxysMUYMLn-A0ISzuSi6iDPi0MQC5GoVdmw,593
+doFolder/path.py,sha256=yJr17bFZ10z_YBAzLCl-VtElaxhfuGE7QEfAW-EGui4,61
+doFolder/warn.py,sha256=ahYRxNZOjXJ0I9opL3KlQuPBK9T9DNwDBt5EtOXzCh8,175
+dofolder-2.0.0.dist-info/licenses/LICENSE,sha256=YyauYN14yFsfL2_zCO8WFf-TkyMnDYOOjrqyD13hqMU,9719
+dofolder-2.0.0.dist-info/METADATA,sha256=oHimPh_u2m0MD4an-mSTZWo1gAP23p-hepjuPNOI1cQ,1632
+dofolder-2.0.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+dofolder-2.0.0.dist-info/top_level.txt,sha256=nuSHKRdnJ10OIYjfzc2T9UnC0YZYulLL4jx3PqTOO3c,9
+dofolder-2.0.0.dist-info/RECORD,,
