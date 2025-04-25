@@ -1,0 +1,6 @@
+zeus_apple_silicon-1.0.4.dist-info/RECORD,,
+zeus_apple_silicon-1.0.4.dist-info/WHEEL,sha256=7rLDdUct7CQ24UBiUc9sJ7eWcbmgROlMwDZ4Rd3kelE,114
+zeus_apple_silicon-1.0.4.dist-info/METADATA,sha256=1vu6PdESBSY9Nh0CWVkhUfCP8udQGPccm8y7c56jjPg,9625
+zeus_apple_silicon-1.0.4.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+zeus_apple_silicon/__init__.py,sha256=wJ-IR80G303f7bJDeeLsAjYpT8BULiN9cWVNOOVipkw,99
+zeus_apple_silicon/zeus_ext.cpython-311-darwin.so,sha256=N3Ry9bs22DJ2Ys-K-VZ59vWumQSmMUjbI1kT5t-ra8s,147504
