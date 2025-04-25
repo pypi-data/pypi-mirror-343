@@ -1,0 +1,12 @@
+prefix=/var/folders/7g/cnfrzbd555q9lmpsr1byngs80000gn/T/tmp9wrdfoyv/wheel/platlib/arbor
+exec_prefix=${prefix}
+libdir=/var/folders/7g/cnfrzbd555q9lmpsr1byngs80000gn/T/tmp9wrdfoyv/wheel/platlib/arbor/lib
+includedir=/var/folders/7g/cnfrzbd555q9lmpsr1byngs80000gn/T/tmp9wrdfoyv/wheel/platlib/arbor/include
+
+Name: benchmark
+Description: Google microbenchmark framework
+Version: 1.8.3
+
+Libs: -L${libdir} -lbenchmark
+Libs.private: -lpthread
+Cflags: -I${includedir}

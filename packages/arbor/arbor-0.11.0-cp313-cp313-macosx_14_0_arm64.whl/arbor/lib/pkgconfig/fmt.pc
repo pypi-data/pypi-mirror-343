@@ -1,0 +1,11 @@
+prefix=/var/folders/7g/cnfrzbd555q9lmpsr1byngs80000gn/T/tmp9wrdfoyv/wheel/platlib/arbor
+exec_prefix=/var/folders/7g/cnfrzbd555q9lmpsr1byngs80000gn/T/tmp9wrdfoyv/wheel/platlib/arbor
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: fmt
+Description: A modern formatting library
+Version: 10.0.0
+Libs: -L${libdir} -lfmt
+Cflags: -I${includedir}
+

@@ -1,0 +1,7 @@
+[cmake.root]
+arbor = arbor
+
+[console_scripts]
+modcc = arbor:modcc
+arbor-build-catalogue = arbor:build_catalogue
+
