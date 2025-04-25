@@ -1,0 +1,87 @@
+[project]
+authors = [{ name = "Alberto Santos Delgado", email = "albsad@dtu.dk" },
+           { name = "Henry Webel", email = "heweb@dtu.dk"}]
+name = "acore"
+dynamic = ["version"]
+description = "A Python package with statistical functions to analyse multimodal molecular data"
+license = { text = "GNU General Public License v3" }
+readme = "README.rst"
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "dsp-pandas", # has only pandas related dependencies
+    "vuecore",
+    "scipy",
+    "scikit-learn>=1.2",
+    "networkx",
+    "biopython",
+    "combat",
+    "gseapy!=1.1.5",
+    "kmapper",
+    "lifelines",
+    "pingouin",
+    "python-louvain",
+    "PyWGCNA!=2.2.0", # to fix.
+    "snfpy",
+    "umap-learn",
+    "statsmodels",
+    "inmoose", # combat batch correction
+    "requests",
+    "rarfile",
+]
+
+[project.optional-dependencies]
+docs = [
+  "sphinx",
+  "sphinx-book-theme",
+  "myst-nb",
+  "ipywidgets",
+  "sphinx-new-tab-link!=0.2.2",
+  "jupytext",
+]
+dev = [
+  "black",
+  "flake8",
+  "ruff",
+  "isort",
+  "pytest",
+  "pytest-cov",
+  "twine",
+  "wheel",
+  "jupytext",
+  "ipykernel",
+]
+
+[project.urls]
+Homepage = "https://github.com/Multiomics-Analytics-Group/acore"
+Issues = "https://github.com/Multiomics-Analytics-Group/acore/issues"
+Documentation = "https://analytics-core.readthedocs.io/"
+
+
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+
+# [entrypoints]
+# console_scripts = {
+#     "acore = acore.cli:main"
+# }
+
+# [package]
+# include = [
+#     "README.rst",
+#     "HISTORY.rst",
+# ]
