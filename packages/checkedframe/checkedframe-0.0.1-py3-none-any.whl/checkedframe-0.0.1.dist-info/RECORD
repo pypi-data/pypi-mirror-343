@@ -1,0 +1,12 @@
+checkedframe/__init__.py,sha256=Y6F6XmhKp37jvDB-yJFFTxvr5hmpCK_kVzsKfILxNUw,408
+checkedframe/_core.py,sha256=aV4TGOpVkzDjM5mfO5Pzw7X0awvyq7fnHZYcTpqnKWk,8355
+checkedframe/_dtypes.py,sha256=Iv7zZmk7teiZgnr5As9AaUoNY2U9B0-8vaseoCuVwIY,9735
+checkedframe/exceptions.py,sha256=NKoSxn_oO0QSouIv36sBKDTd6MQ0WdlB-PB_57JUKVA,2621
+checkedframe/narwhals.py,sha256=L-ngu5bA1yPg-i5Ato9DH43xGnNncLhR2vf_6v2kXxg,126
+checkedframe/pandas.py,sha256=43NY64U1TN44vuKB6ZsP-YfZXQfdpHb17n78k4cVh0Q,124
+checkedframe/polars.py,sha256=w9s628GN2443GwNCIXQNxP84aB9VzHPwwNS1VM7QtiY,124
+checkedframe-0.0.1.dist-info/licenses/LICENSE,sha256=48j0mHXXwWwXmHaO7f6Is1QQmz52LlQDZddsMEMBxLo,1077
+checkedframe-0.0.1.dist-info/METADATA,sha256=CGK6QPZxljRGjwU8rXg3WvjboYQhmIAw0vNquvzO_Lw,1631
+checkedframe-0.0.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+checkedframe-0.0.1.dist-info/top_level.txt,sha256=zZQyfaRl1czKnkTS51u_sAILWm6GShPwInEkKxsRQrI,13
+checkedframe-0.0.1.dist-info/RECORD,,
