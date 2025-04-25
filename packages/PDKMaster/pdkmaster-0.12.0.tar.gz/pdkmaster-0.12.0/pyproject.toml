@@ -1,0 +1,53 @@
+[project]
+name = "PDKMaster"
+dynamic = []
+description = "ASIC PDK Manager and Design Framework"
+authors = [
+    { name = "Chips4Makers contributors" },
+]
+dependencies = []
+requires-python = "~=3.8"
+readme = "README.md"
+version = "0.12.0"
+
+[project.license]
+text = "GPL-2.0-or-later OR AGPL-3.0-or-later OR CERN-OHL-S-2.0+"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[dependency-groups]
+dev = [
+    "doit",
+    "tomlkit",
+    "coverage",
+    "sphinx",
+]
+vscode = [
+    "pip",
+    "docutils",
+    "esbonio",
+]
+
+[tool.pdm]
+ignore_package_warnings = [
+    "*",
+]
+distribution = true
+
+[tool.pdm.build]
+includes = [
+    "pdkmaster/",
+]
+
+[tool.pdm.version]
+source = "scm"
+
+[tool.pdm.scripts]
+doit = "doit"
+clean = "doit clean"
+upd = "pdm update --update-reuse-installed"
+updns = "pdm update --update-reuse-installed --no-sync"
