@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/sa_filter/__init__.py
+src/sa_filter/sa_filter.py
+src/sa_filter.egg-info/PKG-INFO
+src/sa_filter.egg-info/SOURCES.txt
+src/sa_filter.egg-info/dependency_links.txt
+src/sa_filter.egg-info/requires.txt
+src/sa_filter.egg-info/top_level.txt
+src/sa_filter/data/alert_collection.csv
+tests/test_safilter.py

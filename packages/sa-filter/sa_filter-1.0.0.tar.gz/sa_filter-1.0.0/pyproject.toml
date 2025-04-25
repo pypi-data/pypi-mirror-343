@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sa-filter"
+version = "1.0.0"
+description = "Identify structural alerts using the RDKit and ChEMBL."
+readme = {file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.10"
+license-files = ["LICENSE"]
+authors = [{name = "Olivier J.M. Béquignon", email = "olivier.bequignon.maintainer@gmail.com"}]
+maintainers = [{name = "Olivier J.M. Béquignon", email = "olivier.bequignon.maintainer@gmail.com"}]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+dependencies = [
+    "pandas",
+    "rdkit",
+]
+keywords = [
+    "PAINS",
+    "structural alerts",
+    "filtering",
+    "cheminformatics",
+    "molecule",
+    "chemistry",
+]
+urls = {Homepage = "https://github.com/OlivierBeq/sa_filter"}
+
+[project.optional-dependencies]
+testing = ["pytest"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"*" = ["*.csv"]
