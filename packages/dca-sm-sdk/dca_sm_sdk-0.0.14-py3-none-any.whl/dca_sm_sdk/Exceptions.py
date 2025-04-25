@@ -1,0 +1,2 @@
+class PathException(Exception):
+    pass
