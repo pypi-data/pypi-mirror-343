@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+pandas_nhanes/__init__.py
+pandas_nhanes/api.py
+pandas_nhanes.egg-info/PKG-INFO
+pandas_nhanes.egg-info/SOURCES.txt
+pandas_nhanes.egg-info/dependency_links.txt
+pandas_nhanes.egg-info/requires.txt
+pandas_nhanes.egg-info/top_level.txt
+tests/test_api.py
