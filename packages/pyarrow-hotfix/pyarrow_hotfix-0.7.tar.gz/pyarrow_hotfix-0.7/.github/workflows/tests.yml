@@ -1,0 +1,192 @@
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
+name: Unit tests
+
+on: [push, pull_request]
+
+jobs:
+  tests:
+    name: PyArrow ${{ matrix.pyarrow }}, Py ${{ matrix.python }} on ${{ matrix.image || 'ubuntu-24.04' }}
+    runs-on: ${{ matrix.image || 'ubuntu-24.04' }}
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # Linux
+          - pyarrow: "0.14.0"
+            python: "3.7"
+            image: ubuntu-22.04
+            numpy: "<2.0"
+          - pyarrow: "0.14.1"
+            python: "3.7"
+            image: ubuntu-22.04
+            numpy: "<2.0"
+          - pyarrow: "0.15.0"
+            python: "3.7"
+            image: ubuntu-22.04
+            numpy: "<2.0"
+          - pyarrow: "1.0.0"
+            python: "3.8"
+            numpy: "<2.0"
+          - pyarrow: "2.0.0"
+            python: "3.8"
+            numpy: "<2.0"
+          - pyarrow: "5.0.0"
+            python: "3.9"
+            numpy: "<2.0"
+          - pyarrow: "6.0.1"
+            python: "3.9"
+            numpy: "<2.0"
+          - pyarrow: "8.0.0"
+            python: "3.9"
+            numpy: "<2.0"
+          - pyarrow: "10.0.0"
+            python: "3.10"
+            numpy: "<2.0"
+          - pyarrow: "11.0.0"
+            python: "3.10"
+            numpy: "<2.0"
+          - pyarrow: "13.0.0"
+            python: "3.11"
+            numpy: "<2.0"
+          - pyarrow: "14.0.0"
+            python: "3.12"
+            numpy: "<2.0"
+          - pyarrow: "14.0.1"
+            python: "3.8"
+            numpy: "<2.0"
+          - pyarrow: "14.0.1"
+            python: "3.12"
+            numpy: "<2.0"
+          - pyarrow: "14.0.2"
+            python: "3.8"
+            numpy: "<2.0"
+          - pyarrow: "14.0.2"
+            python: "3.12"
+            numpy: "<2.0"
+          - pyarrow: "15.0.2"
+            python: "3.8"
+            numpy: "<2.0"
+          - pyarrow: "15.0.2"
+            python: "3.12"
+            numpy: "<2.0"
+          - pyarrow: "16.1.0"
+            python: "3.8"
+            numpy: "<2.0"
+          - pyarrow: "16.1.0"
+            python: "3.12"
+            numpy: "<2.0"
+          - pyarrow: "17.0.0"
+            python: "3.8"
+            numpy: "<2.0"
+          - pyarrow: "17.0.0"
+            python: "3.12"
+            numpy: "<2.0"
+          - pyarrow: "18.1.0"
+            python: "3.9"
+          - pyarrow: "18.1.0"
+            python: "3.13"
+          - pyarrow: "19.0.1"
+            python: "3.9"
+          - pyarrow: "19.0.1"
+            python: "3.13"
+          # Windows
+          - pyarrow: "0.14.0"
+            python: "3.7"
+            image: windows-latest
+            numpy: "<2.0"
+          - pyarrow: "14.0.0"
+            python: "3.12"
+            image: windows-latest
+            numpy: "<2.0"
+          - pyarrow: "14.0.1"
+            python: "3.8"
+            image: windows-latest
+            numpy: "<2.0"
+          - pyarrow: "14.0.1"
+            python: "3.12"
+            image: windows-latest
+            numpy: "<2.0"
+          - pyarrow: "19.0.1"
+            python: "3.13"
+            image: windows-latest
+          # macOS
+          - pyarrow: "0.15.0"
+            python: "3.7"
+            image: macos-13
+            numpy: "<2.0"
+          - pyarrow: "14.0.0"
+            python: "3.12"
+            image: macos-latest
+            numpy: "<2.0"
+          - pyarrow: "14.0.1"
+            python: "3.8"
+            image: macos-latest
+            numpy: "<2.0"
+          - pyarrow: "14.0.1"
+            python: "3.12"
+            image: macos-latest
+            numpy: "<2.0"
+          - pyarrow: "19.0.1"
+            python: "3.13"
+            image: macos-latest
+    env:
+      NUMPY: ${{ matrix.numpy }}
+      PYARROW: ${{ matrix.pyarrow }}
+      PYTHON: ${{ matrix.python }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
+        with:
+          fetch-depth: 0
+          submodules: recursive
+      # Use a recent Python version (>= 3.7) for building package.
+      # The built wheel is version-agnostic.
+      - name: Setup Python for build
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+      - name: Build package
+        shell: bash
+        run: |
+          python -m pip install build
+          python -m build
+      # Switch to desired Python version for testing
+      - name: Setup Python for test
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install package
+        shell: bash
+        run: |
+          python -V
+          python -m pip install -U pip
+          python -m pip install dist/*.whl
+      - name: Install PyArrow
+        shell: bash
+        run: |
+          if [ "${NUMPY}" ]; then
+            python -m pip install "numpy${NUMPY}"
+          fi
+          python -m pip install pyarrow==${PYARROW}
+      - name: Test package
+        shell: bash
+        run: |
+          pip install pytest
+          python -m pytest -rs
