@@ -1,0 +1,19 @@
+{
+    "name": "Python 3",
+    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.12-bullseye",
+    "postCreateCommand": "./.devcontainer/postcreatecommand.sh",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "charliermarsh.ruff"
+            ],
+            "settings": {
+                "python.testing.pytestArgs": [
+                    "tests"
+                ],
+                "python.testing.unittestEnabled": false,
+                "python.testing.pytestEnabled": true
+            }
+        }
+    }
+}

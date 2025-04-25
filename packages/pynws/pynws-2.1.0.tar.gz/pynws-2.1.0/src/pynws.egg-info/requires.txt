@@ -1,0 +1,6 @@
+aiohttp
+metar
+yarl
+
+[retry]
+tenacity
