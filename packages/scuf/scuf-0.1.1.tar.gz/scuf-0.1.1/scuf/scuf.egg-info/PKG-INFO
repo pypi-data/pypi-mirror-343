@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: scuf
+Version: 0.1.1
+Summary: A short description of your library
+Author-email: Ilya Ryakin <is.ryakin@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 AI in Dynamic Action Group
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/aidagroup/SCUF
+Project-URL: Documentation, https://github.com/aidagroup/SCUF#readme
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.21.0
+Provides-Extra: visualization
+Requires-Dist: open3d>=0.15.0; extra == "visualization"
+Dynamic: license-file
+
+## SCUF
+
+**SCUF** (Spheroid Consensus Undeterministic Fitting) is an open-source implementation of the RANSAC (Random Sample Consensus) method, designed specifically for fitting ellipsoids in point clouds. It is a powerful tool for applications requiring precise detection of ellipsoidal shapes, such as object modeling, geometric analysis, and computer vision tasks. SCUF extends the classic RANSAC approach, offering specialized functionality for ellipsoid fitting.
+
+## Installation
+Requirements: Numpy, open3d
+
+Install with [Pypi](https://pypi.org/project/scuf/):
+
+```sh
+pip3 install scuf
+```
+installation with 3D visualization capability (needed for demo)
+```sh
+pip install scuf[visualization]
+```
+
+## Take a look: 
+For more details, visit the [GitHub repository](https://github.com/aidagroup/SCUF/).
+
+
+## License
+[MIT](https://github.com/aidagroup/SCUF/blob/main/LICENSE)

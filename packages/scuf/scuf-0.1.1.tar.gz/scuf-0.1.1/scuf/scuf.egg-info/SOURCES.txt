@@ -1,0 +1,9 @@
+LICENSE
+README.md
+README_PYPI.md
+pyproject.toml
+scuf/scuf.egg-info/PKG-INFO
+scuf/scuf.egg-info/SOURCES.txt
+scuf/scuf.egg-info/dependency_links.txt
+scuf/scuf.egg-info/requires.txt
+scuf/scuf.egg-info/top_level.txt
