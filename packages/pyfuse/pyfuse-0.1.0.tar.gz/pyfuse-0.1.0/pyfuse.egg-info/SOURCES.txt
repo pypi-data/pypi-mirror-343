@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+pyfuse.egg-info/PKG-INFO
+pyfuse.egg-info/SOURCES.txt
+pyfuse.egg-info/dependency_links.txt
+pyfuse.egg-info/top_level.txt
