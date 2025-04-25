@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/DWPoses/__init__.py
+src/DWPoses/onnxdet.py
+src/DWPoses/onnxpose.py
+src/DWPoses/util.py
+src/DWPoses/wholebody.py
+src/DWPoses.egg-info/PKG-INFO
+src/DWPoses.egg-info/SOURCES.txt
+src/DWPoses.egg-info/dependency_links.txt
+src/DWPoses.egg-info/requires.txt
+src/DWPoses.egg-info/top_level.txt

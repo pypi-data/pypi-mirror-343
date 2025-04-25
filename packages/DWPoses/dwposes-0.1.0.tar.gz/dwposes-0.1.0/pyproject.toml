@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DWPoses"
+version = "0.1.0"
+description = "Lightweight whole-body pose estimator (coords only) refactored from IDEA-Research/DWPose"
+authors = [{name="yefllower", email="yefllowers@gmail.com"}]
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+dependencies = [
+  "torch>=2.0",
+  "opencv-python",
+  "Pillow",
+  "numpy",
+]
+
+[project.urls]
+Homepage = "https://github.com/yefllower/dwpose"
+Issues = "https://github.com/yefllower/dwpose/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["DWPoses"]
