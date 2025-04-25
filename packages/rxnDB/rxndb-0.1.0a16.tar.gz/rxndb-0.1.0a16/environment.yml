@@ -1,0 +1,15 @@
+---
+name: rxnDB
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - shiny
+  - shinywidgets
+  - anywidget
+  - pandas
+  - plotly
+  - pip
+  - pip:
+      - -e .[dev]
+      - -r docs/requirements.txt
