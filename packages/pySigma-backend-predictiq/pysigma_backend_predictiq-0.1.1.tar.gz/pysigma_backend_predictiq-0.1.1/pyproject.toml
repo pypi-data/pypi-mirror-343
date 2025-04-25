@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "pySigma-backend-predictiq"
+version = "0.1.1"
+description = "pySigma predict-iq backend"
+authors = ["cyte <cyte@cyte.co>"]
+license = "MIT"
+repository = "https://github.com/SigmaHQ/pySigma-backend-predictiq"
+packages = [
+    { include = "sigma" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pysigma = "^0.11.22"
+sigma-cli = "^1.0.6"
+
+[tool.poetry.group.dev.dependencies]
+defusedxml = "^0.7"
+pytest = "^8.3.5"
+pytest-cov = "^6.1.1"
+coverage = "^7.8.0"
+
+[tool.poetry.plugins."sigma.backends"]
+predictiq = "sigma_custom.backends.predictiq:PredictIQBackend"
+
+[build-system]
+requires = ["poetry-core>=1.8.1"]
+build-backend = "poetry.core.masonry.api"
