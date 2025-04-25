@@ -1,0 +1,9 @@
+fastobo
+networkx
+pandas
+rdkit
+requests
+tqdm
+click
+gavel
+numpy>=2.0.0
