@@ -1,0 +1,3 @@
+include README.md
+recursive-include Pyvmote/static *
+recursive-include Pyvmote/templates *
