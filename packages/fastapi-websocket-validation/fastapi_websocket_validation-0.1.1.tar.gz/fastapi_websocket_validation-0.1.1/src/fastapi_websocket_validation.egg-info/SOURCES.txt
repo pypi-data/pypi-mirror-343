@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/fastapi-websocket-validation/__init__.py
+src/fastapi-websocket-validation/handler.py
+src/fastapi_websocket_validation.egg-info/PKG-INFO
+src/fastapi_websocket_validation.egg-info/SOURCES.txt
+src/fastapi_websocket_validation.egg-info/dependency_links.txt
+src/fastapi_websocket_validation.egg-info/requires.txt
+src/fastapi_websocket_validation.egg-info/top_level.txt
