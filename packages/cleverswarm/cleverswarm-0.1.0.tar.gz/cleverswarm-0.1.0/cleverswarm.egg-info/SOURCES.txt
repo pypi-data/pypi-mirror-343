@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+cleverswarm/__init__.py
+cleverswarm.egg-info/PKG-INFO
+cleverswarm.egg-info/SOURCES.txt
+cleverswarm.egg-info/dependency_links.txt
+cleverswarm.egg-info/entry_points.txt
+cleverswarm.egg-info/requires.txt
+cleverswarm.egg-info/top_level.txt
+tests/test_client.py
+tests/test_text_to_kg.py
