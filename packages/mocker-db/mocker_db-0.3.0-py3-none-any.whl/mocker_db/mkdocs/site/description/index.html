@@ -1,0 +1,1090 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../flow/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>Description - Mocker db</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-inserting-values-into-the-database" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Mocker db" class="md-header__button md-logo" aria-label="Mocker db" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mocker db
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Description
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Mocker db" class="md-nav__button md-logo" aria-label="Mocker db" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Mocker db
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Description
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Description
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-inserting-values-into-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Inserting values into the database
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-searching-and-retrieving-values-from-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Searching and retrieving values from the database
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Searching and retrieving values from the database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-all-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      get all keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-keys-with-keywords-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      get all keys with keywords search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-key-n_words" class="md-nav__link">
+    <span class="md-ellipsis">
+      get all key - n_words
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-keys-distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      get all keys + distance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      get distance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-keys-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      get all keys + embeddings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      get embeddings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-embeddings-and-embedded-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      get embeddings and embedded field
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-keys-with-llm-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      get all keys with llm search
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-removing-values-from-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Removing values from the database
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-embeding-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Embeding text
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-using-mockerdb-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Using MockerDB API
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cli
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-inserting-values-into-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Inserting values into the database
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-searching-and-retrieving-values-from-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Searching and retrieving values from the database
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Searching and retrieving values from the database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-all-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      get all keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-keys-with-keywords-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      get all keys with keywords search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-key-n_words" class="md-nav__link">
+    <span class="md-ellipsis">
+      get all key - n_words
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-keys-distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      get all keys + distance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      get distance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-keys-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      get all keys + embeddings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      get embeddings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-embeddings-and-embedded-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      get embeddings and embedded field
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-keys-with-llm-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      get all keys with llm search
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-removing-values-from-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Removing values from the database
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-embeding-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Embeding text
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-using-mockerdb-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Using MockerDB API
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Description</h1>
+
+<pre><code class="language-python">from mocker_db import MockerDB, MockerConnector, SentenceTransformerEmbedder
+</code></pre>
+<h3 id="1-inserting-values-into-the-database">1. Inserting values into the database</h3>
+<p>MockerDB can be used as ephemeral database where everything is saved in memory, but also can be persisted in one file for the database and another for embeddings storage.</p>
+<p>Embedder is set to sentence_transformer by default and processed locally, custom embedders that connect to an api or use other open source models could be used as long as they have the same interface. </p>
+<pre><code class="language-python"># Initialization
+handler = MockerDB(
+    # optional
+    embedder_params = {'model_name_or_path' : 'paraphrase-multilingual-mpnet-base-v2',
+                        'processing_type' : 'batch',
+                        'tbatch_size' : 500},
+    similarity_search_type = 'linear_torch',
+    use_embedder = True,
+    embedder = SentenceTransformerEmbedder,
+    persist = True
+)
+# Initialize empty database
+handler.establish_connection(
+    # optional for persist
+    file_path = &quot;./mock_persist&quot;,
+    embs_file_path = &quot;./mock_embs_persist&quot;,
+)
+</code></pre>
+<pre><code class="language-python">sentences = [
+    &quot;The cat slept.&quot;,
+    &quot;It rained today.&quot;,
+    &quot;She smiled gently.&quot;,
+    &quot;Books hold knowledge.&quot;,
+    &quot;The sun set behind the mountains, casting a golden glow over the valley.&quot;,
+    &quot;He quickly realized that time was slipping away, and he needed to act fast.&quot;,
+    &quot;The concert was an unforgettable experience, filled with laughter and joy.&quot;,
+    &quot;Despite the challenges, they managed to build a beautiful home together.&quot;,
+    &quot;As the wind howled through the ancient trees, scattering leaves and whispering secrets of the forest, she stood there, gazing up at the endless expanse of stars, feeling both infinitely small and profoundly connected to the universe.&quot;,
+    &quot;While the project seemed daunting at first, requiring countless hours of research, planning, and execution, the team worked tirelessly, motivated by their shared goal of creating something truly remarkable and innovative in their field.&quot;,
+    &quot;In the bustling city streets, amidst the constant hum of traffic and chatter, he found himself contemplating life's mysteries, pondering the choices that had brought him to this very moment and wondering where the path ahead would lead.&quot;,
+    &quot;The conference was a gathering of minds from around the globe, each participant bringing their unique perspectives and insights to the table, fostering a vibrant exchange of ideas that would shape the future of their respective fields for years to come.&quot;
+]
+
+# Insert Data
+values_list = [
+    {'text' : t, 'n_words' : len(t.split())} for t in sentences
+]
+handler.insert_values(values_list, &quot;text&quot;)
+print(f&quot;Items in the database {len(handler.data)}&quot;)
+</code></pre>
+<pre><code>Items in the database 12
+</code></pre>
+<h3 id="2-searching-and-retrieving-values-from-the-database">2. Searching and retrieving values from the database</h3>
+<p>There are multiple options for search which could be used together or separately:</p>
+<ul>
+<li>simple filter</li>
+<li>filter with keywords</li>
+<li>llm filter</li>
+<li>search based on similarity</li>
+</ul>
+<h4 id="get-all-keys">get all keys</h4>
+<pre><code class="language-python">results = handler.search_database(
+    query = &quot;cat&quot;,
+    filter_criteria = {
+        &quot;n_words&quot; : 3,
+    }
+)
+print([{k: str(v)[:30] + &quot;...&quot; for k, v in result.items()} for result in results])
+</code></pre>
+<pre><code>[{'text': 'The cat slept....', 'n_words': '3...'}, {'text': 'She smiled gently....', 'n_words': '3...'}, {'text': 'It rained today....', 'n_words': '3...'}, {'text': 'Books hold knowledge....', 'n_words': '3...'}]
+</code></pre>
+<h4 id="get-all-keys-with-keywords-search">get all keys with keywords search</h4>
+<pre><code class="language-python">results = handler.search_database(
+    # when keyword key is provided filter is used to pass keywords
+    filter_criteria = {
+        &quot;text&quot; : [&quot;sun&quot;],
+    },
+    keyword_check_keys = ['text'],
+    # percentage of filter keyword allowed to be different
+    keyword_check_cutoff = 1,
+    return_keys_list=['text']
+)
+print([{k: str(v)[:30] + &quot;...&quot; for k, v in result.items()} for result in results])
+</code></pre>
+<pre><code>[{'text': 'The sun set behind the mountai...'}]
+</code></pre>
+<h4 id="get-all-key-n_words">get all key - n_words</h4>
+<pre><code class="language-python">results = handler.search_database(
+    query = &quot;cat&quot;,
+    filter_criteria = {
+        &quot;n_words&quot; : 3,
+    },
+    return_keys_list=[&quot;-n_words&quot;])
+print([{k: str(v)[:30] + &quot;...&quot; for k, v in result.items()} for result in results])
+</code></pre>
+<pre><code>[{'text': 'The cat slept....'}, {'text': 'She smiled gently....'}, {'text': 'It rained today....'}, {'text': 'Books hold knowledge....'}]
+</code></pre>
+<h4 id="get-all-keys-distance">get all keys + distance</h4>
+<pre><code class="language-python">results = handler.search_database(
+    query = &quot;cat slept&quot;,
+    filter_criteria = {
+        &quot;n_words&quot; : 3,
+    },
+    return_keys_list=[&quot;+&amp;distance&quot;]
+)
+print([{k: str(v)[:30] + &quot;...&quot; for k, v in result.items()} for result in results])
+</code></pre>
+<pre><code>[{'text': 'The cat slept....', 'n_words': '3...', '&amp;distance': '0.9757655893784214...'}, {'text': 'She smiled gently....', 'n_words': '3...', '&amp;distance': '0.25537100167603033...'}, {'text': 'It rained today....', 'n_words': '3...', '&amp;distance': '0.049663180663929454...'}, {'text': 'Books hold knowledge....', 'n_words': '3...', '&amp;distance': '0.011214834039176086...'}]
+</code></pre>
+<h4 id="get-distance">get distance</h4>
+<pre><code class="language-python">results = handler.search_database(
+    query = &quot;cat slept&quot;,
+    filter_criteria = {
+        &quot;n_words&quot; : 3,
+    },
+    return_keys_list=[&quot;&amp;distance&quot;]
+)
+print([{k: str(v)[:30] + &quot;...&quot; for k, v in result.items()} for result in results])
+</code></pre>
+<pre><code>[{'&amp;distance': '0.9757655893784214...'}, {'&amp;distance': '0.25537100167603033...'}, {'&amp;distance': '0.049663180663929454...'}, {'&amp;distance': '0.011214834039176086...'}]
+</code></pre>
+<h4 id="get-all-keys-embeddings">get all keys + embeddings</h4>
+<pre><code class="language-python">results = handler.search_database(
+    query = &quot;cat slept&quot;,
+    filter_criteria = {
+        &quot;n_words&quot; : 3,
+    },
+    return_keys_list=[&quot;+embedding&quot;]
+)
+print([{k: str(v)[:30] + &quot;...&quot; for k, v in result.items()} for result in results])
+</code></pre>
+<pre><code>[{'text': 'The cat slept....', 'n_words': '3...', 'embedding': '[-3.86438444e-02  1.23167984e-...'}, {'text': 'She smiled gently....', 'n_words': '3...', 'embedding': '[-2.46711876e-02  2.37020180e-...'}, {'text': 'It rained today....', 'n_words': '3...', 'embedding': '[-1.35887727e-01 -2.52719879e-...'}, {'text': 'Books hold knowledge....', 'n_words': '3...', 'embedding': '[ 6.20863438e-02  1.13785945e-...'}]
+</code></pre>
+<h4 id="get-embeddings">get embeddings</h4>
+<pre><code class="language-python">results = handler.search_database(
+    query = &quot;cat slept&quot;,
+    filter_criteria = {
+        &quot;n_words&quot; : 3,
+    },
+    return_keys_list=[&quot;embedding&quot;]
+)
+print([{k: str(v)[:30] + &quot;...&quot; for k, v in result.items()} for result in results])
+
+</code></pre>
+<pre><code>[{'embedding': '[-3.86438444e-02  1.23167984e-...'}, {'embedding': '[-2.46711876e-02  2.37020180e-...'}, {'embedding': '[-1.35887727e-01 -2.52719879e-...'}, {'embedding': '[ 6.20863438e-02  1.13785945e-...'}]
+</code></pre>
+<h4 id="get-embeddings-and-embedded-field">get embeddings and embedded field</h4>
+<pre><code class="language-python">results = handler.search_database(
+    query = &quot;cat slept&quot;,
+    filter_criteria = {
+        &quot;n_words&quot; : 3,
+    },
+    return_keys_list=[&quot;embedding&quot;, &quot;+&amp;embedded_field&quot;]
+)
+print([{k: str(v)[:30] + &quot;...&quot; for k, v in result.items()} for result in results])
+
+</code></pre>
+<pre><code>[{'embedding': '[-3.86438444e-02  1.23167984e-...', '&amp;embedded_field': 'text...'}, {'embedding': '[-2.46711876e-02  2.37020180e-...', '&amp;embedded_field': 'text...'}, {'embedding': '[-1.35887727e-01 -2.52719879e-...', '&amp;embedded_field': 'text...'}, {'embedding': '[ 6.20863438e-02  1.13785945e-...', '&amp;embedded_field': 'text...'}]
+</code></pre>
+<h4 id="get-all-keys-with-llm-search">get all keys with llm search</h4>
+<p>Ollama</p>
+<pre><code class="language-python">import logging
+logging.disable(logging.INFO)
+
+# Initialization
+handler = MockerDB(
+    # optional
+    persist = True,
+    llm_conn_params = {
+
+        'llm_h_type' : 'OllamaConn',
+        'llm_h_params' : {
+            'connection_string' : 'http://127.0.0.1:11434',
+            'model_name' : 'llama3.1:latest'
+        }
+
+    }
+)
+# Initialize empty database
+handler.establish_connection(
+    # optional for persist
+    file_path = &quot;./mock_persist&quot;,
+    embs_file_path = &quot;./mock_embs_persist&quot;,
+)
+
+results = await handler.search_database_async(
+    llm_search_keys=['text'],
+    filter_criteria = {
+        &quot;text&quot; : [&quot;cat&quot;, &quot;nature&quot;],
+    },
+    return_keys_list=[&quot;+&amp;cats&quot;],
+    ignore_cats_cache=False
+)
+print([{k: str(v)[:30] + &quot;...&quot; for k, v in result.items()} for result in results])
+</code></pre>
+<pre><code>[{'text': 'The cat slept....', 'n_words': '3...', '&amp;cats': "{'text': ['cat']}..."}, {'text': 'The sun set behind the mountai...', 'n_words': '13...', '&amp;cats': "{'text': ['nature']}..."}, {'text': 'As the wind howled through the...', 'n_words': '37...', '&amp;cats': "{'text': ['nature']}..."}]
+</code></pre>
+<pre><code class="language-python">handler.cats
+</code></pre>
+<pre><code>{'The cat slept.': {1: ['cat'], 0: ['nature']},
+ 'It rained today.': {1: [], 0: ['cat', 'nature']},
+ 'She smiled gently.': {1: [], 0: ['cat', 'nature']},
+ 'Books hold knowledge.': {1: [], 0: ['cat', 'nature']},
+ 'The sun set behind the mountains, casting a golden glow over the valley.': {1: ['nature'],
+  0: ['cat']},
+ 'He quickly realized that time was slipping away, and he needed to act fast.': {1: [],
+  0: ['cat', 'nature']},
+ 'The concert was an unforgettable experience, filled with laughter and joy.': {1: [],
+  0: ['cat', 'nature']},
+ 'Despite the challenges, they managed to build a beautiful home together.': {1: [],
+  0: ['cat', 'nature']},
+ 'As the wind howled through the ancient trees, scattering leaves and whispering secrets of the forest, she stood there, gazing up at the endless expanse of stars, feeling both infinitely small and profoundly connected to the universe.': {1: ['nature'],
+  0: ['cat']},
+ 'While the project seemed daunting at first, requiring countless hours of research, planning, and execution, the team worked tirelessly, motivated by their shared goal of creating something truly remarkable and innovative in their field.': {1: [],
+  0: ['cat', 'nature']},
+ "In the bustling city streets, amidst the constant hum of traffic and chatter, he found himself contemplating life's mysteries, pondering the choices that had brought him to this very moment and wondering where the path ahead would lead.": {1: [],
+  0: ['cat', 'nature']},
+ 'The conference was a gathering of minds from around the globe, each participant bringing their unique perspectives and insights to the table, fostering a vibrant exchange of ideas that would shape the future of their respective fields for years to come.': {1: [],
+  0: ['cat', 'nature']}}
+</code></pre>
+<p>OpenAI</p>
+<pre><code class="language-python">import logging
+logging.disable(logging.INFO)
+
+from dotenv import load_dotenv
+import os
+
+load_dotenv(&quot;../../credentials&quot;)
+
+# Initialization
+handler = MockerDB(
+    # optional
+    persist = True,
+    llm_conn_params = {
+
+        'llm_h_type' : 'OpenAIConn',
+        'llm_h_params' : {
+            'model_name' : 'gpt-4o-mini',
+            'env_mapping' : {
+                'api_key' : &quot;OPENAI_KEY&quot;
+            }
+        }
+
+    }
+)
+# Initialize empty database
+handler.establish_connection(
+    # optional for persist
+    file_path = &quot;./mock_persist&quot;,
+    embs_file_path = &quot;./mock_embs_persist&quot;,
+)
+
+results = await handler.search_database_async(
+    llm_search_keys=['text'],
+    filter_criteria = {
+        &quot;text&quot; : [&quot;cat&quot;, &quot;nature&quot;],
+    }
+)
+print([{k: str(v)[:30] + &quot;...&quot; for k, v in result.items()} for result in results])
+</code></pre>
+<pre><code>[{'text': 'The cat slept....', 'n_words': '3...'}, {'text': 'The sun set behind the mountai...', 'n_words': '13...'}, {'text': 'As the wind howled through the...', 'n_words': '37...'}]
+</code></pre>
+<h3 id="3-removing-values-from-the-database">3. Removing values from the database</h3>
+<pre><code class="language-python">print(f&quot;Items in the database {len(handler.data)}&quot;)
+handler.remove_from_database(filter_criteria = {&quot;n_words&quot; : 11})
+print(f&quot;Items left in the database {len(handler.data)}&quot;)
+
+</code></pre>
+<pre><code>Items in the database 14
+Items left in the database 12
+</code></pre>
+<h3 id="4-embeding-text">4 Embeding text</h3>
+<pre><code class="language-python">results = handler.embed_texts(
+    texts = [
+    &quot;Short. Variation 1: Short.&quot;,
+    &quot;Another medium-length example, aiming to test the variability in processing different lengths of text inputs. Variation 2: processing lengths medium-length example, in inputs. to variability aiming test of text different the Another&quot;
+  ]
+)
+
+print(str(results)[0:300] + &quot;...&quot;)
+</code></pre>
+<pre><code>{'embeddings': [[0.04973424971103668, -0.43570247292518616, -0.014545125886797905, -0.03648979589343071, -0.04165348783135414, -0.04544278606772423, -0.07025150209665298, 0.10043243318796158, -0.20846229791641235, 0.15596869587898254, 0.11489829421043396, -0.13442179560661316, -0.02425091527402401, ...
+</code></pre>
+<h3 id="5-using-mockerdb-api">5. Using MockerDB API</h3>
+<p>Remote Mocker can be used via very similar methods to the local one.</p>
+<pre><code class="language-python"># Initialization
+handler = MockerDB(
+    skip_post_init=True
+)
+# Initialize empty database
+handler.establish_connection(
+     # optional for connecting to api
+    connection_details = {
+        'base_url' : &quot;http://localhost:8000/mocker-db&quot;
+    }
+)
+</code></pre>
+<pre><code class="language-python">sentences = [
+    &quot;The cat slept.&quot;,
+    &quot;It rained today.&quot;,
+    &quot;She smiled gently.&quot;,
+    &quot;Books hold knowledge.&quot;,
+    &quot;The sun set behind the mountains, casting a golden glow over the valley.&quot;,
+    &quot;He quickly realized that time was slipping away, and he needed to act fast.&quot;,
+    &quot;The concert was an unforgettable experience, filled with laughter and joy.&quot;,
+    &quot;Despite the challenges, they managed to build a beautiful home together.&quot;,
+    &quot;As the wind howled through the ancient trees, scattering leaves and whispering secrets of the forest, she stood there, gazing up at the endless expanse of stars, feeling both infinitely small and profoundly connected to the universe.&quot;,
+    &quot;While the project seemed daunting at first, requiring countless hours of research, planning, and execution, the team worked tirelessly, motivated by their shared goal of creating something truly remarkable and innovative in their field.&quot;,
+    &quot;In the bustling city streets, amidst the constant hum of traffic and chatter, he found himself contemplating life's mysteries, pondering the choices that had brought him to this very moment and wondering where the path ahead would lead.&quot;,
+    &quot;The conference was a gathering of minds from around the globe, each participant bringing their unique perspectives and insights to the table, fostering a vibrant exchange of ideas that would shape the future of their respective fields for years to come.&quot;
+]
+
+# Insert Data
+values_list = [
+    {'text' : t, 'n_words' : len(t.split())} for t in sentences
+]
+handler.insert_values(values_list, &quot;text&quot;)
+</code></pre>
+<pre><code>{'status': 'success', 'message': ''}
+</code></pre>
+<p>MockerAPI has multiple handlers stored in memory at a time, they can be displayed with number of items and memory estimate.</p>
+<pre><code class="language-python">handler.show_handlers()
+</code></pre>
+<pre><code>{'results': [{'handler': 'default',
+   'items': 12,
+   'memory_usage': 1.4748001098632812}],
+ 'status': 'success',
+ 'message': '',
+ 'handlers': ['default'],
+ 'items': [12],
+ 'memory_usage': [1.4748001098632812]}
+</code></pre>
+<pre><code class="language-python">results = handler.search_database(
+    query = &quot;cat&quot;,
+    filter_criteria = {
+        &quot;n_words&quot; : 3,
+    }
+)
+
+results
+</code></pre>
+<pre><code>{'status': 'success',
+ 'message': '',
+ 'handler': 'default',
+ 'results': [{'text': 'The cat slept.', 'n_words': 3},
+  {'text': 'Books hold knowledge.', 'n_words': 3},
+  {'text': 'It rained today.', 'n_words': 3},
+  {'text': 'She smiled gently.', 'n_words': 3}]}
+</code></pre>
+<pre><code class="language-python">results = handler.embed_texts(
+    texts = [
+    &quot;Short. Variation 1: Short.&quot;,
+    &quot;Another medium-length example, aiming to test the variability in processing different lengths of text inputs. Variation 2: processing lengths medium-length example, in inputs. to variability aiming test of text different the Another&quot;
+  ],
+    # optional
+    embedding_model = &quot;intfloat/multilingual-e5-base&quot;
+)
+
+print(str(results)[0:500] + &quot;...&quot;)
+</code></pre>
+<pre><code>{'status': 'success', 'message': '', 'handler': 'cache_mocker_intfloat_multilingual-e5-base', 'embedding_model': 'intfloat/multilingual-e5-base', 'embeddings': [[-0.021023569628596306, 0.03461984172463417, -0.013103404082357883, 0.030711326748132706, 0.023395603522658348, -0.040545400232076645, -0.01580517739057541, -0.026828577741980553, 0.015833470970392227, 0.017637528479099274, 0.0008703444618731737, -0.011133708991110325, 0.11296682059764862, 0.015158110298216343, -0.04669041559100151, -0.0...
+</code></pre>
+<pre><code class="language-python">handler.show_handlers()
+</code></pre>
+<pre><code>{'results': [{'handler': 'default',
+   'items': 12,
+   'memory_usage': 1.4762191772460938},
+  {'handler': 'cache_mocker_intfloat_multilingual-e5-base',
+   'items': 2,
+   'memory_usage': 1.4075469970703125}],
+ 'status': 'success',
+ 'message': '',
+ 'handlers': ['default', 'cache_mocker_intfloat_multilingual-e5-base'],
+ 'items': [12, 2],
+ 'memory_usage': [1.4762191772460938, 1.4075469970703125]}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
