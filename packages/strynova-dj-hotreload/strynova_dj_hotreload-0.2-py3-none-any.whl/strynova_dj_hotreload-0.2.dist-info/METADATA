@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: strynova_dj_hotreload
+Version: 0.2
+Summary: Add hot reloading to Django apps.
+Home-page: https://github.com/strynova/strynova-dj-hotreload
+Author: Derek Bantel
+Author-email: derekbantel@outlook.com
+Keywords: django,hotreload,strynova
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: django>=5.1.8
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
