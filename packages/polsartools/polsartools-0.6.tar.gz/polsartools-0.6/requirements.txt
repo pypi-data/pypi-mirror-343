@@ -1,0 +1,9 @@
+numpy
+gdal
+scipy
+functools
+click
+simplekml
+tqdm
+matplotlib
+pybind11
