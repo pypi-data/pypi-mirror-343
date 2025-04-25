@@ -1,0 +1,33 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+  "setuptools>=40.9",
+  "setuptools-scm[toml]",
+  "wheel",
+]
+
+[project]
+name = "test"
+requires-python = ">=3.8,<3.10"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+]
+dependencies = [
+  "boltons",
+  "ipython",
+  "numpy>=1.20",
+  "pandas>=1",
+  "pydeps2env @ git+https://github.com/CagtayFabry/pydeps2env.git",
+  "tomli; python_version<'3.11'",
+]
+optional-dependencies.doc = [
+  "sphinx",
+]
+optional-dependencies.pip_only = [
+  "bidict",
+]
+optional-dependencies.test = [
+  "pytest",
+]

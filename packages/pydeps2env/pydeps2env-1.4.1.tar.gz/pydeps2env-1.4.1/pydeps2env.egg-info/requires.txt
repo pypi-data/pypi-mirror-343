@@ -1,0 +1,9 @@
+packaging
+pyyaml
+
+[:python_version < "3.11"]
+tomli
+
+[test]
+pytest
+pytest-cov

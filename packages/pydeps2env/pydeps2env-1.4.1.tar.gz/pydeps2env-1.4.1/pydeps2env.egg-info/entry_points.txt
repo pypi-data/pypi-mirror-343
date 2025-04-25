@@ -1,0 +1,2 @@
+[console_scripts]
+pydeps2env = pydeps2env.generate_environment:main

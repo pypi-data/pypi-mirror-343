@@ -1,0 +1,61 @@
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  pytest:
+    name: pytest
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+    - name: pip install package
+      run: pip install .[test]
+    - name: run pytest
+      run: pytest
+
+  demo_job:
+    name: action
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+    - uses: actions/checkout@v4
+    - name: run local action code
+      uses: ./
+      with:
+        files: ./test/pyproject.toml[doc] ./test/setup.cfg[pip_only] ./test/environment.yaml ./test/requirements.txt
+        output: environment_test.yml
+        channels: conda-forge
+        extras: test
+        additional_requirements: psutil pandas==1.5.1
+        build_system: include
+        pip: bidict
+    - uses: mamba-org/setup-micromamba@v2
+      if: runner.os == 'Linux'
+      with:
+        environment-file: ./environment_test.yml
+        environment-name: demo
+        init-shell: >-
+          bash
+          powershell
+        cache-environment: true
+
+  test_script:
+    name: script
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+    - name: pip install package
+      run: pip install .
+    - name: test cmd script
+      run: pydeps2env ./test/setup.cfg ./test/pyproject.toml[doc] ./test/environment.yaml ./test/requirements.txt -o output.yaml -c conda-forge --extras test -b include --pip pandas
