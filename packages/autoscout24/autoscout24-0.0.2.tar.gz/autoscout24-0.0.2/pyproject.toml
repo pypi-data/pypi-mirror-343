@@ -1,0 +1,45 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "autoscout24"
+version = "0.0.2"
+description = "Official Python client parser for the Carapis AutoScout24 API. Access real-time vehicle data via a powerful REST API. (AutoScout24)"
+authors = ["Carapis.com <info@carapis.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://carapis.com/"
+repository = "https://github.com/markolofsen/carapis-autoscout24-pypi"
+documentation = "https://carapis.com/docs"
+keywords = ["autoscout24", "autoscout24_api", "carapis", "car_data", "vehicle_data", "used_car_api", "client", "parser", "automotive", "AutoScout24"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+include = [
+    "src/autoscout24/*.py",
+    "LICENSE",
+    "README.md"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+requests = "^2.31.0"
+pyyaml = "^6.0.1"
+python-dotenv = "^1.0.0"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
