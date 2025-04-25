@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+pyttsgen/__init__.py
+pyttsgen/app.py
+pyttsgen/cli.py
+pyttsgen/config.py
+pyttsgen/engine.py
+pyttsgen/utils.py
+pyttsgen.egg-info/PKG-INFO
+pyttsgen.egg-info/SOURCES.txt
+pyttsgen.egg-info/dependency_links.txt
+pyttsgen.egg-info/entry_points.txt
+pyttsgen.egg-info/requires.txt
+pyttsgen.egg-info/top_level.txt
