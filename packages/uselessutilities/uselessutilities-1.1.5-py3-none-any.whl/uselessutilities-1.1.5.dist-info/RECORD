@@ -1,0 +1,14 @@
+uselessutilities/__init__.py,sha256=aFEq6mIOZEkqThJjTjHRaCCNRFPImlvuzwqOWc7YmLU,219
+uselessutilities/__main__.py,sha256=vW6Ne7035G9yygSYrQ2roefJX-hR8yxBP8o2rdNkdWU,191
+uselessutilities/cli.py,sha256=GGSYPhzYASi_zlw1g4dHKFt4OG6VQy3rxuhQL0wMB_k,223
+uselessutilities/nonary.py,sha256=Ln9ZLP2ASSoyl8pFTclI4kToVyz-AR9asPsGr9LnYJA,3715
+uselessutilities/quaternary.py,sha256=Mc_aKmiNNnR1fU2G0SzUQA-4Bs32kg0HFT-tsUBeJbI,3760
+uselessutilities/quinary.py,sha256=mvAOMoChoMe5Nf4JamKrsMpm324UoBCfSwedmSm52BY,3769
+uselessutilities/senary.py,sha256=1gr3HVp-OGbuQyCINV0HwhH2ujpedYVV6bi-x56TVss,3738
+uselessutilities/septenary.py,sha256=SeAIhaXUwcCzBvGtxErxkrWXODfBaahJ5VGCIoulDJY,3749
+uselessutilities/ternary.py,sha256=aaknQp6dzaQQzadhfBByTn7-ds8gw1zPQixhAcmePMU,3713
+uselessutilities-1.1.5.dist-info/licenses/LICENSE,sha256=xzUVTrRrTwhJLhAeF6-i_el9K_6qsjK4XEZBS-84mfs,1087
+uselessutilities-1.1.5.dist-info/METADATA,sha256=jDeLUmHOsJ1Y8S-7Tk--agV6p_-BsoZOI4OfeQKLhec,1455
+uselessutilities-1.1.5.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+uselessutilities-1.1.5.dist-info/top_level.txt,sha256=Z3DDeuUeGqnGC9_FRGukhZezC-0DRSfLRyQCfPa571Y,17
+uselessutilities-1.1.5.dist-info/RECORD,,
