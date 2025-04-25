@@ -1,0 +1,9 @@
+{
+	"devDependencies": {
+		"pyright": "1.1.398"
+	},
+	"engines": {
+		"node": "22.14.0"
+	},
+	"packageManager": "pnpm@10.7.1"
+}
