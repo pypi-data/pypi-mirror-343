@@ -1,0 +1,7 @@
+django_payments_yookassa/__init__.py,sha256=_enm-s8OqOag67W1Fp6Te2ziPaRvrtSuc-lA_AKEI_0,148
+django_payments_yookassa/models.py,sha256=WxwO9gW8ED3O4Ee-XBY_uD-16-8ySFvSvVhfmhWU4tQ,325
+django_payments_yookassa/provider.py,sha256=Sa0z9-s6nVA8A6OeSD2ZGEZuOliH1g5GjXzkmNhtHA4,7523
+django_payments_yookassa-0.1.0.dist-info/METADATA,sha256=-fXvmCX8ah75G_rWrgMg8HIzvA_D-xmxu224jgVt5oI,2360
+django_payments_yookassa-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+django_payments_yookassa-0.1.0.dist-info/licenses/LICENSE,sha256=FyuBsNr3YLXHPRQfWIpCAC4brUeSdYelr01V-Fkog8U,1066
+django_payments_yookassa-0.1.0.dist-info/RECORD,,
