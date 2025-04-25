@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: geraci
+Version: 1.0.0
+Summary: A library for managing files and directories easily and efficiently.
+Home-page: 
+Author: Rpx
+Author-email: cubyc.ro@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: requires-python
+Dynamic: summary
+
+## Geraci
+
+Geraci is a Python library for managing files and directories easily and efficiently.
+
+## Installation
+
+``bash
+pip install geraci.
+
+Utilization
+
+from geraci.core import read_file, create_file
+
+# Read a file
+content = read_file("example.txt")
+print(content)
+
+# Create a new file
+create_file("new_file.txt")
+
+Main Features 
+
+ Reading, writing and adding content to files.
+Â­-Creating, renaming, moving and deleting files and directories.
+Â­-Compression and decompression of files.
+Â­-Input validation and advanced logging.
+    
+
+## License
+This project is licensed under the MIT License.
+
+
+
+

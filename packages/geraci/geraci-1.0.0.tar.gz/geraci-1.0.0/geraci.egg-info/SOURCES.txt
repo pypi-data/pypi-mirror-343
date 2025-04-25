@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+geraci/__init__.py
+geraci/core.py
+geraci.egg-info/PKG-INFO
+geraci.egg-info/SOURCES.txt
+geraci.egg-info/dependency_links.txt
+geraci.egg-info/top_level.txt
+tests/test_core.py
