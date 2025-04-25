@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+dobro/dobro.py
+estrela.egg-info/PKG-INFO
+estrela.egg-info/SOURCES.txt
+estrela.egg-info/dependency_links.txt
+estrela.egg-info/top_level.txt
