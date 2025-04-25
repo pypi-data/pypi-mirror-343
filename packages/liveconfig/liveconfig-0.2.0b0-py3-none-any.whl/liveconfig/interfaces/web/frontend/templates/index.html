@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block header
+%}Home{% endblock %}{% block content %}
+<h2>Welcome to LiveConfig</h2>
+<p>
+  LiveConfig is a tool for editing variables during the execution of a python
+  program.
+</p>
+<p>Use the navigation bar to explore classes.</p>
+<p>
+  To get started, check out the <a href="{{url_for('classes')}}">Classes</a>
+</p>
+{% endblock %}
