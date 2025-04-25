@@ -1,0 +1,4 @@
+[sceptre.resolvers]
+from_json=resolver.from_json:FromJsonResolver
+to_json=resolver.to_json:ToJsonResolver
+
