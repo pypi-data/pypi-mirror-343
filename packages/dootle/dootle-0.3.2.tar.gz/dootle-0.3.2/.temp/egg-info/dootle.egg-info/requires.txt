@@ -1,0 +1,15 @@
+doot>=1.0.0
+pony>=0.7
+networkx
+jgdv>=1.0.1
+bibtex-bibble
+mastodon-py>=2.0.1
+
+[dev]
+myst-parser>=4.0.1
+pytest>=8.3.5
+pytest-cov>=6.0.0
+pytest-mock>=3.14.0
+sphinx
+sphinx-rtd-theme>=3.0.2
+sphinx-autoapi>=3.6.0
