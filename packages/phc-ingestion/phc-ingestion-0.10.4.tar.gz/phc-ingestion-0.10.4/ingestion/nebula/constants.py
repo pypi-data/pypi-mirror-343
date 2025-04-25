@@ -1,0 +1,1 @@
+NEBULA_TEST_TYPE = "WGS-30x"
