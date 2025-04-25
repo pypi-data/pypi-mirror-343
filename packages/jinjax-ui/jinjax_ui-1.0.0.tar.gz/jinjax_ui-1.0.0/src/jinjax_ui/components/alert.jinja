@@ -1,0 +1,41 @@
+{#def title=None, icon=None, var="info", dismissible=False #}
+{#css jxui.css, alert.css, tooltip.css #}
+{#js jxui.js, alert.js #}
+
+{% if not icon %}
+  {% set icon = ({
+    "critical": "error",
+    "red": "error",
+    "info": "info",
+    "blue": "info",
+    "success": "check_circle",
+    "green": "check_circle",
+    "option": "add_circle",
+    "purple": "add_circle",
+    "warning": "warning",
+    "yellow": "warning",
+    "alert": "warning",
+    "note": "info",
+  }).get(var, "info") %}
+{% endif %}
+
+{% do attrs.set(data_var=var) %}
+
+{% if title %}
+  {% do attrs.add_class("jxui-alert--entitled") %}
+{% endif %}
+
+<section {{ attrs.render(class="jxui-alert", role="alert", data_dismissible=dismissible) }}>
+  <div class="jxui-alert-icon">
+    <Icon name={{ icon }} />
+  </div>
+  <div class="jxui-alert-content">
+    {% if title %}<h2 class="jxui-alert-title" data-outline-skip>{{ title }}</h2>{% endif %}
+    {{ content }}
+  </div>
+  {% if dismissible %}
+    <Button var="ghost" shape="square" size="mini" class="jxui-alert-dismiss" aria-label="Dismiss alert" aria-hidden="true" title="Dismiss alert" data-tooltip>
+      <Icon name="close" />
+    </Button>
+  {% endif %}
+</section>
