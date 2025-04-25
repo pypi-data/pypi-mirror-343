@@ -1,0 +1,11 @@
+[psychopy.experiment.components]
+BufferedData = psychopy_eyelink:BufferedData
+CameraSetup = psychopy_eyelink:CameraSetup
+DriftCheck = psychopy_eyelink:DriftCheck
+GazeTrigger = psychopy_eyelink:GazeTrigger
+HostDrawing = psychopy_eyelink:HostDrawing
+InitializeConnection = psychopy_eyelink:InitializeConnection
+LatestSample = psychopy_eyelink:LatestSample
+MarkEvents = psychopy_eyelink:MarkEvents
+StartRecording = psychopy_eyelink:StartRecording
+StopRecording = psychopy_eyelink:StopRecording

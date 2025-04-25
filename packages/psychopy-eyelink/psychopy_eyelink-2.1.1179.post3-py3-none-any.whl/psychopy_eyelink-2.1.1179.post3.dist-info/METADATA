@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: psychopy-eyelink
+Version: 2.1.1179.post3
+Summary: Extension package for PsychoPy which adds support for EyeLink devices by SR Research.
+Author-email: Marcus Johnson <marcus@sr-research.com>, Jono Batten <jono@sr-research.com>, Brian Richardson <brian@sr-research.com>, SR Research Support <support@sr-research.com>
+License: GNU General Public License v3 (GPLv3)
+Project-URL: homepage, https://www.sr-research.com
+Project-URL: documentation, https://www.sr-research.com/support
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sr-research-pylink
+Requires-Dist: psychopy-eyelink-coregraphics
+Dynamic: license-file
+
+# psychopy-eyelink
+
+PsychoPy Builder plugin package for supporting various EyeLink eye tracker devices from [SR Research Ltd.](https://www.sr-research.com/).
+
+Please visit the [SR Research Support Forums](https://www.sr-research.com/support) for more information, educational material and Q&A.
