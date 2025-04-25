@@ -1,0 +1,10 @@
+matplotlib_fontja/__init__.py,sha256=IG5ixCd7O2gSlEzPdxIMUQZtF_02b-QzZPznVewfSHQ,91
+matplotlib_fontja/matplotlib_fontja.py,sha256=y-cS27dC4EtPD6_WgT36PaHne4XWKB-ikk4ogdw3a2E,815
+matplotlib_fontja/fonts/IPA_Font_License_Agreement_v1.0.txt,sha256=Jy9_gF36_TzZt8XZnzgTNmTKrN9bauHtBZ8bBR7K08I,20447
+matplotlib_fontja/fonts/Readme_ipaexg00401.txt,sha256=y39vEeXQW4nyhRowY1w5DOfpkJe4HpM1GtXVXeLCxRw,1676
+matplotlib_fontja/fonts/ipaexg.ttf,sha256=O5lVpeQ3_7JMQVSOeSlvpySCLaIe513BuU9szbj0AN0,6099900
+matplotlib_fontja-1.1.0rc1.dist-info/METADATA,sha256=CbgY2vhofuZ0AeqFdewO-tE3BuXG3xVqX3D8Rzh3kpA,5279
+matplotlib_fontja-1.1.0rc1.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+matplotlib_fontja-1.1.0rc1.dist-info/licenses/LICENSE,sha256=1VmDYgyHlXl58gjGLVrlHWCnyYb8W01og8tdfdgl2T8,1091
+matplotlib_fontja-1.1.0rc1.dist-info/licenses/src/matplotlib_fontja/fonts/IPA_Font_License_Agreement_v1.0.txt,sha256=Jy9_gF36_TzZt8XZnzgTNmTKrN9bauHtBZ8bBR7K08I,20447
+matplotlib_fontja-1.1.0rc1.dist-info/RECORD,,
