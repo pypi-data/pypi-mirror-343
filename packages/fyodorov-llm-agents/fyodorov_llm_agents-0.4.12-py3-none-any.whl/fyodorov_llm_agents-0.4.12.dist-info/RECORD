@@ -1,0 +1,16 @@
+fyodorov_llm_agents/agents/agent_model.py,sha256=LxoQ8ZrGt_xYbcAjFTZC4ff8zvzsWq9MstTmroFBTdE,6827
+fyodorov_llm_agents/agents/agent_service.py,sha256=-55RDait3eZGFfYWGNLGoa06WMcdiBnkzpa7BnWW10Q,6016
+fyodorov_llm_agents/agents/openai.py,sha256=FA5RS7yn3JwvFA8PXju60XSYC_2oUZFNgBUzeIYtGv0,1154
+fyodorov_llm_agents/instances/instance_model.py,sha256=PQaoVSH9H4qp_wcLvyT_QgvNtwf9oehOxZaGI6mv1bA,1206
+fyodorov_llm_agents/instances/instance_service.py,sha256=jNZ4jHCdBpHwhHeIGaOeEOFDi9tu1BnRsNF3vg-2Pn0,8456
+fyodorov_llm_agents/models/llm_model.py,sha256=aQtXtB7kRpnVdbPu-nmTGAaflbtKz3DPkgcckf1srsg,1645
+fyodorov_llm_agents/models/llm_service.py,sha256=35bS0RFXJhJUSjge-v4u5cftn_MT-CmcDuWnC2kCnJo,4008
+fyodorov_llm_agents/providers/provider_model.py,sha256=OyCK6WMRhyElsp88gILg0wso-OPHI7f55gEeypsJ7O0,957
+fyodorov_llm_agents/providers/provider_service.py,sha256=GST-NLV8aLPsvapQEvgT_qHGYu7IpS5Xsut60XFmD-g,5865
+fyodorov_llm_agents/tools/mcp_tool_model.py,sha256=nGdPmqSkA7hqDUTPbNCZAHNSVJCgVOs5dzJfPntLidI,5110
+fyodorov_llm_agents/tools/mcp_tool_service.py,sha256=r2SI0Aic3qq91WL7BB_ZKX4B7LgB1HMPutx9rgIla7s,6858
+fyodorov_llm_agents/tools/tool.py,sha256=HyOk0X_3XE23sa8J-8UZx657tJ0sxwZWMbA4OPxXU6E,7940
+fyodorov_llm_agents-0.4.12.dist-info/METADATA,sha256=_kCun6oTEALyOjTLgMp6z2gAeR8Qq28IjOGdo0-OjxU,551
+fyodorov_llm_agents-0.4.12.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+fyodorov_llm_agents-0.4.12.dist-info/top_level.txt,sha256=4QOslsBp8Gh7ng25DceA7fHp4KguTIdAxwURz97gH-g,20
+fyodorov_llm_agents-0.4.12.dist-info/RECORD,,
