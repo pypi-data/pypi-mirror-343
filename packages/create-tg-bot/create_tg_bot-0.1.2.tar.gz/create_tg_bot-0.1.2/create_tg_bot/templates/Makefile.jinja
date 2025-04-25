@@ -1,0 +1,32 @@
+.PHONY: run install migrate test lint docker-build docker-up docker-down
+
+VENV = .venv/bin/
+ifeq ($(OS),Windows_NT)
+    VENV = .venv/Scripts/
+endif
+
+run:
+	$(VENV)python main.py
+
+install:
+	$(VENV)pip install --upgrade pip && \
+	$(VENV)pip install -r requirements.txt
+
+migrate:
+	$(VENV)alembic revision --autogenerate -m "auto" && \
+	$(VENV)alembic upgrade head
+
+test:
+	$(VENV)pytest --disable-warnings
+
+lint:
+	$(VENV)ruff .
+
+docker-build:
+	docker build -t mybot:latest .
+
+docker-up:
+	docker compose up -d
+
+docker-down:
+	docker compose down
