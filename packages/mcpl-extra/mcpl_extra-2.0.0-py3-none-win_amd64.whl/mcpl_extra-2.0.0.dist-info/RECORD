@@ -1,0 +1,11 @@
+_mcpl_extra/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+_mcpl_extra/cli.py,sha256=DuPxlygLbLSXrped5xTrACLJZlGHgVh2e1WPqiCRrrg,2942
+_mcpl_extra/data/bin/mcpl2phits.exe,sha256=1v1pa8ECVQ7fkv2FaPyNcKt2LbW4aOgHDhJb4H47PuA,16896
+_mcpl_extra/data/bin/mcpl2ssw.exe,sha256=vl2ItyUFuIojrpcPiyzVYUomG3Zf6XdOfiQM-KGWo1A,27136
+_mcpl_extra/data/bin/phits2mcpl.exe,sha256=daha-Gs1pyRqNQ0Aw9w2vn27CoZ-PLpGQNbHkb-vuxo,18432
+_mcpl_extra/data/bin/ssw2mcpl.exe,sha256=9HuFbmNwK1qCadYRSMlEpye2YDMVrdxAjUaUztbu8WU,26112
+mcpl_extra-2.0.0.dist-info/METADATA,sha256=wVE40UgYdTZrn675HqedHS9EEpBJPgjnsU3tecX6G8Q,3916
+mcpl_extra-2.0.0.dist-info/WHEEL,sha256=CrfbhfZfh4HXCyV7dL3w1NTiYbskK84H4NYtP-zmtCI,103
+mcpl_extra-2.0.0.dist-info/entry_points.txt,sha256=xF9y1C4HRF52xDBjnTP40a9H3t_W3YGWGXKjrBefn6Y,219
+mcpl_extra-2.0.0.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+mcpl_extra-2.0.0.dist-info/RECORD,,
