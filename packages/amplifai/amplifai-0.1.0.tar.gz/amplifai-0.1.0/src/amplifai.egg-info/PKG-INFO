@@ -1,0 +1,115 @@
+Metadata-Version: 2.4
+Name: amplifai
+Version: 0.1.0
+Summary: Amplifai is a package that allows you to transform your raw unstructured text into structured data in a few lines of codes.
+Project-URL: Homepage, https://github.com/VianneyMI/amplifai
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: langchain>=0.3.0
+Requires-Dist: langchain-mistralai>=0.2.10
+Requires-Dist: langchain-openai>=0.3.14
+Requires-Dist: python-dotenv>=1.0.0
+Dynamic: license-file
+
+# AMPLIFAI
+
+## **Overview**
+
+This package allows to extract information from unstructured data and turns this extracted information into structured data.
+
+## **Features**
+
+* Creates LLM powered extraction and structuration logic
+* Define your data structure using Pydantic models
+* Use any supported LLM provider
+* Extract structured data from unstructured text with a single method call
+* Type-safe results with Pydantic validation
+
+## **Requirements**
+
+Requires python > 3.10 and relies on langchain and pydantic
+See the requirements file for more details
+
+## **Installation**
+
+You can install the package via pip by running the following command:
+
+```bash
+pip install amplifai
+```
+
+Alternatively, you can use any of the numerous python package managers such as poetry and uv.
+
+## **Usage**
+
+Here's a simple example of how to use AMPLIFAI to extract structured information from text:
+
+```python
+from pydantic import BaseModel
+from langchain_openai import ChatOpenAI
+from amplifai import Amplifier
+
+# Define your data model
+class Person(BaseModel):
+    name: str
+    age: int
+    phone_number: str | None = None
+    email_adress: str | None = None
+
+# Initialize the LLM and Amplifier
+llm = ChatOpenAI(api_key="your-api-key", model="gpt-4")
+amplifier = Amplifier[ChatOpenAI, Person](llm=llm)
+
+# Extract structured data from text
+text = "John Doe is 25 years old. He lives in Paris and can be reached at +33 6 12 34 56 78 or at firstname.name@gmail.com"
+person = amplifier.denoise(text=text)
+
+# Access the structured data
+print(f"Name: {person.name}")
+print(f"Age: {person.age}")
+print(f"Phone: {person.phone_number}")
+print(f"Email: {person.email_adress}")
+```
+
+The package also supports other LLM providers like MistralAI:
+
+```python
+from langchain_mistralai import ChatMistralAI
+
+llm = ChatMistralAI(api_key="your-api-key", model="mistral-large-latest")
+amplifier = Amplifier[ChatMistralAI, Person](llm=llm)
+```
+
+In fact, you can use any LLM provider that is supported by [langchain](https://python.langchain.com/docs/integrations/providers/).
+However, you will need to first install the corresponding langchain integration.
+
+Assuming you use pip:
+
+```bash
+pip install langchain-<provider>
+```
+
+# Contributing
+
+We love contributions from the community! There are many ways you can help make AMPLIFAI better:
+
+## Ways to Contribute
+
+- 🐛 **Report Bugs**: Found a bug? Please create an issue with detailed steps to reproduce it
+- 💡 **Feature Requests**: Have an idea for a new feature? Open an issue and let's discuss it
+- 📝 **Improve Documentation**: Help us make the documentation clearer and more comprehensive
+- 🔧 **Code Contributions**: Submit pull requests for bug fixes or new features
+- 🌟 **Spread the Word**: Star the repository and share it with your network
+
+
+
+## Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+
+# License
+
+By contributing, you agree that your contributions will be licensed under the project's [MIT License](LICENSE).
+
+Let's build something amazing together! 🚀
