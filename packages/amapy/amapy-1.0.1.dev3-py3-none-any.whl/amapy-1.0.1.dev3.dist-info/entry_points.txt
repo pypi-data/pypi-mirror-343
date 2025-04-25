@@ -1,0 +1,3 @@
+[console_scripts]
+ama = amapy.app:run
+asset = amapy.app:run
