@@ -1,0 +1,11 @@
+lorica/__init__.py,sha256=a8REFeRmYACDvD8Jkz2CzQGOyrnqX_X2EvhEwY4lx1U,107
+lorica/_attestor.py,sha256=cBQpSahOEy89Hxyhed4ZNsnoYPUaW-zG72TE1to9AWY,7828
+lorica/session.py,sha256=2LOj7TMzJVLn_g0QGG7RNzT0G7_VS11GutpqhvwbAlM,2567
+lorica/transport.py,sha256=7du23MiZQraoLepuHT2fuQT7qpzNTllHHhqdk2REkks,2919
+lorica/ohttp/__init__.py,sha256=hK13G3pAhxd3rW_hIco1KDmkvFg_JCeWKFxL_XWQ1D4,569
+lorica/ohttp/response_stream.py,sha256=tyuPl-cMoHt-wnh3EqiewCCwmuhRlQMQFChJ_jYzI44,585
+lorica/ohttp/session.py,sha256=dN0mKnNRlUe2-fFvv5TOa1sNJPlzZ1Qqx9dp7OQojrs,577
+lorica/ohttp/transport.py,sha256=f7P4ZdS6Gt7FZQ6vcgkDtAdrQuMSEu1npGfCO8E1eEE,579
+lorica-0.2a1.dist-info/METADATA,sha256=a81cTOME-b23bM2Wm7OgEYK0W4qGootI-Y_buMtFKPQ,6093
+lorica-0.2a1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+lorica-0.2a1.dist-info/RECORD,,
