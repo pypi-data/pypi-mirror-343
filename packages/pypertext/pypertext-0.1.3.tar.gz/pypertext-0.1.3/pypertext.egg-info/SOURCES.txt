@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+pypertext/__init__.py
+pypertext.egg-info/PKG-INFO
+pypertext.egg-info/SOURCES.txt
+pypertext.egg-info/dependency_links.txt
+pypertext.egg-info/requires.txt
+pypertext.egg-info/top_level.txt
