@@ -1,0 +1,15 @@
+_mcpl_core/__init__.py,sha256=PMeCIHapZb5qH4A-xc5Mquu8aqQS7UlVJVlaXPB3wq4,20
+_mcpl_core/info.py,sha256=6JqWWLqGmeFvkoCAWULvGL5WKm9aloKdyOZ9ENNtxMc,5329
+_mcpl_core/data/bin/mcpl-config,sha256=2VQrVuo0LJ-3Ip7D07PwbG27Hp8bA_6xKBOipYZmQvE,38856
+_mcpl_core/data/bin/mcpltool,sha256=--pnvTSMF2VYx_iMcaeZjculCq51pKjXDfDhbhbYOZ0,79696
+_mcpl_core/data/include/mcpl.h,sha256=Fp7Ajf_yBV6vGgZHXxU_1oHhc7S2TSDQ7W3q5dW_3ck,18918
+_mcpl_core/data/lib/libmcpl.so,sha256=R6-yp4kd5YSf1N7CirK29AAzRiiv8YYJ8DNvBnM1Jd0,87736
+_mcpl_core/data/lib/cmake/MCPL/MCPLConfig.cmake,sha256=5Y2YU5DvrZXf2FyHIAIyo71jbIrDfhW36uPRG7bFPac,4234
+_mcpl_core/data/lib/cmake/MCPL/MCPLConfigVersion.cmake,sha256=vbplCtgQkFwb4JMZO_cTCcc4w2YJoJVxOjg02-6SWJw,1861
+_mcpl_core/data/lib/cmake/MCPL/MCPLTargets-release.cmake,sha256=p5FeYxqbxegKbG6MumFh7doi63RT2HZu04WuHHfozkI,842
+_mcpl_core/data/lib/cmake/MCPL/MCPLTargets.cmake,sha256=b_HePjUOQsYnu8BuD87UJDXXEE5ffLTWWxIQEzkT4Dw,4282
+mcpl_core-2.0.0.dist-info/METADATA,sha256=20Lqd2Z9r7T9rcG36zY9Eu6FLmYy-ofcghKsnZfZV9c,4412
+mcpl_core-2.0.0.dist-info/WHEEL,sha256=q7Ka8ZUUw3hF-1DyICtY3a_8Q1QAQKV98V1hgTnfo6s,114
+mcpl_core-2.0.0.dist-info/entry_points.txt,sha256=IN36seIjQ3-dODbqFfLAs3TZ-TLHLLiggBEGvWx7Jco,124
+mcpl_core-2.0.0.dist-info/RECORD,,
+mcpl_core-2.0.0.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
