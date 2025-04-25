@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+dicter/__init__.py
+dicter/dicter.py
+dicter/examples.py
+dicter.egg-info/PKG-INFO
+dicter.egg-info/SOURCES.txt
+dicter.egg-info/dependency_links.txt
+dicter.egg-info/requires.txt
+dicter.egg-info/top_level.txt
