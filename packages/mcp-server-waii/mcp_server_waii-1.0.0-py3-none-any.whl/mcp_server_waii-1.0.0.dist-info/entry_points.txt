@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-waii = mcp_server_waii:main
