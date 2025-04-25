@@ -1,0 +1,13 @@
+maithili_dsl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+maithili_dsl/cli.py,sha256=zGaFpKUu0oZ9fGPCEH6BKuzp7yR2-s9Hza_NDQcB53U,2028
+maithili_dsl/transpiler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+maithili_dsl/transpiler/linter.py,sha256=qQgRVFTrFs6juC00NjI4p0rRwneugvQlaTpI98yR3JE,4987
+maithili_dsl/transpiler/mappings.py,sha256=wYkikbB8MuqG-cYlDJT7VFIJjCvD-hjV0HcBa6ewwEo,695
+maithili_dsl/transpiler/numeral.py,sha256=6NoRilRHq7O7w79j2BVFS0CbjC0niroKnK0JLvnjU7s,204
+maithili_dsl/transpiler/transpile.py,sha256=er_vXfMKKXTTInHZJ9TVpNwZDoUEkcMPI_Md5klcs7g,317
+python_maithili-0.1.0.dist-info/licenses/LICENSE,sha256=CmUJL8TE5Ze0F1TRpGhJNsXlD-8AMfrPVDaf8ep4niM,504
+python_maithili-0.1.0.dist-info/METADATA,sha256=l6xskeDP4jabVsWe2XajRvY0wIF34ZPfKRryd0ipqMs,3585
+python_maithili-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+python_maithili-0.1.0.dist-info/entry_points.txt,sha256=s-hBeMYcPw5-lmDfblJ5KApe58sgq1RHDILhyBqPFe4,58
+python_maithili-0.1.0.dist-info/top_level.txt,sha256=FNt8kRnsEpayo6ze7FtSmyntfdiqw_tVe1vGWXpnll4,13
+python_maithili-0.1.0.dist-info/RECORD,,
