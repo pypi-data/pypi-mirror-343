@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+insite/__init__.py
+insite/cli.py
+insite/processor.py
+insite/scraper.py
+insite.egg-info/PKG-INFO
+insite.egg-info/SOURCES.txt
+insite.egg-info/dependency_links.txt
+insite.egg-info/entry_points.txt
+insite.egg-info/requires.txt
+insite.egg-info/top_level.txt
