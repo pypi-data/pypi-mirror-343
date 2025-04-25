@@ -1,0 +1,6 @@
+version = "0.3.0rc6"
+build_type = "candidate"
+build_iteration = "6"
+git_commit = "c6ed76dc1c74f8477504f02fcf28251a226212b0"
+git_branch = "cicd-upgrades"
+git_last_tag = "v0.2.0"
