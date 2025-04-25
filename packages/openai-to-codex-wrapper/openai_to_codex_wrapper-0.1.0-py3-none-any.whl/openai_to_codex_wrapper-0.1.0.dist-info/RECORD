@@ -1,0 +1,9 @@
+openai_to_codex_wrapper/__init__.py,sha256=FMH4bckAuqf_XbhYfdtILDhozjY4N9zs-2LqAfT5gJQ,100
+openai_to_codex_wrapper/cli.py,sha256=3X3sTrNWEvCWrK3IjQ7Xq_wq152N2lhkUl0UErJMJNQ,5101
+openai_to_codex_wrapper/server.py,sha256=5u1HV1gqKpPok_EzbWtiH7KKtU2MvCoRxsChpSXnZv4,33276
+openai_to_codex_wrapper-0.1.0.dist-info/licenses/LICENSE,sha256=jrIWeEkI5t7VbaFDBX7m9UlS5n6Wt75ueco7nk5ZzJg,1101
+openai_to_codex_wrapper-0.1.0.dist-info/METADATA,sha256=mcPoRkKDc9k_QygXGvPE6ViUziolnaivBBqAMDPvXLI,2017
+openai_to_codex_wrapper-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+openai_to_codex_wrapper-0.1.0.dist-info/entry_points.txt,sha256=YcYSAuTncbPhdx6n1yoYjk_zzFSi1-X-iS9Zc_7Eqhg,57
+openai_to_codex_wrapper-0.1.0.dist-info/top_level.txt,sha256=jhmFxkHz2tQpOoXKQBCi-OEHytHha7kB-rfIWuZ4xWU,24
+openai_to_codex_wrapper-0.1.0.dist-info/RECORD,,
