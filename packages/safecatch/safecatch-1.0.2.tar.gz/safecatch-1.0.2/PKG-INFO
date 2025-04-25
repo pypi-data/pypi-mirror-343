@@ -1,0 +1,82 @@
+Metadata-Version: 2.4
+Name: safecatch
+Version: 1.0.2
+Summary: A python package that allows you to handle exceptions easily
+Author-email: Q12 <qque12euqq@gmail.com>
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# safecatch
+
+Safecatch is a simple Python package that provides decorators for streamlined exception handling. With safecatch, you can easily catch specific exceptions—or multiple exceptions—by simply decorating your functions, allowing your code to remain clean and focused on business logic.
+
+## Features
+
+- **safecatch_handler**: Catches a specified exception and returns a fallback value.
+- **multi_safecatch_handler**: Catches multiple exceptions with different fallback values based on a provided mapping.
+
+## Usage
+
+### Single Exception Handling
+
+Use the `safecatch_handler` decorator to catch a single exception and provide a fallback value:
+```python
+from safecatch.safecatch import safecatch_handler
+
+@safecatch_handler(ZeroDivisionError, 0)
+def divide(a, b):
+    return a / b
+
+print(divide(10, 2))  # Outputs: 5.0
+print(divide(10, 0))  # Outputs: 0 (fallback value when ZeroDivisionError is raised)
+```
+
+### Multiple Exception Handling
+
+Use the `multi_safecatch_handler` to catch multiple exceptions with different fallback values:
+```python
+from safecatch.multi_safecatch import multi_safecatch_handler
+
+@multi_safecatch_handler({
+    ZeroDivisionError: 0,
+    ValueError: -1
+})
+def test_func(x, y):
+    if y == 0:
+        return x / y  # Raises ZeroDivisionError
+    elif y < 0:
+        raise ValueError("Negative value!")  # Raises ValueError
+    else:
+        return x + y
+
+print(test_func(3, 2))   # Outputs: 5 (normal result)
+print(test_func(3, 0))   # Outputs: 0 (fallback for ZeroDivisionError)
+print(test_func(3, -1))  # Outputs: -1 (fallback for ValueError)
+```
+
+## How It Works
+
+Safecatch simplifies error management by abstracting exception handling into reusable decorators. Instead of writing repetitive try/except blocks in your functions, you decorate them with safecatch to handle errors uniformly.
+
+- **safecatch_handler**:  
+  This decorator takes two arguments. a specific exception type and a fallback return value. If the decorated function raises the given exception, the decorator intercepts it and returns the fallback value.
+
+- **multi_safecatch_handler**:  
+  This decorator accepts a dictionary where keys are exception types and values are the corresponding fallback return values. When the decorated function raises an exception, the decorator checks the dictionary for a matching exception type and returns the appropriate fallback value. If no match is found, the exception is propagated as usual.
+
+## Testing
+
+Safecatch includes tests written with pytest to ensure its functionality. To run the tests locally, execute:
+```bash
+pip install -e .
+pytest tests/
+```
+
+## Contributing
+
+Contributions to safecatch are welcome! If you have suggestions, bug reports, or improvements, please open an issue or submit a pull request on our [GitHub repository](https://github.com/Que12/safecatch).
