@@ -1,0 +1,8 @@
+subregistry/__init__.py,sha256=mq7GBg20mSci2Zp_kze_6ydODjV9Ib7j_sdtM-u84ww,35
+subregistry/decorator.py,sha256=Da2tWH4rFBIODy0FNJ4hibAboTvF3XoOEcAn4q6Qyvw,3707
+subregistry/subclass_registry.py,sha256=Sc-ZgwFtE_f14ezTxpIC49i_A7SYoWP_5RIA8B9bkP8,621
+subregistry-0.1.1.dist-info/licenses/LICENSE,sha256=QSVgt-TTVpX4WroZND6624LNxvXKclfsRAQWQVHtMCw,1085
+subregistry-0.1.1.dist-info/METADATA,sha256=iCM5G9qxZx2Cz8hIokZAXHQTqIhz_2wYg2cP7FnavmM,1579
+subregistry-0.1.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+subregistry-0.1.1.dist-info/top_level.txt,sha256=olZLq2SJANPgVtAo1EH8dOXy9-k8li9_ypi9_JbjvCQ,12
+subregistry-0.1.1.dist-info/RECORD,,
