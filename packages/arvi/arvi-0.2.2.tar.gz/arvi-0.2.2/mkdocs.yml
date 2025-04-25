@@ -1,0 +1,59 @@
+site_name: arvi
+
+site_dir: _site
+
+theme:
+  name: "material"
+  logo: logo/detective.png
+  favicon: logo/detective.png
+  palette:
+    primary: amber
+  features:
+    - content.code.copy
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.sections
+    - toc.follow
+    - navigation.top
+
+nav:
+  - Welcome: index.md
+  - Detailed walkthrough: detailed.ipynb
+  - Downloading data: downloading_data.md
+  - API: API.md
+
+
+plugins:
+  - search
+  - mkdocstrings
+  - mkdocs-jupyter:
+      execute: true
+      remove_tag_config:
+        remove_input_tags:
+          - hide_code
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+copyright: Copyright © 2025 Observatoire de Genève
+
+
+# watch:
+#   - /home/jfaria/Work/arvi
