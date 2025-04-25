@@ -1,0 +1,163 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "marsimage"
+dynamic = ["version"]
+description = 'Python package for processing and analyzing images from the NASA Mars rovers.'
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+keywords = [
+  "mars",
+  "image",
+  "nasa",
+  "pds",
+]
+authors = [
+  { name = "Simeon Schmauß", email = "simeon.schmauss@gmail.com" },
+  { name = "Benoît Seignovert", email = "benoit.seignovert@univ-nantes.fr" },
+]
+maintainers = [
+  { name = "Simeon Schmauß", email = "simeon.schmauss@gmail.com" },
+  { name = "Benoît Seignovert", email = "benoit.seignovert@univ-nantes.fr" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+
+#package dependencies
+dependencies = [
+  "pdr",
+  "numpy",
+  "tifffile",
+  "requests",
+  "scipy",
+  "tqdm",
+  "matplotlib",
+  "pandas",
+]
+
+[project.optional-dependencies]
+jupyter = [
+  "ipykernel",
+  "ipywidgets",
+]
+
+[project.urls]
+Source = "https://gitlab.univ-nantes.fr/mars-rovers/marsimage/"
+Documentation = "https://marsimage.readthedocs.io/"
+
+[tool.hatch.build.targets.sdist]
+only-packages = true
+exclude = [
+  "tests/",
+]
+
+[tool.hatch.envs.default]
+
+[tool.hatch.envs.tests]
+extra-dependencies = [
+  "pytest>=8.0",
+  "pytest-cov>=4.1",
+]
+
+[tool.hatch.envs.tests.scripts]
+tests = "pytest {args:tests}"
+
+[tool.hatch.envs.docs]
+dependencies = [
+  "jupyter-book>=1.0",
+  "ipywidgets",
+]
+
+[tool.hatch.envs.docs.scripts]
+build = "jupyter-book build docs/"
+
+[tool.hatch.version]
+path = "src/marsimage/__version__.py"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.coverage.run]
+source_pkgs = ["marsimage"]
+branch = true
+parallel = true
+omit = [
+  "src/marsimage/__version__.py",
+]
+
+[tool.coverage.paths]
+marsimage = ["src/marsimage"]
+tests = ["tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+
+[tool.ruff]
+line-length = 99
+indent-width = 4
+exclude = ["src/marsimage/lib/pidng"]
+
+[tool.ruff.lint]
+select = [
+    "F",    # Pyflakes
+    "E",    # pycodestyle
+    "W",    # pycodestyle
+    "D",    # pydocstyle
+    "PL",   # Pylint
+    "I",    # isort
+    "N",    # pep8-naming
+    "C90",  # mccabe
+    "UP",   # pyupgrade
+    "S",    # flake8-bandit
+    "A",    # flake8-builtins
+    "B",    # flake8-bugbear
+    "SIM",  # flake8-simplify
+    "COM",  # flake8-commas
+    "C4",   # flake8-comprehensions
+    "T20",  # flake8-print
+    "Q",    # flake8-quotes
+    "RSE",  # flake8-raise
+    "RET",  # flake8-return
+]
+ignore = [
+  "COM812",  # ruff formatter conflict
+  "PLR0913", # too-many-arguments
+  "PLR0916", # too many boolean expressions
+  "PLR0917", # too-many-positional-arguments
+  "D105",   # Missing docstring in magic method
+  # "D102",   # Missing docstring in public method
+]
+extend-safe-fixes = [
+  "D400",    # First line should end with a period
+  "D209",    # Multi-line docstring closing quotes should be on a separate line
+]
+
+[tool.ruff.lint.pylint]
+max-public-methods = 40
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
+docstring-quotes = "double"
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*.py" = [
+    "S101",     # assert
+    "PLR2004",  # magic-value-comparison
+]

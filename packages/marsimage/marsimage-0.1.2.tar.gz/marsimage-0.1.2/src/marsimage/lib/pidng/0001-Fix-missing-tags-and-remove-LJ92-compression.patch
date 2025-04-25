@@ -1,0 +1,234 @@
+From e2f5a8da509c46ea8f85117e2a4ee27ccb60a7ce Tue Jan 21 09:08:15 2025 -0700
+From: Simeon Schmauß <simeon.schmauss@gmail.com>
+Date: Wed, 5 Feb 2025 00:00:00 +0100
+Subject: [PATCH] Fix missing tags and remove LJ92 compression
+
+---
+ src/pidng/camdefs.py | 35 +++++++++++++++--------------------
+ src/pidng/core.py    | 33 ++++++++-------------------------
+ src/pidng/defs.py    |  9 +++------
+ src/pidng/dng.py     |  4 +++-
+ 4 files changed, 29 insertions(+), 52 deletions(-)
+
+diff --git a/src/pidng/camdefs.py b/src/pidng/camdefs.py
+index 129e2e0..d794cfc 100644
+--- a/src/pidng/camdefs.py
++++ b/src/pidng/camdefs.py
+@@ -57,7 +57,7 @@ class Picamera2Camera(BaseCameraModel):
+                               [0, 1], [0, 1], [1, 1]]
+
+         color_gain_div = 10000
+-        gain_r, gain_b = self.metadata.get("ColourGains",(1.0, 1.0))
++        gain_r, gain_b = self.metadata.get("ColourGains",(color_gain_div, color_gain_div))
+         gain_matrix = np.array([[gain_r, 0, 0],
+                                 [0, 1.0, 0],
+                                 [0, 0, gain_b]])
+@@ -66,7 +66,7 @@ class Picamera2Camera(BaseCameraModel):
+         as_shot_neutral = [[color_gain_div, gain_r], [color_gain_div, color_gain_div], [color_gain_div, gain_b]]
+
+         ccm1 = list()
+-        ccm = self.metadata.get("ColourCorrectionMatrix", (1, 0, 0, 0, 1, 0, 0, 0, 1))
++        ccm = self.metadata["ColourCorrectionMatrix"]
+ 	# This maxtrix from http://www.brucelindbloom.com/index.html?Eqn_RGB_XYZ_Matrix.html
+         rgb_to_xyz = np.array([[0.4124564, 0.3575761, 0.1804375],
+ 		               [0.2126729, 0.7151522, 0.0721750],
+@@ -88,7 +88,6 @@ class Picamera2Camera(BaseCameraModel):
+         profile_embed = 3
+
+         self.orientation = 1
+-        self.cfaPattern = None
+         if "BGGR" in fmt_str:
+             self.cfaPattern = CFAPattern.BGGR
+         elif "GBRG" in fmt_str:
+@@ -107,33 +106,27 @@ class Picamera2Camera(BaseCameraModel):
+         self.tags.set(Tag.RawDataUniqueID, str(self.metadata["SensorTimestamp"]).encode("ascii"))
+         self.tags.set(Tag.ImageWidth, width)
+         self.tags.set(Tag.ImageLength, height)
++        self.tags.set(Tag.TileWidth, width)
++        self.tags.set(Tag.TileLength, height)
+         self.tags.set(Tag.Orientation, self.orientation)
++        self.tags.set(Tag.PhotometricInterpretation, PhotometricInterpretation.Color_Filter_Array)
+         self.tags.set(Tag.SamplesPerPixel, 1)
+         self.tags.set(Tag.BitsPerSample, bpp)
+-        self.tags.set(Tag.WhiteLevel, ((1 << bpp) -1) )
+-        self.tags.set(Tag.BaselineExposure, [[baseline_exp,1]])
+-        self.tags.set(Tag.Make, make)
+-        self.tags.set(Tag.Model, model)
+-        self.tags.set(Tag.ProfileName, profile_name)
+-        self.tags.set(Tag.ProfileEmbedPolicy, [profile_embed])
+-
+-        if self.cfaPattern:
+-            # For colour Bayer sensors
+-            self.tags.set(Tag.BlackLevelRepeatDim, [2,2])
+-            self.tags.set(Tag.BlackLevel, black_levels)
+-            self.tags.set(Tag.PhotometricInterpretation, PhotometricInterpretation.Color_Filter_Array)
+         self.tags.set(Tag.CFARepeatPatternDim, [2,2])
+         self.tags.set(Tag.CFAPattern, self.cfaPattern)
++        self.tags.set(Tag.BlackLevelRepeatDim, [2,2])
++        self.tags.set(Tag.BlackLevel, black_levels)
++        self.tags.set(Tag.WhiteLevel, ((1 << bpp) -1) )
+         self.tags.set(Tag.ColorMatrix1, ccm1)
+         self.tags.set(Tag.CameraCalibration1, camera_calibration)
+         self.tags.set(Tag.CameraCalibration2, camera_calibration)
+         self.tags.set(Tag.CalibrationIlluminant1, ci1)
++        self.tags.set(Tag.BaselineExposure, [[baseline_exp,1]])
+         self.tags.set(Tag.AsShotNeutral, as_shot_neutral)
+-        else:
+-            # For mono raw sensors
+-            self.tags.set(Tag.BlackLevelRepeatDim, [1,1])
+-            self.tags.set(Tag.BlackLevel, [black_levels[0]])
+-            self.tags.set(Tag.PhotometricInterpretation, PhotometricInterpretation.Linear_Raw)
++        self.tags.set(Tag.Make, make)
++        self.tags.set(Tag.Model, model)
++        self.tags.set(Tag.ProfileName, profile_name)
++        self.tags.set(Tag.ProfileEmbedPolicy, [profile_embed])
+
+ class RaspberryPiHqCamera(BaseCameraModel):
+     def __init__(self, sensor_mode : int, cfaPattern=CFAPattern.BGGR, orientation=Orientation.Horizontal) -> None:
+@@ -205,6 +198,8 @@ class RaspberryPiHqCamera(BaseCameraModel):
+
+         self.tags.set(Tag.ImageWidth, width)
+         self.tags.set(Tag.ImageLength, height)
++        self.tags.set(Tag.TileWidth, width)
++        self.tags.set(Tag.TileLength, height)
+         self.tags.set(Tag.Orientation, self.orientation)
+         self.tags.set(Tag.PhotometricInterpretation, PhotometricInterpretation.Color_Filter_Array)
+         self.tags.set(Tag.SamplesPerPixel, 1)
+diff --git a/src/pidng/core.py b/src/pidng/core.py
+index 5ec8d00..65694be 100644
+--- a/src/pidng/core.py
++++ b/src/pidng/core.py
+@@ -3,7 +3,7 @@ import os
+ import numpy as np
+ import types
+ from .dng import Tag, dngIFD, dngTag, DNG, DNGTags
+-from .defs import Compression, DNGVersion, SampleFormat
++from .defs import Compression, DNGVersion
+ from .packing import *
+ from .camdefs import BaseCameraModel
+
+@@ -15,8 +15,8 @@ class DNGBASE:
+         self.filter = None
+
+     def __data_condition__(self, data : np.ndarray)  -> None:
+-        if data.dtype != np.uint16 and data.dtype != np.float32:
+-            raise Exception("RAW Data is not in correct format. Must be uint16_t or float32_t Numpy Array. ")
++        if data.dtype != np.uint16:
++            raise Exception("RAW Data is not in correct format. Must be uint16_t Numpy Array. ")
+
+     def __tags_condition__(self, tags : DNGTags)  -> None:
+         if not tags.get(Tag.ImageWidth):
+@@ -53,20 +53,8 @@ class DNGBASE:
+
+         compression_scheme = Compression.LJ92 if compress else Compression.Uncompressed
+
+-        sample_format = SampleFormat.Uint
+-        backward_version = DNGVersion.V1_0
+-        if rawFrame.dtype == np.float32:
+-            sample_format = SampleFormat.FloatingPoint
+-            # Floating-point data requires DNG 1.4
+-            backward_version = DNGVersion.V1_4
+-            # Floating-point data has to be compressed with deflate
+         if compress:
+-                raise Exception('Compression is not supported for floating-point data')
+-
+-        if compress:
+-            from ljpegCompress import pack16tolj
+-            tile = pack16tolj(rawFrame, int(width*2),
+-                              int(length/2), bpp, 0, 0, 0, "", 6)
++            raise NotImplementedError('LJ92 compression has been removed from this version of PiDNG.')
+         else:
+             if bpp == 8:
+                 tile = rawFrame.astype('uint8').tobytes()
+@@ -76,8 +64,7 @@ class DNGBASE:
+                 tile = pack12(rawFrame).tobytes()
+             elif bpp == 14:
+                 tile = pack14(rawFrame).tobytes()
+-            else:
+-                # 16-bit integers or 32-bit floats
++            elif bpp == 16:
+                 tile = rawFrame.tobytes()
+
+         dngTemplate = DNG()
+@@ -86,16 +73,15 @@ class DNGBASE:
+         # set up the FULL IFD
+         mainIFD = dngIFD()
+         mainTagStripOffset = dngTag(
+-            Tag.StripOffsets, [0 for tile in dngTemplate.ImageDataStrips])
++            Tag.TileOffsets, [0 for tile in dngTemplate.ImageDataStrips])
+         mainIFD.tags.append(mainTagStripOffset)
+         mainIFD.tags.append(dngTag(Tag.NewSubfileType, [0]))
+-        mainIFD.tags.append(dngTag(Tag.StripByteCounts, [len(
++        mainIFD.tags.append(dngTag(Tag.TileByteCounts, [len(
+             tile) for tile in dngTemplate.ImageDataStrips]))
+         mainIFD.tags.append(dngTag(Tag.Compression, [compression_scheme]))
+         mainIFD.tags.append(dngTag(Tag.Software, "PiDNG"))
+         mainIFD.tags.append(dngTag(Tag.DNGVersion, DNGVersion.V1_4))
+-        mainIFD.tags.append(dngTag(Tag.DNGBackwardVersion, backward_version))
+-        mainIFD.tags.append(dngTag(Tag.SampleFormat, [sample_format]))
++        mainIFD.tags.append(dngTag(Tag.DNGBackwardVersion, DNGVersion.V1_0))
+
+         for tag in tags.list():
+             try:
+@@ -212,6 +198,3 @@ class PICAM2DNG(RPICAM2DNG):
+         self.tags = self.model.tags
+         self.compress = compress
+         self.path = ""
+-
+-
+-
+diff --git a/src/pidng/defs.py b/src/pidng/defs.py
+index 8b44472..008185a 100644
+--- a/src/pidng/defs.py
++++ b/src/pidng/defs.py
+@@ -42,6 +42,9 @@ class CFAPattern:
+     GBRG = [1, 2, 0, 1]
+     GRBG = [1, 0, 2, 1]
+     RGGB = [0, 1, 1, 2]
++    RGYB = [0, 1, 4, 2]
++    RGBY = [0, 1, 2, 4]
++    YBRG = [4, 2, 0, 1]
+
+ class CalibrationIlluminant:
+     Unknown = 0
+@@ -66,9 +69,3 @@ class CalibrationIlluminant:
+     D50 = 23
+     ISO_Studio_Tungsten = 24
+     Other = 255
+-
+-# DMG 1.4 allows only Uint and FloatingPoint
+-class SampleFormat:
+-    Uint = 1
+-    Int = 2
+-    FloatingPoint = 3
+diff --git a/src/pidng/dng.py b/src/pidng/dng.py
+index 5bb61d8..b80eca5 100644
+--- a/src/pidng/dng.py
++++ b/src/pidng/dng.py
+@@ -23,7 +23,6 @@ class Tag:
+     ImageWidth                  = (256,Type.Long)
+     ImageLength                 = (257,Type.Long)
+     BitsPerSample               = (258,Type.Short)
+-    SampleFormat                = (339,Type.Short)
+     Compression                 = (259,Type.Short)
+     PhotometricInterpretation   = (262,Type.Short)
+     FillOrder                   = (266,Type.Short)
+@@ -93,6 +92,8 @@ class Tag:
+     ColorMatrix2                = (50722,Type.Srational)
+     CameraCalibration1          = (50723,Type.Srational)
+     CameraCalibration2          = (50724,Type.Srational)
++    ReductionMatrix1            = (50725,Type.Srational)
++    ReductionMatrix2            = (50726,Type.Srational)
+     AnalogBalance               = (50727,Type.Rational)
+     AsShotNeutral               = (50728,Type.Rational)
+     BaselineExposure            = (50730,Type.Srational)
+@@ -131,6 +132,7 @@ class Tag:
+     FrameRate                   = (51044,Type.Srational)
+     OpcodeList1                 = (51008,Type.Undefined)
+     OpcodeList2                 = (51009,Type.Undefined)
++    OpcodeList3                 = (51022,Type.Undefined)
+     ReelName                    = (51081,Type.Ascii)
+     BaselineExposureOffset      = (51109,Type.Srational) # 1.4 Spec says rational but mentions negative values?
+     DefaultBlackRender          = (51110,Type.Long)
+--
+2.39.1

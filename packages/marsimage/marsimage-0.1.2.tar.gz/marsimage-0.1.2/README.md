@@ -1,0 +1,152 @@
+# MarsImage
+
+<img src="https://marsimage.readthedocs.io/0.1.2/_static/logo.svg" align="right" hspace="30" vspace="0" height="200" alt="MarsImage logo">
+
+[![CI status](https://gitlab.univ-nantes.fr/mars-rovers/marsimage/badges/main/pipeline.svg)](https://gitlab.univ-nantes.fr/mars-rovers/marsimage/-/pipelines/latest)
+[![Docs status](https://readthedocs.org/projects/marsimage/badge/)](https://app.readthedocs.org/projects/marsimage)
+[![Docs](https://img.shields.io/badge/docs-marsimage.readthedocs.io-orange
+)](https://marsimage.readthedocs.io)
+[![PyPI - Version](https://img.shields.io/pypi/v/marsimage.svg)](https://pypi.org/project/marsimage)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/marsimage.svg)](https://pypi.org/project/marsimage)
+
+-----
+
+MarsImage is a python package to process Mars rover images hosted on the PDS.
+
+The full documentation can be found in: [marsimage.readthedocs.io](https://marsimage.readthedocs.io)
+
+## Features
+
+- efficiently download rover images from the [NASA Planetary Data System](https://pds-imaging.jpl.nasa.gov/volumes/)
+- open PDS images and access their metadata (including rover localizations and CAHVORE camera model parsing)
+- convert PDS images to `.DNG` or `.TIFF` format with rich exif metadata
+- color calibrate rover images to approximate what the human eye would see on Mars
+- preprocess images for panorama or photogrammetry workflows
+
+## Supported Missions and instruments
+
+| Mission                 | Supported Instruments                 | Supported Product types |
+|-------------------------|---------------------------------------|-------------------------|
+| Curiosity (MSL)         | Mastcam, Mahli, Mardi, Navcam, Hazcam | `DRXX`, `RAD_`, `MXY_`  |
+| Perseverance (Mars2020) | *planned for future release*          | -                       |
+
+## Installation
+
+MarsImage is available on [PyPI](https://pypi.org/project/marsimage) (Python Package Index).
+It is recommended to install this package in a dedicated
+[virtual environment](https://realpython.com/python-virtual-environments-a-primer/),
+then install it with `pip`:
+
+```bash
+pip install marsimage
+```
+
+If you want to use this package in a [Jupyter environment](https://jupyter.org/),
+you will need some extra-dependencies:
+
+```bash
+pip install marsimage[jupyter]
+```
+
+To upgrade to the latest version simply to:
+
+```bash
+pip install --upgrade marsimage
+```
+
+## How to contribute
+
+If you want to contribute to this project, you need to install [`hatch`](https://hatch.pypa.io/latest/install/) on your system, then clone the depot and install the default env:
+
+```bash
+git clone https://gitlab.univ-nantes.fr/mars-rovers/marsimage.git
+cd marsimage
+
+# Install dev dependencies
+hatch env create
+```
+
+To lint and format the source code:
+
+```bash
+# preview the formatting changes
+hatch fmt --diff
+hatch fmt
+```
+
+To test the module:
+
+```bash
+hatch -e tests run tests
+```
+
+To build the docs:
+
+```bash
+hatch -e docs run build
+```
+
+## External libraries disclaimer
+
+This package requires a few externals dependencies:
+- `PiDNG`
+- `ExifTool`
+- `Raw Therapee`
+
+Credits, issues and change requests to these libraries should be reported to their original developers.
+
+__Note:__ Only `Raw Therapee` needs to be installed manually by the user (see below).
+
+### PiDNG
+
+This sub-module is mainly copy-pasted from [`PiDNG`](https://github.com/schoolpost/PiDNG)
+developed by [schoolpost](https://github.com/schoolpost)
+and available on [PyPI](https://pypi.org/project/pidng/).
+Here, it was patched to fix missing tags and remove `LJ92` compression library (which requires a C compiler).
+
+Details of the patch can be found in:
+[pidng/0001-Fix-missing-tags-and-remove-LJ92-compression.patch](src/marsimage/lib/pidng/0001-Fix-missing-tags-and-remove-LJ92-compression.patch)
+
+- Version patched: `4.0.9`
+- License: `MIT`
+
+### ExifTool
+
+To simplify the install for the user, [`exiftool`](https://exiftool.org/) is bundled
+with `MarsImage` and should work out-of-the box on windows, linux and macos.
+
+__Note:__ A locally installation of `perl` is required on linux and macOS.
+
+- Currently version bundled: `13.17`
+- License: `GPLv3`
+
+### Raw Therapee
+
+To allow automatic TIFF conversion of the DNG images via `MarsImage.rawtherapee_convert()`
+you will need to install Raw Therapee locally.
+The install procedure is available on [their website](https://www.rawtherapee.com/),
+then it should be automatically detected by `MarsImage`.
+
+The expected location of `rawtherapee-cli` should be :
+- `C:\Program Files\RawTherapee\X.Y\` on Windows
+- `/usr/local/bin/` on macOS (and `RawTherapee.app` in `/Applications`)
+- Anywhere in the `$PATH` on Linux
+
+If you don't install it to its default location, you can provide a `$RAWTHERAPEE_CLI`
+environment variable to specify the location of the `rawtherapee-cli` entrypoint.
+
+- Tested version: `5.11`
+- License: `GPLv3`
+
+## About this project
+
+This project was developed by [Simeon Schmauß](https://fosstodon.org/@stim3on) during his internship
+funded by [Osuna](https://osuna.univ-nantes.fr) and under the supervision of
+[Stéphane Le Mouélic](https://lpg-umr6112.fr/member/le-mouelic-stephane/) ([LPG](https://lpg-umr6112.fr))
+and [Benoît Seignovert ](https://benoit.seignovert.fr) ([Osuna](https://osuna.univ-nantes.fr)).
+It is still under active development.
+The source code is available in
+[Nantes Université Gitlab](https://gitlab.univ-nantes.fr/mars-rovers/marsimage/) and distributed under a
+[GPLv3](https://gitlab.univ-nantes.fr/mars-rovers/marsimage/-/blob/main/LICENSE.txt) public license.
+
+![Logos OSUNA / LPG / CNRS / Nantes Université](https://marsimage.readthedocs.io/0.1.2/_images/logos.png)
