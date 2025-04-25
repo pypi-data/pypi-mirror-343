@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+rollingcv/__init__.py
+rollingcv/splitter.py
+rollingcv.egg-info/PKG-INFO
+rollingcv.egg-info/SOURCES.txt
+rollingcv.egg-info/dependency_links.txt
+rollingcv.egg-info/requires.txt
+rollingcv.egg-info/top_level.txt
+tests/test_split.py
