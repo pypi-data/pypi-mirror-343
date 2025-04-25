@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: kurzaj
+Version: 0.15.0
+Summary: nuh
+Home-page: https://example.com/
+Author: meow
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: Pillow
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+lol
