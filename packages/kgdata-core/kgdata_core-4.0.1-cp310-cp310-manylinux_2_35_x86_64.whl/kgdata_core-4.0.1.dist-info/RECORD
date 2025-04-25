@@ -1,0 +1,10 @@
+kgdata_core-4.0.1.dist-info/METADATA,sha256=kAUrKGDeO81S8d6LJJ4YMwzgvfrrtdPrT4jrVBD9gtY,1687
+kgdata_core-4.0.1.dist-info/WHEEL,sha256=88omrpIEex5GE7bUPlwcgYOj5mlIvWeG0soPxlA33zc,108
+kgdata_core-4.0.1.dist-info/licenses/LICENSE,sha256=brmJ1GyPsyFm-KQo59ncA1Bd9lrhzsO7-l9ap6TZ1_0,1064
+kgdata_core/__init__.pyi,sha256=1aMpuLk_Yv_80POJaiZdAsVO_DDm3SlQMfmQBnY2Joo,27
+kgdata_core/__init__.py,sha256=4c7kEGaZ-SYhjdDKEb_42pE0Ob3QmYSpmhiH4zagppU,52
+kgdata_core/base.pyi,sha256=-grSpM_ITB6srZlSfnSDACgJH_5OZTu-luXbJRbHqP0,1385
+kgdata_core/models.pyi,sha256=lyA7TnqoBypSseibk54Ba18bRGFUPLbPEJKSspMXxnI,6044
+kgdata_core/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kgdata_core/kgdata_core.cpython-310-x86_64-linux-gnu.so,sha256=dUTut8Nr0oZ03_7MEuWvyskIg3ZfkeBBfzkzNVMNIpM,8924880
+kgdata_core-4.0.1.dist-info/RECORD,,
