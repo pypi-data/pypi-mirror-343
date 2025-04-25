@@ -1,0 +1,11 @@
+hdl_block_design/__init__.py,sha256=xkTCdttieFSV3QZQ-izCfSpNOPXhL1-uznGd-u8Lvas,390
+hdl_block_design/_block.py,sha256=AnsgAHvOvubT18H7BpvGFsr539slF-DqVLmrDNFLhYc,6603
+hdl_block_design/_cli.py,sha256=-bEe2yQVW1ofmUp0xQf3gp5U6aNo5NFUk-d_X4kE32o,8370
+hdl_block_design/_yamllable.py,sha256=437XuiDVaXzqve7l9LnHK93dg2l2sjp-PeO_tEBuFEg,2059
+hdl_block_design/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hdl_block_design/vhdl.py,sha256=vAw4py7r32WJI2Noos5mvOFFUBra7k6lnzotgSrp0v8,1161
+hdl_block_design-0.2.0.dist-info/METADATA,sha256=VpBiVY94ypUsMqTVMJ_ZHYUN8clVSIYs57_Sqj0bOfw,3007
+hdl_block_design-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hdl_block_design-0.2.0.dist-info/entry_points.txt,sha256=JxkeGt-1PZ3Hs2BW63FYk0UiQHYrtDl5cJ7tcjCirRw,50
+hdl_block_design-0.2.0.dist-info/licenses/LICENSE,sha256=VTwNQkxTekEX6ZLDR3HHzylyVTTp7TY5zAZ90zmYDNg,1077
+hdl_block_design-0.2.0.dist-info/RECORD,,

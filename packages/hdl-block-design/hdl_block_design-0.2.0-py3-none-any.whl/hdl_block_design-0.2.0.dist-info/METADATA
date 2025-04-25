@@ -1,0 +1,65 @@
+Metadata-Version: 2.4
+Name: hdl-block-design
+Version: 0.2.0
+Summary: A library to represent and manipulate HDL block designs in python
+Project-URL: Repository, https://gitlab.com/dawalters/hdl-block-design
+Author: Dominic Adam Walters
+License-Expression: MIT
+License-File: LICENSE
+Keywords: block,design,hdl,vhdl
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.12
+Requires-Dist: cyclopts==3.13.0
+Requires-Dist: pyyaml==6.0.2
+Requires-Dist: tree-sitter-vhdl==1.2.5
+Requires-Dist: tree-sitter==0.24.0
+Provides-Extra: dev
+Requires-Dist: coverage==7.8.0; extra == 'dev'
+Requires-Dist: enum-tools[sphinx]==0.13.0; extra == 'dev'
+Requires-Dist: hatch==1.14.1; extra == 'dev'
+Requires-Dist: mypy==1.15.0; extra == 'dev'
+Requires-Dist: pre-commit==4.2.0; extra == 'dev'
+Requires-Dist: pytest-cov==6.1.1; extra == 'dev'
+Requires-Dist: pytest-sugar==1.0.0; extra == 'dev'
+Requires-Dist: pytest-xdist==3.6.1; extra == 'dev'
+Requires-Dist: pytest==8.3.5; extra == 'dev'
+Requires-Dist: ruff==0.11.4; extra == 'dev'
+Requires-Dist: sphinx-autobuild==2024.10.3; extra == 'dev'
+Requires-Dist: sphinx-copybutton==0.5.2; extra == 'dev'
+Requires-Dist: sphinx-last-updated-by-git==0.3.8; extra == 'dev'
+Requires-Dist: sphinx-notfound-page==1.1.0; extra == 'dev'
+Requires-Dist: sphinx-pyproject==0.3.0; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme==3.0.2; extra == 'dev'
+Requires-Dist: sphinx==8.2.3; extra == 'dev'
+Requires-Dist: types-pyyaml==6.0.12.20250402; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# HDL Block Design
+
+[![PyPI - Version](https://img.shields.io/pypi/v/hdl-block-design)](https://pypi.org/project/hdl-block-design)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/hdl-block-design)](https://pypistats.org/packages/hdl-block-design)
+[![GitLab Release](https://img.shields.io/gitlab/v/release/dawalters%2Fhdl-block-design)](https://gitlab.com/dawalters/hdl-block-design/-/releases)
+[![Read the Docs](https://img.shields.io/readthedocs/hdl-block-design)](https://hdl-block-design.readthedocs.io/en/latest/)
+[![Codecov (with branch)](https://img.shields.io/codecov/c/gitlab/dawalters/hdl-block-design/develop)](https://app.codecov.io/gitlab/dawalters/hdl-block-design)
+[![Gitlab Pipeline Status](https://img.shields.io/gitlab/pipeline-status/dawalters%2Fhdl-block-design?branch=develop)](https://gitlab.com/dawalters/hdl-block-design/-/pipelines?page=1&scope=all&ref=develop)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://pre-commit.com/)
+
+A library to represent and manipulate Hardware Description Language (HDL) block
+designs in Python.
+
+## Installation
+
+```bash
+pip install hdl-block-design
+```
+
+## Usage
+
+The `hbd` command-line tool allows you to test the capabilities of the library.
+
+## Documentation
+
+[ReadTheDocs](https://hdl-block-design.readthedocs.io/en/latest/).
