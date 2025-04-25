@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_ai_case_trar.py
+tests/test_decorator.py
+tests/test_wrapper.py
+ucuu/__init__.py
+ucuu/decorator.py
+ucuu/log.py
+ucuu.egg-info/PKG-INFO
+ucuu.egg-info/SOURCES.txt
+ucuu.egg-info/dependency_links.txt
+ucuu.egg-info/requires.txt
+ucuu.egg-info/top_level.txt

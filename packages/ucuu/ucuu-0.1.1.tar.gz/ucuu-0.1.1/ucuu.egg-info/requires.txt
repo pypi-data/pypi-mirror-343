@@ -1,0 +1,9 @@
+rich>=14.0.0
+black>=24.0.0
+
+[docs]
+ghp-import>=2.1.0
+
+[publish]
+build>=1.0.0
+twine>=4.0.0
