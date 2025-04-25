@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: h3110w0r1d
+Version: 0.1.2
+Summary: A simple HelloWorld Python package.
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+# Example to use
+import h3110w0r1d as hw
+hw.hello()
