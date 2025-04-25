@@ -1,0 +1,8 @@
+pypi2aur/__init__.py,sha256=oPdFonXioZD2omB80o673TwA6WB0IYdWWpHReg8yWTg,122
+pypi2aur/click.py,sha256=NtGxd3USEAJJ_C42jdZIoapq8sCc3AxfA6GlXMEjhlY,1170
+pypi2aur/kernel.py,sha256=JwNMK4dPWposMD6xRwa0b9tJHy2eaVfbv2fES6M7Qow,10525
+pypi2aur-0.1.7.dist-info/METADATA,sha256=z28CeqfkT2XYPeXJ2sIDKT2WEWkuXKbNsjCOKMJFD1s,2994
+pypi2aur-0.1.7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pypi2aur-0.1.7.dist-info/entry_points.txt,sha256=_P6lgq1vU8MYS5yF3CB9AGezor4sk8lLTmAVRqLrBNE,43
+pypi2aur-0.1.7.dist-info/licenses/LICENSE,sha256=hzatDUY2y22rrj6X6ZwI9cDAi4xFHx1Imymg1jvr8HQ,1076
+pypi2aur-0.1.7.dist-info/RECORD,,
