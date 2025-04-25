@@ -1,0 +1,19 @@
+ml/All Classifications.py,sha256=7hP3EsYTHwuIPWqU6NArh7g-xkali70joqjkF92KFMA,2861
+ml/EDA_Electricity.py,sha256=nWWF_NLsLHc3m8JYUEvZaSOAxduGzfuhi2hyMXK7G2c,1893
+ml/Ensemble Learning.py,sha256=24LznsoiKoKkXDShUP1pSxNJA7mrmkIpGGiGmIydRCo,2663
+ml/HyperParams.py,sha256=prediHqXvmvMIsu3cvXzwR1P0-Rn_8djEUsVpQ4YXms,11560
+ml/K_Means.py,sha256=Mi3CVYkOaGnEQDVe_aeSlcOXHgGJTVe-sr6qbjfavc0,1744
+ml/Linear.py,sha256=SQxAfk6IQ9co2-ZFhRPj5DNPraYIEGwM2BVRmct0C2M,2205
+ml/Logistic.py,sha256=BqUJYM0P4X6EeEm3FixRU4-HvFqTvXTvMWfXHaH7HS8,2503
+ml/NaiveBayes.py,sha256=8-TQwaH9SpOni9xRBvE8D0vD4nLKBRDlI2pDLyx-Y2M,4423
+ml/SLP and MLP.py,sha256=5qpn60TH3p5nsjafUcDnxFzEfx0b2oDFlfDJsWBObzM,3260
+ml/SVM & KNN.py,sha256=NedY7hE5U_T4vxSuIMdSsJAKCDSZBFVQuQcJ0m0Yceg,3102
+ml/UG_Linear_regression.py,sha256=g4DR3_SvyuSiM3T9VXnHELpEJQjub7XsrhCNUviivlg,3252
+ml/__init__.py,sha256=7JWVt7Yl2sOtPC4Fny2H64a03GdsLPN68mCWsZXsz4w,23
+ml/decision_tree.py,sha256=SN-B8Hgofdo0LoBaQ_OMDb8PbZ6kmFV3n0qgXNgVee4,1729
+ml/image_audio.py,sha256=a9TXXO8gsAkiNwo2yu_Cp58MhwtNqo9VuwlaC8tQYsQ,19354
+ml/pract.py,sha256=32Wa7y9tmohVayJuz7ZVtqGB1ilNH_wPvmURWGnjAgo,1464
+optimizor-0.1.0.dist-info/METADATA,sha256=j2aQ87jhfc4Ys9IW-gyXZXqW6ikhGQb-H3LeZvsiTs4,155
+optimizor-0.1.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+optimizor-0.1.0.dist-info/top_level.txt,sha256=_vaXyYKginl-vpzs5avsdyABxjy-K0_KyvBr9RDpjIc,3
+optimizor-0.1.0.dist-info/RECORD,,

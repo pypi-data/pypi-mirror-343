@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: optimizor
+Version: 0.1.0
+Summary: ML notebook conversions as a Python package
+Author: Your Name
+Requires-Python: >=3.6
+
