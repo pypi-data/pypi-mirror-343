@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: llamafirewall
+Version: 0.0.2
+Summary: Coming soon
+Author-email: Coming soon <coming@soon.com>
+License-File: LICENSE
+Requires-Dist: codeshield
+Requires-Dist: huggingface-hub
+Requires-Dist: openai
+Requires-Dist: pydantic
+Requires-Dist: torch
+Requires-Dist: transformers
