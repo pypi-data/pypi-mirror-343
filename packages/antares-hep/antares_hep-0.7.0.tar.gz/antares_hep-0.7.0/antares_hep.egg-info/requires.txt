@@ -1,0 +1,6 @@
+lips>=0.5.0
+multiset
+pandas
+pyadic>=0.2.4
+pyyaml
+syngular>=0.5.0
