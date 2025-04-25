@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: dspy-qdrant
+Version: 0.1.1
+Summary: Qdrant retriever for DSPy
+Author-email: Anush008 <anushshetty90@gmail.com>
+Requires-Python: >=3.11
+Requires-Dist: dspy
+Requires-Dist: qdrant-client>=1.14.2

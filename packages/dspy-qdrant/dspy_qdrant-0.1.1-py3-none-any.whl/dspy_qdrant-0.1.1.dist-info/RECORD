@@ -1,0 +1,6 @@
+dspy_qdrant/__init__.py,sha256=dqeGE5TrI-zuGmzGj-g0hBA-AdIGJTmzMHKwDWpx-g4,55
+dspy_qdrant/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dspy_qdrant/qdrant_rm.py,sha256=K5vsWH2v1zMp2aGhpJ9pDT3tCTqTyagZcCAIDnkBBK8,7568
+dspy_qdrant-0.1.1.dist-info/METADATA,sha256=ygyMQM7JZiTv90C4NaTwCIqW5W5DjbW6Cgu7V2HMS3s,220
+dspy_qdrant-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dspy_qdrant-0.1.1.dist-info/RECORD,,
