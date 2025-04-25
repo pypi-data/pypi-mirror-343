@@ -1,0 +1,6 @@
+{% extends "admin_extra_buttons/action_page.html" %}{% load i18n %}
+{% block action-content %}
+    <ul id="group-members">{% for user in members %}
+        <li><a href="{% url 'admin:auth_user_change' user.pk %}">{{ user.username }}</a></li>{% endfor %}
+    </ul>
+{% endblock %}

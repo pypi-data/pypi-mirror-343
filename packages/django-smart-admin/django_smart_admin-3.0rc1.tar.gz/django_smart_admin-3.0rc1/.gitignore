@@ -1,0 +1,17 @@
+.*
+~*
+*.xml
+*.egg-info
+dist
+poetry.lock
+/latest_logs
+/downloaded_files
+build
+!.github
+!.gitignore
+!.pre-commit-config.yaml
+!tests/.coveragerc
+src/smart_admin/version.py
+smart_admin.db
+__pycache__
+/manage.py
