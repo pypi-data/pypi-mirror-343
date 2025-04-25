@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scrapbooking-cli"
+version = "1.0.2"
+requires-python = ">=3.9.0"
+dependencies = ["PyYAML == 6.0.2"]
+description = "Logging and journaling from the terminal"
+authors = [
+    {name = "velvetSymphony", email = "abhishek@achandrasekar.com"},
+    ]
+
+maintainers = [
+    {name = "velvetSymphony", email = "abhishek@achandrasekar.com"},
+]
+
+license = {file = "LICENSE"}
+readme = {file = "README.md", content-type = "text/markdown"}
+
+[project.scripts]
+sb = "src.scrapbook.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[project.urls]
+"Homepage" = "https://github.com/velvetSymphony/scrapbook"
