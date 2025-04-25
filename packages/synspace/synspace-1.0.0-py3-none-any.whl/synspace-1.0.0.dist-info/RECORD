@@ -1,0 +1,16 @@
+synspace/__init__.py,sha256=J1GdU9INFAW7dgCDThF3By4AWlBMu0agTftLJ9t8Clw,130
+synspace/data.py,sha256=ySTNgnReGel8n7JMnL_1Yd96WD5s5-dk8J6lobJ0SFI,2259
+synspace/draw.py,sha256=qj9_W8qjQQD3Wqbcx4oBPiooeWNE7wlkxPXlFOtMg3E,561
+synspace/synspace.py,sha256=Pl70oIM24ly37jbKIXcG2u2nifiUItEbTsApaYuTYIo,6177
+synspace/utils.py,sha256=WvfGj-ZTLBdKb_xBEDpfdrqeP1nUmg5T_P9WhFk6BwY,5287
+synspace/version.py,sha256=ZhzQKWZ8RFrTIkj7z87B144DI95e8LMfA5w8NDWQDtg,23
+synspace/reos/__init__.py,sha256=b4Pf5uZCd2T1i3HzF5iLHUNFs9GE48wYB8Ej7NCv53s,5845
+synspace/reos/data/alert_collection.csv,sha256=kvKSMiuU4VC7tY9nJtA0t9vz_Tqn-HMRAoy5ynNvg38,116948
+synspace/rxn_data/blocks.pk.bz2,sha256=CYSFYg_EzhZhuBoDq-AafZY4fI02_k-ieXqxEp4JvNA,2671984
+synspace/rxn_data/rxns.json,sha256=kiLAgGdLJi5qu8Bdo3WM4JMZLeBKl2N62ZIWcPTTILI,8662
+synspace-1.0.0.dist-info/licenses/LICENSE,sha256=HshyiRa0wzxxYNTffnRoLrJFVMlPa0Ck0onGKPZ2Q7Q,1069
+synspace-1.0.0.dist-info/licenses/NOTICE.txt,sha256=QYuJJXMhco-a5eUZPJbqacL7KYKK8Phb1OJrWOJwds4,189
+synspace-1.0.0.dist-info/METADATA,sha256=jQOXA6D9cqGWfrJ_AuqTxOx0O0bid9vcmk1VF3JF6cU,2701
+synspace-1.0.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+synspace-1.0.0.dist-info/top_level.txt,sha256=-Y1ECBUCsmrGko9Nyryeke59t60OccTRCQBRhg6JO6I,23
+synspace-1.0.0.dist-info/RECORD,,
