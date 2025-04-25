@@ -1,0 +1,17 @@
+fyodorov_llm_agents/base_model.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fyodorov_llm_agents/agents/agent_model.py,sha256=rsBjOHDHLq5S4Sv8KZDQqAT_1903UFT0_-ASH9WGzsg,6841
+fyodorov_llm_agents/agents/agent_service.py,sha256=qm3oGtgrbTV3LfmVYTIrZDs4GwmghdRAxxb3gkrS2i4,6553
+fyodorov_llm_agents/agents/openai.py,sha256=FA5RS7yn3JwvFA8PXju60XSYC_2oUZFNgBUzeIYtGv0,1154
+fyodorov_llm_agents/instances/instance_model.py,sha256=Kdte858w9AtjgJHtYtuHO2D0pNg186JZZLCWZQPG4D0,1206
+fyodorov_llm_agents/instances/instance_service.py,sha256=ssCBa2NqDw8sbreKozKMKsrIO4ZC9M_MEbFoSFyr9jY,8968
+fyodorov_llm_agents/models/llm_model.py,sha256=9m2vP3OESsGjc8yj9idYReuCA1jU0g-boAML_9J1loo,1872
+fyodorov_llm_agents/models/llm_service.py,sha256=L_YxZIotlPea0ymUfYXY24rdnCuZdOZEMTDrh8J_BAM,4562
+fyodorov_llm_agents/providers/provider_model.py,sha256=i9aqtuMUERng54hOYTArt4aq0uU4b2wyCZCfJ39RbEI,957
+fyodorov_llm_agents/providers/provider_service.py,sha256=pvb43ZdF8zFzgP2GELCSE8rDxjjsYe-s0RlcTa8vWIE,6588
+fyodorov_llm_agents/tools/mcp_tool_model.py,sha256=JM4XItd9TEprDd7Xuz4hCYcPMRL2LVdJ3Fh7CoMug3A,5110
+fyodorov_llm_agents/tools/mcp_tool_service.py,sha256=nOWeCXFP8t7pbFL4Co70c7ukEEl-TQbb1pnPHlG5Tac,7677
+fyodorov_llm_agents/tools/tool.py,sha256=HyOk0X_3XE23sa8J-8UZx657tJ0sxwZWMbA4OPxXU6E,7940
+fyodorov_llm_agents-0.4.20.dist-info/METADATA,sha256=uhcFx1426syOAGuhELRGbm1Ehm5fcJhrlUWOZyAHAeA,551
+fyodorov_llm_agents-0.4.20.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+fyodorov_llm_agents-0.4.20.dist-info/top_level.txt,sha256=4QOslsBp8Gh7ng25DceA7fHp4KguTIdAxwURz97gH-g,20
+fyodorov_llm_agents-0.4.20.dist-info/RECORD,,
