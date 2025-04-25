@@ -1,0 +1,12 @@
+py_pkpass/__init__.py,sha256=C8nyPP5-54GgYCcP38Lbel_pRimOW-Ra4bw6Vzp2lmE,21
+py_pkpass/models.py,sha256=aCYA8k1Gfb5-fAJ-VWvMYYFdvmrlRsdSG8188jCUYVM,15571
+py_pkpass/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py_pkpass/test/test_advanced_features.py,sha256=apOVXvtMfY9nwEfEt2TobUwFpKdkSxIvtG2e2DhsiKc,8261
+py_pkpass/test/test_pass_types.py,sha256=xKNOMTS0L2uZe1WMFn9qa2NbL9BginjI4ikVK2Lza5A,11617
+py_pkpass/test/test_passbook.py,sha256=fzFp_u9R2J0XbxaBxDzqtBrxEFvsKQ6kkFUhmhgboGE,8213
+py_pkpass/test/test_signature.py,sha256=0vP4FiEw2PFTXNoq4q5yNhZCNytMl4pBsBI_8fU8S-8,6265
+py_pkpass-1.0.2.dist-info/licenses/LICENSE.txt,sha256=r5w0oSSmMMGgdSuItV70dNgrher4Xj_dIp-mDYRGEgs,1075
+py_pkpass-1.0.2.dist-info/METADATA,sha256=ksMwHbt99TcdHXs367NGvqRPZJ-VfkVclZ8aXnszT7k,6183
+py_pkpass-1.0.2.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+py_pkpass-1.0.2.dist-info/top_level.txt,sha256=mkMgF8oEpP0zljuz8IQgVMCoKCQlGiNjc16bIWVk9l0,10
+py_pkpass-1.0.2.dist-info/RECORD,,
