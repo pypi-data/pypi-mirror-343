@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: naturaldsl
+Version: 0.1.0
+Summary: A human-first natural language programming language for data science
+Author-email: Your Name <your.email@example.com>
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: lark
+
+# NaturalDSL
+
+NaturalDSL is a natural-language-inspired programming language for data science. Write commands like:
+
