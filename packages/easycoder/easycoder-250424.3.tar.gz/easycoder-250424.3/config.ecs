@@ -1,0 +1,378 @@
+!   config.ecs
+
+    script Configurator
+
+    use graphics
+
+    window Window
+    window Dialog
+    layout MainPanel
+    layout LeftPanel
+    layout RightPanel
+    layout DeviceHPanel
+    layout OuterLayout
+    layout Layout
+    layout VLayout
+    layout HLayout
+    groupbox Group
+    label Label
+    label MasterDeviceLabel
+    label RelayStateLabel
+    label StatusLabel
+    pushbutton ResetConfigButton
+    pushbutton ScanNetworkButton
+    pushbutton SelectMasterButton
+    pushbutton SelectSlaveButton
+    pushbutton DeleteSlaveButton
+    pushbutton UpdateSlaveButton
+    pushbutton DeleteFileButton
+    pushbutton ExitButton
+    pushbutton ScanSystemsButton
+    pushbutton RemoveSystemButton
+    pushbutton SaveHostButton
+    pushbutton RelayOffButton
+    pushbutton RelayOnButton
+    pushbutton SaveWidgetDataButton
+    pushbutton SelectHostButton
+    pushbutton OKButton
+    pushbutton CancelButton
+    lineinput LineInput
+    lineinput SSIDInput
+    lineinput PasswordInput
+    lineinput DeviceNameInput
+    lineinput ChannelInput
+    lineinput LEDPinInput
+    lineinput RelayPinInput
+    lineinput DHT22PinInput
+    lineinput PathInput
+    listbox SlaveList
+    combobox SystemsCombo
+    checkbox LEDInvertCheckbox
+    checkbox RelayInvertCheckbox
+    messagebox MessageBox
+
+!    debug step
+
+    log `Starting`
+    init graphics
+    create MainPanel type QHBoxLayout
+
+    ! Do the left-hand panel
+
+    create LeftPanel type QVBoxLayout
+    add LeftPanel to MainPanel
+    create ResetConfigButton text `Reset config`
+    on click ResetConfigButton go to ResetConfigFile
+    add ResetConfigButton to LeftPanel
+
+    create ScanNetworkButton text `Scan network`
+    on click ScanNetworkButton go to ScanNetwork
+    add ScanNetworkButton to LeftPanel
+
+    create SelectMasterButton text `Select master`
+    on click SelectMasterButton go to SelectMaster
+    add SelectMasterButton to LeftPanel
+
+    create SelectSlaveButton text `Select slave`
+    on click SelectSlaveButton go to SelectSlave
+    add SelectSlaveButton to LeftPanel
+
+    create UpdateSlaveButton text `Update slave`
+    on click UpdateSlaveButton go to UpdateSlave
+    add UpdateSlaveButton to LeftPanel
+
+    create DeleteFileButton text `Delete file`
+    add DeleteFileButton to LeftPanel
+    on click DeleteFileButton go to DeleteFile
+
+    create DeleteSlaveButton text `Delete slave`
+    add DeleteSlaveButton to LeftPanel
+    on click DeleteSlaveButton go to DeleteSlave
+
+    add stretch to LeftPanel
+
+    create ExitButton text `Exit`
+    add ExitButton to LeftPanel
+    on click ExitButton go to Exit
+
+    ! Now do the right-hand panel
+
+    create RightPanel type QVBoxLayout
+    add stretch RightPanel to MainPanel
+
+    ! Create the system name group
+    create Group title `Systems`
+    set the height of Group to 50
+    add Group to RightPanel
+    create Layout type QHBoxLayout
+    add Layout to Group
+    create SystemsCombo
+    add stretch SystemsCombo to Layout
+    create ScanSystemsButton text `Scan`
+    on click ScanSystemsButton go to ScanSystems
+    add ScanSystemsButton to Layout
+    create RemoveSystemButton text `Remove`
+    disable RemoveSystemButton
+    on click RemoveSystemButton go to RemoveSystem
+    add RemoveSystemButton to Layout
+    
+    ! Create the host access group
+    create Group title `Host`
+    set the height of Group to 50
+    add Group to RightPanel
+    create Layout type QHBoxLayout
+    add Layout to Group
+    create Label text `SSID:`
+    add Label to Layout
+    create SSIDInput size 40
+    add SSIDInput to Layout
+    create Label text `Password:`
+    add Label to Layout
+    create PasswordInput size 40
+    add PasswordInput to Layout
+    create SaveHostButton text `Save`
+    on click SaveHostButton go to SaveHostInfo
+    add SaveHostButton to Layout
+    
+    ! Create the Master Device group
+    create Group title `Master device`
+    set the height of Group to 50
+    add Group to RightPanel
+    create Layout type QHBoxLayout
+    add Layout to Group
+    create MasterDeviceLabel text `(none)`
+    add MasterDeviceLabel to Layout
+    
+    ! Create the Slave Devices group
+    create Group title `Slave devices`
+    set the height of Group to 150
+    add Group to RightPanel
+    create Layout type QHBoxLayout
+    add Layout to Group
+    create SlaveList
+    add SlaveList to Layout
+
+    ! Create the Selected Devices group
+    create Group title `Selected device`
+    set the height of Group to 150
+    add Group to RightPanel
+
+    create DeviceHPanel type QHBoxLayout
+    add DeviceHPanel to Group
+
+    create OuterLayout type QVBoxLayout
+    add OuterLayout to DeviceHPanel
+
+    create Layout type QHBoxLayout
+    add Layout to OuterLayout
+    create Label text `Name:`
+    add Label to Layout
+    create DeviceNameInput size 40
+    add DeviceNameInput to Layout
+    create Label text `Channel:`
+    add Label to Layout
+    create ChannelInput size 5
+    add ChannelInput to Layout
+    add stretch to Layout
+    
+    create Layout type QHBoxLayout
+    add Layout to OuterLayout
+    create Label text `LED Pin:`
+    add Label to Layout
+    create LEDPinInput size 5
+    add LEDPinInput to Layout
+    create LEDInvertCheckbox text `Inverted`
+    add LEDInvertCheckbox to Layout
+    add stretch to Layout
+    
+    create Layout type QHBoxLayout
+    add Layout to OuterLayout
+    create Label text `Relay Pin:`
+    add Label to Layout
+    create RelayPinInput size 5
+    add RelayPinInput to Layout
+    create RelayInvertCheckbox text `Inverted`
+    add RelayInvertCheckbox to Layout
+    create RelayOffButton size 5 text `-`
+    on click RelayOffButton go to RelayOff
+    add RelayOffButton to Layout
+    create RelayOnButton size 5 text `+`
+    on click RelayOnButton go to RelayOn
+    add RelayOnButton to Layout
+    create RelayStateLabel size 5 text `???`
+    add RelayStateLabel to Layout
+    add stretch to Layout
+    
+    create Layout type QHBoxLayout
+    add Layout to OuterLayout
+    create Label text `DHT22 Pin:`
+    add Label to Layout
+    create DHT22PinInput size 5
+    add DHT22PinInput to Layout
+    add stretch to Layout
+    
+    create Layout type QHBoxLayout
+    add Layout to OuterLayout
+    create Label text `Path:`
+    add Label to Layout
+    create PathInput size 60
+    add PathInput to Layout
+    add stretch to Layout
+
+    ! The 'Save' button
+    create Layout type QVBoxLayout
+    add Layout to DeviceHPanel
+    create SaveWidgetDataButton text `Save`
+    on click SaveWidgetDataButton go to SaveWidgetData
+    add SaveWidgetDataButton to Layout
+
+    create StatusLabel text `<font color="#008000">OK</font>`
+    add StatusLabel to RightPanel
+    
+    add stretch to RightPanel
+
+    create Window title `RBR-Now configurator` size 700 500 layout MainPanel
+    show Window
+
+    start graphics
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+    variable Config
+    variable Name
+    variable Value
+    variable ReturnValue
+    variable Title
+    variable Result
+
+LoadConfigFile:
+    log `Load the config file`
+    load Config from `~/.rbr.conf`
+    if Config is empty put json `{}` into Config
+    stop
+
+ResetConfigFile:
+    log `Reset the configuration file`
+    put json `{}` into Config
+    stop
+
+ScanNetwork:
+    log `Scan the network`
+    stop
+
+SelectMaster:
+    log `Select the master device`
+    stop
+
+SelectSlave:
+    log `Select a slave device`
+    stop
+
+UpdateSlave:
+    log `Update the files om the selected device`
+    stop
+
+DeleteFile:
+    log `Delete a file on the selected device`
+    stop
+
+DeleteSlave:
+    log `Delete the selected slave device`
+    stop
+
+Exit:
+    log `Exit the configurator`
+    close Window
+    exit
+
+ScanSystems:
+    log `Scan systems`
+    if Config does not have property `host-ssid`
+    begin
+        put `Enter host SSID` into Title
+        gosub to GetRequestedText
+        if Result is `OK` set property `host-ssid` of Config to ReturnValue
+        if Config does not have property `host-password`
+        begin
+            put `Enter host password` into Title
+            gosub to GetRequestedText
+            if Result is `OK` set property `host-password` of Config to ReturnValue
+        end
+    end
+    log Config
+!    create Dialog title `Select a system`
+!    show Layout in Dialog
+    stop
+
+RemoveSystem:
+    put SystemsCombo into Name
+    log `Remove ` cat Name cat `?`
+    create MessageBox on Window
+        style question
+        title `Remove system`
+        message `Are you sure you want to remove ` cat Name cat `?`
+    show MessageBox giving Value
+    if Value is `Yes` remove current item from SystemsCombo
+    if the count of SystemsCombo is 0 disable RemoveSystemButton
+    stop
+
+SaveHostInfo:
+    log `Save the host information`
+    stop
+
+SaveWidgetData:
+    log `Save the widget data`
+    stop
+
+RelayOff:
+    log `Turn the relay OFF`
+    stop
+
+RelayOn:
+    log `Turn the relay ON`
+    stop
+
+!   Get requested text
+GetRequestedText:
+    create VLayout type QVBoxLayout
+    create HLayout type QHBoxLayout
+    add HLayout to VLayout
+    create LineInput size 40
+    add stretch LineInput to HLayout
+    create HLayout type QHBoxLayout
+    add HLayout to VLayout
+    create OKButton text `OK` size 6
+    on click OKButton
+    begin
+        put LineInput into ReturnValue
+        put `OK` into Result
+        close Dialog
+        return
+    end
+    add OKButton to HLayout
+    create CancelButton text `Cancel` size 6
+    on click CancelButton
+    begin
+        put `Cancel` into Result
+        close Dialog
+        return
+    end
+    add CancelButton to HLayout
+    create Dialog title Title layout VLayout size 300 80
+    center Dialog on Window
+    show Dialog
+    stop
+
+SelectSystemFromList:
+    create Layout type QVBoxLayout
+    create SelectHostButton text `Select`
+    on click SelectHostButton
+    begin
+        log `Select Host SSID`
+        close Dialog
+    end
+    add stretch to Layout
+    add SelectHostButton to Layout
+    create Dialog title `Host SSID` layout Layout
+    show Dialog
+    return
