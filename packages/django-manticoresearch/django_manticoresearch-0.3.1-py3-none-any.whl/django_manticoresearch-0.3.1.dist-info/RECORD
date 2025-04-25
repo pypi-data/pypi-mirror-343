@@ -1,0 +1,15 @@
+django_manticoresearch/__init__.py,sha256=be5HFtj7Unp_5OsCGcMt88Zc-WRpt6YQyhgl0F8RhNM,503
+django_manticoresearch/apps.py,sha256=XS7U06N7vZOVBT6Ydm6FIgyZJj5dtZax7ULiGbh-hhM,2274
+django_manticoresearch/connection.py,sha256=by65wo0uu8ZtN0WjZ_gof-EEl-MMKe1Kcg2YtS-k9Y4,3367
+django_manticoresearch/fields.py,sha256=q6JDn7RJ6PyM3sV86JOz8DmNM8qH06pTWHuJgLV-dac,8032
+django_manticoresearch/indexes.py,sha256=4_S14QWvbeZzJVlF0V-srXSh9VdW2y33CtrQpkodOUA,15207
+django_manticoresearch/registry.py,sha256=Xh5exnkOdKfbR_sA5HAG9yrJo7jKZoN1YeXSRikSI20,4285
+django_manticoresearch/signals.py,sha256=e23BAHnzqO6IzhMMXIdw6od9cZ1IE9bHzbVrBOL6q7Y,2436
+django_manticoresearch/management/__init__.py,sha256=ZlrfPK3iJOpJXvSdvQ66mEXzp0V8_pPUHkFUL3mP0DQ,52
+django_manticoresearch/management/commands/__init__.py,sha256=q2MXKthRpk26rhPqWHJr-kCriQiGZvnpsn8cknhK360,54
+django_manticoresearch/management/commands/indexing.py,sha256=sQA4SEWqPgZQApFaj4nZ6EakeiIM0_xJu6d3i4s37CI,2556
+django_manticoresearch-0.3.1.dist-info/licenses/LICENSE,sha256=Bn-fvW5bJMwazOrI9hGXDwIMgpt3fHugS9iscK-ezkE,1079
+django_manticoresearch-0.3.1.dist-info/METADATA,sha256=CmO3oW6VgCtVHNFXQEWkdGhvhdh7j7ZQz4bNQQd7HS8,5220
+django_manticoresearch-0.3.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+django_manticoresearch-0.3.1.dist-info/top_level.txt,sha256=pyPc2gFNUrEr04XnuFnBdB27NOcDQOnj3oSryzUxj9s,23
+django_manticoresearch-0.3.1.dist-info/RECORD,,
