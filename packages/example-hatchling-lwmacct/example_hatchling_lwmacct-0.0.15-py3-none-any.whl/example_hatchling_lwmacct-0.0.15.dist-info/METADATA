@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: example_hatchling_lwmacct
+Version: 0.0.15
+Summary: A small example package
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Author-email: lwmacct <lwmacct@icloud.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# Overview
+- https://github.com/lwmacct/250425-py-build-hatchling
