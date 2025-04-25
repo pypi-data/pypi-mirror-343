@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+rtacpy/__init__.py
+rtacpy/calc_rta_n.py
+rtacpy/calc_rtac_n.py
+rtacpy/independence_test.py
+rtacpy.egg-info/PKG-INFO
+rtacpy.egg-info/SOURCES.txt
+rtacpy.egg-info/dependency_links.txt
+rtacpy.egg-info/requires.txt
+rtacpy.egg-info/top_level.txt
+tests/test_independence_test.py
+tests/test_rta_n.py
+tests/test_rtac_n.py
