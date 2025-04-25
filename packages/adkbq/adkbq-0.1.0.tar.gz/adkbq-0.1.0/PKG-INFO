@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: adkbq
+Version: 0.1.0
+Summary: Wrapper To Create BigQuery Agent For Agents Implemented With ADK
+Author: Viacheslav Kovalevskyi
+Author-email: viacheslav@kovalevskyi.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: google-cloud-bigquery==3.27.*
+Requires-Dist: python-dotenv==1.1
+Requires-Dist: google-adk>=0.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+adkbq
