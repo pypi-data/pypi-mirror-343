@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: mallardetl
+Version: 0.1.2
+Summary: This project aims at having a PygramETL like interface but with a DuckDB processing backend
+Author-email: Kasper Fromm Pedersen <kasperfromm@protonmail.com>
+Requires-Python: >=3.12
+Requires-Dist: duckdb==1.*

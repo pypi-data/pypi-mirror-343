@@ -1,0 +1,14 @@
+[project]
+name = "mallardetl"
+version = "0.1.2"
+description = "This project aims at having a PygramETL like interface but with a DuckDB processing backend"
+readme = "README.md"
+authors = [
+    { name = "Kasper Fromm Pedersen", email = "kasperfromm@protonmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = ["duckdb==1.*"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
