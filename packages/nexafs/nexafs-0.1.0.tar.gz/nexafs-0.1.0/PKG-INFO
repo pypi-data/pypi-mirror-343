@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: nexafs
+Version: 0.1.0
+Summary: A package for analyzing and fitting NEXAFS data
+Author-email: Harlan D Heilman <harlan.heilman@wsu.edu>
+License-Expression: GPL-2.0
+Requires-Python: >=3.10
+Requires-Dist: handsdown>=2.1.0
+Requires-Dist: matplotlib>=3.10.0
+Requires-Dist: numba>=0.60.0
+Requires-Dist: numpy<2.0.0,>=1.26.0
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: periodictable>=2.0.2
+Requires-Dist: scipy>=1.13.0
+Provides-Extra: dev
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
