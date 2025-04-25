@@ -1,0 +1,79 @@
+# 🧬 Wrapper Python du SDK SecuGen FDx Pro
+
+Ce projet est un **wrapper Python** utilisant le SDK **SecuGen FDx Pro** sous **Windows**.  
+Il permet de **capturer des empreintes digitales**, et de **comparer deux empreintes** de manière fiable et rapide.
+
+---
+
+## ⚙️ Prérequis
+
+### 🖥 Système
+
+- Windows 10 ou supérieur (64 bits)
+- Pilote Windows Secugen installé
+- Lecteur USB d’empreintes digitales **SecuGen**
+- Fichiers `.dll` du SDK **Secugen FDx Pro** placés dans le répertoire du projet
+
+### 🐍 Environnement Python
+
+- Python **3.10+**
+
+---
+
+## 🧠 Fonctions principales
+
+### 📌 `capturerEmpreinteDigitale()`
+
+Initialise le lecteur **SecuGen**, capture une empreinte digitale, génère un **template encodé en base64**, et enregistre localement l’image de l’empreinte.
+
+#### ✅ Exemple d’utilisation
+
+```python
+from secugenpy import secugen
+
+resultat = secugen.capturerEmpreinteDigitale()
+
+print(resultat)
+```
+
+---
+
+### 📌 `comparaisonEmpreintesDigitales(premierEmpreinteDigitaleBase64, deuxiemeEmpreinteDigitaleBase64, niveauDeSecurite)`
+
+Compare deux **empreintes digitales** fournies sous forme de **templates encodés en base64**.  
+Utilise l’algorithme de correspondance du SDK **SecuGen FDx Pro** pour évaluer leur similarité selon le niveau de sécurité spécifié.
+
+#### 🧾 Paramètres
+
+| Paramètre           | Type   | Description                                                             |
+|---------------------|--------|-------------------------------------------------------------------------|
+| `premierEmpreinteDigitaleBase64`  | `str`  | Template de la première empreinte (encodé en base64)                    |
+| `deuxiemeEmpreinteDigitaleBase64`  | `str`  | Template de la seconde empreinte (encodé en base64)                     |
+| `niveauDeSecurite`  | `str`  | Niveau de sécurité                     |
+
+#### 📄 Différents niveaux de sécurité
+
+| Chaîne de caractère | Niveau | Description |
+|---------------------|--------|-------------|
+| `NONE`              | 0      | Aucun niveau de sécurité |
+| `LOWEST`            | 1      | Sécurité extrêmement faible |
+| `LOWER`             | 2      | Sécurité très faible |
+| `LOW`               | 3      | Sécurité faible |
+| `BELOW_NORMAL`      | 4      | En dessous de la moyenne |
+| `NORMAL`            | 5      | Sécurité standard |
+| `ABOVE_NORMAL`      | 6      | Sécurité légèrement renforcée |
+| `HIGH`              | 7      | Haute sécurité |
+| `HIGHER`            | 8      | Très haute sécurité |
+| `HIGHEST`           | 9      | Niveau de sécurité maximal |
+
+#### ✅ Exemple d’utilisation
+
+```python
+from secugenpy import secugen
+
+resultat = secugen.comparaisonEmpreintesDigitales(template1, template2, "NORMAL")
+
+print(resultat)
+```
+
+---
