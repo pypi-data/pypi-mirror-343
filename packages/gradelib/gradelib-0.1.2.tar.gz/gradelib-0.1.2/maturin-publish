@@ -1,0 +1,5 @@
+#!/bin/bash
+PYPI_USERNAME=$(security find-generic-password -a “__token__" -s "pypi" -w)
+PYPI_PASSWORD=$(security find-generic-password -a "pypi-AgEIcHlwaS5vcmcCJGQyYmM1MTYyLWZkMjgtNDM2MC1iMmQzLTkyMzIxNWMzNWFjNQACEFsxLFsiZ3JhZGVsaWIiXV0AAixbMixbIjk4YzMxOTBkLTgxNWEtNDI3Ni1iODI4LWMyY2QwOGQwMGJkMSJdXQAABiDQjvBI_boni5DtfxkG9xCJ1wqJ-BHA1VSpeqY-e1WHRQ" -s "pypi" -w)
+
+maturin publish "$@" --username "$PYPI_USERNAME" --password "$PYPI_PASSWORD"
