@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+strynova-dj-hotreload/__init__.py
+strynova-dj-hotreload/apps.py
+strynova_dj_hotreload.egg-info/PKG-INFO
+strynova_dj_hotreload.egg-info/SOURCES.txt
+strynova_dj_hotreload.egg-info/dependency_links.txt
+strynova_dj_hotreload.egg-info/requires.txt
+strynova_dj_hotreload.egg-info/top_level.txt
+tests/__init__.py
