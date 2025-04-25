@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+pyproject.toml
+tagwriting/__init__.py
+tagwriting/main.py
+tagwriting.egg-info/PKG-INFO
+tagwriting.egg-info/SOURCES.txt
+tagwriting.egg-info/dependency_links.txt
+tagwriting.egg-info/entry_points.txt
+tagwriting.egg-info/requires.txt
+tagwriting.egg-info/top_level.txt
+tests/test_main.py
