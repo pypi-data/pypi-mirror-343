@@ -1,0 +1,1 @@
+Este é um pacote Python simples para demonstração. Ele contém módulos com funções básicas de saudação e soma.

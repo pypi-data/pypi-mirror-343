@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+fhermocunha2025_meu_primeiro_pacote.egg-info/PKG-INFO
+fhermocunha2025_meu_primeiro_pacote.egg-info/SOURCES.txt
+fhermocunha2025_meu_primeiro_pacote.egg-info/dependency_links.txt
+fhermocunha2025_meu_primeiro_pacote.egg-info/top_level.txt
+meu_primeiro_pacote/__init__.py
+meu_primeiro_pacote/modulo1.py
+meu_primeiro_pacote/modulo2.py
