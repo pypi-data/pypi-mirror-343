@@ -1,0 +1,15 @@
+FrameworkAPI/FrameworkAPI.py,sha256=qyPyjABbM7eb6kjBKxuVsnAG_Jb2NWZ9iMO2bB8lgag,9189
+FrameworkAPI/__init__.py,sha256=mm8NRb41BsvKptKyP8YF2TUHre_sl7AngRpxAc2mZto,69
+FrameworkAPI/version.py,sha256=vQ0hV7cTP1knfRr2KEIlcA7uDPhjhMCd3lluJQ3QKbo,165
+FrameworkAPI/core/FrameworkAPI.py,sha256=I8bWW4HPY7tfeOCjo3GD_ORZwwGlJ0CzcyvmuM5XaO8,22728
+FrameworkAPI/core/__init__.py,sha256=LLQgOOCTh7gyA0pMm-ndTqLPFiin4OckiREaAc-bo7U,28
+FrameworkAPI/example/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+FrameworkAPI/example/example 2.py,sha256=sw0phICLn-PNPKFAQjd0aQkVghYJKjVC2_qgx5p-N_g,976
+FrameworkAPI/example/example.py,sha256=sw0phICLn-PNPKFAQjd0aQkVghYJKjVC2_qgx5p-N_g,976
+core/FrameworkAPI.py,sha256=qyPyjABbM7eb6kjBKxuVsnAG_Jb2NWZ9iMO2bB8lgag,9189
+core/__init__.py,sha256=z23hMfj8O4Br7TZUWSs87W4KfRFaUmg7givvLN_lacQ,38
+core/version.py,sha256=VZKPc8Ykb2xrXFUaNzXkBiWc59n40yyeQWYwazLXQSI,165
+frameworkapi-0.0.5.14.dist-info/METADATA,sha256=xnkPY8YzKFnTtzNBfoFEFRfWcmys1ULIvw4BU4r0GFk,5257
+frameworkapi-0.0.5.14.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+frameworkapi-0.0.5.14.dist-info/top_level.txt,sha256=NCYEhsSyKVY_lM91QOhDzUrgUa_gwrtKNX8gTVKDMnk,13
+frameworkapi-0.0.5.14.dist-info/RECORD,,
