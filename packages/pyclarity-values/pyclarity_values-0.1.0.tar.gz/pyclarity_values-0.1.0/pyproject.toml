@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyclarity-values"
+version = "0.1.0"
+description = "Work with Clarity smart contract values in Python"
+readme = "README.md"
+authors = [{name="Oleksii Opanasiuk", email="oo@allbridge.io"}]
+license = {text = "MIT"}
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/allbridge-io/pyclarity-values"
