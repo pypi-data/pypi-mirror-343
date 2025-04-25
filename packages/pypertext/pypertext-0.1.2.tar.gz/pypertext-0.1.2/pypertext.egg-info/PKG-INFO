@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: pypertext
+Version: 0.1.2
+Summary: Pythonic HTML
+Author-email: Asif Rahman <asiftr@gmail.com>
+License: Apache License 2.0
+Keywords: HTML,Web Development
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Web Environment
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: importlib-metadata; python_version < "3.10"
+Provides-Extra: dev
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: ipykernel; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: nbformat; extra == "dev"
+Dynamic: license-file
+
+# Pypertext
+
+Create HTML elements the Pythonic way.
+
+```python
+from pypertext import ht
+
+div = ht.div(id="my-div", classes=["container"], style={"color": "red"})
+div + ht.h1("Hello World") + ht.p("This is a paragraph.")
+```
+
+## Install
+
+```bash
+pip install pypertext
+```
