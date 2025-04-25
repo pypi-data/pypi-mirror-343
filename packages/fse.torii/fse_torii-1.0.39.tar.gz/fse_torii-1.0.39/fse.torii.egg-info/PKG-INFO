@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: fse.torii
+Version: 1.0.39
+Summary: Torii
+Author: Fujitsu Systems Europe
+Requires-Dist: requests-toolbelt==1.0.0
+Requires-Dist: numpy==1.24.2
+Requires-Dist: pymongo==4.3.3
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary
