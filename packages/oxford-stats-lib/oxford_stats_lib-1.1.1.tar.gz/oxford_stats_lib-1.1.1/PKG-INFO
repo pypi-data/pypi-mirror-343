@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: oxford_stats_lib
+Version: 1.1.1
+Summary: A library for wrangling data for University of Oxford Intro to Probability Theory and Statistics
+Author-email: Geza Kerecsenyi <geza@kerecs.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# `oxford-stats-lib`
+
+## Example
+
+```python
+clouds = pd.read_csv('https://raw.githubusercontent.com/jillxoreilly/StatsCourseBook_2025/main/data/cloudSeeding.csv')
+
+test = HypothesisTest(clouds)
+test.measuring_column('rainfall').query_on_column('status').set_datapoints('Unseeded', 'Seeded')
+
+print(test.using_permutation().exec())
+```
+
+This yields:
+
+```
+H0: The difference in mean rainfall between group Unseeded and group Seeded is zero.
+H1: The difference in mean rainfall between group Unseeded and group Seeded is two-sided than zero.
+This is a two-sided (non-directional) alternative hypothesis.
+
+Test statistic: difference in mean rainfall between group Unseeded and group Seeded (-277)
+Alpha: 0.05
+
+P-value: 0.052 (after 10000 permutations)
+
+0.052 > 0.05.
+There is insufficient evidence to reject the null hypothesis.
+```
