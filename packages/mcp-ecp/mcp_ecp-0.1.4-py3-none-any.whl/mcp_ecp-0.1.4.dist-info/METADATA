@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: mcp-ecp
+Version: 0.1.4
+Summary: MCP Servers Demo Everything Cloud Platform
+Home-page: https://everythingcloudplatform.com/
+Author: Jai Chenchlani
+License: MIT
+Dynamic: author
+Dynamic: home-page
+Dynamic: license
+Dynamic: summary
