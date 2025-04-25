@@ -1,0 +1,36 @@
+[project]
+name = "sleepyconvert"
+version = "1.0.5"
+description = "Converts data files, images and documents to different formats"
+keywords = ["pandas", "data", "documents", "images", "converter", "cli"]
+
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+readme = "README.md"
+authors = [
+  { name = "Isaac Yep", email = "anthonybenchyep@gmail.com" }
+]
+
+dependencies = [
+  "pandas (>=1.5.1,<2.0.0)",
+  "pyarrow (>=11.0,<12.0)",
+  "typer (>=0.15,<1.0.0)",
+  "openpyxl (>=3.1.5,<4.0.0)",
+  "weasyprint (>=65.0,<66.0)",
+  "PyMuPDF (>=1.25.5,<2.0.0)",
+  "Markdown (>=3.7,<4.0.0)",
+  "html2text (>=2024.2.26,<2025.0.0)",
+]
+
+[tool.poetry]
+packages = [
+  { include = "sleepyconvert_toolchain" },
+  { include = "sleepyconvert.py" },
+]
+
+[project.urls]
+repository = "https://github.com/anthonybench/convert"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
