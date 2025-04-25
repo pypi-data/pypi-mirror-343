@@ -1,0 +1,9 @@
+tensorstore/_tensorstore.cpython-313-aarch64-linux-gnu.so,sha256=U43vvJ00R8Sg6Ot1KvGU9UTzt0sasoXnGrXUg-_YwMc,51210032
+tensorstore/LICENSE,sha256=E5KNKBsNGxjxgtrZzCkz5KXTZts5bFsiOCQVBCJaI2I,11418
+tensorstore/__init__.py,sha256=NdNJII9iAc7DCn39ye_JeZOL_ByOyyn1Hc9kYxXlQ00,7695
+tensorstore-0.1.74.dist-info/LICENSE,sha256=3tF6QvvME9HvnMKbHGS-zNSurEF5puaUpiJfSUpIetY,15673
+tensorstore-0.1.74.dist-info/METADATA,sha256=NWrpKukJAxjbnqZBMJxJzZNSW3Kym3RV0UOPdpL0Bwc,21282
+tensorstore-0.1.74.dist-info/WHEEL,sha256=tHbFrYI0jETZgIFOBS58jTlqnURKakGB4pJ-qrz4BlM,153
+tensorstore-0.1.74.dist-info/AUTHORS,sha256=1gtA22CUyenQ1leaw8bBH8TdcLP1UrcMPEAyr_IAV-I,303
+tensorstore-0.1.74.dist-info/RECORD,,
+tensorstore-0.1.74.dist-info/top_level.txt,sha256=kzkybe54TTNq_1bQCcFipfA75PFM3RVR4FzW6OOcviM,37
