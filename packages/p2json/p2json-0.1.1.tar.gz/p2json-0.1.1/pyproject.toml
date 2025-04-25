@@ -1,0 +1,19 @@
+[project]
+name = "p2json"
+version = "0.1.1"
+description = "jsonp to json converter"
+authors = [
+    {name = "zoushucai",email = "zoushucai@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.3"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "p2json", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
