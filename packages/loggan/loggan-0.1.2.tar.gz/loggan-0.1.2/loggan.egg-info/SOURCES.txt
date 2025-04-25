@@ -1,0 +1,8 @@
+LICENSE
+pyproject.toml
+loggan/__init__.py
+loggan/loggan.py
+loggan.egg-info/PKG-INFO
+loggan.egg-info/SOURCES.txt
+loggan.egg-info/dependency_links.txt
+loggan.egg-info/top_level.txt
