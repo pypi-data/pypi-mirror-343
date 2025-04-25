@@ -1,0 +1,7 @@
+README.md
+setup.py
+Kuat/__init__.py
+hadziq.egg-info/PKG-INFO
+hadziq.egg-info/SOURCES.txt
+hadziq.egg-info/dependency_links.txt
+hadziq.egg-info/top_level.txt
