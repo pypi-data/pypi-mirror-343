@@ -1,0 +1,11 @@
+saltext/test_salt_winrepo/__init__.py,sha256=D7LywTuuKOLBckMpBTKjqwuIS6PABYTo1qDO2n02Vus,863
+saltext/test_salt_winrepo/version.py,sha256=8oAxKUG747GUokmxjkrWejyJa5yPNEsoJDlXxoedxTw,21
+saltext/test_salt_winrepo/modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+saltext/test_salt_winrepo/modules/test_salt_winrepo_mod.py,sha256=PLiI2iQEKzPEvNKCuz8G3JUHtmE-56uJcf5HSQyA0Ic,620
+saltext_test_salt_winrepo-0.1.1.dist-info/LICENSE,sha256=np1YnCxoJ6Ydwv6wD7Fy1v04OFXRD05CPAe6iYERIxQ,11342
+saltext_test_salt_winrepo-0.1.1.dist-info/METADATA,sha256=czfJDuMNqyaLN3q3K4YljSaQ-ZmTtfJbyE7-X0t17j4,6379
+saltext_test_salt_winrepo-0.1.1.dist-info/NOTICE,sha256=10zr1hoc-ZQyHemX0QlXOBwVSPnQm-ZdZa8q1MmXTro,461
+saltext_test_salt_winrepo-0.1.1.dist-info/WHEEL,sha256=Kol19cahXavY536r5Aj6aAgK_6CmctrOu3bgNJMSNJA,109
+saltext_test_salt_winrepo-0.1.1.dist-info/entry_points.txt,sha256=3PfH2a7A3c76l74-i_OO23NE-BsXPPes9HO32M2baaQ,68
+saltext_test_salt_winrepo-0.1.1.dist-info/top_level.txt,sha256=6cynQgWBWnAPoXMnUaVitGzM6k7PzacwjLBPgrjOfi4,8
+saltext_test_salt_winrepo-0.1.1.dist-info/RECORD,,
