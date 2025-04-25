@@ -1,0 +1,16 @@
+mseedlib-0.0.8.dist-info/METADATA,sha256=z6cjoe-b8XiJu6PpEK8ualg4E5drJiE-IaWHuReurow,6485
+mseedlib-0.0.8.dist-info/RECORD,,
+mseedlib-0.0.8.dist-info/WHEEL,sha256=U025ofDAlmEF0ZWSBElcHqc9w_riYBinoMwFHLa2GAY,105
+mseedlib-0.0.8.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+mseedlib/libmseed.so,sha256=CjYyndE3ZNBxC1LHh6ARQclviuY9aotu6C0yl4hPyQs,433424
+mseedlib/clib.py,sha256=TzHFP8u0OD8zW6p2BRGr8WT6Uf7y8n587Qv6QJ_dqAM,818
+mseedlib/mstracelist.py,sha256=t39vi0szeP4tgnkNeVbxIk-DeOpgkIOrEWTAgAvHq_E,26957
+mseedlib/libmseed.h,sha256=ykbNI0CyekVWXWUh92FzCuWlmSjFGVzncdRTJSCNTRk,65014
+mseedlib/msrecord_buffer_reader.py,sha256=PmEumKa4p6CrBEaf2preIm3gODvljONOMe7-RNi54dQ,2777
+mseedlib/msrecord_reader.py,sha256=I_CmJQt8Fz3FDuQ1RHXL_fJ75fQg9oeOhwy6BysarXk,3793
+mseedlib/__version__.py,sha256=SI2ksUnyr2ExvFN3_HLrffzLNOhPOECWahOiIak-zao,421
+mseedlib/definitions.py,sha256=uZF4F12Si0wEVWL-Tc4ncB7Bl3gc73UF8KazsUCsWVw,4061
+mseedlib/util.py,sha256=9bctbsEDCQc1QOWI22KH_QMEborv88bMdx3ATKfOGMg,3577
+mseedlib/exceptions.py,sha256=q0lbLzO-HGKKH0SdR_StWTE9hbK-73pMKZn--BMQCLY,845
+mseedlib/__init__.py,sha256=rWwW9KKgtyoYKAPMofGkOtfq5i-aoSlAkoV4tXxfjgQ,881
+mseedlib/msrecord.py,sha256=AndfBbaPbKavSR_B3C1b4BDHO86MpnLD5FnICR8Afy0,20613
