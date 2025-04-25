@@ -1,0 +1,7 @@
+README.md
+setup.py
+Kuat/__init__.py
+Namirahs.egg-info/PKG-INFO
+Namirahs.egg-info/SOURCES.txt
+Namirahs.egg-info/dependency_links.txt
+Namirahs.egg-info/top_level.txt
