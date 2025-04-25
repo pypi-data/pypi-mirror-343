@@ -1,0 +1,45 @@
+/**
+ * 描述: 系统管理——{{ class_name }}DTO类
+ *
+ * @author {{ author }}
+ * @date {{ date }}
+ */
+@Data
+public class {{ class_name }}DTO {
+    {% for field in fields %}
+    /**
+     * {{ field.description }}
+     */
+    @ApiModelProperty("{{ field.description }}")
+    {%- if field.type == "LocalDateTime" %}
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    {%- endif %}
+    {%- if field.type == "String" and field.max_length %}
+    @Size(max = {{ field.max_length }}, message = "{{ field.description }}长度不能超过{{ field.max_length }}")
+    @Length(max = {{ field.max_length }}, message = "{{ field.description }}长度不能超过{{ field.max_length }}")
+    {%- endif %}
+    private {{ field.type }} {{ field.name }};
+    {% endfor %}
+
+    /**
+     * 类转换
+     */
+    @Mapper(nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS)
+    interface {{ class_name }}Mapper {
+         {{ class_name }}Mapper INSTANCE = Mappers.getMapper( {{ class_name }}Mapper.class);
+
+        /**
+         * DTO 转实体对象
+         *
+         * @param {{ class_name }}DTO
+         * @return
+         */
+        {{ class_name }} to{{ class_name }}({{ class_name }}DTO {{ class_name | lower }});
+    }
+
+    public static {{ class_name }} to{{ class_name }}({{ class_name }}DTO {{ class_name | lower }}) {
+        return {{ class_name }}Mapper.INSTANCE.to{{ class_name }}({{ class_name | lower }});
+    }
+
+}

@@ -1,0 +1,17 @@
+/**
+ * 描述：{{ table_name }}Mapper
+ *
+ * @author {{ author }}
+ * @date {{ date }}
+ */
+public interface {{ class_name }}Mapper extends BaseMapper<{{ class_name }}> {
+
+    /**
+     * 描述: {{ table_name }}分页查询
+     *
+     * @return AjaxResult {{ table_name }}集合
+     * @param queryDTO 查询参数
+     */
+    List<{{ class_name }}VO> select{{ class_name }}List(Page<{{ class_name }}VO> buildPage, @Param("query") {{ class_name }}QueryDTO queryDTO);
+
+}

@@ -1,0 +1,1 @@
+recursive-include generate_code/templates *.jinja2
