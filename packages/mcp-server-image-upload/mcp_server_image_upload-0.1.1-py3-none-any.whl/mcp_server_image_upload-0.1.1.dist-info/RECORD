@@ -1,0 +1,8 @@
+mcp-server-image-upload/__init__.py,sha256=E3jWQ9-etqcPCFPbAdmnzC0rLMcqIOBc81lNZVLW0WA,37
+mcp-server-image-upload/__main__.py,sha256=-ILN1HvUUDI5DzEZ9HeunKDHp3bq_gCTSx1xnnM9_0Q,45
+mcp-server-image-upload/upload_image_server.py,sha256=FGXLO-jA3ShAqLMHbt3Y6ggJNgZTUwV9gQvUmFdGHlY,4430
+mcp_server_image_upload-0.1.1.dist-info/METADATA,sha256=UB0b_kGimw2scfEBJz-6M5E5H1TuhyyU1R0x69wbCfg,1041
+mcp_server_image_upload-0.1.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+mcp_server_image_upload-0.1.1.dist-info/entry_points.txt,sha256=q5RsDZ-k6x6RneVdc469Go67Ra67kWgqON0I0MZ-qLQ,73
+mcp_server_image_upload-0.1.1.dist-info/top_level.txt,sha256=awUuv3luHvhQABKK2IlFmYvuqSzitdE_t8dCHj1f3dM,24
+mcp_server_image_upload-0.1.1.dist-info/RECORD,,
