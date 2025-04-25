@@ -1,0 +1,7 @@
+README.md
+setup.py
+Test1/__init__.py
+ujicoba.egg-info/PKG-INFO
+ujicoba.egg-info/SOURCES.txt
+ujicoba.egg-info/dependency_links.txt
+ujicoba.egg-info/top_level.txt
