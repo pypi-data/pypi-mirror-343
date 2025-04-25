@@ -1,0 +1,2 @@
+[console_scripts]
+evmrpcproxy = evmrpcproxy.__main__:main
