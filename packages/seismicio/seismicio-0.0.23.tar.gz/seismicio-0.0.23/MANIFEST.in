@@ -1,0 +1,4 @@
+include *.py
+recursive-include seismicio/constants *.py
+recursive-include seismicio/Models *.py
+recursive-include seismicio/services *.py
