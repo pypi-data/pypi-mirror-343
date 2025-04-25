@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iicsapi"
+version = "2.1.2"
+description = "Python client for IICS API"
+authors = [{ name="Eigen X", email="jlabbe@eigenx.com" }]
+dependencies = [
+  "opentelemetry-api>=1.23.0",
+  "pandas>=2.2.3",
+  "pyarrow>=18.1.0",
+  "pydantic>=2.10.3",
+  "tenacity>=9.0.0",
+  "typing-inspection>=0.4.0"
+]
+license = { text="MIT" }
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["iicsapi", "iicsapi.*"]
+
