@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: pymagic_HM
+Version: 0.1
+Summary: A library for creating magic effects in games.
+Author: Houda Izem
+Author-email: houdaizem166@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pygame
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# pymagic_HM Library
+
+Une bibliothÃ¨que Python pour ajouter des effets magiques comme des boules de feu, des explosions et d'autres animations magiques Ã  vos jeux en utilisant **pygame**.
+
+## FonctionnalitÃ©s
+
+- CrÃ©er des effets de boules de feu avec une vitesse et une taille personnalisables.
+- Ajouter des effets d'explosion qui simulent des Ã©clats magiques.
+- Facile Ã  intÃ©grer dans les jeux basÃ©s sur pygame.
+- Effets entiÃ¨rement personnalisables pour diffÃ©rents genres de jeux.
+
+## Installation
+
+Pour installer la bibliothÃ¨que, vous pouvez utiliser **pip**.
+
+### Option 1 : Installer localement (depuis votre propre rÃ©pertoire de projet)
+
+Si vous voulez installer la bibliothÃ¨que localement (pour un usage de dÃ©veloppement) :
+
+```bash
+pip install -e .
