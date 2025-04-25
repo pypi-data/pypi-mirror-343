@@ -1,0 +1,13 @@
+.gitignore
+.python-version
+LICENSE
+README.md
+pyproject.toml
+.github/workflows/ci.yml
+ddispatch/__init__.py
+ddispatch.egg-info/PKG-INFO
+ddispatch.egg-info/SOURCES.txt
+ddispatch.egg-info/dependency_links.txt
+ddispatch.egg-info/requires.txt
+ddispatch.egg-info/top_level.txt
+ddispatch/tests/test_dispatch.py
