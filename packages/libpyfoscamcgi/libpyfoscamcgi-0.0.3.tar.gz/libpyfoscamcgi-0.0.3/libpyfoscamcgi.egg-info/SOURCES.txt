@@ -1,0 +1,6 @@
+foscamcgi.py
+setup.py
+libpyfoscamcgi.egg-info/PKG-INFO
+libpyfoscamcgi.egg-info/SOURCES.txt
+libpyfoscamcgi.egg-info/dependency_links.txt
+libpyfoscamcgi.egg-info/top_level.txt

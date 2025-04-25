@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: libpyfoscamcgi
+Version: 0.0.3
+Summary: foscam camera cgi
+Author: Foscam-wangzhengyu
+Author-email: wangzhengyu@foscam.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: summary
