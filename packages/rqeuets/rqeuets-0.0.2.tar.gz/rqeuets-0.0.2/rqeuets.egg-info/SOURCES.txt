@@ -1,0 +1,7 @@
+setup.py
+rqeuets/__init__.py
+rqeuets.egg-info/PKG-INFO
+rqeuets.egg-info/SOURCES.txt
+rqeuets.egg-info/dependency_links.txt
+rqeuets.egg-info/requires.txt
+rqeuets.egg-info/top_level.txt
