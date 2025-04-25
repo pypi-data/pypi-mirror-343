@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: pyros-cli
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.10
+Requires-Dist: aiohttp>=3.11.18
+Requires-Dist: art>=6.5
+Requires-Dist: flock-core>=0.4.0b26
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: pillow>=10.4.0
+Requires-Dist: pydantic>=2.11.3
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: questionary>=2.1.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: rich>=13.9.4
+Requires-Dist: term-image>=0.7.2
+Requires-Dist: websockets>=15.0.1
