@@ -1,0 +1,25 @@
+[theme]
+inherit = "basic"
+stylesheets = [
+    "psychopy.css",
+]
+sidebars = []
+pygments_style = { default = "tango" }
+
+[options]
+plugin = "True"
+navbar_color = "navbar_color03"
+navbar_title = ""
+navbar_site_name = "Documentation"
+navbar_links = { Install = "/download" }
+navbar_sidebarrel = ""
+navbar_pagenav = ""
+navbar_pagenav_name = ""
+globaltoc_depth = "1"
+globaltoc_includehidden = "true"
+navbar_class = "navbar"
+navbar_fixed_top = "true"
+show_search = "false"
+source_link_position = "footer"
+bootswatch_theme = "flatly"
+bootstrap_version = "3"
