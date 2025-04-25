@@ -1,0 +1,11 @@
+atlasopenmagic/__init__.py,sha256=JEKfO_XIKBkvqBmpbPhTz_j--jY1dm5bTA3qMH0c4bU,390
+atlasopenmagic/metadata.py,sha256=ALZ6gfbZZE9IThZ63RSgkwoSuXMowMrsRsH1TE2c1uk,13146
+atlasopenmagic/data/__init__.py,sha256=k50OELERBOSHo3ZYL_05VhEcB6sQmodF_6C2Z0Feueo,73
+atlasopenmagic/data/id_matches.py,sha256=H7qhcZLEQeN6v2ObIUKtIuOp1t36hvr5vAD22lB7aCE,13931
+atlasopenmagic/data/urls_data.py,sha256=C4jI0ZsWeDkf6Uky-etNHNuP468sBGtXzXhj8aum0Wo,6790315
+atlasopenmagic/data/urls_mc.py,sha256=pTiANfEY1UHz53_Fjfz7Dfr3lS4cgl4XU-bcIHLiB70,1796616
+atlasopenmagic-0.3.1.dist-info/licenses/LICENSE,sha256=gStmBKngpE649T4K7or3vyegkg9QhHrHZdDTtWyz-l0,11353
+atlasopenmagic-0.3.1.dist-info/METADATA,sha256=5L5D5ePMN56oY07KCItnMweIsK4jhzhwKowEoujmM3Y,4840
+atlasopenmagic-0.3.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+atlasopenmagic-0.3.1.dist-info/top_level.txt,sha256=gXMwdnlZ1BjzglBlxsAzsCDuTnM0PnLW8YWSTO9uOhE,15
+atlasopenmagic-0.3.1.dist-info/RECORD,,
