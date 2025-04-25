@@ -1,0 +1,2 @@
+[console_scripts]
+otc = openai_to_codex_wrapper.cli:main
