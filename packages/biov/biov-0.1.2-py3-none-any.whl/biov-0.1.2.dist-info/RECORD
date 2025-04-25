@@ -1,0 +1,15 @@
+biov/__init__.py,sha256=0MtmwEBLLEP1JwTiqPcAH_aDERtNL01Qez_3s0QJaRU,324
+biov/_patch.py,sha256=IagxnyICAv6FROPCdSfzbI7_RQuDifqfJwKDfHPfqfc,769
+biov/config.py,sha256=bmON8OGjsBoRktjvLMe2lrhU06y436AyAGo94ahBg3w,975
+biov/dataframe.py,sha256=yKIbAeb41Os4nsRYAWMwCvLj86qoPg-9nEWW9GEz6Rg,448
+biov/seq.py,sha256=bSks5cfV4wVUkhU7LLv_DbFEpTtnAksIt4EnUI5ebNU,694
+biov/executables/__init__.py,sha256=8EKb7pBEE4Nz0BkgLpCCT_dDyaIiVH9MnFgbGIIba98,125
+biov/executables/_blat.py,sha256=nPsUK_KyvlmTh8sJM5gbli8BKMQmlNy7FdqQOjeCUhE,15129
+biov/io/__init__.py,sha256=gnTy6ANLKj9LGXJ8XP9Vi7hu-qxz5e01uk5-TeVF_Zw,20
+biov/io/_preprocess.py,sha256=esa3uhz3ht9swG615MeK3O94tYYlG9Ac2-ginl0uwC4,702
+biov/io/fastx.py,sha256=tkPXIYS6aYFkmBlV3-tXWoRTwa1NnVoMnZ60dpA6S0U,717
+biov/io/gff.py,sha256=G2MGjFc-NYz1Xjb9foM0Po9cFtMo4ZtqtPl0ClLEJsM,6632
+biov-0.1.2.dist-info/METADATA,sha256=AqnlDmmt6HcJ0euqUonmy3iUd7mQCueuP20IahtpWUw,2605
+biov-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+biov-0.1.2.dist-info/entry_points.txt,sha256=2EaKR2CT7VbF4saSHI7CGaQYz_7Z_yiJ5X9M2aV1gvA,51
+biov-0.1.2.dist-info/RECORD,,

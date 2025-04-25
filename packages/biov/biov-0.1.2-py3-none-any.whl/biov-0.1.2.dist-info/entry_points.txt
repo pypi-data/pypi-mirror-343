@@ -1,0 +1,2 @@
+[console_scripts]
+blat = biov.executables:blat_app
