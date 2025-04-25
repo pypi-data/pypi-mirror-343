@@ -1,0 +1,2 @@
+[console_scripts]
+etf-flow-mcp = etf_flow_mcp.cli:main
