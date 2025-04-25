@@ -1,0 +1,15 @@
+jupyter_iframe_commands/__init__.py,sha256=pHOlBEacWS9bXiFp5LH8JSF8shEzmO3Qc1xyGmwm6Vo,583
+jupyter_iframe_commands/_version.py,sha256=73xmj_rtt0boRuIZ0h5wqHItFsCNZHTC-Wa0tSeAxyY,171
+jupyter_iframe_commands-0.2.0.data/data/share/jupyter/labextensions/jupyter-iframe-commands/package.json,sha256=kFnlnwRfsPkbzJkJ52RVS6gEapOInXhp64e2dpd4ymg,2283
+jupyter_iframe_commands-0.2.0.data/data/share/jupyter/labextensions/jupyter-iframe-commands/schemas/jupyter-iframe-commands/package.json.orig,sha256=nRcdA3thdAfs7CrOvV0eQI7WMbSIbpV0tyZYJ_JOA9M,2167
+jupyter_iframe_commands-0.2.0.data/data/share/jupyter/labextensions/jupyter-iframe-commands/schemas/jupyter-iframe-commands/plugin.json,sha256=VJZi5lRxvDpbGiPdIeAJUtHSmeaulipVyzkgn5H63jM,199
+jupyter_iframe_commands-0.2.0.data/data/share/jupyter/labextensions/jupyter-iframe-commands/static/318.40f7500d7d9548ae13ac.js,sha256=pQndqKhPvrFuWBNTwBp_60mBF6sZMUD_xcWfdQQwAM4,5020
+jupyter_iframe_commands-0.2.0.data/data/share/jupyter/labextensions/jupyter-iframe-commands/static/318.40f7500d7d9548ae13ac.js.LICENSE.txt,sha256=26eLeCUQ89UaSRXS8OzGmWpVBKGqeDaEiwv45frmupk,88
+jupyter_iframe_commands-0.2.0.data/data/share/jupyter/labextensions/jupyter-iframe-commands/static/remoteEntry.92bb1b4a57d39dbcaa05.js,sha256=krsbSlfTnbyqBQBfMEtluZiC8XTY3K-envMneTZ2xZg,6436
+jupyter_iframe_commands-0.2.0.data/data/share/jupyter/labextensions/jupyter-iframe-commands/static/style.js,sha256=-CQt0ZTPaCTvrRiLcznxflAbfvIKlOVzjOos-muaXQ8,118
+jupyter_iframe_commands-0.2.0.data/data/share/jupyter/labextensions/jupyter-iframe-commands/static/third-party-licenses.json,sha256=UzzHIKzzfhenfv364vNBVGxCFm4KWJoSV7IpV6lK8qM,11731
+jupyter_iframe_commands-0.2.0.data/data/share/jupyter/labextensions/jupyter-iframe-commands/install.json,sha256=PP9YVMlkbVxpyK2AhlIrYNgCutaCYIby8AHJifpss1s,207
+jupyter_iframe_commands-0.2.0.dist-info/METADATA,sha256=-wlW-K2Jn5Exj3i_XBYQmfV8LHJozF0RNqDKquxSyHg,12711
+jupyter_iframe_commands-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+jupyter_iframe_commands-0.2.0.dist-info/licenses/LICENSE,sha256=YAxXu6S5rgSRTtF2eurCD_qa4LGpN4v6s0JhsoOpcM8,1069
+jupyter_iframe_commands-0.2.0.dist-info/RECORD,,
