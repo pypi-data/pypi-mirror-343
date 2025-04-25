@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-pitcount-cfim = napari_pitcount_cfim:napari.yaml

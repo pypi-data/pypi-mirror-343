@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: napari-pitcount-cfim
+Version: 0.2.0
+Summary: A pipeline for stuff #TODO: Get knowledge to write a proper description Pitcount
+Home-page: https://github.com/MaxusTheOne/napari-pitcount-cfim
+Author: Markus L. Bille
+Author-email: github+markus@bille.dk
+License: BSD-3-Clause
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Framework :: napari
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: napari
+Requires-Dist: QtPy
+Requires-Dist: PyQt5
+Requires-Dist: pydantic
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest-qt; extra == "test"
+Requires-Dist: codecov; extra == "test"
+Dynamic: license-file
+
+
+## napari-pitcount-cfim
+
+## License: BSD 3-Clause
+
+## About
+This is like 10% made.

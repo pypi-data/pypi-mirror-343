@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/napari_pitcount_cfim/__init__.py
+src/napari_pitcount_cfim/_dock_widget.py
+src/napari_pitcount_cfim.egg-info/PKG-INFO
+src/napari_pitcount_cfim.egg-info/SOURCES.txt
+src/napari_pitcount_cfim.egg-info/dependency_links.txt
+src/napari_pitcount_cfim.egg-info/entry_points.txt
+src/napari_pitcount_cfim.egg-info/requires.txt
+src/napari_pitcount_cfim.egg-info/top_level.txt
+src/napari_pitcount_cfim/config/__init__.py
+src/napari_pitcount_cfim/config/settings_handler.py
+src/napari_pitcount_cfim/config/settings_structure.py
