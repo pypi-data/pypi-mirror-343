@@ -1,0 +1,16 @@
+cyyjson.abi3.so,sha256=MmeNFkhyXFEYSjRI3ZWcRiMgLwCekcb-bM6SjF9aBz0,527072
+yyjson/memory.c,sha256=2yJFH0ezS9fde8mPAlnFsxw54CfvL79U_GzexP7N2Sk,510
+yyjson/yyjson.c,sha256=JuUMpqmgjYixXtekfBROKXZiFtE0ytOgFt5hY8W7Ik0,381603
+yyjson/document.c,sha256=Vukdmg-vsE1gTHqiI2AKJVBTbPJaZrZ_OvuHVPKSifs,34439
+yyjson/__init__.pyi,sha256=efcq-DouiFdLJ-T_AUn1TR0M5HFn7bGmo9MsM9FC448,2099
+yyjson/binding.c,sha256=eQJQqmrpjQ2P9t-GVl1a_wzri1MDT24LFz42g9bC5GQ,1106
+yyjson/__init__.py,sha256=ORttmZ-kAyKCe_jPoRn43aB9m5cRGu2FetXoxozZZfE,2575
+yyjson/decimal.h,sha256=O101ALoX0rOwiXQN2SPQt-SS5ptxB7I9ziazPaVjMYU,154
+yyjson/yyjson.h,sha256=HWO05En1skEWr6tAuPG3nycD1ZBaqKtMpGyXt-UTugQ,317168
+yyjson/document.h,sha256=iGZ5djULq4xDe1tyaB5WZFnNzQb8rlnkBdmvSC7Yh3A,658
+yyjson/memory.h,sha256=G9LZZBcEFkLGC85-gYLC94tjssiUmX1SxWc_GAODeYY,497
+vtx_yyjson-4.2.0.dist-info/RECORD,,
+vtx_yyjson-4.2.0.dist-info/WHEEL,sha256=X5nJfjgobRU7ryMMfFJJFBAbDzFcnKYVG-JBkmCOgdw,142
+vtx_yyjson-4.2.0.dist-info/top_level.txt,sha256=-7IMgdmOFHaco9UWTEv1OGJn5l2pHSt5s6TbzbDLQ0Q,15
+vtx_yyjson-4.2.0.dist-info/METADATA,sha256=N1ES6mZGqwOarpYiGwQjkzXA5jEl2zqIKgylg3o9Czc,3067
+vtx_yyjson-4.2.0.dist-info/licenses/LICENSE,sha256=Rm1HA647NrQhIXg9wKKMycddDtSmhxmSY297c4yVwQU,2256
