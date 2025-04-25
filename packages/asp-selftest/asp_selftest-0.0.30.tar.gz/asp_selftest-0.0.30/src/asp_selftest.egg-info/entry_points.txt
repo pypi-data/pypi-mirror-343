@@ -1,0 +1,5 @@
+[console_scripts]
+asp-reify = asp_selftest.__main__:asp_reify
+asp-tests = asp_selftest.__main__:main
+clingo+ = asp_selftest.__main__:clingo_plus
+clingo-tests = asp_selftest.__main__:clingo_plus_tests
