@@ -1,0 +1,8 @@
+setup.py
+mcp_everythingcloudplatform/__init__.py
+mcp_everythingcloudplatform/main.py
+mcp_everythingcloudplatform.egg-info/PKG-INFO
+mcp_everythingcloudplatform.egg-info/SOURCES.txt
+mcp_everythingcloudplatform.egg-info/dependency_links.txt
+mcp_everythingcloudplatform.egg-info/entry_points.txt
+mcp_everythingcloudplatform.egg-info/top_level.txt
