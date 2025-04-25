@@ -1,0 +1,86 @@
+Metadata-Version: 2.4
+Name: dyn-all
+Version: 0.1.0
+Summary: Complete distribution of the 'dyn' namespace package
+Author-email: Cécile Bothorel <cecile.bothorel@imt-atlantique.fr>, Laurent Brisson <laurent.brisson@imt-atlantique.fr>, Nicolas Duminy <nicolas.duminy@imt-atlantique.fr>
+License: Copyright IMT Atlantique, 2021
+        
+        Project leaders:
+          Cécile Bothorel <cecile.bothorel@imt-atlantique.fr>
+          Laurent Brisson <laurent.brisson@imt-atlantique.fr>
+          Nicolas Duminy <nicolas.duminy@imt-atlantique.fr>
+        
+        This software is a benchmark generator for the analysis of evolving communities.
+        
+        This software is licensed under the European Union Public Licence (EUPL) v1.2.
+        
+        The English version and the French version of this licence are in the
+        directory LICENCE.  The EUPL is available in 22 official languages of the
+        European Union; for more informations, please check its website:
+        https://joinup.ec.europa.eu/page/eupl-text-11-12
+        
+Project-URL: Homepage, https://gitlab.com/decide.imt-atlantique/dyn/all
+Project-URL: Issues, https://gitlab.com/decide.imt-atlantique/dyn/all/issues
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: dyn-core>=0.1
+Requires-Dist: dyn-analysis>=0.0.3
+Requires-Dist: dyn-benchmark>=0.4
+Requires-Dist: dyn-viz
+Dynamic: license-file
+
+# Dyn-All
+
+This package is a utility to install the complete ``dyn`` package suite.
+
+To use it, simply install it from PyPI:
+
+```bash
+pip install dyn-all
+```
+
+## 📝 Citation
+
+If you use Dyn-All in your research, please use the following BibTeX entry:
+
+```
+Brisson, L., Bothorel, C., & Duminy, N. (2025). DynBenchmark: Customizable GroundTruths
+to Benchmark Community Detection and Tracking in Temporal Networks, France's International Conference on Complex Systems (FRCCS 2025), Bordeaux, France
+```
+
+BibTeX:
+
+```bibtex
+@inproceedings{brisson2025dynbenchmark,
+  title={DynBenchmark: Customizable Ground Truths to Benchmark Community Detection and Tracking in Temporal Networks},
+  author={Brisson, Laurent and Bothorel, Cécile and Duminy, Nicolas},
+  booktitle={France's International Conference on Complex Systems},
+  year={2025},
+  publisher={Springer}
+}
+```
+
+## 👥 Contributing
+
+This package is growing continuously and contributions are welcomed.
+Contributions can come in the form of new features, bug fixes, documentation improvements
+or any combination thereof.
+
+If you want to contribute to this package, please read the [Contributing guidelines](https://gitlab.com/decide.imt-atlantique/dyn/all/-/blob/main/doc/contributing).
+If you have any new ideas or have found bugs, feel free to [create an issue](https://gitlab.com/decide.imt-atlantique/dyn/all/-/issues/new>).
+Finally, any contribution must be proposed for integration as a [Merge Request](https://gitlab.com/decide.imt-atlantique/dyn/all/-/merge_requests/new).
+
+Please visit our [Gitlab](https://gitlab.com/decide.imt-atlantique/dyn/all) for more details.
+
+## 📄 License
+
+This software is licensed under the [European Union Public Licence (EUPL) v1.2](https://joinup.ec.europa.eu/page/eupl-text-11-12>).
+For more information see [this](https://gitlab.com/decide.imt-atlantique/dyn/all/-/blob/main/LICENSE).
