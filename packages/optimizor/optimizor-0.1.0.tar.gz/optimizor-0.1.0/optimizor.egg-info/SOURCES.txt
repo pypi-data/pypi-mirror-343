@@ -1,0 +1,21 @@
+README.md
+setup.py
+ml/All Classifications.py
+ml/EDA_Electricity.py
+ml/Ensemble Learning.py
+ml/HyperParams.py
+ml/K_Means.py
+ml/Linear.py
+ml/Logistic.py
+ml/NaiveBayes.py
+ml/SLP and MLP.py
+ml/SVM & KNN.py
+ml/UG_Linear_regression.py
+ml/__init__.py
+ml/decision_tree.py
+ml/image_audio.py
+ml/pract.py
+optimizor.egg-info/PKG-INFO
+optimizor.egg-info/SOURCES.txt
+optimizor.egg-info/dependency_links.txt
+optimizor.egg-info/top_level.txt
