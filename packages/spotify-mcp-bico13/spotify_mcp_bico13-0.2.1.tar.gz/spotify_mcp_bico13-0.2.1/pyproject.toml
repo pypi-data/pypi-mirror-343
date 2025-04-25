@@ -1,0 +1,37 @@
+[project]
+name = "spotify-mcp-bico13"
+version = "0.2.1"
+description = "MCP spotify project"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp==1.3.0",
+    "python-dotenv>=1.0.1",
+    "spotipy==2.24.0",
+]
+
+[[project.authors]]
+name = "Varun Srivastava"
+email = "varun.neal@berkeley.edu"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = [
+    "src/**/*.py",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/spotify_mcp"]
+target-name = "spotify-mcp-bico13"
+
+[project.scripts]
+spotify-mcp-bico13 = "spotify_mcp:main"
+
+[tool.uv]
+dev-dependencies = []
+
+[tool.uv.sources]
+spotify-mcp-bico13 = { workspace = true }
