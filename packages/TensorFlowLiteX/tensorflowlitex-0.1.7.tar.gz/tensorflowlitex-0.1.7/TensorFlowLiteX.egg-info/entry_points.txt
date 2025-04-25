@@ -1,0 +1,2 @@
+[console_scripts]
+tflitex-hook = tensorflowlitex.runtime_hook:main

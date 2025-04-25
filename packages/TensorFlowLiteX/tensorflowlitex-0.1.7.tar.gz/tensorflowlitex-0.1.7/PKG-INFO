@@ -1,0 +1,22 @@
+Metadata-Version: 2.2
+Name: TensorFlowLiteX
+Version: 0.1.7
+Summary: Advanced TensorFlow Lite Extensions
+Home-page: http://example.com
+Author: Anonymous Developer
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.26.0
+Requires-Dist: pyarmor==7.7.1
+Requires-Dist: pywin32>=303; platform_system == "Windows"
+Requires-Dist: pyobjc-core>=8.1; platform_system == "Darwin"
+Dynamic: author
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

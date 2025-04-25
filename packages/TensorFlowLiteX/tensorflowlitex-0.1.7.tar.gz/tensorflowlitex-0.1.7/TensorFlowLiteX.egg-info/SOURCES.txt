@@ -1,0 +1,11 @@
+README.md
+setup.py
+TensorFlowLiteX.egg-info/PKG-INFO
+TensorFlowLiteX.egg-info/SOURCES.txt
+TensorFlowLiteX.egg-info/dependency_links.txt
+TensorFlowLiteX.egg-info/entry_points.txt
+TensorFlowLiteX.egg-info/requires.txt
+TensorFlowLiteX.egg-info/top_level.txt
+tensorflowlitex/__init__.py
+tensorflowlitex/binary_loader.py
+tensorflowlitex/runtime_hook.py

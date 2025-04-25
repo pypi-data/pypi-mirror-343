@@ -1,0 +1,8 @@
+requests>=2.26.0
+pyarmor==7.7.1
+
+[:platform_system == "Darwin"]
+pyobjc-core>=8.1
+
+[:platform_system == "Windows"]
+pywin32>=303
