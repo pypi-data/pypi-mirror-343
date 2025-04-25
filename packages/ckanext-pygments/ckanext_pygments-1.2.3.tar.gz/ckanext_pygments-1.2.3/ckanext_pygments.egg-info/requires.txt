@@ -1,0 +1,4 @@
+Pygments<3.0.0,>=2.19.1
+
+[admin]
+ckanext-admin_panel>=1.0.14

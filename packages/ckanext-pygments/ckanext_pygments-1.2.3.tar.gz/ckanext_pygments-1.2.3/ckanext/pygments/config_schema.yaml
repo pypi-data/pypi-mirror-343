@@ -1,0 +1,78 @@
+scheming_version: 2
+schema_id: pygments_config
+about: An extension config form schema
+
+fields:
+  - field_name: ckanext.pygments.supported_formats
+    label: Supported Formats
+    help_text: Specify a list of supported formats
+    required: true
+    choices_helper: pygments_supported_formats_options
+    validators: not_missing unicode_safe
+    form_snippet: tom_select.html
+    form_attrs:
+      multiple: "true"
+      required: 1
+      data-module-load-url: "/api/action/pygments_formats_list"
+
+  - field_name: ckanext.pygments.max_size
+    label: Max Size
+    help_text: Specify how many bytes we are going to render from file. Default to 1MB
+    input_type: number
+
+  - field_name: ckanext.pygments.include_htmx_asset
+    label: Include HTMX Asset
+    help_text: Include HTMX asset
+    preset: select
+    required: true
+    choices:
+      - value: true
+        label: Yes
+      - value: false
+        label: No
+
+  - field_name: ckanext.pygments.default_theme
+    label: Default Theme
+    help_text: Default theme for preview
+    preset: select
+    required: true
+    choices_helper: pygments_theme_options
+
+  - field_name: ckanext.pygments.guess_lexer
+    label: Guess Lexer
+    help_text: Try to guess the Lexer for a format
+    preset: select
+    required: true
+    choices:
+      - value: true
+        label: Yes
+      - value: false
+        label: No
+
+  - field_name: ckanext.pygments.cache.enable
+    label: Enable Cache
+    help_text: Enable cache
+    preset: select
+    required: true
+    choices:
+      - value: true
+        label: Yes
+      - value: false
+        label: No
+
+  - field_name: ckanext.pygments.cache.preview_max_size
+    label: Preview Max Size
+    help_text: Specify what is the maximum size of a preview we are going to cache. Default is 20MB
+    input_type: number
+
+  - field_name: ckanext.pygments.cache.ttl
+    label: Cache TTL
+    help_text: Specify the time to live of the cache. Default is 2 hours
+    input_type: number
+
+  - field_name: ckanext.pygments.default.view_name
+    label: Default view name
+
+  - field_name: ckanext.pygments.default.description
+    label: Default description
+    form_display: text.html

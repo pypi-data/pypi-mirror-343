@@ -1,0 +1,18 @@
+<div
+    data-module="pygment-global"
+    hx-target="this"
+    hx-trigger="load, click from:.btn-pygment-refresh"
+    hx-get="{{ h.url_for('pygments.highlight', resource_id=resource.id, theme=resource_view.theme, chunk_size=resource_view.size, file_url=resource_view.file_url, resource_view_id=resource_view.id if resource_view.file_url else '') }}">
+    <span>
+        {% snippet "pygments/pygment_indicator.html" %}
+        {{ _("Preparing your preview...") }}
+    </span>
+</div>
+
+{% asset 'pygments/pygments-js' %}
+
+{% if h.pygments_include_htmx_asset() %}
+    {% asset "pygments/pygments-js-htmx" %}
+{% endif %}
+
+{% asset 'pygments/pygments-css' %}
