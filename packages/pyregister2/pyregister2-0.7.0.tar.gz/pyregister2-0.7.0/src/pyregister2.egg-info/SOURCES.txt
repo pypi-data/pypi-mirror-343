@@ -1,0 +1,10 @@
+pyproject.toml
+src/pyregister/__init__.py
+src/pyregister/pyregister.py
+src/pyregister2.egg-info/PKG-INFO
+src/pyregister2.egg-info/SOURCES.txt
+src/pyregister2.egg-info/dependency_links.txt
+src/pyregister2.egg-info/top_level.txt
+src/pyregister/bin/libpyregister.a
+src/pyregister/bin/libpyregister.so
+src/pyregister/bin/pyregister.dll
