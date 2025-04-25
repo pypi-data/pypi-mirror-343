@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sima-cli"
+version = "0.0.11"
+description = "CLI tool for SiMa Developer Portal to download models, firmware, and apps."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+  { name="Sima.ai", email="support@sima.ai" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "Environment :: Console",
+]
+
+dependencies = [
+    "requests",
+    "click", 
+    "tqdm",
+    "pyyaml",
+    "paramiko"
+]
+
+[project.urls]
+Homepage = "https://developer.sima.ai/"
+
+[project.scripts]
+sima-cli = "sima_cli.cli:main"
