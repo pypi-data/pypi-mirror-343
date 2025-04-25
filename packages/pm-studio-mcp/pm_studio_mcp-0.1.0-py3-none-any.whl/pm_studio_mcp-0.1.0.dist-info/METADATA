@@ -1,0 +1,77 @@
+Metadata-Version: 2.4
+Name: pm-studio-mcp
+Version: 0.1.0
+Summary: PM Studio MCP Server
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: fastmcp
+Requires-Dist: googlesearch-python
+Requires-Dist: matplotlib>=3.10.1
+Requires-Dist: mcp[cli]>=1.5.0
+Requires-Dist: seaborn>=0.13.2
+
+## Quick Start
+1. [Enable your Github Copilot FTE benefit (model access for free)](https://repos.opensource.microsoft.com/orgs/MicrosoftCopilot); if you cannot login, try this URL:https://github.com/enterprises/microsoft/sso
+2. [Download VS code insider](https://code.visualstudio.com/insiders/)
+3. [Install git] https://git-scm.com/
+4. Clone Repository
+   ```
+   git clone https://github.com/juanliu_microsoft/pm-studio-mcp.git
+   ```
+   *Generate token for authentication if needed. Github->Settings->DeveloperSettings->Tokens, check 'repo' scope.*
+5. Open terminal on Mac
+6. Navigate to your Project Directory
+   ```
+   cd {path to}/pm-studio-mcp
+   ```
+7. Install HomeBrew with command
+    ```
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+8. Install Python: `brew install python3`
+9. Install uv(python的环境+包管理工具): `brew install uv`
+10. Install Dependencies
+   ```
+   uv sync --all-extras --dev
+   ```
+11. Create and Activate Virtual Environment
+   ```
+   # Unix/macOS
+   source .venv/bin/activate
+
+   # Windows
+   .venv\Scripts\activate
+   ```
+
+
+## Run MCP server locally
+
+1. Create a folder as your workspace, for example, pm-studio-client
+2. create a .vscode folder under your client folder
+3. create mcp.json under .vscode folder
+4. paste the following content to mcp.json
+```
+{
+   "mcpServers": {
+        "pm-studio-mcp": {
+            "command": "uv",
+            "args": [
+                "--directory",
+                "{path_to_your_MCP_server}/src/pm_studio_mcp",
+                "run",
+                "main.py"],
+            "env": {
+                "WORKING_PATH": "{path_to_your_workspace}/working_dir/"
+            },
+            "disabled": false
+        }
+   }
+}
+```
+5. cmd+shift+p -> >MCP: List Servers
+6. select pm-studio-mcp
+7. Start server
+8. Open the Github Copilot side panel, change from "Ask" to "Agent" at the bottom-right corner
+9. cmd+shift+p -> >Chat: Create Prompt #create a prompt in markdown 
+10. Type the prompt in the new markdown file created #you can copy and paste the prompt in "feedback_analysis.prompt.md" in the pm-studio-mcp folder
+11. Type "hello" to test
