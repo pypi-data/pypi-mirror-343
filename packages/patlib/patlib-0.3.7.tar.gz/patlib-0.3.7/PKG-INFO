@@ -1,0 +1,62 @@
+Metadata-Version: 2.3
+Name: patlib
+Version: 0.3.7
+Summary: A collection of tools.
+License: MIT
+Author: patricknraanes
+Author-email: patrick.n.raanes@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: misc
+Provides-Extra: mydev
+Requires-Dist: importlib-metadata (>=1.0,<2.0) ; python_version < "3.8"
+Requires-Dist: ipdb ; extra == "mydev"
+Requires-Dist: ipython (>=7.20,<8.0) ; extra == "mydev"
+Requires-Dist: line_profiler ; extra == "mydev"
+Requires-Dist: pandas ; extra == "misc"
+Requires-Dist: pre-commit ; extra == "mydev"
+Requires-Dist: pudb ; extra == "mydev"
+Requires-Dist: pyqt5 (!=5.15.3) ; extra == "mydev"
+Requires-Dist: pysnooper ; extra == "mydev"
+Requires-Dist: pytest ; extra == "mydev"
+Requires-Dist: pytest-clarity ; extra == "mydev"
+Requires-Dist: pytest-sugar ; extra == "mydev"
+Requires-Dist: pyyaml ; extra == "misc"
+Requires-Dist: seaborn (>=0.11.1,<0.12.0) ; extra == "misc"
+Requires-Dist: see ; extra == "mydev"
+Requires-Dist: tabulate ; extra == "misc"
+Requires-Dist: toml ; extra == "misc"
+Requires-Dist: tqdm ; extra == "misc"
+Description-Content-Type: text/markdown
+
+# patlib
+
+Should not be used in production code. Purposes:
+
+- Expanded snippet (or "tips and tricks") library.
+- Share tools across my projects, such as DAPPER.
+- Provide common, version-controlled (and versioned) source
+  of dependency specifications for various projects.
+  NB: Not sure if good idea.
+  Maybe you forget numpy when publishing a "dependant" project.
+
+  Example:
+  ```toml
+  [tool.poetry.dev-dependencies]
+  # Either:
+  patlib = {version = "==0.2.8", extras = ["mydev", "misc"]}
+  # Or:
+  patlib = {path = "../../py/patlib", extras = ["mydev", "misc"], develop=true}
+  ```
+
+  Also note that `pip>=21.3` supports editable installs,
+  but this also requires that you have a recent `poetry` installed on your system.
+

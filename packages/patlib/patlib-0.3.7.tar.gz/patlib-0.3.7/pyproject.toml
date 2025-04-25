@@ -1,0 +1,86 @@
+[tool.poetry]
+name = "patlib"
+version = "0.3.7"
+description = "A collection of tools."
+license = "MIT"
+authors = ["patricknraanes <patrick.n.raanes@gmail.com>"]
+
+readme = "README.md"
+
+#repository = "github..."
+#repository = "github..."
+#keywords = ["dict", "list"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+importlib-metadata = {version = "^1.0", python = "<3.8"}
+
+scipy      = {version="*",         optional=true}
+numpy      = {version="*",         optional=true}
+matplotlib = {version="*",         optional=true}
+
+# extras: mydev
+ipython        = {version="^7.20",    optional=true}
+# ... coz 7.19 was incompatible with Jedi 0.18
+pyqt5          = {version="!=5.15.3", optional=true}
+# ... coz 5.15.3 breaks pyplot on mac
+pre-commit     = {version="*",        optional=true}
+line_profiler  = {version="*",        optional=true}
+see            = {version="*",        optional=true}
+# pytest:
+pytest         = {version="*",        optional=true}
+pytest-sugar   = {version="*",        optional=true}
+pytest-clarity = {version="*",        optional=true}
+# debugging:
+ipdb           = {version="*",        optional=true}
+pudb           = {version="*",        optional=true}
+pysnooper      = {version="*",        optional=true}
+# Working pdb++ (ref pdbpp/issues/408).
+# Add to your local pyproject.toml (if not publishing to pypi) to use.
+# pdbpp = { git = "https://github.com/pdbpp/pdbpp.git", rev = "b62a338" }
+
+# TODO:
+#pdoc3 = "^0.9.2"
+#tox = "^3.20.1"
+#pytest-cov = "*"
+#coverage = {extras = ["toml"], version = ">=5.1"} # "toml" and ">5.0b1" to enable config in pyproject.toml
+## Lint
+#flakehell = "*"
+## NB: plugins must also be ENABLED in [tool.flakehell.plugins]
+## NB: plugins should also be listed in .pre-commit-config.yaml
+#flake8-commas = "*"
+#flake8-docstrings = "*"
+#flake8-bugbear = "*"
+#flake8-comprehensions = "*"
+#flake8-isort = "*"
+#flake8-builtins = "*"
+#pep8-naming = "*"
+
+# TODO: include scalene or yappi profiler?
+
+# extras: misc
+pyyaml   = {version="*", optional=true}
+toml     = {version="*", optional=true}
+tabulate = {version="*", optional=true}
+tqdm     = {version="*", optional=true}
+pandas   = {version="*", optional=true}
+seaborn  = {version="^0.11.1", optional=true}
+
+# extras: pat
+# NB: This is a bad idea. Too hacky. Prevents PyPI publishing (if installed as editable),
+#     or editable installs (if installed from pypi). ∃ probs more issues too.
+# mpl-tools = { path = "../../py/mpl-tools/", develop=true }
+# struct-tools = { path = "../../py/struct-tools/", develop=true }
+
+[tool.poetry.dev-dependencies]
+# NB: packages hereunder are not installed by having patlib as a dependency.
+
+[tool.poetry.extras]
+mydev = ["ipython", "pyqt5", "pre-commit", "line_profiler", "see",
+      "pytest", "pytest-sugar", "pytest-clarity",
+      "ipdb", "pudb", "pysnooper"]
+misc = ["pyyaml", "toml", "tabulate", "tqdm", "pandas", "seaborn"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
