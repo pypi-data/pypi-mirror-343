@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: pdkmaster-io-spice
+Version: 0.1.0
+Summary: PDKMaster integration with SPICE simulators
+Author-Email: Staf Verhaegen <staf@fibraservi.eu>
+License: AGPL-3.0-or-later OR GPL-2.0-or-later OR CERN-OHL-S-2.0+ OR Apache-2.0
+Requires-Python: >=3.8
+Requires-Dist: PDKMaster~=0.12.0
+Requires-Dist: PySpice>=1.5
+Description-Content-Type: text/markdown
+
+# PDKMaster integration with KLayout
+
+This is PDKMaster module to provide interoperation with SPICE simulators.
+This is WIP version with just the red tape setup for the project.
+
+# Release history
+
+* [v0.1.0](https://gitlab.com/Chips4Makers/pdkmaster-io-spice/-/commits/v0.1.0):
+  First version of split off module. Next to the copied code from PDKMaster it contains some clean-up and update for other API changes done for PDKMaster 0.12.0.
+
+## Project Arrakeen subproject
+
+This project is part of Chips4Makers' [project Arrakeen](https://gitlab.com/Chips4Makers/c4m-arrakeen). It shares some common guide lines and regulations:
+
+* [Contributing.md](https://gitlab.com/Chips4Makers/c4m-arrakeen/-/blob/redtape_v1/Contributing.md)
+* [LICENSE.md](https://gitlab.com/Chips4Makers/c4m-arrakeen/-/blob/redtape_v1/LICENSE.md): license of release code
+* [LICENSE_rationale.md](https://gitlab.com/Chips4Makers/c4m-arrakeen/-/blob/redtape_v1/LICENSE_rationale.md)
