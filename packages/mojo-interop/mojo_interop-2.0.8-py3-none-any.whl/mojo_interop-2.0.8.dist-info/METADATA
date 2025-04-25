@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: mojo-interop
+Version: 2.0.8
+Summary: Automation Mojo Interop Extensions
+Home-page: http://automationmojo.com
+License: LICENSE.txt
+Keywords: python
+Author: Myron Walker
+Author-email: myron.walker@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: mojo-config (>=2.0.0,<2.1.0)
+Requires-Dist: mojo-credentials (>=2.0.0,<2.1.0)
+Requires-Dist: mojo-errors (>=2.0.0,<2.1.0)
+Requires-Dist: mojo-landscaping (>=2.0.0,<2.1.0)
+Requires-Dist: mojo-networking (>=2.0.0,<2.1.0)
+Requires-Dist: mojo-results (>=2.0.0,<2.1.0)
+Requires-Dist: mojo-runtime (>=2.0.0,<2.1.0)
+Requires-Dist: mojo-testplus (>=2.0.1,<2.1.0)
+Requires-Dist: mojo-xmodules (>=2.0.0,<2.1.0)
+Requires-Dist: pexpect (>=4.8.0,<5.0.0)
+Requires-Dist: psutil (>=5.9.6,<6.0.0)
+Requires-Dist: rpyc (>=6.0.0,<7.0.0)
+Project-URL: Repository, https://github.com/automationmojo/mojo-interop
+Description-Content-Type: text/x-rst
+
+========================================
+DEPRICATED - THIS MODULE WILL BE REMOVED
+========================================
+This package will be removed on Aug 1st, the root namespace 'mojo.*' conflicts with
+the 'mojo' programming language.   For information about using the newer packages,
+contact Automation Mojo at:
+
+    automationx@automationmojo.com
+
+===============================
+Automation Mojo Interop Package
+===============================
+
+This *Automation Mojo Interop Package* contains interop extensions that add interop functionality to
+the test environment *Landscape* object for a variety of platform clients, clusters, and protocols.
+
+=================
+Code Organization
+=================
+* .vscode - Common tasks
+* development - This is where the runtime environment scripts are located
+* repository-setup - Scripts for homing your repository and to your checkout and machine setup
+* userguide - Where you put your user guide
+* source/packages - Put your root folder here 'source/packages/(root-module-folder)'
+* workspaces - This is where you add VSCode workspaces templates and where workspaces show up when homed.
+  
+==========
+References
+==========
+
+- `User Guide <userguide/userguide.rst>`
+- `Coding Standards <userguide/10-00-coding-standards.rst>`
+
