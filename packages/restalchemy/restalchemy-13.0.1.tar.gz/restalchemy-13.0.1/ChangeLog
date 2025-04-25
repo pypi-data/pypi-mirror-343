@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+13.0.1
+------
+
+* Pg engine: remove duplicated open argument for pool
