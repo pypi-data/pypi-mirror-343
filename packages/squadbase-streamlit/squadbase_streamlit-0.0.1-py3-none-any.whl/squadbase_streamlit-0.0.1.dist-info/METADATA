@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: squadbase-streamlit
+Version: 0.0.1
+Summary: Squadbase Python SDK for Streamlit
+Home-page: https://www.squadbase.dev
+License: Apache-2.0
+Author: squadbase
+Author-email: contact@morphdb.io
+Requires-Python: >=3.9, !=2.7.*, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, !=3.6.*, !=3.7.*, !=3.8.*
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: User Interfaces
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: streamlit (>=1.44.1,<2.0.0)
+Project-URL: Repository, https://github.com/squadbase/squadbase-streamlit
+Description-Content-Type: text/markdown
+
+# Squadbase Python SDK for Streamlit
+
+SDK for streamlit to get user credentials in deployment environment on squadbase.
+
+### Features
+
+- Retrieve user information from Squadbase authentication API
+- Support for local development with mock data
+- Custom domain configuration
+
+### Installation
+
+```shell
+pip install squadbase-streamlit
+```
+
+or with Poetry:
+
+```shell
+poetry add squadbase-streamlit
+```
+
+### Usage
+
+#### In Squadbase Deployment Environment
+
+When deployed on Squadbase, the SDK automatically extracts authentication information from the request headers:
+
+```python
+import streamlit as st
+import squadbase.streamlit as sq
+
+# Get Squadbase user information
+user_info = sq.auth.get_user()
+
+# Store in session state for reuse
+st.session_state['user_info'] = user_info
+
+# Access user data
+st.write(f"Welcome, {user_info.get('firstName', '')} {user_info.get('lastName', '')}")
+```
+
+#### In Local Development Environment
+
+For local development, you can use mock data to simulate the authentication:
+
+```python
+import streamlit as st
+import squadbase.streamlit as sq
+
+# Define mock user data for local testing
+mock_user_data = {
+    "username": "testuser",
+    "firstName": "Test",
+    "lastName": "User",
+    "iconUrl": None,
+    "email": "test@example.com",
+    "role": ["Admin"]
+}
+
+# Get mock user information
+user_info = sq.auth.get_user(mock_data=mock_user_data)
+
+# Use the user information in your app
+st.write(f"Hello, {user_info['firstName']} {user_info['lastName']}")
+```
+
