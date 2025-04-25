@@ -1,0 +1,11 @@
+gtec_ble/__init__.py,sha256=zd3Wu7mYfTXZPdWrws7k52pgMyKJ4XfD5wYlzTAEcwk,196
+gtec_ble/__version__.py,sha256=hPT6D9bZzjdFXbkkeI8vp7opOpk5v_GhRKvIqgTBPh4,65
+gtec_ble/amplifier.py,sha256=4_GA9Q6u9IMEC-1MNJrWxnFxpeJH6h4NvwtDCkl5BTE,2169
+gtec_ble/lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gtec_ble/lib/gtec_ble_wrapper.cp312-win_amd64.pyd,sha256=D2HpGdG9pUrz9Bhao-gZe2-OKobIRORELZxdkRL4Pu4,134656
+gtec_ble/lib/native/windows/x64/libgtecble.dll,sha256=3_KlaUkgD7IlZEkF_PZbKm3b9b_VyL-QEw-CSwbP3T4,318464
+gtec_ble-1.24.4.dist-info/licenses/LICENSE,sha256=YHes1sT6XLg9IAAG1YGubk9ZwW4aUmln0VHdwUZfML8,1653
+gtec_ble-1.24.4.dist-info/METADATA,sha256=z3z2o6a2ZBNqziNn_jcvfTEeRV3ncpiKqkg1kblror8,718
+gtec_ble-1.24.4.dist-info/WHEEL,sha256=Jt89WmAJV88pNRHMaNesrLxovMec0KaUDI5oSN8rrpM,101
+gtec_ble-1.24.4.dist-info/top_level.txt,sha256=p-Qn9Fmr6tLcsWo7Fsspeh9F5tyXK03d5G0vRNTaZ5Y,9
+gtec_ble-1.24.4.dist-info/RECORD,,
