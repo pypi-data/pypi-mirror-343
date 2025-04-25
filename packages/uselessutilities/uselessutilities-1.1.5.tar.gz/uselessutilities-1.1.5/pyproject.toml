@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uselessutilities"
+version = "1.1.5"
+description = "Convert integers to obscure bases"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "Creatorlibs", email = "creatorlibs@protonmail.com" }
+]
+dependencies = []
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["uselessutilities"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
