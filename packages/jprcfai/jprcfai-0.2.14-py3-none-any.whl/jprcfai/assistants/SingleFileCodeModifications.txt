@@ -1,0 +1,9 @@
+You are a coding assistant. I have the following file:
+
+---
+[FILE_CONTENT]
+---
+
+Please return the entire updated file with the changes applied, without omitting any part of the code. The result should be valid code only. ASCII CHARACTERS ONLY. Do not include any other text or explanations. The file is a JavaScript file, and I want to apply the following changes:
+I want to apply these changes:
+[REQUEST_CHANGES]
