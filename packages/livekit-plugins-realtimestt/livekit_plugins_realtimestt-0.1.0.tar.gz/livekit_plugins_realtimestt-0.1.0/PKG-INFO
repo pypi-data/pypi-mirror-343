@@ -1,0 +1,79 @@
+Metadata-Version: 2.4
+Name: livekit-plugins-realtimestt
+Version: 0.1.0
+Summary: RealtimeSTT plugin for LiveKit
+Author-email: Alex Schneider <me@schneider.ax>
+License: ISC License
+        
+        Copyright (c) 2025 Alex Schneider
+        
+        Permission to use, copy, modify, and/or distribute this software for any
+        purpose with or without fee is hereby granted, provided that the above
+        copyright notice and this permission notice appear in all copies.
+        
+        THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+        WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+        MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+        ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+        WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+        ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+        OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+License-File: LICENSE
+Keywords: audio,livekit,realtime,speech-to-text,stream,stt,webrtc
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.11
+Requires-Dist: livekit-agents>=1.0.14
+Requires-Dist: livekit>=1.0.6
+Requires-Dist: realtimestt>=0.3.103
+Description-Content-Type: text/markdown
+
+<br>
+
+<h1 align="center">RealtimeSTT plugin for LiveKit</h1>
+
+<p align="center">
+  <strong>Use RealtimeSTT as the speech-to-text component in LiveKit</strong>
+</p>
+
+<br>
+
+[LiveKit](https://github.com/livekit/livekit) is an open-source WebRTC platform with support for AI agents.
+
+[RealtimeSTT](https://github.com/KoljaB/RealtimeSTT) is a speech-to-text library with advanced voice activity detection, wake-word activation and instant transcription.
+
+This is a plugin for LiveKit that uses RealtimeSTT for speech-to-text generation. It supports only streaming mode, which means VAD and turn-detection components should be disabled in LiveKit.
+
+## Installation
+
+```bash
+pip install livekit-plugins-realtimestt
+```
+
+## Example
+
+```python
+from livekit.agents import Agent
+from livekit-plugins-realtimestt import STT
+
+agent = Agent(
+    stt=STT(
+      # For the full list of options, see RealtimeSTT documentation.
+      options={
+        # When "use_client" is True, the plugin will try to connect to a RealtimeSTT server
+        # via WebSockets, otherwise it will run the library in-process. In that case,
+        # it is recommended to pre-initialize the plugin by calling `stt.prewarm()`
+        # to preload the model and other resources.
+        "use_client": True,
+        # When "enable_realtime_transcription" is True, interim (partial) transcriptions
+        # will be generated in real-time.
+        "enable_realtime_transcription": True,
+        "language": "de",
+      }
+    )
+)
+```
