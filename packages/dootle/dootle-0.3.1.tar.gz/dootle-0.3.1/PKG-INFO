@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: dootle
+Version: 0.3.1
+Summary: A Library of extensions for Doot task running
+Author-email: John Grey <jgrey.n.plus.one@gmail.com>
+Project-URL: homepage, https://github.com/jgrey4296/dootle
+Project-URL: documentation, https://dootle.readthedocs.io/en/latest
+Project-URL: repository, https://github.com/jgrey4296/dootle
+Project-URL: changelog, https://github.com//dootle/blob/master/CHANGELOG.md
+Classifier: Programming Language :: Python
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: doot>=1.0.0
+Requires-Dist: pony>=0.7
+Requires-Dist: networkx
+Requires-Dist: jgdv>=1.0.1
+Requires-Dist: bibtex-bibble
+Requires-Dist: mastodon-py>=2.0.1
+Provides-Extra: dev
+Requires-Dist: myst-parser>=4.0.1; extra == "dev"
+Requires-Dist: pytest>=8.3.5; extra == "dev"
+Requires-Dist: pytest-cov>=6.0.0; extra == "dev"
+Requires-Dist: pytest-mock>=3.14.0; extra == "dev"
+Requires-Dist: sphinx; extra == "dev"
+Requires-Dist: sphinx-rtd-theme>=3.0.2; extra == "dev"
+Requires-Dist: sphinx-autoapi>=3.6.0; extra == "dev"
+Dynamic: license-file
+
+# Dootle : Library for doot
+
+Author: John Grey
+Date  : 2023-05-02
+
+## Overview
+
+
+## Examples
