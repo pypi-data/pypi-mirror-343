@@ -1,0 +1,87 @@
+[project]
+name = "taskinator"
+description = "A Python-based task management system for AI-driven development"
+authors = [
+    {name = "Steve Smashnuk", email = "smashnuk@442online.net"}
+]
+version = "0.1.1"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=2.0.0",
+    "rich>=13.7.0",
+    "caldav>=0.10.0",
+    "anthropic[bedrock]>=0.49.0",
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.1.0",
+    "aiohttp>=3.9.0",
+    "asyncio>=3.4.3",
+    "typing-extensions>=4.8.0",
+    "boto3>=1.37.31",
+    "botocore>=1.37.31",
+    "loguru>=0.7.0",
+    "tomli>=1.0.0",
+    "sentence-transformers>=2.2.2",
+    "numpy>=1.24.0",
+    "questionary>=2.1.0",
+    "dspy-ai>=2.6.18",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "pytest-asyncio>=0.23.0",
+    "black>=24.0.0",
+    "isort>=5.13.0",
+    "mypy>=1.8.0",
+]
+optimize = [
+    "dspy-ai>=2.0.0",
+]
+dspy = [
+    "dspy-ai>=2.0.0",
+]
+
+[project.scripts]
+taskinator = "taskinator.cli:app"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["taskinator"]
+
+[tool.setuptools.package-data]
+taskinator = [
+    "package_data/examples/*",
+    "package_data/examples/.env.example"
+]
+
+[tool.setuptools.exclude-package-data]
+"*" = ["training_data"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "--verbose --tb=short --cov=taskinator --cov-report=term-missing"

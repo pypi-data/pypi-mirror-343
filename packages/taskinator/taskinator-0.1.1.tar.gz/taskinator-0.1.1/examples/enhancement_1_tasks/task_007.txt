@@ -1,0 +1,12 @@
+# Task ID: 7
+# Title: Add CLI Commands for NextCloud Integration
+# Status: done
+# Dependencies: 5 (done)
+# Priority: medium
+# Description: Extend the Taskinator CLI with commands for NextCloud synchronization.
+
+# Details:
+Add new CLI commands: sync-tasks, push-tasks, pull-tasks, and link-task. Implement argument parsing and validation for these commands. Add configuration reading from environment variables. Create clear, user-friendly output for sync status and errors.
+
+# Test Strategy:
+Write integration tests for CLI commands. Test with various arguments and configurations. Verify error handling and output formatting.

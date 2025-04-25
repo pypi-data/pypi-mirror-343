@@ -1,0 +1,2 @@
+[console_scripts]
+taskinator = taskinator.cli:app

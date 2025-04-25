@@ -1,0 +1,41 @@
+# Task ID: 2
+# Title: Extend Task Data Model for NextCloud Integration
+# Status: done
+# Dependencies: None
+# Priority: high
+# Description: Enhance the existing Taskinator data model to include NextCloud-specific fields and synchronization metadata.
+
+# Details:
+Add fields to the task model to store NextCloud IDs, synchronization status, last sync timestamp, and modification history. Implement version tracking for conflict resolution. Create mappings between Taskinator and NextCloud task fields. Design the model extensions to be non-intrusive to existing functionality.
+
+# Test Strategy:
+Write unit tests for the extended data model. Verify that existing functionality works with the extended model. Test serialization and deserialization of tasks with NextCloud metadata.
+
+# Subtasks:
+## 1. Design and implement synchronization metadata fields [pending]
+### Dependencies: None
+### Priority: medium
+### Description: Add NextCloud-specific fields to the Task model to track synchronization state and remote identifiers
+### Details:
+Extend the Task model with the following fields: 'nextcloud_id' (string, nullable), 'sync_status' (enum: 'synced', 'pending_upload', 'pending_download', 'conflict', 'error'), 'last_synced_at' (timestamp), 'remote_modified_at' (timestamp), 'sync_error' (string, nullable). Create database migration scripts to add these fields. Update the relevant repositories and interfaces to support these new fields. Add getters and setters for the new fields in the Task model.
+
+## 2. Create version tracking system for conflict resolution [pending]
+### Dependencies: 2.1
+### Priority: medium
+### Description: Implement a version history system to track changes and resolve conflicts during synchronization
+### Details:
+Create a new 'TaskVersion' model to store task snapshots with fields: 'task_id', 'version_number', 'data' (JSON blob of task state), 'created_at', 'source' (enum: 'local', 'remote'). Implement methods to create a new version when significant changes occur. Create a conflict resolution service that can compare versions and apply resolution strategies (latest wins, manual merge, etc.). Add UI indicators for conflicts and a conflict resolution interface. Implement version pruning to prevent unlimited history growth.
+
+## 3. Develop bidirectional field mappings between Taskinator and NextCloud [pending]
+### Dependencies: 2.1
+### Priority: medium
+### Description: Create a mapping system to translate task fields between Taskinator and NextCloud formats
+### Details:
+Create a TaskMapper service that defines bidirectional mappings between Taskinator fields and NextCloud fields. Map core fields like title, description, due date, priority, and completion status. Handle special cases like recurring tasks, attachments, and custom fields. Implement serialization methods to convert Task objects to NextCloud format and deserialization methods to create/update Task objects from NextCloud data. Add unit tests to verify correct mapping in both directions for various task configurations.
+
+## 4. Ensure backward compatibility with existing functionality [pending]
+### Dependencies: 2.1, 2.2, 2.3
+### Priority: medium
+### Description: Verify and maintain compatibility with existing Taskinator features when using the extended data model
+### Details:
+Audit all services and repositories that interact with the Task model and update them to handle the new fields appropriately. Add null checks and default values for the new fields to ensure existing code paths work correctly. Update the serialization/deserialization logic for API endpoints, storage, and export/import features. Create integration tests that verify all existing features work with both synced and non-synced tasks. Update task creation and editing workflows to handle the new fields while maintaining the existing user experience for non-NextCloud users.

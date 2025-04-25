@@ -1,0 +1,55 @@
+# Task ID: 5
+# Title: Implement Bidirectional Sync Engine
+# Status: done
+# Dependencies: 1 (done), 2 (done), 4 (done)
+# Priority: high
+# Description: Develop the core synchronization engine that handles bidirectional updates between systems.
+
+# Details:
+Create a sync engine that detects changes in both systems, applies updates, and resolves conflicts. Implement delta sync to minimize data transfer. Support manual and automatic synchronization modes. Add configurable sync scope to allow filtering which tasks are synchronized. Develop conflict resolution strategies with user configuration options.
+
+# Test Strategy:
+Create comprehensive tests for various sync scenarios. Test conflict resolution with different strategies. Verify delta sync efficiency. Test with large task sets to ensure performance.
+
+# Subtasks:
+## 1. Implement Change Detection System [pending]
+### Dependencies: None
+### Priority: medium
+### Description: Create a system that detects changes in both local and remote task management systems.
+### Details:
+Develop two change detection components: LocalChangeDetector and RemoteChangeDetector. Each detector should maintain a timestamp of last sync and compare current state with previous state to identify created, updated, and deleted items. Implement a checksum mechanism for efficient comparison. Store previous state in a local database for comparison. The detectors should return a standardized ChangeSet object containing all modifications since last sync.
+
+## 2. Develop Delta Sync Algorithm [pending]
+### Dependencies: 5.1
+### Priority: medium
+### Description: Create an algorithm that minimizes data transfer by only synchronizing changes rather than full datasets.
+### Details:
+Implement a DeltaSyncManager that takes ChangeSet objects from both detectors and creates an optimized sync plan. Use a differential algorithm that compares object properties to identify only the fields that changed. Implement data compression for sync payloads. Create a bandwidth usage tracker to monitor and report on efficiency gains. The algorithm should handle partial sync failures and resume capability.
+
+## 3. Build Manual Sync Mode [pending]
+### Dependencies: 5.1, 5.2
+### Priority: medium
+### Description: Implement functionality allowing users to manually trigger synchronization operations.
+### Details:
+Create a ManualSyncController with methods for initiating full or selective syncs. Add a UI component for sync progress visualization with cancel capability. Implement detailed logging of manual sync operations. Add post-sync reporting to show users what changed. Ensure the manual sync respects user-defined sync scope and filtering rules.
+
+## 4. Implement Automatic Sync Mode with Triggers [pending]
+### Dependencies: 5.1, 5.2
+### Priority: medium
+### Description: Develop a system for automatic synchronization based on various triggers and schedules.
+### Details:
+Create an AutoSyncScheduler that supports interval-based syncing (every X minutes/hours). Implement event-based triggers that initiate sync after specific actions (task creation, completion, etc.). Add network awareness to pause syncing when offline and resume when connection is restored. Develop a background service that manages the sync schedule and executes syncs without blocking the UI. Include battery and data usage optimizations for mobile devices.
+
+## 5. Create Configurable Sync Scope and Filtering [pending]
+### Dependencies: 5.1, 5.2
+### Priority: medium
+### Description: Implement functionality to allow users to define which tasks and properties are synchronized.
+### Details:
+Build a SyncFilterManager that allows filtering by project, tag, priority, due date range, and completion status. Implement property-level filtering to specify which fields sync (e.g., sync descriptions but not attachments). Create a configuration UI for users to define and save sync profiles. Support blacklist and whitelist approaches to filtering. Ensure filters are applied consistently in both sync directions.
+
+## 6. Develop Conflict Resolution System [pending]
+### Dependencies: 5.1, 5.2
+### Priority: medium
+### Description: Create a system that detects and resolves conflicts when both systems have modified the same task.
+### Details:
+Implement a ConflictDetector that identifies when the same item has been modified in both systems since last sync. Create resolution strategies: newest-wins, source-priority, manual resolution. Build a ConflictResolutionUI for when manual intervention is needed. Implement a conflict history log to track resolution decisions. Add the ability to set default resolution strategies per project or globally. Create a notification system to alert users of unresolved conflicts.

@@ -1,0 +1,74 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Fix External Integration Tests",
+      "status": "pending",
+      "dependencies": [],
+      "priority": "high",
+      "description": "Fix import errors in external integration tests",
+      "details": "Update import statements in test_external_integration.py, test_integration_sync.py, test_nextcloud_adapter.py, and test_sync_manager.py to match the current module structure.",
+      "test_strategy": "Run tests after each fix to verify they pass."
+    },
+    {
+      "id": 2,
+      "title": "Improve Task Manager Coverage",
+      "status": "pending",
+      "dependencies": [],
+      "priority": "high",
+      "description": "Add tests for core task management functionality",
+      "details": "Create comprehensive tests for task_manager.py covering task creation, retrieval, status updates, dependency management, and task expansion. Aim for at least 50% coverage of this critical module.",
+      "test_strategy": "Use mocking to isolate task manager functionality from external dependencies. Verify task operations with assertions on expected outputs and state changes."
+    },
+    {
+      "id": 3,
+      "title": "Improve UI Module Coverage",
+      "status": "pending",
+      "dependencies": [],
+      "priority": "medium",
+      "description": "Add tests for UI components",
+      "details": "Create tests for ui.py focusing on loading indicators, progress reporting, and user prompts. Ensure proper mocking of terminal output and input functions.",
+      "test_strategy": "Mock stdout/stdin to test UI components without actual terminal interaction. Verify correct function calls and output formatting."
+    },
+    {
+      "id": 4,
+      "title": "Improve Utils Module Coverage",
+      "status": "pending",
+      "dependencies": [],
+      "priority": "medium",
+      "description": "Add tests for utility functions",
+      "details": "Create tests for utils.py focusing on file operations, data transformation utilities, and validation functions. These utilities are used throughout the codebase and need thorough testing.",
+      "test_strategy": "Mock file system operations. Test each utility function with various input scenarios including edge cases."
+    },
+    {
+      "id": 5,
+      "title": "Improve Document Model Coverage",
+      "status": "pending",
+      "dependencies": [],
+      "priority": "medium",
+      "description": "Add tests for document models",
+      "details": "Enhance tests for PDD and SOP document models, focusing on document creation, validation, and relationship management. Test document serialization and deserialization.",
+      "test_strategy": "Create sample documents for testing. Verify document properties and methods with assertions."
+    },
+    {
+      "id": 6,
+      "title": "Add CLI Command Tests",
+      "status": "pending",
+      "dependencies": [],
+      "priority": "high",
+      "description": "Add tests for CLI commands",
+      "details": "Create tests for CLI commands including task management, document conversion, and configuration commands. Ensure proper command parsing and execution.",
+      "test_strategy": "Mock command line arguments and verify command execution and output. Test various input scenarios including invalid inputs."
+    },
+    {
+      "id": 7,
+      "title": "Add Integration Tests for Workflows",
+      "status": "pending",
+      "dependencies": [1, 2],
+      "priority": "high",
+      "description": "Add end-to-end tests for key workflows",
+      "details": "Create integration tests for complete workflows: PRD → PDD → SOP → Tasks, task expansion, and external synchronization. Verify entire process chains work correctly.",
+      "test_strategy": "Use mocks for external dependencies. Set up test fixtures with sample documents. Verify outputs at each stage of the workflow."
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+# Task ID: 11
+# Title: Develop NLP similarity detection for Process Intelligence Engine
+# Status: in_progress
+# Dependencies: None
+# Priority: high
+# Description: Implement NLP-based similarity detection for comparing process steps
+
+# Details:
+Develop a system that can detect semantic similarity between process steps in different SOPs and PDDs. This will be used to identify redundant or similar processes across the organization.
+
+# Test Strategy:
+- Unit tests for similarity detection with known similar and dissimilar examples
+- Integration tests with the Process Intelligence Engine
+
+# Subtasks:
+
+## 1. Research and select NLP libraries and embedding models [pending]
+### Dependencies: None
+### Priority: high
+### Description: Evaluate and select appropriate NLP libraries and embedding models for semantic similarity detection
+### Details:
+Research and evaluate different NLP libraries and embedding models for semantic similarity detection. Consider factors such as accuracy, performance, ease of integration, and licensing.
+
+### Research Results:
+Research completed successfully with excellent results.
+
+## Recommendations
+**Library and Model Selection**: ["Use sentence-transformers (v2.7+) with a model like 'all-MiniLM-L6-v2' for fast, accurate embeddings", "For higher accuracy or technical domains, use 'roberta-base' or a domain-specific model via Hugging Face Transformers", 'Integrate spaCy for preprocessing and entity extraction']
+**Similarity Computation Example (Python)**: from sentence_transformers import SentenceTransformer, util
+model = SentenceTransformer('all-MiniLM-L6-v2')
+steps = ["Log in to the system", "Authenticate user credentials"]
+embeddings = model.encode(steps, convert_to_tensor=True)
+similarity = util.pytorch_cos_sim(embeddings, embeddings[1])
+print(f"Cosine similarity: {similarity.item():.4f}")
+**Hybrid DSPy Integration Example**: import dspy
+from sentence_transformers import SentenceTransformer, util
+
+class TextSimilarityInput(dspy.Signature):
+    """Compare two text passages for semantic similarity."""
+    text_a = dspy.InputField(desc="First text passage to compare")
+    text_b = dspy.InputField(desc="Second text passage to compare")
+
+class TextSimilarityOutput(dspy.Signature):
+    """Output indicating whether two text passages are semantically similar."""
+    are_similar = dspy.OutputField(desc="Boolean indicating if the passages are semantically similar")
+    explanation = dspy.OutputField(desc="Brief explanation of the similarity assessment")
+
+class TextSimilarityModule(dspy.Module):
+    """A DSPy module that uses both embedding similarity and LLM judgment to determine text similarity."""
+    
+    def __init__(self, threshold=0.8):
+        super().__init__()
+        self.threshold = threshold
+        self.model = SentenceTransformer('all-MiniLM-L6-v2')
+        self.llm_judge = dspy.ChainOfThought(TextSimilarityInput, TextSimilarityOutput)
+    
+    def forward(self, text_a, text_b):
+        # First check via embeddings
+        emb_a = self.model.encode(text_a, convert_to_tensor=True)
+        emb_b = self.model.encode(text_b, convert_to_tensor=True)
+        cos_sim = util.pytorch_cos_sim(emb_a, emb_b).item()
+        
+        # Clear decision based on vector similarity
+        if cos_sim > self.threshold:
+            return TextSimilarityOutput(
+                are_similar=True,
+                explanation=f"High cosine similarity of {cos_sim:.2f}, exceeding threshold of {self.threshold}."
+            )
+        elif cos_sim < (self.threshold - 0.2):
+            return TextSimilarityOutput(
+                are_similar=False,
+                explanation=f"Low cosine similarity of {cos_sim:.2f}, well below threshold of {self.threshold}."
+            )
+        
+        # Use LLM for ambiguous cases
+        llm_result = self.llm_judge(text_a=text_a, text_b=text_b)
+        return llm_result
+
+# Example usage
+if __name__ == "__main__":
+    # Configure the DSPy LLM
+    dspy.settings.configure(lm=dspy.OpenAI(model="gpt-4"))
+    
+    # Initialize the module
+    similarity_module = TextSimilarityModule(threshold=0.8)
+    
+    # Test with examples
+    examples = [
+        ("Check if the file exists", "Verify that the file is present"),
+        ("Download the dataset from the URL", "Train the model on the dataset")
+    ]
+    
+    for ex_a, ex_b in examples:
+        result = similarity_module(ex_a, ex_b)
+        print(f"Text A: '{ex_a}'")
+        print(f"Text B: '{ex_b}'")
+        print(f"Similar: {result.are_similar}")
+        print(f"Explanation: {result.explanation}")
+        print("-" * 50)
+**Batch Processing and Caching**: ['Encode all process steps in batches to leverage hardware acceleration', 'Store embeddings in a vector database (e.g., FAISS) for fast KNN search']
+**Evaluation**: ['Label a sample set of similar/dissimilar step pairs from PDDs/SOPs', 'Compute precision, recall, and F1-score for similarity detection', 'Benchmark inference time and memory usage']
+
+## Resources
+sentence-transformers documentation (https://www.sbert.net/)
+Hugging Face Transformers docs (https://huggingface.co/docs/transformers/)
+DSPy documentation (https://github.com/stanfordnlp/dspy)
+Ultimate Guide To Text Similarity With Python[1]
+Top 10 Tools for Calculating Semantic Similarity[3]
+NLP Techniques For Measuring Text Similarity - Restack[5]
+
+## Sources
+https://www.sbert.net/)",
+https://huggingface.co/docs/transformers/)",
+https://github.com/stanfordnlp/dspy)",
+
+## 2. Define similarity metrics and thresholds for process steps [pending]
+### Dependencies: 1
+### Priority: medium
+### Description: Define appropriate similarity metrics and thresholds for determining when process steps are similar
+
+## 3. Implement embedding-based similarity detection [pending]
+### Dependencies: 1, 2
+### Priority: high
+### Description: Implement the core similarity detection functionality using embeddings
+
+## 4. Develop API for similarity queries [pending]
+### Dependencies: 3
+### Priority: medium
+### Description: Create an API for querying similarity between process steps
+
+## 5. Integrate with Process Intelligence Engine [pending]
+### Dependencies: 4
+### Priority: medium
+### Description: Integrate the similarity detection with the Process Intelligence Engine
+
+## 6. Implement caching for performance optimization [pending]
+### Dependencies: 3
+### Priority: low
+### Description: Add caching mechanisms to improve performance for repeated similarity checks
+
+## 7. Create visualization for similar processes [pending]
+### Dependencies: 5
+### Priority: low
+### Description: Develop visualizations to show similar processes across the organization
