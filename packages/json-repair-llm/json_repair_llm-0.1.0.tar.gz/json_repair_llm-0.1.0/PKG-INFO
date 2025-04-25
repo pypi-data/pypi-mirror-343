@@ -1,0 +1,194 @@
+Metadata-Version: 2.4
+Name: json_repair_llm
+Version: 0.1.0
+Summary: JSON repair using multiple backends: LLMs and FSM-based processing with Pydantic models
+Project-URL: Homepage, https://github.com/imvladikon/json-repair-llm
+Project-URL: Bug Tracker, https://github.com/imvladikon/json-repair-llm/issues
+Author-email: Vladimir Gurevich <imvladikon@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Vladimir Gurevich
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+Requires-Dist: accelerate
+Requires-Dist: bitsandbytes
+Requires-Dist: jinja2
+Requires-Dist: json-repair
+Requires-Dist: loguru
+Requires-Dist: outlines[transformers]
+Requires-Dist: pydantic<3.0.0,>=2.10.0
+Requires-Dist: sentencepiece
+Requires-Dist: torch
+Requires-Dist: transformers
+Provides-Extra: dev
+Requires-Dist: build; extra == 'dev'
+Requires-Dist: isort; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Requires-Dist: setuptools; extra == 'dev'
+Requires-Dist: twine; extra == 'dev'
+Requires-Dist: wheel; extra == 'dev'
+Provides-Extra: fsm
+Requires-Dist: transitions; extra == 'fsm'
+Provides-Extra: full
+Requires-Dist: flash-attn; extra == 'full'
+Requires-Dist: transitions; extra == 'full'
+Description-Content-Type: text/markdown
+
+# JSON Repair LLM
+
+A Python package for repairing broken JSON using multiple backends: LLMs and FSM-based processing with Pydantic models.
+
+## Disclaimer
+
+This package is not a replacement for a full-fledged JSON parser or parsers like `json-repair`.
+It is designed to assist in repairing broken JSON structures, that cloud LLMs might produce 
+(some models even with proper prompting still might return broken JSON or JSON with extra-text).
+
+The main purpose is to process output from cloud LLMs, where packages like `outlines` or `xgrammar` are not applicable.
+
+## Features
+
+- **Multiple backends**: Choose between LLM-based repair, FSM-based repair, or both
+- **Pydantic integration**: Validate and enforce schema compliance
+- **Slot filling**: Extract structured information from unstructured text
+- **Flexible configuration**: Use with different LLM models
+- **Low dependency mode**: Use FSM processor with minimal dependencies
+
+## How It Works
+
+1. LLM-based repair:
+   - uses a large language model(`HuggingFaceTB/SmolLM2-360M-Instruct`) to repair broken JSON.
+   - outlines helps to generate a grammatically correct JSON.
+   - additionally, llm backend can be used as "slot filling" processor to extract structured data from unstructured text.
+   - based on pydantic models, it can validate and enforce schema compliance.
+2. FSM-based repair:
+   - uses a very simplistic finite state machine (FSM) to parse and repair broken JSON (if `json-repair` was not successful).
+   - based on pydantic models, it can validate and enforce schema compliance.
+
+## Installation
+
+```bash
+# Basic installation
+pip install json-repair-llm
+
+# With FSM capabilities
+pip install json-repair-llm[fsm]
+
+# With all dependencies (including flash-attention)
+pip install json-repair-llm[full]
+```
+
+## Flash Attention (Optional)
+
+For better performance with LLM-based repair, you can install flash-attention:
+
+```bash
+pip install flash-attn --no-build-isolation
+```
+
+## Usage
+
+### Basic Usage
+
+```python
+from json_repair_llm import JsonRepairProcessor
+from pydantic import BaseModel
+
+
+# Define your data schema
+class UserProfile(BaseModel):
+    name: str
+    age: int
+    email: str
+
+
+# Create processor with default LLM backend
+processor = JsonRepairProcessor(UserProfile)
+
+# Process broken JSON
+broken_json = '{name": "John Doe"\, "age": 30, email: "john@example.com"}'
+result = processor(broken_json)
+
+print(result.model_dump())
+# {'name': 'John Doe', 'age': 30, 'email': 'john@example.com'}
+```
+
+### Using Different Backends
+
+```python
+# Use FSM backend (no LLM required)
+processor_fsm = JsonRepairProcessor(UserProfile, backend="fsm")
+
+# Use both backends (FSM first, then LLM if needed)
+processor_all = JsonRepairProcessor(UserProfile, backend="all")
+```
+
+### Slot Filling for Unstructured Text
+
+```python
+# Extract structured data from plain text
+processor = JsonRepairProcessor(UserProfile, backend="llm")
+plain_text = """
+Hello, my name is Jane Smith. I'm 28 years old.
+You can contact me at jane.smith@example.com for more information.
+"""
+result = processor(plain_text, use_slot_filling=True)
+print(result.model_dump())
+# {'name': 'Jane Smith', 'age': 28, 'email': 'jane.smith@example.com'}
+```
+
+### Using a Custom LLM Model
+
+```python
+processor = JsonRepairProcessor(
+    UserProfile,
+    backend="llm",
+    model_name="gpt2",  # Replace with your preferred model
+    prompt_template="Fix this JSON: {{ broken_json }}\nSchema: {{ schema }}\nFixed JSON:"
+)
+```
+
+## FSM vs LLM Backend
+
+- **FSM Backend**:
+    - Faster, no external API calls
+    - Works without internet connection
+    - Limited to simpler JSON repairs
+    - No dependencies on ML libraries
+
+- **LLM Backend**:
+    - Better at handling complex repairs
+    - Can extract structure from unstructured text
+    - Higher accuracy for severely broken JSON
+    - Requires ML libraries and models
+
+## License
+
+MIT License

@@ -1,0 +1,89 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "json_repair_llm"
+version = "0.1.0"
+description = "JSON repair using multiple backends: LLMs and FSM-based processing with Pydantic models"
+readme = "README.md"
+authors = [
+    { name = "Vladimir Gurevich", email = "imvladikon@gmail.com" }
+]
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Intended Audience :: Developers",
+]
+dependencies = [
+    "outlines[transformers]",
+    "transformers",
+    "torch",
+    "pydantic>=2.10.0, <3.0.0",
+    "accelerate",
+    "sentencepiece",
+    "bitsandbytes",
+    "loguru",
+    "jinja2",
+    "json-repair",
+]
+
+[project.optional-dependencies]
+dev = [
+    "setuptools",
+    "wheel",
+    "build",
+    "twine",
+    "pytest",
+    "isort",
+    "mypy",
+    "ruff",
+]
+fsm = [
+    "transitions",
+]
+full = [
+    "flash-attn",
+    "transitions",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/imvladikon/json-repair-llm"
+"Bug Tracker" = "https://github.com/imvladikon/json-repair-llm/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["json_repair_llm"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "W",
+    "F",
+    "I",
+]
+ignore = [
+    "E731", # do not assign a lambda expression, use def
+    "E741", # do not use lambdas
+    "E722"  # ignore bare except
+]
