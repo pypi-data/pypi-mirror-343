@@ -1,0 +1,14 @@
+edipy2/__init__.py,sha256=Uwe5AIfXobrnBQFNtfzEmu6RszRySyNr6reu2kg2KW4,161
+edipy2/edi2py.py,sha256=dtQMvF5PXOzS7UG_kATZnjU-9etC_3mjXITQUXjF9AU,11605
+edipy2/func_aux_funx.py,sha256=1iD8g9feAp55VAgrlA-EudGk_vQ4ZGQ3x7_6-uGm2oA,12428
+edipy2/func_bath.py,sha256=6dHn9mmfwDL3wsxf-JS5-XpdRB37NWreJIBEubJ_We4,53681
+edipy2/func_bath_fit.py,sha256=83fcfvAHY_4GCxUP_yNvGy-w3KC0whzG7OJss9KFOZQ,15097
+edipy2/func_io.py,sha256=LHAmA2dd2DcT9yWmjpkCs3wy0YE-_P-Tk0qlAKHQFuI,49209
+edipy2/func_main.py,sha256=WLHDFKUfl3sqxwr2yptq0pZc9tOs2Thec2QwVs8LX14,8011
+edipy2/func_parse_umatrix.py,sha256=XT0Y0jalt1Ncg5cSjNeq8nrwYADPIjohVOVWnwvG4M8,2105
+edipy2/func_read_input.py,sha256=a6jBmNLOtck1eblc1v6FoCPKw8v21uwDpy4NbxC3QYo,873
+edipy2-4.0.0.dist-info/licenses/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+edipy2-4.0.0.dist-info/METADATA,sha256=1vJ-vrCsXuJ6JCbjuusii1Hz3j_XwBRQSxQOzwycNSg,2388
+edipy2-4.0.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+edipy2-4.0.0.dist-info/top_level.txt,sha256=S9psPdC9p1yECuMbaUIEyLLHiIF6VQpOpvfHslbHBcc,7
+edipy2-4.0.0.dist-info/RECORD,,
