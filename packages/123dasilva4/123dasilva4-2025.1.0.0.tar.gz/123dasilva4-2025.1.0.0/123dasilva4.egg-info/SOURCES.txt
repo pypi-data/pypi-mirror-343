@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+123dasilva4/__init__.py
+123dasilva4/dobro.py
+123dasilva4.egg-info/PKG-INFO
+123dasilva4.egg-info/SOURCES.txt
+123dasilva4.egg-info/dependency_links.txt
+123dasilva4.egg-info/top_level.txt
