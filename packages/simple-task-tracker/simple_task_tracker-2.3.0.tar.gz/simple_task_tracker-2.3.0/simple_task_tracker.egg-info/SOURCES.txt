@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+simple_task_tracker/__init__.py
+simple_task_tracker/main.py
+simple_task_tracker.egg-info/PKG-INFO
+simple_task_tracker.egg-info/SOURCES.txt
+simple_task_tracker.egg-info/dependency_links.txt
+simple_task_tracker.egg-info/entry_points.txt
+simple_task_tracker.egg-info/requires.txt
+simple_task_tracker.egg-info/top_level.txt
