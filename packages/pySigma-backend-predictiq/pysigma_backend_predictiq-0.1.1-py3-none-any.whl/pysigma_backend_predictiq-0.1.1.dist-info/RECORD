@@ -1,0 +1,9 @@
+sigma/backends/predictiq/__init__.py,sha256=RqMVY1qUewYXym21u8DdOyALWYwADTpM_JaEa1TbaqA,203
+sigma/backends/predictiq/predictiq.py,sha256=jqggu7nNfpK0aih67LMvC6Vd2nk4FUha2MT04RUe97U,3804
+sigma/pipelines/predictiq/__init__.py,sha256=alb8a8GBhKYBQFk19bA39vkPFh0w5pucsg87EqDgJ7w,214
+sigma/pipelines/predictiq/predictiq.py,sha256=xjUjrM1MMYh21DsO4gGd0hrS_XQy4uZKzlXfvaMtu3g,15083
+pysigma_backend_predictiq-0.1.1.dist-info/entry_points.txt,sha256=7hOMmr3atTBiHujvDL2cOt_ESnshQljv0wmu3rPNys8,77
+pysigma_backend_predictiq-0.1.1.dist-info/LICENSE,sha256=heYZq9Qb05qnRMtR0GVGguZmKBYl8GW4l0rUREHVFTk,1053
+pysigma_backend_predictiq-0.1.1.dist-info/METADATA,sha256=bpi2mtiokG6NYteegFtHVpjbayy306tqLQBgRmuh_pE,702
+pysigma_backend_predictiq-0.1.1.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+pysigma_backend_predictiq-0.1.1.dist-info/RECORD,,

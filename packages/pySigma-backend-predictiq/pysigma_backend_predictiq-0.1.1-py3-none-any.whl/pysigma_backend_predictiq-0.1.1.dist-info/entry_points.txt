@@ -1,0 +1,3 @@
+[sigma.backends]
+predictiq=sigma_custom.backends.predictiq:PredictIQBackend
+
