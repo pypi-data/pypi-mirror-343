@@ -1,0 +1,58 @@
+[tool.poetry]
+name = "dupegrouper"
+version = "0.1.2"
+description = "A Python library for grouping duplicate data efficiently."
+authors = ["VictorAutonell-Oiry"]
+readme = "README.md"
+license = "Apache-2.0"
+keywords = [ "duplicates", "deduplication", "grouping" ]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+
+  "Programming Language :: Python :: 3.11",
+]
+repository = "https://github.com/VictorAut/dupegrouper/"
+documentation = "https://victorautonell-oiry.me/dupegrouper/dupegrouper.html"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.3"
+polars = "^1.24.0"
+rapidfuzz = "^3.12.2"
+scikit-learn = "^1.6.1"
+sparse-dot-topn = "^1.1.5"
+multipledispatch = "^1.0.0"
+typing-extensions = "^4.13.0"
+
+
+[tool.poetry.group.dev.dependencies]
+faker = "^37.0.0"
+ipython = "^9.0.2"
+ipykernel = "^6.29.5"
+black = "^25.1.0"
+ruff = "^0.11.2"
+mypy = "^1.15.0"
+pandas-stubs = "^2.2.3.250308"
+scipy-stubs = "^1.15.2.1"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.5"
+
+[tool.poetry.group.docs.dependencies]
+pdoc = "^15.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.mypy.overrides]]
+module = ["multipledispatch.*"]
+follow_untyped_imports = true
+
+[tool.black]
+line-length = 120
