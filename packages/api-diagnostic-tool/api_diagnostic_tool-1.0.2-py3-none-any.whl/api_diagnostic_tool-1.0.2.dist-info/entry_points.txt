@@ -1,0 +1,2 @@
+[console_scripts]
+api-diagnostic = api_diagnostic_tool.cli:cli
