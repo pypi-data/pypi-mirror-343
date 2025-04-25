@@ -1,0 +1,9 @@
+soundstorm_pytorch/__init__.py,sha256=NWo5KYEj693-XUHQbbBlMnOsnooEXOYhI8gtUc1lxMU,180
+soundstorm_pytorch/attend.py,sha256=VKxsjXBqqoEdHQoAMbYKt37ukrFg5ZBBOv9UHHE9XRw,4951
+soundstorm_pytorch/soundstorm.py,sha256=qhEe0kp4-BEVHswKqd8G-4J24D7S_CQvNmuc_DT8kIU,43260
+soundstorm_pytorch/trainer.py,sha256=KmeXbLaXlP80Zrzhn61xfnnaaQlFCJ_2qujPyRsls7w,10323
+soundstorm_pytorch-0.6.1.dist-info/licenses/LICENSE,sha256=JCo3d2HvOFPGYvaXfnYX4-qjRyQvVElop5ZRITXMg-U,1066
+soundstorm_pytorch-0.6.1.dist-info/METADATA,sha256=YNkSiFJnl194zARRkKBCKXfqGGzN99J9YeUWlU-B1OA,1185
+soundstorm_pytorch-0.6.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+soundstorm_pytorch-0.6.1.dist-info/top_level.txt,sha256=k3TxUQQtIPMj_5wfoWWifMXGPh7-L2lg9CU26vmWr6w,19
+soundstorm_pytorch-0.6.1.dist-info/RECORD,,
