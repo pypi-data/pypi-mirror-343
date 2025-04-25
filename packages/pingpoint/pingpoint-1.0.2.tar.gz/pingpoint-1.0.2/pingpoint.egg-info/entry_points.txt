@@ -1,0 +1,2 @@
+[console_scripts]
+pingpoint = pingpoint.cli:cli
