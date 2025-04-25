@@ -1,0 +1,12 @@
+storage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+storage/database.py,sha256=2fcq3hiPChMcs-ivlcNx1InLMvfpbd3VHV94Qjf1Cis,525
+utils/MessagingUtil.py,sha256=k9LdpSbxVxclXJJ5iHpuU-JyUW_hMtKrj-NVKAhXXm8,716
+utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils/voice.py,sha256=oPvVYcH18XMDjgftImuAoyUqjPDTBp6MUOYY0j7QDhY,1736
+utils/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils/tests/test_MessagingUtil.py,sha256=5w7viFT2RMeZeIKsxwg5Zw7CWUbp4xjlBJTtW8S4yQg,638
+utils/tests/test_VoiceUtil.py,sha256=dHKh48M2fNv6CTD6iuLC9ks6g5EpkcUoqWp0-AwAMG4,816
+backend_commons-0.1.dev20250424175047931.dist-info/METADATA,sha256=-vRcf49ewZLjEjqkYUFRBKr-tgpcSAxeoJrj6XfJX1g,126
+backend_commons-0.1.dev20250424175047931.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+backend_commons-0.1.dev20250424175047931.dist-info/top_level.txt,sha256=QEDVGhlOoZ_ZN353a3TrjaK3CJNESzYg7w2Jpni3RJ8,14
+backend_commons-0.1.dev20250424175047931.dist-info/RECORD,,
