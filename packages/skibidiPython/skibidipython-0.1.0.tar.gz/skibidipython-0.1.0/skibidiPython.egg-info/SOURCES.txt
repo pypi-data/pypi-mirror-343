@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+SkibidiPython/__init__.py
+SkibidiPython/package.py
+skibidiPython.egg-info/PKG-INFO
+skibidiPython.egg-info/SOURCES.txt
+skibidiPython.egg-info/dependency_links.txt
+skibidiPython.egg-info/top_level.txt
