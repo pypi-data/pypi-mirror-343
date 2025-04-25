@@ -1,0 +1,12 @@
+xkits_file/__init__.py,sha256=oSEtU2Y0dCxrmQjPOVKBBRGb5caw7fRI1H4sWm67Efs,286
+xkits_file/attribute.py,sha256=CN55GFj6b9Oy0UgKhYbukhWMINq-aGcGld87oKgkB3w,227
+xkits_file/download.py,sha256=ssNdiv4JQddWq19C5KEEmrb1fyMmFSLXaYuv5g8zN5c,4558
+xkits_file/filestat.py,sha256=UV41hv5M0UdL9_M77wc3hui3wiPPl6yjyVbk7ZNvlQU,7639
+xkits_file/safefile.py,sha256=_UUNvZC5NZQeGkZyxySZtUyMa9tMeoDsjXoIHG_9PUY,5449
+xkits_file/scanner.py,sha256=yacju7RXngk-rjduK5-SKv3SaJanixEjL-yMEjKalaM,7610
+xkits_file-0.3.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+xkits_file-0.3.dist-info/METADATA,sha256=JFDpykK-uK3lmM1faRvMednAB15koBHJxylBOPhlem0,699
+xkits_file-0.3.dist-info/WHEEL,sha256=pWvVuNuBTVmNV7Lp2jMAgt1NplTICeFdl1SW8U3MWN4,109
+xkits_file-0.3.dist-info/top_level.txt,sha256=ivME5jV3oXZ3AUys2ICYxR2wXSQ4hxDrB-sjXShY3xI,11
+xkits_file-0.3.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+xkits_file-0.3.dist-info/RECORD,,
