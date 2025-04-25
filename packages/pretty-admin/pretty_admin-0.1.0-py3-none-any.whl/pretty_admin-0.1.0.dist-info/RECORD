@@ -1,0 +1,13 @@
+pretty_admin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pretty_admin/admin.py,sha256=p6xop1PuuDG2Uwv3G_aRfldxOfBzTRfMaoZmORVkqyU,66
+pretty_admin/apps.py,sha256=G1UFFXAV-0V_CQZEUHZJKEZ9DDLCj3Dq5Mwp-Wd8lJ8,161
+pretty_admin/models.py,sha256=4OVMcDDx9fVgBEJ91B7dfMEG2Ni1LRSLJOKzIkVPsKo,60
+pretty_admin/tests.py,sha256=2uDafv3Ns6f7Vy1ekUtgYxCZEi1KRyesZDTAFhYcX-E,63
+pretty_admin/views.py,sha256=u0FhL7RT5byf5IlcnZEMrcH2TOnQkdfRQU2SjtA26m0,66
+pretty_admin/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pretty_admin/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pretty_admin/templatetags/form_filters.py,sha256=vhrqHjG8_ATsj6rOAD1kWc1DYG0BjRt4moKCp6lBIEU,190
+pretty_admin-0.1.0.dist-info/METADATA,sha256=yrBQlUmj4JzR6CUFezDf6a0ImpZYRs80UnSX3mRiRao,222
+pretty_admin-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+pretty_admin-0.1.0.dist-info/top_level.txt,sha256=ShugDyXG1E7bxAzScu1jJQDe8qNtZiZH3TT7axVlXEQ,13
+pretty_admin-0.1.0.dist-info/RECORD,,
