@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: framepack
+Version: 0.0.2
+Summary: 1-click video generator
+Author-email: calcuis <info@calcu.io>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: tqdm
+Project-URL: Download, https://github.com/calcuis/packpack/releases
+Project-URL: GitHub, https://github.com/calcuis/packpack
+Project-URL: Issues, https://github.com/calcuis/packpack/issues
+
+## framepack
+
+enter the user menu by (if no py command; use python/python3 instead)
+```
+py -m framepack
+```
+
+### packpack (aka framepack) - inside the code pack
+
+for 1st time launch or model install: run `online.py` (internet access needed)
+```
+py online.py
+```
+
+when all the model files stored locally; then opt to switch to run it entirely offline by:
+```
+py offline.py
+```
+
+### protable pack - extra tools inside the full pack
+- cuda128 installer for 50 serise card
+- installer.bat (online) and run.bat (offline); linked to the py script above
+
+### reference: [lllyasviel](https://github.com/lllyasviel/FramePack)
+
