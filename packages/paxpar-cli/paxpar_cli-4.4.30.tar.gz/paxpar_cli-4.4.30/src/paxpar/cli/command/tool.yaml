@@ -1,0 +1,11 @@
+# tools to add:
+# - podman
+# - k9s
+# - hx
+# - helm
+
+tools:
+- name: zellij
+  url: https://github.com/zellij-org/zellij/releases/download/v0.42.1/zellij-x86_64-unknown-linux-musl.tar.gz
+- name: podman
+  url: https://github.com/containers/podman/releases/download/v5.4.1/podman-remote-static-linux_amd64.tar.gz
