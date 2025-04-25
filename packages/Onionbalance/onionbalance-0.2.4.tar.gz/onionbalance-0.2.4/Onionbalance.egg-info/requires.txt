@@ -1,0 +1,6 @@
+setuptools
+stem>=1.8
+PyYAML>=4.2b1
+pycryptodomex
+setproctitle
+cryptography>=2.5
