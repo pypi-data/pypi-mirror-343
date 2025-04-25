@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+ezMM.egg-info/PKG-INFO
+ezMM.egg-info/SOURCES.txt
+ezMM.egg-info/dependency_links.txt
+ezMM.egg-info/requires.txt
+ezMM.egg-info/top_level.txt
+ezmm/__init__.py
+ezmm/config.py
+ezmm/util.py
+tests/test_image.py
+tests/test_item.py
+tests/test_multimodal_sequence.py
+tests/test_registry.py
