@@ -1,0 +1,148 @@
+Metadata-Version: 2.1
+Name: ucuu
+Version: 0.1.1
+Summary: A lightweight and extensible Python utility toolkit for productivity and automation.
+Author-email: wZuck <wzuck.wang@gmail.com>
+License: This is free and unencumbered software released into the public domain.
+        
+        Anyone is free to copy, modify, publish, use, compile, sell, or
+        distribute this software, either in source code form or as a compiled
+        binary, for any purpose, commercial or non-commercial, and by any
+        means.
+        
+        In jurisdictions that recognize copyright laws, the author or authors
+        of this software dedicate any and all copyright interest in the
+        software to the public domain. We make this dedication for the benefit
+        of the public at large and to the detriment of our heirs and
+        successors. We intend this dedication to be an overt act of
+        relinquishment in perpetuity of all present and future rights to this
+        software under copyright law.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+        EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+        IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+        OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+        ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+        OTHER DEALINGS IN THE SOFTWARE.
+        
+        For more information, please refer to <https://unlicense.org>
+Project-URL: homepage, https://wzuck.github.io/ucuu/
+Project-URL: repository, https://github.com/wZuck/ucuu
+Project-URL: documentation, https://github.com/wZuck/ucuu
+Project-URL: pypi, https://pypi.org/project/ucuu/
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rich >=14.0.0
+Requires-Dist: black >=24.0.0
+Provides-Extra: docs
+Requires-Dist: ghp-import >=2.1.0 ; extra == 'docs'
+Provides-Extra: publish
+Requires-Dist: build >=1.0.0 ; extra == 'publish'
+Requires-Dist: twine >=4.0.0 ; extra == 'publish'
+
+# You Can You Up (UCUU) 🚀
+--------
+
+[![Tests](https://github.com/wZuck/ucuu/actions/workflows/python-app.yml/badge.svg)](https://github.com/wZuck/ucuu/actions/workflows/python-app.yml) [![GitHub Pages](https://github.com/wZuck/ucuu/actions/workflows/gh-pages.yml/badge.svg?branch=master)](https://github.com/wZuck/ucuu/actions/workflows/gh-pages.yml) [![PyPI Package](https://github.com/wZuck/ucuu/actions/workflows/publish.yml/badge.svg)](https://github.com/wZuck/ucuu/actions/workflows/publish.yml)
+> **⚠️ Important:**  
+> The majority of the code in this repository is generated using AI coding tools such as GitHub Copilot (GPT-4o) and TRAE (Doubao 1.5 Pro).  
+
+## 1. Brief Introduction
+
+**UCUU** is a Python utility library for function wrapping and proxying. It supports adding proxy logic to functions via decorators or patching, making it easy to extend, debug, and test.
+
+---
+
+## 2. Install and Usage ⚙️
+
+### 2.1 Installation
+
+You can install UCUU from PyPI:
+
+```bash
+pip install ucuu
+```
+
+Or, clone this repository and install locally:
+
+```bash
+git clone https://github.com/wZuck/ucuu.git
+cd ucuu
+pip install .
+```
+
+### 2.2 Usage
+
+#### 2.2.1 Decorator mode (wrap for functions)
+
+> Example: Use a decorator to add a proxy function.  
+> **Effect:** When `my_func` is called, it prints "My function logic" and then the proxy prints "Hello, hello ucuu".
+
+```python
+from ucuu.decorator import ucuu
+
+@ucuu("package_utils.print_ucuu_hello", ending_words="hello ucuu")
+def my_func():
+    print("My function logic")
+```
+
+#### 2.2.2 Patch mode (wrap for external functions)
+
+> Example: Patch an existing function with a proxy.  
+> **Effect:** When `some_func` is called, it prints "Original logic" and then the proxy prints "Hello, patch mode".
+
+```python
+from ucuu.decorator import ucuu
+
+def some_func():
+    print("Original logic")
+
+some_func = ucuu("package_utils.print_ucuu_hello", ending_words="patch mode")(some_func)
+```
+
+#### 2.2.3 Register proxy functions
+
+> Example: Implement a proxy function to be called by the decorator or patch.  
+> **Effect:** Prints different messages depending on the `ending_words` argument.
+
+```python
+# tests/package_utils/test_print.py
+def print_ucuu_hello(ending_words=None, *args, **kwargs):
+    if ending_words is None:
+        print("No Ending Words.")
+    elif ending_words == "please raise errors":
+        raise NotImplementedError('Raise Error due to requests')
+    else:
+        print(f"Hello, {ending_words}")
+```
+
+---
+
+## 3. Demos in Testcases 🧪
+
+- See the `tests/` directory for test cases covering decorator usage, patching, exception handling, argument binding, and more.
+
+
+---
+
+## 4. License 📄
+
+[MIT License](./LICENSE)
+
+---
+
+## 5. Contribute 🤝
+
+Contributions via PR or issues are welcome!  
+For suggestions or questions, please leave a message at [GitHub Issues](https://github.com/wZuck/ucuu/issues).
+
+---
+
