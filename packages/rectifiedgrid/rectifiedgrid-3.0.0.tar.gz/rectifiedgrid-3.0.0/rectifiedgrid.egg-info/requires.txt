@@ -1,0 +1,15 @@
+affine
+contextily
+fiona
+geopandas
+gisdata
+mapclassify
+matplotlib
+numpy
+pandas
+pyepsg
+rasterio
+rioxarray
+rtree
+scipy
+shapely
