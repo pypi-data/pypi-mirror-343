@@ -1,0 +1,29 @@
+[build-system]
+requires = ["maturin>=1,<2"]
+build-backend = "maturin"
+
+[project]
+name = "pyd4"
+version = "0.3.10"
+requires-python = ">=3.10"
+description = "Python binding for D4 file format"
+dependencies = ["numpy>1.24.4"]
+readme = "README.md"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Rust",
+    "Operating System :: POSIX",
+    "Operating System :: MacOS :: MacOS X",
+]
+
+[tool.maturin]
+python-source = "python"
+module-name = "pyd4._pyd4" # Points to Rust
+manifest-path = "pyd4/Cargo.toml"
+
+
+[dependency-groups]
+dev = ["pytest>=8.3.4", "maturin>=1,<2"]
