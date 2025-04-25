@@ -1,0 +1,3 @@
+[console_scripts]
+pise=pise.cli.main:main
+

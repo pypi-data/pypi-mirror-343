@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: pise
+Version: 0.1.0
+Summary: Python-based Infrastructure for Structural and Electronic analysis.
+License: MIT
+Author: Teruya Nagafuji
+Requires-Python: >=3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pydefect (>=0.9.6,<0.10.0)
+Requires-Dist: pymatgen (>=2025.4.24,<2026.0.0)
+Requires-Dist: vise (>=0.9.1,<0.10.0)
+Description-Content-Type: text/markdown
+
+
