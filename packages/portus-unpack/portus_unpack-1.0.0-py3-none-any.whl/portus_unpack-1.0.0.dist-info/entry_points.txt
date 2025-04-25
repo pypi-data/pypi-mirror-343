@@ -1,0 +1,2 @@
+[console_scripts]
+portus-unpack = portus_unpack.__main__:main
