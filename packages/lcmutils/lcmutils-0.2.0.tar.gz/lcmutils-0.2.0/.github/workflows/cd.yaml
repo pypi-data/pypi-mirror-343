@@ -1,0 +1,56 @@
+# GitHub action for CD: releasing and publishing
+
+name: cd
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    concurrency: release
+    permissions:
+      id-token: write
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Python Semantic Release
+        id: semantic_release
+        uses: python-semantic-release/python-semantic-release@v9.8.8
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+    outputs:
+      released: ${{ steps.semantic_release.outputs.released }}
+      version: ${{ steps.semantic_release.outputs.version }}
+
+  publish:
+    needs: release
+    if: needs.release.outputs.released == 'true'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+            ref: v${{ needs.release.outputs.version }}
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Build
+        run: |
+          uv build
+
+      - name: Publish to PyPI
+        run: |
+          uv publish --token ${{ secrets.PYPI_TOKEN }}
