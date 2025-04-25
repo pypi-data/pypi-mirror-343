@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stackspot-commit-helper"
+version = "0.1.9"
+description = "Auto-commit tool integrated with Stackspot AI"
+authors = [{ name="Engeziellithon vieira", email="engeziellithonvieira@gmail.com" },]
+urls = { "Github page" = "https://github.com/engeziellithonzup/stackspot-commit-helper" }
+readme = "README.md"
+license = {text = "MIT"}
+keywords = ["git", "commit", "stackspot", "ai"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "python-dotenv",
+    "stackspot",  
+]
+
+[project.scripts]
+scommit = "stackspot_commit.cli:main"
