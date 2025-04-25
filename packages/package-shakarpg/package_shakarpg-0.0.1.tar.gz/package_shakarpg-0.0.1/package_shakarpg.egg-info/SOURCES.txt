@@ -1,0 +1,7 @@
+README.md
+setup.py
+package_shakarpg.egg-info/PKG-INFO
+package_shakarpg.egg-info/SOURCES.txt
+package_shakarpg.egg-info/dependency_links.txt
+package_shakarpg.egg-info/requires.txt
+package_shakarpg.egg-info/top_level.txt
