@@ -1,0 +1,3 @@
+from pymyami.approximate import generate_approximate_seawater_correction_params
+
+generate_approximate_seawater_correction_params()
