@@ -1,0 +1,9 @@
+[project]
+name = "nephyx-orm"
+version = "0.0.2"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "sqlalchemy>=2.0.40",
+]
