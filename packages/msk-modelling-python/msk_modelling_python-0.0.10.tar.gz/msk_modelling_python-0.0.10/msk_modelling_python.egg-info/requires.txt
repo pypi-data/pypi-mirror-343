@@ -1,0 +1,9 @@
+numpy
+numpy-stl
+pandas
+c3d
+pyperclip
+customtkinter
+matplotlib
+febio-python
+vedo
