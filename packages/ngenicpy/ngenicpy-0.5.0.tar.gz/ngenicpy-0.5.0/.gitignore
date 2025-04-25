@@ -1,0 +1,6 @@
+*.pyc
+
+# build
+build
+dist
+ngenicpy.egg-info
