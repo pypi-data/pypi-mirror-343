@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: skibidiPython
+Version: 0.1.0
+Summary: A package that adds brainrot functions to Python.
+Home-page: https://github.com/DementiaGaming/Skibidi-Python-Library
+Author: Dementia Gaming
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: summary
+
+# Skibidi-Python-Library
+ A package that adds brainrot functions to Python.
