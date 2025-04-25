@@ -1,0 +1,8 @@
+protoc_wrapper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+protoc_wrapper/__main__.py,sha256=IiTW5orJ0Teq6wZ51HX6UHmgR-0ugESC67W_wGerL9A,281
+protoc_wrapper/protoc.exe,sha256=Ds_RY9jYNUKZteWYXqjMUpile11725K4ahA_Eaq4rAU,11465938
+protoc_wrapper-30.2.0.post0.dist-info/entry_points.txt,sha256=H4ckL0HXXERMGk_a086fVvRNAKwbhrDleIU-V3694Ds,102
+protoc_wrapper-30.2.0.post0.dist-info/METADATA,sha256=i-9SXpUA8jbL1i4eBoyCLF8-CEneXmp86OT3I7rgyAc,1713
+protoc_wrapper-30.2.0.post0.dist-info/WHEEL,sha256=Rs_eH7DStRs68AQ3ntXKUk0ETZZ5qQTiREpNI-z7TFY,103
+protoc_wrapper-30.2.0.post0.dist-info/licenses/LICENSE,sha256=bl4RcySv2UTc9n82zzKYQ7wakiKajNm7Vz16gxMP6n0,1732
+protoc_wrapper-30.2.0.post0.dist-info/RECORD,,
