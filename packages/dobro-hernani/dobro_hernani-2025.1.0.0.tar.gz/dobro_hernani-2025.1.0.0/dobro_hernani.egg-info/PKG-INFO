@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: dobro-hernani
+Version: 2025.1.0.0
+Summary: Uma biblioteca de exemplo simples para ensino
+Home-page: https://github.com/xxxxx/dobro
+Author: Hernani Agra
+Author-email: hernaniagra05@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Portuguese (Brazilian)
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# Dobro
+
+**Dobro** como próprio nome já diz, é uma bilbioteca que retorna o dobro de um número em Python.
+
+# Função
+
+* `dobro.metodo(number)` - Recebe um número e retorna o dobro desse número através do método:
+  - calc

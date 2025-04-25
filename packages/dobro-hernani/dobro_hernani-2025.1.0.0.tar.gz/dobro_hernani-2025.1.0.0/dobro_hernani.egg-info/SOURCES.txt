@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+dobro-hernani/__init__.py
+dobro-hernani/dobro.py
+dobro_hernani.egg-info/PKG-INFO
+dobro_hernani.egg-info/SOURCES.txt
+dobro_hernani.egg-info/dependency_links.txt
+dobro_hernani.egg-info/top_level.txt
