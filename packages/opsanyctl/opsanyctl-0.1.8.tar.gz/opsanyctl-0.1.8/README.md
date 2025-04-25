@@ -1,0 +1,38 @@
+OpsAny's command-line tool
+
+### model
+
+- get
+- config
+- api-resource
+
+
+### 1. 下载
+
+```shell script
+python3 -m pip install opsanyctl
+```
+
+### 2. 配置
+
+```shell script
+# 1. 获取配置模板
+opsctl config
+# 2. 在家目录创建文件
+mkdir /root/.opsanyctl/
+# 3. 创建配置文件 修改 url 和 bk_app_secret为OpsAny地址和cmdb的secret_key(开发中心获取https://DOMAIN/saas/cmdb/info/)
+vim /root/.opsanyctl/config
+# 4. 可以根据配置修改指定模型的简写
+```
+
+### 3. 使用
+```shell script
+# 获取到当前支持的资源类型
+opsctl api-resources
+# 获取云主机数据
+opsctl get CLOUD_SERVER
+# 获取 云主机 第一页数据 每页5条
+opsctl get CLOUD_SERVER -p 1 -l 5
+# 获取数据 54586 字段配置文件中可指定 resourceIdDefaultField(为字段后缀 忽略模型code)
+opsctl get net 54586
+```
