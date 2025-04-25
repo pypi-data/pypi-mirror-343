@@ -1,0 +1,12 @@
+docs/after.png,sha256=SKFlo6nytQDXfHbi414keocMkIZm6rZMhLeAoV8OFYk,119084
+docs/before.png,sha256=_9Jn1NeC_xq8Stoap8K8RmsZfN0D-SP7l0tEougmD4w,17145
+docs/info_qrcode.png,sha256=YrTDm7sgpuEG49pgGBH3SNbYeH-wbcGKz590vZVdeEU,14069
+xlfill2pdf/__init__.py,sha256=h0bFEqnezr_xnGxWNIFCgXHglEpLVrzjGN0GbejjQWw,191
+xlfill2pdf/core.py,sha256=ixB6H25sRoLdTib68DpRDtbQ-pnccXSUIJc94G3zW4Q,25490
+xlfill2pdf/font.py,sha256=m-12RFjy1YIswfsZ8SKIwzTfifSwO88z7R33or5iaGM,1202
+xlfill2pdf/fonts/default.ttf,sha256=lc5Ahc2Ys0gasNeFkZKOUmLw-lznY1ZqI9xQms0WzOw,1573656
+xlfill2pdf/qrcode.py,sha256=2v_a6isXlOD5d2vwOtbWzx7C_hLtt8xt1J4vWiVQcL4,28612
+xlfill2pdf-0.2.5.dist-info/LICENSE,sha256=p8bKxBHk93aHv8q2hWmEYbgBk5ogRs4ePZtT0h8WCPo,1091
+xlfill2pdf-0.2.5.dist-info/METADATA,sha256=vMvTKdD0FoBZUeF7C6aDZ6BBFILxmTu4ePlCknbPVrA,8790
+xlfill2pdf-0.2.5.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+xlfill2pdf-0.2.5.dist-info/RECORD,,
