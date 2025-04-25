@@ -1,0 +1,17 @@
+{
+  "archive_build": 1,
+  "archive_hashes": {
+    "sha256": "196fac3012aff6824e0c3fd4f414cdafa73ddfe4096310618af330538a24020b"
+  },
+  "archive_name": "cpython-3.11.tar.xz",
+  "archive_size": 29799444,
+  "bound_to_implementation": true,
+  "install_target": "cpython-3.11",
+  "layer_name": "cpython-3.11",
+  "lock_version": 1,
+  "locked_at": "2024-11-12T04:08:28.555508+00:00",
+  "python_implementation": "cpython@3.11.11",
+  "requirements_hash": "sha256:212b342db7bea93548f01f93e4c91b870e9f7218cbec61e55c16c82fa50f1cd4",
+  "runtime_layer": "cpython-3.11",
+  "target_platform": "linux_x86_64"
+}
