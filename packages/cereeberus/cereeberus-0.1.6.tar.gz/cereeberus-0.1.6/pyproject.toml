@@ -1,0 +1,33 @@
+[build]
+
+[project]
+name = "cereeberus"
+version = "0.1.6"
+authors = [
+  { name="Liz Munch", email="muncheli@msu.edu" },
+]
+description = "A Python package for Reeb graphs"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = ["numpy",
+            "networkx",
+            "matplotlib",
+            "pandas",
+            "scipy", 
+            "pulp"
+            ]
+
+[tool.setuptools.packages.find]
+where = ["cereeberus"]
+
+[tool.setuptools.package-data]
+cereeberus = ["data"]
+
+[project.urls]
+repository = "https://github.com/MunchLab/ceREEBerus"
+homepage = "https://munchlab.github.io/ceREEBerus/"
+documentation = "https://munchlab.github.io/ceREEBerus/"
