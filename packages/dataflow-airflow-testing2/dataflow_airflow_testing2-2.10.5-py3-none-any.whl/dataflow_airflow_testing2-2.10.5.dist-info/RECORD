@@ -1,0 +1,8 @@
+airflow/__init__.py,sha256=WhQbncEx9YoEdnASpWKz1OOCLsHWq7rCWmBk9H6StzA,5673
+airflow/www/static/logo.png,sha256=kpiZxbqkqwNMYOVyZs5tNhurqTzR6UnjzEjK-1zZfpY,20954
+airflow/www/templates/appbuilder/navbar.html,sha256=bG0qInf1EPnnIZqYjoK9niGoQQBx2JFBwLJlhAR3k4A,1742
+airflow/www/templates/appbuilder/navbar_right.html,sha256=gCL0i3FhL2IYHr423237_RqlYuMdIkR0G7pwnHf3R1E,3926
+dataflow_airflow_testing2-2.10.5.dist-info/METADATA,sha256=VsY2-P4fgvwIOVlpCPCzoGYkcI_zAmkL9VhXRrpcyIY,371
+dataflow_airflow_testing2-2.10.5.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+dataflow_airflow_testing2-2.10.5.dist-info/top_level.txt,sha256=OeMVH5md7fr2QQWpnZoOWWxWO-0WH1IP70lpTVwopPg,8
+dataflow_airflow_testing2-2.10.5.dist-info/RECORD,,

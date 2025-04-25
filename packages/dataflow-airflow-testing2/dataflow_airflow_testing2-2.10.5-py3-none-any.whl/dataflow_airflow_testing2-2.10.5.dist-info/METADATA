@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: dataflow-airflow-testing2
+Version: 2.10.5
+Summary: Airflow customized for Dataflow
+Home-page: https://github.com/Digital-Back-Office/dataflow-airflow
+Author: adityadahake24
+Requires-Dist: apache-airflow-providers-amazon
+Requires-Dist: apache-airflow-providers-postgres
+Requires-Dist: apache-airflow ==2.10.5
+Requires-Dist: eval-type-backport
+
