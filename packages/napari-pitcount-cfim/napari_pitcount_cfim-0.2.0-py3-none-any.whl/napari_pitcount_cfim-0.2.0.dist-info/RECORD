@@ -1,0 +1,11 @@
+napari_pitcount_cfim/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_pitcount_cfim/_dock_widget.py,sha256=Y20CQE9pUFj9HF_Bxe6MvQEi0q5_uwcnmr5dggT-kJE,535
+napari_pitcount_cfim/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_pitcount_cfim/config/settings_handler.py,sha256=eBy_iG_PBlYXi0941RXKZOmRPANWHPJeYvCtRaCM2Js,5572
+napari_pitcount_cfim/config/settings_structure.py,sha256=C1XSRBdqejR0njZFNtws8X8gskQOEnWsIGAJ79wKQBY,722
+napari_pitcount_cfim-0.2.0.dist-info/licenses/LICENSE,sha256=whQ87lDp2CjmUS1TS6dc_j0DVZrtn-RlFFjGr2XHpbk,1526
+napari_pitcount_cfim-0.2.0.dist-info/METADATA,sha256=I4-EexfYWw0t2wXCOqzsgZygLbRal9qffQjYCsWyjO8,1135
+napari_pitcount_cfim-0.2.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+napari_pitcount_cfim-0.2.0.dist-info/entry_points.txt,sha256=t9oQ67W8MTueGwqaFe3qUvFMyaYBLkmDZfHPv5j9o2c,74
+napari_pitcount_cfim-0.2.0.dist-info/top_level.txt,sha256=SvNLBdkWsLV6Cn1Tub1Dehc9-3po51XNur_lsd5GR-Y,21
+napari_pitcount_cfim-0.2.0.dist-info/RECORD,,
