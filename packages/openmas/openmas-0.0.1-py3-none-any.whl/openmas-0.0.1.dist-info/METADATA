@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: openmas
+Version: 0.0.1
+Summary: Placeholder for the openmas project
+Author-email: Wilson Urdaneta <wilson.urdaneta@gmail.com>
+License: MIT
+Project-URL: Repository, https://github.com/wilson-urdaneta/openmas
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# openmas
+
+Placeholder for the openmas project. 
