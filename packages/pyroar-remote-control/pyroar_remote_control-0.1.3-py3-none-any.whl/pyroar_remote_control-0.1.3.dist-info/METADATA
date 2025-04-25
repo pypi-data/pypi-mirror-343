@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: pyroar-remote-control
+Version: 0.1.3
+Summary: Try this access remote tool in python
+Author: Gustavo
+Author-email: gustavosj.js@gmail.com
+Requires-Python: >=3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: dxcam
+Requires-Dist: keyboard (==0.13.5)
+Requires-Dist: mouse (==0.7.1)
+Requires-Dist: numpy
+Requires-Dist: pillow (==11.2.1)
+Description-Content-Type: text/markdown
+
+Remote Access Tool in Python

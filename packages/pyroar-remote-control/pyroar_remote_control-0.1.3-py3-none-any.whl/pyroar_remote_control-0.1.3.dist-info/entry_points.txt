@@ -1,0 +1,4 @@
+[console_scripts]
+remote-client=remote_control.cliente:main
+remote-server=remote_control.server:main
+
