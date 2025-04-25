@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+diskovery.egg-info/PKG-INFO
+diskovery.egg-info/SOURCES.txt
+diskovery.egg-info/dependency_links.txt
+diskovery.egg-info/entry_points.txt
+diskovery.egg-info/requires.txt
+diskovery.egg-info/top_level.txt
