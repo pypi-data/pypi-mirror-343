@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+tests/test_module.py
+waetool.egg-info/PKG-INFO
+waetool.egg-info/SOURCES.txt
+waetool.egg-info/dependency_links.txt
+waetool.egg-info/requires.txt
+waetool.egg-info/top_level.txt
+weatool/__init__.py
+weatool/sample.py
