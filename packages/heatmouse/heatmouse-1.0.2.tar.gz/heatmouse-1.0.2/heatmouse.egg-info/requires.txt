@@ -1,0 +1,9 @@
+pynput>=1.8.1
+PyQt5
+matplotlib
+pywin32
+pillow
+psutil
+pandas
+numpy
+astropy
