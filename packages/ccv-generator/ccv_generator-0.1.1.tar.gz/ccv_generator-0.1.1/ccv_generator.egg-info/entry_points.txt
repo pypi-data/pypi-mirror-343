@@ -1,0 +1,2 @@
+[console_scripts]
+ccv_generator = ccv_generator.cli:main
