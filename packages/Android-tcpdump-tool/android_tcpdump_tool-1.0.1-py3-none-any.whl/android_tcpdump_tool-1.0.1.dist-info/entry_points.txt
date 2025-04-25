@@ -1,0 +1,2 @@
+[console_scripts]
+tcpdump-tool = tcpdump_tool.tcpdump:main
