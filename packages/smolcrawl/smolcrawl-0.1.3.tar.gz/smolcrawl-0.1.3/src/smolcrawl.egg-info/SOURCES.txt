@@ -1,0 +1,13 @@
+LICENSE.md
+README.md
+pyproject.toml
+src/smolcrawl/__init__.py
+src/smolcrawl/crawl.py
+src/smolcrawl/db.py
+src/smolcrawl/utils.py
+src/smolcrawl.egg-info/PKG-INFO
+src/smolcrawl.egg-info/SOURCES.txt
+src/smolcrawl.egg-info/dependency_links.txt
+src/smolcrawl.egg-info/entry_points.txt
+src/smolcrawl.egg-info/requires.txt
+src/smolcrawl.egg-info/top_level.txt
