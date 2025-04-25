@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+my_library/__init__.py
+my_library/magic_effects.py
+pymagic_HM.egg-info/PKG-INFO
+pymagic_HM.egg-info/SOURCES.txt
+pymagic_HM.egg-info/dependency_links.txt
+pymagic_HM.egg-info/requires.txt
+pymagic_HM.egg-info/top_level.txt
