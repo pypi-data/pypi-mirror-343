@@ -1,0 +1,10 @@
+tool_server_client/__about__.py,sha256=czTv5Rv2t44rYaE4HWDKcpOJyQgoDNs_vQNWi8gu0uI,123
+tool_server_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tool_server_client/client.py,sha256=mRm7jOoDgP8v6c8X8f3KDFqm8UBIosNbnQQfjob2ThU,9245
+tool_server_client/examples.py,sha256=TFiIKTzET-YbNdY2j5EljPVDvuZAqus4D9E2DZOVqpY,1051
+tool_server_client/main.py,sha256=w3eH7Ci0Zz6BolBDGZgmgJ3HXtzGU8uh9Y7EQrJCfrE,81
+tool_server_client/models.py,sha256=rYZQUsieop8tVslprdmOcg_d-OGnS_sYEQq76VZJQlw,4635
+tool_server_client-1.0.0rc7.dist-info/METADATA,sha256=wr8zMYxohA9Azt-jWfpA8ys0HDfJ1eFKdlvBZw6vXSQ,3742
+tool_server_client-1.0.0rc7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tool_server_client-1.0.0rc7.dist-info/licenses/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+tool_server_client-1.0.0rc7.dist-info/RECORD,,
