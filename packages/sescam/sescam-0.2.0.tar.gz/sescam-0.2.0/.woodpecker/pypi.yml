@@ -1,0 +1,13 @@
+when:
+  - event: tag
+
+steps:
+  - name: upload
+    image: python:3.13
+    commands:
+      - pip install uv
+      - uv build
+      - uv publish
+    environment:
+      UV_PUBLISH_TOKEN:
+        from_secret: PYPI_SECRET
