@@ -1,0 +1,13 @@
+anti_profanity/__init__.py,sha256=RxD1F4c0RLdP1se50gnPR26AcNJGGB50AY66C1LEjQ8,33
+anti_profanity/cli.py,sha256=oFumNxZ60PMvDn-AnrbL6VMg8vfWK6ziJxwH8AhEoHk,3516
+anti_profanity/main.py,sha256=hY2V-8UkF73sXytB0I7Rij72yJN525BltkjHFtzIe8c,7513
+anti_profanity/test.py,sha256=8QykMZi7u_6vLbXwew7Fx-CpxGWiHCDIZZTP3-MmqBU,953
+anti_profanity/data/__init__.py,sha256=1kQyf0KZLsY_nzH-SEkI38mtiD71BI_J0GWpXAIxVuo,118
+anti_profanity/data/bengali_en.py,sha256=n4gKVOTFdfi2E3Ej037dIYIh_5K6uY87aVyYgn6tdT0,232
+anti_profanity/data/english_en.py,sha256=860idDSDsaNUlNcuiYPO3npbwoM4Si8gHA7TvCD7kcI,4888
+anti_profanity/data/hindi_en.py,sha256=-VmM0mY6snn70RnjbdQYpVnHeGvJAjsIhkflyZUSvJo,3254
+anti_profanity-0.2.0.dist-info/licenses/LICENSE,sha256=g0HcR_AcXWRfOIaAm7MHbLtiNK2A0cK719xXVHdROFI,1061
+anti_profanity-0.2.0.dist-info/METADATA,sha256=zA8EOxMevHkdPMeaXeMDQVJ1xR0aIvwwTHbS1EDXQVY,2968
+anti_profanity-0.2.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+anti_profanity-0.2.0.dist-info/top_level.txt,sha256=4rG44050kEVtCg-ghWLYzIPxPkEujmSjh4HG71tG6J8,15
+anti_profanity-0.2.0.dist-info/RECORD,,
