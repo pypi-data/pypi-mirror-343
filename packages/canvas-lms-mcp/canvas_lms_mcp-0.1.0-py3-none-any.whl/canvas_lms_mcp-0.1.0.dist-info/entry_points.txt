@@ -1,0 +1,2 @@
+[console_scripts]
+canvas-lms-mcp = canvas_lms_mcp.main:mcp.run
