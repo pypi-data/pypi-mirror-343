@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: tts-with-rvc-onnx
+Version: 0.1.9
+Summary: TTS with RVC pipeline (ONNX Version)
+Author: Atm4x
+License-File: LICENSE
+Requires-Dist: edge-tts>=6.1.8
+Requires-Dist: numpy==1.26.0
+Requires-Dist: librosa>=0.9.1
+Requires-Dist: soundfile>=0.12.1
+Requires-Dist: ffmpeg-python>=0.2.0
+Requires-Dist: huggingface_hub>=0.17.0
+Requires-Dist: nest_asyncio>=1.5.0
+Requires-Dist: pyworld>=0.3.2
+Requires-Dist: setuptools
+Requires-Dist: onnxruntime<2.0,>=1.15
+Requires-Dist: faiss-cpu>=1.7.3
+Requires-Dist: torch>=1.13.1
+Requires-Dist: torchaudio>=0.13.1
+Requires-Dist: torchcrepe>=0.0.20
+Requires-Dist: praat-parselmouth>=0.4.3
+Requires-Dist: scipy>=1.10.0
+Provides-Extra: cuda
+Requires-Dist: onnxruntime-gpu<2.0,>=1.15; extra == "cuda"
+Provides-Extra: dml
+Requires-Dist: onnxruntime-directml<2.0,>=1.15; extra == "dml"
+Dynamic: author
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
