@@ -1,0 +1,12 @@
+/.coverage
+/.coverage.xml
+/.htmlcov/
+/.junit.xml
+/.mypy_cache/
+/.pytest_cache/
+/.ruff_cache/
+/.token
+/.venv/
+/dist/
+/docs/build/
+__pycache__/

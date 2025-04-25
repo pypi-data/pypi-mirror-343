@@ -1,0 +1,146 @@
+[project]
+name = "hdl-block-design"
+version = "0.2.0"
+description = "A library to represent and manipulate HDL block designs in python"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = [
+    "cyclopts == 3.13.0",
+    "pyyaml == 6.0.2",
+    "tree-sitter == 0.24.0",
+    "tree-sitter-vhdl == 1.2.5",
+]
+authors = [
+    { name = "Dominic Adam Walters" },
+]
+keywords = ["hdl", "block", "design", "vhdl"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.13",
+  "Intended Audience :: Developers",
+]
+
+[project.optional-dependencies]
+dev = [
+    "coverage == 7.8.0",
+    "enum-tools[sphinx] == 0.13.0",
+    "hatch == 1.14.1",
+    "mypy == 1.15.0",
+    "pre-commit == 4.2.0",
+    "pytest == 8.3.5",
+    "pytest-cov == 6.1.1",
+    "pytest-sugar == 1.0.0",
+    "pytest-xdist == 3.6.1",
+    "ruff == 0.11.4",
+    "sphinx == 8.2.3",
+    "sphinx-autobuild == 2024.10.3",
+    "sphinx-copybutton == 0.5.2",
+    "sphinx-last-updated-by-git == 0.3.8",
+    "sphinx-notfound-page == 1.1.0",
+    "sphinx-pyproject == 0.3.0",
+    "sphinx_rtd_theme == 3.0.2",
+    "types-pyyaml == 6.0.12.20250402",
+]
+
+[project.scripts]
+hbd = "hdl_block_design._cli:app"
+
+[project.urls]
+Repository = "https://gitlab.com/dawalters/hdl-block-design"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.codespell]
+ignore-words-list = "inout,INOUT"
+
+[tool.coverage.html]
+directory = ".htmlcov"
+
+[tool.coverage.report]
+exclude_also = [
+    "@overload",
+    "if TYPE_CHECKING:",
+]
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.xml]
+output = ".coverage.xml"
+
+[tool.hatch.build]
+include = [
+    "src/**/*.py",
+    "src/**/py.typed",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hdl_block_design"]
+
+[tool.hatch.envs.hatch-test]
+dependencies = [
+    "coverage == 7.8.0",
+    "pytest == 8.3.5",
+    "pytest-cov == 6.1.1",
+    "pytest-xdist == 3.6.1",
+    "pytest-sugar == 1.0.0",
+]
+
+[[tool.hatch.envs.hatch-test.matrix]]
+python = ["3.12", "3.13"]
+
+[tool.mypy]
+strict = true
+warn_unreachable = true
+
+[tool.pytest.ini_options]
+addopts = "--capture=fd -n 0 --cov=hdl_block_design --cov-report html --cov-report xml --verbose --junitxml=.junit.xml -o junit_family=legacy"
+testpaths = [
+    "tests",
+]
+
+[tool.ruff]
+unsafe-fixes = true
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+ignore = [
+    "CPY001",   # I don't want copyright notices in every file
+    "D203",     # I don't want blank lines before class docstrings
+    "D212",     # I want docstring opening lines to be after the """
+    "DOC201",   # I don't want to mandate documenting return type with typehints
+    "FIX002",   # I want to be able to type TODO
+    "TD002",    # I don't want TODOs to need authors
+    "TD003",    # I don't want TODOs to need issue IDs
+]
+preview = true
+select = [
+    "ALL",
+]
+unfixable = [
+    "T201", # Don't fix print statements
+]
+
+[tool.sphinx-pyproject]
+autoapi_dirs = [
+    "../../src/hdl_block_design"
+]
+copyright = "2025, Dominic Adam Walters"
+extensions = [
+    "enum_tools.autoenum",
+    "notfound.extension",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.coverage",
+    "sphinx.ext.duration",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.napoleon",
+    "sphinx.ext.viewcode",
+    "sphinx_copybutton",
+    "sphinx_last_updated_by_git",
+    "sphinx_rtd_theme",
+]
+html_theme = "sphinx_rtd_theme"
