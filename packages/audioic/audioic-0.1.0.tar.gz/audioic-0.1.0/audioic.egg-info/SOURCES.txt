@@ -1,0 +1,8 @@
+README.md
+audio_ic.py
+pyproject.toml
+audioic.egg-info/PKG-INFO
+audioic.egg-info/SOURCES.txt
+audioic.egg-info/dependency_links.txt
+audioic.egg-info/requires.txt
+audioic.egg-info/top_level.txt
