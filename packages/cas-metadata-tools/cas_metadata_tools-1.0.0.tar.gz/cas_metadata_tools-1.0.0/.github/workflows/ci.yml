@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: python:3.12-slim
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install curl
+      run: apt-get update && apt-get install -y curl
+
+    - name: Install ExifTool
+      run: apt-get install -y libimage-exiftool-perl
+
+    - name: Install uv
+      run: pip install uv
+
+    - name: Install dependencies
+      run: |
+        uv pip install --system -r requirements.txt
+        uv pip install --system -e .
+
+    - name: Run tests (development mode)
+      run: |
+        uv pip install --system -r tests/requirements.txt
+        pytest tests --junitxml=report.xml
+
+    - name: Build package
+      run: |
+        uv pip install --system build
+        python -m build
+
+    - name: Test built package
+      run: |
+        uv pip install --system dist/*.whl
+        python -c "from cas_metadata_tools import MetadataTools; print('Package imported successfully')"
+        python -m pytest tests/
+
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results
+        path: |
+          test-results/
+          *.xml 
