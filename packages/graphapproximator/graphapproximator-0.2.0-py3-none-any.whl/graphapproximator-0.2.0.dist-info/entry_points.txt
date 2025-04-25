@@ -1,0 +1,3 @@
+[console_scripts]
+ga = graphapproximator.__main__:main
+graphapproximator = graphapproximator.__main__:main
