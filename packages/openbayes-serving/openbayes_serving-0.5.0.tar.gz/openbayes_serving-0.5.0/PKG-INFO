@@ -1,0 +1,58 @@
+Metadata-Version: 2.3
+Name: openbayes-serving
+Version: 0.5.0
+Summary: Framework for Openbayes Serving
+License: MIT
+Author: Proton
+Author-email: bwang@openbayes.com
+Maintainer: Proton
+Maintainer-email: bwang@openbayes.com
+Requires-Python: >=3.9
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Dist: Flask-Cors
+Requires-Dist: accept-types
+Requires-Dist: flask
+Requires-Dist: httptools
+Requires-Dist: msgpack (>1.0.0)
+Requires-Dist: pprintpp
+Requires-Dist: requests
+Requires-Dist: uvicorn
+Requires-Dist: uvloop (>=0.21,<0.22)
+Project-URL: Homepage, https://openbayes.com
+Project-URL: Repository, https://github.com/signcl/python-openbayes-serving
+Description-Content-Type: text/markdown
+
+# Python OpenBayes Serving
+
+## Debugger Web UI
+
+Start a web server:
+
+```bash
+python exception.py
+```
+
+Open a new shell session. Fire a request with error:
+
+```bash
+curl -XPOST localhost:25252
+```
+
+Compare with Werkzeug Debugger:
+
+```bash
+python werkzeug_demo.py
+```
+
+Then open `http://localhost:23333/` in your browser.
+
