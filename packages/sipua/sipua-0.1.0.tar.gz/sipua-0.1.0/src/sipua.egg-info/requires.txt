@@ -1,0 +1,8 @@
+sipmessage
+
+[dev]
+check-manifest
+coverage
+mypy
+pyroma
+ruff
