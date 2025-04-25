@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/id10terr/__init__.py
+src/id10terr/__version__.py
+src/id10terr/errors.py
+src/id10terr/interface.py
+src/id10terr/warnings.py
+src/id10terr.egg-info/PKG-INFO
+src/id10terr.egg-info/SOURCES.txt
+src/id10terr.egg-info/dependency_links.txt
+src/id10terr.egg-info/top_level.txt
+src/id10terr.egg-info/zip-safe
