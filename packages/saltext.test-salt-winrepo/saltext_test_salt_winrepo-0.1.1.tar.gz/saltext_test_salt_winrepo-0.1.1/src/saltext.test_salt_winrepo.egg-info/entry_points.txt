@@ -1,0 +1,2 @@
+[salt.loader]
+saltext.test-salt-winrepo = saltext.test_salt_winrepo
