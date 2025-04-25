@@ -1,0 +1,7 @@
+MANIFEST.in
+setup.py
+pdf_sanitizer_diacde/__init__.py
+pdf_sanitizer_diacde.egg-info/PKG-INFO
+pdf_sanitizer_diacde.egg-info/SOURCES.txt
+pdf_sanitizer_diacde.egg-info/dependency_links.txt
+pdf_sanitizer_diacde.egg-info/top_level.txt

@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: pdf_sanitizer_diacde
+Version: 1.3.3
+Author: DIACDE - TJGO
+License: Attribution-NonCommercial-ShareAlike
+Requires-Python: >=3.9.4
+Description-Content-Type: text/markdown
+
+# PDF-Sanitizer
+
+**PDFSanitizer** é uma ferramenta Python poderosa para analisar, detectar e tratar conteúdos suspeitos dentro de arquivos PDF. Ideal para ambientes que lidam com documentos potencialmente inseguros, ela permite identificar elementos como textos ocultos, fontes esquisitas, caracteres de controle e imagens com características suspeitas.
+
+## Funcionalidades
+
+- 📄 Análise de conteúdo textual (texto invisível, fontes estranhas, etc.)
+- 🖼️ Verificação de imagens (entropia baixa, metadados suspeitos, tamanhos incomuns)
+- ✂️ Múltiplas formas de tratamento (remover, substituir, destacar ou apenas exibir)
+- 🔁 Suporte a múltiplos PDFs em uma única chamada
+- 🧪 Resultados prontos para serem consumidos por outras aplicações
+
+## Instalação
+
+```bash
+pip install pdf-sanitizer-diacde
+```
+
+## Como funciona
+
+1. Recebe arquivos PDF codificados em base64
+2. Analisa cada página do PDF buscando textos e imagens suspeitas
+3. Aplica o tratamento configurado (`remove`, `replace`, `highlight`, `show`)
+4. Retorna o PDF sanitizado + as informações dos elementos suspeitos encontrados
+
+## Uso
+
+### Função principal
+
+```python
+from pdf_sanitizer_diacde import sanitize_pdf
+
+# Um único PDF base64
+result = sanitize_pdf(pdf_base64_data, error_treatment="remove", show_info=True)
+
+# Vários PDFs
+results = sanitize_pdf([pdf1_base64, pdf2_base64], error_treatment="highlight", show_info=True)
+```
+
+### Tratamentos disponíveis
+
+- `"remove"` – Remove o conteúdo suspeito
+- `"replace"` – Substitui por um marcador
+- `"highlight"` – Destaca o conteúdo (ex: texto vermelho, bordas)
+- `"show"` – Apenas mostra, sem modificações
+
+## Estrutura do Projeto
+
+- `PDFSanitizer`: Classe principal, herda lógica da classe `ProcessPDFMethods`
+- `ProcessPDFMethods`: Onde a mágica acontece – análise de texto, imagens e reescrita das páginas
+- `sanitize_pdf`: Interface externa para uso em aplicações ou pipelines
+- `SanitizationResult`: Objeto de retorno que contém:
+    - `base64_pdf`: PDF tratado
+    - `is_doc_suspect`: Booleano indicando se há algo estranho
+    - `suspect_elements`: Lista de textos/imagens considerados suspeitos
+
+## Regras de Detecção
+
+### Texto
+
+- `hidden_text_rule`: Detecta texto invisível (ex: branco em fundo branco)
+- `weird_font_rule`: Detecta fontes não usuais
+- `control_character_rule`: Caracteres ASCII de controle
+- `margin_outlier_rule`: Textos posicionados fora das margens usuais
+
+### Imagens
+
+- `image_rule`: Verifica entropia, metadados e resolução da imagem
+
+## Exemplo de Resultado
+
+```python
+SanitizationResult(
+    base64_pdf='JVBERi0xLjcKJ...',
+    is_doc_suspect=True,
+    suspect_elements={
+        "text": [
+            SuspectText(page_number=1, reason="potential harmful text", text="invisible spam")
+        ],
+        "images": [
+            SuspectImage(page_number=2, reason="potential harmful image", image_name="img1.jpg", image_bytes=b'...')
+        ]
+    }
+)
+```
+
+## Contribuindo
+
+Pull requests são mais do que bem-vindos! Envie melhorias de regras, tratamento, refatorações ou novas ideias.
+
+## ⚠Aviso
+
+Este projeto é experimental. Nenhuma regra substitui uma análise humana completa. Use com sabedoria!
+
+## Licença
+
+MIT License.
