@@ -1,0 +1,15 @@
+LICENSE
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.py
+example/shotgather.sgy
+example/testsegy.py
+segypy/__init__.py
+segypy/segypy.py
+segypy.egg-info/PKG-INFO
+segypy.egg-info/SOURCES.txt
+segypy.egg-info/dependency_links.txt
+segypy.egg-info/requires.txt
+segypy.egg-info/top_level.txt
