@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: dynolayer
+Version: 0.5.0
+Summary: O DynoLayer é uma ferramenta poderosa que simplifica e agiliza o acesso e manipulação de dados no Amazon DynamoDB, baseada no padrão Active Record.
+Home-page: https://github.com/kauelima21/dynolayer
+Author: Kauê Leal de Lima
+Author-email: kaueslim@gmail.com
+License: MIT License
+Keywords: dynolayer,dynamodb,active record,aws lambda
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: boto3
+Requires-Dist: pytz
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# DynoLayer
+
+O **DynoLayer** é uma ferramenta poderosa que simplifica e agiliza o acesso e manipulação de dados no Amazon DynamoDB. Baseada no padrão Active Record, esta biblioteca oferece uma abstração intuitiva para interagir com tabelas no DynamoDB, permitindo operações de CRUD (Create, Read, Update, Delete) de forma fácil e natural.
+
+## Instalação
+
+Para usar o pacote basta instalar através do gerenciador de dependências de sua preferência.
+
+```sh
+pip install dynolayer
+```
+
+ou
+
+```sh
+pipenv install dynolayer
+```
