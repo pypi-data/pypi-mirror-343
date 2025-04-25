@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+tests/test_CtlDescriptor.py
+tests/test_openDataset.py
+tests/test_proj.py
+tests/test_utils.py
+xgrads/__init__.py
+xgrads/core.py
+xgrads/io.py
+xgrads/utils.py
+xgrads.egg-info/PKG-INFO
+xgrads.egg-info/SOURCES.txt
+xgrads.egg-info/dependency_links.txt
+xgrads.egg-info/requires.txt
+xgrads.egg-info/top_level.txt
