@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: wasengine
+Version: 1.0.6
+Summary: Blizzard API Simulation Engine for Lua Addon Testing
+Home-page: https://github.com/WAStudios/WASEngine
+Author: Your Name
+Author-email: chadricksoup@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: lupa
+Requires-Dist: gdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# WASEngine
+
+WASEngine is a Blizzard API Simulation Engine for Lua Addon Testing outside of World of Warcraft.
+
+## Features
+- Frame simulation
+- Event handling
+- Combat log parsing
+- Lua runtime via Lupa
