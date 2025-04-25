@@ -1,0 +1,131 @@
+Metadata-Version: 2.4
+Name: Bynd
+Version: 2.6
+Summary: Bynd is a way of introducing static typing to Python.
+Author-email: "Rayshawn Levy (sneekyfoxx)" <sneekyfoxx09@gmail.com>
+Maintainer-email: "Rayshawn Levy (sneekyfoxx)" <sneekyfoxx09@gmail.com>
+Keywords: Bind,Bynd,bind,bynd
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Other/Nonlisted Topic
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+                                ██████╗ ██╗   ██╗███╗   ██╗██████╗ 
+                                ██╔══██╗╚██╗ ██╔╝████╗  ██║██╔══██╗
+                                ██████╔╝ ╚████╔╝ ██╔██╗ ██║██║  ██║
+                                ██╔══██╗  ╚██╔╝  ██║╚██╗██║██║  ██║
+                                ██████╔╝   ██║   ██║ ╚████║██████╔╝
+                                ╚═════╝    ╚═╝   ╚═╝  ╚═══╝╚═════╝
+
+
+> ***Bynd allows binding data input to a single type.***
+>
+> ***Bynd's intended use, is to be assigned to a variable.***
+>
+> ***Which, in this case, the variable data can still be***
+>
+> ***accessed exactly the same by invoking the 'data' method.***
+>
+> ***Since the data is bound to a single type, it cannot***
+>
+> ***be modified forcing it to become static. This pushes***
+>
+> ***the programmer to create a reference to a Bynd instance***
+>
+> ***by invoking the 'ref' method which can be modified by invoking***
+>
+> ***the 'modify' method. Inner collection types can be specified***
+>
+> ***using the keyword argument named 'inner' and passing it a 'set'***
+>
+> ***of types, to which the collection elements will be bound.***
+
+> **The benefits of using Bynd are:**
+>
+> 1. *Runtime type checking*
+>
+> 2. *Constant Bynd object instance data*
+>
+> 3. *Bynd object instance references*
+>  
+> 4. *Ability to access all data associated
+>    with a Bynd instance through both the
+>    'ByndRef' as well as the original instance
+>    by invoking any of the methods on either object
+>    such as: 'data', 'kind', 'inner', and 'info'*
+>
+> 5. *Ability to modify reference data according
+>    to the previously specified types. This means
+>    that any new data must be inline with the types
+>    specified in the original Bynd instance.*
+
+---
+
+
+#### Bynd: Basic Usage
+```python
+# filename: Bynd_test.py
+from Bynd.bynd import Bynd
+
+# Instantiates a Bynd object and binds the data [1,2,[3,4,5]] to the type 'list'
+# and it also binds the inner elements to the type 'list' and 'int' for both lists
+bynd_instance = Bynd([1, 2, [3, 4, 5]], list, inner={list, int})  # the data can't be changed
+
+# The above code will raise a 'ByndError' if the data is not of type 'list'
+# and if the inner elements are not of type 'list' or 'int'
+
+# To access and print the data, we need to invoke the 'data' method.
+print("bynd_instance.data: ", bynd_instance.data())
+
+# We can also access all information associated with the Bynd instance
+# by invoking the 'info' method.
+print("bynd_instance.info: ", bynd_instance.info())
+
+# Output:
+#    bynd_instance.data: "[1, 2, [3, 4, 5]]"
+#    bynd_instance.info: [([1, 2, [3, 4, 5]], <class 'list'>, {<class 'list'>, <class 'int'>})]
+
+# We can create a modifiable reference to the Bynd instance above by
+# invoking the 'ref' method.
+bynd_instance_ref = bynd_instance.ref()
+
+# We can now modify the reference as long as the data is inline with the types
+# specified in the original Bynd instance ('bynd_instance'). To do so, we need to invoke the
+# 'modify' method on the reference. Remember that the data is bound to the 'list' type and
+# 'inner' contains the 'list' and 'int' types which means our new data needs to have at least
+# one integer and/or list.
+bynd_instance_ref.modify([300, 400, [10, 20, 30]])
+
+# Now, lets print the new data.
+print("bynd_instance_ref.data: ", bynd_instance_ref.data())
+print("bynd_instance_ref.info: ", bynd_instance_ref.info())
+
+# output:
+#   bynd_instance_ref.data: [300, 400, [10, 20, 30]]
+#   bynd_instance_ref.info: ([300, 400, [10, 20, 30]], list, {<class 'list'>, <class 'int'>})
+```
+
+---
+
+#### NOTE:
+> ***Bynd, automatically performs recursive type checking. What that means is, for any***
+>
+> ***collection type (*list*, *tuple*, *set*, etc.) it encounters, collection element types***
+>
+> ***are checked against the type set passed to inner. All types need to be known or assumed***
+>
+> ***when using 'Bynd'. It also does not make use of type hints in any way and it introduces***
+>
+> ***strict yping to Python by striping some of its flexibility. Bynd, can be used along side***
+>
+> ***type hints and can be used as a way to enforce them.***
+
+---
