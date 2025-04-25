@@ -1,0 +1,927 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": false
+   },
+   "source": [
+    "# Usage & Examples"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Basic functionalities"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": false
+   },
+   "source": [
+    "### 1. Applying the style sheet: lizard_style()\n",
+    "\n",
+    "The package includes **a built-in style sheet**, designed to standardize and enhance the visual appeal of your plots. This style sheet configures various elements, ranging from fonts and font sizes to axis and grid settings, and even the default colors for multiple lines in a plot. Applying this style, which is also possible in the R package with + lizard_style() provides a **consistent look**, whether you're using ggplot in R or matplotlib/seaborn in Python.\n",
+    "\n",
+    "You can apply the Biolizard-look by placing `lizard_style()` at the top of your scripts after importing BioLizardStylePython. Please note that `lizard_style()` serves as a starting template and may not be the ideal style for every plot. You can easily customize individual style settings by placing your overrides after calling the `lizard_style()` function. Use `plt.style.use('default')` to return back to the default style.\n",
+    "\n",
+    "Here's a demonstration of how a simple line plot would look before and after applying the `lizard_style()`:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "import matplotlib.pyplot as plt\n",
+    "import numpy as np\n",
+    "from BioLizardStylePython import *\n",
+    "np.random.seed(42)\n",
+    "\n",
+    "# Function to create random lineplot\n",
+    "def create_line_plot():\n",
+    "    x = np.linspace(0, 10, 10)\n",
+    "    y1 = np.sin(x) + np.random.normal(0, 0.1, size=x.shape)\n",
+    "    y2 = np.cos(x) + np.random.normal(0, 0.1, size=x.shape)\n",
+    "    y3 = x + np.random.normal(0, 0.5, size=x.shape)\n",
+    "    plt.figure()\n",
+    "    plt.plot(x, y1, label='Line 1')\n",
+    "    plt.plot(x, y2, label='Line 2')\n",
+    "    plt.plot(x, y3, label='Line 3')\n",
+    "    plt.title('Random Plot with 3 Lines')\n",
+    "    plt.xlabel('X-axis')\n",
+    "    plt.ylabel('Y-axis')\n",
+    "    plt.legend()\n",
+    "    plt.show()\n",
+    "\n",
+    "create_line_plot()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "lizard_style()\n",
+    "create_line_plot()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": false
+   },
+   "source": [
+    "### 2. Using the color palettes\n",
+    "\n",
+    "<!-- The `biolizard_qualitative_pal()` function **retrieves a predefined qualitative colormap**. For instance, `biolizard_qualitative_pal().colors` returns a list of all 12 colors in hex code. Calling `biolizard_qualitative_pal()(0)` fetches the first color in the palette, while `biolizard_qualitative_pal()(range(5))` retrieves the first five colors.\n",
+    "\n",
+    "Here's two examples illustrating how to use this function: -->\n",
+    "\n",
+    "\n",
+    "There are two discrete colormaps and 4 continuous colormaps available in the BioLizard style packages.\n",
+    "Discrete: \n",
+    "\n",
+    "* biolizard_qualitative_pal: Colorblind-safe qualitative color palette starting with Biolizard's signature green, blue and yellow. This is the default for discrete data.\n",
+    "* biolizard_paired_pal: Colorblind-safe qualitative color palette inspired by Biolizard's signature colors, especially suited for levels that are related 2-by-2.\n",
+    "\n",
+    "These colormaps are available as `matplotlib.colors.ListedColormap` objects.\n",
+    "\n",
+    "Continuous:\n",
+    "\n",
+    "* biolizard_hues_pal: Designed for **discrete** data with many levels:  Maps each level to an evenly spaced hue on the color wheel, starting with Biolizard's signature green. DOES NOT generate colorblind-safe palettes.\n",
+    "* biolizard_sequential_pal: Sequential color palette inspired by Biolizard's signature green.\n",
+    "* biolizard_divergent_pal: Divergent color palette inspired by Biolizard's signature green.\n",
+    "* l_viridis_pal: Sequential color palette inspired by the viridis color scale, passing through Biolizard's signature yellow and green. This is the default for continuous data.\n",
+    "\n",
+    "These colormaps are available as `matplotlib.colors.LinearSegmentedColormap` objects and have also been registered with matplotlib and can be used by passsing their name to the `palette` (seaborn) or `cmap` (matplotlib) parameters, where available.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Note that you can also access the three base colors using:\n",
+    "- `blz_green` (\"#01a086\")\n",
+    "- `blz_blue` (#1e2237)\n",
+    "- `blz_yellow` (#e9b940)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "blz_green"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### 2.1 Discrete data"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Following color scales were designed for discrete data: \n",
+    "\n",
+    "**biolizard_qualitative_pal**: Colorblind-safe qualitative color palette starting with Biolizard's signature green, blue and yellow. This is the default for discrete data."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "biolizard_qualitative_pal"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**biolizard_paired_pal**: Colorblind-safe qualitative color palette inspired by Biolizard's signature colors, especially suited for levels that are related 2-by-2."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "biolizard_paired_pal"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**biolizard_hues_pal**: Note that while this is technically a continuous scale, it is designed for **discrete** data with many levels:  Maps each level to an evenly spaced hue on the color wheel, starting with Biolizard's signature green. DOES NOT generate colorblind-safe palettes."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "biolizard_hues_pal"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Adding the suffix \"_r\" reverses these palettes: "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "biolizard_qualitative_pal_r"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Colors can be retrieved from the discrete colorscales by passing a range to the palettes (returns an array of rgba values), or by using the `.colors` attribute (returns a list of all colors in the palette). "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "biolizard_qualitative_pal(range(5))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "biolizard_qualitative_pal.colors"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Since `biolizard_hues_pal` is encoded as a continuous color palette, passing a range will lilely NOT yeild the desired effect, as the continuous color scale is represented by a sequence of 255 colors. Passing e.g. `range(5)` will only retrieve the first 5 of these 255 colors. Instead, use `np.linspace` to ensure all colors are spaced evenly across the colorscale: "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ncolors = 5\n",
+    "rgbacolors = biolizard_hues_pal(np.linspace(0, 1, ncolors))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Then, you can use `matplotlib.colors.rgb2hex` to obtain hex values if needed:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "[matplotlib.colors.rgb2hex(col) for col in rgbacolors]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "##### 2.1.1 Seaborn"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Note that biolizard_qualitative_pal is the default colorscale for discrete data:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "import seaborn as sns\n",
+    "# Sample data\n",
+    "data = sns.load_dataset(\"iris\")\n",
+    "sns.swarmplot(x=\"species\", y=\"sepal_length\", hue =\"species\", data=data)\n",
+    "plt.title('A Flower Plot')\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Other discrete colormaps can be chosen by specifying a list of colors:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "sns.swarmplot(x=\"species\", y=\"sepal_length\", hue =\"species\", data=data, palette=biolizard_paired_pal.colors)\n",
+    "plt.title('A Flower Plot: manual discrete palette')\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Continuous colormaps can be referenced by their name, this ensures that colors are picked across the entire range of the continous scale:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "sns.swarmplot(x=\"species\", y=\"sepal_length\", hue =\"species\", data=data, palette=\"biolizard_sequential_pal\")\n",
+    "plt.title('A Flower Plot: manual continuous palette')\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "##### 2.1.2 Matplotlib"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Colors from the discrete scale can be passed to the `color` parameter of `plt.bar` for example:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "# Data for the bar plot\n",
+    "categories = ['A'+str(i) for i in range(12)]\n",
+    "values = [4, 7, 1, 8]*3\n",
+    "\n",
+    "# Create the bar plot\n",
+    "# .colors returns a list that can be used for the color parameter \n",
+    "plt.figure(figsize=(8, 6))\n",
+    "bars = plt.bar(categories, values, color=biolizard_paired_pal.colors)\n",
+    "\n",
+    "# Add title and labels\n",
+    "plt.title('Example Bar Plot')\n",
+    "plt.xlabel('Categories')\n",
+    "plt.ylabel('Values')\n",
+    "\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Note that in case the colorscale contains less levels than the data, colors are recycled without warning! \n",
+    "\n",
+    "To use a continuous scale, we need to take colors at regular intervals across the colormap:\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# take colors at regular intervals across the colormap\n",
+    "colors = biolizard_hues_pal(np.linspace(0, 1, len(categories)))\n",
+    "\n",
+    "bars = plt.bar(categories, values, color=colors)\n",
+    "\n",
+    "# Add title and labels\n",
+    "plt.title('Example Bar Plot')\n",
+    "plt.xlabel('Categories')\n",
+    "plt.ylabel('Values')\n",
+    "\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": false
+   },
+   "source": [
+    "#### 2.2 Continuous data"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Following color scales were designed for continous data: \n",
+    "\n",
+    "**l_viridis_pal**: Sequential color palette inspired by the viridis color scale, passing through Biolizard's signature yellow and green. This is the default for continuous data."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "l_viridis_pal"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**biolizard_sequential_pal**: Sequential color palette inspired by Biolizard's signature green."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "biolizard_sequential_pal"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**biolizard_divergent_pal**: Divergent color palette inspired by Biolizard's signature green.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "biolizard_divergent_pal"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Adding the suffix \"_r\" reverses these palettes: "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "biolizard_divergent_pal_r"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Colors can be retrieved from the continuous colorscales by passing an array of the desired length to the palettes, this returns an array of rgba values. Note that internally, each continuous color scale is represented as a sequence of 255 colors. All these colors can be retrieved by passing range(255) to your color scale of choice:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "l_viridis_pal(range(255))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "When manually selecting colors from the palette, use `np.linspace` to ensure colors are spaced evenly across the palette:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ncolors = 10\n",
+    "rgbacolors = l_viridis_pal(np.linspace(0, 1, ncolors))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Lastly, you can use `matplotlib.colors.rgb2hex` to obtain hex values if needed:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "[matplotlib.colors.rgb2hex(col) for col in rgbacolors]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "##### 2.2.1 Matplotlib"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Note that l_viridis is the default colorscale:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "data = np.random.rand(5, 5)  # Example data\n",
+    "plt.imshow(data)\n",
+    "plt.colorbar()\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The continous palettes have been registered with matplotlotlib and their names can be passed to the `cmap` parameter to change the continuous scale: "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "\n",
+    "plt.imshow(data, cmap='biolizard_sequential_pal')\n",
+    "plt.colorbar()\n",
+    "plt.show()\n",
+    "\n",
+    "plt.imshow(data, cmap='biolizard_divergent_pal')\n",
+    "plt.colorbar()\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The corresponding palettes with suffix '_r' reverse the colors:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "plt.imshow(data, cmap='biolizard_divergent_pal_r')\n",
+    "plt.colorbar()\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "##### 2.2.2 Seaborn"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "!! default not working for some reason: "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "data = sns.load_dataset(\"iris\")\n",
+    "sns.swarmplot(x=\"species\", y=\"sepal_length\", hue =\"sepal_length\", data=data)\n",
+    "plt.title('A Flower Plot')\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The names of the palettes can be passed to the `palette` parameter to change the continuous scale: "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "data = sns.load_dataset(\"iris\")\n",
+    "sns.swarmplot(x=\"species\", y=\"sepal_length\", hue =\"sepal_length\", data=data, palette=\"biolizard_sequential_pal\")\n",
+    "plt.title('A Flower Plot')\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": false
+   },
+   "source": [
+    "#### 3. Appending a BioLizard footer: finalise_lizardplot()\n",
+    "\n",
+    "The `finalise_lizardplot` function finalizes a matplotlib plot by appending a footer at the bottom and saving the resulting image. The footer includes a BioLizard logo and a customizable source text.\n",
+    "\n",
+    "**Parameters**\n",
+    "\n",
+    "- `plot`: The input matplotlib figure to be finalized.\n",
+    "- `source_text`: The source text to display at the bottom.\n",
+    "- `fontsize`: (Optional) Font size of the source text. Defaults to 12.\n",
+    "- `pdf`: (Optional) If True, saves as PDF. Otherwise, saves as PNG. Defaults to False.\n",
+    "- `output_name`: (Optional) Name of the output file. Defaults to \"TempLizardPlot\".\n",
+    "- `save_filepath`: (Optional) Full path to save the output. Takes precedence over `output_name`.\n",
+    "\n",
+    "Here's an example:\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "data = sns.load_dataset(\"iris\")\n",
+    "fig = plt.figure()\n",
+    "sns.swarmplot(x=\"species\", y=\"sepal_length\", data=data)\n",
+    "plt.title('A Flower Plot')\n",
+    "finalise_lizardplot(fig,\n",
+    "                  'Source: https://en.wikipedia.org/wiki/Iris_flower_data_set ',\n",
+    "                  fontsize=10, pdf=True, output_name='An_Iris_Plot')\n",
+    "\n",
+    "#Please take a look in your current working directory to see the result!"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Examples\n",
+    "\n",
+    "### 1. simple boxplot"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "sns.boxplot(x=\"species\", y=\"sepal_length\", data=data)\n",
+    "plt.title('A Flower Plot')\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "A violin plot is similar to a boxplot, but captures more information on the data distribution:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "sns.violinplot(x=\"species\", y=\"sepal_length\", data=data)\n",
+    "plt.title('A Flower Plot')\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 2. Simple density plot"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "sns.displot(data, x=\"sepal_length\", hue=\"species\", kind=\"kde\", fill=True)\n",
+    "plt.title('A Flower Plot')\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 3. Simple scatterplot"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "sns.scatterplot(data, x='sepal_length', y='petal_length', hue='petal_length', palette='l_viridis_pal')\n",
+    "plt.title('A Flower Plot')\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We can use `lmplot` or `regplot` to add a regression line:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import scipy as sp\n",
+    "\n",
+    "g = sns.lmplot(data, x='sepal_length', y='petal_length', line_kws=dict(color=blz_blue))\n",
+    "\n",
+    "def annotate(data, **kws):\n",
+    "    r, p = sp.stats.pearsonr(data['sepal_length'], data['petal_length'])\n",
+    "    ax = plt.gca()\n",
+    "    ax.text(.05, .8, '$r^2$={:.2f}, p={:.2g}'.format(r**2, p),\n",
+    "            transform=ax.transAxes)\n",
+    "    \n",
+    "g.map_dataframe(annotate)\n",
+    "plt.title('A Flower Plot')\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# specify hue to show the three species\n",
+    "sns.lmplot(data, x='sepal_length', y='petal_length', hue='species')\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Note that using the reversed palette starts picking the colors from the end of the palette. If you want to pick the colors you need, and reverse them afterward (eg yellow-blue-green instead of green-blue-yellow), use the regular palette and reverse the colors after picking them:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "my_colors = biolizard_qualitative_pal.colors[0:3]\n",
+    "\n",
+    "fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(10,5))\n",
+    "\n",
+    "# regular palette\n",
+    "sns.scatterplot(data, x='sepal_length', y='petal_length', hue='species',\n",
+    "           palette=my_colors, ax=axes[0])\n",
+    "axes[0].set_title('Regular palette')\n",
+    "\n",
+    "# reversed\n",
+    "my_colors.reverse()\n",
+    "sns.scatterplot(data, x='sepal_length', y='petal_length', hue='species',\n",
+    "           palette=my_colors, ax=axes[1])\n",
+    "axes[1].set_title('Reversed palette')\n",
+    "\n",
+    "fig.show()\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 4. Facets\n",
+    "\n",
+    "Facetting is a great way to lay out related plots side-by-side, with the axes either on the same scale or on different scales."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "g = sns.FacetGrid(data, col=\"species\")\n",
+    "g.map_dataframe(sns.scatterplot, x='sepal_length', y='petal_length')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 5. Treemap plots\n",
+    "\n",
+    "Treemap plots can be used as an alternative for bar charts, for example when there are so many categories that a bar chart may not be clear anymore.\n",
+    "In this example, more colors are requested than are present in the qualitative color scales. The `biolizard_hues_pal` palette was developped for situations like this. It maps each level to an evenly spaced hue on the color wheel, starting with Biolizard's signature green, but it DOES NOT generate colorblind-safe palettes."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import squarify\n",
+    "\n",
+    "# Sample data\n",
+    "values = [250, 120, 280, 320, 140, 95, 87, 270, 896, 25, 654, 78, 37]\n",
+    "labels = ['Group'+str(i) for i,_ in enumerate(values)]\n",
+    "\n",
+    "# take colors at regular intervals across the colormap\n",
+    "colors = biolizard_hues_pal(np.linspace(0, 1, len(values)))\n",
+    "\n",
+    "# Treemap\n",
+    "squarify.plot(sizes = values, label = labels, color = colors,\n",
+    "              text_kwargs={'color':'black'},\n",
+    "              edgecolor=\"black\", linewidth=2)\n",
+    "\n",
+    "# Remove the axis:\n",
+    "plt.axis(\"off\")\n",
+    "\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 6. Fun with maps\n",
+    "\n",
+    "This example was taken from: https://matplotlib.org/basemap/stable/users/examples.html."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from mpl_toolkits.basemap import Basemap\n",
+    "import matplotlib.pyplot as plt\n",
+    "from datetime import datetime\n",
+    "\n",
+    "# miller projection \n",
+    "map = Basemap(projection='mill',lon_0=0)\n",
+    "# plot coastlines, draw label meridians and parallels.\n",
+    "map.drawcoastlines()\n",
+    "map.drawparallels(np.arange(-90,90,30),labels=[1,0,0,0])\n",
+    "map.drawmeridians(np.arange(map.lonmin,map.lonmax+30,60),labels=[0,0,0,1])\n",
+    "map.drawmapboundary(fill_color=blz_blue)\n",
+    "map.fillcontinents(color=blz_green,lake_color=blz_blue)\n",
+    "# shade the night areas, with alpha transparency so the \n",
+    "# map shows through. Use current time in UTC.\n",
+    "date = datetime.now()\n",
+    "CS=map.nightshade(date)\n",
+    "plt.title('Day/Night Map for %s (UTC)' % date.strftime(\"%d %b %Y %H:%M:%S\"))\n",
+    "plt.show()"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "nature-grade-visualization",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.2"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}
