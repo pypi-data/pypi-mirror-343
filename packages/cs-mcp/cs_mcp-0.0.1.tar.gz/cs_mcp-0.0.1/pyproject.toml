@@ -1,0 +1,80 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cs-mcp"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.13"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Kaburi", email = "specialemail90@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "pywin32>=310",
+]
+
+[project.urls]
+Documentation = "https://github.com/Kaburi/hatch-test#readme"
+Issues = "https://github.com/Kaburi/hatch-test/issues"
+Source = "https://github.com/Kaburi/hatch-test"
+
+[tool.hatch.version]
+path = "src/cs_mcp/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/cs_mcp tests}"
+
+[tool.coverage.run]
+source_pkgs = ["cs_mcp", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/cs_mcp/__about__.py",
+]
+
+[tool.coverage.paths]
+cs_mcp = ["src/cs_mcp", "*/hatch-test/src/cs_mcp"]
+tests = ["tests", "*/hatch-test/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+
+[dependency-groups]
+dev = [
+    "hatch>=1.14.1",
+    "twine>=6.1.0",
+]
+
+[project.scripts]
+cs_mcp = "cs_mcp:main"
+
+# Hatchling build configuration
+# [tool.hatch.build.targets.wheel]
+# packages = ["src"]
+# package-data = {"cs_mcp" = ["py.typed"]}
+# sources = {"cs_mcp" = "src/cs_mcp", "cs_mcp.utils" = "src/utils"}
