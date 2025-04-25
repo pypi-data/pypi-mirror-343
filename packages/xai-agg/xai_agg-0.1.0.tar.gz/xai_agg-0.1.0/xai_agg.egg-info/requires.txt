@@ -1,0 +1,15 @@
+scikit-learn
+numpy
+pandas
+lime
+shap
+alibi
+scipy
+tensorflow-cpu
+tf-keras
+pathos
+pymcdm
+ranx
+xlrd
+pandera
+ipython
