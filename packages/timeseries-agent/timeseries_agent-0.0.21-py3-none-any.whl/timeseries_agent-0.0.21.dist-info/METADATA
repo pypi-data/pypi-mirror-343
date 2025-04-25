@@ -1,0 +1,151 @@
+Metadata-Version: 2.4
+Name: timeseries_agent
+Version: 0.0.21
+Summary: A Policy Gradient RL agent for time series prediction using PyTorch Lightning.
+Home-page: https://github.com/cpohagwu/timeseries_agent
+Author: Collins Patrick Ohagwu
+Author-email: Collins Patrick Ohagwu <cpohagwu@gmail.com>
+License-Expression: Apache-2.0
+Project-URL: Homepage, https://github.com/cpohagwu/timeseries_agent
+Project-URL: Bug Tracker, https://github.com/cpohagwu/timeseries_agent/issues
+Project-URL: Documentation, https://timeseries_agent.readthedocs.io/en/latest/
+Keywords: reinforcement-learning,policy-gradient,pytorch-lightning,time-series,agent,trading
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy!=1.24.0,>=1.20
+Requires-Dist: pandas>=1.2
+Requires-Dist: matplotlib!=3.6.1,>=3.4
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# TimeSeries Agent
+
+[![PyPI version](https://badge.fury.io/py/time-series-predictor-rl.svg)](https://badge.fury.io/py/time-series-predictor-rl)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+A Python package implementing a Policy Gradient Reinforcement Learning agent for predicting directional movements (Up, Down, Same) in time series data. This package uses PyTorch Lightning for structuring the training process.
+
+## Features
+
+*   Implements a basic Policy Gradient algorithm.
+*   Uses a flexible Multi-Layer Perceptron (MLP) as the policy network.
+*   Configurable lookback window, hidden layers, and normalization.
+*   Handles multi-feature time series data.
+*   Uses epsilon-greedy strategy for exploration/exploitation balance with decay.
+*   Built with PyTorch Lightning for easier training management and logging (via CSVLogger).
+
+## Installation
+
+```bash
+pip install timeseries_agent
+```
+
+You may also need to install the following dependencies:
+
+```bash
+pip install lightning torch
+```
+
+## Usage
+
+### Using the Example Notebook
+
+The package includes an example Jupyter notebook (`examples/example_timeseries_agent.ipynb`) that demonstrates how to:
+1. Set up and train a reinforcement learning agent
+2. Load a trained model and test it with simulated live data
+
+To run the notebook:
+1. Install Jupyter if you haven't already: `pip install jupyter`
+2. Navigate to the examples directory: `cd examples`
+3. Launch Jupyter: `jupyter notebook`
+4. Open `example_timeseries_agent.ipynb`
+
+### Using the Example Python Scripts
+
+There are two example scripts provided: `example_train.py` and `example_test.py`.
+
+#### Training
+
+`example_train.py` is used to train the agent.
+
+```bash
+python examples/example_train.py
+```
+
+This script:
+
+1.  Generates sample multi-feature time series data using Pandas.
+2.  Creates an `RLTimeSeriesDataset` and `DataLoader`.
+3.  Instantiates the `PolicyGradientAgent`.
+4.  Trains the agent using PyTorch Lightning `Trainer`.
+5.  Logs training progress to `logs/rl_agent/`.
+6.  Finally saves the checkpoint in the current directory.
+7.  Optionally plots the training progress.
+
+**Note about logging**: The training process logs metrics to CSV files by default in the `logs/rl_agent/` directory.
+
+#### Testing
+
+`example_test.py` is used to test/evaluate the trained agent.
+
+```bash
+python examples/example_test.py
+```
+
+This script:
+
+1.  Generates sample multi-feature time series data using Pandas.
+2.  Loads a trained agent from checkpoint.
+3.  Evaluates the trained agent and prints results.
+4.  Optionally plots the predicted actions vs true actions.
+
+### Using Your Own Data
+
+1.  **Prepare your data:** Load your time series data into a Pandas DataFrame.
+    ```python
+    import pandas as pd
+    data_df = pd.read_csv("path/to/your/data.csv", index_col="timestamp", parse_dates=True)
+    data_df.sort_index(inplace=True)
+    ```
+2.  **Adapt the example scripts:**
+    *   Replace sample data generation with your data loading.
+    *   Update `TARGET_COLUMN` and `NUM_FEATURES`.
+    *   Adjust hyperparameters in `PolicyGradientAgent` and `Trainer`.
+3.  **Run your modified script:**
+    ```bash
+    python your_modified_script.py
+    ```
+
+### Configuration
+
+Key parameters in the examples:
+
+#### `PolicyGradientAgent` parameters:
+
+*   `full_data`: Pandas DataFrame.
+*   `target_column`: Target column name for reward.
+*   `input_features`: Number of features.
+*   `lookback`: Lookback window size.
+*   `hidden_layers`: MLP architecture (e.g., `[128, 64]`).
+*   `output_size`: Number of actions (default: 3).
+*   `learning_rate`: Optimizer learning rate.
+*   `normalize_state`: Normalize state within lookback window.
+*   `epsilon_start`, `epsilon_end`, `epsilon_decay_epochs`: Epsilon-greedy parameters.
+
+#### `Trainer` parameters:
+
+*   `max_epochs`: Number of training epochs.
+*   `accelerator`, `devices`: Hardware configuration (`'cpu'`, `'gpu'`, `'tpu'`).
+*   `logger`: Logging configuration (`CSVLogger` default).
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
