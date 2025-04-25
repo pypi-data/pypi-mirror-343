@@ -1,0 +1,64 @@
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="icon" href="{% static 'img/intelisis128.png' %}" type="image/png">
+    <title>API</title>
+</head>
+<style>
+    * {
+        font-family: 'Roboto', sans-serif;
+        font-weight: lighter;
+    }
+
+    a, a:hover {
+        text-decoration: none !important;
+    }
+
+    {% if doc %}
+        .link {
+            cursor: pointer !important;
+            transition: all 0.5s ease-in-out;
+            position: relative;
+        }
+
+        .link:hover {
+            transform: scale(1.3);
+        }
+
+        .link::after {
+            content: 'Documentation';
+            position: absolute;
+            color: white;
+            right: 0;
+            left: 0;
+            bottom: -30px;
+            text-align: center;
+            transition: opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        .link:hover::after {
+            opacity: 100%;
+        }
+    {% endif %}
+
+    .main {
+        background-image: radial-gradient(circle, #004b75, #001c26);
+        background-position: center;
+    }
+</style>
+<body>
+<div class="main d-flex" style="width: 100vw; height: 100vh;">
+    <div class="m-auto link">
+        <a class="text-light position-relative border-bottom border-2 border-light text-decoration-none"
+           style="font-size: 6rem" href="{% if doc %}{{ doc }}{% endif %}">Intelisis</a>
+    </div>
+</div>
+</body>
+</html>
