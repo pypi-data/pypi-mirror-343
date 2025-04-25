@@ -1,0 +1,2 @@
+[console_scripts]
+cstoolbox = cstoolbox.main:main
