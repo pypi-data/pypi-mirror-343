@@ -1,0 +1,93 @@
+{% extends "admin/base_login.html" %}
+{% load i18n static %}
+{% load form_filters %}
+
+{% block title %}{% if form.errors %}{% translate "Error:" %} {% endif %}{{ block.super }}{% endblock %}
+{% block extrastyle %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static "admin/css/login.css" %}">
+  {{ form.media }}
+{% endblock %}
+
+{% block bodyclass %}login bg-gradient-to-tr from-blue-100/30 to-purple-100/30 min-h-screen flex items-center justify-center bg-cover bg-center{% endblock %}
+
+<!-- {% block usertools %}{% endblock %} -->
+<!-- {% block nav-global %}{% endblock %} -->
+<!-- {% block nav-sidebar %}{% endblock %} -->
+<!-- {% block content_title %}{% endblock %} -->
+<!-- {% block nav-breadcrumbs %}{% endblock %} -->
+
+{% block content %}
+<div class="w-full max-w-md px-6">
+  <div class=" p-8  ">
+
+    <h1 class="text-4xl font-bold text-center text-gray-800 mb-6 text-black dark:text-white ">{% translate "Admin Login" %}.</h1>
+
+    <button id="theme-toggle" class="p-2 rounded bg-gray-200 dark:bg-gray-800 text-black dark:text-white">
+      Toggle Theme
+    </button>
+
+    {% if form.errors and not form.non_field_errors %}
+      <p class="text-red-600 dark:bg-gray-900 dark:text-white  text-sm mb-4">
+        {% blocktranslate count counter=form.errors.items|length %}Please correct the error below.{% plural %}Please correct the errors below.{% endblocktranslate %}
+      </p>
+    {% endif %}
+
+    {% if form.non_field_errors %}
+      {% for error in form.non_field_errors %}
+        <p class="text-red-600 text-sm mb-4">{{ error }}</p>
+      {% endfor %}
+    {% endif %}
+
+    {% if user.is_authenticated %}
+      <p class="text-yellow-700 text-sm mb-4">
+        {% blocktranslate trimmed %}
+          You are authenticated as {{ username }}, but are not authorized to
+          access this page. Would you like to login to a different account?
+        {% endblocktranslate %}
+      </p>
+    {% endif %}
+
+    <form action="{{ app_path }}" method="post" id="login-form" class="space-y-5">
+      {% csrf_token %}
+      
+      <div class="mb-4">
+        <label for="{{ form.username.id_for_label }}" class="block text-sm font-semibold mb-2 text-black dark:text-white">
+          {% translate "Username" %}
+        </label>
+        {{ form.username|add_class:" w-full px-3 py-2 rounded-lg focus:outline-none text-white dark:text-black" }}
+        {% if form.username.errors %}
+          <p class="text-red-500 text-xs mt-1">{{ form.username.errors|join:", " }}</p>
+        {% endif %}
+      </div>
+    
+      <div class="mb-4">
+        <label for="{{ form.password.id_for_label }}" class="block text-sm font-semibold mb-2 text-black dark:text-white">
+          {% translate "Password" %}
+        </label>
+        {{ form.password|add_class:"w-full px-3 py-2 rounded-lg focus:outline-none bg-[#1c1c21e0] text-white dark:text-black" }}
+        {% if form.password.errors %}
+          <p class="text-red-500 text-xs mt-1">{{ form.password.errors|join:", " }}</p>
+        {% endif %}
+        <input type="hidden" class="text-black dark:text-white" name="next" value="{{ next }}">
+      </div>
+    
+      {% url 'admin_password_reset' as password_reset_url %}
+      {% if password_reset_url %}
+        <div class="text-right">
+          <a href="{{ password_reset_url }}" class="text-sm text-blue-400 hover:underline">
+            {% translate 'Forgotten your login credentials?' %}
+          </a>
+        </div>
+      {% endif %}
+    
+      <div>
+        <button type="submit" class="w-full bg-[#FF8A00] text-black font-bold py-2 rounded-md hover:bg-blue-600 transition duration-300 hover:scale-[1.04]">
+          {% translate 'Log in' %}
+        </button>
+      </div>
+    </form>
+    
+  </div>
+</div>
+{% endblock %}

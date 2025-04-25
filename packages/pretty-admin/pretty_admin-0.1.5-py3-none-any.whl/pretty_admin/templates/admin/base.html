@@ -1,0 +1,176 @@
+{% load i18n static %}<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr,auto' }}"  >
+<head>
+<title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}">
+<script src="{% static 'pretty_admin/css/tailwind.js' %}"></script>
+
+{% block dark-mode-vars %}
+  <link rel="stylesheet" href="{% static "admin/css/dark_mode.css" %}">
+  <script src="{% static "admin/js/theme.js" %}"></script>
+{% endblock %}
+
+{% if not is_popup and is_nav_sidebar_enabled %}
+  <link rel="stylesheet" href="{% static "admin/css/nav_sidebar.css" %}">
+  <script src="{% static 'admin/js/nav_sidebar.js' %}" defer></script>
+{% endif %}
+{% block extrastyle %}{% endblock %}
+{% if LANGUAGE_BIDI %}<link rel="stylesheet" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}">{% endif %}
+{% block extrahead %}{% endblock %}
+{% block responsive %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static "admin/css/responsive.css" %}">
+  {% if LANGUAGE_BIDI %}<link rel="stylesheet" href="{% static "admin/css/responsive_rtl.css" %}">{% endif %}
+{% endblock %}
+{% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE">{% endblock %}
+</head>
+
+<body class="bg-gray-50 text-gray-800 min-h-screen font-sans {% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}" data-admin-utc-offset="{% now "Z" %}">
+<a href="#content-start" class="skip-to-content-link">{% translate 'Skip to main content' %}</a>
+
+<!-- Container -->
+<div id="container" class="max-w-screen-2xl mx-auto p-4">
+
+  {% if not is_popup %}
+  <!-- Header -->
+  {% block header %}
+    <header id="header" class="flex items-center justify-between py-4 border-b ">
+      <div id="branding" class="font-semibold text-blue-600">
+        {% block branding %}{% endblock %}
+      </div>
+      {% block usertools %}
+      {% if has_permission %}
+      <div id="user-tools" class="text-sm text-gray-600 space-x-4 flex items-center">
+        {% block welcome-msg %}
+          {% translate 'Welcome,' %}
+          <strong>{% firstof user.get_short_name user.get_username %}</strong>.
+        {% endblock %}
+        {% block userlinks %}
+          <div class="space-x-2 flex items-center">
+            {% if site_url %}
+              <a href="{{ site_url }}" class="text-blue-600 hover:underline">{% translate 'View site' %}</a>
+            {% endif %}
+            {% if user.is_active and user.is_staff %}
+              {% url 'django-admindocs-docroot' as docsroot %}
+              {% if docsroot %}
+                <a href="{{ docsroot }}" class="text-blue-600 hover:underline">{% translate 'Documentation' %}</a>
+              {% endif %}
+            {% endif %}
+            {% if user.has_usable_password %}
+              <a href="{% url 'admin:password_change' %}" class="text-blue-600 hover:underline">{% translate 'Change password' %}</a>
+            {% endif %}
+            <form id="logout-form" method="post" action="{% url 'admin:logout' %}" class="inline">
+              {% csrf_token %}
+              <button type="submit" class="text-red-600 hover:underline">{% translate 'Log out' %}</button>
+            </form>
+            {% include "admin/color_theme_toggle.html" %}
+          </div>
+        {% endblock %}
+      </div>
+      {% endif %}
+      {% endblock %}
+      {% block nav-global %}{% endblock %}
+    </header>
+  {% endblock %}
+  <!-- END Header -->
+
+  {% block nav-breadcrumbs %}
+  <nav aria-label="{% translate 'Breadcrumbs' %}" class="text-sm text-gray-500 my-4">
+    {% block breadcrumbs %}
+    <div class="breadcrumbs space-x-2">
+      <a href="{% url 'admin:index' %}" class="text-blue-600 hover:underline">{% translate 'Home' %}</a>
+      {% if title %} &rsaquo; <span class="text-gray-700">{{ title }}</span>{% endif %}
+    </div>
+    {% endblock %}
+  </nav>
+  {% endblock %}
+  {% endif %}
+
+  <div class="main" id="main">
+    {% if not is_popup and is_nav_sidebar_enabled %}
+      {% block nav-sidebar %}
+        {% include "admin/nav_sidebar.html" %}
+      {% endblock %}
+    {% endif %}
+    <main id="content-start" class="content" tabindex="-1">
+      {% block messages %}
+        {% if messages %}
+          <ul class="messagelist space-y-2 mb-4">
+            {% for message in messages %}
+              <li class="p-2 rounded {% if message.tags %}{{ message.tags }}{% else %}bg-blue-100 text-blue-800{% endif %}">
+                {{ message|capfirst }}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endblock messages %}
+
+      <!-- Content -->
+      <div id="content" class="{% block coltype %}colM{% endblock %} bg-white shadow-sm rounded p-6">
+        {% block pretitle %}{% endblock %}
+        {% block content_title %}{% if title %}<h1 class="text-2xl font-bold mb-2">{{ title }}</h1>{% endif %}{% endblock %}
+        {% block object-tools %}{% endblock %}
+        {% block content_subtitle %}{% if subtitle %}<h2 class="text-lg font-medium text-gray-600 mb-4">{{ subtitle }}</h2>{% endif %}{% endblock %}
+        {% block content %}
+          {{ content }}
+        {% endblock %}
+        {% block sidebar %}{% endblock %}
+        <br class="clear">
+      </div>
+      <!-- END Content -->
+    </main>
+  </div>
+
+  <footer id="footer" class="mt-8 text-center text-sm text-gray-400">{% block footer %}{% endblock %}</footer>
+</div>
+<!-- END Container -->
+
+<!-- SVGs -->
+<svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">
+  <symbol viewBox="0 0 24 24" width="1.5rem" height="1.5rem" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"/></symbol>
+  <symbol viewBox="0 0 24 24" width="1.5rem" height="1.5rem" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol>
+  <symbol viewBox="0 0 24 24" width="1.5rem" height="1.5rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>
+</svg>
+<!-- END SVGs -->
+
+{% block extrabody %}{% endblock extrabody %}
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const html = document.documentElement;
+    const toggleBtn = document.getElementById("theme-toggle");
+
+    // Restore saved theme
+    if (localStorage.getItem("theme") === "dark") {
+      html.classList.add("dark");
+    }
+
+    toggleBtn?.addEventListener("click", () => {
+      const isDark = html.classList.contains("dark");
+
+      if (isDark) {
+        html.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+      } else {
+        html.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+      }
+
+      // Force reflow (sometimes needed with Tailwind CDN)
+      html.style.display = "none";
+      requestAnimationFrame(() => {
+        html.style.display = "";
+      });
+    });
+  });
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+  };
+</script>
+
+</body>
+</html>
