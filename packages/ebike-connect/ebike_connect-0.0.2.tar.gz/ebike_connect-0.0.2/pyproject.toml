@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=75", "setuptools_scm[toml]>=8.1"]
+
+[project]
+name = "ebike-connect"
+authors = [
+    {name = "Rogier van der Geer", email = "rogier@vander-geer.nl"},
+]
+description = "Python client for Bosch eBike Connect."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+keywords = [
+    "api",
+    "bosch",
+    "ebike",
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Typing :: Typed"
+]
+dependencies = [
+    "pydantic>=2.10.0",
+    "requests>=2.31.0",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = ["pre-commit>=3.3.3", "ruff>=0.8.1", "pytest>=8.1.0", "pytest-mock>=3.13.0"]
+
+[project.urls]
+Repository = "https://github.com/rogiervandergeer/ebike-connect"
+
+[tool.setuptools_scm]
+write_to = "src/ebikeconnect/_version.py"
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.mypy]
+plugins = ["pydantic.mypy"]
