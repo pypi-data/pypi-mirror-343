@@ -1,0 +1,7 @@
+pbr>=1.6 # Apache-2.0
+netaddr>=0.7.6
+PyYAML>=3.10
+docutils>=0.11
+netifaces
+distro
+cryptography>=2.1 # BSD/Apache-2.0
