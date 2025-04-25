@@ -1,0 +1,13 @@
+prefix=C:/Users/RUNNER~1/AppData/Local/Temp/tmp7pd5kl2p/wheel/platlib
+exec_prefix=C:/Users/RUNNER~1/AppData/Local/Temp/tmp7pd5kl2p/wheel/platlib
+libdir=C:/Users/RUNNER~1/AppData/Local/Temp/tmp7pd5kl2p/wheel/platlib/lib
+sharedlibdir=C:/Users/RUNNER~1/AppData/Local/Temp/tmp7pd5kl2p/wheel/platlib/lib
+includedir=C:/Users/RUNNER~1/AppData/Local/Temp/tmp7pd5kl2p/wheel/platlib/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.3.1
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
