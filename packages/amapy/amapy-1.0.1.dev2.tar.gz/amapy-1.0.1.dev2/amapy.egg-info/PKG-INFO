@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: amapy
+Version: 1.0.1.dev2
+Summary: The client side tool for ama project.
+Author-email: Swarup Mahanti <swarup.mahanti@roche.com>
+Maintainer-email: Swarup Mahanti <swarup.mahanti@roche.com>
+License: Copyright (c) 2024 Roche Diagnostics Computation Science & Informatics
+Requires-Python: <3.11,>=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: amapy-contents==1.0.1.dev0
+Requires-Dist: amapy-core==1.0.1.dev0
+Requires-Dist: amapy-db==1.0.1.dev0
+Requires-Dist: amapy-pluggy==1.0.1.dev0
+Requires-Dist: amapy-plugin-gcr==1.0.1.dev0
+Requires-Dist: amapy-plugin-gcs==1.0.1.dev0
+Requires-Dist: amapy-plugin-posix==1.0.1.dev0
+Requires-Dist: amapy-plugin-s3==1.0.1.dev0
+Requires-Dist: amapy-utils==1.0.1.dev0
+Requires-Dist: markupsafe==2.1.*
+
+# amapy
+
+The client side tool for ama project. It provides a command-line
+interface and a Python API for programmatic access to manage and distribute
+digital assets.
+
+## Installation
+
+The source code is currently hosted on GitHub at:
+https://github.com/Roche-CSI/ama
+
+Binary installers for the latest released version are available at the
+[Python Package Index (PyPI)](https://pypi.org/project/amapy/)
+
+You can install using [pip](https://pip.pypa.io/en/stable/):
+
+```sh
+pip install amapy
+```
+
+## Usage
+
+### Command Line Interface
+
+```sh
+ama --help
+```
+
+### Python API
+
+```python
+from amapy import asset
+
+asset.auth.login()
+```
+
+## Supported Python Versions
+
+Python == 3.10
+
+## License
+
+MIT License - see [LICENSE](https://github.com/Roche-CSI/ama/blob/main/LICENSE) for details.
