@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: whttpserver
+Version: 0.1.0
+Summary: A simple HTTP server like `python -m http.server`
+Home-page: https://www.hohode.com
+Author: Wang Junbo
+Author-email: wjbhnu@gmail.com
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
