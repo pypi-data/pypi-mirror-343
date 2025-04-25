@@ -1,0 +1,53 @@
+[build-system]
+requires = [
+    "setuptools>=43.0.0",
+    "wheel>=0.34.0"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ttsvowelviz"
+version = "0.1.0"
+description = "A tool for visualizing static and dynamic vowel spaces during text-to-speech model training"
+authors = [{ name = "Pasindu Udawatta", email = "pasindu.ud@gmail.com" }]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Visualization"
+]
+requires-python = ">=3.7.0,<3.13.0"
+dependencies = [
+    "numpy>=1.19.0",
+    "pandas>=1.0.0",
+    "plotly>=4.5.0",
+    "praat-parselmouth>=0.4.0",
+    "scipy>=1.5.0",
+    "tgt==1.5"
+]
+readme = "README.md"
+license = { text = "Copyright (c) 2025 Pasindu Udawatta" }
+keywords = ["text-to-speech", "vowel space", "visualization", "evaluation", "linguistics"]
+
+[project.urls]
+Repository = "https://github.com/pasindu-ud/ttsvowelviz/tree/pypi-v0.1.0"
+"Bug Tracker" = "https://github.com/pasindu-ud/ttsvowelviz/issues"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
