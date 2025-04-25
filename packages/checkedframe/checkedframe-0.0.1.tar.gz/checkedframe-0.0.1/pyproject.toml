@@ -1,0 +1,35 @@
+[project]
+name = "checkedframe"
+version = "0.0.1"
+description = "A generic dataframe validation library"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "Cangyuan Li", email = "everest229@gmail.com" }]
+classifiers = ["Programming Language :: Python :: 3"]
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["narwhals>=1.0.0"]
+
+[project.urls]
+"Homepage" = "https://github.com/CangyuanLi/checkedframe"
+"Source" = "https://github.com/CangyuanLi/checkedframe"
+"Bug Reports" = "https://github.com/CangyuanLi/checkedframe/issues"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.pybench]
+repeat = 100
+number = 10
+warmups = 1
+partition_by = ["commit"]
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["E402", "F401"]

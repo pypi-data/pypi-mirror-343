@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/checkedframe/__init__.py
+src/checkedframe/_core.py
+src/checkedframe/_dtypes.py
+src/checkedframe/exceptions.py
+src/checkedframe/narwhals.py
+src/checkedframe/pandas.py
+src/checkedframe/polars.py
+src/checkedframe.egg-info/PKG-INFO
+src/checkedframe.egg-info/SOURCES.txt
+src/checkedframe.egg-info/dependency_links.txt
+src/checkedframe.egg-info/requires.txt
+src/checkedframe.egg-info/top_level.txt
+tests/test_validation.py
