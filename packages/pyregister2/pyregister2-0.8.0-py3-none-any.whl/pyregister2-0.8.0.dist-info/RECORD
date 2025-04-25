@@ -1,0 +1,9 @@
+pyregister2/__init__.py,sha256=MXvMh_JNcoPTNYH-_xJCJuNncy-hlzuCFjBKxqjyeU8,2386
+pyregister2/pyregister.py,sha256=pBoLIFZvNk_pBp6cWLGx4hHMxDCCzaNDIPJ40KX9RC8,1588
+pyregister2/bin/libpyregister.a,sha256=fouAK_m9gmTBFIi45GEqN1xMsfcvPprsRhgppNOT92U,2640
+pyregister2/bin/libpyregister.so,sha256=M6DadTetR6kp9h9Bzw40YCgyzuSkV4Kp5vgcF9I2UCo,364905
+pyregister2/bin/pyregister.dll,sha256=CA9uUXsbVDTZqmg9SYxUqw6GGR0hMjTQ4n7_UPMjDNk,2821742
+pyregister2-0.8.0.dist-info/METADATA,sha256=DTXupNeTG_cQo6w65dvWcP2-AfjX6Xl_AWWfosyevaA,294
+pyregister2-0.8.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+pyregister2-0.8.0.dist-info/top_level.txt,sha256=4whvpggvVKFiQFqEcui54QLw3mtxhb_jKn_fbZ5DyaQ,12
+pyregister2-0.8.0.dist-info/RECORD,,
