@@ -1,0 +1,2 @@
+include fatkun/*.pyd
+recursive-include fatkun *.pyd
