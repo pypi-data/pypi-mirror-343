@@ -1,0 +1,2 @@
+[console_scripts]
+pydantic-ai-visual = pydantic_ai_visual.cli:cli
