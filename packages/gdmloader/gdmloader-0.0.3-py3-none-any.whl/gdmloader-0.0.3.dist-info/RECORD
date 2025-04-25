@@ -1,0 +1,7 @@
+gdmloader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gdmloader/constants.py,sha256=-FhYjlLdJYK95qtBN-KKczwFEBbf3IKmF-k82FmUVyU,454
+gdmloader/source.py,sha256=yHHd48BYEOz-kw3xPeNEz1M2Nk4nFnLWCcR5Pi7uNTU,5154
+gdmloader/version.py,sha256=QqMXHVJs6Mh0abjyoct_OcIt77Rz1dSmEAy-kWDxGc8,18
+gdmloader-0.0.3.dist-info/METADATA,sha256=thMynHepsc0q9QvVvg2TIYPfzRuiH1q3_pvyziqWw-4,2003
+gdmloader-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gdmloader-0.0.3.dist-info/RECORD,,
