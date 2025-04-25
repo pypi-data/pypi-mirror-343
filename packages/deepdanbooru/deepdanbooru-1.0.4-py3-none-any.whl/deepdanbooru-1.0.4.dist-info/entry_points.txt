@@ -1,0 +1,2 @@
+[console_scripts]
+deepdanbooru = deepdanbooru.__main__:main
