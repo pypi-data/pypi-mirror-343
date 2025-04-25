@@ -1,0 +1,7 @@
+fire
+gtts
+notify2
+opencv-python
+pydub
+sense_emu
+unidecode
