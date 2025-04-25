@@ -1,0 +1,6 @@
+salamamir.py
+setup.py
+salamamir.egg-info/PKG-INFO
+salamamir.egg-info/SOURCES.txt
+salamamir.egg-info/dependency_links.txt
+salamamir.egg-info/top_level.txt
