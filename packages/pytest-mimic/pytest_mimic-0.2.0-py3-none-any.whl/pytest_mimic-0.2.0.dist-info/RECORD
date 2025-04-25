@@ -1,0 +1,9 @@
+pytest_mimic/__init__.py,sha256=rX9s7t8uVL3jr5T6BH-xYX6uu6uJhwt1xjJipxQ2vek,570
+pytest_mimic/mimic_manager.py,sha256=jZPQhE2PxhIBuL3ybK2QigzMfh6St-n1_U1IQYqB-J0,13107
+pytest_mimic/plugin.py,sha256=58MfPXCFB-WaYiPBFnpIU4Hyu7UdSkABN-0aJPoZXEs,3514
+pytest_mimic-0.2.0.dist-info/licenses/LICENSE,sha256=xpXcFIHd0V9bI5JkY0XJETCHks35lWnp6ZkkvV9gI3k,1079
+pytest_mimic-0.2.0.dist-info/METADATA,sha256=uYB8B7dAG5sN3c8pNOfQoUzO3DKyhS8gwWwRbNNrE5k,6263
+pytest_mimic-0.2.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+pytest_mimic-0.2.0.dist-info/entry_points.txt,sha256=ql4pc4gPKsZWp2JjexXbNUAgQk7KK0lfEkCqJy_7JOo,46
+pytest_mimic-0.2.0.dist-info/top_level.txt,sha256=gJjEHzfeKptC-Ge9jLHQ9JJcE1Whx5UAZpQF3-Yjz1U,13
+pytest_mimic-0.2.0.dist-info/RECORD,,
