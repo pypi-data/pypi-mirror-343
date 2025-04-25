@@ -1,0 +1,7 @@
+dm_control
+numpy
+mujoco
+scipy
+pyyaml
+gdown
+qpsolvers
