@@ -1,0 +1,11 @@
+fmatch/__init__.py,sha256=RiAQboanT8e4ofmW_j6X1eIU-Lza5W65Nim9MS97Wcw,117
+fmatch/logrus.py,sha256=Ub14Sk5m4vMi_bcNaeB4VekJheUatLJ9-BTFhtoA8gw,1384
+fmatch/matcher.py,sha256=A3DChlhyRtA_qS1DlNUko_fXTtI5kFu0RFuZLN-LEw0,11667
+fmatch/test_fmatch.py,sha256=FK9t0cta-Wv_5Px4l7y_UTA6drHoqXw_nGRcj4WyajU,2502
+fmatch/tests/__init__.py,sha256=acuUzOHpFJO4A32t1zPJgcfg3aXp77Y8T4zwvmpb60k,53
+fmatch/tests/test_matcher.py,sha256=ytFmjpFfgJYRpCy3R1SaQII6lFNfWpUnBOGWsrJ7fXs,11262
+fmatch-0.1.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+fmatch-0.1.1.dist-info/METADATA,sha256=QP2lTDZ_oMDqKRrObtH3uwMXuPzxiWNJ-DWIe86EQKc,965
+fmatch-0.1.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+fmatch-0.1.1.dist-info/top_level.txt,sha256=vjKADfvQSML3-0o5D-7ZIeP-ZhZN3gR-ShwUcWquVDI,7
+fmatch-0.1.1.dist-info/RECORD,,
