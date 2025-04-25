@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+print_lite.py
+pyproject.toml
+requirements.txt
+setup.py
+print_lite/.DS_Store
+print_lite/__init__.py
+print_lite/printPro.py
+print_lite.egg-info/PKG-INFO
+print_lite.egg-info/SOURCES.txt
+print_lite.egg-info/dependency_links.txt
+print_lite.egg-info/requires.txt
+print_lite.egg-info/top_level.txt
+print_lite/__pycache__/__init__.cpython-312.pyc
+print_lite/__pycache__/printPro.cpython-312.pyc
