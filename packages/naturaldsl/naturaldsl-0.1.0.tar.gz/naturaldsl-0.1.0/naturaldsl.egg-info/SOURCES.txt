@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+naturaldsl/__init__.py
+naturaldsl/interpreter.py
+naturaldsl.egg-info/PKG-INFO
+naturaldsl.egg-info/SOURCES.txt
+naturaldsl.egg-info/dependency_links.txt
+naturaldsl.egg-info/entry_points.txt
+naturaldsl.egg-info/requires.txt
+naturaldsl.egg-info/top_level.txt
