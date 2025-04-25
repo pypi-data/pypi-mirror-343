@@ -1,0 +1,6 @@
+- Add function to detect type of output and extract accordingly
+- Reimplement write functions for condensed calculations (already coded)
+- Vibrations
+- Updating gorup_molecules object for more recent functions
+- Prettier interface
+- Add more flexibility for multiple plotting
