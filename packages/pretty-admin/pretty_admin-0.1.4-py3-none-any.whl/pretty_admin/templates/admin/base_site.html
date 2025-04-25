@@ -1,0 +1,16 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+<div id="site-name"><a href="{% url 'admin:index' %}">Your Project Name</a></div>
+{% if user.is_anonymous %}
+  {% include "admin/color_theme_toggle.html" %}
+  <button id="theme-toggle" class="p-2 rounded bg-gray-200 dark:bg-gray-800 text-black dark:text-white">
+    Toggle Theme
+  </button>
+{% endif %}
+{% endblock %}
+
+{% block nav-global %}
+{% endblock %}
