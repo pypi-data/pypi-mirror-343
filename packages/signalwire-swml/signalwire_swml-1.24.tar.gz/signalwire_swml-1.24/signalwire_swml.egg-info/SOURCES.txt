@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+signalwire_swml/__init__.py
+signalwire_swml/ordered.py
+signalwire_swml/swml.py
+signalwire_swml.egg-info/PKG-INFO
+signalwire_swml.egg-info/SOURCES.txt
+signalwire_swml.egg-info/dependency_links.txt
+signalwire_swml.egg-info/requires.txt
+signalwire_swml.egg-info/top_level.txt
