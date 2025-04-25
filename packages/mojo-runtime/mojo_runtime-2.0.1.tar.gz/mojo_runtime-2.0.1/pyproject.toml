@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "mojo-runtime"
+description = "Automation Mojo Runtime Module (mojo-runtime)"
+version = "2.0.1"
+authors = [
+    "Myron Walker <myron.walker@gmail.com>"
+]
+readme = "README.md"
+license = "LICENSE.txt"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX"
+]
+keywords = [
+    "python"
+]
+packages = [{include="mojo", from="source/packages"}]
+
+homepage = "http://automationmojo.com"
+repository = "https://github.com/automationmojo/mojo-runtime"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+coverage = "^7.0.4"
+mojo-collections = ">=2.0.1 <2.1.0"
+mojo-config = ">=2.0.2 <2.1.0"
+mojo-xmodules = ">=2.0.0 <2.1.0"
+mojo-errors = ">=2.0.0 <2.1.0"
+mojo-extension = ">=2.0.4 <2.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
