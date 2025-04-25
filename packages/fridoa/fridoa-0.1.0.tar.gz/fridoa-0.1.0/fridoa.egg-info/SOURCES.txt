@@ -1,0 +1,7 @@
+README.md
+setup.py
+Kuat/__init__.py
+fridoa.egg-info/PKG-INFO
+fridoa.egg-info/SOURCES.txt
+fridoa.egg-info/dependency_links.txt
+fridoa.egg-info/top_level.txt
