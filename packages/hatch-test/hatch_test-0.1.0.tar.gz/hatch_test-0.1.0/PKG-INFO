@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: hatch-test
+Version: 0.1.0
+Project-URL: Documentation, https://github.com/Kaburi/hatch-test#readme
+Project-URL: Issues, https://github.com/Kaburi/hatch-test/issues
+Project-URL: Source, https://github.com/Kaburi/hatch-test
+Author-email: Kaburi <specialemail90@gmail.com>
+License-Expression: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.12
+Requires-Dist: mcp[cli]>=1.6.0
