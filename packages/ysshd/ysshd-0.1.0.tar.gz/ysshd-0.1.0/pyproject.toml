@@ -1,0 +1,19 @@
+[project]
+name = "ysshd"
+version = "0.1.0"
+description = "yet another ssh daemon"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "asyncssh>=2.20.0",
+    "fire>=0.5.0",
+    "loguru>=0.7.3",
+    "bcrypt>=4.0.0",
+]
+
+[project.scripts]
+ysshd = "ysshd:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
