@@ -1,0 +1,16 @@
+_mcpl_core/__init__.py,sha256=1idcpyHP3b6MOhRRK6vhjsEL1i5cjQlQ1AwPHmN9wn4,21
+_mcpl_core/data/bin/mcpl-config.exe,sha256=VNWAveeivPRvUDLINSu53uAB7Y8MsBnB6jcxsnvXf3M,31744
+_mcpl_core/data/bin/mcpltool.exe,sha256=hfvGVEWd8YzjcR2aDdJyfrDYW_wDgfq2AJHUxZuxgZw,111104
+_mcpl_core/data/include/mcpl.h,sha256=n5BHts1DwVcDeKkS6WtOoTU2zqBbfhFFqym_KW_vdvw,19295
+_mcpl_core/data/lib/cmake/MCPL/MCPLConfig.cmake,sha256=CKY1ZT_K0ee4lcrCJ0i6iYL0o2ar0ADMOIheJ9VjEwM,4326
+_mcpl_core/data/lib/cmake/MCPL/MCPLConfigVersion.cmake,sha256=31pgBcqEs7_swt09hMMqyNP_cbRvGTQN_c673AI4rEU,1904
+_mcpl_core/data/lib/cmake/MCPL/MCPLTargets-release.cmake,sha256=zAy3r_MrQSvLETyO3E_adv7KcWXVSzyvd5KByhJjmW8,1021
+_mcpl_core/data/lib/cmake/MCPL/MCPLTargets.cmake,sha256=z1SlWjaGbiAPcAvAQge4wlPBE9dDf623e_Z6ueYyp9E,4391
+_mcpl_core/data/lib/mcpl.lib,sha256=VMhAqSv3623UzExG-4niwErBMcaRUTx8taioTOzvNA0,15828
+_mcpl_core/info.py,sha256=btLLecq4N7j4JhImARVLyLUk60DG4H6O9ITvMoOn-ws,5457
+mcpl_core-2.0.0.data/scripts/mcpl.dll,sha256=2NBejKQGZYfzUF8V17jLHKrDdq3RPhkBMhw_kdLp4yw,119296
+mcpl_core-2.0.0.dist-info/METADATA,sha256=20Lqd2Z9r7T9rcG36zY9Eu6FLmYy-ofcghKsnZfZV9c,4412
+mcpl_core-2.0.0.dist-info/WHEEL,sha256=CrfbhfZfh4HXCyV7dL3w1NTiYbskK84H4NYtP-zmtCI,103
+mcpl_core-2.0.0.dist-info/entry_points.txt,sha256=IN36seIjQ3-dODbqFfLAs3TZ-TLHLLiggBEGvWx7Jco,124
+mcpl_core-2.0.0.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+mcpl_core-2.0.0.dist-info/RECORD,,
