@@ -1,0 +1,3 @@
+[console_scripts]
+stats-cli=stats_calculator.main:main
+
