@@ -1,0 +1,2 @@
+yookassa>=3.5.0
+django-payments>=3.0.1

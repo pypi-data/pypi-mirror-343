@@ -1,0 +1,31 @@
+[project]
+name = "django-payments-yookassa"
+version = "0.1.1"
+description = "YooKassa payment provider for django-payments"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Ilia Bukin", email = "your.email@example.com" }
+]
+dependencies = [
+    "yookassa>=3.5.0",
+    "django-payments>=3.0.1"
+]
+
+[project.urls]
+Homepage = "https://github.com/iliab1/django-payments-yookassa"
+Issues = "https://github.com/iliab1/django-payments-yookassa/issues"
+
+[dependency-groups]
+dev = [
+    "twine>=6.1.0",
+    "django>=4.2",
+    "pytest>=8.0.0",
+    "pytest-django>=4.8.0",
+    "pytest-cov>=4.1.0",
+    "black>=24.0.0",
+    "isort>=5.13.0",
+    "flake8>=7.0.0",
+    "dj-database-url>=2.3.0",
+]
