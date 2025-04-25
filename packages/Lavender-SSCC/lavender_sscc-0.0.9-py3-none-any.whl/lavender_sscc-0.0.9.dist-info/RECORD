@@ -1,0 +1,10 @@
+lavender_sscc/__init__.py,sha256=Us3mvFDelRgV1szP0mdmGWYEoQj96FtItvuNSewjMQE,77
+lavender_sscc/ccs.txt,sha256=uIYGaa0AqactP9_nXtwdp1_CEKf9fuluLCrfCAciF2Q,62976
+lavender_sscc/features_pca.npy,sha256=ZzgQwgRfVIrsHVJ7_UkQ2T8CQ0KKNNWxZz_niAdh03E,5374080
+lavender_sscc/main.py,sha256=f4SQyJwM1vCyZJFhH7rNrCrHSKuxRCjgLmv9vpjEINA,1110
+lavender_sscc/top_sccs.csv,sha256=lh1t41G1FPzYT99aFrZWakn2majf-g4H0Fe92DGm56o,734739
+lavender_sscc-0.0.9.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+lavender_sscc-0.0.9.dist-info/METADATA,sha256=fdI3HwlpwzDjk0NrbQMc8KREvdfihpL6AxSQ5LtSFlM,904
+lavender_sscc-0.0.9.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+lavender_sscc-0.0.9.dist-info/top_level.txt,sha256=Gok9laiKJDcUFgD0_kXdBng-TdSF0VqhTKWe-yYTtNo,14
+lavender_sscc-0.0.9.dist-info/RECORD,,
