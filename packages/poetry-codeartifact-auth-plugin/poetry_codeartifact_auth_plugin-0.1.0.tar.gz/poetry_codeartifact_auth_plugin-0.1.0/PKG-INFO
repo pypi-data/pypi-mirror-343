@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: poetry-codeartifact-auth-plugin
+Version: 0.1.0
+Summary: Poetry plugin to authenticate to codeartifact
+Author: Cristian Davis
+Author-email: cristian.davis@sandsdev.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: boto3 (>=1.38.2,<2.0.0)
+Requires-Dist: poetry (>=2.1.2,<3.0.0)
+Description-Content-Type: text/markdown
+
+# poetry-codeartifact-plugin
+

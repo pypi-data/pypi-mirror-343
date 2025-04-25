@@ -1,0 +1,27 @@
+[project]
+name = "poetry-codeartifact-auth-plugin"
+version = "0.1.0"
+description = "Poetry plugin to authenticate to codeartifact"
+authors = [
+    {name = "Cristian Davis",email = "cristian.davis@sandsdev.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "poetry (>=2.1.2,<3.0.0)",
+    "boto3 (>=1.38.2,<2.0.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project.entry-points."poetry.plugin"]
+poetry-codeartifact-auth-plugin = "poetry_codeartifact_auth_plugin.plugin:CodeartifactLoginPlugin"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.2.0"
