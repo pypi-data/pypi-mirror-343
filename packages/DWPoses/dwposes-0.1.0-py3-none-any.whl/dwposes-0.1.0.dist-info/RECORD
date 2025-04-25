@@ -1,0 +1,10 @@
+DWPoses/__init__.py,sha256=uQquvBMsw-ouHdaqYC6awXcOSPpjD4GPqVflDaBMOr8,2806
+DWPoses/onnxdet.py,sha256=R7uNID5q7EFIeL0UnEenqoQHbAZSM5YxGrR5gzMuuj8,4456
+DWPoses/onnxpose.py,sha256=Zm0TpCe5pNT9-khCmZtZORsMshL2YXdBhyudNWc2mMU,11967
+DWPoses/util.py,sha256=QB3MN0jAOCXnChqqbRxStmqNTaXLWOSt2wJD2AyrR6k,10848
+DWPoses/wholebody.py,sha256=haS7VkPJK-O7mkEZtpWOCeXvQdW41Rl1tBBP4lTEHDQ,2171
+dwposes-0.1.0.dist-info/licenses/LICENSE,sha256=W3fP0AfHdzIq7wEijU5ogxQY4Ozsb2fZ7a2yZXPsUXY,12214
+dwposes-0.1.0.dist-info/METADATA,sha256=l6HJpCWvo-51QGBFKaJpfR2U3SCzw6kS3cCJb-3io_Y,1831
+dwposes-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+dwposes-0.1.0.dist-info/top_level.txt,sha256=YKB4mOmw42r49XiAC6skzSHL9byJMlhweHHnEy27Ybc,8
+dwposes-0.1.0.dist-info/RECORD,,
