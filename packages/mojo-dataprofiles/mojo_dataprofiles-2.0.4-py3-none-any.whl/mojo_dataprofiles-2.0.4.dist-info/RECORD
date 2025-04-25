@@ -1,0 +1,13 @@
+mojo/README.md,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mojo/dataprofiles/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mojo/dataprofiles/basedataprofile.py,sha256=tJh1j-oVYn89AmZNpfIFNhb5bPIRxnCmJ6-NUtJ4-WM,1381
+mojo/dataprofiles/couchdbprofile.py,sha256=WVPsIQyM41SjcaEiDVRbEvWC2w0RTcTvu6d1dHh3kmw,2002
+mojo/dataprofiles/databasebasicprofile.py,sha256=AiHohSeEZpEpqE_E5BZJqK-ixBXrNzU6pFR3cXdmoTk,1210
+mojo/dataprofiles/databasebasictcpprofile.py,sha256=eiZo9ceIWDjM4Ca3-6MK66l89-kS0-ih51kCcHwFIW8,1910
+mojo/dataprofiles/dataprofilemanager.py,sha256=YPskxrBuRCfO3BjGET_6VcbN_aLZq3LuwPE20eaCyLQ,6290
+mojo/dataprofiles/mongodbatlasprofile.py,sha256=dx_o6GCVoAtyxWtB1F74teVQdb5BLFYMYoCDEL45Tks,1484
+mojo/dataprofiles/snowflakeprofile.py,sha256=ArLxCsXoYCyClpJiq2bqZGG1Wma0WRhurNaPKq6uamw,2433
+mojo_dataprofiles-2.0.4.dist-info/LICENSE.txt,sha256=AOYrKzKPom76REYRWPb9ctAvn1Wb-apx-643LZg4fyU,1543
+mojo_dataprofiles-2.0.4.dist-info/METADATA,sha256=IP8uOmZi7hN6CXuYV9ZFjWgAxvLJ1wRfWUrDTvrWqNE,2075
+mojo_dataprofiles-2.0.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+mojo_dataprofiles-2.0.4.dist-info/RECORD,,
