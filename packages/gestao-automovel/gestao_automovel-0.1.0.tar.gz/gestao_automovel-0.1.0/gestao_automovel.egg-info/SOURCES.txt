@@ -1,0 +1,6 @@
+LICENSE
+setup.py
+gestao_automovel.egg-info/PKG-INFO
+gestao_automovel.egg-info/SOURCES.txt
+gestao_automovel.egg-info/dependency_links.txt
+gestao_automovel.egg-info/top_level.txt
