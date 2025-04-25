@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-ecp = mcp_everythingcloudplatform.server:main
