@@ -1,0 +1,2 @@
+[console_scripts]
+pidgey = pidgey.pidgey:main
