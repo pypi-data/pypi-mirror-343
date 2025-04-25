@@ -1,0 +1,83 @@
+{#def
+  label="Default label",
+  id=None,
+  type="text",
+  size=None,
+  block=False,
+  required=False,
+  disabled=False,
+  loading=False,
+  invalid=None,
+  valid=None,
+  caption=None,
+  countermin=None,
+  countermax=None,
+  leading=None,
+  leading_text=None,
+  trailing=None,
+  trailing_text=None,
+#}
+{#css jxui.css, input.css #}
+
+{% set id = id or get_random_id() %}
+{% set caption = caption or content() %}
+
+{% if invalid %}
+  {% set validation = "invalid" %}
+  {% do attrs.set(aria_invalid="true") %}
+{% elif valid %}
+  {% set validation = "valid" %}
+{% else %}
+  {% set validation = "" %}
+{% endif %}
+
+{% if caption %}
+  {% do attrs.set(aria_describedby=id + "-caption") %}
+{% endif %}
+
+<FormField
+  class="jxui-input"
+  size={{size}}
+  validation={{validation}}
+  required={{required}}
+  disabled={{disabled}}
+  block={{block}}
+  loading={{loading}}
+>
+  <FormLabel for={{id}}>{{ label }}</FormLabel>
+  <FormWrapper>
+    {%- if leading %}
+      <Icon class="jxui-input-leading" name={{ leading }} />
+    {%- elif leading_text %}
+      <span class="jxui-input-leading">{{ leading_text }}</span>
+    {%- endif -%}
+
+    <input {{ attrs.render(
+      class="jxui-input-input",
+      id=id,
+      type=type,
+      required=required,
+      disabled=disabled,
+    ) }} />
+
+    {%- if loading %}
+      <FormLoading />
+    {%- elif trailing %}
+      <Icon class="jxui-input-trailing" name={{ trailing }} />
+    {%- elif trailing_text %}
+      <span class="jxui-input-trailing">{{ trailing_text }}</span>
+    {%- endif %}
+  </FormWrapper>
+
+  {% if invalid or valid or caption or countermax or countermin -%}
+    <FormFooter
+      target={{id}}
+      invalid={{invalid}}
+      valid={{valid}}
+      caption={{caption}}
+      countermax={{countermax}}
+      countermin={{countermin}}
+    />
+  {%- endif %}
+</FormField>
+
