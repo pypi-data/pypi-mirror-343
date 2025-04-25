@@ -1,0 +1,3 @@
+[console_scripts]
+primalbedtools=primalbedtools.main:main
+
