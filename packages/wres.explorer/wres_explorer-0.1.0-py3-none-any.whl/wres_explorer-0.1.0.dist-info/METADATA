@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: wres.explorer
+Version: 0.1.0
+Summary: Utilities to visualize and explore output from the NOAA Office of Water Prediction's (OWP) Water Resources Evaluation Service (WRES).
+Author-email: "Jason A. Regina" <jason.regina@noaa.gov>
+License-Expression: Apache-2.0
+Project-URL: Homepage, https://github.com/jarq6c/wres-explorer
+Project-URL: Documentation, https://github.com/jarq6c/wres-explorer
+Project-URL: Repository, https://github.com/jarq6c/wres-explorer
+Project-URL: Bug Tracker, https://github.com/jarq6c/wres-explorer/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Hydrology
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: pandas
+Requires-Dist: click
+Requires-Dist: panel
+Requires-Dist: plotly
+Requires-Dist: geopandas
+Provides-Extra: develop
+Requires-Dist: pytest; extra == "develop"
+Dynamic: license-file
+
+# WRES Explorer
+Utilities to visualize and explore output from the [NOAA Office of Water Prediction](https://github.com/NOAA-OWP)'s (OWP) [Water Resources Evaluation Service](https://github.com/NOAA-OWP/wres) (WRES).
+
+## Usage
+```console
+Usage: wres-explorer [OPTIONS]
+
+  Visualize and explore metrics output from WRES CSV2 formatted output.
+
+  Run "wres-explorer" from the command-line, ctrl+c to stop the server.:
+
+Options:
+  --help  Show this message and exit.
+```
