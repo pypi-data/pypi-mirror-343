@@ -1,0 +1,26 @@
+[project]
+name = "cmdsurf"
+version = "0.1.2"
+description = "Ride the wave of your past commands"
+authors = [{ name = "biojet1" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Utilities",
+    "Topic :: Terminals :: Terminal Emulators/X Terminals"
+]
+dependencies = [
+    "prompt-toolkit>=3.0.0",
+]
+[project.scripts]
+cmdsurf = "cmdsurf.__main__:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"

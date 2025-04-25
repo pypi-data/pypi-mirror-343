@@ -1,0 +1,2 @@
+[console_scripts]
+cmdsurf = cmdsurf.__main__:main
