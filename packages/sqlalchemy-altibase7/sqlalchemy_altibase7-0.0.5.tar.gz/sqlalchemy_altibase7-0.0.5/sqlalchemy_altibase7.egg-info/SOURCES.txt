@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.cfg
+sqlalchemy_altibase7/__init__.py
+sqlalchemy_altibase7/base.py
+sqlalchemy_altibase7/pyodbc.py
+sqlalchemy_altibase7/requirements.py
+sqlalchemy_altibase7.egg-info/PKG-INFO
+sqlalchemy_altibase7.egg-info/SOURCES.txt
+sqlalchemy_altibase7.egg-info/dependency_links.txt
+sqlalchemy_altibase7.egg-info/entry_points.txt
+sqlalchemy_altibase7.egg-info/requires.txt
+sqlalchemy_altibase7.egg-info/top_level.txt
+test/test_altibase_specific.py
+test/test_suite_alembic.py
+test/test_suite_sqlalchemy.py
