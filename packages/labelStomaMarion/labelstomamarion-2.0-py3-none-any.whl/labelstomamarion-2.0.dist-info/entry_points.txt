@@ -1,0 +1,2 @@
+[console_scripts]
+labelStomaMarion = labelStomaMarion.labelStomaMarion:main
