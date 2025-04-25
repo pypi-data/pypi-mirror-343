@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+snapcfg/__init__.py
+snapcfg/cli.py
+snapcfg/loader.py
+snapcfg/schema_parser.py
+snapcfg/validator.py
+snapcfg.egg-info/PKG-INFO
+snapcfg.egg-info/SOURCES.txt
+snapcfg.egg-info/dependency_links.txt
+snapcfg.egg-info/requires.txt
+snapcfg.egg-info/top_level.txt
+tests/test_snapcfg.py
