@@ -1,0 +1,6 @@
+[console_scripts]
+env2hvac=envex.scripts.env2hvac:main
+envcrypt=envex.scripts.envcrypt:main
+envsecrets=envex.scripts.envsecrets:main
+seal=envex.scripts.seal:main
+
