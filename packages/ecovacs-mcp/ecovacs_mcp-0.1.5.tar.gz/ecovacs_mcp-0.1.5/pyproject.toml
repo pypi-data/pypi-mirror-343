@@ -1,0 +1,10 @@
+[project]
+name = "ecovacs-mcp"
+version = "0.1.5"
+description = "科沃斯扫地机器人控制服务，基于mcp"
+readme = "README.rst"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "requests>=2.32.3",
+]
