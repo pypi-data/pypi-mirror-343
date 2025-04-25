@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: peng_tool
+Version: 0.3.0
+Summary: EZ way for txt processing
+Home-page: https://github.com/PennyXu/p_tool.git
+Author: XuPeng
+Author-email: xupeng23456@126.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9.0
+Description-Content-Type: text/markdown
+
+
+EZ way for txt processing
