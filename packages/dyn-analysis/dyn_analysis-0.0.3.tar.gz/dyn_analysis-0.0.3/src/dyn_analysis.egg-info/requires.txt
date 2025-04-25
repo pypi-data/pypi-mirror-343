@@ -1,0 +1,3 @@
+dyn-core>=0.1
+pandas
+igraph

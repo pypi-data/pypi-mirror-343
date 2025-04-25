@@ -1,0 +1,38 @@
+[build-system]
+requires = [
+    "setuptools",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dyn-analysis"
+version = "0.0.3"
+authors = [
+  { name="Cécile Bothorel", email="cecile.bothorel@imt-atlantique.fr" },
+  { name="Laurent Brisson", email="laurent.brisson@imt-atlantique.fr" },
+  { name="Nicolas Duminy", email="nicolas.duminy@imt-atlantique.fr" },
+]
+description = "Analysis features of the 'dyn' namespace package"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = [
+    "dyn-core>=0.1",
+    "pandas",
+    "igraph",
+]
+
+[project.urls]
+Documentation = "https://dyn-analysis.readthedocs.io/en/latest/"
+Homepage = "https://gitlab.com/decide.imt-atlantique/dyn/analysis"
+Issues = "https://gitlab.com/decide.imt-atlantique/dyn/analysis/issues"
