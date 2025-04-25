@@ -1,0 +1,83 @@
+/**
+ * 描述：{{ table_name }}Service
+ *
+ * @author {{ author }}
+ * @date {{ date }}
+ */
+@Service
+@RequiredArgsConstructor
+public class {{ class_name }}Service extends ServiceImpl<{{ class_name }}Mapper, {{ class_name }}> {
+
+    private final {{ class_name }}Mapper {{ table_name_camel }}Mapper;
+
+    /**
+     * 描述: {{ table_name }}分页查询
+     *
+     * @return AjaxResult {{ table_name }} 集合
+     * @param queryDTO 查询参数
+     */
+    public IPage<{{ class_name }}VO> select{{ class_name }}List(Page<{{ class_name }}VO> buildPage, {{ class_name }}QueryDTO queryDTO) {
+        List<{{ class_name }}VO> list = baseMapper.select{{ class_name }}List(buildPage, queryDTO);
+        return buildPage.setRecords(list);
+    }
+
+    /**
+     * 描述: 新增{{ table_name }}
+     *
+     * @return AjaxResult 新增结果
+     * @param dto 新增参数
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public AjaxResult add{{ class_name }}({{ class_name }}DTO dto) {
+        check{{ class_name }}Data(dto);
+        {{ class_name }} entity = {{ class_name }}DTO.to{{ class_name }}(dto);
+        save(entity);
+        return AjaxResult.success("新增成功");
+    }
+
+    /**
+     * 描述: 校验数据准确性
+     *
+     * @param dto 参数
+     */
+    private void check{{ class_name }}Data({{ class_name }}DTO dto) {
+        // 校验逻辑
+    }
+
+    /**
+     * 描述: 修改{{ table_name }}
+     *
+     * @return AjaxResult 修改结果
+     * @param dto 修改参数
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public AjaxResult edit{{ class_name }}({{ class_name }}DTO dto) {
+        check{{ class_name }}Data(dto);
+        {{ class_name }} entity = {{ class_name }}DTO.to{{ class_name }}(dto);
+        updateById(entity);
+        return AjaxResult.success("修改成功");
+    }
+
+    /**
+     * 描述: 获取{{ table_name }}详情
+     *
+     * @return AjaxResult 详情数据
+     * @param id 主键
+     */
+    public AjaxResult get{{ class_name }}Detail(Long id) {
+        {{ class_name }} entity = getById(id);
+        {{ class_name }}VO vo = {{ class_name }}.to{{ class_name }}VO(entity);
+        return AjaxResult.success(vo);
+    }
+
+    /**
+     * 描述: 删除{{ table_name }}
+     *
+     * @return AjaxResult 结果
+     * @param ids ID集合
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public AjaxResult delete{{ class_name }}(List<Long> ids) {
+        return AjaxResult.success(removeByIds(ids));
+    }
+}

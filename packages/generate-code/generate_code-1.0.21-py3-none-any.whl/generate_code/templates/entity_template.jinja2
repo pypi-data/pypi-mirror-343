@@ -1,0 +1,49 @@
+/**
+ * 描述: 系统管理——{{ class_name }} 实体类
+ *
+ * @author {{ author }}
+ * @date {{ date }}
+ */
+@Data
+@TableName("{{ table_name }}")
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class {{ class_name }} implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    {%- for field in fields %}
+
+    /**
+     * {{ field.description }}
+     */
+    {%- if field.annotation %}
+    {{ field.annotation }}
+    {%- endif %}
+    private {{ field.type }} {{ field.name }};
+
+    {%- endfor %}
+
+    /**
+     * 类转换
+     */
+    @Mapper(nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS)
+    interface {{ class_name }}VoMapper {
+        {{ class_name }}VoMapper INSTANCE = Mappers.getMapper({{ class_name }}VoMapper.class);
+
+        /**
+         * 实体对象转VO
+         *
+         * @param {{ class_name | lower }} 实体对象
+         * @return VO
+         */
+        {{ class_name }}VO to{{ class_name }}VO({{ class_name }} {{ class_name | lower }});
+
+    }
+
+    public static {{ class_name }}VO to{{ class_name }}VO({{ class_name }} {{ class_name | lower }}) {
+        return {{ class_name }}VoMapper.INSTANCE.to{{ class_name }}VO({{ class_name | lower }});
+    }
+
+}

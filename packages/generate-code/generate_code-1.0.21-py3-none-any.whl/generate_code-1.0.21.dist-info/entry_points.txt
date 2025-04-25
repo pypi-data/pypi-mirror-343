@@ -1,0 +1,3 @@
+[console_scripts]
+auto-code = generate_code.__main__:main
+

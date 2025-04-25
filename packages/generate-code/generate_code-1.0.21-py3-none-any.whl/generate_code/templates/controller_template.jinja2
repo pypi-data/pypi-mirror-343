@@ -1,0 +1,75 @@
+/**
+ * 描述：{{ table_name }}Controller
+ *
+ * @author {{ author }}
+ * @date {{ date }}
+ */
+@Api(value = "{{ table_name }}", tags = {"{{ table_name }}"})
+@RestController
+@RequiredArgsConstructor
+@RequestMapping("/{{ urlName }}")
+public class {{ class_name }}Controller {
+
+    private final {{ class_name }}Service {{ table_name_camel }}Service;
+
+    /**
+     * 描述: {{ table_name }}分页查询
+     *
+     * @return AjaxResult {{ table_name }}集合
+     * @param {{ table_name_camel }}QueryDTO 查询传参
+     */
+    @ApiOperation("{{ table_name }}分页查询")
+    @GetMapping("/select-{{ urlName }}-list")
+    public AjaxResult select{{ class_name }}List({{ class_name }}QueryDTO {{ table_name_camel }}QueryDTO) {
+        IPage<{{ class_name }}VO> {{ table_name_camel }}List = {{ table_name_camel }}Service.select{{ class_name }}List(PageUtils.buildPage(), {{ table_name_camel }}QueryDTO);
+        return AjaxResult.success({{ table_name_camel }}List);
+    }
+
+    /**
+     * 描述: 新增{{ table_name }}
+     *
+     * @return AjaxResult 新增结果
+     * @param {{ table_name_camel }}DTO 新增参数
+     */
+    @ApiOperation("新增{{ table_name }}")
+    @PostMapping("/add-{{ urlName }}")
+    public AjaxResult add{{ class_name }}(@Validated({{ class_name }}DTO.Add.class) @RequestBody {{ class_name }}DTO {{ table_name_camel }}DTO) {
+        return {{ table_name_camel }}Service.add{{ class_name }}({{ table_name_camel }}DTO);
+    }
+
+    /**
+     * 描述: {{ table_name }}详情
+     *
+     * @return AjaxResult {{ table_name }}详情
+     * @param id {{ table_name }}id
+     */
+    @ApiOperation("{{ table_name }}详情")
+    @GetMapping("/get-{{ urlName }}-detail")
+    public AjaxResult get{{ class_name }}Detail(Long id) {
+        return {{ table_name_camel }}Service.get{{ class_name }}Detail(id);
+    }
+
+    /**
+     * 描述: 修改{{ table_name }}
+     *
+     * @return AjaxResult 修改结果
+     * @param {{ table_name_camel }}DTO 修改参数
+     */
+    @ApiOperation("修改{{ table_name }}")
+    @PostMapping("/edit-{{ urlName }}")
+    public AjaxResult edit{{ class_name }}(@Validated({{ class_name }}DTO.Edit.class) @RequestBody {{ class_name }}DTO {{ table_name_camel }}DTO) {
+        return {{ table_name_camel }}Service.edit{{ class_name }}({{ table_name_camel }}DTO);
+    }
+
+    /**
+     * 描述: 删除{{ table_name }}
+     *
+     * @return AjaxResult 结果
+     * @param ids {{ table_name }}id集合
+     */
+    @ApiOperation("删除{{ table_name }}")
+    @PostMapping("/delete-{{ urlName }}")
+    public AjaxResult delete{{ class_name }}(@RequestBody List<Long> ids) {
+        return {{ table_name_camel }}Service.delete{{ class_name }}(ids);
+    }
+}
