@@ -1,0 +1,6 @@
+README.md
+setup.py
+bytedance_aider.egg-info/PKG-INFO
+bytedance_aider.egg-info/SOURCES.txt
+bytedance_aider.egg-info/dependency_links.txt
+bytedance_aider.egg-info/top_level.txt
