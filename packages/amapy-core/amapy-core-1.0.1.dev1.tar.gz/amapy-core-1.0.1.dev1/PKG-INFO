@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: amapy-core
+Version: 1.0.1.dev1
+Summary: The Core package for the ama project.
+Author-email: Swarup Mahanti <swarup.mahanti@roche.com>
+Maintainer-email: Swarup Mahanti <swarup.mahanti@roche.com>
+License: Copyright (c) 2024 Roche Diagnostics Computation Science & Informatics
+Requires-Python: <3.11,>=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: amapy-contents==1.*
+Requires-Dist: amapy-db==1.*
+Requires-Dist: amapy-pluggy==1.*
+Requires-Dist: amapy-utils==1.*
+Requires-Dist: google-auth-oauthlib==0.5.*
+Requires-Dist: jinja2==3.0.*
+Requires-Dist: packaging==23.1.*
+Requires-Dist: pathspec==0.12.*
+
+# amapy-core
+
+The Core package for ama project. It provides the core functionalities
+like creating, modifying, downloading and uploading of the digital assets.
+It also provides all the necessary APIs for the asset-manager client.
+
+## Installation
+
+The source code is currently hosted on GitHub at:
+https://github.com/Roche-CSI/ama
+
+Binary installers for the latest released version are available at the
+[Python Package Index (PyPI)](https://pypi.org/project/amapy-core/)
+
+You can install using [pip](https://pip.pypa.io/en/stable/):
+
+```sh
+pip install amapy-core
+```
+
+## Supported Python Versions
+
+Python == 3.10
+
+## License
+
+MIT License - see [LICENSE](https://github.com/Roche-CSI/ama/blob/main/LICENSE) for details.
