@@ -1,0 +1,47 @@
+[project]
+name = "pdkmaster-io-spice"
+dynamic = []
+description = "PDKMaster integration with SPICE simulators"
+authors = [
+    { name = "Staf Verhaegen", email = "staf@fibraservi.eu" },
+]
+dependencies = [
+    "PDKMaster~=0.12.0",
+    "PySpice>=1.5",
+]
+requires-python = ">=3.8"
+readme = "README.md"
+version = "0.1.0"
+
+[project.license]
+text = "AGPL-3.0-or-later OR GPL-2.0-or-later OR CERN-OHL-S-2.0+ OR Apache-2.0"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[dependency-groups]
+dev = [
+    "doit>=0.36.0",
+    "sphinx>=7.1.2",
+    "coverage[toml]>=7.6.1",
+    "PySpice @ git+https://github.com/Fatsie/PySpice.git@f4e242ddcc5e30aa4f8d0ac78a655fc33199a659",
+]
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.build]
+includes = [
+    "pdkmaster/",
+]
+
+[tool.pdm.version]
+source = "scm"
+
+[tool.pdm.scripts]
+doit = "doit"
+upd = "pdm update --update-reuse-installed"
+updns = "pdm update --update-reuse-installed --no-sync"
