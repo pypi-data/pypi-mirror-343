@@ -1,0 +1,13 @@
+requests
+b2sdk
+python-dotenv
+aria2p
+tqdm
+boto3
+pandas
+pyproj
+netcdf4
+xarray
+h5py
+folium
+ipywidgets
