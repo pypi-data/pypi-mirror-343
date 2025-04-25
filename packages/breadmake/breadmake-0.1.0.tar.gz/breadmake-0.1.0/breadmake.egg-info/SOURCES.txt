@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+breadmake/__init__.py
+breadmake/breadmake_cli.py
+breadmake/core.py
+breadmake.egg-info/PKG-INFO
+breadmake.egg-info/SOURCES.txt
+breadmake.egg-info/dependency_links.txt
+breadmake.egg-info/entry_points.txt
+breadmake.egg-info/top_level.txt
