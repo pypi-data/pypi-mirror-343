@@ -1,0 +1,8 @@
+README.md
+setup.py
+web3auto/__init__.py
+web3auto/web3automation.py
+web3automation.egg-info/PKG-INFO
+web3automation.egg-info/SOURCES.txt
+web3automation.egg-info/dependency_links.txt
+web3automation.egg-info/top_level.txt
