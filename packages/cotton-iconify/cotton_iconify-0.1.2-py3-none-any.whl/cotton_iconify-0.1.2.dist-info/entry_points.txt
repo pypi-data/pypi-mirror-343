@@ -1,0 +1,2 @@
+[console_scripts]
+cotton-iconify = cotton_iconify.__init__:main
