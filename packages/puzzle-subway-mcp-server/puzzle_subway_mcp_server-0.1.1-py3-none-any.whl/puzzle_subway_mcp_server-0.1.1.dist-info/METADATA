@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: puzzle-subway-mcp-server
+Version: 0.1.1
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: build>=1.2.2.post1
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: twine>=6.1.0
+
+# Puzzle Subway MCP Server
+
+A FastMCP server for subway information in Seoul.
+
+## Installation
+
+```bash
+pip install puzzle-subway-mcp-server
+```
+
+## Usage
+
+```python
+from puzzle_subway_mcp_server import get_subway_congestion
+
+# Get congestion information for a station
+congestion = get_subway_congestion("을지로입구")
+print(congestion)
+```
+
+## Features
+
+- Real-time subway congestion information
+- Station-based search
+- Line-based search
+
+## License
+
+MIT
