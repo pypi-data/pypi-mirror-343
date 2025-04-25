@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+opencoding.egg-info/PKG-INFO
+opencoding.egg-info/SOURCES.txt
+opencoding.egg-info/dependency_links.txt
+opencoding.egg-info/top_level.txt
+spec/schema.py
