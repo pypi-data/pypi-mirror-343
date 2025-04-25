@@ -1,0 +1,9 @@
+hatch_test/__about__.py,sha256=B1QDZqz4VO3vzAkkOu1GEBo6O3OimUvf-_zEVl0dO-Y,132
+hatch_test/__init__.py,sha256=ywzqgBnMZYK_YpQmu1cX5sLCthK4fkCQ4_qCrmhPmBg,157
+hatch_test/__main__.py,sha256=qvdcMq5Rv4qnz_FJB3x6ooDlFDHYIWeifU-cPn5TToQ,28
+hatch_test/utils/__init__.py,sha256=if7RnRKBX7N5zYRmlPKFkhSw0s7lt7e1bHYrimdjUyc,32
+hatch_test/utils/test_util.py,sha256=bALAjoiDnUFcgZPU-Co8thgFlEvTHivvfufiAwZloW0,43
+hatch_test-0.1.3.dist-info/METADATA,sha256=TRUvVTuZUNsUYLNxhl9S5Ru0PxCUuco2Y52iQBtLFgU,1465
+hatch_test-0.1.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hatch_test-0.1.3.dist-info/licenses/LICENSE.txt,sha256=xQbPUBs8zrvGERWEX9ORqR5vjO9uA-QgmYhPhGPxtao,1107
+hatch_test-0.1.3.dist-info/RECORD,,
