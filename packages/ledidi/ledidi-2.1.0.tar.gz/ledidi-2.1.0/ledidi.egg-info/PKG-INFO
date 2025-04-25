@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: ledidi
+Version: 2.1.0
+Summary: Ledidi is an optimization approach for designing edits to biological sequences.
+Home-page: http://pypi.python.org/pypi/ledidi/
+Author: Jacob Schreiber and Yang Lu
+Author-email: jmschreiber91@gmail.com
+License: MIT License
+License-File: LICENSE
+Requires-Dist: torch>=1.9.0
+Requires-Dist: matplotlib
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
