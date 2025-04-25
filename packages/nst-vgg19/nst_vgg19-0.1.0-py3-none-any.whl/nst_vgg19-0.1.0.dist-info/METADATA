@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: nst_vgg19
+Version: 0.1.0
+Summary: Neural Style Transfer using VGG19
+Home-page: https://github.com/alexanderbrodko/nst_vgg19
+Author: Alexander Brodko
+Author-email: xjesus666@yandex.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch >=1.13
+Requires-Dist: torchvision >=0.14
+Requires-Dist: numpy
+
+# NST_VGG19
+
+Neural Style Transfer using VGG19.
+
+## Installation
+
+```bash
+pip install nst_vgg19
+```
+
+## Usage
+```
+import numpy as np
+from nst_vgg19 import NST_VGG19
+
+style_image = np.random.randint(0, 255, (256, 256, 3), dtype=np.uint8)
+content_image = np.random.randint(0, 255, (256, 256, 3), dtype=np.uint8)
+
+nst = NST_VGG19(style_image)
+result = nst(content_image)
+```
