@@ -1,0 +1,1 @@
+myosotis_chinese_dictionary>=0.0.6
