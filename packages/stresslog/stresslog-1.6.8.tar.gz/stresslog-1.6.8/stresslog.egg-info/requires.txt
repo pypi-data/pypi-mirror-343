@@ -1,0 +1,9 @@
+pandas>=2.0
+numpy<=1.26.4
+scipy
+welly
+pint
+matplotlib
+plotly
+dlisio<=1.0.2
+setuptools>=42
