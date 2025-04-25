@@ -1,0 +1,15 @@
+AUTHORS.md
+LICENSE
+README.md
+pyproject.toml
+setup.py
+vivarium/__init__.py
+vivarium/dict_to_object.py
+vivarium/function.py
+vivarium/tests.py
+vivarium/vivarium.py
+vivarium_interface.egg-info/PKG-INFO
+vivarium_interface.egg-info/SOURCES.txt
+vivarium_interface.egg-info/dependency_links.txt
+vivarium_interface.egg-info/requires.txt
+vivarium_interface.egg-info/top_level.txt
