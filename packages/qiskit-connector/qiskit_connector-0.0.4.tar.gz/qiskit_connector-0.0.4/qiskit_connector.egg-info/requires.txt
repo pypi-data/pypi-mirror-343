@@ -1,0 +1,4 @@
+requests>=2.25.0
+python-dotenv>=0.21.0
+qiskit-ibm-runtime>=0.37.0
+qiskit>=2.0.0
