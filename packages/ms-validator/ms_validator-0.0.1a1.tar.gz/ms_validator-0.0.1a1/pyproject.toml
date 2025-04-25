@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ms_validator"
+version = "0.0.1a1"
+description = "MindStudio Validator for Inference"
+authors = [
+    { name = "Jiawang Liu", email = "rainingalltheday@163.com" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = []
+
+[project.urls]
+homepage = "https://pypi.org/project/ms-validator/"
+
+[tool.setuptools.packages.find]
+include = ["ms_validator", "ms_validator.*"]
+
+[project.scripts]
+ms-validator = "ms_validator.cli:main"
