@@ -1,0 +1,2 @@
+[console_scripts]
+SpinorLatexCompiler = antares.scripts.SpinorLatexCompiler:main
