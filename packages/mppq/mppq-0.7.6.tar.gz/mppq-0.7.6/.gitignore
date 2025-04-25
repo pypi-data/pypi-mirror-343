@@ -1,0 +1,14 @@
+**/*.pyc
+**/*.pth
+**/*.onnx
+**/*.out
+**/*.csv
+**/*.model
+.coverage
+*.whl
+__pycache__/
+.vscode/
+.*_cache/
+/build
+/dist
+/*.egg-info
