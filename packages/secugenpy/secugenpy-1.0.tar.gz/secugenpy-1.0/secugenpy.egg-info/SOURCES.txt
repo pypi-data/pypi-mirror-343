@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+secugenpy/__init__.py
+secugenpy/secugen.py
+secugenpy.egg-info/PKG-INFO
+secugenpy.egg-info/SOURCES.txt
+secugenpy.egg-info/dependency_links.txt
+secugenpy.egg-info/requires.txt
+secugenpy.egg-info/top_level.txt
