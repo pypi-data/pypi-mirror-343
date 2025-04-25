@@ -1,0 +1,10 @@
+pyproject.toml
+setup.py
+autopm/__init__.py
+autopm/cli.py
+autopm/tracker.py
+autopm.egg-info/PKG-INFO
+autopm.egg-info/SOURCES.txt
+autopm.egg-info/dependency_links.txt
+autopm.egg-info/entry_points.txt
+autopm.egg-info/top_level.txt
