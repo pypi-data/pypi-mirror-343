@@ -1,0 +1,5 @@
+# Include templates and static files in the package
+recursive-include pretty_admin/templates *
+recursive-include pretty_admin/static *
+recursive-include pretty_admin/templatetags *
+
