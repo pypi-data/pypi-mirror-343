@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+github_activity/__init__.py
+github_activity/__main__.py
+github_activity/api.py
+github_activity/cache.py
+github_activity/cli.py
+github_activity/formatter.py
+github_user_activity.egg-info/PKG-INFO
+github_user_activity.egg-info/SOURCES.txt
+github_user_activity.egg-info/dependency_links.txt
+github_user_activity.egg-info/entry_points.txt
+github_user_activity.egg-info/requires.txt
+github_user_activity.egg-info/top_level.txt
+tests/test_formatter.py
