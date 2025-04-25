@@ -1,0 +1,1 @@
+from pyweblog.SDK_WS.main import setup_ws_logger
