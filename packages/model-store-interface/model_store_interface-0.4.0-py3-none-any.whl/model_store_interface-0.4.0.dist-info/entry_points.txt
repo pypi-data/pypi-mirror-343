@@ -1,0 +1,2 @@
+[console_scripts]
+msi = model_store_interface.cli:main
