@@ -1,0 +1,11 @@
+gtec_ble/__init__.py,sha256=RzmQoCeqqvXMBP_idwLWeKYMH4nzX2jjIw4pT8Ucya0,188
+gtec_ble/__version__.py,sha256=hyQoUQhLk4ai2NWnmW9vdrQJ0_D1SeHOQ3S4uVIwnVs,63
+gtec_ble/amplifier.py,sha256=ki3yqG__wjLYD3m47RgUwn5FZK86UXZ326fs4DxgIYg,2078
+gtec_ble/lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gtec_ble/lib/gtec_ble_wrapper.cpython-312-darwin.so,sha256=ICMRrIu88P0X1qGjzx-LJW5R8HeU-FwjxHoOy4afjTE,409464
+gtec_ble/lib/native/mac/universal/libgtecble.dylib,sha256=DgJl0z5ZhiL-KC_9jq821LtmjoChtWRM_sMLdxCUGk8,948976
+gtec_ble-1.24.4.dist-info/licenses/LICENSE,sha256=oH5KXlZjetP_9Aow1D9tCSRi2dwIN5nwUaVfhfRV0QM,1614
+gtec_ble-1.24.4.dist-info/METADATA,sha256=HBkmEul0LeC2f5W5J3zzxT41UHL6o2ne7OQWzNe8su0,695
+gtec_ble-1.24.4.dist-info/WHEEL,sha256=7f0Z_WDODy7FbuaR-vppUo4d3HbH0xtSZ43CqDkvR3Q,114
+gtec_ble-1.24.4.dist-info/top_level.txt,sha256=p-Qn9Fmr6tLcsWo7Fsspeh9F5tyXK03d5G0vRNTaZ5Y,9
+gtec_ble-1.24.4.dist-info/RECORD,,
