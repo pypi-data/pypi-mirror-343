@@ -1,0 +1,15 @@
+README.md
+all-requirements.txt
+py.Windows.Devices.AllJoyn.cpp
+pyproject.toml
+pywinrt-version.txt
+requirements.txt
+setup.py
+winrt/_winrt_windows_devices_alljoyn.pyi
+winrt/windows/devices/alljoyn/__init__.py
+winrt/windows/devices/alljoyn/py.typed
+winrt_Windows.Devices.AllJoyn.egg-info/PKG-INFO
+winrt_Windows.Devices.AllJoyn.egg-info/SOURCES.txt
+winrt_Windows.Devices.AllJoyn.egg-info/dependency_links.txt
+winrt_Windows.Devices.AllJoyn.egg-info/requires.txt
+winrt_Windows.Devices.AllJoyn.egg-info/top_level.txt
