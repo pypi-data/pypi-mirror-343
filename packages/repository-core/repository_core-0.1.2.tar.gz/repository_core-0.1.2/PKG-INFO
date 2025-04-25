@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: repository-core
+Version: 0.1.2
+Summary: Shared base repository and service utilities for SQLAlchemy-backed FastAPI apps.
+License: MIT
+Author: riya0865
+Author-email: riya.dev0865@gmail.com
+Requires-Python: >=3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: fastapi[standard] (>=0.115.2,<0.116.0)
+Requires-Dist: sqlalchemy (>=2.0.40,<3.0.0)
+Description-Content-Type: text/markdown
+
+
