@@ -1,0 +1,45 @@
+[project]
+name = "django-npm-finder"
+version = "1.2.0"
+description = "A django staticfiles finder that supporting npm/yarn/pnpm"
+authors = [
+    {name = "David Nugent", email = "davidn@uniquode.io"},
+    {name = "Kevin McCarthy", email = "e@kevinmccarthy.org"},
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+keywords = ["django", "npm", "finder", "staticfiles"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "Django>=4.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/deeprave/django-npm-finder"
+Repository = "https://github.com/deeprave/django-npm-finder"
+Documentation = "https://github.com/deeprave/django-npm-finder"
+
+[tool.ruff]
+
+
+[dependency-groups]
+dev = [
+    "ruff>=0.5.2",
+    "pytest>=8.2.0",
+]
+
+[build-system]
+requires = ["flit-core"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "django_npm"
