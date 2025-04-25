@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include s3files/templates *
+recursive-include s3files/templatetags *
