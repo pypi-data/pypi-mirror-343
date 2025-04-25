@@ -1,0 +1,9 @@
+livekit_plugins_realtimestt/__init__.py,sha256=ikVk_RkiPs25-qL2vivsSQytTjaQdB9ARCgv_qJVtY0,365
+livekit_plugins_realtimestt/log.py,sha256=vU7QiGSy_AJuJFmClUocqIJ-Ltku_8C24ZU8L6fLJR0,53
+livekit_plugins_realtimestt/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+livekit_plugins_realtimestt/stt.py,sha256=4w1MTB2gy19BSAWX4fktwTkfZ4DbGttDA8ep39rL57s,5716
+livekit_plugins_realtimestt/version.py,sha256=rnObPjuBcEStqSO0S6gsdS_ot8ITOQjVj_-P1LUUYpg,22
+livekit_plugins_realtimestt-0.1.1.dist-info/METADATA,sha256=U_jUJSTn3vKph5G_-yJEZJ4VHVUkksnPp16KxYZLKrs,3090
+livekit_plugins_realtimestt-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+livekit_plugins_realtimestt-0.1.1.dist-info/licenses/LICENSE,sha256=Uzq_2JuXZh3Aj0mPoCNvh9J7swIoGBplwaVVUm124fs,745
+livekit_plugins_realtimestt-0.1.1.dist-info/RECORD,,
