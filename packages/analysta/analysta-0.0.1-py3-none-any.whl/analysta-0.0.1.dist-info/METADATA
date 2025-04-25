@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: analysta
+Version: 0.0.1
+Summary: DataFrame Toolkit for Analysts
+Project-URL: Documentation, https://github.com/Diego-Ignacio Ortiz/analysta#readme
+Project-URL: Issues, https://github.com/Diego-Ignacio Ortiz/analysta/issues
+Project-URL: Source, https://github.com/Diego-Ignacio Ortiz/analysta
+Author-email: Diego-Ignacio Ortiz <31400790+dunkel000@users.noreply.github.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: pandas>=1.4
+Description-Content-Type: text/markdown
+
+# analysta
+
+[![PyPI - Version](https://img.shields.io/pypi/v/analysta.svg)](https://pypi.org/project/analysta)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/analysta.svg)](https://pypi.org/project/analysta)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install analysta
+```
+
+## License
+
+`analysta` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
