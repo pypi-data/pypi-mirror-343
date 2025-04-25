@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: framepack
+Version: 0.0.1
+Summary: video generator
+Author-email: calcuis <info@calcu.io>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: tqdm
+Project-URL: Download, https://github.com/calcuis/packpack/releases
+Project-URL: GitHub, https://github.com/calcuis/packpack
+Project-URL: Issues, https://github.com/calcuis/packpack/issues
+
+## framepack
+
+enter the user menu by (if no py command; use python/python3 instead)
+```
+py -m framepack
+```
+
