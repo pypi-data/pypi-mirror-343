@@ -1,0 +1,6 @@
+mcp_server_sqlite/__init__.py,sha256=J0r3TGmMh14VNVKj4R4SvC3w2WYY1GyX5V5v59GMO3w,504
+mcp_server_sqlite/server.py,sha256=8TVbvggjORTCHCd9Raz-kfyAC33AryAg83vjyVZBcuA,19020
+mcp_server_sqlite-2025.4.25.dist-info/METADATA,sha256=bWmopR8TYkvPWAeBQ-DruiVY9oonQ3zLoD97QtopeRk,7164
+mcp_server_sqlite-2025.4.25.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_server_sqlite-2025.4.25.dist-info/entry_points.txt,sha256=T0yq6VGOJcLFjD07zVis5dgoO45JupXSSdcBooIjLF0,61
+mcp_server_sqlite-2025.4.25.dist-info/RECORD,,
