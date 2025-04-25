@@ -1,0 +1,113 @@
+Below you will find a variety of important rules spanning:
+- the dev_workflow
+- the .windsurfrules document self-improvement workflow
+- the template to follow when modifying or adding new sections/rules to this document.
+
+---
+DEV_WORKFLOW
+---
+description: Guide for using Taskinator to manage task-driven development workflows
+globs: **/*
+filesToApplyRule: **/*
+alwaysApply: true
+---
+
+- **Global CLI Commands**
+  - Taskinator provides a CLI through the `taskinator` command
+  - All functionality is available through this interface
+  - Use `taskinator <command>` to access various features
+  - Examples:
+    - `taskinator list` to list all tasks
+    - `taskinator next` to see the next task to work on
+    - `taskinator expand --id=3` to expand a task into subtasks
+  - All commands accept various options for customization
+  - The CLI provides additional commands like `taskinator init` for project setup
+
+- **Development Workflow Process**
+  - Start new projects by running `taskinator init` or `taskinator parse-prd <prd-file.txt>` to generate initial tasks
+  - Begin coding sessions with `taskinator list` to see current tasks, status, and IDs
+  - Analyze task complexity with `taskinator analyze` before breaking down tasks
+  - Select tasks based on dependencies (all marked 'done'), priority level, and ID order
+  - Clarify tasks by checking task files in tasks/ directory or asking for user input
+  - View specific task details using `taskinator show <id>` to understand implementation requirements
+  - Break down complex tasks using `taskinator expand-task <id>` with appropriate flags
+  - Implement code following task details, dependencies, and project standards
+  - Verify tasks according to test strategies before marking as complete
+  - Mark completed tasks with `taskinator status <id> done`
+  - Update dependent tasks when implementation differs from original plan
+  - Generate task files with `taskinator generate` after updating tasks.json
+  - Respect dependency chains and task priorities when selecting work
+  - Report progress regularly using the list command
+
+- **Task Complexity Analysis**
+  - Run `taskinator analyze` for comprehensive analysis
+  - Review complexity report in tasks/task-complexity-report.json
+  - Focus on tasks with highest complexity scores (8-10) for detailed breakdown
+  - Use analysis results to determine appropriate subtask allocation
+  - Note that reports are automatically used by the expand command
+
+- **Task Breakdown Process**
+  - For tasks with complexity analysis, use `taskinator expand-task <id>`
+  - Add `--research` flag to leverage AI for research-backed expansion
+  - Use `--context="<context>"` to provide additional context when needed
+  - Review and adjust generated subtasks as necessary
+  - If subtasks need regeneration, clear them first with `clear-subtasks` command
+
+- **Implementation Drift Handling**
+  - When implementation differs significantly from planned approach
+  - When future tasks need modification due to current implementation choices
+  - When new dependencies or requirements emerge
+  - Use `taskinator update --from=<futureTaskId> --context="<explanation>"` to update tasks.json
+
+- **Task Status Management**
+  - Use 'pending' for tasks ready to be worked on
+  - Use 'in_progress' for tasks currently being worked on
+  - Use 'done' for completed and verified tasks
+  - Use 'blocked' for tasks that cannot be worked on due to dependencies
+
+- **Task File Format Reference**
+  ```
+  # Task ID: <id>
+  # Title: <title>
+  # Status: <status>
+  # Dependencies: <comma-separated list of dependency IDs>
+  # Priority: <priority>
+  # Description: <brief description>
+  # Details:
+  <detailed implementation notes>
+  
+  # Test Strategy:
+  <verification approach>
+  ```
+
+- **Command Reference: parse-prd**
+  - Syntax: `taskinator parse-prd <prd-file.txt>`
+  - Description: Parses a PRD document and generates structured tasks
+  - Parameters: 
+    - `<prd-file>`: Path to the PRD text file
+  - Example: `taskinator parse-prd requirements.txt`
+  - Notes: Will create or update tasks.json file.
+
+- **Command Reference: review**
+  - Syntax: `taskinator review <complexity-report-file>`
+  - Description: Review task complexity recommendations
+  - Parameters:
+    - `<complexity-report-file>`: Path to the complexity report file
+  - Example: `taskinator review tasks/task-complexity-report.json`
+
+- **Command Reference: implement**
+  - Syntax: `taskinator implement <task-id>`
+  - Description: Expand tasks based on approved recommendations
+  - Parameters:
+    - `<task-id>`: ID of the task to implement
+  - Example: `taskinator implement 3`
+
+- **API Reference**
+  - Taskinator provides a programmatic API for automated workflows
+  - Use `TaskinatorAPI` class for programmatic usage
+  - Methods include:
+    - `parse_prd(prd_file)`: Parse PRD and generate tasks
+    - `analyze_complexity()`: Analyze task complexity
+    - `review_recommendations(report_file)`: Review complexity recommendations
+    - `implement_expansion(task_id)`: Implement task expansion
+    - `expand_until_threshold(threshold)`: Recursively expand tasks until all are below complexity threshold
