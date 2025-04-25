@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: ms_validator
+Version: 0.0.1a1
+Summary: MindStudio Validator for Inference
+Author-email: Jiawang Liu <rainingalltheday@163.com>
+License: MIT
+Project-URL: homepage, https://pypi.org/project/ms-validator/
+Requires-Python: >=3.9
