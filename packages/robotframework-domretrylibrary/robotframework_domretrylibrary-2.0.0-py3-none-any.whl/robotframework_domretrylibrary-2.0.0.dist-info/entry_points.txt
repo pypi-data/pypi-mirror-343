@@ -1,0 +1,2 @@
+[robotframework_listener]
+DomRetryLibrary = domretrylibrary.core:DomRetryLibrary
