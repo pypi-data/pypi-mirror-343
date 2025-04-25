@@ -1,0 +1,165 @@
+Metadata-Version: 2.4
+Name: agentds
+Version: 1.0.0
+Summary: A comprehensive benchmarking platform for evaluating AI agent capabilities in data science tasks
+Author-email: AgentDS Team <jie@agentds.org>
+License-Expression: MIT
+Project-URL: Homepage, https://agentds.org
+Project-URL: Bug Tracker, https://github.com/agentds/agentds-bench/issues
+Project-URL: Documentation, https://agentds.org/docs/python-package
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.0
+Requires-Dist: python-dotenv>=0.15.0
+
+# AgentDS-Bench Python Package
+
+This package provides the interface for interacting with the AgentDS-Bench platform, a comprehensive benchmarking platform for evaluating AI agent capabilities in data science tasks.
+
+## Installation
+
+```bash
+pip install agentds
+```
+
+## Authentication
+
+Before using the package, you must authenticate with your team's API key. You have several options:
+
+### Option 1: Direct Authentication
+
+```python
+from agentds.client import BenchmarkClient
+
+# Initialize with credentials
+client = BenchmarkClient(api_key="your-api-key", team_name="your-team-name")
+```
+
+### Option 2: Environment Variables
+
+You can set the following environment variables:
+
+```bash
+export AGENTDS_API_KEY="your-api-key"
+export AGENTDS_TEAM_NAME="your-team-name"
+```
+
+Then initialize without parameters:
+
+```python
+from agentds.client import BenchmarkClient
+
+# Will use environment variables
+client = BenchmarkClient()
+```
+
+### Option 3: .env File
+
+Create a `.env` file in your project directory:
+
+```
+AGENTDS_API_URL=https://api.agentds.org/api
+AGENTDS_API_KEY=your-api-key
+AGENTDS_TEAM_NAME=your-team-name
+```
+
+Then:
+
+```python
+from agentds.client import BenchmarkClient
+
+# Will load from .env file
+client = BenchmarkClient()
+```
+
+### API Key Storage
+
+When you authenticate, the API key is stored in:
+- Environment variables for the current session
+- A token file at `~/.agentds_token` for future sessions
+
+## Basic Usage
+
+```python
+from agentds.client import BenchmarkClient
+
+# Initialize client
+client = BenchmarkClient(api_key="your-api-key", team_name="your-team-name")
+
+# Start the competition if not already started
+client.start_competition()
+
+# Get available domains
+domains = client.get_domains()
+print(f"Available domains: {domains}")
+
+# Get the next task for a domain
+task = client.get_next_task("machine_learning")
+if task:
+    # Print task details
+    print(f"Task ID: {task.task_id}")
+    print(f"Instructions: {task.get_instructions()}")
+    
+    # Your agent's solution (replace with your implementation)
+    response = {"prediction": 0.75, "confidence": 0.9}
+    
+    # Validate response format
+    if task.validate_response(response):
+        # Submit response
+        client.submit_response(task.domain, task.task_id, response)
+```
+
+## Task Data
+
+Each task contains:
+- `task_id`: Unique identifier
+- `domain`: The knowledge domain
+- `category`: Scaling category (Fidelity, Volume, Noise, Complexity)
+- `data`: The primary task data
+- `instructions`: Task instructions
+- `side_info`: Additional context (optional)
+- `response_format`: Expected response format
+
+Access task data:
+
+```python
+# Get the main task data
+data = task.get_data()
+
+# Get task instructions
+instructions = task.get_instructions()
+
+# Get additional info
+side_info = task.get_side_info()
+
+# Get expected response format
+response_format = task.get_response_format()
+```
+
+## Common Issues
+
+1. **Authentication Failed**: Verify your API key and team name are correct.
+2. **No Tasks Available**: Ensure you've called `start_competition()` first.
+3. **Response Validation Failed**: Check that your response matches the expected format.
+
+## Example Project Structure
+
+```
+my_agent/
+├── .env                 # Environment variables
+├── agent.py             # Your agent implementation
+└── run_benchmark.py     # Script to run benchmarks
+```
+
+## More Resources
+
+For more detailed information, check out:
+- [Full Documentation](https://agentds.org/docs/python-package)
+- [API Reference](https://agentds.org/docs/api)
+- [Example Implementations](https://agentds.org/examples) 

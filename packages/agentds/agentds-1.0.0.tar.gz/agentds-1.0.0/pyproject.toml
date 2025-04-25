@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentds"
+version = "1.0.0"
+description = "A comprehensive benchmarking platform for evaluating AI agent capabilities in data science tasks"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [
+    {name = "AgentDS Team", email = "jie@agentds.org"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "requests>=2.25.0",
+    "python-dotenv>=0.15.0",
+]
+
+[project.urls]
+"Homepage" = "https://agentds.org"
+"Bug Tracker" = "https://github.com/agentds/agentds-bench/issues"
+"Documentation" = "https://agentds.org/docs/python-package"
