@@ -1,0 +1,134 @@
+services:
+  api:
+    &api
+    build:
+      context: .
+    image: {{ cookiecutter.project_name }}:latest
+    container_name: {{ cookiecutter.project_name }}-api
+    restart: always
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    {%- if cookiecutter.use_postgres or cookiecutter.use_redis or cookiecutter.use_rabbitmq %}
+    depends_on:
+      {%- if cookiecutter.use_postgres %}
+      postgres:
+        condition: service_healthy
+      {%- endif %}
+      {%- if cookiecutter.use_redis %}
+      redis:
+        condition: service_healthy
+      {%- endif %}
+      {%- if cookiecutter.use_rabbitmq %}
+      rabbitmq:
+        condition: service_healthy
+      {%- endif %}
+    {%- endif %}
+    {%- if cookiecutter.use_alembic %}
+    volumes:
+      - ./migrations:/app/migrations
+    {%- endif %}
+    develop:
+      watch:
+        - action: sync
+          path: ./src
+          target: /app/src
+        - action: sync
+          path: ./tests
+          target: /app/tests
+        - action: rebuild
+          path: pyproject.toml
+        - action: rebuild
+          path: uv.lock
+  
+  {% if cookiecutter.use_taskiq -%}
+  taskiq-worker:
+    <<: *api
+    container_name: {{ cookiecutter.project_name }}-taskiq-worker
+    ports: []
+    command: [ taskiq, worker, -fsd, src.services.taskiq.broker:broker, -w, "1", --max-fails, "1"]
+
+  taskiq-scheduler:
+    <<: *api
+    container_name: {{ cookiecutter.project_name }}-taskiq-scheduler
+    ports: []
+    command: [ taskiq, scheduler, -fsd, src.services.taskiq.scheduler:scheduler ]
+  {% endif %}
+  {%- if cookiecutter.use_postgres %}
+  postgres:
+    image: postgres:17.4-bookworm
+    hostname: {{ cookiecutter.project_name }}-pg
+    container_name: {{ cookiecutter.project_name }}-pg
+    environment:
+      POSTGRES_PASSWORD: {{ cookiecutter.project_name }}
+      POSTGRES_USER: {{ cookiecutter.project_name }}
+      POSTGRES_DB: {{ cookiecutter.project_name }}
+    volumes:
+    - {{ cookiecutter.project_name }}-pg-data:/var/lib/postgresql/data
+    restart: always
+    healthcheck:
+      test: pg_isready -U {{ cookiecutter.project_name }}
+      interval: 2s
+      timeout: 3s
+      retries: 40
+  {% endif %}
+  {%- if cookiecutter.use_redis %}
+  redis:
+    image: bitnami/redis:7.4
+    container_name: {{ cookiecutter.project_name }}-redis
+    ports:
+      - "6379:6379"
+    restart: always
+    environment:
+      ALLOW_EMPTY_PASSWORD: "yes"
+    healthcheck:
+      test: redis-cli ping
+      interval: 2s
+      timeout: 3s
+      retries: 40
+    volumes:
+      - {{ cookiecutter.project_name }}-redis-data:/bitnami/redis/data
+  {% endif %}
+  {% if cookiecutter.use_rabbitmq -%}
+  rabbitmq:
+    image: rabbitmq:3.8.27-management-alpine
+    container_name: {{ cookiecutter.project_name }}-rabbitmq
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    environment:
+      RABBITMQ_DEFAULT_USER: user
+      RABBITMQ_DEFAULT_PASS: password
+      RABBITMQ_DEFAULT_VHOST: /
+    healthcheck:
+      test: rabbitmq-diagnostics -q check_running
+      interval: 2s
+      timeout: 3s
+      retries: 40
+    volumes:
+      - {{ cookiecutter.project_name }}-rabbitmq-data:/var/lib/rabbitmq
+  {% endif %}
+  {% if cookiecutter.use_prometheus -%}
+  prometheus:
+    image: prom/prometheus:v3.3.0
+    restart: always
+    volumes:
+      - ./observability/prometheus/prometheus.yaml:/etc/prometheus/prometheus.yaml
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yaml"
+    ports:
+      - 9090:9090
+  {% endif %}
+{%- if cookiecutter.use_postgres or cookiecutter.use_redis or cookiecutter.use_rabbitmq %}
+volumes:
+  {%- if cookiecutter.use_postgres %}
+  {{ cookiecutter.project_name }}-pg-data:
+  {%- endif %}
+  {%- if cookiecutter.use_redis %}
+  {{ cookiecutter.project_name }}-redis-data:
+  {% endif %}
+  {%- if cookiecutter.use_rabbitmq -%}
+  {{ cookiecutter.project_name }}-rabbitmq-data:
+  {% endif %}
+{%- endif %}
