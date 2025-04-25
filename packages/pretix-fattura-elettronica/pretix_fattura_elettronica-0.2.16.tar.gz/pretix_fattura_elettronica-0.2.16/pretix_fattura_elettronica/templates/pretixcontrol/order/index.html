@@ -1,0 +1,104 @@
+{% extends "pretixcontrol/order/index.html" %}
+{% load fatturaelt %}
+{% load i18n %}
+{% load phone_format %}
+{% block content %}
+{{block.super}}
+
+<div id="invoices">
+    {% if invoices %}
+    <div class="panel panel-primary items">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                Electronic invoices
+            </h3>
+        </div>
+        <div class="panel-body">
+            <dl class="dl-horizontal">
+                <dt>{% trans "Invoices" %}</dt>
+                <dd>
+                    <ul>
+                        {% for i in invoices %}
+                        <li>
+                            <a href="{% url 'plugins:pretix_fattura_elettronica:download-invoice' event=request.event.slug organizer=request.event.organizer.slug code=order.code invoice=i.pk %}">
+                            {{i.number}}
+                            </a>
+
+                            {% if not i|einvoice_sent %}
+                            <form class="form-inline helper-display-inline" method="post"
+                                action="{% url 'plugins:pretix_fattura_elettronica:send_fattura' event=request.event.slug organizer=request.event.organizer.slug code=order.code %}">
+                                {% csrf_token %}
+
+                                <input type="hidden" name="invoice_id" value="{{i.pk}}">
+
+                                <button class="btn btn-default btn-xs">
+                                    Send e-invoice
+                                </button>
+                            </form>
+                            {% endif %}
+
+                            {% endfor %}
+                    </ul>
+
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<div id="e-invoice-info">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="pull-right flip">
+                <a href="{% url 'plugins:pretix_fattura_elettronica:view-invoice-info' event=request.event.slug organizer=request.event.organizer.slug code=order.code %}">
+                    <span class="fa fa-edit"></span>
+                    Change
+                </a>
+            </div>
+
+            <h3 class="panel-title">
+                Fattura elettronica
+            </h3>
+        </div>
+        <div class="panel-body">
+            {% if order.meta_info_data.pec or order.meta_info_data.sdi or order.meta_info_data.codice_fiscale %}
+            <dl class="dl-horizontal">
+                {% if order.meta_info_data.codice_fiscale %}
+                <dt>Codice Fiscale</dt>
+                <dd>{{ order.meta_info_data.codice_fiscale }}</dd>
+                {% endif %}
+                {% if order.meta_info_data.pec %}
+                <dt>PEC</dt>
+                <dd>{{ order.meta_info_data.pec }}</dd>
+                {% endif %}
+                {% if order.meta_info_data.sdi %}
+                <dt>SDI</dt>
+                <dd>{{ order.meta_info_data.sdi }}</dd>
+                {% endif %}
+            </dl>
+            {% else %}
+            <p>
+                No electronic invoice information available.
+            </p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+<script>
+    const target = document.querySelector(".panel-primary");
+    const parent = target.parentNode;
+    const invoices = document.querySelector("#invoices");
+    parent.insertBefore(invoices, target.nextSibling);
+
+    // invoice info
+    const panelTitles = document.querySelectorAll('.panel-title');
+    const panelTitle = Array.from(panelTitles).find((el) => el.innerText.trim() === 'Invoice information');
+    const column = panelTitle.closest('.col-md-6');
+    const invoiceInfo = document.querySelector('#e-invoice-info');
+    column.appendChild(invoiceInfo);
+</script>
+{% endblock content %}
