@@ -1,0 +1,2 @@
+[console_scripts]
+pyttsgen = pyttsgen.cli:main
