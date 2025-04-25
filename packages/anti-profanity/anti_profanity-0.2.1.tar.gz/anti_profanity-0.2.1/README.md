@@ -1,0 +1,82 @@
+# ProfanityFilter
+
+A simple and customizable profanity filtering class supporting multiple languages: English (`en`), Hindi (`hi`), and Bengali (`bn`). It allows you to **censor**, **detect**, or **remove** profane words from a given text.
+
+## Features
+
+- 🔍 Detect profanity in text  
+- ✂️ Remove profanity completely  
+- ✳️ Censor profanity with a customizable replacement character  
+- 🌐 Multilingual support (English, Hindi, Bengali)  
+- 💡 Easy to integrate and extend  
+
+---
+
+## Installation
+```bash
+pip3 install anti-profanity
+```
+
+```python
+from anti_profanity import ProfanityFilter
+
+# For Hindi only
+pf_hi = ProfanityFilter("hi")
+
+# For English and Hindi
+pf_multi = ProfanityFilter(["en", "hi"])
+
+# if no argument provided "en' will be default
+pf = ProfanityFilter()
+```
+## Methods
+
+### Usage
+```python
+#Replaces each character of any detected profanity with the replacement character.
+censored = pf.censor_profanity("This text contains shit.")
+print(censored)  # Output: This text contains ****
+
+# Checks whether the given text contains any profane words.
+is_dirty = pf.is_profanity("This text contain Shit")
+print(is_dirty)  # Output: True
+
+
+# Removes all profane words from the given text.
+cleaned = pf.remove_profanity("Some fucking text")
+print(cleaned)  # Output: Some  text
+
+# List avilable language
+print(pf.list_languages())
+
+# Show available methods
+print(pf.list_methods())
+```
+
+### Command Line
+```bash
+# Censor profanity in text
+anti_profanity --action censor --text "Your text here" --lang en
+
+# Check if a file contains profanity
+anti_profanity --action check --file input.txt --lang en hi
+
+# Remove profanity from a file and save to another file
+anti_profanity --action remove --file input.txt --output clean.txt --lang bn
+
+# List supported languages
+anti_profanity --action list_langs
+
+# List available methods
+anti_profanity --action list_methods
+```
+
+## Customization
+You can extend the filter by adding your own languages or editing the existing profanity lists in the `data` subdirectory:
+Each language file (e.g., `english_en.py`) should export a list of profane words:
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+

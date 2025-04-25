@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+anti_profanity.egg-info/PKG-INFO
+anti_profanity.egg-info/SOURCES.txt
+anti_profanity.egg-info/dependency_links.txt
+anti_profanity.egg-info/top_level.txt
