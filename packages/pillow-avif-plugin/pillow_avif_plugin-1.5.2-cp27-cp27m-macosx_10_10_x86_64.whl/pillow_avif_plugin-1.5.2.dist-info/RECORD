@@ -1,0 +1,10 @@
+pillow_avif_plugin-1.5.2.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+pillow_avif_plugin-1.5.2.dist-info/RECORD,,
+pillow_avif_plugin-1.5.2.dist-info/LICENSE,sha256=2l49eVdgaNy9JTEPbstz1GaaPKw02gFdtuThTNUi730,25213
+pillow_avif_plugin-1.5.2.dist-info/WHEEL,sha256=5eFLU-agw4d37badOX7aXU2NX7h3HWlBGhWR3anlvA8,111
+pillow_avif_plugin-1.5.2.dist-info/top_level.txt,sha256=xrg4zRnqDyl_JEyEQh3oCcAU4BHneocD-DCFDzf4g9E,12
+pillow_avif_plugin-1.5.2.dist-info/METADATA,sha256=9uG2G41sSTETS4NoUFmYJA6KPA-aIq2XG0W6836RE8o,1912
+pillow_avif/AvifImagePlugin.py,sha256=OsS19EQ3KjKNuP-WRamO3xVujD0mU3XiUPuLbUmg5K8,9899
+pillow_avif/_avif.so,sha256=PaP-9r3vnCIv0mSNjmXVHkWe6wviE6SqTYsCqOVhRHo,58624
+pillow_avif/__init__.py,sha256=hi8l2UljAlWGpk9AHYVAQnZME7WyNCtPLuTQeGUkxLI,84
+pillow_avif/.dylibs/libavif.16.2.1.dylib,sha256=Sk25Ca5X4_xephvPYrXFcvHrsWva5DfTq_c2EjIvYeI,8724320
