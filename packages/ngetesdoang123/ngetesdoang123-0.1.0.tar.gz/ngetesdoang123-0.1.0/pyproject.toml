@@ -1,0 +1,15 @@
+[project]
+name = "ngetesdoang123"
+version = "0.1.0"
+description = "A simple hello world Python package."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools]
+py-modules = ["ngetesdoang123"]
