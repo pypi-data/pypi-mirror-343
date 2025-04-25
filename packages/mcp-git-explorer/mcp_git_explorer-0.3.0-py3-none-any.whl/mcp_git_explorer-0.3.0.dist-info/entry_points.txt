@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-git-explorer = mcp_git_explorer.cli:main
