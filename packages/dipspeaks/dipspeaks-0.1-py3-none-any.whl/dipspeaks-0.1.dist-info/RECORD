@@ -1,0 +1,15 @@
+dipspeaks/__init__.py,sha256=4bjC9aNDjFwYIqoWpcN54a-aheKyircyRbTEx7-8fU4,658
+dipspeaks/main.py,sha256=FrkNNyZwRNXHaLWs2cUNHeZ9cVivRIOqbMTmaCvsvVk,970
+dipspeaks/dipspeaks_detection/__init__.py,sha256=c65PiXlsqhSIWPYWiQysrPhy-uXZXDjnaqmnzyN9Msw,539
+dipspeaks/dipspeaks_detection/analysis.py,sha256=UqtYXOm-_rCnoxvYzVnt2MZqVIonHBFiVzwwk6NtBgY,14294
+dipspeaks/dipspeaks_detection/autoencoder_model.py,sha256=p9Xh6EzCJoY4myOweUTZ3AaVmW1_TQw__jIy_okMxdk,6178
+dipspeaks/dipspeaks_detection/detection.py,sha256=5roD3m9-kmBLRMyi-8zKLW9qEjzz9SRiQ30EfXcRry0,5928
+dipspeaks/dipspeaks_detection/dipspeaks_detection.py,sha256=63M0U8pjS-90Aub0dQt8YGAlPzGeoPp4L0R2Ex0RSm0,13343
+dipspeaks/dipspeaks_detection/evaluation.py,sha256=m_Yt22nJUNf504MKXzSIN6cn-1CVCnQ3VqS74u23Vog,2818
+dipspeaks/dipspeaks_detection/helper_functions.py,sha256=FMlXGkNx1T9YORYflXodNAWemF2iv_zo6cnqWMNlBA8,5134
+dipspeaks/dipspeaks_detection/synthetic_data_for_train.py,sha256=ffBFG5OxgwPBDQIe0O1xbR3b5T_BOkW_x1iVDnH-TeY,6041
+dipspeaks-0.1.dist-info/licenses/LICENSE,sha256=oRKYZac2JHTWW54_3p8iFoYCJhyEroIozxRx4MjEOz8,1061
+dipspeaks-0.1.dist-info/METADATA,sha256=0mUQysObhI0m8Olrg3ngTpA-4HMchNPzi-YJOzLvKkk,612
+dipspeaks-0.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+dipspeaks-0.1.dist-info/top_level.txt,sha256=laZrUGkP256YqjAu3-7T04kCvJKKob6YocFG0DCSDTI,10
+dipspeaks-0.1.dist-info/RECORD,,
