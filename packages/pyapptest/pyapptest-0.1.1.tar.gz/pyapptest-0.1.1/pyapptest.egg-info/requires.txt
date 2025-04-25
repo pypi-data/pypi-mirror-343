@@ -1,0 +1,6 @@
+streamlit>=1.0
+click>=8.0
+fastapi>=0.65
+flask>=2.0
+django>=3.2
+faker

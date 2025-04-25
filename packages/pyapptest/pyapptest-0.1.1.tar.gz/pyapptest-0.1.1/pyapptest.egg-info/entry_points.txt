@@ -1,0 +1,2 @@
+[console_scripts]
+pyapptest = cli.main:main

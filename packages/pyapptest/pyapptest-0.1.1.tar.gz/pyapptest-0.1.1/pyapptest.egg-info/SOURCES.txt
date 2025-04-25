@@ -1,0 +1,16 @@
+LICENSE.md
+README.md
+setup.py
+ui.py
+backend/__init__.py
+backend/django_parser.py
+backend/fastapi_parser.py
+backend/flask_parser.py
+cli/__init__.py
+cli/main.py
+pyapptest.egg-info/PKG-INFO
+pyapptest.egg-info/SOURCES.txt
+pyapptest.egg-info/dependency_links.txt
+pyapptest.egg-info/entry_points.txt
+pyapptest.egg-info/requires.txt
+pyapptest.egg-info/top_level.txt
