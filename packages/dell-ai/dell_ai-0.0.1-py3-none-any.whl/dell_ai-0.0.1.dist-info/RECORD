@@ -1,0 +1,17 @@
+dell_ai/__init__.py,sha256=Mam_WXGtaLCuc7v3o6ZvH7EPDyaGOjnZXfoGR1F6LW8,570
+dell_ai/__main__.py,sha256=pvHT47Hfyo1P5GP7hlOqbXyAAH_BKx0ISXCXicLob4A,131
+dell_ai/auth.py,sha256=A1dKVqsXSwT36IzCM6uCqD1f0b-Si9qPfvwpszWT6xs,2539
+dell_ai/client.py,sha256=ufmXJyrFZ6gKLJsglYsZirzVbAQPkbrv8i_XY3Z8CH0,8647
+dell_ai/constants.py,sha256=QVVRJ_HcAv2yxnLlhiBAULq-K2yZbJbrV2VVF6wppXQ,364
+dell_ai/exceptions.py,sha256=9vJ2Vv2mzCOfSP0lDb85YYwz-SONnr3V-aVFVFZwGi0,5023
+dell_ai/models.py,sha256=-WsFgZfUItOd_hFSyYAKSuJ48esy4Dvlw6nfd-mbmf8,3515
+dell_ai/platforms.py,sha256=q76tD-R5bykDxf0Au6NN8iCcf99BsejaA5YJl6XI0P8,2439
+dell_ai/snippets.py,sha256=vxLFQ_8dHGnQnX4Ob19MHiZUMNNupiGlYd-9jek_VVQ,8004
+dell_ai/cli/__init__.py,sha256=24TKZ9Vp7S07uA-kx_Cf64i1CGSi16v5Ldn4SdSK3Lc,27
+dell_ai/cli/main.py,sha256=VbafNzv_7eRMVtQpNseoZkegB3XwRcexOXPMaYz37B0,7557
+dell_ai/cli/utils.py,sha256=9m58HDRpLtZiy9KrSYRIpPIZv4egTzm3WjY60WVJgjg,1877
+dell_ai-0.0.1.dist-info/METADATA,sha256=98k53XZqM_6_UJ0WlZ7ZzAfwKzxKFLj-WzXo6DsiN28,4261
+dell_ai-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dell_ai-0.0.1.dist-info/entry_points.txt,sha256=05sejIieqd1Gyi_tQOH-WJTaKgVD6GTbg85ZgSbpFrc,49
+dell_ai-0.0.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dell_ai-0.0.1.dist-info/RECORD,,
