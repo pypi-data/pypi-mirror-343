@@ -1,0 +1,10 @@
+pseudo_runner/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pseudo_runner/cli.py,sha256=Gdr6Pf2iwIl_PVxVEVZZ3IxH56Ie6OBaPWdf4xl2eSo,2224
+pseudo_runner/config.py,sha256=S7L2im6S3fY9kj-1g-Kw7J2-bz4-Jw6tSgUem76gFcE,522
+pseudo_runner/converter.py,sha256=bRo23IfpRQUHVdb7ZtOP7PWmuuf98W_eCpr9JF83ZrU,1575
+pseudo_runner/runner.py,sha256=5zCH3K0NUKfaz-24XHX_x81_UPRXtkjybwtJYfnPi0Q,396
+pseudo_runner-0.1.dist-info/METADATA,sha256=aRc_pljlUt5WM8qPEP_lOoQdWbO6x1KbEw9j3PuN52s,1043
+pseudo_runner-0.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+pseudo_runner-0.1.dist-info/entry_points.txt,sha256=ZNAJ4YFdW09hoZuIJSxzsLPux3mlkbTzEOkOyDgrLek,53
+pseudo_runner-0.1.dist-info/top_level.txt,sha256=Z2HsPA04uBa52ywGJrp46ykK7eip-8eN8mfFTnWUwk8,14
+pseudo_runner-0.1.dist-info/RECORD,,
