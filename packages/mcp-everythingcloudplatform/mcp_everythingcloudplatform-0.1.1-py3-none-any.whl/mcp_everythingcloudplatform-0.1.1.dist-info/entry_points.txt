@@ -1,0 +1,4 @@
+[console_scripts]
+mcp_add = mcp_everythingcloudplatform.main:add
+mcp_hello = mcp_everythingcloudplatform.main:hello
+mcp_multiply = mcp_everythingcloudplatform.main:multiply
