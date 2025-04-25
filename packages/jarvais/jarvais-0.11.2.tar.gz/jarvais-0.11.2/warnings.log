@@ -1,0 +1,6 @@
+INFO:root:Failed to auto-detect TPU type.
+INFO:root:Failed to configure TPU pod. Got: tpu_name: None, worker_id: None, accelerator_type: None
+INFO:root:Failed to auto-detect TPU type.
+INFO:root:Failed to configure TPU pod. Got: tpu_name: None, worker_id: None, accelerator_type: None
+INFO:root:Failed to auto-detect TPU type.
+INFO:root:Failed to configure TPU pod. Got: tpu_name: None, worker_id: None, accelerator_type: None
