@@ -1,0 +1,8 @@
+pandas
+click
+panel
+plotly
+geopandas
+
+[develop]
+pytest
