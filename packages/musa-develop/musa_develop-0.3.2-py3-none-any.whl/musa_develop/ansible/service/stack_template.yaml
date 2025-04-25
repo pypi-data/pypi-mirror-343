@@ -1,0 +1,86 @@
+version: '3.8'
+
+services:
+  task1:
+    image: registry.mthreads.com/public/kuae/vllm-mp22-py310:0415-dev  # 替换为实际镜像
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["service ssh start && sleep infinity"]     # 例如: ["python", "task1.py"]
+    networks:
+      - host_net
+    environment:
+      - MTHREADS_VISIBLE_DEVICES=all
+      - HOST_IP=${HOST_IP}
+    volumes:
+      - type: tmpfs
+        target: /dev/shm
+        tmpfs:
+          size: 85899345920  # 使用 tmpfs 挂载并设置共享内存大小
+          mode: 1777              # 可选：权限设置（如不指定则默认 1777）
+
+      # 新增目录映射 1
+      - type: bind          # 必须明确指定类型
+        source: /mnt/data/vllm  # 主机绝对路径
+        target: /home/dist  # 容器内目标路径
+
+      # 新增目录映射 2
+      - type: bind
+        source: /data      # 主机绝对路径
+        target: /home/model # 容器内目标路径
+
+    #privileged: true  # 启用特权模式
+    deploy:
+      replicas: 3                  # 只运行1个副本（管理节点唯一性）
+      placement:
+        constraints:
+          - node.role == worker    # 约束条件：仅在工作节点运行
+      #resources:
+      #  limits:
+      #    cpus: '0.5'
+      #    memory: 512M
+
+  task2:
+    image: registry.mthreads.com/public/kuae/vllm-mp22-py310:0415-dev  # 替换为实际镜像
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["service ssh start && sleep 5 && bash /tmp/run_deepseek_671b_r1.sh 8 4 /home/model/DeepSeek-R1-BF16/ 16,15,15,15 "]
+    networks:
+      - host_net
+    environment:
+      - MTHREADS_VISIBLE_DEVICES=all
+      - HOST_IP=${HOST_IP}
+    volumes:
+      - type: tmpfs
+        target: /dev/shm
+        tmpfs:
+          size: 85899345920  # 使用 tmpfs 挂载并设置共享内存大小
+          mode: 1777              # 可选：权限设置（如不指定则默认 1777）
+
+      # 新增目录映射 1
+      - type: bind          # 必须明确指定类型
+        source: /mnt/data/vllm  # 主机绝对路径
+        target: /home/dist  # 容器内目标路径
+
+      # 新增目录映射 2
+      - type: bind
+        source: /data      # 主机绝对路径
+        target: /home/model # 容器内目标路径
+
+      # 新增目录映射 3
+      - type: bind
+        source: /tmp      # 主机绝对路径
+        target: /tmp # 容器内目标路径
+
+    #privileged: true  # 启用特权模式
+    deploy:
+      replicas: 1                  # 根据工作节点数量调整
+      placement:
+        constraints:
+          - node.role == manager   # 约束条件：仅在管理节点运行
+      #resources:
+      #  limits:
+      #    cpus: '1.0'
+      #    memory: 1G
+
+networks:
+  host_net:
+    external: true
+    name: host  # 显式声明使用主机网络
