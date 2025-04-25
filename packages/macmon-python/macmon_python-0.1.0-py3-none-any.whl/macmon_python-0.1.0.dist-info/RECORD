@@ -1,0 +1,11 @@
+macmon/__init__.py,sha256=Y5LCSkAAkXNpP5YwsICLCq5DxbSfeQ2FRx-7A_kuXQI,74
+macmon/core.py,sha256=v9E4NEyiv8_AILn0ukbQGhHJZZ0SiRrQjDKvFqDP258,2613
+macmon/bin/LICENSE,sha256=ZfV1sBJ6Q4PkcQxf_v4sWpq5BiMQE_QrqJnz-puf2q8,1065
+macmon/bin/macmon,sha256=xDISLFCVpwrhS-WB276i889jLZ_0o1U_98_4AICooY8,1610456
+macmon/bin/readme.md,sha256=ckU7zvW2OemfVt_NZ7HehLHm_8xodgL3BWZ-C8y9u5M,5206
+macmon_python-0.1.0.dist-info/licenses/LICENSE,sha256=Z2uieWcAch7bYPyZI4kQ8Sg02LnsNYOs-FnLw0lAHps,1072
+macmon_python-0.1.0.dist-info/METADATA,sha256=R5jyGvvbrFH7ebhxNgqSVEJCa7kg22C__71209BhcgQ,1508
+macmon_python-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+macmon_python-0.1.0.dist-info/entry_points.txt,sha256=hDSjdSwYsIG-1biL1vO_eUyS9CJm8gZCO-3S_z-4APU,47
+macmon_python-0.1.0.dist-info/top_level.txt,sha256=VEd_1oaHd9KAsl4zqSxPwq7tXRRQSfcTB0tkxbiXV0U,7
+macmon_python-0.1.0.dist-info/RECORD,,
