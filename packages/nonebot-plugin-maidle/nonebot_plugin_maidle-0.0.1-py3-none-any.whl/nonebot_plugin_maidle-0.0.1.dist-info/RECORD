@@ -1,0 +1,12 @@
+nonebot_plugin_maidle/__init__.py,sha256=dv2gs1JUpTKASVF8rN9APLzHLvivdoKWlhjSEVG-VXw,704
+nonebot_plugin_maidle/commands.py,sha256=ovIjV9Dc74dZUAnc_-SxUps57ewjvRAh-njf7gxSxj8,16444
+nonebot_plugin_maidle/utils.py,sha256=vUGPVvSTyl-rtQN8rDX52__SuQT7oPrJUGLDmhMr4Sk,18751
+nonebot_plugin_maidle/static/alias.json,sha256=IMQIqeaYBsJuRqWv3yHM9Aol2vCPwvL2ED6kBA9Hs_M,1588546
+nonebot_plugin_maidle/static/all_alias.json,sha256=V2qbnZjXyJwdyiseLmT94mIUrjh-Y6tb-PQTZKY5jY0,316502
+nonebot_plugin_maidle/static/music_alias.json,sha256=TstffBF5z1T8uC5ocyAxfRPlm_kohtj4fHQeUHKb9GQ,460346
+nonebot_plugin_maidle/static/music_info.json,sha256=u4MUqDo6FksVbBIMxQNlLV75UdZwNy3wdQITsqrwtQg,491669
+nonebot_plugin_maidle-0.0.1.dist-info/licenses/LICENSE,sha256=Zt-M7kXrrNe-7DRSqZOxoOnnyA5C8fT_L0lbwAP51yI,1085
+nonebot_plugin_maidle-0.0.1.dist-info/METADATA,sha256=CfhD3u6ubNJzC1iqSopORqPvOp2tgexRMsuq6C8lpzo,6184
+nonebot_plugin_maidle-0.0.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+nonebot_plugin_maidle-0.0.1.dist-info/top_level.txt,sha256=gLJPxXsQ8dELTho73qd4p3WjTGK6XlhmfNdMc1vaxWw,22
+nonebot_plugin_maidle-0.0.1.dist-info/RECORD,,
