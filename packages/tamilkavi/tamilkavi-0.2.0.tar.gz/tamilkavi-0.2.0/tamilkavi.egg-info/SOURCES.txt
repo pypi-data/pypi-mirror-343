@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+tamilkavi/__init__.py
+tamilkavi/tamilkavipy.py
+tamilkavi.egg-info/PKG-INFO
+tamilkavi.egg-info/SOURCES.txt
+tamilkavi.egg-info/dependency_links.txt
+tamilkavi.egg-info/entry_points.txt
+tamilkavi.egg-info/requires.txt
+tamilkavi.egg-info/top_level.txt
+tamilkavi/kavisrc/jothi.json
+tests/test_kavi.py
