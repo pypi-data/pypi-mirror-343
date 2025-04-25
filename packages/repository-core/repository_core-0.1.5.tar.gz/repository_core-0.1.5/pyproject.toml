@@ -1,0 +1,23 @@
+[project]
+name = "repository-core"
+version = "0.1.5"
+description = "Shared base repository and service utilities for SQLAlchemy-backed FastAPI apps."
+authors = [
+    {name = "riya0865", email = "riya.dev0865@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard] >=0.115.2,<0.116.0",
+    "sqlalchemy >=2.0.40,<3.0.0"
+]
+
+[tool.poetry]
+packages = [
+    { include = "repository_core" }
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
