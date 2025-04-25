@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: vigilensai
+Version: 0.1.0
+Summary: AI Safety & Monitoring Library
+Home-page: https://github.com/yourusername/VigiLensAI
+Author: Rohit Joshi
+Author-email: joshi.rohit@yahoo.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch >=2.0.0
+Requires-Dist: transformers >=4.30.0
+Requires-Dist: datasets >=2.12.0
+
+# VigiLensAI 🔍🛡️  
+*"See. Guard. Align."*  
+
+[![PyPI](https://img.shields.io/pypi/v/vigilensai)](https://pypi.org/project/vigilensai/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+**VigiLensAI** is a Python library for **AI safety, monitoring, and alignment**, designed for modern LLMs and AI agents.  
+
+
+
+## Quick Start  
+```bash
+pip install vigilensai
+```
