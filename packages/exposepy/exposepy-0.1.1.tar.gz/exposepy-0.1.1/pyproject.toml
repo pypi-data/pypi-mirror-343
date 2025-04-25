@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "exposepy"
+dynamic = ["version"]
+description = "Minimalist decorator for exposing public APIs"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [
+  { name="Daniel Estevez", email="kemossabee@gmail.com" }
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12"
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/exposepy"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/exposepy"]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "pytest>=8.1",
+]
+
+[tool.hatch.envs.default.scripts]
+test = "pytest tests"
+
