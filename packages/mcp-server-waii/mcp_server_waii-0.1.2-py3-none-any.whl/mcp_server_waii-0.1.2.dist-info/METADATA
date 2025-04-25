@@ -1,0 +1,164 @@
+Metadata-Version: 2.4
+Name: mcp-server-waii
+Version: 0.1.2
+Summary: An MCP server implementation for WAII database interactions
+Author-email: Swaraj Nayegandhi <swaraj.nayegandhi@waii.ai>
+License: Apache-2.0
+Project-URL: Documentation, https://github.com/waii-ai/waii-mcp-server#readme
+Project-URL: Repository, https://github.com/waii-ai/waii-mcp-server.git
+Keywords: mcp,waii,database,ai,nlp,sql
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Database
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=0.1.0
+Requires-Dist: waii-sdk-py>=1.29.2
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: pandas>=1.0.0
+Dynamic: license-file
+
+# WAII MCP Server
+
+A Model Context Protocol server that provides database interaction capabilities through WAII. This server enables Language Models to interact with databases, execute queries, and process database content through natural language.
+
+## Available Tools
+
+### database
+Interact with databases through WAII's natural language interface.
+
+**Arguments:**
+- `database-key` (string, required): Your database connection string
+- `api-key` (string, required): Your WAII API key
+- `url` (string, required): WAII API endpoint URL
+
+## Installation
+
+### Using uv/uvx (recommended)
+When using uv/uvx no specific installation is needed. You can directly run the server using either approach:
+
+Using `uv`:
+```bash
+uv run -m mcp_server_waii \
+  --url "YOUR_WAII_URL" \
+  --api-key "YOUR_API_KEY" \
+  --database-key "YOUR_DATABASE_CONNECTION_STRING"
+```
+
+### Using pip
+Alternatively, you can install mcp-server-waii via pip:
+
+```bash
+pip install mcp-server-waii
+```
+
+After installation, you can run it as a module:
+```bash
+python -m mcp_server_waii \
+  --url "YOUR_WAII_URL" \
+  --api-key "YOUR_API_KEY" \
+  --database-key "YOUR_DATABASE_CONNECTION_STRING"
+```
+
+## Requirements
+
+- Python 3.10 or higher
+- A WAII account with API access
+- Database credentials supported by WAII
+
+## Configuration
+
+### Configure for Claude.app
+
+There are several ways to configure the server for Claude:
+
+#### 1. Using uvx (Recommended)
+```json
+{
+    "mcpServers": {
+        "waii": {
+            "command": "uvx",
+            "args": [
+                "--directory",
+                "/path/to/waii-mcp-server",
+                "mcp_server_waii",
+                "--url",
+                "YOUR_WAII_URL",
+                "--api-key",
+                "YOUR_API_KEY",
+                "--database-key",
+                "YOUR_DATABASE_CONNECTION_STRING"
+            ]
+        }
+    }
+}
+```
+
+#### 2. Using Python installation
+```json
+{
+    "mcpServers": {
+        "waii": {
+            "command": "python",
+            "args": [
+                "-m",
+                "mcp_server_waii",
+                "--url",
+                "YOUR_WAII_URL",
+                "--api-key",
+                "YOUR_API_KEY",
+                "--database-key",
+                "YOUR_DATABASE_CONNECTION_STRING"
+            ]
+        }
+    }
+}
+```
+
+#### Example Values:
+- `YOUR_WAII_URL`: e.g., "http://<waii url>/api/"
+- `YOUR_API_KEY`: Your WAII API key
+- `YOUR_DATABASE_CONNECTION_STRING`: e.g., "snowflake://USER@HOST/DB?role=ROLE&warehouse=WAREHOUSE"
+
+## Features
+
+- Natural language to SQL conversion
+- Database schema understanding and management
+- Query execution and result formatting
+- Automatic query optimization suggestions
+- Data visualization capabilities
+
+## Development
+
+To set up the development environment:
+
+1. Clone the repository
+```bash
+git clone https://github.com/waii-ai/mcp-server-waii.git
+cd mcp-server-waii
+```
+
+2. Install in development mode:
+```bash
+uv pip install -e .
+```
+
+## Support
+
+For support:
+1. Check the [GitHub Issues](https://github.com/waii-ai/mcp-server-waii/issues)
+2. Contact WAII support for API-related questions
+3. Open a new issue if you find a bug
+
+## License
+
+Apache License 2.0 - see LICENSE file for details. 
