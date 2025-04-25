@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: ptl-si
+Version: 0.1.0
+Summary: PTL-SI: Statistical inference for high-dimensional regression after transfer learning
+Home-page: https://github.com/22520896/PTL_SI
+Author: Nguyen Vu Khai Tam, Cao Huyen My, Vo Nguyen Le Duy
+Author-email: 22521293@gm.uit.edu.vn, 22520896@gm.uit.edu.vn, duyvnl@uit.edu.vn
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PTL-SI: Post-Transfer Learning Statistical Inference in High-Dimensional Regression
+**PTL-SI** is a Python package designed for conducting valid statistical inference in high-dimensional regression (HDR) settings with transfer learning (TL). It implements selective inference methods to control the false positive rate (FPR) while maximizing the true positive rate (TPR) in feature selection after transfer learning.
+
+
+## Requirements & Installation
+This package has the following requirements:
+- [`numpy`](https://numpy.org/doc/stable/)
+- [`mpmath`](https://mpmath.org/)
+- [`skglm`](https://contrib.scikit-learn.org/skglm/)
+- [`scipy`](https://docs.scipy.org/doc/)
+- [`matplotlib`](https://matplotlib.org/)
+- [`statsmodels`](https://www.statsmodels.org/stable/index.html)
+
+
+This package can be installed using pip:
+```bash
+pip install ptl_si
+```
+
+We recommend to install or update anaconda to the latest version and use Python 3 (We used Python 3.11.4).
+
