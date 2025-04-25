@@ -1,0 +1,18 @@
+[project]
+name = "jasmit_firestarter"
+version = "0.1.2"
+description = "Tools used to start developing a new project."
+readme = "README.md"
+authors = [
+    { name = "jasmit", email = "js8335@swbell.net" }
+]
+requires-python = ">=3.12,<3.13"
+dependencies = []
+
+[project.scripts]
+firestarter = "firestarter:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
