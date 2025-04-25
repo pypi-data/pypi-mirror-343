@@ -1,0 +1,2 @@
+[console_scripts]
+prmb = src.cli:main
