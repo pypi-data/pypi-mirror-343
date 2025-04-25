@@ -1,0 +1,70 @@
+{% extends "pretixcontrol/base.html" %}
+{% load i18n %}
+{% load eventurl %}
+{% load urlreplace %}
+{% load money %}
+{% load bootstrap3 %}
+{% block title %}Fattura elettronica{% endblock %}
+{% block content %}
+    <h1>Fattura elettronica</h1>
+
+    <div>
+        <a class="btn btn-primary btn-lg" href="{% url 'plugins:pretix_fattura_elettronica:e-invoices-download-all' event=event organizer=organizer %}"
+            <span class="fa fa-download"></span>
+            Download all
+        </a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-condensed table-hover">
+            <thead>
+            <tr>
+                <th>Order code</th>
+                <th>Invoice number</th>
+                <th>Invoice date</th>
+                <th>XML</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for invoice in invoices %}
+                <tr>
+                    <td>
+                        <strong>
+                            <a href="{% url "control:event.order" event=invoice.order.event.slug organizer=invoice.order.event.organizer.slug code=invoice.order.code %}">
+                                {{ invoice.order.event.slug|upper }}-{{ invoice.order.code }}</a>
+                        </strong>
+                        {% if invoice.order.testmode %}
+                            <span class="label label-warning">{% trans "TEST MODE" %}</span>
+                        {% endif %}
+                        {% if invoice.order.custom_followup_due %}
+                            <span class="label label-danger">{% blocktrans trimmed with date=invoice.order.custom_followup_at|date:"SHORT_DATE_FORMAT" context "followup" %}TODO {{ date }}{% endblocktrans %}</span>
+                        {% elif invoice.order.custom_followup_at %}
+                            <span class="label label-default">{% blocktrans trimmed with date=invoice.order.custom_followup_at|date:"SHORT_DATE_FORMAT" context "followup" %}TODO {{ date }}{% endblocktrans %}</span>
+                        {% endif %}
+                    </td>
+                    <td>{{ invoice.full_invoice_no }}</td>
+                    <td>
+                        {% if invoice.date %}
+                            {{ invoice.date|date:"SHORT_DATE_FORMAT" }}
+                        {% else %}
+                            -
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="{% url 'plugins:pretix_fattura_elettronica:download-invoice' event=invoice.order.event.slug organizer=invoice.order.event.organizer.slug code=invoice.order.code invoice=invoice.pk %}">
+                            Get XML
+                        </a>
+                    </td>
+
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="6" class="text-center"><em>
+                        We couldn't find any invoice that you have access to and that match your search query.
+                    </em></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

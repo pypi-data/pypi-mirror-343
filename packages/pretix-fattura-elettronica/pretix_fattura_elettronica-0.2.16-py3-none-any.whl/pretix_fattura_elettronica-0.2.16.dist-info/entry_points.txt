@@ -1,0 +1,10 @@
+[console_scripts]
+
+[distutils.commands]
+build = pretix_plugin_build.build:CustomBuild
+
+[gui_scripts]
+
+[pretix.plugin]
+pretix_fattura_elettronica = pretix_fattura_elettronica:PretixPluginMeta
+
