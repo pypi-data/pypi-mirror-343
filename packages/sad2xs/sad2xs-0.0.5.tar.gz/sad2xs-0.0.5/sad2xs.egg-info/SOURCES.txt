@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+sad2xs/__init__.py
+sad2xs/expressions.py
+sad2xs/main.py
+sad2xs.egg-info/PKG-INFO
+sad2xs.egg-info/SOURCES.txt
+sad2xs.egg-info/dependency_links.txt
+sad2xs.egg-info/requires.txt
+sad2xs.egg-info/top_level.txt
+tests/test_ghc_24_3.py
+tests/test_ghc_collimation.py
