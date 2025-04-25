@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+lognotify/__init__.py
+lognotify/log_message.py
+lognotify.egg-info/PKG-INFO
+lognotify.egg-info/SOURCES.txt
+lognotify.egg-info/dependency_links.txt
+lognotify.egg-info/requires.txt
+lognotify.egg-info/top_level.txt
