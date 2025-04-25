@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+apollo_pydantic/__init__.py
+apollo_pydantic/client.py
+apollo_pydantic/core.py
+apollo_pydantic/logger.py
+apollo_pydantic.egg-info/PKG-INFO
+apollo_pydantic.egg-info/SOURCES.txt
+apollo_pydantic.egg-info/dependency_links.txt
+apollo_pydantic.egg-info/requires.txt
+apollo_pydantic.egg-info/top_level.txt
