@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+vigilensai.egg-info/PKG-INFO
+vigilensai.egg-info/SOURCES.txt
+vigilensai.egg-info/dependency_links.txt
+vigilensai.egg-info/requires.txt
+vigilensai.egg-info/top_level.txt
