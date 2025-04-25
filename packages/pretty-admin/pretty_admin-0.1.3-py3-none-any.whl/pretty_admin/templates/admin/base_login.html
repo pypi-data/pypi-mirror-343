@@ -1,0 +1,61 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr,auto' }}">
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static "admin/css/base.css" %}">
+  <link rel="stylesheet" href="{% static "admin/css/login.css" %}">
+  <script src="{% static 'pretty_admin/css/tailwind.js' %}"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block extrahead %}{% endblock %}
+</head>
+<body class="login-page bg-white dark:bg-[#1E1E1E] transition duration-300  min-h-screen flex items-center justify-center  ">
+
+  <main class="w-full max-w-md  ">
+    {% block content %}{% endblock %}
+  </main>
+
+  {% block extrabody %}{% endblock %}
+</body>
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const html = document.documentElement;
+      const toggleBtn = document.getElementById("theme-toggle");
+  
+      // Restore saved theme
+      if (localStorage.getItem("theme") === "dark") {
+        html.classList.add("dark");
+      }
+  
+      toggleBtn?.addEventListener("click", () => {
+        const isDark = html.classList.contains("dark");
+  
+        if (isDark) {
+          html.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+        } else {
+          html.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        }
+  
+        // Force reflow (sometimes needed with Tailwind CDN)
+        html.style.display = "none";
+        requestAnimationFrame(() => {
+          html.style.display = "";
+        });
+      });
+    });
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
+</html>
