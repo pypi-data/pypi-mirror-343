@@ -1,0 +1,50 @@
+[project]
+name = "iniabu"
+version = "1.2.1"
+description = "Read solar system abundances and automatically calculate various metrics, e.g., delta-values, dex, etc."
+authors = [
+    { name = "Reto Trappitsch", email = "reto@galactic-forensics.space" }
+]
+dependencies = [
+    "numpy>=2.0",
+]
+readme = "README.rst"
+requires-python = ">= 3.9"
+license = { text = "GPLv2" }
+
+[project.urls]
+Source = "https://github.com/galactic-forensics/iniabu"
+Documentation = "https://iniabu.readthedocs.io"
+
+[project.optional-dependencies]
+doc = [
+    "sphinx<8.0",
+    "sphinx-rtd-theme>=2.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+managed = true
+dev-dependencies = [
+    "pytest>=8.3.2",
+    "pytest-mock>=3.14.0",
+    "pytest-cov>=5.0.0",
+    "hypothesis>=6.111.2",
+    "xdoctest>=1.2.0",
+    "pygments>=2.18.0",
+    "ruff>=0.11.7",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/iniabu"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--cov=iniabu -v"
+testpaths = "tests"
