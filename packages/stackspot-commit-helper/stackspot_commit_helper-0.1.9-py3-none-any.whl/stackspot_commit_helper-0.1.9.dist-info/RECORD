@@ -1,0 +1,14 @@
+stackspot_commit/__init__.py,sha256=hHkQbuWWZ8MPwStmjaiZAfAM0bvSRk_Si4xe4I8NreA,393
+stackspot_commit/cli.py,sha256=Q5QPf4_6EJsLm8VXkQ6pmvDI22oCm6V6_N7ViZ-JOlk,744
+stackspot_commit/commit_generator.py,sha256=DbQPXLScCTx2o214icZGEhDS4FjuzpAS1c3yRKrmihc,1803
+stackspot_commit/commit_tool.py,sha256=7JVAj_S4WFszjAp7oDwKCAkGWSj-HsanrByIaEqgRfA,1818
+stackspot_commit/config.py,sha256=tooVBOs2p2YzM0thhTpe61Iww3-DDtqE5qiYqrucIcg,420
+stackspot_commit/git_handler.py,sha256=lAMrGXs0m6B8NtoEi4CkbmTBeVQTV06SnMynLRI5aMI,3322
+stackspot_commit/models.py,sha256=5_Nol6cUujVA27wkCfGfm_rI6UaMwV40r9tRcgH-MPE,180
+stackspot_commit/stackspot_service.py,sha256=Ug9dpsE0aQ6tuZ3hDGUI1zcj6KcNxq9ZHuYcUtRBnm0,2365
+stackspot_commit_helper-0.1.9.dist-info/licenses/LICENSE,sha256=ZVNjaDks_OHTqB6YKErUOj6rvkmoGQ17_n08ZlfTcRs,1072
+stackspot_commit_helper-0.1.9.dist-info/METADATA,sha256=epPCLAH2Elo_fEXUItYsJT-l4rFEDwXnOPBuN5Llt_8,3376
+stackspot_commit_helper-0.1.9.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+stackspot_commit_helper-0.1.9.dist-info/entry_points.txt,sha256=kkOK9nRxnDhVOo3X2PqwGEy_S2GTq9afZz-bWfTTIGk,54
+stackspot_commit_helper-0.1.9.dist-info/top_level.txt,sha256=ClnTyoE2JteYlRzMZnQ8uvspdcjh7YoHdYOEec_8z0c,17
+stackspot_commit_helper-0.1.9.dist-info/RECORD,,
