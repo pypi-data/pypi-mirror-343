@@ -1,0 +1,2 @@
+[console_scripts]
+text-to-kg = cleverswarm.text_to_kg:main
