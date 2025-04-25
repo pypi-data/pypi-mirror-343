@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openmas"
+version = "0.0.1"
+description = "Placeholder for the openmas project"
+authors = [
+    {name = "Wilson Urdaneta", email = "wilson.urdaneta@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+
+[project.urls]
+Repository = "https://github.com/wilson-urdaneta/openmas" 
