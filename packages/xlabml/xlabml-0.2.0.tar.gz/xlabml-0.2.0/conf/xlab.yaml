@@ -1,0 +1,78 @@
+trainer:
+  accelerator: auto
+  strategy: auto
+  devices: auto
+  num_nodes: 1
+  precision: bf16-mixed
+  max_epochs: 20
+  val_check_interval: 0.2
+  accumulate_grad_batches: 1
+  gradient_clip_val: 1.0
+  gradient_clip_algorithm: norm
+
+model:
+  max_len: 512
+  d_model: 512
+  position: xlabml.transformers.PositionalEncoding
+  n_layers: 6
+  n_heads: 8
+  d_ff: 2048
+  dropout: 0.1
+  prenorm: true
+  postnorm: true
+  norm: torch.nn.LayerNorm
+  attention: xlabml.transformers.FlashMultiHeadSelfAttention
+  activation: torch.nn.GELU
+  pos_drop: false
+  block_drop: false
+  attn_drop: true
+  ff_drop: true
+
+data:
+  locations:
+    - path: wikimedia/wikipedia
+      name: 20231101.en
+      split: null
+      trust_remote_code: true
+      column: text
+      prune: false
+  splits:
+    train: 0.9
+    val: 0.05
+    test: 0.025
+    predict: 0  # use remainder
+  num_tokens: 32768
+  tokenizer_url: https://github.com/vsemionov/xlab/releases/download/v0.2.0/xlab-32k-99995.tok
+  tokenizer_path: tokenizers/xlab-32k-99995.tok
+  tokenizer_train_args:
+    character_coverage: 0.99995
+    input_sentence_size: 0
+    num_threads: 4
+    max_sentence_length: 1073741824
+  dynamic_encode: false
+  dataset_class: xlabml.datasets.IndexedSequenceDataset
+  concatenate: false
+  pad_incomplete: true
+  train_sos: false
+  num_proc: 4
+  progress: tqdm
+  step_size: 1.0
+  batch_size: 256
+  pin_memory: true
+  num_workers: 4
+  persistent_workers: true
+
+optimizer:
+  class_path: AdamW
+  init_args:
+    lr: 3e-4
+    weight_decay: 0.1
+
+lr_scheduler:
+  class_path: XLabCosineWarmupLR
+  init_args:
+    total_iters: !!float .inf
+    warmup_iters: 10_000
+    config:
+      interval: step
+      frequency: 1

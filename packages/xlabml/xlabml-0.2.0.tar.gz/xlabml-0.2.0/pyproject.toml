@@ -1,0 +1,41 @@
+[build-system]
+requires = ["flit_core >=3.11,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "xlabml"
+authors = [{name = "Victor Semionov", email = "vsemionov@gmail.com"}]
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dynamic = ["version", "description"]
+requires-python = ">=3.10"
+dependencies = [
+    "boltons",
+    "click",
+    "datasets",
+    "jsonargparse[signatures]",
+    "lightning",
+    "numpy",
+    "omegaconf",
+    "python-dotenv",
+    "requests",
+    "rich",
+    "s3fs",
+    "sentencepiece",
+    "tensorboard",
+    "torch",
+    "torchdata",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+dev = [
+    "flit",
+]
+
+[project.urls]
+Home = "https://github.com/vsemionov/xlab"
+
+[tool.flit.module]
+name = "xlabml"
