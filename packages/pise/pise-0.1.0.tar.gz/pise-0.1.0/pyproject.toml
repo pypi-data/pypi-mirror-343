@@ -1,0 +1,27 @@
+[project]
+name = "pise"
+version = "0.1.0"
+description = "Python-based Infrastructure for Structural and Electronic analysis."
+authors = [
+    {name = "Teruya Nagafuji"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "vise (>=0.9.1,<0.10.0)",
+    "pydefect (>=0.9.6,<0.10.0)",
+    "pymatgen (>=2025.4.24,<2026.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+pise = "pise.cli.main:main"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.14"
+
