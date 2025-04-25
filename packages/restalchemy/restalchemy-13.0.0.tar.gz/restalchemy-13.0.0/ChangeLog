@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+13.0.0
+------
+
+* PG pool: appropriate connection close + fix conn leaks
