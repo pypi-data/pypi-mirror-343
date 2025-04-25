@@ -1,0 +1,23 @@
+[project]
+name = "holyblue-weather-test-mcp"
+version = "0.1.0"
+description = "MCP Test Program01 by holyblue"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+]
+
+license = "MIT"
+authors = [
+  { name = "holyblue", email = "dev.holyblue@gmail.com" }
+]
+
+[project.scripts]
+holyblue-weather-test-mcp = "weather_test_mcp.main:main"
+
+[dependency-groups]
+dev = [
+    "build>=1.2.2.post1",
+    "twine>=6.1.0",
+]
