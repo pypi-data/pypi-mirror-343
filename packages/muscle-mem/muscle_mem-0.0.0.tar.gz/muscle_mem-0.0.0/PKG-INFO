@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: muscle-mem
+Version: 0.0.0
+Summary: muscle memory
+Author-email: Erik Dunteman <erikdunteman@gmail.com>
+Requires-Python: >=3.7
+Provides-Extra: dev
+Requires-Dist: build; extra == 'dev'
+Requires-Dist: ruff>=0.3.0; extra == 'dev'
+Requires-Dist: twine; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# Muscle Memory
+
+SDK for Muscle Memory
