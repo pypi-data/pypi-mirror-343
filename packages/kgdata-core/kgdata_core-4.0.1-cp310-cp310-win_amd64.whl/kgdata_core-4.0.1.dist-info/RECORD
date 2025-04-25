@@ -1,0 +1,10 @@
+kgdata_core-4.0.1.dist-info/METADATA,sha256=XaIIwtq-75VOTBllvds4stK1df7r1S7N3QxfppDPeCg,1707
+kgdata_core-4.0.1.dist-info/WHEEL,sha256=77DqkvxB4HqZitBRK_M49NRS207JKb0MotMEjnxEWQ8,96
+kgdata_core-4.0.1.dist-info/licenses/LICENSE,sha256=z1Rb8ERSi5PhF2WufD2q-pSETCgHtkct7v24LKcZ6CM,1085
+kgdata_core/base.pyi,sha256=lPCgzkdGNu-LM6tBe84Xd-wBEeqLuna6BJXtltEVuUw,1429
+kgdata_core/models.pyi,sha256=D9l746ADex2_JQex_lJw9RFDkzmLzVzxgKGVCOuS2Gw,6261
+kgdata_core/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kgdata_core/__init__.py,sha256=XaM8NZ5QuGegEAEkUv287EK7HjVqiTJsnZaXZSlQ4BY,53
+kgdata_core/__init__.pyi,sha256=1qYpTZzIFdnJ75KvAUYD_uZTAiPJUYPfTYJ45VN4Ix8,28
+kgdata_core/kgdata_core.cp310-win_amd64.pyd,sha256=yMbnrkPHabH-26Ntg4rwi9bNGxwiELIBZZFPii3-2cs,5646336
+kgdata_core-4.0.1.dist-info/RECORD,,
