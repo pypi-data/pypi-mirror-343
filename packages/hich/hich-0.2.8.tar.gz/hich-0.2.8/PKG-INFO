@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: hich
+Version: 0.2.8
+Summary: CLI tools for Hi-C data processing
+License: MIT
+Author: Ben Skubi
+Author-email: skubi@ohsu.edu
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

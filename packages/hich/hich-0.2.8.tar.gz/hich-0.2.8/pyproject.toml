@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "hich"
+version = "0.2.8"
+description = "CLI tools for Hi-C data processing"
+authors = ["Ben Skubi <skubi@ohsu.edu>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.scripts]
+hich = "hich.__main__:hich"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
