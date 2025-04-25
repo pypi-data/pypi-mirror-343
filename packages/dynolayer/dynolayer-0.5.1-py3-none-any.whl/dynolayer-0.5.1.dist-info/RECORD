@@ -1,0 +1,9 @@
+dynolayer/__init__.py,sha256=dQGurCFZJcQ8dwfufnW-EjMd4kHrSzNsNwmJtLJDZMs,33
+dynolayer/crud_mixin.py,sha256=Czd84rMPMRyULjXIukEmA2rzDTROwHwJ81F65YCRArY,3665
+dynolayer/dynolayer.py,sha256=npDLyQxp-fH9gp6FgzuaNe5zC8J_2_x-QhSbXvYz8fs,7177
+dynolayer/utils.py,sha256=0ZDrOWZdAwba7aHOelc6UIPNLIsJAjXXRocCZcTZo4w,3463
+dynolayer-0.5.1.dist-info/licenses/LICENSE.txt,sha256=GpSAfkrKJobhCu6iMsliYJ8z5wtm8bkwd4aQnYcQMT0,1074
+dynolayer-0.5.1.dist-info/METADATA,sha256=do-LV1363ny_zmdThtTSNieeCiDNGCmWtwXV9J8AU-s,1341
+dynolayer-0.5.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+dynolayer-0.5.1.dist-info/top_level.txt,sha256=GyfmVDyIWcOPH_-pxlXYewudvkCgIzQprd_9i1HB2WY,10
+dynolayer-0.5.1.dist-info/RECORD,,
