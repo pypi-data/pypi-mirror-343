@@ -1,0 +1,7 @@
+README.md
+setup.py
+Kuat/__init__.py
+fariz.egg-info/PKG-INFO
+fariz.egg-info/SOURCES.txt
+fariz.egg-info/dependency_links.txt
+fariz.egg-info/top_level.txt
