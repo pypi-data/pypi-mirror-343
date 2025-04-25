@@ -1,0 +1,11 @@
+prefix=/tmp/tmpwd14aixs/wheel/platlib/arbor
+exec_prefix=/tmp/tmpwd14aixs/wheel/platlib/arbor
+libdir=${exec_prefix}/lib64
+includedir=${prefix}/include
+
+Name: fmt
+Description: A modern formatting library
+Version: 10.0.0
+Libs: -L${libdir} -lfmt
+Cflags: -I${includedir}
+
