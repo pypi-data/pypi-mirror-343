@@ -1,0 +1,16 @@
+pdstemplate/__init__.py,sha256=8PKeyr7qumxyntS2bVo4irdwNW_nx6trhDGBf1iVxC4,56899
+pdstemplate/_pdsblock.py,sha256=h8x_nTyk1h3KhN_Ml27B0ZYMvEibb3XtYJg7Ll-YODY,40077
+pdstemplate/_version.py,sha256=wdFcRBeaWRZXknL-E8RTk9hV9M-OMto6dfJ90sc1i9A,511
+pdstemplate/asciitable.py,sha256=OiWrOqAf5WTTwnRubQSHb6btTeUjWuKAxOhIZ-TEons,25758
+pdstemplate/pds3_syntax_checker.py,sha256=WIxTn-M1evxeSrH1VEkxh8cJqHsazHZz6LhSD04ITNY,1738
+pdstemplate/pds3table.py,sha256=p7K-Y0nbTGKSZ8ywqYb6PNQUWX2fGPKmauwwi5uGroU,73828
+pdstemplate/utils.py,sha256=mFkkXJYuUqBIsNSTWPYBjaG-5Vlh-sg35Few5XilY2c,6402
+programs/__init__.py,sha256=hezHE92ecn7O7Q1odenQ1qJnjXexxPZqwfOzdZv3iRo,205
+programs/quicklabel.py,sha256=NjjLE4ZFsgsBlLDGZ3FPrPzmQB2AnTk21sC4FHlMOCQ,2527
+programs/tablelabel.py,sha256=MLvGRgPE2bCzxJmCZr1K7QRUJdyypo_k63F4sBdDhCM,9570
+rms_pdstemplate-2.2.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+rms_pdstemplate-2.2.0.dist-info/METADATA,sha256=b9TVNr7irKHZm_JInjDcm_ivjIFOx78OwfV92dSrEmE,45633
+rms_pdstemplate-2.2.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+rms_pdstemplate-2.2.0.dist-info/entry_points.txt,sha256=wXf4z_pOpL169GeNytWQiBDPkXe9b_iWqcV9g_f8P58,56
+rms_pdstemplate-2.2.0.dist-info/top_level.txt,sha256=_5Wt6X053rvP7dYk9oVpBoD0oSc7cIolJQmp3B2y4eE,21
+rms_pdstemplate-2.2.0.dist-info/RECORD,,
