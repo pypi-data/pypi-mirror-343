@@ -1,0 +1,333 @@
+Metadata-Version: 2.4
+Name: gibgram
+Version: 0.1.3
+Summary: GibGram: A powerful tool for downloading media from Telegram
+Home-page: https://github.com/mosaddiX/gibgram
+Author: Hazrat Mosaddique Ali
+Author-email: mosaddiqx@gmail.com
+Project-URL: Bug Reports, https://github.com/mosaddiX/gibgram/issues
+Project-URL: Source, https://github.com/mosaddiX/gibgram
+Project-URL: Documentation, https://mosaddix.github.io/gibgram/
+Keywords: gibgram,telegram,media,download,cli,bot
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: telethon<2.0.0,>=1.28.0
+Requires-Dist: cryptg<1.0.0,>=0.4.0
+Requires-Dist: rich<14.0.0,>=13.0.0
+Requires-Dist: python-dotenv<2.0.0,>=1.0.0
+Requires-Dist: pillow<11.0.0,>=10.0.0
+Requires-Dist: aiohttp<4.0.0,>=3.8.0
+Requires-Dist: aiofiles<24.0.0,>=23.0.0
+Provides-Extra: dev
+Requires-Dist: pytest<8.0.0,>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio<0.22.0,>=0.21.0; extra == "dev"
+Requires-Dist: black<24.0.0,>=23.0.0; extra == "dev"
+Requires-Dist: isort<6.0.0,>=5.12.0; extra == "dev"
+Requires-Dist: flake8<7.0.0,>=6.0.0; extra == "dev"
+Requires-Dist: mypy<2.0.0,>=1.0.0; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# GibGram
+
+A powerful, feature-rich Telegram media grabber that can download all types of media from conversations, including self-destructing images.
+
+📚 **[View the Complete Documentation](https://mosaddix.github.io/gibgram/)** - Comprehensive user guides, tutorials, and reference materials
+
+## Features
+
+- **Simple**: Clean, minimal interface with both CLI and interactive modes
+- **Powerful**: Downloads all types of media, including self-destructing images
+- **Fast**: Parallel downloads and optimized for speed and efficiency
+- **Elegant**: Beautiful terminal interface with progress bars and rich formatting
+- **Modular**: Well-organized code structure for easy maintenance
+- **Flexible**: Extensive filtering options for media selection
+- **Efficient**: Media deduplication to avoid downloading the same file twice
+- **Automated**: Scheduled downloads for regular media collection
+- **Customizable**: Various organization options for downloaded media
+
+## Installation
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Telegram API credentials (API ID and API Hash)
+
+### Installation Methods
+
+```bash
+# Install from source (recommended for latest features)
+git clone https://github.com/mosaddiX/gibgram.git
+cd gibgram
+pip install -e .
+
+# Or install with pip
+pip install gibgram
+
+# Or install with uv (faster installation)
+uv pip install gibgram
+```
+
+### Setting Up Credentials
+
+Create a `.env` file in your working directory with your Telegram API credentials:
+
+```
+API_ID=your_api_id
+API_HASH=your_api_hash
+PHONE=your_phone_number
+```
+
+You can get these credentials from [my.telegram.org/apps](https://my.telegram.org/apps).
+
+## Usage
+
+TGrab offers both a command-line interface and an interactive mode.
+
+### Basic Usage
+
+```bash
+# Download media from a user
+gibgram --user username
+
+# Use interactive mode
+gibgram --interactive
+
+# Run scheduled downloads
+gibgram --schedule
+```
+
+### Advanced Options
+
+```bash
+# Download with filtering options
+gibgram --user username --limit 200 --output ./images --from-date 2023-01-01 --to-date 2023-12-31 --media-types photo,video
+
+# Download with parallel processing
+gibgram --user username --parallel 4
+
+# Download with deduplication
+gibgram --user username --dedup --dedup-method hash
+
+# Download with organization
+gibgram --user username --organize-by date --save-metadata
+```
+
+### Scheduled Downloads
+
+```bash
+# Add a scheduled task
+gibgram --schedule-add --schedule-name "Daily Download" --schedule-interval 24h --user username
+
+# List scheduled tasks
+gibgram --schedule-list
+
+# Remove a scheduled task
+gibgram --schedule-remove 1
+
+# Run the scheduler
+gibgram --schedule
+```
+
+## Command Line Options
+
+### General Options
+
+| Option | Description |
+|--------|-------------|
+| `-u, --user` | Username or user ID to download media from |
+| `-l, --limit` | Maximum number of messages to check (default: 100) |
+| `-o, --output` | Output directory for downloaded media (default: downloads) |
+| `--session` | Session name for Telegram authentication (default: tgrab) |
+| `--env-file` | Path to .env file with API credentials (default: .env) |
+| `--use-session-string` | Use session string instead of session file |
+| `--interval` | Interval between requests in seconds (default: 30) |
+
+### Media Filtering Options
+
+| Option | Description |
+|--------|-------------|
+| `--media-types` | Types of media to download (photo, video, document, audio) |
+| `--from-date` | Start date for filtering messages (YYYY-MM-DD) |
+| `--to-date` | End date for filtering messages (YYYY-MM-DD) |
+| `--min-size` | Minimum file size (e.g., 100KB, 1MB) |
+| `--max-size` | Maximum file size (e.g., 10MB, 1GB) |
+| `--min-width` | Minimum width for images/videos in pixels |
+| `--min-height` | Minimum height for images/videos in pixels |
+| `--min-duration` | Minimum duration for videos/audio (e.g., 10s, 1m) |
+| `--max-duration` | Maximum duration for videos/audio (e.g., 5m, 1h) |
+| `--has-caption` | Only download media with captions |
+| `--caption-contains` | Only download media with captions containing text |
+
+### Organization Options
+
+| Option | Description |
+|--------|-------------|
+| `--organize-by` | Organization method (none, date, chat, type) |
+| `--filename-template` | Template for filenames |
+| `--save-metadata` | Save metadata for downloaded files |
+
+### Performance Options
+
+| Option | Description |
+|--------|-------------|
+| `--parallel` | Number of parallel downloads (default: 1) |
+| `--chunk-size` | Download chunk size in KB (default: 128) |
+
+### Deduplication Options
+
+| Option | Description |
+|--------|-------------|
+| `--dedup` | Enable deduplication |
+| `--dedup-method` | Deduplication method (hash, filename, size, all) |
+| `--dedup-across-users` | Apply deduplication across all users |
+
+### Interactive Mode Options
+
+| Option | Description |
+|--------|-------------|
+| `--interactive` | Run in interactive mode |
+| `--preview-count` | Number of media items to preview (default: 5) |
+
+### Scheduled Downloads Options
+
+| Option | Description |
+|--------|-------------|
+| `--schedule` | Run in scheduled mode |
+| `--schedule-add` | Add a new scheduled task |
+| `--schedule-list` | List all scheduled tasks |
+| `--schedule-remove` | Remove a scheduled task by ID |
+| `--schedule-interval` | Interval for scheduled downloads (e.g., 1h, 30m, 1d) |
+| `--schedule-name` | Name for the scheduled task |
+
+## How It Works
+
+TGrab connects to the Telegram API using your credentials and downloads media from conversations. It can capture all types of media, including self-destructing images, by accessing them directly through the API before they expire.
+
+### Key Components
+
+1. **Authentication**: TGrab uses your Telegram API credentials to authenticate with the Telegram servers.
+2. **Media Retrieval**: It fetches messages from specified users or chats and identifies media content.
+3. **Filtering**: Media is filtered based on your criteria (type, size, dimensions, date, etc.).
+4. **Deduplication**: Optional deduplication prevents downloading the same file multiple times.
+5. **Parallel Downloads**: Multiple files can be downloaded simultaneously for better performance.
+6. **Organization**: Downloaded files can be organized by date, chat, or media type.
+7. **Scheduling**: Tasks can be scheduled to run at regular intervals.
+
+### Interactive Mode
+
+The interactive mode provides a user-friendly terminal interface for:
+- Browsing chats
+- Searching for media
+- Configuring settings
+- Managing scheduled tasks
+- Previewing and selecting media to download
+
+### Scheduled Downloads
+
+The scheduler allows you to:
+- Set up recurring download tasks
+- Specify intervals (minutes, hours, days)
+- Configure different download parameters for each task
+- Run tasks in the background
+
+## Feature Details
+
+### Media Filtering
+
+Filter media based on:
+- Media type (photos, videos, documents, audio)
+- Date range
+- File size
+- Dimensions (for images and videos)
+- Duration (for videos and audio)
+- Caption content
+
+### Media Deduplication
+
+Avoid downloading duplicate files using:
+- File hash comparison
+- Filename comparison
+- File size comparison
+- Or a combination of all methods
+
+### Parallel Downloads
+
+Improve download speed by:
+- Downloading multiple files simultaneously
+- Configuring the number of parallel downloads
+- Setting chunk size for large files
+
+### Organization Options
+
+Organize downloaded media by:
+- Date (year/month/day folders)
+- Chat (one folder per chat)
+- Media type (photos, videos, etc.)
+- Custom filename templates
+
+## Documentation
+
+Comprehensive documentation is available at **[https://mosaddix.github.io/gibgram/](https://mosaddix.github.io/gibgram/)**
+
+The documentation includes:
+
+- **[Getting Started Guide](https://mosaddix.github.io/gibgram/getting-started.html)** - Installation and setup instructions
+- **[Basic Usage Guide](https://mosaddix.github.io/gibgram/basic-usage.html)** - Essential commands and options
+- **[Interactive Mode Guide](https://mosaddix.github.io/gibgram/interactive-mode.html)** - Using the user-friendly interface
+- **[Media Filtering Guide](https://mosaddix.github.io/gibgram/media-filtering.html)** - Finding specific media
+- **[Organization Options](https://mosaddix.github.io/gibgram/organization-options.html)** - Keeping downloads organized
+- **[Performance Features](https://mosaddix.github.io/gibgram/performance-features.html)** - Speeding up downloads
+- **[Scheduled Downloads](https://mosaddix.github.io/gibgram/scheduled-downloads.html)** - Automating media collection
+- **[Troubleshooting Guide](https://mosaddix.github.io/gibgram/troubleshooting.html)** - Solving common issues
+- **[Command Reference](https://mosaddix.github.io/gibgram/command-reference.html)** - Complete list of commands and options
+- **[Quick Start Guide](https://mosaddix.github.io/gibgram/quick-start.html)** - Get up and running quickly
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+MIT License
+
+Copyright (c) 2024 Hazrat Mosaddique Ali
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
