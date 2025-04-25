@@ -1,0 +1,7 @@
+pyproject.toml
+src/pyregister2/__init__.py
+src/pyregister2/pyregister.py
+src/pyregister2.egg-info/PKG-INFO
+src/pyregister2.egg-info/SOURCES.txt
+src/pyregister2.egg-info/dependency_links.txt
+src/pyregister2.egg-info/top_level.txt
