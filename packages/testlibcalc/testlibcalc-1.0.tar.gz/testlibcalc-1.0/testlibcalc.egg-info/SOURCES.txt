@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+testlibcalc/__init__.py
+testlibcalc/testlibcalc.py
+testlibcalc.egg-info/PKG-INFO
+testlibcalc.egg-info/SOURCES.txt
+testlibcalc.egg-info/dependency_links.txt
+testlibcalc.egg-info/top_level.txt
