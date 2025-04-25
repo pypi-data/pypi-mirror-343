@@ -1,0 +1,6 @@
+README.md
+setup.py
+bytedtrace_mcp.egg-info/PKG-INFO
+bytedtrace_mcp.egg-info/SOURCES.txt
+bytedtrace_mcp.egg-info/dependency_links.txt
+bytedtrace_mcp.egg-info/top_level.txt
