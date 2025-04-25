@@ -1,0 +1,7 @@
+rdkit
+tqdm
+numpy
+importlib_resources
+requests
+pandas
+skunk
