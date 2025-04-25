@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-deploy"
+version = "0.1.0"
+description = "MCP Deploy Server"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "David", email = "guowei1461@gmail.com" }]
+keywords = ["mcp", "deploy"]
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic", 
+    "httpx",
+    "mcp",
+    "requests"
+]
+
+[project.scripts]
+mcp-deploy = "mcp_deploy:main"
+
+[tool.uv]
+dev-dependencies = ["pyright>=1.1.389", "ruff>=0.7.3"]
