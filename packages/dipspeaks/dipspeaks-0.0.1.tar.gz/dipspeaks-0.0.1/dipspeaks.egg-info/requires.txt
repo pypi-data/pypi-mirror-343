@@ -1,0 +1,9 @@
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+tensorflow
+scikit-learn
+ipython>=8
+numpy>=1.24
