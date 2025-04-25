@@ -1,0 +1,2 @@
+include mingaleg_lib/secrets/encrypted/*.bin
+include mingaleg_lib/secrets/public_keyring/*.pem
