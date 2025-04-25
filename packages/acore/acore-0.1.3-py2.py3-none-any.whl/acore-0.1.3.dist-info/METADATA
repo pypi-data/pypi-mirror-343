@@ -1,0 +1,133 @@
+Metadata-Version: 2.4
+Name: acore
+Version: 0.1.3
+Summary: A Python package with statistical functions to analyse multimodal molecular data
+Author-email: Alberto Santos Delgado <albsad@dtu.dk>, Henry Webel <heweb@dtu.dk>
+License: GNU General Public License v3
+Project-URL: Homepage, https://github.com/Multiomics-Analytics-Group/acore
+Project-URL: Issues, https://github.com/Multiomics-Analytics-Group/acore/issues
+Project-URL: Documentation, https://analytics-core.readthedocs.io/
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: dsp-pandas
+Requires-Dist: vuecore
+Requires-Dist: scipy
+Requires-Dist: scikit-learn>=1.2
+Requires-Dist: networkx
+Requires-Dist: biopython
+Requires-Dist: combat
+Requires-Dist: gseapy!=1.1.5
+Requires-Dist: kmapper
+Requires-Dist: lifelines
+Requires-Dist: pingouin
+Requires-Dist: python-louvain
+Requires-Dist: PyWGCNA!=2.2.0
+Requires-Dist: snfpy
+Requires-Dist: umap-learn
+Requires-Dist: statsmodels
+Requires-Dist: inmoose
+Requires-Dist: requests
+Requires-Dist: rarfile
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-book-theme; extra == "docs"
+Requires-Dist: myst-nb; extra == "docs"
+Requires-Dist: ipywidgets; extra == "docs"
+Requires-Dist: sphinx-new-tab-link!=0.2.2; extra == "docs"
+Requires-Dist: jupytext; extra == "docs"
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: wheel; extra == "dev"
+Requires-Dist: jupytext; extra == "dev"
+Requires-Dist: ipykernel; extra == "dev"
+Dynamic: license-file
+
+==============
+Analytics Core
+==============
+
+
+.. start-badges
+
+.. list-table::
+    :stub-columns: 1
+
+    * - docs
+      - |docs|
+    * - tests
+      - | |Pylint|
+    * - package
+      - | |version| |wheel| |supported-versions| |supported-implementations|
+      
+.. |docs| image:: https://readthedocs.org/projects/acore/badge/?style=flat
+    :target: https://analytics-core.readthedocs.io/
+    :alt: Documentation Status
+
+.. |Pylint| image:: https://github.com/Multiomics-Analytics-Group/acore/actions/workflows/tox-gha.yml/badge.svg
+    :alt: GitHub Actions Tox Status
+    :target: https://github.com/Multiomics-Analytics-Group/acore/actions/workflows/tox.yml
+
+.. |version| image:: https://img.shields.io/pypi/v/acore.svg
+    :alt: PyPI Package latest release
+    :target: https://pypi.org/project/acore
+
+.. |wheel| image:: https://img.shields.io/pypi/wheel/acore.svg
+    :alt: PyPI Wheel
+    :target: https://pypi.org/project/acore
+
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/acore.svg
+    :alt: Supported versions
+    :target: https://pypi.org/project/acore
+
+.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/acore.svg
+    :alt: Supported implementations
+    :target: https://pypi.org/project/acore
+
+.. end-badges
+
+
+
+
+A Python package with statistical functions to analyse multimodal molecular data
+
+
+* Free software: GNU General Public License v3
+* Documentation: https://analytics-core.readthedocs.io.
+
+
+PyPI Installation
+=================
+
+::
+
+    pip install acore
+
+You can also install the in-development version with::
+
+    pip install https://github.com/Multiomics-Analytics-Group/acore/archive/main.zip
+
+
+
+Development
+===========
+
+To run all the tests run::
+
+    pytest 
