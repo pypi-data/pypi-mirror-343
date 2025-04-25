@@ -1,0 +1,7 @@
+
+[dev]
+pip>=24.3
+build>=1.2
+
+[test]
+ruff>=0.8

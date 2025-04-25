@@ -1,0 +1,76 @@
+# Configuration file for creating the package.
+#
+# Thomas Guillod - Dartmouth College
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools >= 75.5",
+    "setuptools_scm >= 8.1",
+    "wheel >= 0.45",
+]
+
+[tool.setuptools_scm]
+write_to = "scilogger/version.txt"
+version_scheme = "guess-next-dev"
+
+[project]
+name = "scilogger"
+license = "BSD-2-Clause"
+license-files = ["LICENSE.txt"]
+description = "SciLogger - Logging for Scientific Applications"
+authors = [{name = "Thomas Guillod", email = "guillod@otvam.ch"}]
+maintainers = [{name = "Thomas Guillod", email = "guillod@otvam.ch"}]
+keywords = [
+    "Python",
+    "Timing",
+    "Logging",
+    "Logger",
+    "Log",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+    "Natural Language :: English",
+    "Environment :: Console",
+]
+requires-python = ">=3.9"
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = ["pip >= 24.3", "build >= 1.2"]
+test = ["ruff >= 0.8"]
+
+[project.urls]
+Homepage = "https://github.com/otvam/scilogger"
+Repository = "https://github.com/otvam/scilogger"
+Releases = "https://github.com/otvam/scilogger/releases"
+Issues = "https://github.com/otvam/scilogger/issues"
+Tags = "https://github.com/otvam/scilogger/tags"
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[tool.setuptools]
+packages = ["scilogger"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+scilogger = ["*.txt", "*.ini"]
+
+[tool.ruff]
+indent-width = 4
+line-length = 160
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "UP"]
+ignore = ["B009", "B010", "UP031", "F403"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
