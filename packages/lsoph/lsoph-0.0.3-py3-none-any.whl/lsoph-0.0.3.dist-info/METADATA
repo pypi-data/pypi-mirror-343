@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: lsoph
+Version: 0.0.3
+Summary: An interactive lsof alternative
+Author-email: Gareth Davidson <gaz@bitplane.net>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Public Domain
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE.md
+Requires-Dist: psutil~=7.0
+Requires-Dist: textual~=3.1
+Requires-Dist: flake8 ; extra == "dev"
+Requires-Dist: pre-commit ; extra == "dev"
+Requires-Dist: pytest ; extra == "dev"
+Requires-Dist: coverage ; extra == "dev"
+Requires-Dist: pytest-cov ; extra == "dev"
+Requires-Dist: build ; extra == "dev"
+Requires-Dist: twine ; extra == "dev"
+Requires-Dist: pydoc-markdown ; extra == "dev"
+Project-URL: Bug Tracker, https://github.com/bitplane/lsoph/issues
+Project-URL: Homepage, https://bitplane.net/dev/python/lsoph
+Project-URL: Source Code, https://github.com/bitplane/lsoph
+Provides-Extra: dev
+
+# 📁 `lsoph`
+
+TUI that lists open files for a given process.
+
+Usage:
+
+```shell
+uvx lsoph -p <pid>
+```
+
+* [🎬 demo](https://asciinema.org/a/c7T8id39jU7ap6E0D99S5dJ6F)
+* [🏠 home](https://bitplane.net/dev/python/lsoph)
+* [🐱 github](https://github.com/bitplane/lsoph)
+* [🐍 pypi](https://pypi.org/project/lsoph)
+
+
