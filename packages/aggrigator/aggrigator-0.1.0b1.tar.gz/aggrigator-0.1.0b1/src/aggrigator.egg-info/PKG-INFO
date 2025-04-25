@@ -1,0 +1,84 @@
+Metadata-Version: 2.4
+Name: aggrigator
+Version: 0.1.0b1
+Summary: A Python package for aggregation tasks
+Author-email: Christoph Karg <christoph.karg@mdc-berlin.de>
+License: MIT License
+        
+        Copyright (c) 2025, Christoph Karg
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/Kainmueller-Lab/aggrigator
+Project-URL: Repository, https://github.com/Kainmueller-Lab/aggrigator
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=2.0
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: ipython
+Requires-Dist: scikit-learn
+Requires-Dist: scikit-image
+Requires-Dist: libpysal
+Requires-Dist: openpyxl
+Requires-Dist: numba
+Provides-Extra: dev
+Requires-Dist: pytest<8.0,>=7.2; extra == "dev"
+Dynamic: license-file
+
+# Aggrigator 🐊
+
+**Aggrigator** is a lightweight Python library for uncertainty aggregation in deep learning workflows.  
+Whether you're working with segmentation maps or just want to summarize per-pixel uncertainties — Aggrigator gives you a powerful and flexible toolbox to make sense of it all.
+
+With a clean API and built-in strategies, you can easily:
+- Reduce pixelwise uncertainty maps to scalar scores for evaluation or ranking.
+- Apply patch-based, class-specific, or thresholded aggregation.
+- Incorporate spatial correlation metrics like Moran's I or Geary’s C.
+- Compare strategies side-by-side with summaries and plots.
+
+Designed to be modular, explainable, and research-friendly.  
+Use it out of the box, or extend it with your own aggregation logic!
+
+## Installation
+
+To install the aggrigator, clone the repository, navigate inside the directory and run the following command:
+
+```bash
+pip install aggrigator
+```
+
+now you can import the library in your python code with:
+
+```python
+import aggrigator
+```
+
+## Try it out yourself
+
+Check out the interactive [example_notebook.ipynb](example_notebook.ipynb) to see **Aggrigator** in action.  
+You’ll learn how to:
+
+- ✅ Generate and visualize uncertainty maps.  
+- ⚙️ Apply and compare aggregation strategies.  
+- 🧠 Use class-aware masks for targeted aggregation.

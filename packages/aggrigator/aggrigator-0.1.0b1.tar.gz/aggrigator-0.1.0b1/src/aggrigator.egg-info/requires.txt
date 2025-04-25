@@ -1,0 +1,16 @@
+numpy>=2.0
+pandas
+scipy
+matplotlib
+seaborn
+torch
+torchvision
+ipython
+scikit-learn
+scikit-image
+libpysal
+openpyxl
+numba
+
+[dev]
+pytest<8.0,>=7.2
