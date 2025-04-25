@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+subregistry/__init__.py
+subregistry/decorator.py
+subregistry/subclass_registry.py
+subregistry.egg-info/PKG-INFO
+subregistry.egg-info/SOURCES.txt
+subregistry.egg-info/dependency_links.txt
+subregistry.egg-info/top_level.txt
+tests/test_decorator.py
+tests/test_subclass_registry.py

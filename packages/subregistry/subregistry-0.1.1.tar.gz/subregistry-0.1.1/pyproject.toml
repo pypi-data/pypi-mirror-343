@@ -1,0 +1,60 @@
+[project]
+name = "subregistry"
+version = "0.1.1"
+description = "Utility Python library to easily create registries of sub-classes and import them conveniently."
+readme = "README.md"
+authors = [
+    {name = "Thomas Havy", email = "thomashavy@hotmail.fr"},
+]
+license = "MIT"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "coverage[toml]",
+    "pytest",
+]
+linting = [
+    "ruff",
+]
+
+all = [
+  { include-group = "dev" },
+  { include-group = "linting" },
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["subregistry"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E722"]
+
+fixable = ["A", "B", "C", "D", "E", "F", "G", "I", "N", "Q", "S", "T", "W", "ANN", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "ERA", "EXE", "FBT", "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH", "TID", "TRY", "UP", "YTT"]
+unfixable = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
