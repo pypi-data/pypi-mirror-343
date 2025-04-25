@@ -1,0 +1,3 @@
+[console_scripts]
+sct=iscc_sct.cli:main
+
