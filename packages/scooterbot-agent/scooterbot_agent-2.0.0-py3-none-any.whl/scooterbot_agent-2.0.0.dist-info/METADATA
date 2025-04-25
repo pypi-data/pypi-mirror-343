@@ -1,0 +1,50 @@
+Metadata-Version: 2.3
+Name: scooterbot-agent
+Version: 2.0.0
+Summary: 
+Author: Jimming Cheng
+Author-email: jimming@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: openai (>=1.76.0,<2.0.0)
+Requires-Dist: openai-agents (>=0.0.13,<0.0.14)
+Requires-Dist: tenacity (>=8.0.0,<10.0.0)
+Description-Content-Type: text/markdown
+
+# scooterbot_agent
+Scooterbot Agent
+
+
+## Versions
+
+### 2.0.0
+
+- openai-agents
+- async replies
+
+### 1.0.5
+
+- relax tenacity dependency
+
+### 1.0.4
+
+- add tenacity dependency since it's not in python 3.9 stdlib
+
+### 1.0.3
+
+- relax python compat to 3.9
+
+### 1.0.1
+
+- fix bad pypi deploy
+
+### 1.0.0
+
+- initial version
+
+
