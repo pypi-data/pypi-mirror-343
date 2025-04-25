@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-image-upload = mcp_server_image_upload:main

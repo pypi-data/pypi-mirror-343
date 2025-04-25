@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/mcp-server-image-upload/__init__.py
+src/mcp-server-image-upload/__main__.py
+src/mcp-server-image-upload/upload_image_server.py
+src/mcp_server_image_upload.egg-info/PKG-INFO
+src/mcp_server_image_upload.egg-info/SOURCES.txt
+src/mcp_server_image_upload.egg-info/dependency_links.txt
+src/mcp_server_image_upload.egg-info/entry_points.txt
+src/mcp_server_image_upload.egg-info/requires.txt
+src/mcp_server_image_upload.egg-info/top_level.txt
