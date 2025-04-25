@@ -1,0 +1,10 @@
+concierge_api_client/__init__.py,sha256=82v_dU0Ijbv1MjeGUwhTwWu8IIBBZRiJ5jSB-OCyTxI,209
+concierge_api_client/auth_client.py,sha256=2MMbiOPav7Al3JoNhQz0YJmUJ7Wi20uSMgRSawz5_3Q,8588
+concierge_api_client/base_client.py,sha256=lF92TMtbVDM-w5JzffOGbyC8UcmFdTChnPQsk89GbW4,1890
+concierge_api_client/client.py,sha256=xOdzQqvleYjZDelCtfhlklDBPhynqjmMNfpgzv15BAQ,5717
+concierge_api_client/codes.py,sha256=RvvG8b6zoaocQXic5glFo6Xp3V8tWqIBt53o4LaRKO8,28
+concierge_api_client/exceptions.py,sha256=fXR4p9U07g0-GgflIqRoK2WimtpKE0VBvwwIO8c6jfA,271
+concierge_api_client/raise_error.py,sha256=hzrVPjH0xpNX6R1uCFuruxgPoZGC9DskZKOTwSFColw,445
+concierge_api_client-0.1a1.dist-info/METADATA,sha256=eMQWGXGe0v3IZVWaIy5435xGpMWa4Hz8w0pl5dt1rKU,171
+concierge_api_client-0.1a1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+concierge_api_client-0.1a1.dist-info/RECORD,,
