@@ -1,0 +1,2 @@
+[console_scripts]
+audio2anki = audio2anki.main:main
