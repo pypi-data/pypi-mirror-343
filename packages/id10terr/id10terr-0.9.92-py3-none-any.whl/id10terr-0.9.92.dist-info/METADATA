@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: id10terr
+Version: 0.9.92
+Summary: Because it's necessary to have a package that helps you with your ID10T errors
+Home-page: https://github.com/scheiblingco/id10terr
+Author: Scheibling Consulting
+Author-email: itsec@scheibling.se
+License: GPL-3.0-or-later
+Keywords: python ssh ai vibecoder junior interns sarcasm
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.1
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# id10t
+ID10T Python Library. It's necessary.

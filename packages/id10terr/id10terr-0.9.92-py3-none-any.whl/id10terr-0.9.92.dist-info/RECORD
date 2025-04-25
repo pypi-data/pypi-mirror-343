@@ -1,0 +1,11 @@
+id10terr/__init__.py,sha256=2UE9XhAifB5nLncXHNeEoy-3AMOIm8iXERtoDG-9P_M,63
+id10terr/__version__.py,sha256=14rajDRfa9uj9THtY-uc9_Wk6s8aMY8JgQN1R7sa9CI,544
+id10terr/errors.py,sha256=5AXyYahz4vjBo8PzVMlcAGVtYpGyxKYF1jA2gNj4uv8,1781
+id10terr/interface.py,sha256=NqGwywzK4ovWekLk_UkdNFft9C4Pelb7nG-fA0C17cY,1207
+id10terr/warnings.py,sha256=WSzwZYzxG2EQ6pdtwp0kNzGChfyepV6cV0-Pr6Jt_Ug,1529
+id10terr-0.9.92.dist-info/licenses/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+id10terr-0.9.92.dist-info/METADATA,sha256=EtW-TwgXjdm1Z1FFVBHJT39z1kct36afrkLpmeHGWx0,875
+id10terr-0.9.92.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+id10terr-0.9.92.dist-info/top_level.txt,sha256=VGHD_1BWWeCOn7YRaIELdEIfCtGPmanrHdRVoopyI7I,9
+id10terr-0.9.92.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+id10terr-0.9.92.dist-info/RECORD,,
