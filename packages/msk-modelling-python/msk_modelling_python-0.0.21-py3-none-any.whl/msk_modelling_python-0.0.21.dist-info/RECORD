@@ -1,0 +1,16 @@
+msk_modelling_python/__init__.py,sha256=Vv-C_TkstNmiWYCz-WErSxmF3CAiGU92jNGgYLsaoVk,682
+msk_modelling_python/bops.py,sha256=FMPQQrQKid595rzIhoZxYbAVYI8IBPwqRohsxcxXghI,30193
+msk_modelling_python/classes.py,sha256=_RefxWjrl3vurLYz8TYoI7RO5z5ZTRsWxCpq6fr3iIc,71698
+msk_modelling_python/error_log.txt,sha256=8aIY5iFvPaLuiXYal3dSOMJwjVLT32zdv1peKyGGOvc,39647
+msk_modelling_python/install_opensim.py,sha256=5PvPeObcrSGbJZM0T86ImGmrA0DycixED0X1TCL86-E,3209
+msk_modelling_python/requirements.txt,sha256=AvGVVo9uWtiVkqR-TD4aspdOVsFEBbGgUGgqfJicdG8,55
+msk_modelling_python/settings.json,sha256=AMZjvz9ztICC6iE6ViuzA3aF3M-W9K0s1Y_I2uIJLOk,1111
+msk_modelling_python/utils.py,sha256=Yz-hjfIOVjOO2YNZCd4Hflv93L8yhWSU861Ag7Uyj30,22654
+msk_modelling_python/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+msk_modelling_python/src/platypus.jpg,sha256=DALzXDqf6DTUj4owKwOgREsmMhT0gWZnDoS3qudW9g8,198294
+msk_modelling_python/src/platypus_sad.jpg,sha256=BK0Vks0AcyfiX4Q7LEazUpDsw6g79Up-qOdGQ6sObDY,90453
+msk_modelling_python-0.0.21.dist-info/LICENSE.md,sha256=JYffrYiWvjTiR3Ccon0zC6v92jZ-YdBlSgWbic_lfPQ,1140
+msk_modelling_python-0.0.21.dist-info/METADATA,sha256=CR1dalA1Gxeo-dmcD-AC85vUydEjdhhZA4uoKH8o7YY,6734
+msk_modelling_python-0.0.21.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+msk_modelling_python-0.0.21.dist-info/top_level.txt,sha256=F10N8BbYM0IqpbIOaHqWPmzq630IUHx83aq9-hUGHTc,21
+msk_modelling_python-0.0.21.dist-info/RECORD,,
