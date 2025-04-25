@@ -1,0 +1,8 @@
+setup.py
+adkbq.egg-info/PKG-INFO
+adkbq.egg-info/SOURCES.txt
+adkbq.egg-info/dependency_links.txt
+adkbq.egg-info/requires.txt
+adkbq.egg-info/top_level.txt
+bigquery_agent/__init__.py
+bigquery_agent/bigquery_helper.py
