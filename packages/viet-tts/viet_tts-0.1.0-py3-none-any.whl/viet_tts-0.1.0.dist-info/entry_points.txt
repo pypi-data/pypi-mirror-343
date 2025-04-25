@@ -1,0 +1,3 @@
+[console_scripts]
+viettts=viettts.cli:cli
+
