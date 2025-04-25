@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: imgdupes
+Version: 0.1.2
+Summary: CLI tool to dedupe images based on perceptual hash
+Home-page: https://github.com/knjcode/imgdupes
+Author: Kenji Doi
+Author-email: knjcode@gmail.com
+License: MIT
+Keywords: image dedupe perceptual hash
+Requires-Python: >=3.8
+Requires-Dist: future
+Requires-Dist: ImageHash
+Requires-Dist: joblib
+Requires-Dist: ngt
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: orderedset
+Requires-Dist: pathlib
+Requires-Dist: pathos
+Requires-Dist: Pillow
+Requires-Dist: scipy
+Requires-Dist: six
+Requires-Dist: termcolor
+Requires-Dist: tqdm
+Requires-Dist: webcolors
+Requires-Dist: GPUtil
+
+Finding and deleting duplicate image files based on perceptual hash.

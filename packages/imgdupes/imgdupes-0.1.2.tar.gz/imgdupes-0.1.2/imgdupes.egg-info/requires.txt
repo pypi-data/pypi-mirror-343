@@ -1,0 +1,16 @@
+future
+ImageHash
+joblib
+ngt
+numpy
+opencv-python
+orderedset
+pathlib
+pathos
+Pillow
+scipy
+six
+termcolor
+tqdm
+webcolors
+GPUtil
