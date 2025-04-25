@@ -1,0 +1,13 @@
+cilogon_tokenauth/__init__.py,sha256=VrXpHDu3erkzwl_WXrqINBm9xWkcyUy53IQOj042dOs,22
+cilogon_tokenauth/admin.py,sha256=xZYRuBdHlbSoDXKxWUoAAYhFfATs_D7HCNS6cYjN7ng,365
+cilogon_tokenauth/apps.py,sha256=eaLQ6E7q1cLbF5e00e552pZ0CdApMGYcsGi2Z688vM4,165
+cilogon_tokenauth/auth.py,sha256=-qUSPhlERJ0UepL3Azl9NPx-KjbMELsf0pgWLN2KpCs,7177
+cilogon_tokenauth/client.py,sha256=R4BEg9iOB-jTZ23_j6_A2uR9WS_xGT7lpleuQgpGEVY,885
+cilogon_tokenauth/exc.py,sha256=6lO7WE4o40Kg5lGvlWfRHAQboiyD32lFI9aLdKYg1oQ,297
+cilogon_tokenauth/models.py,sha256=Pf8a6I8WY4uPcGCvDDu3LC54s3o3ok9UWDAYE45Js3I,1570
+cilogon_tokenauth/migrations/0001_initial.py,sha256=yZXS2HUjfD_f46rc4pLrtL686a7VEw6QbF3i_f1VA5c,889
+cilogon_tokenauth/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cilogon_tokenauth-0.3.0.dist-info/METADATA,sha256=b84MrrGH-3JDAI-SJZCrlkBkKG3BkKe4IG1S6NPeDUk,286
+cilogon_tokenauth-0.3.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+cilogon_tokenauth-0.3.0.dist-info/top_level.txt,sha256=FwZy-ZCrEYjcnZyDpUxSR3jKWI2vpn1QJ57EVJHScBA,18
+cilogon_tokenauth-0.3.0.dist-info/RECORD,,
