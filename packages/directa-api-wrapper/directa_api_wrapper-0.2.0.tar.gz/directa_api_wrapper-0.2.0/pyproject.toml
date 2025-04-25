@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "directa-api-wrapper"
+version = "0.2.0"
+description = "Python wrapper per l'API di Trading di Directa SIM"
+authors = ["Niccolo Salvini <47143429+NiccoloSalvini@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "directa_api"}]
+include = ["examples/*.py"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+twine = "^6.1.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0.0"
+pytest-cov = "^4.0.0"
+
+[tool.poetry.group.dev.dependencies]
+build = "^1.2.2.post1"
+twine = "^6.1.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
