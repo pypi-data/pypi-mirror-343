@@ -1,0 +1,5 @@
+setuptools==58.3.0
+typer
+rich
+pyyaml
+requests
