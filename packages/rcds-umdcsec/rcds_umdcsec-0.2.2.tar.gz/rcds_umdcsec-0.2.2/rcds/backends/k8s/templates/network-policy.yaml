@@ -1,0 +1,68 @@
+{% import '_helpers.jinja' as helpers with context %}
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  namespace: {{ namespace }}
+  name: network-policy-private
+  labels:
+    {{ helpers.common_labels() | indent(4) }}
+spec:
+  podSelector:
+    matchLabels:
+      {{ helpers.common_labels() | indent(6) }}
+      rcds.redpwn.net/visibility: private
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              {{ helpers.common_labels() | indent(14) }}
+  egress:
+    - to:
+        - namespaceSelector:
+            matchLabels:
+              {{ helpers.common_labels() | indent(14) }}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  namespace: {{ namespace }}
+  name: deny-inter-pod-egress
+  labels:
+    {{ helpers.common_labels() | indent(4) }}
+spec:
+  podSelect:
+    matchLabels:
+      {{ helpers.common_labels() | indent(6) }}
+  policyTypes:
+    - Egress
+  egress:
+    # block all private addresses that aren't of nodes in the current namespace
+    - to:
+      - namespaceSelector:
+          matchLabels:
+            {{ helpers.common_labels() | indent(12) }}
+      - ipBlock:
+          cidr: "0.0.0.0/0",
+          except:
+            - "10.0.0.0/8"
+            - '169.254.0.0/16'
+            - '172.16.0.0/12'
+            - '192.0.0.0/29'
+            - '192.0.0.170/31'
+            - '192.0.2.0/24'
+            - '192.168.0.0/16'
+            - '198.18.0.0/15'
+            - '198.51.100.0/24'
+            - '203.0.113.0/24'
+            - '240.0.0.0/4'
+            - '255.255.255.255/32'
+    # allow dns egress
+    - to:
+      - ports:
+        - protocol: "UDP"
+          port: 53
+        - protocol: "TCP"
+          port: 53
