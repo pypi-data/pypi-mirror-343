@@ -1,0 +1,3 @@
+[console_scripts]
+aico=aico.main:app
+
