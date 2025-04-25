@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: rqeuets
+Version: 0.0.3
+Summary: A tampared request library for testing purpose. Don't use this
+Author: SamSec
+Author-email: testing@google.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: summary
