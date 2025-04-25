@@ -1,0 +1,18 @@
+django-froala-editor>=2.9
+django-guardian>=2.4
+django-modelforms
+django-mptt
+django>=3.2
+first
+namedentities
+psycopg
+setuptools
+
+[:python_version < "3.7"]
+importlib-metadata
+
+[dj42]
+Django~=4.2.0
+
+[dj52]
+Django~=5.2.0
