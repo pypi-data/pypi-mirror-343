@@ -1,0 +1,11 @@
+vesin/__init__.py,sha256=h_RhwrbJSWYUlTEYNVD_gXBO5sJrwWrGcX2hJdGpDyc,180
+vesin/_ase.py,sha256=MF3SY69LUKXXZ3aDey_F4Xm8c-pNd3ZCDZU1x9TB0P8,2079
+vesin/_c_api.py,sha256=Ait2zbzDVoekHQSiOt_fG8onEjo_mtxZrO8uWZ4X6To,1319
+vesin/_c_lib.py,sha256=UOAMZXMICNzwk3LbWXAITBrI94NohFSi-jTar1-SpWY,2548
+vesin/_neighbors.py,sha256=_z3W9YkojBnfNJxb4yRzORCZqiyvmHh2k_aZz2cXvGs,6202
+vesin/include/vesin.h,sha256=dz_I_Om1p6JlSFb3hkGtJv2yMU1KwjrMq8CDUp35d7Q,5555
+vesin/lib/libvesin.so,sha256=3tVFIUSG2tX8lah3x4m7i65tpSKzF-Fn1VFM-jz-NYo,135464
+vesin-0.3.4.dist-info/METADATA,sha256=yr3Ot71IkI49y4XNay3PttIGvFlShggzspDomXzFjC8,4151
+vesin-0.3.4.dist-info/WHEEL,sha256=oBvwjgruTK-5V64t3DzVaIWtO9ca-OevFqETcmez7VI,145
+vesin-0.3.4.dist-info/top_level.txt,sha256=LIkiEKoZwkdHsOgavutHMDKBLPQD-__MhrWVxLlAFGg,6
+vesin-0.3.4.dist-info/RECORD,,
