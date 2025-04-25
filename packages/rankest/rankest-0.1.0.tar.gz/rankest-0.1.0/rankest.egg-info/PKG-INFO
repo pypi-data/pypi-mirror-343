@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: rankest
+Version: 0.1.0
+Summary: A package for Rank Set Sampling using sum‑based ranking
+Author: T. Vaishnavi
+Author-email: tvaishu13@gmail.com
+Maintainer: Neha Singh
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: maintainer
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# rankest
+
+**rankest** is a lightweight Python package for performing Rank Set Sampling, where rankings are based on the **sum of feature values**. It is especially useful in pre-processing datasets before applying classification algorithms, such as in medical data (e.g., diabetes prediction).
+
+---
+
+## 📌 Features
+
+- Ranks each row by summing the selected feature values.
+- Assigns ranks in **descending order** (highest sum gets Rank 1).
+- Modular, easy-to-use API.
+- Ideal for research and academic projects involving sampling.
+
+---
+
+## 🚀 Installation
+
+You can install the package from PyPI:
+
+```bash
+pip install rankest
