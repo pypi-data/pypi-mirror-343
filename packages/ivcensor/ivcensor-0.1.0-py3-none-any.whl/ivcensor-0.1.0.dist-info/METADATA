@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: ivcensor
+Version: 0.1.0
+Summary: IV with right censor data
+Author-email: bqs <buqiushi17@mails.ucas.ac.cn>
+License: MIT
+Keywords: censoring,neural network,estimation,survival analysis
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.19
+Requires-Dist: torch>=1.8
+Requires-Dist: scipy>=1.5
+Requires-Dist: scikit-learn>=0.24
+Requires-Dist: xgboost>=1.3
+
+# Genius Censor
+
+[![PyPI version](https://img.shields.io/pypi/v/genius-censor)](https://pypi.org/project/genius-censor)  
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
+## Overview
+
+Genius Censor is a Python package for bias-adjusted estimation in censored data settings, leveraging neural networks and ensemble models. It implements functions for data generation, nuisance function estimation, and the generalized estimating equation for the parameter of interest.
+
+## Features
+
+- Generate synthetic data with controlled censoring.
+- Estimate nuisance functions via neural networks, random forests, XGBoost, or linear regression.
+- Compute point estimates, standard errors, and test statistics using empirical likelihood, exponential tilt, or CUE.

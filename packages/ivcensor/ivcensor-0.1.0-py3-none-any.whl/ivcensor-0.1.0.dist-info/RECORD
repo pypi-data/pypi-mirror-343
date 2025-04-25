@@ -1,0 +1,9 @@
+ivcensor/__init__.py,sha256=jC9baQj4HsIQ1mVPJMNl2EOH5iPxf3yCN8wFTgKs63U,310
+ivcensor/dnn.py,sha256=RwodkQa0GBRPBDSJ76_5pnSBSqoRLwPwH0JDphR34wA,9391
+ivcensor/func.py,sha256=v6jpkAkXmXIPwYwWjwOeaA7gfcz6A7nQDG7MMAdMS4I,11221
+ivcensor/genius_censor.py,sha256=LgdNggrnyEBLNszF_eZerFyt-JqCQ0gf9Ms44bfyDB0,8000
+ivcensor/test.py,sha256=EoInqAlc-C3e8lvfjp4jgtuxJdFZbbU0279FHkZ_HO8,13656
+ivcensor-0.1.0.dist-info/METADATA,sha256=hR3sX4WnYprPpkNW7aeU0RUI0xbBvKceHhZ5YC-Y6OQ,1224
+ivcensor-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+ivcensor-0.1.0.dist-info/top_level.txt,sha256=dsrti2bBukA26ChnOqOL4A_AB99vXtM8tRFR5_YCz8c,9
+ivcensor-0.1.0.dist-info/RECORD,,
