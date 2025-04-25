@@ -1,0 +1,2 @@
+[console_scripts]
+tlopack = tlopack.cli:app
