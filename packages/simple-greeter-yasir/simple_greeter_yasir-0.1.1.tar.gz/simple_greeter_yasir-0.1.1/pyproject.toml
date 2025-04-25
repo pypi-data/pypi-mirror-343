@@ -1,0 +1,12 @@
+[project]
+name = "simple-greeter-yasir"
+version = "0.1.1"
+description = "A simple greeting package"
+authors = [{ name="Yasir Ameer", email="iamyasirameer@gmail.com" }]
+readme = "README.md"
+license = "MIT"
+dependencies = []
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

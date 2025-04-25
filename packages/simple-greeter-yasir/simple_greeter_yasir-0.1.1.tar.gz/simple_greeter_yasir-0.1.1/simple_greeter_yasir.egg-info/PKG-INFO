@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: simple-greeter-yasir
+Version: 0.1.1
+Summary: A simple greeting package
+Author-email: Yasir Ameer <iamyasirameer@gmail.com>
+License-Expression: MIT
+Description-Content-Type: text/markdown
+
+# Simple Greeter
+
+A basic Python package that greets users by name.
