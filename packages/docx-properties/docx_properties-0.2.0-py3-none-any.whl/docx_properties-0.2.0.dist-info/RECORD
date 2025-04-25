@@ -1,0 +1,9 @@
+docx_properties/__init__.py,sha256=rhmDuvJEXNTLDpEoDYutpJHFPkaRVbBtG0jfQsGDSrk,119
+docx_properties/cli.py,sha256=CqGpSUhJbwKU4pnzFYFd9L5XPoMMeQn3EAH7sJT-L_M,12471
+docx_properties/core.py,sha256=_41R_W61ym3sM9hnnWWtGuN7e4ffBSEa6-wT04FIghM,20462
+docx_properties/field_updater.py,sha256=6KRG9-CqadYsFHLD0pqSQtj9HAq_cdmw4BRF4wPGBjI,5539
+docx_properties-0.2.0.dist-info/METADATA,sha256=67MONoJ7O991p8hkPNu5AQdDXzZ9mvdL5WLXTkdLzSw,4566
+docx_properties-0.2.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+docx_properties-0.2.0.dist-info/entry_points.txt,sha256=9TNLeIz3o4rgNGPI_al_adB4HtKJL6dybMq9OCy_wYc,54
+docx_properties-0.2.0.dist-info/top_level.txt,sha256=owfNy9EYGVlswHZDDviaShidEtwokvllscmZmdV9CzI,16
+docx_properties-0.2.0.dist-info/RECORD,,
