@@ -1,0 +1,121 @@
+# InSite
+
+<span style="color:#E83A6B;"> by Bloom Research </span>
+
+
+InSite is a Python module for crawling websites and compiling PDFs of their pages. It's primarily intended for crawling code documentation websites to download PDFs for offline knowledge supplementation and RAG implementations in LLMs.
+
+## Features
+
+- Efficient parallel web crawling with Playwright
+- Smart link discovery even for non-standard link formats
+- Content filtering with positive and negative filter patterns
+- Proper media rendering before PDF conversion
+- Hierarchical PDF organization based on URL structure
+- PDF merging capability for creating comprehensive documentation
+
+## Installation
+
+```bash
+pip install insite
+```
+
+### Requirements
+
+- Python 3.7+
+- Playwright
+- pypdf
+
+After installation, you'll need to install the Playwright browsers:
+
+```bash
+playwright install
+```
+
+## Usage Examples
+
+### Basic Web Crawling
+
+```python
+import asyncio
+from insite import InsiteScraper
+
+async def main():
+    # Create a scraper for a documentation site
+    scraper = InsiteScraper("https://docs.python.org/3/")
+    
+    # Get all links on the site
+    links = await scraper()
+    
+    print(f"Found {len(links)} links")
+    
+asyncio.run(main())
+```
+
+### Converting Pages to PDFs
+
+```python
+import asyncio
+from insite import InsiteScraper, InsiteProcessor
+
+async def main():
+    # First, get all links from a site
+    scraper = InsiteScraper("https://docs.python.org/3/library/")
+    links = await scraper()
+    
+    # Then convert them to PDFs
+    processor = InsiteProcessor(output_dir="python_docs")
+    successes, failures = await processor.process_links(links)
+    
+    print(f"Successfully created {successes} PDFs")
+    
+    # Optionally create a single merged PDF
+    master_file = processor.merge_to_masterfile("python_library_docs.pdf")
+    print(f"Created master file: {master_file}")
+    
+asyncio.run(main())
+```
+
+### Filtering Content
+
+```python
+import asyncio
+import re
+from insite import InsiteScraper, InsiteProcessor
+
+async def main():
+    # Only include specific sections and exclude others
+    positive_filters = ['/library/']  # Only library documentation 
+    negative_filters = [
+        '/archives/',                 # Skip archived content
+        re.compile(r'\.(jpg|gif)$'),  # Skip images
+    ]
+    
+    scraper = InsiteScraper(
+        "https://docs.python.org/3/",
+        max_concurrent=10,  # Use 10 concurrent workers
+        debug=True,         # Enable debug output
+        positive_filters=positive_filters,
+        negative_filters=negative_filters
+    )
+    
+    links = await scraper()
+    
+    # Process the filtered links
+    processor = InsiteProcessor(output_dir="python_library_docs")
+    await processor.process_links(links)
+    
+asyncio.run(main())
+```
+
+## Command-Line Usage
+
+The module includes a command-line tool for quick documentation scraping:
+
+```bash
+python -m insite.cli --url https://docs.python.org/3/ --output python_docs --max-pages 100 --create-master
+```
+
+## License
+
+GNU General Public License - GPLv3
