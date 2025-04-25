@@ -1,0 +1,14 @@
+kanban/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kanban/board.py,sha256=dJvu-TmUHZOC5Azo2uWbAjgqedCyt7ACvuq7y1DAZ_k,7430
+kanban/category_colors.py,sha256=tPmE3vaiKKpnVg3HCBqlYdW4f5FkfAzkqUhbwmwK7S8,3459
+kanban/main.py,sha256=ZJ1igoGhgro646tyyJTH1EC-Uzhv0A2KKO4T3dtOvRo,7660
+kanban/storage.py,sha256=dY4JiMIYtbG1bhjSpvTmxqj4XuvJweU8Q13-zxGI2gs,1681
+kanban/task.py,sha256=xO2SxJqKFul3Jsn1XSZAgdNcpID9Y8Gc7IdIv1SS2C0,635
+kanban/task_operations.py,sha256=t00tyAkM0sM7_V8mWBKnooarwTx-LG12uhBllt3L-1c,7557
+kanban_cli-0.1.3.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+scripts/check_rich.py,sha256=Bq9xbzd6_mpRU-Pu4VA58EpczPeFQ0b2GeCtMeMD4O0,320
+kanban_cli-0.1.3.dist-info/METADATA,sha256=cGbAbc3GDI-duvex0Xi0WXZv588u-ddQgDblsB1o3t0,3715
+kanban_cli-0.1.3.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+kanban_cli-0.1.3.dist-info/entry_points.txt,sha256=b421Jr6f9vsnWR1UwUMiiOFXzQRN6Ddd7rRI7TER__Q,44
+kanban_cli-0.1.3.dist-info/top_level.txt,sha256=G3NA9aHEYrM1o7sdlcEwVnEvceIhG8Th1fSIxr661t8,15
+kanban_cli-0.1.3.dist-info/RECORD,,
