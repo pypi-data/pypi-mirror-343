@@ -1,0 +1,2 @@
+[console_scripts]
+trello-to-md = trello_loader.trello_to_markdown:main
