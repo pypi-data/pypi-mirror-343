@@ -1,0 +1,1 @@
+global-exclude src/flavius/_client.py src/flavius/utils/json.py
