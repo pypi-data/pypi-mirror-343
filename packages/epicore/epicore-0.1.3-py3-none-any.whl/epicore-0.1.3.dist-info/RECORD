@@ -1,0 +1,14 @@
+epicore-0.1.3.dist-info/licenses/LICENSE,sha256=C3WUzTnJvR5JijFsLonaV9X1fZRKGQ95JKhUGPgjmL4,1098
+epicore_utils/__init__.py,sha256=pPQv_PFD1h0q851DLOrG-obzMLDGWrqrxMUw2gAHMdg,22
+epicore_utils/epicore_main.py,sha256=43HFE3UI_yhVqOFq7c_ZUwQeMYH6ab8Wo44BZKD7kFk,7721
+epicore_utils/modules/compute_cores.py,sha256=g9QeOVIizO96hv5P2Xo13aiXr_QxV2QHsv8bLZkhv-A,18009
+epicore_utils/modules/generate_report.py,sha256=oEX84lX7bhfa94RJFYEOTWhSyc9eA6E2K-mot3hPy_o,7522
+epicore_utils/modules/locserver.py,sha256=e84GQvkJ3QfAl57jQahEe2Cd3rCCZDfMNsVeGeTrvPI,3301
+epicore_utils/modules/map_result.py,sha256=pyWjadjkxzY7xaWt_GJNJzG5_MJefd6eYGC2Sa5fnsc,5684
+epicore_utils/modules/parse_input.py,sha256=lzO56nqnTIM8SlfUokfIxpZi-XPhMqk1Rv0ccWtPSLM,24752
+epicore_utils/modules/visualize_protein.py,sha256=k2m3RwcyWu2qIUdaP7J2TegsM_Z4kSFeA-GdZTfgxwQ,5205
+epicore-0.1.3.dist-info/METADATA,sha256=IsWfxLaDsHztv1kdazW2lIKft0-U51pSkOC-sodHM7g,11596
+epicore-0.1.3.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+epicore-0.1.3.dist-info/entry_points.txt,sha256=1re3VW6dv-88_94TBnLq2WRTHh0XSYr62JQJpMxKRzI,60
+epicore-0.1.3.dist-info/top_level.txt,sha256=u-IlUo6i7LDglNyllLj7mY4arWuASDr0r_sgMPTAwiM,14
+epicore-0.1.3.dist-info/RECORD,,
