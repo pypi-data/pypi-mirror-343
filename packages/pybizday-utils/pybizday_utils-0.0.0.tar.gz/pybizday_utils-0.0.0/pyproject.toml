@@ -1,0 +1,84 @@
+[project]
+name = "pybizday_utils"
+description = "`pybizday_utils` is a Python library that provides utilities for calculating business days, including the ability to customize holidays and workdays."
+dynamic = ["version"]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "python-dateutil>=2.9.0.post0",
+    "types-python-dateutil>=2.9.0.20241206",
+]
+license-files = ["LICENSE"]
+authors = [{ name = "hmasdev", email = "hmasuidev1com@gmail.com" }]
+maintainers = [{ name = "hmasdev", email = "hmasuidev1com@gmail.com" }]
+keywords = ["business day", "utility", "holiday", "calendar"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[project.urls]
+Homepage = "https://github.com/hmasdev/pybizday_utils"
+Repository = "https://github.com/hmasdev/pybizday_utils"
+
+[project.optional-dependencies]
+dev = [
+    "autopep8>=2.3.2",
+    "build>=1.2.2.post1",
+    "mypy>=1.15.0",
+    "nox>=2025.2.9",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.0.0",
+    "pytest-mock>=3.14.0",
+    "ruff>=0.11.2",
+    "twine>=6.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "autopep8>=2.3.2",
+    "build>=1.2.2.post1",
+    "mypy>=1.15.0",
+    "nox>=2025.2.9",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.0.0",
+    "pytest-mock>=3.14.0",
+    "ruff>=0.11.2",
+    "twine>=6.1.0",
+]
+
+[build-system]
+requires = ["setuptools", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools_scm]
+version_file = "src/pybizday_utils/_version.py"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = ["tests"]
+addopts = "--cov=src --cov-report=term-missing --cov-report=xml"
+markers = [
+    "positive",
+    "negative",
+    "heavy",
+    "use_global_default_holiday_discriminator",
+]
+
+[tool.mypy]
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+show_error_codes = true
+pretty = true
+
+[tool.ruff]
+exclude = [".venv", "build", "dist", "src/pybizday_utils/_version.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = ["D100", "D101", "D102", "D103"]

@@ -1,0 +1,26 @@
+name: On Push Branches
+
+on:
+  push:
+    branches:
+      - "*"
+
+jobs:
+  test:
+    uses: ./.github/workflows/pytest-workflow-call.yaml
+    with:
+      git-ref: ${{ github.ref }}
+    permissions:
+      contents: read
+  static-type-check:
+    uses: ./.github/workflows/static-type-check-workflow-call.yaml
+    with:
+      git-ref: ${{ github.ref }}
+    permissions:
+      contents: read
+  code-style-check:
+    uses: ./.github/workflows/code-style-check-workflow-call.yaml
+    with:
+      git-ref: ${{ github.ref }}
+    permissions:
+      contents: read

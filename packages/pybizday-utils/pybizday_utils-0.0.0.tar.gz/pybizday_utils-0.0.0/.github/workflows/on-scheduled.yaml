@@ -1,0 +1,38 @@
+name: Scheduled Tests
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 17 * * 6"
+
+jobs:
+  test:
+    uses: ./.github/workflows/pytest-workflow-call.yaml
+    permissions:
+      contents: read
+  static-type-check:
+    uses: ./.github/workflows/static-type-check-workflow-call.yaml
+    permissions:
+      contents: read
+  code-style-check:
+    uses: ./.github/workflows/code-style-check-workflow-call.yaml
+    permissions:
+      contents: read
+  create-issue-on-failure:
+    runs-on: ubuntu-latest
+    needs: [test, static-type-check, code-style-check]
+    if: |
+      needs.test.result == 'failure' ||
+      needs.static-type-check.result == 'failure' ||
+      needs.code-style-check.result == 'failure'
+    steps:
+      - name: Create Github Issue
+        run: |
+          gh issue create \
+            --title "Scheduled Tests Failed" \
+            --body "At least one job failed in the workflow run. See ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID} for more details." \
+            --label "bot,ci"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    permissions:
+      issues: write
