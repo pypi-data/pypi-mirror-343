@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: pyapptest
+Version: 0.1.1
+Summary: A Streamlit-based API testing tool
+Home-page: https://github.com/reprompts/pyapptest
+Author: RePromptsQuest
+Author-email: repromptsquest@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: streamlit>=1.0
+Requires-Dist: click>=8.0
+Requires-Dist: fastapi>=0.65
+Requires-Dist: flask>=2.0
+Requires-Dist: django>=3.2
+Requires-Dist: faker
+
+<!-- README.md for PyApptest -->
+# PyApptest
+
+`pyapptest` is a Streamlit-based CLI tool to **discover**, **test**, and **report** API endpoints in Python frameworks (FastAPI, Flask, Django).
+
+## Features
+
+- **Static endpoint discovery**: scans your current directory for existing API routes in FastAPI, Flask, or Django projects.
+- **Interactive UI**: launches a Streamlit UI to run and view tests.
+- **Multiple framework support**: works out-of-the-box with FastAPI, Flask, and Django endpoints.
+- **Faker integration**: generate sample payloads automatically.
+
+## Installation
+
+```bash
+pip install pyapptest
+
+Usage
+
+# Launch the testing UI
+pyapptest
+
+Once your testing session is complete, you can uninstall:
+
+pip uninstall pyapptest
+
