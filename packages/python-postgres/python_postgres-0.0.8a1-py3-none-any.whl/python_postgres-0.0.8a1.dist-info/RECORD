@@ -1,0 +1,9 @@
+python_postgres/__init__.py,sha256=0tkeJuWXRUjVqrXrZ6JaU7FPM7eop_Qo356LS3EJHHY,109
+python_postgres/_client.py,sha256=_mJPed1OXD5bsVE3i8CIbkeRSWuiU-sC5MzDjKu0c4A,6242
+python_postgres/_operations.py,sha256=2PFCB8Kz8jz5J--8KSj7008AO0pitZS2fjsBZrgFFZA,3133
+python_postgres/_transactions.py,sha256=wr6ExmsAiW34_6lZuk8rg_wKf6K0KPxzlYZiFrWCgIA,946
+python_postgres/types.py,sha256=eCt_6F3SbNXk4qcdD4NlnJ31sNhtaxinzXjGP4V1-Tc,257
+python_postgres-0.0.8a1.dist-info/METADATA,sha256=JroiB6JJfWr0-TLL-e6y3jFEic-NtlKt2nBBpKwMngo,1686
+python_postgres-0.0.8a1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+python_postgres-0.0.8a1.dist-info/licenses/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+python_postgres-0.0.8a1.dist-info/RECORD,,
