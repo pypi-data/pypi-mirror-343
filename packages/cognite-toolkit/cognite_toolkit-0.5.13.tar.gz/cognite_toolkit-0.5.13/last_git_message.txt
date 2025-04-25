@@ -1,0 +1,35 @@
+fix: missing uv run in release pipeline (#1542)
+
+# Description
+
+I was missing a `uv run` from the `release.yaml` pipeline. Repeating the
+changelog and bump from #1538 as that was not released as a result of
+that bug.
+
+
+Found another issue, `uv build` excludes the file `build.py` inside the
+`commands` modules, this is the result of installing the wheel in a
+fresh environment.
+
+![image](https://github.com/user-attachments/assets/231b92a8-d497-4d12-a90f-78bebb4e1929)
+
+Renaming it to `build_cmd.py` resolved the issue.
+
+## Changelog
+
+- [x] Patch
+- [ ] Minor
+- [ ] Skip
+
+## cdf
+
+### Changed
+
+- Currently the `--host=` option value is ignored if it does not
+case-sensitively match a value in the `REPOSITORY_HOSTING` array. This
+change makes the matching case-insensitive and falls back to the "Other"
+repository hosting option if no match is found.
+
+## templates
+
+No changes.
