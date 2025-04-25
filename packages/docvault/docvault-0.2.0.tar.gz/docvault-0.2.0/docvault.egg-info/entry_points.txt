@@ -1,0 +1,3 @@
+[console_scripts]
+docvault = docvault.main:main
+dv = docvault.main:main
