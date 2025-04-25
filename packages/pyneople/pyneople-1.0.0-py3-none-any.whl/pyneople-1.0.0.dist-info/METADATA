@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: pyneople
+Version: 1.0.0
+Summary: Neople Open API wrapper with MongoDB and PostgreSQL support for data pipelines
+Author-email: ippo252525 <ippo252525@gmail.com>
+Project-URL: Homepage, https://github.com/ippo252525/pyneople
+Project-URL: Bug Tracker, https://github.com/ippo252525/pyneople/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: motor<4.0.0,>=3.7.0
+Requires-Dist: asyncpg<1.0.0,>=0.30.0
+Requires-Dist: aiohttp<4.0.0,>=3.11.14
+Requires-Dist: python-dotenv<2.0.0,>=1.1.0
+Dynamic: license-file
+
+# pyneople
+
+**Neople Open API 기반 데이터 수집 및 저장 라이브러리**
+
+pyneople은 Neople Open API를 사용하여 데이터를 수집하고,  
+MongoDB 및 PostgreSQL에 저장할 수 있도록 지원하는 Python 라이브러리입니다.
+
+---
+
+## Installation
+
+```bash
+pip install pyneople
+```
+
+## Quick Example
+```python
+from pyneople.api_to_mongo import api_to_mongo
+
+endpoints = ['character_time', 'character_fame']
+api_to_mongo(endpoints)
+```
