@@ -1,0 +1,3 @@
+[console_scripts]
+taskinator = taskinator.cli:app
+taskinator-mcp = taskinator.mcp_server.server:main

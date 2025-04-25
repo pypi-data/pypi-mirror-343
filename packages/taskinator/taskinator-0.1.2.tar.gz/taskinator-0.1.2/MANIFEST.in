@@ -1,0 +1,21 @@
+# Include package data files
+recursive-include taskinator/package_data *
+
+# Include documentation
+include README.md
+include CHANGELOG.md
+include LICENSE
+include pytest.ini
+
+# Include example files
+recursive-include examples *
+
+# Exclude development files
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude *.pyo
+global-exclude .git*
+global-exclude .pytest_cache
+global-exclude .coverage
+global-exclude htmlcov
+global-exclude *.egg-info

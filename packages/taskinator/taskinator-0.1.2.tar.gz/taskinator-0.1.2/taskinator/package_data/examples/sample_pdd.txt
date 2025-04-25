@@ -1,0 +1,116 @@
+---
+
+# 📄 Sample Process Design Document (PDD)  
+**Process Name:** Task Management Lifecycle  
+**Created By:** [Your Name]  
+**Date:** [Today’s Date]  
+**Version:** 1.0
+
+---
+
+## 1. 🎯 Purpose
+
+Define a standardized process for task management within the team using the Task Management System. This process ensures consistency in how tasks are created, tracked, updated, and completed, maximizing team productivity and traceability.
+
+---
+
+## 2. 🧭 Scope
+
+Applies to all team members involved in planning, executing, and reviewing work items using the CLI-based task management system.
+
+---
+
+## 3. 📌 Process Description
+
+### Step-by-Step Workflow
+
+| Step | Description | Roles Involved | Input | Output |
+|------|-------------|----------------|-------|--------|
+| 1 | **Task Creation** | User | New work item | Task with title, description |
+| 2 | **Assign Priority** | User | Task metadata | Task marked Low/Medium/High |
+| 3 | **Define Dependencies** | User | List of blocking tasks | Updated task with dependency tree |
+| 4 | **Add Subtasks** | User | Task breakdown | Structured subtasks |
+| 5 | **Change Status** | User | Work in progress | Task moves from Pending → In Progress / Blocked / Done |
+| 6 | **View Tasks** | User | CLI Query | Visual list with statuses |
+| 7 | **Completion & Review** | User / Reviewer | Done tasks | Final task archive / audit |
+
+---
+
+## 4. 👥 Roles & Responsibilities
+
+| Role | Responsibilities |
+|------|------------------|
+| **Task Owner** | Creates and manages their own tasks. Ensures metadata is accurate. |
+| **Team Member** | Updates status based on progress. Communicates blockers. |
+| **Reviewer** | Validates task completion. Ensures quality and closure. |
+
+---
+
+## 5. 📊 Inputs & Outputs
+
+- **Inputs:**
+  - Work items (bugs, features, chores)
+  - User commands (via CLI)
+  - Task dependencies and breakdowns
+
+- **Outputs:**
+  - Task records (JSON & text files)
+  - Status updates
+  - Visual task summaries
+
+---
+
+## 6. 🔄 Exception Handling
+
+| Scenario | Action |
+|----------|--------|
+| User tries to mark task “Done” with unresolved dependencies | CLI should block and show dependency warning |
+| Task creation with missing fields | Show validation errors and guide correction |
+| Conflicting dependencies or circular logic | System logs and notifies with suggestions |
+
+---
+
+## 7. 📂 Tools & Systems Involved
+
+- **Primary Tool:** CLI Task Management System  
+- **Data Storage:** Local JSON files and text files  
+- **User Interface:** Terminal-based interaction  
+- **Version Control:** Git (for storing configuration or task archives)
+
+---
+
+## 8. 📈 Metrics for Success
+
+- 100% tasks initiated using the standard format
+- 90%+ status updates completed on time
+- <2% user-reported process exceptions
+- Reduction in duplicate or orphaned tasks
+- High adoption and ease-of-use feedback
+
+---
+
+## 9. 🚫 Out of Scope
+
+- Project-level planning and sprint management (handled in a separate tool)
+- Email or calendar integration
+- Multi-user real-time collaboration (handled outside CLI)
+
+---
+
+## 10. 🔐 Compliance / Governance
+
+- All task data must remain in approved repositories
+- Must follow naming conventions and tag usage
+- Regular audits for file structure and task hygiene
+
+---
+
+## 11. 🧪 Validation Plan
+
+- Run simulations of typical workflows using dummy data
+- Conduct dry-runs with 2-3 team members
+- Refine steps based on edge case feedback
+
+---
+
+Would you like this converted into a downloadable format (e.g. Word, PDF), or adapted to a **real process** your team currently follows? I can also align it more closely with tools like Notion, Jira, or Monday.com if needed.

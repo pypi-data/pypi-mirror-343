@@ -1,0 +1,41 @@
+# Task ID: 4
+# Title: Develop Task Field Mapping System
+# Status: done
+# Dependencies: 2 (done)
+# Priority: medium
+# Description: Create a flexible mapping system to translate between Taskinator and NextCloud task fields.
+
+# Details:
+Implement bidirectional field mapping between systems. Handle special cases like rich text conversion, priorities, dates, and task relationships. Create a mapping for NextCloud task lists to projects. Implement tagging for task relationships if NextCloud doesn't support child tasks. Design the mapping to be configurable and extensible.
+
+# Test Strategy:
+Write unit tests for field mapping in both directions. Test with various task types and edge cases. Verify that task relationships are preserved correctly.
+
+# Subtasks:
+## 1. Implement Core Bidirectional Mapping Engine [pending]
+### Dependencies: None
+### Priority: medium
+### Description: Create the foundation for translating fields between Taskinator and NextCloud task formats
+### Details:
+Design and implement a mapping engine class that can transform task objects between both systems. Create a registry of field mappings with transformation functions for each direction. Include basic field mappings for common properties like title, description, and completion status. Implement unit tests to verify correct transformation in both directions.
+
+## 2. Develop Special Case Field Handlers [pending]
+### Dependencies: 4.1
+### Priority: medium
+### Description: Create specialized handlers for complex field transformations like rich text, priorities, and dates
+### Details:
+Implement rich text conversion between NextCloud's format and Taskinator's format. Create priority mapping logic to translate between different priority scales. Build date/time handlers to manage timezone differences and format conversions for due dates, start dates, and reminders. Each handler should be a separate module that plugs into the core mapping engine.
+
+## 3. Build Task Relationship and Project Mapping [pending]
+### Dependencies: 4.1
+### Priority: medium
+### Description: Implement mapping for task hierarchies, parent-child relationships, and project organization
+### Details:
+Create logic to map NextCloud task lists to Taskinator projects. Implement bidirectional conversion for parent-child task relationships, using tagging as a fallback if NextCloud doesn't support hierarchical tasks. Design a consistent way to preserve relationships during synchronization. Add logic to handle task ordering within projects/lists.
+
+## 4. Create Configuration System for Extensibility [pending]
+### Dependencies: 4.1, 4.2, 4.3
+### Priority: medium
+### Description: Develop a configuration framework to make the mapping system customizable and extensible
+### Details:
+Design a configuration schema that allows defining custom field mappings without code changes. Implement loading of mapping configurations from files or database. Create an extension mechanism for registering custom field handlers. Build a validation system to ensure mapping configurations are valid. Add documentation on how to extend the mapping system with new fields or transformations.

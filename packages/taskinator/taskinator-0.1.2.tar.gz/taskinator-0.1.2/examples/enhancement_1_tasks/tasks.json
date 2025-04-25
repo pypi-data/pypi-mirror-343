@@ -1,0 +1,3635 @@
+{
+  "tasks": [
+    {
+      "status": "done",
+      "priority": "high",
+      "dependencies": [],
+      "subtasks": [
+        {
+          "status": "done",
+          "priority": "medium",
+          "dependencies": [],
+          "description": "Create authentication mechanism for NextCloud API with token management",
+          "details": "Develop an authentication module that handles OAuth2 token acquisition, storage, and renewal. Implement secure token storage, expiration tracking, and automatic refresh. Include configuration options for different authentication flows (client credentials, authorization code). Ensure tokens are properly included in API requests and handle 401 responses appropriately.",
+          "id": 1,
+          "title": "Implement Token-Based Authentication"
+        },
+        {
+          "status": "done",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Develop the central request/response processing system with error handling",
+          "details": "Create a robust HTTP client wrapper that formats requests for NextCloud Tasks API, properly sets headers and serializes payloads. Implement response parsing with appropriate data models, HTTP status code handling, and NextCloud-specific error detection. Create a comprehensive error classification system with custom exceptions for different error types. Add logging for debugging and monitoring purposes.",
+          "id": 2,
+          "title": "Build Core Request/Response Handler"
+        },
+        {
+          "status": "done",
+          "priority": "medium",
+          "dependencies": [
+            2
+          ],
+          "description": "Add mechanisms to handle API rate limits and batch requests for efficiency",
+          "details": "Create a rate limiter that tracks API usage and prevents exceeding NextCloud's limits. Implement request queuing with configurable concurrency limits. Develop a batching system that combines multiple operations into single API calls where supported. Add backpressure mechanisms to prevent memory issues with large request volumes. Include metrics for monitoring batch efficiency.",
+          "id": 3,
+          "title": "Implement Rate Limiting and Request Batching"
+        },
+        {
+          "status": "done",
+          "priority": "medium",
+          "dependencies": [
+            2,
+            3
+          ],
+          "description": "Implement retry mechanisms and fault tolerance strategies",
+          "details": "Create a configurable retry system with exponential backoff for transient errors. Implement circuit breaker pattern to prevent cascading failures. Add timeout handling with configurable limits. Develop fallback mechanisms for degraded operation modes. Include jitter in retry delays to prevent thundering herd problems. Create hooks for custom retry policies based on specific error conditions.",
+          "id": 4,
+          "title": "Add Retry Logic and Resilience Patterns"
+        },
+        {
+          "status": "done",
+          "priority": "medium",
+          "dependencies": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "description": "Create a clean API interface with comprehensive documentation and test support",
+          "details": "Design a clear, consistent interface for all NextCloud API operations. Implement interface segregation for better modularity. Add dependency injection points to facilitate mocking in tests. Create comprehensive inline documentation with examples. Develop mock implementations for testing. Generate API reference documentation. Create example code for common use cases. Include integration test helpers for end-to-end testing.",
+          "id": 5,
+          "title": "Design Testable Interface and Documentation"
+        }
+      ],
+      "description": "Create a robust API client to interact with NextCloud Tasks API, handling authentication, requests, and responses.",
+      "details": "Develop a dedicated client class that encapsulates all NextCloud API interactions. Implement token-based authentication, request formatting, response parsing, error handling, and retry logic. Support batching for efficient API usage and handle rate limits. The client should be designed with an interface that allows for easy mocking in tests.",
+      "testStrategy": "Write unit tests with mocked HTTP responses to test client behavior. Create integration tests against a test NextCloud instance. Test edge cases like network failures, rate limiting, and authentication issues.",
+      "created": 1744582285.144296,
+      "updated": 1744582285.144299,
+      "id": 1,
+      "title": "Implement NextCloud API Client",
+      "external_sync": [
+        {
+          "external_id": "945e77a9-1ce6-40b9-845c-a4646fb68c5c",
+          "sync_status": "synced",
+          "last_sync": 1744985375.270658,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/945e77a9-1ce6-40b9-845c-a4646fb68c5c"
+        },
+        {
+          "external_id": "48590427-e3f5-4376-9a21-da5cf7632bdc",
+          "sync_status": "synced",
+          "last_sync": 1744985741.387466,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/48590427-e3f5-4376-9a21-da5cf7632bdc"
+        },
+        {
+          "external_id": "c2db355f-722e-48b5-aa3f-7972a9f87024",
+          "sync_status": "synced",
+          "last_sync": 1744985924.962325,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c2db355f-722e-48b5-aa3f-7972a9f87024"
+        },
+        {
+          "external_id": "3dda57c5-d322-4fb8-b765-426ee51aa7e5",
+          "sync_status": "synced",
+          "last_sync": 1744986164.702452,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/3dda57c5-d322-4fb8-b765-426ee51aa7e5"
+        },
+        {
+          "external_id": "0ac416d9-1f76-47de-8441-1b91d15c81ce",
+          "sync_status": "synced",
+          "last_sync": 1744986493.259448,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/0ac416d9-1f76-47de-8441-1b91d15c81ce"
+        },
+        {
+          "external_id": "acc6983c-2086-4caa-b203-1ed77223c501",
+          "sync_status": "synced",
+          "last_sync": 1744986621.426918,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/acc6983c-2086-4caa-b203-1ed77223c501"
+        },
+        {
+          "external_id": "5b385fff-aa2e-4b3d-ab8c-3a2c5aa8db3c",
+          "sync_status": "synced",
+          "last_sync": 1744987220.973292,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/5b385fff-aa2e-4b3d-ab8c-3a2c5aa8db3c"
+        },
+        {
+          "external_id": "5b385fff-aa2e-4b3d-ab8c-3a2c5aa8db3c",
+          "sync_status": "error",
+          "last_sync": 1744987220.973292,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/5b385fff-aa2e-4b3d-ab8c-3a2c5aa8db3c",
+          "error": "Task with ID 5b385fff-aa2e-4b3d-ab8c-3a2c5aa8db3c not found"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987804.699722,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/cae2c062-70bf-4bb8-9040-c988ba266cea",
+          "error": "Task with ID 5b385fff-aa2e-4b3d-ab8c-3a2c5aa8db3c not found",
+          "external_id": "cae2c062-70bf-4bb8-9040-c988ba266cea"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987874.759818,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/698ba955-0c02-45d9-8a64-f6e8ebac36a9",
+          "error": "Task with ID 5b385fff-aa2e-4b3d-ab8c-3a2c5aa8db3c not found",
+          "external_id": "698ba955-0c02-45d9-8a64-f6e8ebac36a9"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987948.890399,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c6a5fa66-21f8-4ba8-a653-7e1672279667",
+          "error": "Task with ID 5b385fff-aa2e-4b3d-ab8c-3a2c5aa8db3c not found",
+          "external_id": "c6a5fa66-21f8-4ba8-a653-7e1672279667"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987948.890399,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c6a5fa66-21f8-4ba8-a653-7e1672279667",
+          "error": "Remote task not found",
+          "external_id": "c6a5fa66-21f8-4ba8-a653-7e1672279667"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987948.890399,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c6a5fa66-21f8-4ba8-a653-7e1672279667",
+          "error": "Remote task not found",
+          "external_id": "c6a5fa66-21f8-4ba8-a653-7e1672279667"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987948.890399,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c6a5fa66-21f8-4ba8-a653-7e1672279667",
+          "error": "Remote task not found",
+          "external_id": "c6a5fa66-21f8-4ba8-a653-7e1672279667"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987948.890399,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c6a5fa66-21f8-4ba8-a653-7e1672279667",
+          "error": "Remote task not found",
+          "external_id": "c6a5fa66-21f8-4ba8-a653-7e1672279667"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987948.890399,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c6a5fa66-21f8-4ba8-a653-7e1672279667",
+          "error": "Remote task not found",
+          "external_id": "c6a5fa66-21f8-4ba8-a653-7e1672279667"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987948.890399,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c6a5fa66-21f8-4ba8-a653-7e1672279667",
+          "error": "Remote task not found",
+          "external_id": "c6a5fa66-21f8-4ba8-a653-7e1672279667"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987948.890399,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c6a5fa66-21f8-4ba8-a653-7e1672279667",
+          "error": "Remote task not found",
+          "external_id": "c6a5fa66-21f8-4ba8-a653-7e1672279667"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744988962.23982,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/97ff2827-b93b-45b5-b0d1-b21c9078a8f6",
+          "error": "Remote task not found",
+          "external_id": "97ff2827-b93b-45b5-b0d1-b21c9078a8f6"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744988962.23982,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/97ff2827-b93b-45b5-b0d1-b21c9078a8f6",
+          "error": "Remote task not found",
+          "external_id": "97ff2827-b93b-45b5-b0d1-b21c9078a8f6"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989182.478906,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/056d49ae-0654-4b2b-b7d0-6205a4ef8196",
+          "error": "Remote task not found",
+          "external_id": "056d49ae-0654-4b2b-b7d0-6205a4ef8196"
+        },
+        {
+          "external_id": "0b3e7b03-0160-4ee1-8177-8d17186cdd9e",
+          "sync_status": "synced",
+          "last_sync": 1744989301.423901,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/0b3e7b03-0160-4ee1-8177-8d17186cdd9e"
+        },
+        {
+          "external_id": "1b331815-9967-4815-b7f9-23bdd0e98749",
+          "sync_status": "synced",
+          "last_sync": 1744989357.949278,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/1b331815-9967-4815-b7f9-23bdd0e98749"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989424.810783,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/f22d3857-ebc8-4474-acc9-2f71cb333b09",
+          "external_id": "f22d3857-ebc8-4474-acc9-2f71cb333b09"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989528.164019,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/18fed760-5b8e-4903-837f-ee2320831fc5",
+          "external_id": "18fed760-5b8e-4903-837f-ee2320831fc5"
+        },
+        {
+          "system": "nextcloud",
+          "external_id": "18fed760-5b8e-4903-837f-ee2320831fc5",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/18fed760-5b8e-4903-837f-ee2320831fc5",
+          "last_sync": 1744990041.612925,
+          "sync_status": "skipped",
+          "etag": null
+        }
+      ]
+    },
+    {
+      "status": "done",
+      "priority": "high",
+      "dependencies": [],
+      "subtasks": [
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [],
+          "description": "Add NextCloud-specific fields to the Task model to track synchronization state and remote identifiers",
+          "details": "Extend the Task model with the following fields: 'nextcloud_id' (string, nullable), 'sync_status' (enum: 'synced', 'pending_upload', 'pending_download', 'conflict', 'error'), 'last_synced_at' (timestamp), 'remote_modified_at' (timestamp), 'sync_error' (string, nullable). Create database migration scripts to add these fields. Update the relevant repositories and interfaces to support these new fields. Add getters and setters for the new fields in the Task model.",
+          "id": 1,
+          "title": "Design and implement synchronization metadata fields"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Implement a version history system to track changes and resolve conflicts during synchronization",
+          "details": "Create a new 'TaskVersion' model to store task snapshots with fields: 'task_id', 'version_number', 'data' (JSON blob of task state), 'created_at', 'source' (enum: 'local', 'remote'). Implement methods to create a new version when significant changes occur. Create a conflict resolution service that can compare versions and apply resolution strategies (latest wins, manual merge, etc.). Add UI indicators for conflicts and a conflict resolution interface. Implement version pruning to prevent unlimited history growth.",
+          "id": 2,
+          "title": "Create version tracking system for conflict resolution"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Create a mapping system to translate task fields between Taskinator and NextCloud formats",
+          "details": "Create a TaskMapper service that defines bidirectional mappings between Taskinator fields and NextCloud fields. Map core fields like title, description, due date, priority, and completion status. Handle special cases like recurring tasks, attachments, and custom fields. Implement serialization methods to convert Task objects to NextCloud format and deserialization methods to create/update Task objects from NextCloud data. Add unit tests to verify correct mapping in both directions for various task configurations.",
+          "id": 3,
+          "title": "Develop bidirectional field mappings between Taskinator and NextCloud"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1,
+            2,
+            3
+          ],
+          "description": "Verify and maintain compatibility with existing Taskinator features when using the extended data model",
+          "details": "Audit all services and repositories that interact with the Task model and update them to handle the new fields appropriately. Add null checks and default values for the new fields to ensure existing code paths work correctly. Update the serialization/deserialization logic for API endpoints, storage, and export/import features. Create integration tests that verify all existing features work with both synced and non-synced tasks. Update task creation and editing workflows to handle the new fields while maintaining the existing user experience for non-NextCloud users.",
+          "id": 4,
+          "title": "Ensure backward compatibility with existing functionality"
+        }
+      ],
+      "description": "Enhance the existing Taskinator data model to include NextCloud-specific fields and synchronization metadata.",
+      "details": "Add fields to the task model to store NextCloud IDs, synchronization status, last sync timestamp, and modification history. Implement version tracking for conflict resolution. Create mappings between Taskinator and NextCloud task fields. Design the model extensions to be non-intrusive to existing functionality.",
+      "testStrategy": "Write unit tests for the extended data model. Verify that existing functionality works with the extended model. Test serialization and deserialization of tasks with NextCloud metadata.",
+      "created": 1744582285.144304,
+      "updated": 1744582285.144305,
+      "id": 2,
+      "title": "Extend Task Data Model for NextCloud Integration",
+      "external_sync": [
+        {
+          "external_id": "dd64ecdb-79d5-465a-ac74-64198708f8b5",
+          "sync_status": "synced",
+          "last_sync": 1744985375.36781,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/dd64ecdb-79d5-465a-ac74-64198708f8b5"
+        },
+        {
+          "external_id": "7dbb72f0-e2f6-4aa4-9bb5-d28aa663bacb",
+          "sync_status": "synced",
+          "last_sync": 1744985741.463057,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/7dbb72f0-e2f6-4aa4-9bb5-d28aa663bacb"
+        },
+        {
+          "external_id": "3cd36ba7-ac82-460a-9562-6f5d982f898e",
+          "sync_status": "synced",
+          "last_sync": 1744985925.047841,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/3cd36ba7-ac82-460a-9562-6f5d982f898e"
+        },
+        {
+          "external_id": "dbc618d5-7635-4c27-a9d5-3d9dd29e7702",
+          "sync_status": "synced",
+          "last_sync": 1744986164.773307,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/dbc618d5-7635-4c27-a9d5-3d9dd29e7702"
+        },
+        {
+          "external_id": "67a3c922-76b1-4a46-9b68-bbcdb65d8094",
+          "sync_status": "synced",
+          "last_sync": 1744986493.33689,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/67a3c922-76b1-4a46-9b68-bbcdb65d8094"
+        },
+        {
+          "external_id": "ac5e754b-ed0c-4532-9345-9d748c568436",
+          "sync_status": "synced",
+          "last_sync": 1744986621.516057,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ac5e754b-ed0c-4532-9345-9d748c568436"
+        },
+        {
+          "external_id": "eab588c5-fad5-4c0b-86e2-821a75523bdf",
+          "sync_status": "synced",
+          "last_sync": 1744987221.050809,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/eab588c5-fad5-4c0b-86e2-821a75523bdf"
+        },
+        {
+          "external_id": "eab588c5-fad5-4c0b-86e2-821a75523bdf",
+          "sync_status": "error",
+          "last_sync": 1744987221.050809,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/eab588c5-fad5-4c0b-86e2-821a75523bdf",
+          "error": "Task with ID eab588c5-fad5-4c0b-86e2-821a75523bdf not found"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987804.755747,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/dcaf2f62-a9dd-49ce-aba3-8f788dc633cf",
+          "error": "Task with ID eab588c5-fad5-4c0b-86e2-821a75523bdf not found",
+          "external_id": "dcaf2f62-a9dd-49ce-aba3-8f788dc633cf"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987875.067105,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c8caf7de-b4b4-4c92-b396-183f7c08d1f9",
+          "error": "Task with ID eab588c5-fad5-4c0b-86e2-821a75523bdf not found",
+          "external_id": "c8caf7de-b4b4-4c92-b396-183f7c08d1f9"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987948.992901,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/82e16c24-1d7d-4f52-893e-ae2a24c4a29a",
+          "error": "Task with ID eab588c5-fad5-4c0b-86e2-821a75523bdf not found",
+          "external_id": "82e16c24-1d7d-4f52-893e-ae2a24c4a29a"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987948.992901,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/82e16c24-1d7d-4f52-893e-ae2a24c4a29a",
+          "error": "Remote task not found",
+          "external_id": "82e16c24-1d7d-4f52-893e-ae2a24c4a29a"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987948.992901,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/82e16c24-1d7d-4f52-893e-ae2a24c4a29a",
+          "error": "Remote task not found",
+          "external_id": "82e16c24-1d7d-4f52-893e-ae2a24c4a29a"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987948.992901,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/82e16c24-1d7d-4f52-893e-ae2a24c4a29a",
+          "error": "Remote task not found",
+          "external_id": "82e16c24-1d7d-4f52-893e-ae2a24c4a29a"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987948.992901,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/82e16c24-1d7d-4f52-893e-ae2a24c4a29a",
+          "error": "Remote task not found",
+          "external_id": "82e16c24-1d7d-4f52-893e-ae2a24c4a29a"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987948.992901,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/82e16c24-1d7d-4f52-893e-ae2a24c4a29a",
+          "error": "Remote task not found",
+          "external_id": "82e16c24-1d7d-4f52-893e-ae2a24c4a29a"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987948.992901,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/82e16c24-1d7d-4f52-893e-ae2a24c4a29a",
+          "error": "Remote task not found",
+          "external_id": "82e16c24-1d7d-4f52-893e-ae2a24c4a29a"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987948.992901,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/82e16c24-1d7d-4f52-893e-ae2a24c4a29a",
+          "error": "Remote task not found",
+          "external_id": "82e16c24-1d7d-4f52-893e-ae2a24c4a29a"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744988962.559173,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/919fba26-17f3-495d-88df-78c11219553e",
+          "error": "Remote task not found",
+          "external_id": "919fba26-17f3-495d-88df-78c11219553e"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744988962.559173,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/919fba26-17f3-495d-88df-78c11219553e",
+          "error": "Remote task not found",
+          "external_id": "919fba26-17f3-495d-88df-78c11219553e"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989182.799654,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/5ed652f0-c0ba-49f7-a5b9-cca5ae712a7b",
+          "error": "Remote task not found",
+          "external_id": "5ed652f0-c0ba-49f7-a5b9-cca5ae712a7b"
+        },
+        {
+          "external_id": "ff65fc9c-cf94-44f5-b291-423e6323d506",
+          "sync_status": "synced",
+          "last_sync": 1744989301.734755,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ff65fc9c-cf94-44f5-b291-423e6323d506"
+        },
+        {
+          "external_id": "bd009d76-2aa0-4540-bcdd-a6fd4e68c22a",
+          "sync_status": "synced",
+          "last_sync": 1744989358.251926,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/bd009d76-2aa0-4540-bcdd-a6fd4e68c22a"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989425.109333,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/8b73fd3c-b358-41fa-aa10-50df37e4aca6",
+          "external_id": "8b73fd3c-b358-41fa-aa10-50df37e4aca6"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989528.466756,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/4b648d31-6470-4daa-9b7b-b3a8e427062f",
+          "external_id": "4b648d31-6470-4daa-9b7b-b3a8e427062f"
+        },
+        {
+          "system": "nextcloud",
+          "external_id": "4b648d31-6470-4daa-9b7b-b3a8e427062f",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/4b648d31-6470-4daa-9b7b-b3a8e427062f",
+          "last_sync": 1744990041.843582,
+          "sync_status": "skipped",
+          "etag": null
+        }
+      ]
+    },
+    {
+      "status": "done",
+      "priority": "high",
+      "dependencies": [],
+      "subtasks": [
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [],
+          "description": "Create a system to securely store and retrieve NextCloud credentials using environment variables",
+          "details": "1. Create a .env file template with placeholders for NEXTCLOUD_URL, NEXTCLOUD_USERNAME, and NEXTCLOUD_PASSWORD/TOKEN variables\n2. Implement a credentials manager class that loads these values using dotenv or a similar package\n3. Add validation to ensure all required credentials are present\n4. Create getter methods that provide access to credentials without exposing them directly\n5. Implement safeguards to prevent credentials from being logged or printed\n6. Add documentation on how to properly set up environment variables",
+          "id": 1,
+          "title": "Implement Secure Environment Variable Storage"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Create a system to manage NextCloud authentication sessions and automatically refresh tokens when needed",
+          "details": "1. Implement token storage that securely maintains the current access token\n2. Add functionality to detect token expiration\n3. Create a token refresh mechanism that uses the refresh token to obtain a new access token\n4. Implement automatic token refresh when making API calls with expired tokens\n5. Add session timeout handling\n6. Create session validation methods to verify if the current session is active\n7. Implement proper error handling for authentication failures",
+          "id": 2,
+          "title": "Implement Token Refresh and Session Management"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Create an encryption system to protect any NextCloud data that is cached locally",
+          "details": "1. Research and select an appropriate encryption library (e.g., node-crypto, crypto-js)\n2. Implement a data encryption service that encrypts data before caching\n3. Create a secure key management system that generates and stores encryption keys\n4. Implement decryption functionality to retrieve cached data\n5. Add integrity verification to detect tampering with cached data\n6. Create a cache cleanup mechanism to securely delete sensitive data when no longer needed\n7. Add configuration options to control encryption strength and algorithms",
+          "id": 3,
+          "title": "Implement Encryption for Cached NextCloud Data"
+        }
+      ],
+      "description": "Create a secure system for storing and accessing NextCloud credentials.",
+      "details": "Implement secure storage for NextCloud tokens and credentials using environment variables. Ensure credentials are never logged or exposed. Add support for token refresh and session management. Implement encryption for any cached NextCloud data.",
+      "testStrategy": "Perform security testing to ensure credentials cannot be exposed. Test token refresh logic. Verify that credentials are properly secured in memory and storage.",
+      "created": 1744582285.144307,
+      "updated": 1744582285.144308,
+      "id": 3,
+      "title": "Implement Secure Credential Management",
+      "external_sync": [
+        {
+          "external_id": "2549afd9-66c0-4794-a446-9bd9607d6bd1",
+          "sync_status": "synced",
+          "last_sync": 1744985375.43301,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/2549afd9-66c0-4794-a446-9bd9607d6bd1"
+        },
+        {
+          "external_id": "7140b3fc-e5b1-4506-8728-87455ae5be3f",
+          "sync_status": "synced",
+          "last_sync": 1744985741.521344,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/7140b3fc-e5b1-4506-8728-87455ae5be3f"
+        },
+        {
+          "external_id": "1816b061-10ab-42e2-b3c7-2d6901599201",
+          "sync_status": "synced",
+          "last_sync": 1744985925.139826,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/1816b061-10ab-42e2-b3c7-2d6901599201"
+        },
+        {
+          "external_id": "daf15eb4-95fd-4352-baf1-466b878ae2a1",
+          "sync_status": "synced",
+          "last_sync": 1744986164.859302,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/daf15eb4-95fd-4352-baf1-466b878ae2a1"
+        },
+        {
+          "external_id": "81bac4b1-e0cd-4e13-80c5-975ee7a34a67",
+          "sync_status": "synced",
+          "last_sync": 1744986493.385813,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/81bac4b1-e0cd-4e13-80c5-975ee7a34a67"
+        },
+        {
+          "external_id": "89caf4e8-5543-4c6c-b987-0471ab8b6cbd",
+          "sync_status": "synced",
+          "last_sync": 1744986621.60548,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/89caf4e8-5543-4c6c-b987-0471ab8b6cbd"
+        },
+        {
+          "external_id": "5e5654e8-3a44-45b7-bb5d-799e3872ffcf",
+          "sync_status": "synced",
+          "last_sync": 1744987221.140613,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/5e5654e8-3a44-45b7-bb5d-799e3872ffcf"
+        },
+        {
+          "external_id": "5e5654e8-3a44-45b7-bb5d-799e3872ffcf",
+          "sync_status": "error",
+          "last_sync": 1744987221.140613,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/5e5654e8-3a44-45b7-bb5d-799e3872ffcf",
+          "error": "Task with ID 5e5654e8-3a44-45b7-bb5d-799e3872ffcf not found"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987804.809173,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/1cbdb1af-fc53-43db-99f0-77b242e65cbb",
+          "error": "Task with ID 5e5654e8-3a44-45b7-bb5d-799e3872ffcf not found",
+          "external_id": "1cbdb1af-fc53-43db-99f0-77b242e65cbb"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987875.390089,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/1fa134ad-43ec-4c48-a6ef-9efe387de286",
+          "error": "Task with ID 5e5654e8-3a44-45b7-bb5d-799e3872ffcf not found",
+          "external_id": "1fa134ad-43ec-4c48-a6ef-9efe387de286"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987949.082854,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/7dea9817-299c-4df3-9e07-f2069a6fc3bb",
+          "error": "Task with ID 5e5654e8-3a44-45b7-bb5d-799e3872ffcf not found",
+          "external_id": "7dea9817-299c-4df3-9e07-f2069a6fc3bb"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.082854,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/7dea9817-299c-4df3-9e07-f2069a6fc3bb",
+          "error": "Remote task not found",
+          "external_id": "7dea9817-299c-4df3-9e07-f2069a6fc3bb"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.082854,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/7dea9817-299c-4df3-9e07-f2069a6fc3bb",
+          "error": "Remote task not found",
+          "external_id": "7dea9817-299c-4df3-9e07-f2069a6fc3bb"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.082854,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/7dea9817-299c-4df3-9e07-f2069a6fc3bb",
+          "error": "Remote task not found",
+          "external_id": "7dea9817-299c-4df3-9e07-f2069a6fc3bb"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.082854,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/7dea9817-299c-4df3-9e07-f2069a6fc3bb",
+          "error": "Remote task not found",
+          "external_id": "7dea9817-299c-4df3-9e07-f2069a6fc3bb"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.082854,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/7dea9817-299c-4df3-9e07-f2069a6fc3bb",
+          "error": "Remote task not found",
+          "external_id": "7dea9817-299c-4df3-9e07-f2069a6fc3bb"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.082854,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/7dea9817-299c-4df3-9e07-f2069a6fc3bb",
+          "error": "Remote task not found",
+          "external_id": "7dea9817-299c-4df3-9e07-f2069a6fc3bb"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.082854,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/7dea9817-299c-4df3-9e07-f2069a6fc3bb",
+          "error": "Remote task not found",
+          "external_id": "7dea9817-299c-4df3-9e07-f2069a6fc3bb"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744988962.876407,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/40322cf3-172c-4f5b-b83c-9eab6197afa6",
+          "error": "Remote task not found",
+          "external_id": "40322cf3-172c-4f5b-b83c-9eab6197afa6"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744988962.876407,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/40322cf3-172c-4f5b-b83c-9eab6197afa6",
+          "error": "Remote task not found",
+          "external_id": "40322cf3-172c-4f5b-b83c-9eab6197afa6"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989183.062018,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/34eb5587-d129-4e91-b8d2-b43b0b09a698",
+          "error": "Remote task not found",
+          "external_id": "34eb5587-d129-4e91-b8d2-b43b0b09a698"
+        },
+        {
+          "external_id": "cf629464-c923-4c7a-86c2-25faaa050e7a",
+          "sync_status": "synced",
+          "last_sync": 1744989302.013569,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/cf629464-c923-4c7a-86c2-25faaa050e7a"
+        },
+        {
+          "external_id": "bbbf648e-3c11-407a-8565-f1cf23dc174f",
+          "sync_status": "synced",
+          "last_sync": 1744989358.567506,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/bbbf648e-3c11-407a-8565-f1cf23dc174f"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989425.383566,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/24a79242-4092-41cf-a260-fac679607ff1",
+          "external_id": "24a79242-4092-41cf-a260-fac679607ff1"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989528.746601,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/03cb2d86-db97-41cd-8d0b-fdeabe837520",
+          "external_id": "03cb2d86-db97-41cd-8d0b-fdeabe837520"
+        },
+        {
+          "system": "nextcloud",
+          "external_id": "03cb2d86-db97-41cd-8d0b-fdeabe837520",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/03cb2d86-db97-41cd-8d0b-fdeabe837520",
+          "last_sync": 1744990042.073047,
+          "sync_status": "skipped",
+          "etag": null
+        }
+      ]
+    },
+    {
+      "status": "done",
+      "priority": "medium",
+      "dependencies": [
+        2
+      ],
+      "subtasks": [
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [],
+          "description": "Create the foundation for translating fields between Taskinator and NextCloud task formats",
+          "details": "Design and implement a mapping engine class that can transform task objects between both systems. Create a registry of field mappings with transformation functions for each direction. Include basic field mappings for common properties like title, description, and completion status. Implement unit tests to verify correct transformation in both directions.",
+          "id": 1,
+          "title": "Implement Core Bidirectional Mapping Engine"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Create specialized handlers for complex field transformations like rich text, priorities, and dates",
+          "details": "Implement rich text conversion between NextCloud's format and Taskinator's format. Create priority mapping logic to translate between different priority scales. Build date/time handlers to manage timezone differences and format conversions for due dates, start dates, and reminders. Each handler should be a separate module that plugs into the core mapping engine.",
+          "id": 2,
+          "title": "Develop Special Case Field Handlers"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Implement mapping for task hierarchies, parent-child relationships, and project organization",
+          "details": "Create logic to map NextCloud task lists to Taskinator projects. Implement bidirectional conversion for parent-child task relationships, using tagging as a fallback if NextCloud doesn't support hierarchical tasks. Design a consistent way to preserve relationships during synchronization. Add logic to handle task ordering within projects/lists.",
+          "id": 3,
+          "title": "Build Task Relationship and Project Mapping"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1,
+            2,
+            3
+          ],
+          "description": "Develop a configuration framework to make the mapping system customizable and extensible",
+          "details": "Design a configuration schema that allows defining custom field mappings without code changes. Implement loading of mapping configurations from files or database. Create an extension mechanism for registering custom field handlers. Build a validation system to ensure mapping configurations are valid. Add documentation on how to extend the mapping system with new fields or transformations.",
+          "id": 4,
+          "title": "Create Configuration System for Extensibility"
+        }
+      ],
+      "description": "Create a flexible mapping system to translate between Taskinator and NextCloud task fields.",
+      "details": "Implement bidirectional field mapping between systems. Handle special cases like rich text conversion, priorities, dates, and task relationships. Create a mapping for NextCloud task lists to projects. Implement tagging for task relationships if NextCloud doesn't support child tasks. Design the mapping to be configurable and extensible.",
+      "testStrategy": "Write unit tests for field mapping in both directions. Test with various task types and edge cases. Verify that task relationships are preserved correctly.",
+      "created": 1744582285.14431,
+      "updated": 1744582285.14431,
+      "id": 4,
+      "title": "Develop Task Field Mapping System",
+      "external_sync": [
+        {
+          "external_id": "24d6852c-1145-49e3-8ff8-7b9d2d111046",
+          "sync_status": "synced",
+          "last_sync": 1744985375.507363,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/24d6852c-1145-49e3-8ff8-7b9d2d111046"
+        },
+        {
+          "external_id": "31413a5f-84d4-4815-961c-27e3720c0e12",
+          "sync_status": "synced",
+          "last_sync": 1744985741.584697,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/31413a5f-84d4-4815-961c-27e3720c0e12"
+        },
+        {
+          "external_id": "f56d834f-293c-4fa6-b722-8cb323b527d6",
+          "sync_status": "synced",
+          "last_sync": 1744985925.229633,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/f56d834f-293c-4fa6-b722-8cb323b527d6"
+        },
+        {
+          "external_id": "5a705c37-ac19-4dec-b96e-7934029390c5",
+          "sync_status": "synced",
+          "last_sync": 1744986164.950049,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/5a705c37-ac19-4dec-b96e-7934029390c5"
+        },
+        {
+          "external_id": "a7edc588-bd60-4cdc-aaf7-14f56445f62c",
+          "sync_status": "synced",
+          "last_sync": 1744986493.456227,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/a7edc588-bd60-4cdc-aaf7-14f56445f62c"
+        },
+        {
+          "external_id": "ede9a77b-6d11-4afa-b3b7-be286718ac3f",
+          "sync_status": "synced",
+          "last_sync": 1744986621.696917,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ede9a77b-6d11-4afa-b3b7-be286718ac3f"
+        },
+        {
+          "external_id": "ca11691e-b57e-4ed7-8024-f496e0505596",
+          "sync_status": "synced",
+          "last_sync": 1744987221.232385,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ca11691e-b57e-4ed7-8024-f496e0505596"
+        },
+        {
+          "external_id": "ca11691e-b57e-4ed7-8024-f496e0505596",
+          "sync_status": "error",
+          "last_sync": 1744987221.232385,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ca11691e-b57e-4ed7-8024-f496e0505596",
+          "error": "Task with ID ca11691e-b57e-4ed7-8024-f496e0505596 not found"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987804.867697,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/171a27b9-2eb5-4405-ad1b-232a88c9d8ff",
+          "error": "Task with ID ca11691e-b57e-4ed7-8024-f496e0505596 not found",
+          "external_id": "171a27b9-2eb5-4405-ad1b-232a88c9d8ff"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987875.62873,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c6d87111-81ef-4d6c-8801-6d3475a74bb7",
+          "error": "Task with ID ca11691e-b57e-4ed7-8024-f496e0505596 not found",
+          "external_id": "c6d87111-81ef-4d6c-8801-6d3475a74bb7"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987949.18228,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/338311ff-9149-4bc1-b004-b4c8d7f41421",
+          "error": "Task with ID ca11691e-b57e-4ed7-8024-f496e0505596 not found",
+          "external_id": "338311ff-9149-4bc1-b004-b4c8d7f41421"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.18228,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/338311ff-9149-4bc1-b004-b4c8d7f41421",
+          "error": "Remote task not found",
+          "external_id": "338311ff-9149-4bc1-b004-b4c8d7f41421"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.18228,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/338311ff-9149-4bc1-b004-b4c8d7f41421",
+          "error": "Remote task not found",
+          "external_id": "338311ff-9149-4bc1-b004-b4c8d7f41421"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.18228,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/338311ff-9149-4bc1-b004-b4c8d7f41421",
+          "error": "Remote task not found",
+          "external_id": "338311ff-9149-4bc1-b004-b4c8d7f41421"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.18228,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/338311ff-9149-4bc1-b004-b4c8d7f41421",
+          "error": "Remote task not found",
+          "external_id": "338311ff-9149-4bc1-b004-b4c8d7f41421"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.18228,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/338311ff-9149-4bc1-b004-b4c8d7f41421",
+          "error": "Remote task not found",
+          "external_id": "338311ff-9149-4bc1-b004-b4c8d7f41421"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.18228,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/338311ff-9149-4bc1-b004-b4c8d7f41421",
+          "error": "Remote task not found",
+          "external_id": "338311ff-9149-4bc1-b004-b4c8d7f41421"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.18228,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/338311ff-9149-4bc1-b004-b4c8d7f41421",
+          "error": "Remote task not found",
+          "external_id": "338311ff-9149-4bc1-b004-b4c8d7f41421"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744988963.062949,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/5d5c43fc-8b0f-417c-bb80-5c2d0961a9e1",
+          "error": "Remote task not found",
+          "external_id": "5d5c43fc-8b0f-417c-bb80-5c2d0961a9e1"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744988963.062949,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/5d5c43fc-8b0f-417c-bb80-5c2d0961a9e1",
+          "error": "Remote task not found",
+          "external_id": "5d5c43fc-8b0f-417c-bb80-5c2d0961a9e1"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989183.363916,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/541c1bbc-0d5d-4f49-8d74-0dd89eeb14dd",
+          "error": "Remote task not found",
+          "external_id": "541c1bbc-0d5d-4f49-8d74-0dd89eeb14dd"
+        },
+        {
+          "external_id": "9096c208-e4d8-4b1c-bf2f-43ccaac3d20b",
+          "sync_status": "synced",
+          "last_sync": 1744989302.293846,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/9096c208-e4d8-4b1c-bf2f-43ccaac3d20b"
+        },
+        {
+          "external_id": "c396223f-fe7a-43b1-a2bb-df2614648682",
+          "sync_status": "synced",
+          "last_sync": 1744989358.878597,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c396223f-fe7a-43b1-a2bb-df2614648682"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989425.69203,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ad67aecd-9448-44ed-804f-54a731ce77f8",
+          "external_id": "ad67aecd-9448-44ed-804f-54a731ce77f8"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989529.056402,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/3f3e2195-fbb7-4e9a-850a-abfeb63f3c71",
+          "external_id": "3f3e2195-fbb7-4e9a-850a-abfeb63f3c71"
+        },
+        {
+          "system": "nextcloud",
+          "external_id": "3f3e2195-fbb7-4e9a-850a-abfeb63f3c71",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/3f3e2195-fbb7-4e9a-850a-abfeb63f3c71",
+          "last_sync": 1744990042.302792,
+          "sync_status": "skipped",
+          "etag": null
+        }
+      ]
+    },
+    {
+      "status": "done",
+      "priority": "high",
+      "dependencies": [
+        1,
+        2,
+        4
+      ],
+      "subtasks": [
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [],
+          "description": "Create a system that detects changes in both local and remote task management systems.",
+          "details": "Develop two change detection components: LocalChangeDetector and RemoteChangeDetector. Each detector should maintain a timestamp of last sync and compare current state with previous state to identify created, updated, and deleted items. Implement a checksum mechanism for efficient comparison. Store previous state in a local database for comparison. The detectors should return a standardized ChangeSet object containing all modifications since last sync.",
+          "id": 1,
+          "title": "Implement Change Detection System"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Create an algorithm that minimizes data transfer by only synchronizing changes rather than full datasets.",
+          "details": "Implement a DeltaSyncManager that takes ChangeSet objects from both detectors and creates an optimized sync plan. Use a differential algorithm that compares object properties to identify only the fields that changed. Implement data compression for sync payloads. Create a bandwidth usage tracker to monitor and report on efficiency gains. The algorithm should handle partial sync failures and resume capability.",
+          "id": 2,
+          "title": "Develop Delta Sync Algorithm"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1,
+            2
+          ],
+          "description": "Implement functionality allowing users to manually trigger synchronization operations.",
+          "details": "Create a ManualSyncController with methods for initiating full or selective syncs. Add a UI component for sync progress visualization with cancel capability. Implement detailed logging of manual sync operations. Add post-sync reporting to show users what changed. Ensure the manual sync respects user-defined sync scope and filtering rules.",
+          "id": 3,
+          "title": "Build Manual Sync Mode"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1,
+            2
+          ],
+          "description": "Develop a system for automatic synchronization based on various triggers and schedules.",
+          "details": "Create an AutoSyncScheduler that supports interval-based syncing (every X minutes/hours). Implement event-based triggers that initiate sync after specific actions (task creation, completion, etc.). Add network awareness to pause syncing when offline and resume when connection is restored. Develop a background service that manages the sync schedule and executes syncs without blocking the UI. Include battery and data usage optimizations for mobile devices.",
+          "id": 4,
+          "title": "Implement Automatic Sync Mode with Triggers"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1,
+            2
+          ],
+          "description": "Implement functionality to allow users to define which tasks and properties are synchronized.",
+          "details": "Build a SyncFilterManager that allows filtering by project, tag, priority, due date range, and completion status. Implement property-level filtering to specify which fields sync (e.g., sync descriptions but not attachments). Create a configuration UI for users to define and save sync profiles. Support blacklist and whitelist approaches to filtering. Ensure filters are applied consistently in both sync directions.",
+          "id": 5,
+          "title": "Create Configurable Sync Scope and Filtering"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1,
+            2
+          ],
+          "description": "Create a system that detects and resolves conflicts when both systems have modified the same task.",
+          "details": "Implement a ConflictDetector that identifies when the same item has been modified in both systems since last sync. Create resolution strategies: newest-wins, source-priority, manual resolution. Build a ConflictResolutionUI for when manual intervention is needed. Implement a conflict history log to track resolution decisions. Add the ability to set default resolution strategies per project or globally. Create a notification system to alert users of unresolved conflicts.",
+          "id": 6,
+          "title": "Develop Conflict Resolution System"
+        }
+      ],
+      "description": "Develop the core synchronization engine that handles bidirectional updates between systems.",
+      "details": "Create a sync engine that detects changes in both systems, applies updates, and resolves conflicts. Implement delta sync to minimize data transfer. Support manual and automatic synchronization modes. Add configurable sync scope to allow filtering which tasks are synchronized. Develop conflict resolution strategies with user configuration options.",
+      "testStrategy": "Create comprehensive tests for various sync scenarios. Test conflict resolution with different strategies. Verify delta sync efficiency. Test with large task sets to ensure performance.",
+      "created": 1744582285.144312,
+      "updated": 1744582285.144313,
+      "id": 5,
+      "title": "Implement Bidirectional Sync Engine",
+      "external_sync": [
+        {
+          "external_id": "c511916f-523e-48d6-8051-90468005e595",
+          "sync_status": "synced",
+          "last_sync": 1744985375.584499,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c511916f-523e-48d6-8051-90468005e595"
+        },
+        {
+          "external_id": "257dec04-4e8a-4be0-b7f1-71c79354d614",
+          "sync_status": "synced",
+          "last_sync": 1744985741.666111,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/257dec04-4e8a-4be0-b7f1-71c79354d614"
+        },
+        {
+          "external_id": "7ec92a52-bf3e-4346-9550-b2f28d0a1272",
+          "sync_status": "synced",
+          "last_sync": 1744985925.30269,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/7ec92a52-bf3e-4346-9550-b2f28d0a1272"
+        },
+        {
+          "external_id": "47fe4b18-1738-4464-ae79-fbbffdde3ab4",
+          "sync_status": "synced",
+          "last_sync": 1744986165.039827,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/47fe4b18-1738-4464-ae79-fbbffdde3ab4"
+        },
+        {
+          "external_id": "eea777ce-ca58-4a6d-965f-81dde4146519",
+          "sync_status": "synced",
+          "last_sync": 1744986493.522229,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/eea777ce-ca58-4a6d-965f-81dde4146519"
+        },
+        {
+          "external_id": "d3fb4f74-0612-48bc-9aaa-843bcef03fb7",
+          "sync_status": "synced",
+          "last_sync": 1744986621.78649,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/d3fb4f74-0612-48bc-9aaa-843bcef03fb7"
+        },
+        {
+          "external_id": "78970166-45f4-47ef-bd6c-7426fa7521ef",
+          "sync_status": "synced",
+          "last_sync": 1744987221.323324,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/78970166-45f4-47ef-bd6c-7426fa7521ef"
+        },
+        {
+          "external_id": "78970166-45f4-47ef-bd6c-7426fa7521ef",
+          "sync_status": "error",
+          "last_sync": 1744987221.323324,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/78970166-45f4-47ef-bd6c-7426fa7521ef",
+          "error": "Task with ID 78970166-45f4-47ef-bd6c-7426fa7521ef not found"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987804.930073,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/f58b05f5-84ac-4bcb-82a3-d64889e4f38e",
+          "error": "Task with ID 78970166-45f4-47ef-bd6c-7426fa7521ef not found",
+          "external_id": "f58b05f5-84ac-4bcb-82a3-d64889e4f38e"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987875.938328,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/1928346c-9330-4265-b309-f6ec3474eca7",
+          "error": "Task with ID 78970166-45f4-47ef-bd6c-7426fa7521ef not found",
+          "external_id": "1928346c-9330-4265-b309-f6ec3474eca7"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987949.286034,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/b68c4446-8733-41eb-87a7-8480f6df8150",
+          "error": "Task with ID 78970166-45f4-47ef-bd6c-7426fa7521ef not found",
+          "external_id": "b68c4446-8733-41eb-87a7-8480f6df8150"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.286034,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/b68c4446-8733-41eb-87a7-8480f6df8150",
+          "error": "Remote task not found",
+          "external_id": "b68c4446-8733-41eb-87a7-8480f6df8150"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.286034,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/b68c4446-8733-41eb-87a7-8480f6df8150",
+          "error": "Remote task not found",
+          "external_id": "b68c4446-8733-41eb-87a7-8480f6df8150"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.286034,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/b68c4446-8733-41eb-87a7-8480f6df8150",
+          "error": "Remote task not found",
+          "external_id": "b68c4446-8733-41eb-87a7-8480f6df8150"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.286034,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/b68c4446-8733-41eb-87a7-8480f6df8150",
+          "error": "Remote task not found",
+          "external_id": "b68c4446-8733-41eb-87a7-8480f6df8150"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.286034,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/b68c4446-8733-41eb-87a7-8480f6df8150",
+          "error": "Remote task not found",
+          "external_id": "b68c4446-8733-41eb-87a7-8480f6df8150"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.286034,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/b68c4446-8733-41eb-87a7-8480f6df8150",
+          "error": "Remote task not found",
+          "external_id": "b68c4446-8733-41eb-87a7-8480f6df8150"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.286034,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/b68c4446-8733-41eb-87a7-8480f6df8150",
+          "error": "Remote task not found",
+          "external_id": "b68c4446-8733-41eb-87a7-8480f6df8150"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744988963.294756,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/672be5c7-6c6e-430a-87e1-b0c918d21114",
+          "error": "Remote task not found",
+          "external_id": "672be5c7-6c6e-430a-87e1-b0c918d21114"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744988963.294756,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/672be5c7-6c6e-430a-87e1-b0c918d21114",
+          "error": "Remote task not found",
+          "external_id": "672be5c7-6c6e-430a-87e1-b0c918d21114"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989183.68462,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/90f3dc16-2422-4aef-bd01-3a25611fac64",
+          "error": "Remote task not found",
+          "external_id": "90f3dc16-2422-4aef-bd01-3a25611fac64"
+        },
+        {
+          "external_id": "eac240ef-8052-4b6c-b080-21d61b944a92",
+          "sync_status": "synced",
+          "last_sync": 1744989302.530315,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/eac240ef-8052-4b6c-b080-21d61b944a92"
+        },
+        {
+          "external_id": "8a7ae9cd-3c16-47fe-825e-891f72ed8058",
+          "sync_status": "synced",
+          "last_sync": 1744989359.201484,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/8a7ae9cd-3c16-47fe-825e-891f72ed8058"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989426.009164,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/6aa1d78e-7290-4d4e-aa4a-dc661c3f9bf3",
+          "external_id": "6aa1d78e-7290-4d4e-aa4a-dc661c3f9bf3"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989529.34987,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/984b83a0-13e6-45b8-9f9c-8406c7882b01",
+          "external_id": "984b83a0-13e6-45b8-9f9c-8406c7882b01"
+        },
+        {
+          "system": "nextcloud",
+          "external_id": "984b83a0-13e6-45b8-9f9c-8406c7882b01",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/984b83a0-13e6-45b8-9f9c-8406c7882b01",
+          "last_sync": 1744990042.531908,
+          "sync_status": "skipped",
+          "etag": null
+        }
+      ]
+    },
+    {
+      "status": "done",
+      "priority": "medium",
+      "dependencies": [
+        2,
+        5
+      ],
+      "subtasks": [
+        {
+          "status": "done",
+          "priority": "medium",
+          "dependencies": [],
+          "description": "Create a version tracking system to detect conflicts between local and remote changes",
+          "details": "Design and implement a version tracking mechanism that assigns unique identifiers to each change. This should include timestamps and possibly a change sequence number. Implement logic to compare versions and determine if changes conflict. The system should track the base version that changes were made against and the current version after changes.",
+          "id": 1,
+          "title": "Implement Version Tracking System"
+        },
+        {
+          "status": "done",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Implement the three automatic conflict resolution strategies: newest wins, local wins, and remote wins",
+          "details": "Create a strategy pattern implementation for conflict resolution with concrete implementations for each strategy type. For 'newest wins', compare timestamps and select the most recent change. For 'local wins', always preserve local changes. For 'remote wins', always accept remote changes. Each strategy should receive conflict information and return a resolved state. Include unit tests for each strategy.",
+          "id": 2,
+          "title": "Develop Automatic Resolution Strategies"
+        },
+        {
+          "status": "done",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Create UI components for users to manually resolve conflicts when needed",
+          "details": "Design and implement UI components that display conflicting values side by side (local vs. remote) with options to select either version or merge them. Include diff visualization for text-based conflicts. Create form elements for conflict resolution that are reusable across different data types. Ensure the UI is accessible and provides clear instructions to users.",
+          "id": 3,
+          "title": "Build Manual Resolution UI Components"
+        },
+        {
+          "status": "done",
+          "priority": "medium",
+          "dependencies": [
+            1,
+            2,
+            3
+          ],
+          "description": "Develop a system to detect, aggregate, and present conflicts to users",
+          "details": "Implement a conflict detection service that identifies conflicts using the version tracking system. Create a conflict queue that aggregates conflicts for batch resolution. Build notification mechanisms to alert users about pending conflicts. Design a workflow that guides users through the conflict resolution process, showing appropriate UI components based on the conflict type.",
+          "id": 4,
+          "title": "Create Conflict Presentation System"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            2,
+            4
+          ],
+          "description": "Create a system to store and apply user preferences for conflict resolution",
+          "details": "Design a data structure to store conflict resolution preferences by entity type, field, or global settings. Implement a settings interface for users to configure their default resolution strategies. Create a preference application system that automatically applies saved preferences to new conflicts when appropriate. Include an option for users to update or reset their preferences.",
+          "id": 5,
+          "title": "Implement Resolution Preference Storage"
+        }
+      ],
+      "description": "Create configurable conflict resolution strategies for handling conflicting changes.",
+      "details": "Implement multiple conflict resolution strategies: newest wins, local wins, remote wins, and manual resolution. Add version tracking to detect conflicts. Create a system for presenting conflicts to users when manual resolution is needed. Store resolution preferences for future conflicts.",
+      "testStrategy": "Test each resolution strategy with various conflict scenarios. Verify that user preferences are respected. Test the conflict detection system with edge cases.",
+      "created": 1744582285.144315,
+      "updated": 1744582285.144316,
+      "id": 6,
+      "title": "Implement Conflict Resolution Strategies",
+      "external_sync": [
+        {
+          "external_id": "48063d03-3425-4011-bb96-73a8ba7f71ef",
+          "sync_status": "synced",
+          "last_sync": 1744985375.682815,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/48063d03-3425-4011-bb96-73a8ba7f71ef"
+        },
+        {
+          "external_id": "8b0a8d24-dcb8-40bd-9881-26959a1995b9",
+          "sync_status": "synced",
+          "last_sync": 1744985741.742697,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/8b0a8d24-dcb8-40bd-9881-26959a1995b9"
+        },
+        {
+          "external_id": "c7c16325-9112-4d7e-9aeb-51205e8e40c3",
+          "sync_status": "synced",
+          "last_sync": 1744985925.369337,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c7c16325-9112-4d7e-9aeb-51205e8e40c3"
+        },
+        {
+          "external_id": "5bdcc20e-2200-4724-9701-6dc3dacd15c4",
+          "sync_status": "synced",
+          "last_sync": 1744986165.132014,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/5bdcc20e-2200-4724-9701-6dc3dacd15c4"
+        },
+        {
+          "external_id": "1a11a764-ac8b-4f78-8df5-5808c0995040",
+          "sync_status": "synced",
+          "last_sync": 1744986493.610529,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/1a11a764-ac8b-4f78-8df5-5808c0995040"
+        },
+        {
+          "external_id": "d0d5d12b-45bd-488b-9e65-eb6265087e15",
+          "sync_status": "synced",
+          "last_sync": 1744986621.863359,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/d0d5d12b-45bd-488b-9e65-eb6265087e15"
+        },
+        {
+          "external_id": "00b01337-c44c-43c3-ae6f-3f39e32a3e48",
+          "sync_status": "synced",
+          "last_sync": 1744987221.398031,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/00b01337-c44c-43c3-ae6f-3f39e32a3e48"
+        },
+        {
+          "external_id": "00b01337-c44c-43c3-ae6f-3f39e32a3e48",
+          "sync_status": "synced",
+          "last_sync": 1744987403.86565,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/00b01337-c44c-43c3-ae6f-3f39e32a3e48"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987804.990692,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/0c03a7a2-add5-4952-8640-3b4f39511697",
+          "external_id": "0c03a7a2-add5-4952-8640-3b4f39511697"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987876.262648,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/669410dc-4a91-4493-8fc2-691d6b4adc23",
+          "external_id": "669410dc-4a91-4493-8fc2-691d6b4adc23"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987949.384719,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/d731a8c4-1b19-4c7b-abc6-fcc4f8e1b975",
+          "external_id": "d731a8c4-1b19-4c7b-abc6-fcc4f8e1b975"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.384719,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/d731a8c4-1b19-4c7b-abc6-fcc4f8e1b975",
+          "external_id": "d731a8c4-1b19-4c7b-abc6-fcc4f8e1b975",
+          "error": "Remote task not found"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.384719,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/d731a8c4-1b19-4c7b-abc6-fcc4f8e1b975",
+          "external_id": "d731a8c4-1b19-4c7b-abc6-fcc4f8e1b975",
+          "error": "Remote task not found"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.384719,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/d731a8c4-1b19-4c7b-abc6-fcc4f8e1b975",
+          "external_id": "d731a8c4-1b19-4c7b-abc6-fcc4f8e1b975",
+          "error": "Remote task not found"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.384719,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/d731a8c4-1b19-4c7b-abc6-fcc4f8e1b975",
+          "external_id": "d731a8c4-1b19-4c7b-abc6-fcc4f8e1b975",
+          "error": "Remote task not found"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.384719,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/d731a8c4-1b19-4c7b-abc6-fcc4f8e1b975",
+          "external_id": "d731a8c4-1b19-4c7b-abc6-fcc4f8e1b975",
+          "error": "Remote task not found"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.384719,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/d731a8c4-1b19-4c7b-abc6-fcc4f8e1b975",
+          "external_id": "d731a8c4-1b19-4c7b-abc6-fcc4f8e1b975",
+          "error": "Remote task not found"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.384719,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/d731a8c4-1b19-4c7b-abc6-fcc4f8e1b975",
+          "external_id": "d731a8c4-1b19-4c7b-abc6-fcc4f8e1b975",
+          "error": "Remote task not found"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744988963.617277,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/02179e24-c6f1-40a9-b41e-4b4c20621faa",
+          "error": "Remote task not found",
+          "external_id": "02179e24-c6f1-40a9-b41e-4b4c20621faa"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744988963.617277,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/02179e24-c6f1-40a9-b41e-4b4c20621faa",
+          "error": "Remote task not found",
+          "external_id": "02179e24-c6f1-40a9-b41e-4b4c20621faa"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989184.014209,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/a88b324d-822f-4f79-b343-e277144fb1ac",
+          "error": "Remote task not found",
+          "external_id": "a88b324d-822f-4f79-b343-e277144fb1ac"
+        },
+        {
+          "external_id": "efff2c37-8122-40e7-806d-4e0301be49c2",
+          "sync_status": "synced",
+          "last_sync": 1744989302.77996,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/efff2c37-8122-40e7-806d-4e0301be49c2"
+        },
+        {
+          "external_id": "523eee99-5426-4403-a10a-1953137ff848",
+          "sync_status": "synced",
+          "last_sync": 1744989359.473588,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/523eee99-5426-4403-a10a-1953137ff848"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989426.288833,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/21086ab0-a6e3-4d42-a739-615fcfe87b88",
+          "external_id": "21086ab0-a6e3-4d42-a739-615fcfe87b88"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989529.657454,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/2c7709a2-b427-45c3-9368-9010d368d1b2",
+          "external_id": "2c7709a2-b427-45c3-9368-9010d368d1b2"
+        },
+        {
+          "system": "nextcloud",
+          "external_id": "2c7709a2-b427-45c3-9368-9010d368d1b2",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/2c7709a2-b427-45c3-9368-9010d368d1b2",
+          "last_sync": 1744990042.759151,
+          "sync_status": "skipped",
+          "etag": null
+        }
+      ]
+    },
+    {
+      "status": "done",
+      "priority": "medium",
+      "dependencies": [
+        5
+      ],
+      "subtasks": [],
+      "description": "Extend the Taskinator CLI with commands for NextCloud synchronization.",
+      "details": "Add new CLI commands: sync-tasks, push-tasks, pull-tasks, and link-task. Implement argument parsing and validation for these commands. Add configuration reading from environment variables. Create clear, user-friendly output for sync status and errors.",
+      "testStrategy": "Write integration tests for CLI commands. Test with various arguments and configurations. Verify error handling and output formatting.",
+      "created": 1744582285.144318,
+      "updated": 1744582285.144319,
+      "id": 7,
+      "title": "Add CLI Commands for NextCloud Integration",
+      "external_sync": [
+        {
+          "external_id": "a29de4f0-9f4d-47a7-9158-572286819060",
+          "sync_status": "synced",
+          "last_sync": 1744985375.774778,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/a29de4f0-9f4d-47a7-9158-572286819060"
+        },
+        {
+          "external_id": "8b93ecab-44b8-44b5-862d-913cbe4f6dec",
+          "sync_status": "synced",
+          "last_sync": 1744985741.818409,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/8b93ecab-44b8-44b5-862d-913cbe4f6dec"
+        },
+        {
+          "external_id": "45e8824b-33e5-43d0-af8e-6bf519661da9",
+          "sync_status": "synced",
+          "last_sync": 1744985925.427661,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/45e8824b-33e5-43d0-af8e-6bf519661da9"
+        },
+        {
+          "external_id": "c825370a-b3fa-48ac-919f-663d02ed4e78",
+          "sync_status": "synced",
+          "last_sync": 1744986165.20998,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c825370a-b3fa-48ac-919f-663d02ed4e78"
+        },
+        {
+          "external_id": "4000c3aa-a552-4607-9211-a3cf920e3ab1",
+          "sync_status": "synced",
+          "last_sync": 1744986493.698804,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/4000c3aa-a552-4607-9211-a3cf920e3ab1"
+        },
+        {
+          "external_id": "aa4b1708-373a-40a1-bd67-71a0befc6f76",
+          "sync_status": "synced",
+          "last_sync": 1744986621.951803,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/aa4b1708-373a-40a1-bd67-71a0befc6f76"
+        },
+        {
+          "external_id": "ce8d4306-0bdf-48ac-8bdf-02cc8a46746c",
+          "sync_status": "synced",
+          "last_sync": 1744987221.459699,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ce8d4306-0bdf-48ac-8bdf-02cc8a46746c"
+        },
+        {
+          "external_id": "ce8d4306-0bdf-48ac-8bdf-02cc8a46746c",
+          "sync_status": "error",
+          "last_sync": 1744987221.459699,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ce8d4306-0bdf-48ac-8bdf-02cc8a46746c",
+          "error": "Task with ID ce8d4306-0bdf-48ac-8bdf-02cc8a46746c not found"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987805.095613,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/6e5c1fbc-097e-4701-b6f1-95f7cc74b69d",
+          "error": "Task with ID ce8d4306-0bdf-48ac-8bdf-02cc8a46746c not found",
+          "external_id": "6e5c1fbc-097e-4701-b6f1-95f7cc74b69d"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987876.587829,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/999f40fd-621d-4aa9-a0a7-0aaf70efea92",
+          "error": "Task with ID ce8d4306-0bdf-48ac-8bdf-02cc8a46746c not found",
+          "external_id": "999f40fd-621d-4aa9-a0a7-0aaf70efea92"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987949.486689,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/a692d4f6-a3ae-4312-88b7-3c749c3ed751",
+          "error": "Task with ID ce8d4306-0bdf-48ac-8bdf-02cc8a46746c not found",
+          "external_id": "a692d4f6-a3ae-4312-88b7-3c749c3ed751"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.486689,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/a692d4f6-a3ae-4312-88b7-3c749c3ed751",
+          "error": "Remote task not found",
+          "external_id": "a692d4f6-a3ae-4312-88b7-3c749c3ed751"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.486689,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/a692d4f6-a3ae-4312-88b7-3c749c3ed751",
+          "error": "Remote task not found",
+          "external_id": "a692d4f6-a3ae-4312-88b7-3c749c3ed751"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.486689,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/a692d4f6-a3ae-4312-88b7-3c749c3ed751",
+          "error": "Remote task not found",
+          "external_id": "a692d4f6-a3ae-4312-88b7-3c749c3ed751"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.486689,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/a692d4f6-a3ae-4312-88b7-3c749c3ed751",
+          "error": "Remote task not found",
+          "external_id": "a692d4f6-a3ae-4312-88b7-3c749c3ed751"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.486689,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/a692d4f6-a3ae-4312-88b7-3c749c3ed751",
+          "error": "Remote task not found",
+          "external_id": "a692d4f6-a3ae-4312-88b7-3c749c3ed751"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.486689,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/a692d4f6-a3ae-4312-88b7-3c749c3ed751",
+          "error": "Remote task not found",
+          "external_id": "a692d4f6-a3ae-4312-88b7-3c749c3ed751"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.486689,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/a692d4f6-a3ae-4312-88b7-3c749c3ed751",
+          "error": "Remote task not found",
+          "external_id": "a692d4f6-a3ae-4312-88b7-3c749c3ed751"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744988963.912085,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/adb1dc10-f886-42c8-80f4-11d6e77a21ef",
+          "error": "Remote task not found",
+          "external_id": "adb1dc10-f886-42c8-80f4-11d6e77a21ef"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744988963.912085,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/adb1dc10-f886-42c8-80f4-11d6e77a21ef",
+          "error": "Remote task not found",
+          "external_id": "adb1dc10-f886-42c8-80f4-11d6e77a21ef"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989184.340889,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/7541ab4d-2a65-40d4-b07b-56ce70ac2c1f",
+          "error": "Remote task not found",
+          "external_id": "7541ab4d-2a65-40d4-b07b-56ce70ac2c1f"
+        },
+        {
+          "external_id": "085d4acb-b197-4bd0-be8b-ba78676b6787",
+          "sync_status": "synced",
+          "last_sync": 1744989303.064337,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/085d4acb-b197-4bd0-be8b-ba78676b6787"
+        },
+        {
+          "external_id": "633d93f1-1658-4c00-9896-a4982252fcd6",
+          "sync_status": "synced",
+          "last_sync": 1744989359.709093,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/633d93f1-1658-4c00-9896-a4982252fcd6"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989426.520042,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/8c3776e1-9a0b-4499-a4d4-a08d55871cc8",
+          "external_id": "8c3776e1-9a0b-4499-a4d4-a08d55871cc8"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989529.970485,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/e282cdb8-9fc3-43aa-9ffc-f45d83e5af5a",
+          "external_id": "e282cdb8-9fc3-43aa-9ffc-f45d83e5af5a"
+        },
+        {
+          "system": "nextcloud",
+          "external_id": "e282cdb8-9fc3-43aa-9ffc-f45d83e5af5a",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/e282cdb8-9fc3-43aa-9ffc-f45d83e5af5a",
+          "last_sync": 1744990042.98257,
+          "sync_status": "skipped",
+          "etag": null
+        }
+      ]
+    },
+    {
+      "status": "done",
+      "priority": "low",
+      "dependencies": [
+        5
+      ],
+      "subtasks": [
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [],
+          "description": "Create a system to manage background processes that can run independently of the main application thread",
+          "details": "Design and implement a BackgroundProcessManager class that can spawn and manage worker threads or processes. Include functionality to start, pause, resume, and terminate background tasks. Implement a mechanism for the main application to communicate with background processes without blocking. Use appropriate threading or process isolation depending on the platform requirements.",
+          "id": 1,
+          "title": "Implement Asynchronous Process Management"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Create a queue system to manage and prioritize synchronization tasks",
+          "details": "Implement a SyncJobQueue class that can store, prioritize, and dispatch sync operations. Include methods for adding jobs with different priorities, canceling jobs, and checking job status. Implement persistence for the queue to survive application restarts. Design the queue to work with the BackgroundProcessManager to execute jobs asynchronously. Include mechanisms for handling dependencies between jobs.",
+          "id": 2,
+          "title": "Develop Job Queue System for Sync Operations"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1,
+            2
+          ],
+          "description": "Implement a system to report the status of background synchronization tasks to the user interface",
+          "details": "Design and implement a SyncStatusReporter class that tracks and reports the progress of background sync operations. Create methods for background processes to update their status (percentage complete, current operation, etc.). Implement an observer pattern or event system so the UI can subscribe to status updates. Add support for aggregating status from multiple concurrent background tasks into a unified view. Include appropriate throttling to prevent UI performance issues.",
+          "id": 3,
+          "title": "Create Status Reporting Mechanism"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1,
+            2,
+            3
+          ],
+          "description": "Develop robust error handling and resource cleanup for background synchronization",
+          "details": "Implement comprehensive error handling for background processes, including retry logic for transient failures. Create a cleanup system to ensure resources are properly released when background tasks complete or fail. Implement logging of background process activities and errors for debugging. Add mechanisms to recover from unexpected termination of background processes. Create unit tests to verify error handling and cleanup functionality works correctly under various failure scenarios.",
+          "id": 4,
+          "title": "Implement Error Handling and Cleanup for Background Processes"
+        }
+      ],
+      "description": "Add support for background synchronization to minimize user wait times.",
+      "details": "Create an asynchronous background sync process that can run without blocking the main application. Implement a job queue for sync operations. Add status reporting for background tasks. Ensure proper cleanup and error handling for background processes.",
+      "testStrategy": "Test background sync with various conditions. Verify that the application remains responsive during sync. Test error handling and recovery in background processes.",
+      "created": 1744582285.14432,
+      "updated": 1744582285.144321,
+      "id": 8,
+      "title": "Implement Background Synchronization",
+      "external_sync": [
+        {
+          "external_id": "0d396ca5-7ba2-41e0-99c0-20964414dcb7",
+          "sync_status": "synced",
+          "last_sync": 1744985375.872337,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/0d396ca5-7ba2-41e0-99c0-20964414dcb7"
+        },
+        {
+          "external_id": "e7034dbb-7253-40c5-bc46-b0f136fc632e",
+          "sync_status": "synced",
+          "last_sync": 1744985741.899578,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/e7034dbb-7253-40c5-bc46-b0f136fc632e"
+        },
+        {
+          "external_id": "b8d7d4bc-abe4-4b4d-88eb-94e632c3b6fc",
+          "sync_status": "synced",
+          "last_sync": 1744985925.496343,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/b8d7d4bc-abe4-4b4d-88eb-94e632c3b6fc"
+        },
+        {
+          "external_id": "e3e28e54-7a3c-4b79-ac33-6f6f85bbb43a",
+          "sync_status": "synced",
+          "last_sync": 1744986165.279215,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/e3e28e54-7a3c-4b79-ac33-6f6f85bbb43a"
+        },
+        {
+          "external_id": "4753c189-3ce4-4168-bb66-96000a02654c",
+          "sync_status": "synced",
+          "last_sync": 1744986493.78801,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/4753c189-3ce4-4168-bb66-96000a02654c"
+        },
+        {
+          "external_id": "6ee16e51-6b9a-4829-9e74-6a42722acade",
+          "sync_status": "synced",
+          "last_sync": 1744986622.043879,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/6ee16e51-6b9a-4829-9e74-6a42722acade"
+        },
+        {
+          "external_id": "3b2f41e0-0e67-40b6-9a9e-4a64288942a9",
+          "sync_status": "synced",
+          "last_sync": 1744987221.526836,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/3b2f41e0-0e67-40b6-9a9e-4a64288942a9"
+        },
+        {
+          "external_id": "3b2f41e0-0e67-40b6-9a9e-4a64288942a9",
+          "sync_status": "synced",
+          "last_sync": 1744987404.233822,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/3b2f41e0-0e67-40b6-9a9e-4a64288942a9"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987805.192911,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/466e4c45-98c6-4c03-b36a-d6ec74574087",
+          "external_id": "466e4c45-98c6-4c03-b36a-d6ec74574087"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987876.81625,
+          "etag": null,
+          "message": "Task synced successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/466e4c45-98c6-4c03-b36a-d6ec74574087",
+          "external_id": "466e4c45-98c6-4c03-b36a-d6ec74574087"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987949.589851,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/33aab8dc-a955-4ad5-a0ac-408dd9760f0a",
+          "external_id": "33aab8dc-a955-4ad5-a0ac-408dd9760f0a"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744988964.236284,
+          "etag": null,
+          "message": "Task synced successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/33aab8dc-a955-4ad5-a0ac-408dd9760f0a",
+          "external_id": "33aab8dc-a955-4ad5-a0ac-408dd9760f0a"
+        },
+        {
+          "external_id": "1a56cf53-c48f-49b7-b68f-0da09eebd507",
+          "sync_status": "synced",
+          "last_sync": 1744989303.343566,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/1a56cf53-c48f-49b7-b68f-0da09eebd507"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989426.7852,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/4ce19386-9c23-4fc7-a4c4-22ba3fbcd146",
+          "external_id": "4ce19386-9c23-4fc7-a4c4-22ba3fbcd146"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989530.284992,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ff0eec2d-dd44-434d-b41c-6e44b2ebf224",
+          "external_id": "ff0eec2d-dd44-434d-b41c-6e44b2ebf224"
+        },
+        {
+          "system": "nextcloud",
+          "external_id": "ff0eec2d-dd44-434d-b41c-6e44b2ebf224",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ff0eec2d-dd44-434d-b41c-6e44b2ebf224",
+          "last_sync": 1744989530.284992,
+          "sync_status": "synced",
+          "etag": null
+        }
+      ]
+    },
+    {
+      "status": "done",
+      "priority": "medium",
+      "dependencies": [
+        5
+      ],
+      "subtasks": [
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [],
+          "description": "Create visual indicators for each task showing its synchronization status (synced, pending, conflict).",
+          "details": "Design and implement status icons that appear next to each task in the task list. Use different colors and symbols for each state: green checkmark for 'synced', yellow clock for 'pending', red exclamation for 'conflict'. Add tooltips that explain the status when hovering. Ensure the indicators are accessible and follow design system guidelines. Update the task component to include these indicators and modify the task model to include a syncStatus field.",
+          "id": 1,
+          "title": "Implement Individual Task Sync Status Indicators"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Implement a global indicator showing the overall synchronization status of the application.",
+          "details": "Add a persistent indicator in the application header or footer that shows the overall sync status. Create notification toasts for completed syncs and errors that appear temporarily. Design a sync details panel that can be expanded to show more information about recent sync activities. Implement a sync history log accessible from settings. Ensure all system-wide indicators follow the same visual language as the individual task indicators.",
+          "id": 2,
+          "title": "Create System-Wide Sync Status Visualization"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1,
+            2
+          ],
+          "description": "Create a system that updates all sync status indicators in real-time as synchronization status changes.",
+          "details": "Implement an event-based system to listen for sync status changes from the backend. Set up a state management solution to track sync status across the application. Create animation transitions between different status states for smooth visual feedback. Implement debouncing to prevent UI flickering during rapid status changes. Add automated status updates on network connectivity changes. Test thoroughly with different network conditions, including offline scenarios and intermittent connectivity.",
+          "id": 3,
+          "title": "Develop Real-Time Status Update Mechanism"
+        }
+      ],
+      "description": "Add visual indicators for task synchronization status in the user interface.",
+      "details": "Implement status indicators for each task showing sync status (synced, pending, conflict). Add system-wide sync status indicators. Create notifications for completed syncs and errors. Ensure indicators are updated in real-time as sync status changes.",
+      "testStrategy": "Test status indicators with various sync states. Verify that indicators update correctly after sync operations. Test with mock sync processes to cover all status conditions.",
+      "created": 1744582285.144323,
+      "updated": 1744582285.144323,
+      "id": 9,
+      "title": "Develop Sync Status Indicators",
+      "external_sync": [
+        {
+          "external_id": "7af4e8a5-5781-4f3d-905c-36dd36a69029",
+          "sync_status": "synced",
+          "last_sync": 1744985375.962877,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/7af4e8a5-5781-4f3d-905c-36dd36a69029"
+        },
+        {
+          "external_id": "4e92d024-9317-4f45-b358-e23ee5b3ce28",
+          "sync_status": "synced",
+          "last_sync": 1744985741.976495,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/4e92d024-9317-4f45-b358-e23ee5b3ce28"
+        },
+        {
+          "external_id": "084cb872-3647-456d-bc56-2b75a034f7c4",
+          "sync_status": "synced",
+          "last_sync": 1744985925.557279,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/084cb872-3647-456d-bc56-2b75a034f7c4"
+        },
+        {
+          "external_id": "15f7c9c7-8bbd-4eda-ab3d-e3520a90a39c",
+          "sync_status": "synced",
+          "last_sync": 1744986165.368583,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/15f7c9c7-8bbd-4eda-ab3d-e3520a90a39c"
+        },
+        {
+          "external_id": "85b5faa3-9083-4117-a875-e4c02b97b8bb",
+          "sync_status": "synced",
+          "last_sync": 1744986493.880846,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/85b5faa3-9083-4117-a875-e4c02b97b8bb"
+        },
+        {
+          "external_id": "64026d60-fdae-445b-acf2-299d34943a19",
+          "sync_status": "synced",
+          "last_sync": 1744986622.138126,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/64026d60-fdae-445b-acf2-299d34943a19"
+        },
+        {
+          "external_id": "1e12e6cf-a245-40bf-89bb-5d9a817d3121",
+          "sync_status": "synced",
+          "last_sync": 1744987221.593318,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/1e12e6cf-a245-40bf-89bb-5d9a817d3121"
+        },
+        {
+          "external_id": "1e12e6cf-a245-40bf-89bb-5d9a817d3121",
+          "sync_status": "error",
+          "last_sync": 1744987221.593318,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/1e12e6cf-a245-40bf-89bb-5d9a817d3121",
+          "error": "Task with ID 1e12e6cf-a245-40bf-89bb-5d9a817d3121 not found"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987805.29209,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/1d015fbb-0603-4918-a087-6158af0901ac",
+          "error": "Task with ID 1e12e6cf-a245-40bf-89bb-5d9a817d3121 not found",
+          "external_id": "1d015fbb-0603-4918-a087-6158af0901ac"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987877.139048,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/4a9da0e4-61ff-421f-bfbe-b923dcfcad49",
+          "error": "Task with ID 1e12e6cf-a245-40bf-89bb-5d9a817d3121 not found",
+          "external_id": "4a9da0e4-61ff-421f-bfbe-b923dcfcad49"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987949.692093,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/e7d34d9b-66d4-4efa-bbfc-5d7c21817dcd",
+          "error": "Task with ID 1e12e6cf-a245-40bf-89bb-5d9a817d3121 not found",
+          "external_id": "e7d34d9b-66d4-4efa-bbfc-5d7c21817dcd"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.692093,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/e7d34d9b-66d4-4efa-bbfc-5d7c21817dcd",
+          "error": "Remote task not found",
+          "external_id": "e7d34d9b-66d4-4efa-bbfc-5d7c21817dcd"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.692093,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/e7d34d9b-66d4-4efa-bbfc-5d7c21817dcd",
+          "error": "Remote task not found",
+          "external_id": "e7d34d9b-66d4-4efa-bbfc-5d7c21817dcd"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.692093,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/e7d34d9b-66d4-4efa-bbfc-5d7c21817dcd",
+          "error": "Remote task not found",
+          "external_id": "e7d34d9b-66d4-4efa-bbfc-5d7c21817dcd"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.692093,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/e7d34d9b-66d4-4efa-bbfc-5d7c21817dcd",
+          "error": "Remote task not found",
+          "external_id": "e7d34d9b-66d4-4efa-bbfc-5d7c21817dcd"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.692093,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/e7d34d9b-66d4-4efa-bbfc-5d7c21817dcd",
+          "error": "Remote task not found",
+          "external_id": "e7d34d9b-66d4-4efa-bbfc-5d7c21817dcd"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.692093,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/e7d34d9b-66d4-4efa-bbfc-5d7c21817dcd",
+          "error": "Remote task not found",
+          "external_id": "e7d34d9b-66d4-4efa-bbfc-5d7c21817dcd"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987949.692093,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/e7d34d9b-66d4-4efa-bbfc-5d7c21817dcd",
+          "error": "Remote task not found",
+          "external_id": "e7d34d9b-66d4-4efa-bbfc-5d7c21817dcd"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744988964.534642,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/676f32ab-49b5-4c79-8c95-9531c68f7eaa",
+          "error": "Remote task not found",
+          "external_id": "676f32ab-49b5-4c79-8c95-9531c68f7eaa"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744988964.534642,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/676f32ab-49b5-4c79-8c95-9531c68f7eaa",
+          "error": "Remote task not found",
+          "external_id": "676f32ab-49b5-4c79-8c95-9531c68f7eaa"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989184.912342,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/a2b7786d-5f5d-4123-8d33-eaea27f47081",
+          "error": "Remote task not found",
+          "external_id": "a2b7786d-5f5d-4123-8d33-eaea27f47081"
+        },
+        {
+          "external_id": "7d4e0170-5b0f-4483-8822-047af1b7570d",
+          "sync_status": "synced",
+          "last_sync": 1744989303.607516,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/7d4e0170-5b0f-4483-8822-047af1b7570d"
+        },
+        {
+          "external_id": "30716158-ac75-4ec0-8aea-7752d7618a1c",
+          "sync_status": "synced",
+          "last_sync": 1744989360.570647,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/30716158-ac75-4ec0-8aea-7752d7618a1c"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989427.076782,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/97b0efa0-25a5-46fa-ac68-a57f370cb205",
+          "external_id": "97b0efa0-25a5-46fa-ac68-a57f370cb205"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989530.548293,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/5cbc1946-acae-429e-acd0-d7ec1cae3c9a",
+          "external_id": "5cbc1946-acae-429e-acd0-d7ec1cae3c9a"
+        },
+        {
+          "system": "nextcloud",
+          "external_id": "5cbc1946-acae-429e-acd0-d7ec1cae3c9a",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/5cbc1946-acae-429e-acd0-d7ec1cae3c9a",
+          "last_sync": 1744990043.755714,
+          "sync_status": "skipped",
+          "etag": null
+        }
+      ]
+    },
+    {
+      "status": "done",
+      "priority": "medium",
+      "dependencies": [
+        5,
+        7
+      ],
+      "subtasks": [
+        {
+          "status": "done",
+          "priority": "medium",
+          "dependencies": [],
+          "description": "Create a comprehensive error catching system that categorizes sync errors by type",
+          "details": "Develop a centralized error handling service that catches and categorizes sync errors into types like network errors, authentication errors, data validation errors, and server errors. Implement try/catch blocks around all sync operations. Create error classes/types for different categories of errors. Ensure all sync functions properly propagate errors to the central handler.",
+          "id": 1,
+          "title": "Implement Error Catching and Categorization"
+        },
+        {
+          "status": "done",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Develop a system to display appropriate user-friendly error messages based on error categories",
+          "details": "Design and implement UI components for displaying error messages (toasts, banners, modals). Create a mapping system that converts technical error details to user-friendly messages. Implement contextual help with suggested actions for each error type. Add the ability to collapse/expand technical details for advanced users. Ensure messages are clear and non-technical.",
+          "id": 2,
+          "title": "Create User-Friendly Error Message System"
+        },
+        {
+          "status": "done",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Create a comprehensive logging system for sync errors to aid troubleshooting",
+          "details": "Implement a logging service that captures detailed information about sync errors including timestamps, user context, operation being performed, and full error stack traces. Add log levels (debug, info, warning, error). Create a mechanism to export logs for support purposes. Implement server-side logging for sync errors detected on the server. Ensure sensitive data is properly redacted from logs.",
+          "id": 3,
+          "title": "Implement Detailed Error Logging"
+        },
+        {
+          "status": "done",
+          "priority": "medium",
+          "dependencies": [
+            1,
+            3
+          ],
+          "description": "Implement intelligent retry mechanisms for handling temporary sync failures",
+          "details": "Create a retry service that can automatically retry failed sync operations with exponential backoff. Implement logic to identify which errors are transient vs. permanent. Add user notifications about retry attempts. Develop a queue system for failed operations that can be retried when conditions improve (e.g., when network connectivity is restored). Implement maximum retry limits and fallback behaviors.",
+          "id": 4,
+          "title": "Develop Retry Logic for Transient Errors"
+        }
+      ],
+      "description": "Create robust error handling for synchronization issues with clear user feedback.",
+      "details": "Implement comprehensive error handling for all sync operations. Create user-friendly error messages. Add detailed logging for troubleshooting. Implement retry logic for transient errors. Create a system for reporting sync issues to users.",
+      "testStrategy": "Test error handling with various failure scenarios. Verify that appropriate error messages are displayed. Test retry logic with simulated transient failures.",
+      "created": 1744582285.144325,
+      "updated": 1744582285.144326,
+      "id": 10,
+      "title": "Implement Sync Error Handling and Reporting",
+      "external_sync": [
+        {
+          "external_id": "abc75a6a-84ac-495e-9abf-28079dd20200",
+          "sync_status": "synced",
+          "last_sync": 1744985376.058487,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/abc75a6a-84ac-495e-9abf-28079dd20200"
+        },
+        {
+          "external_id": "c03693fc-48ca-4d9c-8e0f-7649c8188be6",
+          "sync_status": "synced",
+          "last_sync": 1744985742.063066,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c03693fc-48ca-4d9c-8e0f-7649c8188be6"
+        },
+        {
+          "external_id": "09512453-78ee-474c-a96b-d9f0addbaa65",
+          "sync_status": "synced",
+          "last_sync": 1744985925.63886,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/09512453-78ee-474c-a96b-d9f0addbaa65"
+        },
+        {
+          "external_id": "38128cf6-f493-43ae-9636-50a61700f068",
+          "sync_status": "synced",
+          "last_sync": 1744986165.459501,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/38128cf6-f493-43ae-9636-50a61700f068"
+        },
+        {
+          "external_id": "b19fe2eb-72ca-479e-84e5-341ebe1dbbe9",
+          "sync_status": "synced",
+          "last_sync": 1744986493.969717,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/b19fe2eb-72ca-479e-84e5-341ebe1dbbe9"
+        },
+        {
+          "external_id": "c44a8536-4de6-4143-bdfe-a17edda156fe",
+          "sync_status": "synced",
+          "last_sync": 1744986622.228334,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c44a8536-4de6-4143-bdfe-a17edda156fe"
+        },
+        {
+          "external_id": "f13ccd00-ea23-4170-99c2-d2b2ebbe6e0a",
+          "sync_status": "synced",
+          "last_sync": 1744987221.679346,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/f13ccd00-ea23-4170-99c2-d2b2ebbe6e0a"
+        },
+        {
+          "external_id": "f13ccd00-ea23-4170-99c2-d2b2ebbe6e0a",
+          "sync_status": "synced",
+          "last_sync": 1744987404.666774,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/f13ccd00-ea23-4170-99c2-d2b2ebbe6e0a"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987805.348285,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/77ada970-28aa-417a-9f9b-883416787b25",
+          "external_id": "77ada970-28aa-417a-9f9b-883416787b25"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987877.43315,
+          "etag": null,
+          "message": "Task synced successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/77ada970-28aa-417a-9f9b-883416787b25",
+          "external_id": "77ada970-28aa-417a-9f9b-883416787b25"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987949.795551,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/175f72a2-aff3-43f6-906c-70468c8abf6d",
+          "external_id": "175f72a2-aff3-43f6-906c-70468c8abf6d"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744988964.804907,
+          "etag": null,
+          "message": "Task synced successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/175f72a2-aff3-43f6-906c-70468c8abf6d",
+          "external_id": "175f72a2-aff3-43f6-906c-70468c8abf6d"
+        },
+        {
+          "external_id": "868bb16e-5d1e-43b3-a4db-5e793e3d4bfa",
+          "sync_status": "synced",
+          "last_sync": 1744989303.910763,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/868bb16e-5d1e-43b3-a4db-5e793e3d4bfa"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989427.308859,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/730c8b1e-173f-403c-aa62-b99b93aefc71",
+          "external_id": "730c8b1e-173f-403c-aa62-b99b93aefc71"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989530.855583,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/e4fd05a8-246c-4f46-88d2-14a946980509",
+          "external_id": "e4fd05a8-246c-4f46-88d2-14a946980509"
+        },
+        {
+          "system": "nextcloud",
+          "external_id": "e4fd05a8-246c-4f46-88d2-14a946980509",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/e4fd05a8-246c-4f46-88d2-14a946980509",
+          "last_sync": 1744989530.855583,
+          "sync_status": "synced",
+          "etag": null
+        }
+      ]
+    },
+    {
+      "status": "pending",
+      "priority": "low",
+      "dependencies": [
+        5
+      ],
+      "subtasks": [
+        {
+          "status": "pending",
+          "priority": "low",
+          "dependencies": [],
+          "description": "Create an algorithm to detect changes in tasks since the last synchronization",
+          "details": "Develop a hashing or timestamp-based mechanism to identify modified tasks. Use a combination of last modified timestamps and content hashing to detect changes. Implement comparison logic between local and remote task states. Create unit tests to verify the change detection accuracy under different scenarios.",
+          "id": 1,
+          "title": "Implement Efficient Change Detection Algorithm"
+        },
+        {
+          "status": "pending",
+          "priority": "low",
+          "dependencies": [
+            1
+          ],
+          "description": "Develop a system to track and store the timestamp of the last successful synchronization",
+          "details": "Create a persistent storage mechanism for last sync timestamps. Implement methods to update this timestamp after successful syncs. Design recovery mechanisms if sync fails midway. Add logging for sync history to aid debugging. Ensure the system works across app restarts.",
+          "id": 2,
+          "title": "Build Last-Sync Tracking System"
+        },
+        {
+          "status": "pending",
+          "priority": "low",
+          "dependencies": [
+            1,
+            2
+          ],
+          "description": "Implement pagination to handle large sets of tasks efficiently",
+          "details": "Modify API request handlers to support pagination parameters. Implement cursor-based pagination for optimal performance. Create a mechanism to merge paginated results into a complete dataset. Add progress indicators for users during multi-page synchronization. Implement error handling for interrupted pagination sequences.",
+          "id": 3,
+          "title": "Add Pagination Support for Large Datasets"
+        },
+        {
+          "status": "pending",
+          "priority": "low",
+          "dependencies": [
+            1,
+            2,
+            3
+          ],
+          "description": "Reduce data transfer by optimizing API requests and responses",
+          "details": "Implement request compression if supported by the API. Create selective field fetching to only retrieve necessary data. Design batching mechanisms for multiple small changes. Implement throttling to prevent API rate limits. Add metrics to measure and report on data transfer efficiency improvements.",
+          "id": 4,
+          "title": "Optimize API Usage for Minimal Data Transfer"
+        }
+      ],
+      "description": "Optimize synchronization by implementing incremental updates and efficient change detection.",
+      "details": "Implement efficient change detection to identify modified tasks. Create a system for tracking changes since last sync. Add support for pagination when dealing with large task sets. Optimize API usage to minimize data transfer.",
+      "testStrategy": "Test incremental updates with various change scenarios. Measure performance with large task sets. Verify that only changed data is transferred during sync.",
+      "created": 1744582285.144327,
+      "updated": 1744582285.144328,
+      "id": 11,
+      "title": "Add Support for Incremental Updates",
+      "external_sync": [
+        {
+          "external_id": "f833f519-7eb4-4d56-9cd1-60c2ab6ef5f7",
+          "sync_status": "synced",
+          "last_sync": 1744985376.151975,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/f833f519-7eb4-4d56-9cd1-60c2ab6ef5f7"
+        },
+        {
+          "external_id": "17ca3c40-5556-4845-98eb-7975bb2d162b",
+          "sync_status": "synced",
+          "last_sync": 1744985742.139837,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/17ca3c40-5556-4845-98eb-7975bb2d162b"
+        },
+        {
+          "external_id": "1fbdec11-e61c-45a6-8614-c6debf706c4d",
+          "sync_status": "synced",
+          "last_sync": 1744985925.711693,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/1fbdec11-e61c-45a6-8614-c6debf706c4d"
+        },
+        {
+          "external_id": "2a99b311-0ab7-4988-9a42-723671ab8857",
+          "sync_status": "synced",
+          "last_sync": 1744986165.548656,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/2a99b311-0ab7-4988-9a42-723671ab8857"
+        },
+        {
+          "external_id": "1899143f-0165-474d-ac18-fc6d903c4363",
+          "sync_status": "synced",
+          "last_sync": 1744986494.059638,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/1899143f-0165-474d-ac18-fc6d903c4363"
+        },
+        {
+          "external_id": "99260880-98a6-463c-a1e9-40e49b796cc0",
+          "sync_status": "synced",
+          "last_sync": 1744986622.321051,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/99260880-98a6-463c-a1e9-40e49b796cc0"
+        },
+        {
+          "external_id": "df620c18-13f8-4743-82b9-d2d66082e6b8",
+          "sync_status": "synced",
+          "last_sync": 1744987221.754744,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/df620c18-13f8-4743-82b9-d2d66082e6b8"
+        },
+        {
+          "external_id": "df620c18-13f8-4743-82b9-d2d66082e6b8",
+          "sync_status": "synced",
+          "last_sync": 1744987404.934789,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/df620c18-13f8-4743-82b9-d2d66082e6b8"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987805.399932,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/0bd0b07d-2b96-4132-9923-43a5101aa9d2",
+          "external_id": "0bd0b07d-2b96-4132-9923-43a5101aa9d2"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987877.721724,
+          "etag": null,
+          "message": "Task synced successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/0bd0b07d-2b96-4132-9923-43a5101aa9d2",
+          "external_id": "0bd0b07d-2b96-4132-9923-43a5101aa9d2"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987949.896292,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/0ff5c630-53c2-46dc-b26c-c4ae6d79975b",
+          "external_id": "0ff5c630-53c2-46dc-b26c-c4ae6d79975b"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744988965.097681,
+          "etag": null,
+          "message": "Task synced successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/0ff5c630-53c2-46dc-b26c-c4ae6d79975b",
+          "external_id": "0ff5c630-53c2-46dc-b26c-c4ae6d79975b"
+        },
+        {
+          "external_id": "f5de3b83-4b16-45cd-a3f6-08ae62bc1363",
+          "sync_status": "synced",
+          "last_sync": 1744989304.225893,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/f5de3b83-4b16-45cd-a3f6-08ae62bc1363"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989427.617745,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/d1d8ad3a-3864-4d47-9505-bd32748ff245",
+          "external_id": "d1d8ad3a-3864-4d47-9505-bd32748ff245"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989531.17014,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/abe8c64d-0445-4d1e-ad98-fa43a5a03442",
+          "external_id": "abe8c64d-0445-4d1e-ad98-fa43a5a03442"
+        },
+        {
+          "system": "nextcloud",
+          "external_id": "abe8c64d-0445-4d1e-ad98-fa43a5a03442",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/abe8c64d-0445-4d1e-ad98-fa43a5a03442",
+          "last_sync": 1744989531.17014,
+          "sync_status": "synced",
+          "etag": null
+        }
+      ]
+    },
+    {
+      "status": "done",
+      "priority": "medium",
+      "dependencies": [
+        1,
+        2,
+        5
+      ],
+      "subtasks": [
+        {
+          "status": "done",
+          "priority": "medium",
+          "dependencies": [],
+          "description": "Create the core interfaces and abstract classes that will define how plugins interact with Taskinator",
+          "details": "Define a `PluginInterface` with methods like `initialize()`, `shutdown()`, `getMetadata()`, etc. Create a `TaskSourcePlugin` interface that extends the base plugin interface with methods specific to task sources like NextCloud. Include versioning support and capability declaration in the interface. Document the contract between the core application and plugins clearly.",
+          "id": 1,
+          "title": "Design Core Plugin Interface"
+        },
+        {
+          "status": "done",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Create a system to discover, load, initialize, and manage the lifecycle of plugins",
+          "details": "Develop a `PluginManager` class responsible for scanning plugin directories, loading plugin JARs dynamically, initializing plugins in the correct order based on dependencies, and managing their lifecycle. Implement proper error handling for plugin loading failures. Add support for plugin enabling/disabling at runtime. Include logging of plugin lifecycle events.",
+          "id": 2,
+          "title": "Implement Plugin Loader and Lifecycle Manager"
+        },
+        {
+          "status": "done",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Identify and implement all the points in the core application where plugins can hook into the system",
+          "details": "Refactor the task management system to use a provider pattern that plugins can implement. Create event systems that plugins can subscribe to (task created, updated, etc.). Implement service locator or dependency injection system so plugins can access core services. Add extension points for UI components that plugins might want to add.",
+          "id": 3,
+          "title": "Define Integration Points in Core Application"
+        },
+        {
+          "status": "done",
+          "priority": "medium",
+          "dependencies": [
+            1,
+            2,
+            3
+          ],
+          "description": "Implement the NextCloud integration as the first plugin using the new architecture",
+          "details": "Move existing NextCloud integration code into a plugin structure. Implement all required interfaces. Create plugin manifest file with metadata. Add configuration UI that will be displayed in the plugins section. Ensure proper resource cleanup on plugin shutdown. Test the plugin's loading, initialization, and functionality.",
+          "id": 4,
+          "title": "Create NextCloud Plugin Implementation"
+        },
+        {
+          "status": "done",
+          "priority": "medium",
+          "dependencies": [
+            2
+          ],
+          "description": "Create a system to handle dependencies between plugins and with the core application",
+          "details": "Design a manifest format that allows plugins to declare dependencies on specific versions of the core API or other plugins. Implement version compatibility checking during plugin loading. Create a dependency resolution algorithm to determine correct loading order. Add conflict detection for incompatible plugins. Implement graceful fallback behavior when dependencies cannot be satisfied.",
+          "id": 5,
+          "title": "Implement Plugin Dependency Management"
+        }
+      ],
+      "description": "Design and implement a plugin-based approach for the NextCloud integration.",
+      "details": "Create a plugin architecture that allows the NextCloud integration to be loaded as a module. Design clean interfaces between core Taskinator and the integration. Ensure the system can be extended to support other task systems in the future. Implement proper lifecycle management for the plugin.",
+      "testStrategy": "Test plugin loading and unloading. Verify that Taskinator works correctly with and without the plugin. Test plugin interfaces with mock implementations.",
+      "created": 1744582285.14433,
+      "updated": 1744582285.14433,
+      "id": 12,
+      "title": "Implement Plugin Architecture for Integration",
+      "external_sync": [
+        {
+          "external_id": "76dbf2a8-f64f-476d-bba4-b702da8f2769",
+          "sync_status": "synced",
+          "last_sync": 1744985376.248057,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/76dbf2a8-f64f-476d-bba4-b702da8f2769"
+        },
+        {
+          "external_id": "660917b5-5ab6-4cfb-8eef-e9de2365e4c7",
+          "sync_status": "synced",
+          "last_sync": 1744985742.222365,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/660917b5-5ab6-4cfb-8eef-e9de2365e4c7"
+        },
+        {
+          "external_id": "b1563db3-521c-4481-9ca0-3712b8a6eb4a",
+          "sync_status": "synced",
+          "last_sync": 1744985925.794535,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/b1563db3-521c-4481-9ca0-3712b8a6eb4a"
+        },
+        {
+          "external_id": "8b508c4c-2558-4892-8e18-7e497d738bbf",
+          "sync_status": "synced",
+          "last_sync": 1744986165.623829,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/8b508c4c-2558-4892-8e18-7e497d738bbf"
+        },
+        {
+          "external_id": "c6083444-d255-445a-a277-4c627f34b6bf",
+          "sync_status": "synced",
+          "last_sync": 1744986494.146538,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c6083444-d255-445a-a277-4c627f34b6bf"
+        },
+        {
+          "external_id": "96537d67-8b5f-4781-b551-08fdf3580a93",
+          "sync_status": "synced",
+          "last_sync": 1744986622.412025,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/96537d67-8b5f-4781-b551-08fdf3580a93"
+        },
+        {
+          "external_id": "c31f7288-0440-4e1a-bfe0-54652844a4df",
+          "sync_status": "synced",
+          "last_sync": 1744987221.846897,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c31f7288-0440-4e1a-bfe0-54652844a4df"
+        },
+        {
+          "external_id": "c31f7288-0440-4e1a-bfe0-54652844a4df",
+          "sync_status": "synced",
+          "last_sync": 1744987405.193159,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c31f7288-0440-4e1a-bfe0-54652844a4df"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987805.450988,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/0a6acc1f-392b-40de-bca6-2b6eaf05b355",
+          "external_id": "0a6acc1f-392b-40de-bca6-2b6eaf05b355"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987878.038018,
+          "etag": null,
+          "message": "Task synced successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/0a6acc1f-392b-40de-bca6-2b6eaf05b355",
+          "external_id": "0a6acc1f-392b-40de-bca6-2b6eaf05b355"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987949.998864,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/aa552316-6fd5-448a-9619-7e019b271d85",
+          "external_id": "aa552316-6fd5-448a-9619-7e019b271d85"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744988965.405142,
+          "etag": null,
+          "message": "Task synced successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/aa552316-6fd5-448a-9619-7e019b271d85",
+          "external_id": "aa552316-6fd5-448a-9619-7e019b271d85"
+        },
+        {
+          "external_id": "61700bf4-4355-4514-a056-45dfd2c9753c",
+          "sync_status": "synced",
+          "last_sync": 1744989304.48722,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/61700bf4-4355-4514-a056-45dfd2c9753c"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989427.890635,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/fef391a4-44d1-4434-9366-f8d5f0ba221a",
+          "external_id": "fef391a4-44d1-4434-9366-f8d5f0ba221a"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989531.459954,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c71156cf-6efd-4597-a2c3-7f54e2ca91af",
+          "external_id": "c71156cf-6efd-4597-a2c3-7f54e2ca91af"
+        },
+        {
+          "system": "nextcloud",
+          "external_id": "c71156cf-6efd-4597-a2c3-7f54e2ca91af",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c71156cf-6efd-4597-a2c3-7f54e2ca91af",
+          "last_sync": 1744989531.459954,
+          "sync_status": "synced",
+          "etag": null
+        }
+      ]
+    },
+    {
+      "status": "blocked",
+      "priority": "medium",
+      "dependencies": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "subtasks": [],
+      "description": "Develop detailed documentation for the NextCloud integration.",
+      "details": "Create user documentation explaining how to set up and use the integration. Write developer documentation for the integration architecture and APIs. Document known limitations and workarounds. Create troubleshooting guides for common issues.",
+      "testStrategy": "Review documentation for accuracy and completeness. Have users test the documentation by following the instructions. Verify that all features and configurations are properly documented.",
+      "created": 1744582285.144337,
+      "updated": 1744582285.144338,
+      "id": 13,
+      "title": "Create Comprehensive Documentation",
+      "external_sync": [
+        {
+          "external_id": "d13d1b9b-0539-41b3-9099-b45090e64bd2",
+          "sync_status": "synced",
+          "last_sync": 1744985376.345961,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/d13d1b9b-0539-41b3-9099-b45090e64bd2"
+        },
+        {
+          "external_id": "6bb57d69-4ff5-49f3-a727-52a54cc1af6d",
+          "sync_status": "synced",
+          "last_sync": 1744985742.297366,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/6bb57d69-4ff5-49f3-a727-52a54cc1af6d"
+        },
+        {
+          "external_id": "60b7a41d-19ed-45c3-91ff-712f195b2edc",
+          "sync_status": "synced",
+          "last_sync": 1744985925.885862,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/60b7a41d-19ed-45c3-91ff-712f195b2edc"
+        },
+        {
+          "external_id": "f19c0820-a68e-47ca-9b85-4e0224d2630b",
+          "sync_status": "synced",
+          "last_sync": 1744986165.700565,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/f19c0820-a68e-47ca-9b85-4e0224d2630b"
+        },
+        {
+          "external_id": "162408ee-92c6-44c1-a39f-ccd1e4c6f373",
+          "sync_status": "synced",
+          "last_sync": 1744986494.216162,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/162408ee-92c6-44c1-a39f-ccd1e4c6f373"
+        },
+        {
+          "external_id": "91f40340-5517-4790-a929-1715926b8fcd",
+          "sync_status": "synced",
+          "last_sync": 1744986622.501487,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/91f40340-5517-4790-a929-1715926b8fcd"
+        },
+        {
+          "external_id": "bf18d410-c0cb-4480-b329-a64007cfacc9",
+          "sync_status": "synced",
+          "last_sync": 1744987221.937178,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/bf18d410-c0cb-4480-b329-a64007cfacc9"
+        },
+        {
+          "external_id": "bf18d410-c0cb-4480-b329-a64007cfacc9",
+          "sync_status": "error",
+          "last_sync": 1744987221.937178,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/bf18d410-c0cb-4480-b329-a64007cfacc9",
+          "error": "Task with ID bf18d410-c0cb-4480-b329-a64007cfacc9 not found"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987805.502594,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/a6c442db-3193-404c-88c2-87713198a983",
+          "error": "Task with ID bf18d410-c0cb-4480-b329-a64007cfacc9 not found",
+          "external_id": "a6c442db-3193-404c-88c2-87713198a983"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987878.34236,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/b9d7eb66-67fd-4d0e-a50b-ed8f70084f7a",
+          "error": "Task with ID bf18d410-c0cb-4480-b329-a64007cfacc9 not found",
+          "external_id": "b9d7eb66-67fd-4d0e-a50b-ed8f70084f7a"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987950.101296,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/4106aa89-19c3-4fe4-87ec-23f1af1bc2a8",
+          "error": "Task with ID bf18d410-c0cb-4480-b329-a64007cfacc9 not found",
+          "external_id": "4106aa89-19c3-4fe4-87ec-23f1af1bc2a8"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987950.101296,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/4106aa89-19c3-4fe4-87ec-23f1af1bc2a8",
+          "error": "Remote task not found",
+          "external_id": "4106aa89-19c3-4fe4-87ec-23f1af1bc2a8"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987950.101296,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/4106aa89-19c3-4fe4-87ec-23f1af1bc2a8",
+          "error": "Remote task not found",
+          "external_id": "4106aa89-19c3-4fe4-87ec-23f1af1bc2a8"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987950.101296,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/4106aa89-19c3-4fe4-87ec-23f1af1bc2a8",
+          "error": "Remote task not found",
+          "external_id": "4106aa89-19c3-4fe4-87ec-23f1af1bc2a8"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987950.101296,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/4106aa89-19c3-4fe4-87ec-23f1af1bc2a8",
+          "error": "Remote task not found",
+          "external_id": "4106aa89-19c3-4fe4-87ec-23f1af1bc2a8"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987950.101296,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/4106aa89-19c3-4fe4-87ec-23f1af1bc2a8",
+          "error": "Remote task not found",
+          "external_id": "4106aa89-19c3-4fe4-87ec-23f1af1bc2a8"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987950.101296,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/4106aa89-19c3-4fe4-87ec-23f1af1bc2a8",
+          "error": "Remote task not found",
+          "external_id": "4106aa89-19c3-4fe4-87ec-23f1af1bc2a8"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987950.101296,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/4106aa89-19c3-4fe4-87ec-23f1af1bc2a8",
+          "error": "Remote task not found",
+          "external_id": "4106aa89-19c3-4fe4-87ec-23f1af1bc2a8"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744988965.634929,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/adc12339-c88e-43ec-ac19-1f010cd33f5b",
+          "error": "Remote task not found",
+          "external_id": "adc12339-c88e-43ec-ac19-1f010cd33f5b"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744988965.634929,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/adc12339-c88e-43ec-ac19-1f010cd33f5b",
+          "error": "Remote task not found",
+          "external_id": "adc12339-c88e-43ec-ac19-1f010cd33f5b"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989186.502511,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/61f11a1f-0bb7-4662-b535-4dd9fae0f767",
+          "error": "Remote task not found",
+          "external_id": "61f11a1f-0bb7-4662-b535-4dd9fae0f767"
+        },
+        {
+          "external_id": "a96ff9bf-11af-4129-a0d6-b6bf70ad7bc7",
+          "sync_status": "synced",
+          "last_sync": 1744989304.711434,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/a96ff9bf-11af-4129-a0d6-b6bf70ad7bc7"
+        },
+        {
+          "external_id": "1ea3ab3a-70ae-4f41-a072-e49b2a728ffd",
+          "sync_status": "synced",
+          "last_sync": 1744989362.47721,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/1ea3ab3a-70ae-4f41-a072-e49b2a728ffd"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989428.188683,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/978942db-9ac7-4852-82b7-df02b9b2ef84",
+          "external_id": "978942db-9ac7-4852-82b7-df02b9b2ef84"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989454.60677,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/0aa7f65c-511d-42d3-83e6-4bcb76173941",
+          "external_id": "0aa7f65c-511d-42d3-83e6-4bcb76173941"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989464.475609,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/36f7cbd1-f370-435d-8f8a-640c2aef41bf",
+          "external_id": "36f7cbd1-f370-435d-8f8a-640c2aef41bf"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989531.776708,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/34119a8b-bac0-4e54-9456-9b7c0b939cf2",
+          "external_id": "34119a8b-bac0-4e54-9456-9b7c0b939cf2"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989540.180967,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/3ebabb0a-49c8-4b64-bba3-af812520e4a5",
+          "external_id": "3ebabb0a-49c8-4b64-bba3-af812520e4a5"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744990233.897087,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/adab54eb-dda9-45ad-856c-40ab50d27152",
+          "external_id": "adab54eb-dda9-45ad-856c-40ab50d27152"
+        }
+      ]
+    },
+    {
+      "status": "pending",
+      "priority": "low",
+      "dependencies": [
+        1
+      ],
+      "subtasks": [
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [],
+          "description": "Create a service that continuously monitors the connection status to NextCloud",
+          "details": "Develop a ConnectionStatusService that polls the NextCloud server at regular intervals (e.g., every 30 seconds) to check connectivity. Implement different status states (CONNECTED, CONNECTING, DISCONNECTED, ERROR) and methods to query the current state. Use a health endpoint from NextCloud API for status checks. Handle timeouts and various error scenarios appropriately. Implement an event emitter to notify subscribers of connection status changes.",
+          "id": 1,
+          "title": "Implement Connection Status Detection System"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Implement UI components to display the current connection status to users",
+          "details": "Design and implement a ConnectionStatusIndicator component that visually represents the different connection states with appropriate colors and icons (green for connected, yellow for connecting, red for disconnected, etc.). Add this indicator to the application header or status bar. Create toast notifications for connection state changes. Include a detailed connection status page or modal that shows more information about the connection when users click on the indicator. Ensure indicators are accessible and provide clear text descriptions of status.",
+          "id": 2,
+          "title": "Create Visual Indicators for Connection State"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1,
+            2
+          ],
+          "description": "Add functionality to automatically reconnect to NextCloud and provide offline capabilities when disconnected",
+          "details": "Implement exponential backoff algorithm for reconnection attempts when connection is lost. Create a local storage cache for critical data that can be accessed when offline. Develop a queue system for operations performed while offline to be synchronized when connection is restored. Add user controls to manually trigger reconnection attempts. Implement feature detection to disable NextCloud-dependent features when offline, showing appropriate messaging. Create a synchronization process to reconcile local changes with server state upon reconnection.",
+          "id": 3,
+          "title": "Implement Automatic Reconnection Logic and Graceful Degradation"
+        }
+      ],
+      "description": "Add continuous monitoring of NextCloud connection status with appropriate user feedback.",
+      "details": "Implement a system to monitor NextCloud connection status. Create visual indicators for connection state. Add automatic reconnection logic. Implement graceful degradation when NextCloud is unavailable. Add notifications for connection changes.",
+      "testStrategy": "Test connection monitoring with various network conditions. Verify reconnection logic works correctly. Test application behavior when NextCloud becomes unavailable.",
+      "created": 1744582285.14434,
+      "updated": 1744582285.14434,
+      "id": 14,
+      "title": "Implement Connection Status Monitoring",
+      "external_sync": [
+        {
+          "external_id": "b3d84afe-1d2c-49d9-b8e9-56b7899f98a4",
+          "sync_status": "synced",
+          "last_sync": 1744985376.442609,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/b3d84afe-1d2c-49d9-b8e9-56b7899f98a4"
+        },
+        {
+          "external_id": "ce1dc488-8393-4a9e-95a2-257bcb981ed4",
+          "sync_status": "synced",
+          "last_sync": 1744985742.390292,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ce1dc488-8393-4a9e-95a2-257bcb981ed4"
+        },
+        {
+          "external_id": "71590e0d-d8f4-4cc9-b2a5-1dfceea560c2",
+          "sync_status": "synced",
+          "last_sync": 1744985925.975512,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/71590e0d-d8f4-4cc9-b2a5-1dfceea560c2"
+        },
+        {
+          "external_id": "3285b7f9-a111-4dda-9a4c-716bcd430dcf",
+          "sync_status": "synced",
+          "last_sync": 1744986165.775265,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/3285b7f9-a111-4dda-9a4c-716bcd430dcf"
+        },
+        {
+          "external_id": "58b98c38-4da4-4c5e-a1d7-d57c4dd8875a",
+          "sync_status": "synced",
+          "last_sync": 1744986494.291068,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/58b98c38-4da4-4c5e-a1d7-d57c4dd8875a"
+        },
+        {
+          "external_id": "accd56b2-0d5f-4a79-bbad-ed7f822be7fc",
+          "sync_status": "synced",
+          "last_sync": 1744986622.589902,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/accd56b2-0d5f-4a79-bbad-ed7f822be7fc"
+        },
+        {
+          "external_id": "d35dd32b-6ec8-4f88-b24e-c2f92b68ec2f",
+          "sync_status": "synced",
+          "last_sync": 1744987222.026825,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/d35dd32b-6ec8-4f88-b24e-c2f92b68ec2f"
+        },
+        {
+          "external_id": "d35dd32b-6ec8-4f88-b24e-c2f92b68ec2f",
+          "sync_status": "synced",
+          "last_sync": 1744987405.720935,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/d35dd32b-6ec8-4f88-b24e-c2f92b68ec2f"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987805.552963,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/a2e4f8b4-ce77-4be0-b05b-7b9cf87d8e21",
+          "external_id": "a2e4f8b4-ce77-4be0-b05b-7b9cf87d8e21"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987878.625248,
+          "etag": null,
+          "message": "Task synced successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/a2e4f8b4-ce77-4be0-b05b-7b9cf87d8e21",
+          "external_id": "a2e4f8b4-ce77-4be0-b05b-7b9cf87d8e21"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987950.200766,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/a32a6536-54cf-481d-965e-1af02f43bfa5",
+          "external_id": "a32a6536-54cf-481d-965e-1af02f43bfa5"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744988965.804798,
+          "etag": null,
+          "message": "Task synced successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/a32a6536-54cf-481d-965e-1af02f43bfa5",
+          "external_id": "a32a6536-54cf-481d-965e-1af02f43bfa5"
+        },
+        {
+          "external_id": "9741b684-5d6d-44f7-bb2f-e17d1c5a160f",
+          "sync_status": "synced",
+          "last_sync": 1744989305.026712,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/9741b684-5d6d-44f7-bb2f-e17d1c5a160f"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989428.505237,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/21966f4d-d949-4b26-af93-3e510567bed1",
+          "external_id": "21966f4d-d949-4b26-af93-3e510567bed1"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989532.099175,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/d78e993d-ffd6-452c-9185-291befb9e8b0",
+          "external_id": "d78e993d-ffd6-452c-9185-291befb9e8b0"
+        },
+        {
+          "system": "nextcloud",
+          "external_id": "d78e993d-ffd6-452c-9185-291befb9e8b0",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/d78e993d-ffd6-452c-9185-291befb9e8b0",
+          "last_sync": 1744989532.099175,
+          "sync_status": "synced",
+          "etag": null
+        }
+      ]
+    },
+    {
+      "status": "blocked",
+      "priority": "low",
+      "dependencies": [
+        5,
+        8,
+        11
+      ],
+      "subtasks": [
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [],
+          "description": "Analyze the current synchronization process to identify performance bottlenecks and resource consumption patterns",
+          "details": "Use performance profiling tools to measure CPU usage, memory consumption, I/O operations, and network traffic during sync operations. Create baseline metrics for comparison. Identify specific code paths, queries, and operations that consume disproportionate resources. Document findings with specific metrics and create a prioritized list of optimization targets.",
+          "id": 1,
+          "title": "Profiling and Bottleneck Identification"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Design and implement mechanisms to control resource usage during synchronization",
+          "details": "Implement data batching to process records in configurable chunk sizes (start with 100-500 records per batch). Add throttling logic to limit sync operations to a maximum rate (e.g., N operations per minute). Implement backoff mechanisms for retry logic. Add configuration options to tune these parameters. Ensure these mechanisms can be adjusted dynamically without restarting the application.",
+          "id": 2,
+          "title": "Implement Batching and Throttling Mechanisms"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1
+          ],
+          "description": "Refactor database queries used during synchronization to improve efficiency",
+          "details": "Review and optimize all SQL queries used in sync operations. Add appropriate indexes to support sync queries. Implement query pagination where appropriate. Consider denormalization or materialized views for frequently accessed sync data. Use database explain plans to verify query performance. Ensure all queries use prepared statements and parameter binding. Implement connection pooling if not already present.",
+          "id": 3,
+          "title": "Optimize Database Queries for Sync Operations"
+        },
+        {
+          "status": "pending",
+          "priority": "medium",
+          "dependencies": [
+            1,
+            2,
+            3
+          ],
+          "description": "Add instrumentation to collect, store, and analyze performance metrics for ongoing optimization",
+          "details": "Implement metrics collection for key performance indicators (sync duration, resource usage, etc.). Create a dashboard to visualize performance metrics over time. Set up alerting for performance degradation. Implement A/B testing capability to compare optimization strategies. Automate performance test runs to detect regressions. Document the performance impact of each optimization and verify the overall impact is less than 5% on regular operations.",
+          "id": 4,
+          "title": "Implement Performance Metrics Collection and Analysis"
+        }
+      ],
+      "description": "Optimize the synchronization process to minimize performance impact on regular operations.",
+      "details": "Profile and optimize sync operations to reduce CPU and memory usage. Implement batching and throttling to control resource usage. Add performance metrics collection. Optimize database queries related to sync. Ensure sync impact is less than 5% on regular operations.",
+      "testStrategy": "Conduct performance testing with various task loads. Measure and compare performance before and after optimization. Test on different hardware configurations.",
+      "created": 1744582285.144342,
+      "updated": 1744582285.144343,
+      "id": 15,
+      "title": "Conduct Performance Optimization",
+      "external_sync": [
+        {
+          "external_id": "43aa7d77-8225-47f0-a0dd-3a2e50ea7c2e",
+          "sync_status": "synced",
+          "last_sync": 1744985376.536214,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/43aa7d77-8225-47f0-a0dd-3a2e50ea7c2e"
+        },
+        {
+          "external_id": "fa152980-66a0-4b23-805e-15e31fe61bd1",
+          "sync_status": "synced",
+          "last_sync": 1744985742.477261,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/fa152980-66a0-4b23-805e-15e31fe61bd1"
+        },
+        {
+          "external_id": "5ccdc514-2cfa-4a83-8850-61e2d595b532",
+          "sync_status": "synced",
+          "last_sync": 1744985926.058905,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/5ccdc514-2cfa-4a83-8850-61e2d595b532"
+        },
+        {
+          "external_id": "4cbfa872-40da-468e-b821-7de50abb4e60",
+          "sync_status": "synced",
+          "last_sync": 1744986165.85991,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/4cbfa872-40da-468e-b821-7de50abb4e60"
+        },
+        {
+          "external_id": "b9459020-337f-454d-be10-87931d0d5305",
+          "sync_status": "synced",
+          "last_sync": 1744986494.382343,
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/b9459020-337f-454d-be10-87931d0d5305"
+        },
+        {
+          "external_id": "811d4c2d-5b86-42e0-8e7c-72888a7a105d",
+          "sync_status": "synced",
+          "last_sync": 1744986622.680267,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/811d4c2d-5b86-42e0-8e7c-72888a7a105d"
+        },
+        {
+          "external_id": "cb991eeb-f652-4714-8101-7bb7f77cab90",
+          "sync_status": "synced",
+          "last_sync": 1744987222.118516,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/cb991eeb-f652-4714-8101-7bb7f77cab90"
+        },
+        {
+          "external_id": "cb991eeb-f652-4714-8101-7bb7f77cab90",
+          "sync_status": "error",
+          "last_sync": 1744987222.118516,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/cb991eeb-f652-4714-8101-7bb7f77cab90",
+          "error": "Task with ID cb991eeb-f652-4714-8101-7bb7f77cab90 not found"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987805.603929,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/e2f49548-33ac-4b97-99c2-b379229fcac6",
+          "error": "Task with ID cb991eeb-f652-4714-8101-7bb7f77cab90 not found",
+          "external_id": "e2f49548-33ac-4b97-99c2-b379229fcac6"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987878.908159,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/8045741e-44f8-416c-83f3-189cdc6e46e6",
+          "error": "Task with ID cb991eeb-f652-4714-8101-7bb7f77cab90 not found",
+          "external_id": "8045741e-44f8-416c-83f3-189cdc6e46e6"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744987950.279021,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ae4d6a74-91f2-4d39-9246-b20aa1873c0d",
+          "error": "Task with ID cb991eeb-f652-4714-8101-7bb7f77cab90 not found",
+          "external_id": "ae4d6a74-91f2-4d39-9246-b20aa1873c0d"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987950.279021,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ae4d6a74-91f2-4d39-9246-b20aa1873c0d",
+          "error": "Remote task not found",
+          "external_id": "ae4d6a74-91f2-4d39-9246-b20aa1873c0d"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987950.279021,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ae4d6a74-91f2-4d39-9246-b20aa1873c0d",
+          "error": "Remote task not found",
+          "external_id": "ae4d6a74-91f2-4d39-9246-b20aa1873c0d"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987950.279021,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ae4d6a74-91f2-4d39-9246-b20aa1873c0d",
+          "error": "Remote task not found",
+          "external_id": "ae4d6a74-91f2-4d39-9246-b20aa1873c0d"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987950.279021,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ae4d6a74-91f2-4d39-9246-b20aa1873c0d",
+          "error": "Remote task not found",
+          "external_id": "ae4d6a74-91f2-4d39-9246-b20aa1873c0d"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987950.279021,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ae4d6a74-91f2-4d39-9246-b20aa1873c0d",
+          "error": "Remote task not found",
+          "external_id": "ae4d6a74-91f2-4d39-9246-b20aa1873c0d"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987950.279021,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ae4d6a74-91f2-4d39-9246-b20aa1873c0d",
+          "error": "Remote task not found",
+          "external_id": "ae4d6a74-91f2-4d39-9246-b20aa1873c0d"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744987950.279021,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/ae4d6a74-91f2-4d39-9246-b20aa1873c0d",
+          "error": "Remote task not found",
+          "external_id": "ae4d6a74-91f2-4d39-9246-b20aa1873c0d"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744988966.055245,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c101b2ea-7753-4dd5-900b-2fc2b905de84",
+          "error": "Remote task not found",
+          "external_id": "c101b2ea-7753-4dd5-900b-2fc2b905de84"
+        },
+        {
+          "sync_status": "error",
+          "last_sync": 1744988966.055245,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/c101b2ea-7753-4dd5-900b-2fc2b905de84",
+          "error": "Remote task not found",
+          "external_id": "c101b2ea-7753-4dd5-900b-2fc2b905de84"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989187.233088,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/274e68a7-e397-4ba2-ac51-e6362bb333ff",
+          "error": "Remote task not found",
+          "external_id": "274e68a7-e397-4ba2-ac51-e6362bb333ff"
+        },
+        {
+          "external_id": "fcb4c18d-4bb7-4a09-a293-e1a3b10c8875",
+          "sync_status": "synced",
+          "last_sync": 1744989305.309392,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/fcb4c18d-4bb7-4a09-a293-e1a3b10c8875"
+        },
+        {
+          "external_id": "f2620ce1-bfab-4704-9efe-8093d25449ff",
+          "sync_status": "synced",
+          "last_sync": 1744989363.232356,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/f2620ce1-bfab-4704-9efe-8093d25449ff"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989428.82535,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/b9464bd1-3269-4760-a848-54b3bcc714c7",
+          "external_id": "b9464bd1-3269-4760-a848-54b3bcc714c7"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989455.47332,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/47da3f77-11f0-4037-a626-93214216a0e5",
+          "external_id": "47da3f77-11f0-4037-a626-93214216a0e5"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989465.227614,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/89b4a371-fc86-4c13-99b5-1f8b3dc6a7d9",
+          "external_id": "89b4a371-fc86-4c13-99b5-1f8b3dc6a7d9"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989532.377975,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/e1e79c8c-6504-43af-bc72-42a2298e310f",
+          "external_id": "e1e79c8c-6504-43af-bc72-42a2298e310f"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744989541.047982,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/41f47884-263c-4184-b0b9-aefa18916d10",
+          "external_id": "41f47884-263c-4184-b0b9-aefa18916d10"
+        },
+        {
+          "sync_status": "synced",
+          "last_sync": 1744990234.727177,
+          "etag": null,
+          "message": "Task created successfully",
+          "external_url": "https://nextcloud.442online.net/index.php/apps/tasks/#/tasks/17b5eb94-df37-4b3d-b6d5-c062a2954187",
+          "external_id": "17b5eb94-df37-4b3d-b6d5-c062a2954187"
+        }
+      ]
+    }
+  ]
+}
