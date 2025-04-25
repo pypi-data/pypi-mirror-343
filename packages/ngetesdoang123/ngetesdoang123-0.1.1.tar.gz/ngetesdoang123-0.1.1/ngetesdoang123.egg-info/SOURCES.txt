@@ -1,0 +1,7 @@
+README.md
+ngetesdoang123.py
+pyproject.toml
+ngetesdoang123.egg-info/PKG-INFO
+ngetesdoang123.egg-info/SOURCES.txt
+ngetesdoang123.egg-info/dependency_links.txt
+ngetesdoang123.egg-info/top_level.txt
