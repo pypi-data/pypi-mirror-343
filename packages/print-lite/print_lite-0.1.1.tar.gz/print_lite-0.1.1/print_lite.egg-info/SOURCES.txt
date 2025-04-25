@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+printPro/__init__.py
+printPro/printPro.py
+print_lite.egg-info/PKG-INFO
+print_lite.egg-info/SOURCES.txt
+print_lite.egg-info/dependency_links.txt
+print_lite.egg-info/requires.txt
+print_lite.egg-info/top_level.txt
