@@ -1,0 +1,2 @@
+[console_scripts]
+puzzle-subway-mcp-server = puzzlelabs.puzzle_subway_mcp_server.server:main
