@@ -1,0 +1,70 @@
+# pyproject.toml for Fish-Speech-Lib
+# Copyright 2025 Atm4x (Apache License 2.0)
+# Based on original pyproject.toml from Fish-Speech (Copyright 2025 Fish Audio Authors)
+# See LICENSE file for details.
+
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fish_speech_lib"
+version = "0.1.0.1"
+description = "Fish Speech pipeline as library so you don't need to webui."
+authors = [
+    {name = "Atm4x", email = "bloodyseiko@gmail.com"},
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+keywords = ["tts", "text-to-speech", "voice-cloning", "llama", "speech-synthesis", "fish-speech", "Atm4x", "fish audio"] 
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy<=1.26.4",
+    "natsort>=8.4.0",
+    "transformers>=4.45.2",
+    "datasets==2.18.0",
+    "lightning>=2.1.0",
+    "hydra-core>=1.3.2",
+    "tensorboard>=2.14.1",
+    "einops>=0.7.0",
+    "librosa>=0.9.1",
+    "rich>=13.5.3",
+    "wandb>=0.15.11",
+    "grpcio>=1.58.0",
+    "kui>=1.6.0",
+    "uvicorn>=0.30.0",
+    "loguru>=0.6.0",
+    "pyrootutils>=1.0.4",
+    "resampy>=0.4.3",
+    "zstandard>=0.22.0",
+    "pydub",
+    "pyaudio",
+    "faster-whisper",
+    "ormsgpack",
+    "tiktoken>=0.8.0",
+    "pydantic==2.9.2",
+    "cachetools",
+    "huggingface-hub",
+    "loralib",
+    "vector_quantize_pytorch==1.14.24",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Atm4x/Fish-speech-pipeline"
+"Repository" = "https://github.com/Atm4x/Fish-speech-pipeline" 
+"Bug Tracker" = "https://github.com/Atm4x/Fish-speech-pipeline/issues" 
+"Original Project" = "https://github.com/fishaudio/fish-speech"
+
+[project.scripts]
+fish_speech_inference = "fish_speech_pipe.inference:main"
+
+
+[tool.setuptools.packages.find]
+where = ["."]  #  Искать пакеты в текущей директории
+include = ["fish_speech_lib*"]  # Include your package(s)
