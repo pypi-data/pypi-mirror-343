@@ -1,0 +1,13 @@
+LICENSE
+README.md
+lib.c
+pyproject.toml
+_hide_from_traceback/__init__.pyi
+_hide_from_traceback/py.typed
+hide_from_traceback/__init__.py
+hide_from_traceback/py.typed
+hide_from_traceback.egg-info/PKG-INFO
+hide_from_traceback.egg-info/SOURCES.txt
+hide_from_traceback.egg-info/dependency_links.txt
+hide_from_traceback.egg-info/requires.txt
+hide_from_traceback.egg-info/top_level.txt
