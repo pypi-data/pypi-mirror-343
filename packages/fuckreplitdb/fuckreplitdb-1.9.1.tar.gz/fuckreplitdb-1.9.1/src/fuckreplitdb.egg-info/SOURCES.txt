@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/fuckreplitdb/__init__.py
+src/fuckreplitdb/datatest.py
+src/fuckreplitdb.egg-info/PKG-INFO
+src/fuckreplitdb.egg-info/SOURCES.txt
+src/fuckreplitdb.egg-info/dependency_links.txt
+src/fuckreplitdb.egg-info/top_level.txt
