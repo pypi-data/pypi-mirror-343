@@ -1,0 +1,15 @@
+coocan/__init__.py,sha256=UqFmE7ucuR_xR3OyyBU8pxqLfCJ5AdH_HsDdTsYPf6g,55
+coocan/gen.py,sha256=J6QWXkBVbiCQqey8i0BDqleRNpBswI8AyvrYmkDVQPw,1028
+coocan/cmd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coocan/cmd/cli.py,sha256=d_sG63wz8RHHa5u7HabOz36yai_D8S3bSr7VprVpTck,2420
+coocan/cmd/templates/spider.txt,sha256=Htd7nOs1EeKbc8LNRUX7xyHkLWz3S0kaTPRW0M3NuUw,480
+coocan/spider/__init__.py,sha256=kMDCGeqtN50raCzwfCn18s_W8xV6KO_Ny9Xol4I48Ag,58
+coocan/spider/base.py,sha256=WMTnMQd7Dnv2aC7rnmkAo_WJu33p9g3GN07A2DnbdLI,5104
+coocan/url/__init__.py,sha256=rEMx66XDy5AIJ9mF_2UVzHW5mRLBAWZEyQ3txrZzuZA,102
+coocan/url/request.py,sha256=seZaQXQRvRMIf9WnCp3mAgNA-kxsj9P2JzAvuIt2Dx8,1116
+coocan/url/response.py,sha256=AnC0xsF34q68r62EVlcHYmDH6skm9RBwRHITTb4iBbU,1785
+coocan-0.4.9.dist-info/METADATA,sha256=WZhIMdcypGrPcE1_bAMxMUa3puvkngstEU4PSTR5UXo,2374
+coocan-0.4.9.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+coocan-0.4.9.dist-info/entry_points.txt,sha256=tOLQN_TVhl_9f2YBASTGBE_ClmG-iQ4rKmyhE2WAOY0,43
+coocan-0.4.9.dist-info/top_level.txt,sha256=VwB-Q4zEljgb9v1Ms1E59B-1pBYORXuhKjgZb-LHOhk,7
+coocan-0.4.9.dist-info/RECORD,,
