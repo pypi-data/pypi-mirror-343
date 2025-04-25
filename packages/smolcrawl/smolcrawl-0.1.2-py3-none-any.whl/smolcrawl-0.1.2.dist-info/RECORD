@@ -1,0 +1,9 @@
+smolcrawl/__init__.py,sha256=_YzXpRXRstdDEW05W1F4HSubj6oHaCqFxaRle78Wj30,1532
+smolcrawl/crawl.py,sha256=Qfk5Frmha4n3yGpV9XQSN5za2DRp2DjljMEhao79EWQ,2863
+smolcrawl/db.py,sha256=7FB94ECgfPNYGhkJc114YQ9EUULd_x9Rz88P_cM1nts,3917
+smolcrawl/utils.py,sha256=55ZJagPvTop6vkgXebqeMGneg0Qzy6jBucL_fZ-yO9g,527
+smolcrawl-0.1.2.dist-info/METADATA,sha256=prlzon2--pjbGOxOIPsM0oQoR5zkjuy2xR1b5gpSqtQ,3801
+smolcrawl-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+smolcrawl-0.1.2.dist-info/entry_points.txt,sha256=2LEVTDC2WDtFLJ1cDToGDgU9-BDpfquLa9f_BMIvSlA,44
+smolcrawl-0.1.2.dist-info/licenses/LICENSE.md,sha256=l0_txtr78DYy4W3ou-eLO4m5W_fRNy-9pVzs2nDbqb4,1072
+smolcrawl-0.1.2.dist-info/RECORD,,
