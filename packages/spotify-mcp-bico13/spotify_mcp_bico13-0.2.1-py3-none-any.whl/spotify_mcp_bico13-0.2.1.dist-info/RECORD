@@ -1,0 +1,9 @@
+spotify_mcp/__about__.py,sha256=HfjVOrpTnmZ-xVFCYSVmX50EXaBQeJteUHG-PD6iQs8,22
+spotify_mcp/__init__.py,sha256=-ll_4a4NUxbJJoqqxMklceB-SU_n5YWRgbQkKgROKjo,224
+spotify_mcp/server.py,sha256=QkmhpxG5y3p5unXrlgHnZH0rEjFRNvmdrdM70JebFQM,9906
+spotify_mcp/spotify_api.py,sha256=pM0XT20o1ZlMahAQK_-PfsdpGqvjpFN4F7_jP1p-PqU,10327
+spotify_mcp/utils.py,sha256=C02WEZyfP7XfcMj0Sq8rPuytJF3pJE7iddYsBPwyB5s,6622
+spotify_mcp_bico13-0.2.1.dist-info/METADATA,sha256=xfk0zP9pt0DvSxf7oZ4ZWKdDcoFGy8Cx06n-z2AtuPI,3853
+spotify_mcp_bico13-0.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+spotify_mcp_bico13-0.2.1.dist-info/entry_points.txt,sha256=pPCapDTVkl3ac6EIg3X0eOEBYUL1Gp08iGDP1C8gKLE,56
+spotify_mcp_bico13-0.2.1.dist-info/RECORD,,
