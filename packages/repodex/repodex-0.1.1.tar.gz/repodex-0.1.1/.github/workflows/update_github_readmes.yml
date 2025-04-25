@@ -1,0 +1,47 @@
+name: Update GitHub README Collections
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Run daily at midnight UTC
+  workflow_dispatch: # Allow manual triggering
+
+# Add permissions section to allow writing to the repository
+permissions:
+  contents: write # This gives the workflow write access to repository contents
+
+jobs:
+  update-readmes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Fetch full history for better commit context
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install GitHub CLI
+        run: |
+          curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+          echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+          sudo apt update
+          sudo apt install gh
+
+      - name: Authenticate with GitHub
+        run: |
+          echo "${{ secrets.GH_PAT }}" | gh auth login --with-token
+
+      - name: Run Cello README fetcher
+        run: python tools/gh_repo_fetch_index_cello.py
+
+      - name: Run Personal README fetcher
+        run: python tools/gh_repo_fetch_index_shane.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add github-project-readmes-cello/ github-project-readmes-shane/
+          git diff --staged --quiet || (git commit -m "Update GitHub README collections" && git push)

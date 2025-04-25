@@ -1,0 +1,36 @@
+# UV-Native Workflow Enforcement Rules
+
+This file defines strict enforcement rules for the UV-native workflow in the RepoDex project.
+
+## Prohibited Commands and Patterns
+
+The following commands and patterns are strictly prohibited in this project:
+
+1. Any command containing the string "pip" (e.g., `pip install`, `uv pip install`, etc.)
+2. Any reference to pip in documentation, comments, or code
+3. Any tools or libraries that internally use pip
+
+## Required Commands
+
+The following UV-native commands must be used for all Python package operations:
+
+1. `uv install` - For installing packages
+2. `uv tool install` - For installing development tools
+3. `uv sync` - For syncing virtual environments
+4. `uv build` - For building packages
+5. `uv publish` - For publishing packages
+
+## Enforcement Mechanisms
+
+1. All pull requests will be automatically checked for compliance with these rules
+2. Any violation will result in automatic rejection
+3. Code reviews must verify compliance with these rules
+4. CI/CD pipelines will enforce these rules
+
+## Rationale
+
+UV provides a modern, faster, and more reliable Python packaging experience. By standardizing on UV-native commands, we ensure consistent behavior across all development environments and eliminate the issues associated with pip-based workflows.
+
+## Exceptions
+
+There are **NO EXCEPTIONS** to these rules. The prohibition against pip is absolute and non-negotiable.

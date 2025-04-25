@@ -1,0 +1,213 @@
+# RepoDex Project Rules
+
+This file documents critical patterns, workflows, and development practices for the RepoDex project. These rules ensure consistency, maintainability, and efficiency across all work on this project.
+
+## Code Quality and Linting
+
+### Ruff Linting Rules
+
+We use Ruff for Python code linting and formatting. Ruff is a fast, comprehensive linter that combines functionality from multiple Python linters.
+
+**Key linting requirements:**
+
+- ALWAYS run `ruff` after code edits. ALWAYS!
+- Use `ruff --fix` to automatically fix linting issues where possible
+- Use `ruff check` to check for any remaining issues
+
+1. Follow PEP 8 style guidelines
+2. Maximum line length of 100 characters
+3. Use docstrings for all functions and classes
+4. Prefer f-strings for string formatting
+5. Maintain consistent import order
+6. Avoid unused imports and variables
+7. Use type hints and annotations where appropriate
+
+**Implementation:**
+
+```python
+# Example of properly formatted code following our guidelines
+def fetch_repository_data(username: str, repo_name: str) -> dict:
+    """
+    Fetch repository metadata using GitHub API.
+
+    Args:
+        username: GitHub username
+        repo_name: Repository name
+
+    Returns:
+        Dictionary containing repository metadata
+    """
+    # Implementation with proper error handling
+    try:
+        # API call with proper formatting
+        result = subprocess.run(
+            ["gh", "api", f"repos/{username}/{repo_name}"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=True,
+        )
+        return json.loads(result.stdout)
+    except subprocess.CalledProcessError as e:
+        print(f"Error fetching repository data: {e}")
+        return {}
+```
+
+**Ruff configuration (.ruff.toml):**
+
+```toml
+line-length = 100
+target-version = "py310" # Updated from py38
+select = ["E", "F", "B", "I", "UP", "N", "PL", "RUF"]
+ignore = ["E203"]  # Whitespace before ':' - conflicts with Black
+
+[per-file-ignores]
+"__init__.py" = ["F401"]  # Unused imports in __init__ files
+
+[flake8-quotes]
+docstring-quotes = "double"
+inline-quotes = "double"
+
+[flake8-import-conventions.aliases]
+numpy = "np"
+pandas = "pd"
+```
+
+## Development Workflow
+
+### Terminal Testing First Approach
+
+**Critical Rule:** Always test API calls, commands, and queries in the terminal before implementing them in code.
+
+**Why this matters:**
+
+- Provides immediate feedback on API responses
+- Allows faster iteration and debugging
+- Helps understand data structures and response formats
+- Identifies issues before coding
+- Increases confidence in implementation approaches
+
+**Implementation workflow:**
+
+1. **Identify the API/endpoint** needed for a feature
+2. **Construct a basic call** in the terminal using GitHub CLI
+3. **Analyze the response format** to understand the structure
+4. **Refine and iterate** on the approach based on results
+5. **Test edge cases** (pagination, error responses, etc.)
+6. **Document successful approaches** in comments before coding
+7. **Implement in code** only after terminal testing confirms validity
+
+**Examples:**
+
+```bash
+# Example 1: Testing basic repository listing
+gh api "users/username/repos?per_page=5"
+
+# Example 2: Testing for private repositories
+gh api "user/repos?affiliation=owner&visibility=private&per_page=5" | jq '[.[] | {name: .name, private: .private}]'
+
+# Example 3: Testing pagination with cursors
+gh api graphql -f query='query {
+  viewer {
+    repositories(first: 10, after: "cursorString") {
+      pageInfo { endCursor hasNextPage }
+      nodes { name }
+    }
+  }
+}'
+```
+
+**Verification checklist:**
+
+- [ ] Response structure matches expectations
+- [ ] Pagination works as expected
+- [ ] Authentication behaves correctly
+- [ ] Error cases are understood
+- [ ] Rate limits are considered
+- [ ] Response includes all necessary data
+
+This approach has repeatedly proven its value, most notably when implementing the private repository fetching feature and the GraphQL optimization, saving hours of development time and potential bugs.
+
+## Project-Specific Patterns
+
+### Repository Fetching Strategies
+
+**Strategy selection rules:**
+
+1. For personal repositories (public + private): Use `user/repos?affiliation=owner`
+2. For organization-owned repos with authorship filtering: Use GraphQL approach
+3. For public-only repositories: Use `users/{username}/repos`
+
+**API Parameter Guidelines:**
+
+- Always include pagination parameters (`per_page`, `page` or cursor-based pagination)
+- Use `affiliation` to filter by repository relationship
+- Use `visibility` when specifically targeting public/private repos
+- Handle pagination appropriate to the endpoint (page-based or cursor-based)
+
+These patterns ensure efficient API usage and consistent behavior across the application.
+
+## Output and UI Preferences
+
+### Status Indicators and Console Output
+
+**Terminal output formatting rules:**
+
+1. **Never use emojis** in terminal or log output (developer has a strong disdain for emoji characters)
+2. Use color-coded bracket-based indicators instead of emojis or symbols:
+    - `[x]` in green for success/confirmed status (using ANSI escape code `\033[32m`)
+    - `[ ]` in red for failure/rejected status (using ANSI escape code `\033[31m`)
+    - `[-]` in yellow/orange for warning/unknown status (using ANSI escape code `\033[33m`)
+3. Keep console output clean, minimalist and easily scannable
+4. Ensure clear visual differentiation between different status types while maintaining a professional appearance
+
+These formatting preferences apply to all output, including repository authorship indications, operation statuses, and process summaries.
+
+## Documentation Management
+
+### README File Standards
+
+**Markdown Linting Rules:**
+
+All README files must follow these markdown linting standards:
+
+1. **MD031**: Fenced code blocks should be surrounded by blank lines.
+2. **MD040**: Fenced code blocks should have a language specified.
+3. **MD047**: Files should end with a single newline character.
+4. **Ordered Lists (MD030 Emphasis):** Must have exactly **one** space after the list marker (e.g., `1. Item`).
+
+    ```markdown
+    # BAD
+    1.  Item (two spaces)
+    1.   Item (three spaces)
+
+    # GOOD
+    1. Item (one space)
+    ```
+
+5. NEVER EVER use an `*` to indicate an unordered list! We ALWAYS use `-` for unordered lists.
+
+6. Use `sh` instead of `bash` for shell code blocks for consistency.
+
+**README Update Process:**
+
+For updating README files across multiple repositories, follow the documented process in [docs/readme_management.md](docs/readme_management.md), which includes:
+
+1. Identifying repositories needing updates
+2. Fixing markdown linting issues locally
+3. Pushing updates to GitHub repositories using the GitHub CLI
+
+**Example Command Pattern:**
+
+```sh
+# Get the SHA of the current README file
+sha=$(gh api repos/username/repo/contents/README.md | jq -r '.sha')
+
+# Update the README file with the new content
+gh api -X PUT /repos/username/repo/contents/README.md \
+    -f message="Fix markdown formatting" \
+    -f content="$(base64 < path/to/local/readme.md)" \
+    -f sha="$sha"
+```
+
+This process has been successfully used to update multiple repository READMEs and ensures consistency across all project documentation.
