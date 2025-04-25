@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: ngi-code-academy
+Version: 0.1.0
+Summary: 
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.13,<4.0
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+
