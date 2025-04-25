@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: mj_envs
+Version: 0.3.0
+Summary: MuJoCo environments for DART
+Author: Younghyo Park
+Author-email: younghyo@mit.edu
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Requires-Dist: dm_control
+Requires-Dist: numpy
+Requires-Dist: mujoco
+Requires-Dist: scipy
+Requires-Dist: pyyaml
+Requires-Dist: gdown
+Requires-Dist: qpsolvers
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
