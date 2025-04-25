@@ -1,0 +1,14 @@
+spatialexperiment/SpatialExperiment.py,sha256=rSv_uU8dIMHNr2i2yEvT3KRYKGxErHP-WRMEzLPg_x0,45551
+spatialexperiment/SpatialImage.py,sha256=BtMYfkn4US0gyFuED_FKoaa58fpWzLe5fZu0QdP6EqI,20244
+spatialexperiment/__init__.py,sha256=qeyr2ep0-K0ju0fq5syXSdZvNOLzb_t9Snv0yZC4mTo,1076
+spatialexperiment/_combineutils.py,sha256=0ASThbk8oXjN9dd_5X3IVTVigmiKEnDcW7bwhF71ACM,3939
+spatialexperiment/_imgutils.py,sha256=9FPJjyw9gvoeJqwpDS0EQGgbPUj0aBz_jgpixAQ9XSk,4674
+spatialexperiment/_initutils.py,sha256=AePxU1ysZwbIJxDh0t95fPxMie370uVvMlUNCTiB2GE,3072
+spatialexperiment/_validators.py,sha256=k6LReg_LVFQxFdWw1f1osAhbr9Mm6T44cesWWjnKsAc,3257
+spatialexperiment/io/__init__.py,sha256=GCTephPUoYCe_BHV7Lh-Al2NcXCbGvzXOe-DC2WoYdw,74
+spatialexperiment/io/tenx_visium.py,sha256=3o14Zag7RYV381bOowCPqBflE6zvaerdv9lfFLdpyZE,10363
+spatialexperiment-0.0.8.dist-info/licenses/LICENSE.txt,sha256=lLAuQm6irjaFxMBCrY7YHw1g6tCGJiDbGr6LL8UaZ7U,1074
+spatialexperiment-0.0.8.dist-info/METADATA,sha256=uUCi1-afmzpz6bfHVILw9P1hxFXCvafog8xurEINg0c,4685
+spatialexperiment-0.0.8.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+spatialexperiment-0.0.8.dist-info/top_level.txt,sha256=vUly_ge37E5hY4Ye_m1ETQ4OQGLTuM6Bh4ptaDhSApY,18
+spatialexperiment-0.0.8.dist-info/RECORD,,
