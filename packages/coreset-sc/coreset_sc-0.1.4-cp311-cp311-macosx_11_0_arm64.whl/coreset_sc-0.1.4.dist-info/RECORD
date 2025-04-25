@@ -1,0 +1,8 @@
+coreset_sc-0.1.4.dist-info/METADATA,sha256=Z5M4tYpOYOT42tNuNNQl_U8DqtIQIKy5QdduUmSa6_s,2605
+coreset_sc-0.1.4.dist-info/WHEEL,sha256=wsVBlw9xyAuHecZeOYqJ_tA7emUKfXYOn-_180uZRi4,104
+coreset_sc-0.1.4.dist-info/licenses/LICENSE,sha256=tTVbpyLxxqErS82gPgyudl45NzzRzsOgnuWONjXzh60,1068
+coreset_sc/csc.py,sha256=jvVSTAcpS4O-oMmGlVGmxzibuc7QoE6JAk4m42O1Zn8,10440
+coreset_sc/__init__.py,sha256=oHAc5gU6r05PsrGhJ7De99CbBN8sLmLBNji_DducXH8,2559
+coreset_sc/utils.py,sha256=kcMXDXWvBZq_NWz80Y12uSDK3lJ0NXCQkpe2nnq_Sy8,1306
+coreset_sc/coreset_sc.cpython-311-darwin.so,sha256=NgcIsJ-AmqyNDGDpM5WO-0tNX7T4AiUMRolCArKNJfk,1773616
+coreset_sc-0.1.4.dist-info/RECORD,,
