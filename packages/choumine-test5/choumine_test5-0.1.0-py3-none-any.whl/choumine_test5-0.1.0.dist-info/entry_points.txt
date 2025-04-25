@@ -1,0 +1,2 @@
+[console_scripts]
+choumine-test5 = choumine_test5:main
