@@ -1,0 +1,129 @@
+Metadata-Version: 2.4
+Name: oblix
+Version: 0.1.3
+Summary: Oblix - Python SDK for AI model orchestration
+Home-page: https://github.com/oblix-ai/oblix-python
+Author: Oblix
+Author-email: team@oblix.ai
+License: Apache License 2.0
+Keywords: ai sdk model orchestration
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp>=3.8.0
+Requires-Dist: httpx>=0.24.0
+Requires-Dist: openai>=1.0.0
+Requires-Dist: anthropic>=0.9.0
+Requires-Dist: tiktoken>=0.5.1
+Requires-Dist: psutil>=5.8.0
+Requires-Dist: pydantic>=1.8.0
+Requires-Dist: python-dotenv>=0.19.0
+Requires-Dist: pyyaml>=5.4.0
+Requires-Dist: click>=8.0.0
+Requires-Dist: colorama>=0.4.4
+Requires-Dist: sqlalchemy
+Requires-Dist: packaging>=23.0
+Requires-Dist: fastapi>=0.68.0
+Requires-Dist: uvicorn>=0.15.0
+Requires-Dist: websockets>=10.0
+Requires-Dist: python-multipart>=0.0.5
+Requires-Dist: PyPDF2>=3.0.0
+Requires-Dist: python-docx>=0.8.11
+Requires-Dist: numpy>=1.20.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.20.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: isort>=5.10.0; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest>=7.0.0; extra == "test"
+Requires-Dist: pytest-asyncio>=0.20.0; extra == "test"
+Requires-Dist: pytest-cov>=4.0.0; extra == "test"
+Requires-Dist: coverage; extra == "test"
+Provides-Extra: windows
+Requires-Dist: pywin32>=223; extra == "windows"
+Requires-Dist: wmi>=1.5.1; extra == "windows"
+Requires-Dist: pynvml>=11.5.0; extra == "windows"
+Provides-Extra: linux
+Requires-Dist: pynvml>=11.5.0; extra == "linux"
+Provides-Extra: darwin
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Visit documentation.oblix.ai for full documentation
+
+# Introduction
+Welcome to Oblix! This section will guide you through the process of installing the SDK, setting up your environment, and creating your first Oblix application.
+
+## What is Oblix?
+Oblix is a comprehensive SDK for intelligent orchestration of AI models between edge and cloud environments. The SDK provides:
+
+- Unified interface for multiple AI model providers (OpenAI, Claude, Ollama)
+- Intelligent orchestration that seamlessly switches between edge and cloud models
+- System resource monitoring and connectivity awareness through specialized agents
+- Persistent chat session management
+- Agent system for extensible monitoring and orchestration decision making
+
+## Installation
+Oblix is available for both macOS and Windows and can be installed using pip:
+
+```
+pip install oblix
+```
+
+For a specific Python version, you can use:
+
+```
+python3.11 -m pip install oblix
+```
+
+Oblix supports Python versions 3.9, 3.10, 3.11, 3.12, and 3.13.
+
+### Windows-Specific Installation
+On Windows, the following dependencies will be automatically installed for system resource monitoring:
+
+- pywin32: For Windows system API access
+- wmi: For hardware monitoring 
+- pynvml: For NVIDIA GPU monitoring
+
+No additional steps are required for Windows installation - these dependencies are automatically installed when you run `pip install oblix`.
+
+## Prerequisites
+Before using Oblix, you'll need:
+
+- macOS or Windows operating system
+- Provider API Keys for any cloud models you want to use
+- Ollama installed if you want to use local edge models
+
+## Platform Support
+Oblix supports the following platforms:
+- macOS (Intel and Apple Silicon)
+- Windows (x86/x64)
+
+## Quickstart
+For quickstart guide and detailed examples, visit documentation.oblix.ai
