@@ -1,0 +1,246 @@
+# File containing the instrument definitions for the MSL mission.
+# Uppercase keys correspond to values in the label and are kept for consistency.
+# The first level of keys correspond to the mission name.
+# The second level of keys correspond to the instrument group
+# The third level of keys correspond to the instrument itself
+# During parsing, the hirachy is flattened, passing all parent attributes to the child if they are not overwritten.
+# The second level of keyes is optional, and used to group instruments of the same type, it will be removed from the final hierarchy.
+
+
+
+[MSL]
+type = "mission"
+MISSION_NAME = "MARS SCIENCE LABORATORY"
+
+  [MSL.ECAM]
+  type = "group"
+    #common ECAM properties
+    make =  "JPL-Caltech"
+
+    #sensor
+    pixel_size = 0.012
+    lines = 1024
+    line_samples = 1024
+    active_area = [1, 1 , 1023, 1023]
+    additional_crop = [0, 0, 0, 0]
+    color = false
+    exposure_equalization = 1.275
+    
+    [MSL.ECAM.NAV_LEFT_A]
+      type = "instrument"
+      model = "MSL Navcam Left A"
+
+      #optics
+      focal_length = 15
+      aperture_value = 4  
+      
+    [MSL.ECAM.NAV_RIGHT_A]
+      type = "instrument"
+      model = "MSL Navcam Right A"
+
+      #optics
+      focal_length = 15
+      aperture_value = 4
+    
+    [MSL.ECAM.NAV_LEFT_B]
+      type = "instrument"
+      model = "MSL Navcam Left B"
+
+      #optics
+      focal_length = 15
+      aperture_value = 4
+
+    [MSL.ECAM.NAV_RIGHT_B]
+      type = "instrument"
+      model = "MSL Navcam Right B"
+
+      #optics
+      focal_length = 15
+      aperture_value = 4
+
+    [MSL.ECAM.FHAZ_LEFT_A]
+      type = "instrument"
+      model = "MSL Front Hazcam Left A"
+
+      #optics
+      focal_length = 5.58
+      aperture_value = 15
+
+    [MSL.ECAM.FHAZ_RIGHT_A]
+      type = "instrument"
+      model = "MSL Front Hazcam Right A"
+
+      #optics
+      focal_length = 5.58
+      aperture_value = 15
+
+    [MSL.ECAM.FHAZ_LEFT_B]
+      type = "instrument"
+      model = "MSL Front Hazcam Left B"
+
+      #optics
+      focal_length = 5.58
+      aperture_value = 15
+
+    [MSL.ECAM.FHAZ_RIGHT_B]
+      type = "instrument"
+      model = "MSL Front Hazcam Right B"
+
+      #optics
+      focal_length = 5.58
+      aperture_value = 15
+
+    [MSL.ECAM.RHAZ_LEFT_A]
+      type = "instrument"
+      model = "MSL Rear Hazcam Left A"
+
+      #optics
+      focal_length = 5.58
+      aperture_value = 15
+
+    [MSL.ECAM.RHAZ_RIGHT_A]
+      type = "instrument"
+      model = "MSL Rear Hazcam Right A"
+
+      #optics
+      focal_length = 5.58
+      aperture_value = 15
+
+    [MSL.ECAM.RHAZ_LEFT_B]
+      type = "instrument"
+      model = "MSL Rear Hazcam Left B"
+
+      #optics
+      focal_length = 5.58
+      aperture_value = 15
+
+    [MSL.ECAM.RHAZ_RIGHT_B]
+      type = "instrument"
+      model = "MSL Rear Hazcam Right B"
+
+      #optics
+      focal_length = 5.58
+      aperture_value = 15
+
+
+
+  [MSL.MSSS]
+    type = "group"
+    make =  "JPL-Caltech/MSSS"
+
+    #sensor
+    pixel_size = 0.0074
+    lines = 1200
+    line_samples = 1648
+    active_area = [24, 2, 1630, 1200] # light sensitive area of the sensor
+    additional_crop = [0, 2, 0, 0] # crop 2 lines from the top which are typically black
+    color = true
+    cfa = "RGGB"
+    green_split = true
+    exposure_equalization = 0.582
+
+    [MSL.MSSS.MAST_LEFT]
+      type = "instrument"
+      model = "MSL Left Mastcam 34mm"
+
+      exposure_equalization = 0.582
+
+      #optics
+      focal_length = 34
+      aperture_value = 8
+
+      #sensor
+      badpixels = {pixels=[[1068,1197],[1440,1198],[859,1082], [859,1083], [750, 641]], columns = [1069,653], rectangles=[[1033, 633, 1035, 635], [692,610, 692, 611], [755, 612, 756, 612], [859,1082,859,1199],[739,620,739,1199], [1018, 881, 1018, 1119]]}
+
+      #color calibration
+      ColorMatrix1= [
+          [  2.325330, -1.219946, -0.208088 ],
+          [ -0.523358,  1.389468,  0.144668 ],
+          [ -0.175260,  0.284039,  0.891039 ]
+        ]
+      ForwardMatrixWhitebalance1 = [ 0.883470, 1.000000, 0.775735]
+      ForwardMatrix1 = [
+          [  0.467471,  0.445046,  0.051702 ],
+          [  0.167172,  0.917840, -0.085012 ],
+          [  0.048347, -0.198833,  0.975687 ]
+        ]
+
+
+    [MSL.MSSS.MAST_RIGHT]
+      type = "instrument"
+      model = "MSL Right Mastcam 100mm"
+      
+      exposure_equalization = 0.582
+
+      #optics
+      focal_length = 100
+      aperture_value = 10
+
+      #sensor
+      badpixels = {pixels = [[1163, 810], [750, 771], [568, 625], [300, 198]], rectangles = [[821, 315, 823, 319], [733, 362, 736, 365], [1175, 738, 1175, 1199]]}
+
+      #color calibration
+      ColorMatrix1= [
+          [  2.325330, -1.219946, -0.208088 ],
+          [ -0.523358,  1.389468,  0.144668 ],
+          [ -0.175260,  0.284039,  0.891039 ]
+        ]
+      ForwardMatrixWhitebalance1 = [ 0.883470, 1.000000, 0.775735]
+      ForwardMatrix1 = [
+          [  0.467471,  0.445046,  0.051702 ],
+          [  0.167172,  0.917840, -0.085012 ],
+          [  0.048347, -0.198833,  0.975687 ]
+        ]
+
+
+    [MSL.MSSS.MAHLI]
+      type = "instrument"
+      model = "MSL MAHLI"
+
+      exposure_equalization = 0.401
+
+      #optics
+      focal_length = 20
+      aperture_value = 9
+
+      #sensor
+      badpixels = {rectangles = [[205,894,205,1200],[502,756,502,1200],[1060,758, 1064, 764],[1235,505,1237,510],[922,234,932,242],[72,784,78,788],[52,960,56,964],[82,900,86,904],[128,544,134,570]]}
+
+      #color calibration
+      ColorMatrix1= [
+          [  2.134397, -1.073131, -0.217582 ],
+          [ -0.550062,  1.407255,  0.154419 ],
+          [ -0.198885,  0.295649,  0.995330 ]
+        ]
+      ForwardMatrixWhitebalance1 = [ 0.988435, 1.000000, 0.901713]
+      ForwardMatrix1 = [
+          [  0.500743,  0.409762,  0.053713 ],
+          [  0.178500,  0.909383, -0.087883 ],
+          [  0.041453, -0.168920,  0.952669 ]
+        ]
+
+
+    [MSL.MSSS.MARDI]
+      type = "instrument"
+      model = "MSL MARDI"
+
+      #optics
+      focal_length = 9.7
+      aperture_value = 3
+
+      #sensor
+      badpixels = {rectangles = [[362,149,362,1200],[806,544,813,554],[514,192,522,200],[137,1137,139,1141],[467,237,468,238],[716,53,717,53], [900,533,902,535]]}
+
+      #color calibration
+      ColorMatrix1= [
+          [  2.058564, -1.030461, -0.192103 ],
+          [ -0.567873,  1.431767,  0.146550 ],
+          [ -0.203629,  0.301933,  0.984110 ]
+        ]
+      ForwardMatrixWhitebalance1 = [ 0.810898, 1.000000, 0.876424]
+      ForwardMatrix1 = [
+          [  0.502455,  0.410538,  0.051225 ],
+          [  0.180206,  0.908902, -0.089107 ],
+          [  0.038014, -0.171263,  0.958451 ]
+        ]
+
