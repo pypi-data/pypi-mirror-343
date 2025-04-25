@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+whatsrun.egg-info/PKG-INFO
+whatsrun.egg-info/SOURCES.txt
+whatsrun.egg-info/dependency_links.txt
+whatsrun.egg-info/top_level.txt
