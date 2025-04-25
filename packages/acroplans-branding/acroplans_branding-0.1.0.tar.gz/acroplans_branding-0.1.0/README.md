@@ -1,0 +1,56 @@
+# Acroplans Branding Package
+
+A unified branding package for consistent visual identity across Acroplans Hugging Face spaces.
+
+## Overview
+
+This package provides standardized branding components, styling utilities, and assets for use across multiple Hugging Face spaces to ensure a consistent brand experience.
+
+## Installation
+
+```bash
+pip install git+https://github.com/Krishnarao-Acroplans-Official/acroplans-branding.git
+```
+
+## Usage
+
+### Basic Example
+
+```python
+import streamlit as st
+from acroplans_branding.components import display_branded_header, display_branded_footer
+from acroplans_branding.styling import apply_corporate_theme
+
+# Apply corporate styling
+apply_corporate_theme()
+
+# Display branded header
+display_branded_header("Application Title", "Optional subtitle")
+
+# Your application content goes here
+st.write("Welcome to Acroplans!")
+
+# Display branded footer
+display_branded_footer()
+```
+
+### Available Components
+
+* `display_branded_header(title, subtitle=None, show_logo=True)`: Displays a consistent header with logo
+* `display_branded_footer()`: Displays a consistent footer with copyright and website link
+* `display_logo(width=None)`: Displays the Acroplans logo with optional width
+
+### Styling Functions
+
+* `apply_corporate_theme()`: Applies Acroplans styling to your Streamlit app
+* `get_color_palette()`: Returns the Acroplans color palette dictionary
+
+## Brand Colors
+
+* Primary (Blue): #155fac
+* Secondary (Orange): #fdb31a
+* Plus additional supporting colors for UI elements
+
+## License
+
+This package is proprietary and owned by Acroplans. Unauthorized use, modification, or distribution is prohibited.

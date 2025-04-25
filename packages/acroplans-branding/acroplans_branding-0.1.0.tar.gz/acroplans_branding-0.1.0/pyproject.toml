@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "acroplans-branding"
+version = "0.1.0"
+description = "Branding package for Acroplans Hugging Face spaces"
+readme = "README.md"
+authors = [
+    {name = "Krishnarao-Acroplans-Official", email = "krishnarao@acroplans.com"}
+]
+license = {text = "Proprietary"}
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit>=1.0.0",
+    "pillow>=8.0.0",
+    "requests>=2.25.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Krishnarao-Acroplans-Official/acroplans-branding"
