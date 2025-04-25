@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+smart_locators_playwright/__init__.py
+smart_locators_playwright/custom_exceptions.py
+smart_locators_playwright/smart_locators.py
+smart_locators_playwright.egg-info/PKG-INFO
+smart_locators_playwright.egg-info/SOURCES.txt
+smart_locators_playwright.egg-info/dependency_links.txt
+smart_locators_playwright.egg-info/requires.txt
+smart_locators_playwright.egg-info/top_level.txt
