@@ -1,0 +1,614 @@
+# serializer version: 1
+# name: test_query_schemas[aggregation_filters]
+  '''
+  """
+  Boolean expression to compare aggregated fields. All fields are combined with logical 'AND'.
+  """
+  input ColorAggregateBoolExp {
+    count: ColorAggregateBoolExpCount
+    sum: ColorAggregateBoolExpSum
+    minString: ColorAggregateBoolExpMinstring
+    maxString: ColorAggregateBoolExpMaxstring
+  }
+  
+  """Boolean expression to compare count aggregation."""
+  input ColorAggregateBoolExpCount {
+    arguments: [ColorCountFields!]
+    predicate: IntComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare max aggregation."""
+  input ColorAggregateBoolExpMaxstring {
+    arguments: [ColorMinMaxStringFieldsEnum!]!
+    predicate: StringComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare min aggregation."""
+  input ColorAggregateBoolExpMinstring {
+    arguments: [ColorMinMaxStringFieldsEnum!]!
+    predicate: StringComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare sum aggregation."""
+  input ColorAggregateBoolExpSum {
+    arguments: [ColorSumFieldsEnum!]!
+    predicate: FloatComparison!
+    distinct: Boolean
+  }
+  
+  """
+  Boolean expression to compare fields. All fields are combined with logical 'AND'.
+  """
+  input ColorBoolExp {
+    _and: [ColorBoolExp!]
+    _or: [ColorBoolExp!]
+    _not: ColorBoolExp
+    id: UUIDComparison
+    fruitsAggregate: FruitAggregateBoolExp
+    fruits: FruitBoolExp
+    name: StringComparison
+  }
+  
+  enum ColorCountFields {
+    id
+    name
+  }
+  
+  enum ColorMinMaxStringFieldsEnum {
+    name
+  }
+  
+  enum ColorSumFieldsEnum {
+    name
+  }
+  
+  """GraphQL type"""
+  type ColorType {
+    id: UUID!
+    fruitsAggregate: FruitAggregate!
+  
+    """Fetch objects from the FruitType collection"""
+    fruits: [FruitType!]!
+    name: String!
+  }
+  
+  """
+  Boolean expression to compare fields of type Float. All fields are combined with logical 'AND'
+  """
+  input FloatComparison {
+    eq: Float
+    neq: Float
+    isNull: Boolean
+    in: [Float!]
+    nin: [Float!]
+    gt: Float
+    gte: Float
+    lt: Float
+    lte: Float
+  }
+  
+  """Aggregation fields"""
+  type FruitAggregate {
+    count: Int
+    sum: FruitSumFields!
+    min: FruitMinMaxFields!
+    max: FruitMinMaxFields!
+    avg: FruitNumericFields!
+    stddev: FruitNumericFields!
+    stddevSamp: FruitNumericFields!
+    stddevPop: FruitNumericFields!
+    variance: FruitNumericFields!
+    varSamp: FruitNumericFields!
+    varPop: FruitNumericFields!
+  }
+  
+  """
+  Boolean expression to compare aggregated fields. All fields are combined with logical 'AND'.
+  """
+  input FruitAggregateBoolExp {
+    count: FruitAggregateBoolExpCount
+    sum: FruitAggregateBoolExpSum
+    min: FruitAggregateBoolExpMin
+    max: FruitAggregateBoolExpMax
+    minString: FruitAggregateBoolExpMinstring
+    maxString: FruitAggregateBoolExpMaxstring
+    avg: FruitAggregateBoolExpAvg
+    stddev: FruitAggregateBoolExpStddev
+    stddevSamp: FruitAggregateBoolExpStddevsamp
+    stddevPop: FruitAggregateBoolExpStddevpop
+    variance: FruitAggregateBoolExpVariance
+    varSamp: FruitAggregateBoolExpVarsamp
+    varPop: FruitAggregateBoolExpVarpop
+  }
+  
+  """Boolean expression to compare avg aggregation."""
+  input FruitAggregateBoolExpAvg {
+    arguments: [FruitNumericFieldsEnum!]!
+    predicate: FloatComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare count aggregation."""
+  input FruitAggregateBoolExpCount {
+    arguments: [FruitCountFields!]
+    predicate: IntComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare max aggregation."""
+  input FruitAggregateBoolExpMax {
+    arguments: [FruitMinMaxNumericFieldsEnum!]!
+    predicate: FloatComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare max aggregation."""
+  input FruitAggregateBoolExpMaxstring {
+    arguments: [FruitMinMaxStringFieldsEnum!]!
+    predicate: StringComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare min aggregation."""
+  input FruitAggregateBoolExpMin {
+    arguments: [FruitMinMaxNumericFieldsEnum!]!
+    predicate: FloatComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare min aggregation."""
+  input FruitAggregateBoolExpMinstring {
+    arguments: [FruitMinMaxStringFieldsEnum!]!
+    predicate: StringComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare stddev aggregation."""
+  input FruitAggregateBoolExpStddev {
+    arguments: [FruitNumericFieldsEnum!]!
+    predicate: FloatComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare stddev_pop aggregation."""
+  input FruitAggregateBoolExpStddevpop {
+    arguments: [FruitNumericFieldsEnum!]!
+    predicate: FloatComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare stddev_samp aggregation."""
+  input FruitAggregateBoolExpStddevsamp {
+    arguments: [FruitNumericFieldsEnum!]!
+    predicate: FloatComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare sum aggregation."""
+  input FruitAggregateBoolExpSum {
+    arguments: [FruitSumFieldsEnum!]!
+    predicate: FloatComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare variance aggregation."""
+  input FruitAggregateBoolExpVariance {
+    arguments: [FruitNumericFieldsEnum!]!
+    predicate: FloatComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare var_pop aggregation."""
+  input FruitAggregateBoolExpVarpop {
+    arguments: [FruitNumericFieldsEnum!]!
+    predicate: FloatComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare var_samp aggregation."""
+  input FruitAggregateBoolExpVarsamp {
+    arguments: [FruitNumericFieldsEnum!]!
+    predicate: FloatComparison!
+    distinct: Boolean
+  }
+  
+  """
+  Boolean expression to compare fields. All fields are combined with logical 'AND'.
+  """
+  input FruitBoolExp {
+    _and: [FruitBoolExp!]
+    _or: [FruitBoolExp!]
+    _not: FruitBoolExp
+    id: UUIDComparison
+    name: StringComparison
+    colorId: UUIDComparison
+    colorAggregate: ColorAggregateBoolExp
+    color: ColorBoolExp
+    sweetness: IntComparison
+  }
+  
+  enum FruitCountFields {
+    id
+    name
+    colorId
+    sweetness
+  }
+  
+  type FruitMinMaxFields {
+    name: String
+    sweetness: Int
+  }
+  
+  enum FruitMinMaxNumericFieldsEnum {
+    sweetness
+  }
+  
+  enum FruitMinMaxStringFieldsEnum {
+    name
+  }
+  
+  type FruitNumericFields {
+    sweetness: Float
+  }
+  
+  enum FruitNumericFieldsEnum {
+    sweetness
+  }
+  
+  type FruitSumFields {
+    name: String
+    sweetness: Int
+  }
+  
+  enum FruitSumFieldsEnum {
+    name
+    sweetness
+  }
+  
+  """GraphQL type"""
+  type FruitType {
+    id: UUID!
+    name: String!
+    colorId: UUID
+    color: ColorType!
+    sweetness: Int!
+  }
+  
+  """Aggregation fields"""
+  type GroupAggregate {
+    count: Int
+    sum: GroupSumFields!
+    min: GroupMinMaxFields!
+    max: GroupMinMaxFields!
+  }
+  
+  """
+  Boolean expression to compare aggregated fields. All fields are combined with logical 'AND'.
+  """
+  input GroupAggregateBoolExp {
+    count: GroupAggregateBoolExpCount
+    sum: GroupAggregateBoolExpSum
+    minString: GroupAggregateBoolExpMinstring
+    maxString: GroupAggregateBoolExpMaxstring
+  }
+  
+  """Boolean expression to compare count aggregation."""
+  input GroupAggregateBoolExpCount {
+    arguments: [GroupCountFields!]
+    predicate: IntComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare max aggregation."""
+  input GroupAggregateBoolExpMaxstring {
+    arguments: [GroupMinMaxStringFieldsEnum!]!
+    predicate: StringComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare min aggregation."""
+  input GroupAggregateBoolExpMinstring {
+    arguments: [GroupMinMaxStringFieldsEnum!]!
+    predicate: StringComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare sum aggregation."""
+  input GroupAggregateBoolExpSum {
+    arguments: [GroupSumFieldsEnum!]!
+    predicate: FloatComparison!
+    distinct: Boolean
+  }
+  
+  enum GroupCountFields {
+    id
+    name
+    tagId
+    colorId
+  }
+  
+  """
+  Boolean expression to compare fields. All fields are combined with logical 'AND'.
+  """
+  input GroupFilter {
+    _and: [GroupFilter!]
+    _or: [GroupFilter!]
+    _not: GroupFilter
+    id: UUIDComparison
+    name: StringComparison
+    tagId: UUIDComparison
+    tagAggregate: TagAggregateBoolExp
+    tag: TagBoolExp
+    usersAggregate: UserAggregateBoolExp
+    users: UserBoolExp
+    colorId: UUIDComparison
+    colorAggregate: ColorAggregateBoolExp
+    color: ColorBoolExp
+  }
+  
+  type GroupMinMaxFields {
+    name: String
+  }
+  
+  enum GroupMinMaxStringFieldsEnum {
+    name
+  }
+  
+  type GroupSumFields {
+    name: String
+  }
+  
+  enum GroupSumFieldsEnum {
+    name
+  }
+  
+  """GraphQL type"""
+  type GroupType {
+    id: UUID!
+    name: String!
+    tagId: UUID!
+    tag: TagType!
+    usersAggregate: UserAggregate!
+  
+    """Fetch objects from the UserType collection"""
+    users: [UserType!]!
+    colorId: UUID!
+    color: ColorType!
+  }
+  
+  """
+  Boolean expression to compare fields of type Int. All fields are combined with logical 'AND'
+  """
+  input IntComparison {
+    eq: Int
+    neq: Int
+    isNull: Boolean
+    in: [Int!]
+    nin: [Int!]
+    gt: Int
+    gte: Int
+    lt: Int
+    lte: Int
+  }
+  
+  type Query {
+    """Fetch objects from the GroupType collection"""
+    groups(filter: GroupFilter = null): [GroupType!]!
+  }
+  
+  """
+  Boolean expression to compare fields of type String. All fields are combined with logical 'AND'
+  """
+  input StringComparison {
+    eq: String
+    neq: String
+    isNull: Boolean
+    in: [String!]
+    nin: [String!]
+    gt: String
+    gte: String
+    lt: String
+    lte: String
+    like: String
+    nlike: String
+    ilike: String
+    nilike: String
+    regexp: String
+    iregexp: String
+    nregexp: String
+    inregexp: String
+    startswith: String
+    endswith: String
+    contains: String
+    istartswith: String
+    iendswith: String
+    icontains: String
+  }
+  
+  """
+  Boolean expression to compare aggregated fields. All fields are combined with logical 'AND'.
+  """
+  input TagAggregateBoolExp {
+    count: TagAggregateBoolExpCount
+    sum: TagAggregateBoolExpSum
+    minString: TagAggregateBoolExpMinstring
+    maxString: TagAggregateBoolExpMaxstring
+  }
+  
+  """Boolean expression to compare count aggregation."""
+  input TagAggregateBoolExpCount {
+    arguments: [TagCountFields!]
+    predicate: IntComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare max aggregation."""
+  input TagAggregateBoolExpMaxstring {
+    arguments: [TagMinMaxStringFieldsEnum!]!
+    predicate: StringComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare min aggregation."""
+  input TagAggregateBoolExpMinstring {
+    arguments: [TagMinMaxStringFieldsEnum!]!
+    predicate: StringComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare sum aggregation."""
+  input TagAggregateBoolExpSum {
+    arguments: [TagSumFieldsEnum!]!
+    predicate: FloatComparison!
+    distinct: Boolean
+  }
+  
+  """
+  Boolean expression to compare fields. All fields are combined with logical 'AND'.
+  """
+  input TagBoolExp {
+    _and: [TagBoolExp!]
+    _or: [TagBoolExp!]
+    _not: TagBoolExp
+    id: UUIDComparison
+    groupsAggregate: GroupAggregateBoolExp
+    groups: GroupFilter
+    name: StringComparison
+  }
+  
+  enum TagCountFields {
+    id
+    name
+  }
+  
+  enum TagMinMaxStringFieldsEnum {
+    name
+  }
+  
+  enum TagSumFieldsEnum {
+    name
+  }
+  
+  """GraphQL type"""
+  type TagType {
+    id: UUID!
+    groupsAggregate: GroupAggregate!
+  
+    """Fetch objects from the GroupType collection"""
+    groups: [GroupType!]!
+    name: String!
+  }
+  
+  scalar UUID
+  
+  """
+  Boolean expression to compare fields of type UUID. All fields are combined with logical 'AND'
+  """
+  input UUIDComparison {
+    eq: UUID
+    neq: UUID
+    isNull: Boolean
+    in: [UUID!]
+    nin: [UUID!]
+  }
+  
+  """Aggregation fields"""
+  type UserAggregate {
+    count: Int
+    sum: UserSumFields!
+    min: UserMinMaxFields!
+    max: UserMinMaxFields!
+  }
+  
+  """
+  Boolean expression to compare aggregated fields. All fields are combined with logical 'AND'.
+  """
+  input UserAggregateBoolExp {
+    count: UserAggregateBoolExpCount
+    sum: UserAggregateBoolExpSum
+    minString: UserAggregateBoolExpMinstring
+    maxString: UserAggregateBoolExpMaxstring
+  }
+  
+  """Boolean expression to compare count aggregation."""
+  input UserAggregateBoolExpCount {
+    arguments: [UserCountFields!]
+    predicate: IntComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare max aggregation."""
+  input UserAggregateBoolExpMaxstring {
+    arguments: [UserMinMaxStringFieldsEnum!]!
+    predicate: StringComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare min aggregation."""
+  input UserAggregateBoolExpMinstring {
+    arguments: [UserMinMaxStringFieldsEnum!]!
+    predicate: StringComparison!
+    distinct: Boolean
+  }
+  
+  """Boolean expression to compare sum aggregation."""
+  input UserAggregateBoolExpSum {
+    arguments: [UserSumFieldsEnum!]!
+    predicate: FloatComparison!
+    distinct: Boolean
+  }
+  
+  """
+  Boolean expression to compare fields. All fields are combined with logical 'AND'.
+  """
+  input UserBoolExp {
+    _and: [UserBoolExp!]
+    _or: [UserBoolExp!]
+    _not: UserBoolExp
+    id: UUIDComparison
+    name: StringComparison
+    groupId: UUIDComparison
+    groupAggregate: GroupAggregateBoolExp
+    group: GroupFilter
+    tagId: UUIDComparison
+    tagAggregate: TagAggregateBoolExp
+    tag: TagBoolExp
+  }
+  
+  enum UserCountFields {
+    id
+    name
+    groupId
+    tagId
+  }
+  
+  type UserMinMaxFields {
+    name: String
+  }
+  
+  enum UserMinMaxStringFieldsEnum {
+    name
+  }
+  
+  type UserSumFields {
+    name: String
+  }
+  
+  enum UserSumFieldsEnum {
+    name
+  }
+  
+  """GraphQL type"""
+  type UserType {
+    id: UUID!
+    name: String!
+    groupId: UUID
+    group: GroupType!
+    tagId: UUID
+    tag: TagType!
+  }
+  '''
+# ---
