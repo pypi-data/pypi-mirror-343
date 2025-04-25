@@ -1,0 +1,6 @@
+xarray
+numpy
+shapely
+matplotlib
+geopandas
+requests
