@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+metaclonotypist/__init__.py
+metaclonotypist/main.py
+metaclonotypist/version.py
+metaclonotypist.egg-info/PKG-INFO
+metaclonotypist.egg-info/SOURCES.txt
+metaclonotypist.egg-info/dependency_links.txt
+metaclonotypist.egg-info/requires.txt
+metaclonotypist.egg-info/top_level.txt
