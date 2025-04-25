@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: okayletsgo
+Version: 1.3
+Summary: A simple Python package to play 'Okaaaay let's go!' through your speakers with just one line of code.
+Description-Content-Type: text/markdown
+Requires-Dist: just-playback
+
+# okayletsgo
+The okayletsgo Python package is a simple, easy-to-use module designed to play the famous "Okaay let's go"-meme audio effect when your application starts – using only an import statement. This package is compatible with most operating systems.
+
+### Installation
+
+To install okayletsgo, simply run:
+
+`pip install okayletsgo`
+
+Ensure you have Python installed on your system. This package is compatible with Python 3.11, though other versions might work too.
+
+### Quick Start
+
+Using okayletsgo is straightforward. After installation, simply add the import at the top of your app's code:
+
+
+`import okayletsgo`
+
+That's it! When okayletsgo is imported, it plays the audio file through your system's default audio output.
