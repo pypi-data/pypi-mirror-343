@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: fs-comfyui-frontend-package
+Version: 1.18.0
+Summary: ComfyUI Frontend Package for web interface
+Home-page: https://github.com/FlowScaleAI/comfyui_frontend
+Author: FlowScale
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# comfyui_frontend pypi package
+
+This is the pypi package structure for the comfyui frontend.
+
+During build process, the compiled assets are copied into the `${PROJECT_ROOT}/comfyui_frontend_package/comfyui_frontend_package/static` directory.
+
+The package can be installed with the following command:
+
+```bash
+pip install comfyui-frontend-package
+```
+
+Ref: <https://pypi.org/project/comfyui-frontend-package/>
