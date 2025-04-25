@@ -1,0 +1,2 @@
+[console_scripts]
+snapcfg = snapcfg.__main__:main
