@@ -1,0 +1,2 @@
+[console_scripts]
+tablelabel = programs.tablelabel:main
