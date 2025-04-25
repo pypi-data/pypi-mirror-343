@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: python-dstools
+Version: 0.1.2
+Summary: Data Science Toolbox
+Author: DSTools Team
+License: MIT
+Project-URL: Repository, https://github.com/username/dstools
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: globalog>=0.1.0
+Requires-Dist: google-cloud-core>=2.4.1
+Requires-Dist: google-cloud-storage>=2.18.2
+Requires-Dist: aiofiles>=24.1.0
+Requires-Dist: Pillow>=11.1.0
+Requires-Dist: opencv-python>=4.10.0.84
+Requires-Dist: google-cloud-firestore>=2.19.0
+Requires-Dist: snappy==0.7.3
+Dynamic: license-file
+
+# resverman
+Simplified resource version management + storage tools
