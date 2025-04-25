@@ -1,0 +1,20 @@
+[project]
+name = "mm_address_parser"
+version = "0.1.0"
+description = "A parser for Myanmar addresses"
+authors = [{ name = "Myo Thida", email = "mmdt@istarvz.com" }]
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = ["regex"]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/myothida/mm_address_parser"
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "isort", "mypy"]
