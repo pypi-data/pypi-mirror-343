@@ -1,0 +1,17 @@
+.gitignore,sha256=zbyuFRBda3geYggTx5x-hodA1OnMU85vX8u8Ejh630s,2
+nidx_protos-6.3.7.post4120.dist-info/METADATA,sha256=mg3k1WoiimZ5nfDc2r40iLDRKecIODeGci1ZBIVGOy8,716
+nidx_protos-6.3.7.post4120.dist-info/WHEEL,sha256=tSfRZzRHthuv7vxpI4aehrdN9scLjk-dCJkPLzkHxGg,90
+nidx_protos-6.3.7.post4120.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+nidx_protos/nidx_pb2.py,sha256=1PL24vK7UM6YKE495OflLMg0q9CyjgJwDo9dwzNcl3w,4759
+nidx_protos/nidx_pb2.pyi,sha256=HwlwYPK99kq4OlTLD7yrqwfIeKEzMk7Qnml6hVpVCqk,1981
+nidx_protos/nidx_pb2_grpc.py,sha256=LyEzvVDjYrWmEj0gTNdAzRK_BGwsMnrv7U532IJETiA,28290
+nidx_protos/nodereader_pb2.py,sha256=hbFKwTHUGo_aZSbmm4G3imTDMDZVV7_kKilIEG80-08,24098
+nidx_protos/nodereader_pb2.pyi,sha256=NJlK4cpNNEr_o1u_MSQP2e6SuFScqwV1UeCoNIkXPI8,66625
+nidx_protos/nodereader_pb2_grpc.py,sha256=Opz-SW75AML8G3VYj2quUDzz9jx6oG7pijz-x77cObs,23237
+nidx_protos/noderesources_pb2.py,sha256=s_Rwg86by5zOUy1_d9AhTTK1auHnzS8wWRlM8W8QVCk,16799
+nidx_protos/noderesources_pb2.pyi,sha256=CEnCnj9oEvDNzROZuLPGrBaarK9jmOul4BNEwBi4qAk,41101
+nidx_protos/nodewriter_pb2.py,sha256=bO0g_uOUrJ9TgW41xvFp612Vfr7g-BLH5frugSwJCu4,9026
+nidx_protos/nodewriter_pb2.pyi,sha256=sLzKwEwxm-z-ghOgdK93vUfiFt32g9tFdcrIl8uTrN8,14636
+nidx_protos/nodewriter_pb2_grpc.py,sha256=vmIGGUIIWOJC4Uuvr1tbzu2M_pP2rW8FV4GxxIEJTlY,23349
+nidx_protos/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nidx_protos-6.3.7.post4120.dist-info/RECORD,,
