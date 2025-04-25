@@ -1,0 +1,2 @@
+[console_scripts]
+my-sse-http-custom-param-server = main:main
