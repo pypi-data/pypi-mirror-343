@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "trello_loader"
+version = "0.1.0"
+description = "A tool for loading Trello boards and converting them to Markdown for AI agents"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Eduard Götmann", email = "e.goetmann@gmail.com" }
+]
+keywords = ["trello", "markdown", "conversion", "ai"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "py-trello",
+    "python-dotenv",
+    "typer",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/trello_loader"
+"Bug Tracker" = "https://github.com/yourusername/trello_loader/issues"
+
+[project.scripts]
+trello-to-md = "trello_loader.trello_to_markdown:main"
