@@ -1,0 +1,13 @@
+README.md
+setup.py
+pseudo_runner/__init__.py
+pseudo_runner/cli.py
+pseudo_runner/config.py
+pseudo_runner/converter.py
+pseudo_runner/runner.py
+pseudo_runner.egg-info/PKG-INFO
+pseudo_runner.egg-info/SOURCES.txt
+pseudo_runner.egg-info/dependency_links.txt
+pseudo_runner.egg-info/entry_points.txt
+pseudo_runner.egg-info/requires.txt
+pseudo_runner.egg-info/top_level.txt
