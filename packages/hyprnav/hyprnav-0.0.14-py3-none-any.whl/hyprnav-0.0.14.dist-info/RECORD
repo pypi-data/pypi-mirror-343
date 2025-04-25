@@ -1,0 +1,13 @@
+hyprnav/__init__.py,sha256=eIwWEgse8l8FYVQqWJeGmdKoEDvOCXHPTJu0mIH59ME,527
+hyprnav/config.py,sha256=YfS9wDSaPGSIZuHhNtSkDS9phEzym6xrOvtx3cq-esc,2676
+hyprnav/constants.py,sha256=cxXpW7WcEfFzuncfqXucUzn1Z2UQ-RmatXgKLWF-zm4,360
+hyprnav/listen.py,sha256=t-iCC9LmoeykH4idW4D1vXF1VCqNmk_Y511wvu8yVNo,1800
+hyprnav/window.py,sha256=aOc-QmP99Opt3CZFa8aRVx1KtDaB7eIcYfVZZdfNxlE,3236
+hyprnav/assets/config.yaml,sha256=kkM_G6VQQ7Q1IHr_vz66IlPuKMKEcBhDmFEEz0GOVds,625
+hyprnav/assets/style.css,sha256=hPXf0BRFSGhklGwsJEqrBnmbxSCUd526nv3YJ-bTPRA,669
+hyprnav/assets/transition.wav,sha256=2FKjl-raFH14lfhwlSShGCPIJMM7H_PzXhFSjivLgHY,76514
+hyprnav-0.0.14.dist-info/METADATA,sha256=KnKA43LMyXbP4P-9Yzfb1y0tks68sGArlapNRRwKJjQ,4639
+hyprnav-0.0.14.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hyprnav-0.0.14.dist-info/entry_points.txt,sha256=pQj2dB2LA6VMAxRCBb-q-3iuWYINN9n2HavZiskhEB4,41
+hyprnav-0.0.14.dist-info/licenses/LICENSE,sha256=hzatDUY2y22rrj6X6ZwI9cDAi4xFHx1Imymg1jvr8HQ,1076
+hyprnav-0.0.14.dist-info/RECORD,,
