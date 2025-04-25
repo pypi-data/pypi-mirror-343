@@ -1,0 +1,38 @@
+# https://taskfile.dev
+# https://packaging.python.org/en/latest/tutorials/installing-packages/
+# https://packaging.python.org/en/latest/tutorials/packaging-projects/#
+
+version: "3"
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  default:
+    cmds:
+      - echo "{{.GREETING}}"
+    silent: true
+
+  pypi:prepare:
+    cmds:
+      - python3 -m pip install build hatchling twine --break-system-packages --upgrade
+
+  pypi:clean:
+    cmds:
+      - rm -rf dist
+      - rm -rf *.egg-info
+
+  pypi:build:
+    cmds:
+      - task pypi:clean
+      - python3 -m build
+
+  pypi:upload:
+    cmds:
+      - python3 -m twine upload dist/*
+
+  pypi:next:
+    cmds:
+      - task pypi:build
+      - task pypi:upload
+# conda
