@@ -1,0 +1,10 @@
+[project]
+name = "h3110w0r1d"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[tool.setuptools]
+py-modules = ["main"]
