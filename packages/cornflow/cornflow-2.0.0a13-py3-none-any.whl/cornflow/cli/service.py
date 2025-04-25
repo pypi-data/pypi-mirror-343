@@ -1,0 +1,284 @@
+import os
+import subprocess
+import sys
+import time
+from logging import error
+
+
+import click
+from .utils import get_db_conn
+import cornflow
+from cornflow.app import create_app
+from cornflow.commands import (
+    access_init_command,
+    create_user_with_role,
+    register_deployed_dags_command,
+    register_dag_permissions_command,
+    update_schemas_command,
+    update_dag_registry_command,
+)
+from cornflow.shared.const import (
+    AUTH_DB,
+    AUTH_LDAP,
+    AUTH_OID,
+    ADMIN_ROLE,
+    SERVICE_ROLE,
+    PLANNER_ROLE,
+    DATABRICKS_BACKEND,
+    AIRFLOW_BACKEND,
+)
+from cornflow.shared import db
+from cryptography.fernet import Fernet
+from flask_migrate import Migrate, upgrade
+
+
+@click.group(name="service", help="Commands to run the cornflow service")
+def service():
+    pass
+
+
+@service.command(name="init", help="Initialize the service")
+def init_cornflow_service():
+    click.echo("Starting the service")
+    os.chdir("/usr/src/app")
+    environment = os.getenv("FLASK_ENV", "development")
+    os.environ["FLASK_ENV"] = environment
+
+    ###################################
+    # Global defaults and back-compat #
+    ###################################
+    # cornflow backend selection
+    cornflow_backend = os.getenv("CORNFLOW_BACKEND", str(AIRFLOW_BACKEND))
+    os.environ["CORNFLOW_BACKEND"] = cornflow_backend
+    cornflow_backend = int(cornflow_backend)
+    # Airflow global default conn
+    if cornflow_backend == AIRFLOW_BACKEND:
+        airflow_user = os.getenv("AIRFLOW_USER", "admin")
+        airflow_pwd = os.getenv("AIRFLOW_PWD", "admin")
+        airflow_url = os.getenv("AIRFLOW_URL", "http://webserver:8080")
+        os.environ["AIRFLOW_USER"] = airflow_user
+        os.environ["AIRFLOW_PWD"] = airflow_pwd
+        os.environ["AIRFLOW_URL"] = airflow_url
+    elif cornflow_backend == DATABRICKS_BACKEND:
+        databricks_url = os.getenv("DATABRICKS_HOST")
+        databricks_auth_secret = os.getenv("DATABRICKS_CLIENT_SECRET")
+        databricks_token_endpoint = os.getenv("DATABRICKS_TOKEN_ENDPOINT")
+        databricks_ep_clusters = os.getenv("DATABRICKS_EP_CLUSTERS")
+        databricks_client_id = os.getenv("DATABRICKS_CLIENT_ID")
+        os.environ["DATABRICKS_HOST"] = databricks_url
+        os.environ["DATABRICKS_CLIENT_SECRET"] = databricks_auth_secret
+        os.environ["DATABRICKS_TOKEN_ENDPOINT"] = databricks_token_endpoint
+        os.environ["DATABRICKS_EP_CLUSTERS"] = databricks_ep_clusters
+        os.environ["DATABRICKS_CLIENT_ID"] = databricks_client_id
+    else:
+        raise Exception("Selected backend not among valid options")
+
+    os.environ["FLASK_APP"] = "cornflow.app"
+    os.environ["SECRET_KEY"] = os.getenv("FERNET_KEY", Fernet.generate_key().decode())
+
+    # Cornflow db defaults
+    os.environ["DEFAULT_POSTGRES"] = "1"
+    cornflow_db_conn = get_db_conn()
+    os.environ["DATABASE_URL"] = cornflow_db_conn
+
+    # Platform auth config and service users
+    auth = int(os.getenv("AUTH_TYPE", AUTH_DB))
+    cornflow_admin_user = os.getenv("CORNFLOW_ADMIN_USER", "cornflow_admin")
+    cornflow_admin_email = os.getenv(
+        "CORNFLOW_ADMIN_EMAIL", "cornflow_admin@cornflow.com"
+    )
+    cornflow_admin_pwd = os.getenv("CORNFLOW_ADMIN_PWD", "Cornflow_admin1234")
+    cornflow_service_user = os.getenv("CORNFLOW_SERVICE_USER", "service_user")
+    cornflow_service_email = os.getenv(
+        "CORNFLOW_SERVICE_EMAIL", "service_user@cornflow.com"
+    )
+    cornflow_service_pwd = os.getenv("CORNFLOW_SERVICE_PWD", "Service_user1234")
+
+    # Cornflow logging and storage config
+    cornflow_logging = os.getenv("CORNFLOW_LOGGING", "console")
+    os.environ["CORNFLOW_LOGGING"] = cornflow_logging
+
+    open_deployment = os.getenv("OPEN_DEPLOYMENT", 1)
+    os.environ["OPEN_DEPLOYMENT"] = str(open_deployment)
+    signup_activated = os.getenv("SIGNUP_ACTIVATED", 1)
+    os.environ["SIGNUP_ACTIVATED"] = str(signup_activated)
+    user_access_all_objects = os.getenv("USER_ACCESS_ALL_OBJECTS", 0)
+    os.environ["USER_ACCESS_ALL_OBJECTS"] = str(user_access_all_objects)
+    default_role = int(os.getenv("DEFAULT_ROLE", PLANNER_ROLE))
+    os.environ["DEFAULT_ROLE"] = str(default_role)
+
+    # Check LDAP parameters for active directory and show message
+    if os.getenv("AUTH_TYPE") == AUTH_LDAP:
+        print(
+            "WARNING: Cornflow will be deployed with LDAP Authorization. Please review your ldap auth configuration."
+        )
+
+    # check database param from docker env
+    if os.getenv("DATABASE_URL") is None:
+        sys.exit("FATAL: you need to provide a postgres database for Cornflow")
+
+    # set logrotate config file
+    if cornflow_logging == "file":
+        try:
+            conf = "/usr/src/app/log/*.log {\n\
+            rotate 30\n \
+            daily\n\
+            compress\n\
+            size 20M\n\
+            postrotate\n\
+             kill -HUP \$(cat /usr/src/app/gunicorn.pid)\n \
+            endscript}"
+            logrotate = subprocess.run(
+                f"cat > /etc/logrotate.d/cornflow <<EOF\n {conf} \nEOF", shell=True
+            )
+            out_logrotate = logrotate.stdout
+            click.echo(out_logrotate)
+
+        except error:
+            click.echo(error)
+
+    external_application = int(os.getenv("EXTERNAL_APP", 0))
+    if external_application == 0:
+        os.environ["GUNICORN_WORKING_DIR"] = "/usr/src/app"
+    elif external_application == 1:
+        os.environ["GUNICORN_WORKING_DIR"] = "/usr/src/app"
+    else:
+        raise Exception("No external application found")
+
+    if external_application == 0:
+        click.echo("Starting cornflow")
+        app = create_app(environment, cornflow_db_conn)
+        with app.app_context():
+            path = f"{os.path.dirname(cornflow.__file__)}/migrations"
+            Migrate(app=app, db=db, directory=path)
+            upgrade()
+            access_init_command(verbose=False)
+            if auth == AUTH_DB or auth == AUTH_OID:
+                # create cornflow admin user
+                create_user_with_role(
+                    cornflow_admin_user,
+                    cornflow_admin_email,
+                    cornflow_admin_pwd,
+                    "admin",
+                    ADMIN_ROLE,
+                    verbose=True,
+                )
+                # create cornflow service user
+                create_user_with_role(
+                    cornflow_service_user,
+                    cornflow_service_email,
+                    cornflow_service_pwd,
+                    "serviceuser",
+                    SERVICE_ROLE,
+                    verbose=True,
+                )
+
+            if cornflow_backend == AIRFLOW_BACKEND:
+                register_deployed_dags_command(
+                    airflow_url, airflow_user, airflow_pwd, verbose=True
+                )
+                register_dag_permissions_command(open_deployment, verbose=True)
+                update_schemas_command(
+                    airflow_url, airflow_user, airflow_pwd, verbose=True
+                )
+            else:
+                register_dag_permissions_command(open_deployment, verbose=True)
+
+        # execute gunicorn application
+        os.system(
+            "/usr/local/bin/gunicorn -c python:cornflow.gunicorn \"cornflow.app:create_app('$FLASK_ENV')\""
+        )
+
+    elif external_application == 1:
+        click.echo(f"Starting cornflow + {os.getenv('EXTERNAL_APP_MODULE')}")
+        os.chdir("/usr/src/app")
+
+        if register_key():
+            prefix = "CUSTOM_SSH_"
+            env_variables = {}
+            for key, value in os.environ.items():
+                if key.startswith(prefix):
+                    env_variables[key] = value
+
+            for _, value in env_variables.items():
+                register_ssh_host(value)
+
+        os.system("$(command -v pip) install --user -r requirements.txt")
+        time.sleep(5)
+        sys.path.append("/usr/src/app")
+
+        from importlib import import_module
+
+        external_app = import_module(os.getenv("EXTERNAL_APP_MODULE"))
+        app = external_app.create_wsgi_app(environment, cornflow_db_conn)
+        with app.app_context():
+            path = f"{os.path.dirname(external_app.__file__)}/migrations"
+            migrate = Migrate(app=app, db=db, directory=path)
+            upgrade()
+            access_init_command(verbose=False)
+            if auth == AUTH_DB or auth == AUTH_OID:
+                # create cornflow admin user
+                create_user_with_role(
+                    cornflow_admin_user,
+                    cornflow_admin_email,
+                    cornflow_admin_pwd,
+                    "admin",
+                    ADMIN_ROLE,
+                    verbose=True,
+                )
+                # create cornflow service user
+                create_user_with_role(
+                    cornflow_service_user,
+                    cornflow_service_email,
+                    cornflow_service_pwd,
+                    "serviceuser",
+                    SERVICE_ROLE,
+                    verbose=True,
+                )
+
+            click.echo(f"Selected backend is: {cornflow_backend}")
+            if cornflow_backend == AIRFLOW_BACKEND:
+                register_deployed_dags_command(
+                    airflow_url, airflow_user, airflow_pwd, verbose=True
+                )
+
+                register_dag_permissions_command(open_deployment, verbose=True)
+                update_schemas_command(
+                    airflow_url, airflow_user, airflow_pwd, verbose=True
+                )
+                update_dag_registry_command(
+                    airflow_url, airflow_user, airflow_pwd, verbose=True
+                )
+            elif cornflow_backend == DATABRICKS_BACKEND:
+                register_dag_permissions_command(open_deployment, verbose=True)
+            else:
+                raise Exception("Selected backend not among valid options")
+
+        os.system(
+            f"/usr/local/bin/gunicorn -c python:cornflow.gunicorn "
+            f"\"$EXTERNAL_APP_MODULE:create_wsgi_app('$FLASK_ENV')\""
+        )
+
+    else:
+        raise Exception("No external application found")
+
+
+def register_ssh_host(host):
+    if host is not None:
+        add_host = f"ssh-keyscan {host} >> /usr/src/app/.ssh/known_hosts"
+        config_ssh_host = f"echo Host {host} >> /usr/src/app/.ssh/config"
+        config_ssh_key = 'echo "   IdentityFile /usr/src/app/.ssh/id_rsa" >> /usr/src/app/.ssh/config'
+        os.system(add_host)
+        os.system(config_ssh_host)
+        os.system(config_ssh_key)
+
+
+def register_key():
+    if os.path.isfile("/usr/src/app/.ssh/id_rsa"):
+        add_key = (
+            "chmod 0600 /usr/src/app/.ssh/id_rsa && ssh-add /usr/src/app/.ssh/id_rsa"
+        )
+        os.system(add_key)
+        return True
+    else:
+        return False
