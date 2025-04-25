@@ -1,0 +1,15 @@
+LICENSE.txt
+LICENSE.txt:Zone.Identifier
+README.md
+setup.cfg
+setup.py
+src/color_ur_text/__init__.py
+src/color_ur_text/colored_text.py
+src/color_ur_text.egg-info/PKG-INFO
+src/color_ur_text.egg-info/PKG-INFO:Zone.Identifier
+src/color_ur_text.egg-info/SOURCES.txt
+src/color_ur_text.egg-info/SOURCES.txt:Zone.Identifier
+src/color_ur_text.egg-info/dependency_links.txt
+src/color_ur_text.egg-info/dependency_links.txt:Zone.Identifier
+src/color_ur_text.egg-info/top_level.txt
+src/color_ur_text.egg-info/top_level.txt:Zone.Identifier
