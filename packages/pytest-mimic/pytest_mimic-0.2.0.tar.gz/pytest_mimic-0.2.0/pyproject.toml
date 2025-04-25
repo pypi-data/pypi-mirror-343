@@ -1,0 +1,90 @@
+[build-system]
+requires = [
+  "setuptools>=61.0.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytest-mimic"
+description = "Easily record function calls while testing"
+version = "0.2.0"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Teo Cherici", email = "teo.cherici@clockworks.co" },
+]
+maintainers = [
+    { name = "Teo Cherici", email = "teo.cherici@clockworks.co" },
+]
+license = {file = "LICENSE"}
+classifiers = [
+    "Framework :: Pytest",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Testing",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "pytest>=6.2.0",
+]
+
+[project.urls]
+Repository = "https://github.com/clockworks-data/pytest-mimic"
+
+[project.entry-points.pytest11]
+pytest-mimic = "pytest_mimic.plugin"
+
+[pytest]
+pytester_example_dir = "."
+
+
+[dependency-groups]
+dev = [
+    "pytest-asyncio>=0.24.0",
+    "pytest-random-order>=1.1.1",
+    "ruff>=0.11.2",
+]
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "session"
+mimic_functions = [
+    "tests.example_module.example_function_to_mimic"
+]
+# Optional: specify custom location for mimic cache directory
+# mimic_vault_path = ".mimic_vault"
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100
+lint.select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # isort
+    "N",   # pep8-naming
+    "UP",  # pyupgrade
+    "C4",  # flake8-comprehensions
+    "B",   # flake8-bugbear
+    "PT",  # flake8-pytest-style
+]
+
+lint.ignore = []
+exclude = [
+    ".git",
+    ".ruff_cache",
+    "__pycache__",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["pytest_mimic"]

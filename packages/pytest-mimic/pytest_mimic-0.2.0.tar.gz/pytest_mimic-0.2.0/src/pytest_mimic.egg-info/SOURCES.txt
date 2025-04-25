@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/pytest_mimic/__init__.py
+src/pytest_mimic/mimic_manager.py
+src/pytest_mimic/plugin.py
+src/pytest_mimic.egg-info/PKG-INFO
+src/pytest_mimic.egg-info/SOURCES.txt
+src/pytest_mimic.egg-info/dependency_links.txt
+src/pytest_mimic.egg-info/entry_points.txt
+src/pytest_mimic.egg-info/requires.txt
+src/pytest_mimic.egg-info/top_level.txt
+tests/test_mimic.py
+tests/test_mimic_class_methods.py
+tests/test_mimic_global_scope.py
+tests/test_mimic_manager.py
