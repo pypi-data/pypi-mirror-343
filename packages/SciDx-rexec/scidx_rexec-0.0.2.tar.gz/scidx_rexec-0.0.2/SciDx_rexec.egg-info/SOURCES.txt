@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+SciDx_rexec.egg-info/PKG-INFO
+SciDx_rexec.egg-info/SOURCES.txt
+SciDx_rexec.egg-info/dependency_links.txt
+SciDx_rexec.egg-info/requires.txt
+SciDx_rexec.egg-info/top_level.txt
+rexec/__init__.py
+rexec/client_api.py
+rexec/remote_obj.py
