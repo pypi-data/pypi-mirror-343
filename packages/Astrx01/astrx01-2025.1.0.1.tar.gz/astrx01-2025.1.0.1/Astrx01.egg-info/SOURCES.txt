@@ -1,0 +1,9 @@
+LICENSE.TXT
+setup.cfg
+setup.py
+Astrx/Astrx.py
+Astrx/__init__.py
+Astrx01.egg-info/PKG-INFO
+Astrx01.egg-info/SOURCES.txt
+Astrx01.egg-info/dependency_links.txt
+Astrx01.egg-info/top_level.txt

@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: Astrx01
+Version: 2025.1.0.1
+Summary: Uma biblioteca de exemplo simples para ensino
+Home-page: https://github.com/xxxxx/dobro
+Author: Astrx01
+Author-email: fabiottrr1@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Portuguese (Brazilian)
+Description-Content-Type: text/markdown
+License-File: LICENSE.TXT
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: summary
+
+Dobro como próprio nome já diz, é uma bilbioteca que retorna o dobro de um número em Python.
+
+Função
+dobro.metodo(number) - Recebe um número e retorna o dobro desse número através do método:
+calc
