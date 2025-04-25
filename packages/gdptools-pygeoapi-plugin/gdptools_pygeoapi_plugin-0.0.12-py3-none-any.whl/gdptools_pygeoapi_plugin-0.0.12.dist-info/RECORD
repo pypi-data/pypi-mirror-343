@@ -1,0 +1,10 @@
+_pygeoapi_process/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+_pygeoapi_process/calc_agg_catalog.py,sha256=Iidi2KAHuhxWw8jWCwWG50pktlkUP4CJsr27VomhxCA,8723
+_pygeoapi_process/calc_weights_catalog.py,sha256=G0KB5_I5a10s47rKz73LVFe2uS5Sou010VikaOvipOA,7824
+_pygeoapi_process/proc_test.py,sha256=BqbrmM0lmTSseaADohqTjTvL47bUCv0acOw74oOVqR4,2111
+_pygeoapi_process/proc_test_async.py,sha256=pkgQIbbrzznA_uitsulbArhr5yOwWtVoDxOCDXwn0VY,2122
+gdptools_pygeoapi_plugin-0.0.12.dist-info/LICENSE.md,sha256=DBEMgl2KkjOxhLtUQP6eEne-wZe6EyFeWuQgLZ3h4dY,1640
+gdptools_pygeoapi_plugin-0.0.12.dist-info/METADATA,sha256=4mugFl2oTnQZ940mBP23Y7MVduJ6VwnCOFyJbP5_5Ys,3626
+gdptools_pygeoapi_plugin-0.0.12.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+gdptools_pygeoapi_plugin-0.0.12.dist-info/entry_points.txt,sha256=ziaPZaPKDm4FsSEUyxVHEYZVhrUK6cfMqu30cp3EwOI,83
+gdptools_pygeoapi_plugin-0.0.12.dist-info/RECORD,,
