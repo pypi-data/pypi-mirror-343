@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+gtop/__init__.py
+gtop/cli.py
+gtop/collector.py
+gtop/config.py
+gtop/device.py
+gtop/metrics.py
+gtop/visualizer.py
+gtop/visualizer_barplots.py
+gtop.egg-info/PKG-INFO
+gtop.egg-info/SOURCES.txt
+gtop.egg-info/dependency_links.txt
+gtop.egg-info/entry_points.txt
+gtop.egg-info/requires.txt
+gtop.egg-info/top_level.txt

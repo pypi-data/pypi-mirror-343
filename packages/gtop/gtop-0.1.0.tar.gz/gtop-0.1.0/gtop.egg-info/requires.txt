@@ -1,0 +1,7 @@
+nvidia-ml-py>=11.450.129
+plotext>=5.2.8
+
+[dev]
+black
+isort
+pytest
