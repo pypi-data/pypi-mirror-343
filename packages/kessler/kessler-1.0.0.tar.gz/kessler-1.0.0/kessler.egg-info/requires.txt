@@ -1,0 +1,13 @@
+pyro-ppl
+numpy
+matplotlib
+torch>=1.5.1
+dsgp4
+skyfield>=1.26
+pandas
+
+[dev]
+pytest
+coverage
+pytest-xdist
+scikit-learn
