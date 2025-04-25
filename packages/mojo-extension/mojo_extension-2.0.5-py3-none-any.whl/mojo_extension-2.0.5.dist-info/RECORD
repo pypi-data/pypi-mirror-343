@@ -1,0 +1,12 @@
+mojo/extension/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mojo/extension/extensionfactory.py,sha256=2YlaLWZ-PDnZQq2iHE5B08oR9cnQhB1MAyK5mx8aA-c,390
+mojo/extension/extensionprotocol.py,sha256=rBjukph7Q52gMo7xGlzt8Z-bHZ0u_ekpGlLhOkUQXEI,685
+mojo/extension/overridepack.py,sha256=pdJhQQ-gTxqpfP00Q1Coi4m3PcurEzbQ4UumqO2VXvY,728
+mojo/extension/overrideprotocol.py,sha256=hZ_aSjCk8W1ATGyCykBv2aAsIZxUXqc7fw-DQCFBLAk,488
+mojo/extension/superfactory.py,sha256=lR4MHQ0c3tURF-fNvA1L05VnKVMfHLVbSOO2XaGhe7c,5212
+mojo/extension/utilities.py,sha256=rmPUnibhHaTLuRf1JO8OYbj2QTeCYJLcXsdUeAOzvlw,3537
+mojo/extension/wellknown.py,sha256=-_TTzAg2iOm7xUnUlxS1Cm8AJkNzh3mqaw-rJqY9w0Y,1519
+mojo_extension-2.0.5.dist-info/LICENSE.txt,sha256=2msOUK6EI7Vj8HoxUzovxWhMVa8BSwuJu-M_XC-cD0A,1557
+mojo_extension-2.0.5.dist-info/METADATA,sha256=GG3aZd4KUI9rJIXIXQ7hEQ8tENlKrwAGpTpujgXHZC4,5846
+mojo_extension-2.0.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+mojo_extension-2.0.5.dist-info/RECORD,,
