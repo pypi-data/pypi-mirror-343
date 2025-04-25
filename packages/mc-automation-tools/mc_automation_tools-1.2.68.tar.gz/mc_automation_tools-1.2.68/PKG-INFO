@@ -1,0 +1,67 @@
+Metadata-Version: 2.4
+Name: mc_automation_tools
+Version: 1.2.68
+Summary: Map colonies automation infrastructure kit tools for mutual purpose
+Home-page: https://github.com/MapColonies/automation-kit.git
+Author: MC
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3==1.35.86
+Requires-Dist: botocore==1.35.86
+Requires-Dist: geopandas==1.0.1
+Requires-Dist: gpval==0.0.10
+Requires-Dist: graphqlclient==0.2.4
+Requires-Dist: jsonschema==4.23.0
+Requires-Dist: ogr==0.50.2
+Requires-Dist: pandas==2.2.3
+Requires-Dist: paramiko==3.5.0
+Requires-Dist: pre-commit
+Requires-Dist: psycopg2-binary==2.9.10
+Requires-Dist: PyJWT==2.9.0
+Requires-Dist: python-graphql-client==0.4.3
+Requires-Dist: requests==2.32.3
+Requires-Dist: shapely==2.0.6
+Requires-Dist: wheel==0.44.0
+Requires-Dist: xmltodict==0.14.2
+Requires-Dist: streamlit==1.39.0
+Requires-Dist: pillow==10.4.0
+Requires-Dist: mc-discrete-kit==0.0.30
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+[![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)](https://www.python.org/downloads/release/python-360/)
+<img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/MapColonies/automation-kit">
+![GitHub](https://img.shields.io/github/license/MapColonies/automation-kit)
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/MapColonies/automation-kit">
+
+# automation-kit
+
+### This pytonic package include useful sub-packages and implementation for variant manipulation of automation infrastructure.
+
+### Include:
+1. base_request - wrapper for restful API's requests [post, get, etc..]
+2. S3storage - wrapper of boto3 library for handling with S3 storage type
+3. Common - common utils for string manipulations, urls, storage, os, and data-types convertor
+4. Jira - integration sub-package for connecting pytest results with jira's dashboard.
+5. PostGres support wrapping module that provide useful class and function working with pg
+6. MC-ingestion mutual API's wrappers:
+    * job manager api wrapper:
+        * Multiple API access
+        * Automation utilities -> Job Follower[Example]
+    * overseer api wrapper
+    * agent api wrapper
+    * azure pvc handler -> automation internal service to mock NFS
+7. MC-sync mutual API's wrappers:
+    * layer spec api wrapper:
+        * Multiple API access as describe on layer spec api docs
