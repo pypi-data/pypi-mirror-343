@@ -1,0 +1,92 @@
+Metadata-Version: 2.3
+Name: aico-cli
+Version: 0.1.3
+Summary: AI coding assistant
+License: MIT
+Keywords: ai,coding,assistant,llm
+Author: Nayjest
+Author-email: mail@vitaliy.in
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Code Generators
+Requires-Dist: ai-microcore (>=4.0.0.dev3,<5.0.0)
+Requires-Dist: anthropic (>=0.49.0,<0.50.0)
+Requires-Dist: chromadb (>=1.0.5,<2.0.0)
+Requires-Dist: colorama (>=0.4.6,<0.5.0)
+Requires-Dist: flask (>=3.1.0,<4.0.0)
+Requires-Dist: google-generativeai (>=0.8.5,<0.9.0)
+Requires-Dist: openai (>=1.75.0,<2.0.0)
+Requires-Dist: patch (>=1.16.0,<2.0.0)
+Requires-Dist: rich (>=13.9.4,<14.0.0)
+Requires-Dist: typer (>=0.15.1,<0.16)
+Project-URL: Homepage, https://github.com/Nayjest/aico
+Project-URL: Repository, https://github.com/Nayjest/aico
+Description-Content-Type: text/markdown
+
+# AICO: AI Coder
+
+AICO is a command-line coding assistant.
+It works through OpenAI / Anthropic / Google LLM API or directly using PyTorch for inference.
+
+## ✨ Installation
+
+**Requirements:**  
+- Python **3.11+** (tested on Linux, Windows, Mac)
+
+**Clone & Install dependencies:**
+
+```sh
+git clone https://github.com/Nayjest/aico.git
+cd aico
+pip install -r requirements/prod.txt
+```
+
+**(Optional: Development/Testing tools)**
+
+```sh
+pip install -r requirements/dev.txt
+```
+
+---
+
+## ⚙️ Configuration
+
+AICO reads settings from a `.env` file at launch — **you must provide an LLM API key**.
+
+1. **Copy & edit** `.env`:
+    ```sh
+    cp .env.example .env
+    ```
+    Or just create your own `.env` (see sample below).
+
+2. **Edit your `.env` file:**
+    ```
+    # For OpenAI API
+    LLM_API_KEY=sk-...
+    MODEL=gpt-4.1
+    ```
+
+## 🛠️ Usage
+
+
+
+## 🧑‍💻 Development
+
+Contributions very welcome!  
+- [ ] Fork & PR, or contact [Vitalii Stepanenko](mailto:mail@vitaliy.in)
+- [ ] To publish: see the `Makefile` for build/test commands
+- [ ] Tests live in [`tests/`](./tests/)
+
+---
+
+## 📜 License
+
+Licensed under the [MIT License](https://github.com/Nayjest/aico/blob/main/LICENSE)  
+© 2023–2025 [Vitalii Stepanenko](mailto:mail@vitaliy.in)
