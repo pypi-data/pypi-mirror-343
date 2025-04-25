@@ -1,0 +1,108 @@
+Metadata-Version: 2.4
+Name: mcp-server-waii
+Version: 0.1.1
+Summary: An MCP server implementation for WAII database interactions
+Author-email: Swaraj Nayegandhi <swaraj.nayegandhi@waii.ai>
+License: MIT
+Keywords: mcp,waii,database,ai,nlp,sql
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Database
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: mcp>=0.1.0
+Requires-Dist: waii-sdk-py>=1.29.2
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: pandas>=1.0.0
+Dynamic: license-file
+
+# MCP Server WAII
+
+An MCP (Model Context Protocol) server implementation for WAII database interactions. This server allows language models to interact with databases through the WAII SDK.
+
+## Requirements
+
+- Python 3.8 or higher
+- A WAII account with API access
+- Database credentials supported by WAII
+
+## Installation
+
+```bash
+pip install mcp-server-waii
+```
+
+## Usage
+
+You can run the server using the command-line interface:
+
+```bash
+python -m mcp-server-waii --database-key YOUR_DB_KEY --api-key YOUR_API_KEY --url YOUR_WAII_URL
+``` 
+
+### Required Arguments
+
+- `--database-key`: Your database connection key
+- `--api-key`: Your WAII API key
+- `--url`: WAII API endpoint URL
+
+### Example
+
+```python
+from mcp_server_waii import serve
+import asyncio
+
+# Run the server
+asyncio.run(serve(
+    database_key="your_database_key",
+    api_key="your_api_key",
+    url="https://api.waii.ai/api/"
+))
+```
+
+## Features
+
+- Database metadata management and conversation
+- Natural language to SQL query conversion
+- Query execution and result formatting
+- Automatic query and data visualization
+
+## Development
+
+To set up the development environment:
+
+1. Clone the repository
+```bash
+git clone https://github.com/waii-ai/mcp-server-waii.git
+cd mcp-server-waii
+```
+
+2. Install dependencies:
+```bash
+pip install -e .
+```
+
+3. Run tests:
+```bash
+python -m pytest tests/
+```
+
+## Support
+
+For support, please:
+1. Check the [GitHub Issues](https://github.com/waii-ai/mcp-server-waii/issues)
+2. Contact WAII support for API-related questions
+3. Open a new issue if you find a bug
+
+## License
+
+MIT License - see LICENSE file for details. 
