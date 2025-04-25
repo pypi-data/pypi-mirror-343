@@ -1,0 +1,8 @@
+include cubicpy/cli.py
+include cubicpy/__init__.py
+include cubicpy/*.py
+include cubicpy/models/*.egg
+include cubicpy/examples/*.py
+include cubicpy/font/*.ttf
+include README.md
+include LICENSE 
