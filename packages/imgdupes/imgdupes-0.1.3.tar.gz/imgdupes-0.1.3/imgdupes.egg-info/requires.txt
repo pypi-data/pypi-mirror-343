@@ -1,0 +1,14 @@
+boltons
+gputil
+imagehash
+joblib
+ngt
+numpy
+opencv-python
+pathlib
+pillow
+scipy
+setuptools
+termcolor
+tqdm
+webcolors
