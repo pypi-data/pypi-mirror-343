@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: labelStomaMarion
+Version: 2.2
+Summary: labelStoma is a graphical tool for using and creating detection models
+Author: Angela Casado
+Author-email: angela.casado@unirioja.es
+License: MIT license
+Keywords: labelStomaMarion detection deeplearning
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.0.0
+License-File: LICENSE
+Requires-Dist: pyqt5
+Requires-Dist: lxml
+Requires-Dist: imutils==0.5.1
+Requires-Dist: tqdm==4.31.0
+Requires-Dist: XlsxWriter==1.2.6
+Requires-Dist: six==1.11.0
+Requires-Dist: numpy
+Requires-Dist: Pillow==7.0.0
+Requires-Dist: progressbar2==3.47.0
+Requires-Dist: scikit_learn==0.22.1
+Requires-Dist: pandas==0.23.4
+Requires-Dist: xlwt
+Requires-Dist: sip==5.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+labelStoma is a graphical tool for using and creating detection models
