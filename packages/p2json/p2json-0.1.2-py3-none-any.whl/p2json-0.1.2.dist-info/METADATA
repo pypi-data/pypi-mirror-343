@@ -1,0 +1,44 @@
+Metadata-Version: 2.3
+Name: p2json
+Version: 0.1.2
+Summary: jsonp to json converter
+Author: zoushucai
+Author-email: zoushucai@users.noreply.github.com
+Requires-Python: >=3.3
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Project-URL: Homepage, https://github.com/zoushucai/p2json
+Project-URL: Repository, https://github.com/zoushucai/p2json
+Description-Content-Type: text/markdown
+
+# Jsonp to json
+
+jsonp 格式转换 json 格式
+
+### Install
+
+```bash
+pip install p2json
+
+```
+
+```python
+import p2json
+
+jsonp1 = """__JSONP_XXX_1({"data": {"dt": "a123456","ac": {"a": 11,"b": 20}}});"""
+jsonp2 = """__JSONP_XXX_1({"data": {"dt": "a1(234)56","ac": {"a": 11,"b": 20}}});"""
+
+print(p2json.tojson(jsonp1)) # right
+
+print(p2json.tojson(jsonp2)) # right
+```
+
