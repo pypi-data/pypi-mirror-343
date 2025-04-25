@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+examples/basic_usage.py
+pydator/__init__.py
+pydator/exceptions.py
+pydator/rules.py
+pydator/validator.py
+pydator.egg-info/PKG-INFO
+pydator.egg-info/SOURCES.txt
+pydator.egg-info/dependency_links.txt
+pydator.egg-info/top_level.txt
+tests/test_validator.py
