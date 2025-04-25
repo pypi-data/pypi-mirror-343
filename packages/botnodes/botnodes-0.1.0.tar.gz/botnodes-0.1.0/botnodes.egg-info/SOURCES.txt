@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+botnodes/__init__.py
+botnodes/nodes.py
+botnodes/union_serialize.py
+botnodes.egg-info/PKG-INFO
+botnodes.egg-info/SOURCES.txt
+botnodes.egg-info/dependency_links.txt
+botnodes.egg-info/top_level.txt
