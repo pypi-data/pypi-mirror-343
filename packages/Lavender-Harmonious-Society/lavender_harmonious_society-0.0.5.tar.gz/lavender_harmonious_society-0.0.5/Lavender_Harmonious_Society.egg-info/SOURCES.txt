@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+Lavender_Harmonious_Society.egg-info/PKG-INFO
+Lavender_Harmonious_Society.egg-info/SOURCES.txt
+Lavender_Harmonious_Society.egg-info/dependency_links.txt
+Lavender_Harmonious_Society.egg-info/requires.txt
+Lavender_Harmonious_Society.egg-info/top_level.txt
+lavender_harmonious_society/__init__.py
+lavender_harmonious_society/XJP/__init__.py
+lavender_harmonious_society/XJP/name_taboo.py
