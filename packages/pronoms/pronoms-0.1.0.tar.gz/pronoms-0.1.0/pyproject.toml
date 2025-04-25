@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pronoms"
+version = "0.1.0"
+description = "Flexible normalization methods for proteomics quantitative data"
+readme = "README.md"
+authors = [{ name = "Michael Riffle", email = "mriffle@uw.edu" }]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "matplotlib>=3.7",
+    "rpy2>=3.5",  # R integration
+    "scipy >= 1.6.0", # Added from previous normalizers
+    "scikit-learn >= 0.24.0", # Added from previous normalizers
+    "seaborn >= 0.11.0", # Added from previous normalizers
+    "statsmodels >= 0.12.0", # Added from previous normalizers
+    "directlfq[dask] >= 0.3.2" # Added for DirectLFQNormalizer, lowered version
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black",
+    "flake8",
+    "jupyter"
+]
+
+[project.urls]
+Homepage = "https://github.com/mriffle/pronoms"
+Repository = "https://github.com/mriffle/pronoms"
+
+[tool.setuptools.packages.find]
+where = ["src"]
