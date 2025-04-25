@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: subregistry
+Version: 0.1.0
+Summary: Utility Python library to easily create registries of sub-classes and import them conveniently.
+Author-email: Thomas Havy <thomashavy@hotmail.fr>
+License-Expression: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# subregistry
+
+Utility Python library to easily create registries of sub-classes and import them conveniently.
+
+## Usage
+
+To add a registry to a class, simply import and use the decorator:
+
+```python
+from subregistry import add_registry
+
+@add_registry
+class BaseClass:
+    pass
+```
+
+Any **Imported** subclass of `BaseClass` will then automatically be registered.
+
+Registered subclasses can later be retrieved by name as follows:
+
+```python
+BaseClass.registry.get_by_name("SubClass")
+```
+
+See the `examples` folder for more in-depth usages.
+
+## Author
+
+* Thomas Havy
