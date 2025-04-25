@@ -1,0 +1,14 @@
+Pillow==7.0.0
+XlsxWriter==1.2.6
+imutils==0.5.1
+lxml
+numpy
+opencv_python==4.1.2.30
+pandas==0.23.4
+progressbar2==3.47.0
+pyqt5
+scikit_learn==0.22.1
+sip==5.0.0
+six==1.11.0
+tqdm==4.31.0
+xlwt
