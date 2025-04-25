@@ -1,0 +1,14 @@
+pycla/__init__.py,sha256=SX-YiFzf6qKFI6zwTyKOw8mBgb8AV-hdCfYES3l1hBM,51
+pycla/bin/__init__.py,sha256=28wI-dTC9jBbtI5xT94SqovzpIhPMYO3phPPpPiFg8k,21
+pycla/bin/cla.py,sha256=77qR01Dzew80Fmnz0bw-OQkCmIvIWazTvdwM8ldiZvU,9240
+pycla/bin/libcla.so,sha256=7iF9mtx7fBuud1pqTDWCzzb9jh2T5R-Caxc6--ylRao,750216
+pycla/bin/libcla.so.1.1.1,sha256=7iF9mtx7fBuud1pqTDWCzzb9jh2T5R-Caxc6--ylRao,750216
+pycla/core/__init__.py,sha256=8907tSlG0Tm4UMI6BVIa8MtmIisjt6A7hX-Xeh-afCw,242
+pycla/core/cuda_device.py,sha256=J5PusZMiiXHN7lA5sjBMhOAfo6q01uKWhtfq_OANlrY,3485
+pycla/core/matrix.py,sha256=HukB3iTzEL0jVdLKFtyKs2A0hI0y_IVEBoYHwkybxLY,21319
+pycla/core/vector.py,sha256=v1qBN6wJAbyg_aUOYbdgwmPVseb5Ul0GQvb-RTFiFdA,19757
+pycla-1.1.1.dist-info/licenses/LICENSE,sha256=qRkPlTIVnshnxkavRjlfRK_hCURSpP7sfbHXZnIF5wY,1070
+pycla-1.1.1.dist-info/METADATA,sha256=Czj4U4Dyz-Ou8dSNGiwnXI6FFpwlYRU-5XmCUs7PtV8,9417
+pycla-1.1.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+pycla-1.1.1.dist-info/top_level.txt,sha256=qK60oCzztMmtDPhs3bZO9o6PLJ5C3brty-1pdZedTHQ,6
+pycla-1.1.1.dist-info/RECORD,,
