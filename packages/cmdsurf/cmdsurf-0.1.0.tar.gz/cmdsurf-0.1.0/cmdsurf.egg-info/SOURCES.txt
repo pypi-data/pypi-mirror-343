@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+cmdsurf/__init__.py
+cmdsurf/__main__.py
+cmdsurf/exhist.py
+cmdsurf/exhist2.py
+cmdsurf.egg-info/PKG-INFO
+cmdsurf.egg-info/SOURCES.txt
+cmdsurf.egg-info/dependency_links.txt
+cmdsurf.egg-info/entry_points.txt
+cmdsurf.egg-info/top_level.txt
