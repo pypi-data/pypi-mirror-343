@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "ngi-code-academy"
+version = "v0.2.1"
+description = "An example package for use in courses!"
+authors = [
+    "Ole-Jakob Olsen <ole.jakob.olsen@ngi.no>",
+    "Jiyang Ye <jiyang.ye@ngi.no>"
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
