@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+gSOMOs.egg-info/PKG-INFO
+gSOMOs.egg-info/SOURCES.txt
+gSOMOs.egg-info/dependency_links.txt
+gSOMOs.egg-info/requires.txt
+gSOMOs.egg-info/top_level.txt
+somos/__init__.py
+somos/cosim.py
+somos/io.py
+somos/proj.py
