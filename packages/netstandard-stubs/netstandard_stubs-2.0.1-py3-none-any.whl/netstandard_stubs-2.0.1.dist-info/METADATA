@@ -1,0 +1,63 @@
+Metadata-Version: 2.4
+Name: netstandard-stubs
+Version: 2.0.1
+Summary: Unofficial type stubs for .NET Standard
+Project-URL: Homepage, https://github.com/Eswcvlad/netstandard-stubs
+Project-URL: Issues, https://github.com/Eswcvlad/netstandard-stubs/issues
+Author-email: Vlad Lipskiy <eswcvlad@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: C#
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Typing :: Stubs Only
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Python type stubs for .NET Standard
+
+This repository contains unofficial Python type stubs for 
+[.NET Standard](https://learn.microsoft.com/en-us/dotnet/standard/net-standard),
+that can be used to improve IDE experience for developers using
+[Python.NET](https://github.com/pythonnet/pythonnet).
+
+The initial type stubs were generated using the 
+[pythonnet-stub-generator](https://github.com/MHDante/pythonnet-stub-generator)
+project.
+
+Docstrings are based on the official .NET API documentation, which is
+available at [dotnet-api-docs](https://github.com/dotnet/dotnet-api-docs)
+under a CC BY 4.0 license.
+
+At the moment this project is focused on type stubs for .NET Standard 2.0.  
+
+# Versioning
+
+Versions will follow the `x.y.z` format, where `x.y` is the targeted version of
+.NET Standard and `z` is the version of the stubs themselves.
+
+So if you want to make sure, that type stubs cover only, for example, .NET
+Standard 2.0, specify the version constraints like this:
+
+```requirements
+netstandard>=2.0,<2.1
+```
+
+# Installation
+
+You can install netstandard-stubs with pip:
+
+```shell
+pip install netstandard-stubs
+```
