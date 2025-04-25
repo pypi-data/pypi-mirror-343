@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: Elevaso-Spine
+Version: 0.2.0
+Summary: Core library for use in all projects (i.e. standardized logging, command line interface, etc.)
+Author-email: "Elevaso, LLC" <code@elevaso.org>
+License: GPL-3.0-or-later
+Project-URL: Documentation, https://spine.elevaso.tech/
+Project-URL: Source, https://gitlab.com/elevaso/spine/spine-py/
+Project-URL: Tracker, https://gitlab.com/elevaso/spine/spine-py/-/issues
+Project-URL: Changelog, https://spine.elevaso.tech/main/change_log.html
+Keywords: elevaso,library,log,thread,cli,core
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9.1
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-dateutil
+Dynamic: license-file
+
+# Spine
+Core library for use in all projects (i.e. standardized logging, command line interface, etc.)
+
+See [spine.elevaso.tech](https://spine.elevaso.tech/) for full documentation.
