@@ -1,0 +1,13 @@
+ui.py,sha256=e6vP26UMWRXLIGRZZSa-cB0z_YeT2_2Lg0YTn2CD8hU,17245
+backend/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+backend/django_parser.py,sha256=a5IHBZjupV_f_KZ7EDxsC7BVB9x8-3sTrG5i8WxK1rY,21070
+backend/fastapi_parser.py,sha256=jkX0LFkVj_5ByFh8lVkpIn5NEjMU-B6OXW5ZqMwDTZg,26080
+backend/flask_parser.py,sha256=Z1CsoHhuOp3yio4vH4JM-Dko0MJR0G2-2gorQvfrTos,20156
+cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cli/main.py,sha256=xys1kaHjdTGXYnTEGFer8qT51x-56jM-2hNZxGS8hT8,523
+pyapptest-0.1.0.dist-info/LICENSE.md,sha256=kmU1ke3n2Q5toyMRKLjHb__rMusaY4sEp6_rTkDQ5Mg,1092
+pyapptest-0.1.0.dist-info/METADATA,sha256=Da3FOoMFkdafcP-y-49C8kcoPKIytozCJiHXhUdWuRo,530
+pyapptest-0.1.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+pyapptest-0.1.0.dist-info/entry_points.txt,sha256=e89Yax2iJKl_T4SgdPmxkaSqES-a7-ZR6eMvM6c0FEQ,44
+pyapptest-0.1.0.dist-info/top_level.txt,sha256=MBFY1JvRqHIllkfAURs9jdlulinXCaTuwipCrGdtwi4,15
+pyapptest-0.1.0.dist-info/RECORD,,
