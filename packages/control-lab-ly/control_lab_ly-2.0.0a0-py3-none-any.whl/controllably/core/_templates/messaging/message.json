@@ -1,0 +1,21 @@
+{
+    "request":{
+        "request_id": "",
+        "address": {"sender": [""], "target": [""]},
+        "priority": false,
+        "rank": null,
+        "object_id": "",
+        "method": "",
+        "args": [""],
+        "kwargs": {"":""}
+    },
+    "reply": {
+        "reply_id": "",
+        "request_id": "",
+        "address": {"sender": [""], "target": [""]},
+        "priority": false,
+        "rank": null,
+        "status": "",
+        "data": null
+    }
+}
