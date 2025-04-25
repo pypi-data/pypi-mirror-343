@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: rerain
+Version: 1.0.1
+Summary: Complex Advanced Python Module
+Author-email: Raynixx <4raynixx@gmail.com>
+License: MIT
+Requires-Python: >=3.7
+License-File: LICENSE
+Dynamic: license-file

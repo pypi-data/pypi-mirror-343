@@ -1,0 +1,11 @@
+[project]
+name = "rerain"
+version = "1.0.1"
+description = "Complex Advanced Python Module"
+license = {text = "MIT"}
+authors = [{ name="Raynixx", email="4raynixx@gmail.com" }]
+requires-python = ">=3.7"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
