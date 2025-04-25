@@ -1,0 +1,15 @@
+chronostring/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chronostring/chronostring.py,sha256=oMQ9CJY9hL7khOUWDF31heO-NcCusxxwt5NN-QPFPVQ,1963
+chronostring/interpreter.py,sha256=n78rVD1fYZE2YHVJGMsTl8VKKPueWgW-yrSkYv3ABlE,517
+chronostring/processors.py,sha256=_PA-XPmyRFIqYnWqviOl8z6MQCwCyAhADgfVh2wEoyw,3606
+chronostring/processors_fr.py,sha256=2iboDY3fthTshSpODmiEpUmm1sEEdMT4dv1mW1Jmc4c,12529
+chronostring/tokenizer.py,sha256=ZH4bktkgWMNDcqm_dBdo0D6e9bUcMU3vWg_kGlVOlV4,1444
+chronostring/tokens.py,sha256=L9KsAi41Aw7xj_98u7Nn96sHZVVeEmpW2jYiquWEg1c,8321
+chronostring/tokens_fr.py,sha256=8Hda2VJOL4vDZvoNglRxWB0RWXrAyqC2HtuPOhyiLWA,1510
+chronostring/utils.py,sha256=IXHVDBZOlsjNPdnyaYabiOsBogrfQXgeuXdwc0RuwHU,184
+chronostring-0.1.0.dist-info/licenses/AUTHORS.md,sha256=rPDROAJ0S6xiTLx8XF_xl4gPAWSEzh00gJxYeMCYhT4,480
+chronostring-0.1.0.dist-info/licenses/LICENSE,sha256=BF0MfVnFBC1GQiWwQ3Hq3yFKT1OdyI-DhEEWo8e-R0A,33952
+chronostring-0.1.0.dist-info/METADATA,sha256=T5pBSw0vn4Qma9WvghIvo9xgX79-D9-fU3grM7spdpY,3711
+chronostring-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+chronostring-0.1.0.dist-info/top_level.txt,sha256=GRfjZ8F3rq4iaVL-HHUmNkwwpyl2chfy4Jl-ineiFG8,13
+chronostring-0.1.0.dist-info/RECORD,,
