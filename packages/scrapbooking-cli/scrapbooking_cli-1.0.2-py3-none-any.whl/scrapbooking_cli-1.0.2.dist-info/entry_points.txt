@@ -1,0 +1,2 @@
+[console_scripts]
+sb = src.scrapbook.main:main
