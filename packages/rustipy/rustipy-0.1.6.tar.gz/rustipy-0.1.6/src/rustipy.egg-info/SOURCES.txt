@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/rustipy/__init__.py
+src/rustipy/option.py
+src/rustipy/py.typed
+src/rustipy/result.py
+src/rustipy.egg-info/PKG-INFO
+src/rustipy.egg-info/SOURCES.txt
+src/rustipy.egg-info/dependency_links.txt
+src/rustipy.egg-info/requires.txt
+src/rustipy.egg-info/top_level.txt
+tests/test_option.py
+tests/test_result.py
