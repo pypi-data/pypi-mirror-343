@@ -1,0 +1,9 @@
+sam_local_watcher/__init__.py,sha256=r026llIql2F0tUed-_1rfSA_-PLtBSvVKc2oV4EGXcM,181
+sam_local_watcher/cli.py,sha256=1M6wUrfvJr8kAza1P7DEjCHNO9MtXveMYy3aTrjeDec,921
+sam_local_watcher/watcher.py,sha256=WFLbx3tMgmcuU6vlXSBZAHByoMoO728z_yjq9V_BdcY,4871
+sam_local_watcher-0.1.0.dist-info/licenses/LICENSE,sha256=HCWcJrKHRhpXsjhSivVJdsWD6yINNQJhRYD3Az-JCdo,1069
+sam_local_watcher-0.1.0.dist-info/METADATA,sha256=MBg2QRtNDzO1qQqJ0ftdFM7vsiPTi5JgbrpA4ZPHYFc,2652
+sam_local_watcher-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+sam_local_watcher-0.1.0.dist-info/entry_points.txt,sha256=3igVFbeB9ZD4TWr-apmocgrIfuZlzJGo0FLgfIfjxss,59
+sam_local_watcher-0.1.0.dist-info/top_level.txt,sha256=7pfnu-v6S-2Oedo4VlbFbPvbSGwkryhe9p3ooagDxv0,18
+sam_local_watcher-0.1.0.dist-info/RECORD,,
