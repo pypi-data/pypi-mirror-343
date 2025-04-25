@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools >= 77.0.3", "numpy", "scipy", "seaborn", "matplotlib", "statsmodels"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oxford_stats_lib"
+version = "1.1.0"
+authors = [
+  { name="Geza Kerecsenyi", email="geza@kerecs.com" },
+]
+description="A library for wrangling data for University of Oxford Intro to Probability Theory and Statistics"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers=[
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]

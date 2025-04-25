@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/oxford_stats_lib/__init__.py
+src/oxford_stats_lib/main.py
+src/oxford_stats_lib.egg-info/PKG-INFO
+src/oxford_stats_lib.egg-info/SOURCES.txt
+src/oxford_stats_lib.egg-info/dependency_links.txt
+src/oxford_stats_lib.egg-info/top_level.txt
