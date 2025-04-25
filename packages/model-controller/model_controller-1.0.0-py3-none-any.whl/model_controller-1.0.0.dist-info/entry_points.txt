@@ -1,0 +1,2 @@
+[console_scripts]
+model_controller = model_controller.cli:main

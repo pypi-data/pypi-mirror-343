@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: model_controller
+Version: 1.0.0
+Summary: AI-powered Git analysis tool using Gemini AI
+Project-URL: Documentation, https://github.com/model_controller/model_controller#readme
+Project-URL: Issues, https://github.com/model_controller/model_controller/issues
+Author: Vumit Contributors
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Version Control :: Git
+Requires-Python: >=3.9
+Requires-Dist: click>=8.1.8
+Requires-Dist: mlflow==2.13.0
+Description-Content-Type: text/markdown
+
+# LM Serving
+
+
+### Setup environment variables
+- Create file `.env` in the root directory with the following content `template.env`
+- Update the `.env` file with your own values
+
+- Run:
+```bash
+source .env
+```
+
+### Run with Docker (deployment phase)
+
+_Notice that all processes below will be run inside a Docker container!_
+
+- `make build`: Build Docker image LMDeploy
+- `make up_server`: Up LMDeploy server serving model InternVL
+- `make down_server`: Down LMDeploy server
+
+### Inference with API Client
+
+- Requirements:
+  - Python 3.8
+  
+  - Install dependencies:
+```bash
+pip3 install -r requirement/requirements-dev.txt
+```
+
+
+```python
+
+python3 client/main.py --image-urls <IMAGE1_URL> <IMAGE2_URL> --prompt <PROMPT> --api-key <API_KEY>
+
+python3 client/main.py --image-paths <IMAGE1_PATH> <IMAGE2_PATH> --prompt <PROMPT>  --api-key <API_KEY> # For local image path
+```
