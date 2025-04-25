@@ -1,0 +1,25 @@
+# tests/test_address_parser.py
+from address_parser.address_parser import AddressParser
+
+def test_parse_full_address():
+    parser = AddressParser()
+    address = "မန္တလေးတိုင်းဒေသကြီး မန္တလေးခရိုင် အမရပူမြို့နယ် အမရပူမြို့ ၁၀ရပ်ကွက် မဟာဗန္ဓုလလမ်း"
+    
+    result = parser.parse(address)
+    
+    assert result["state"] == "မန္တလေးတိုင်း"
+    assert result["district"] == "မန္တလေးခရိုင်"
+    assert result["township"] == "အမရပူ"
+    assert result["town"] == "အမရပူ"
+    assert result["ward"] == "၁၀ရပ်ကွက်"
+    assert result["street"] == "မဟာဗန္ဓုလလမ်း"
+  
+
+def test_partial_address():
+    parser = AddressParser()
+    address = "ရန်ကုန်တိုင်းဒေသကြီး လှိုင်မြို့နယ်"
+
+    result = parser.parse(address)
+
+    assert result["state"] == "ရန်ကုန်တိုင်း"
+    assert result["township"] == "လှိုင်"
