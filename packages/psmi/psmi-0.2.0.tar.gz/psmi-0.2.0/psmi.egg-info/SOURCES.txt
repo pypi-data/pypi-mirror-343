@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+psmi/__init__.py
+psmi/auto_psmi.py
+psmi.egg-info/PKG-INFO
+psmi.egg-info/SOURCES.txt
+psmi.egg-info/dependency_links.txt
+psmi.egg-info/requires.txt
+psmi.egg-info/top_level.txt
+tests/test_perf.py
