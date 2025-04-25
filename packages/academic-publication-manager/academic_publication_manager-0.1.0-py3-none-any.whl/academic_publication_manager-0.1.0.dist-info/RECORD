@@ -1,0 +1,15 @@
+academic_publication_manager/__init__.py,sha256=ruULPQI7A5xxFhCYlc2-Yak7eGnabqCYTahYYvxbPtc,19
+academic_publication_manager/about.py,sha256=i0L81WqhD_uvZlVYv00l4w4kal1VdXIrisqa-WYsSh0,502
+academic_publication_manager/desktop.py,sha256=7x7bZ-YKPxXic6xJocVbHAs1s2K3iK6v4jTCHfeCl-8,3239
+academic_publication_manager/program.py,sha256=xWTsnmXosAy7ow2w08lzIm_0qdR0fbFu4uK3Y4Axwzk,39678
+academic_publication_manager/icons/logo.png,sha256=AC6N74bnY0SlsA5Zx2B0iWTv4FqbV7WMY_H9Q4PnDqU,5457
+academic_publication_manager/modules/__init__.py,sha256=ruULPQI7A5xxFhCYlc2-Yak7eGnabqCYTahYYvxbPtc,19
+academic_publication_manager/modules/production.py,sha256=YttkqhsqL84GK9snJZ3JDNxognO9MC772WAHQ3le-Sw,380
+academic_publication_manager/modules/to_bibtex.py,sha256=Owgv7pqDjiu3o4cTIu34b3tuDee2GMYWa2BlpsnFN1I,5931
+academic_publication_manager/modules/wabout.py,sha256=p9xNljte3h53_nwBiglziCXBZUoEMKug-O5JRnt5mr4,4001
+academic_publication_manager-0.1.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+academic_publication_manager-0.1.0.dist-info/METADATA,sha256=0SAh7c8z5PF086MzrPooaNbGltiOmofWVqsOuUqqHdE,1858
+academic_publication_manager-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+academic_publication_manager-0.1.0.dist-info/entry_points.txt,sha256=9b9DqocFAQoTl1qe7Rh7MXdUI61AzxA8qCX3ojCDdXg,91
+academic_publication_manager-0.1.0.dist-info/top_level.txt,sha256=P5Z6xAwJX2dGC4NovJJxIzXSlqUOvqOVBxQngN4p7oc,29
+academic_publication_manager-0.1.0.dist-info/RECORD,,
