@@ -1,0 +1,11 @@
+openinference/instrumentation/beeai/__init__.py,sha256=i9o9RS0Ku8-u7w8BTUAEywEJhuU9Z9zeIzPtjADQsuU,6035
+openinference/instrumentation/beeai/middleware.py,sha256=pLm7x0gKtcIgGUSV5kiHPrsPl0SjQgPTo5Z-GhT6ynQ,12199
+openinference/instrumentation/beeai/version.py,sha256=XEqb2aiIn8fzGE68Mph4ck1FtQqsR_am0wRWvrYPffQ,22
+openinference/instrumentation/beeai/utils/build_trace_tree.py,sha256=DLfHXmr_msCG7l3OVY0ezqJ6DlPflK9OuOwTR8thjcM,6495
+openinference/instrumentation/beeai/utils/create_span.py,sha256=51sOEc1PxD_L49TeDXo31P7VexLJzvnaeZ3EM4g3u08,2114
+openinference/instrumentation/beeai/utils/get_serialized_object_safe.py,sha256=aDuO1qS68EowryUfEzIqwkeA3PU0L4atovNem6sSNRc,12353
+openinference/instrumentation/beeai/utils/id_name_manager.py,sha256=lJf0YQ3vpJVsznyP1V1FwhYLk8KZWsWxyybz8yfdiDw,1804
+openinference_instrumentation_beeai-0.1.3.dist-info/METADATA,sha256=7Pf5ApeQ5fmT6cCvlMKmuKKjIOv46sxcnzumvMAob_4,5411
+openinference_instrumentation_beeai-0.1.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+openinference_instrumentation_beeai-0.1.3.dist-info/entry_points.txt,sha256=ee7EUhbWv-XK1dxhPXuFVy9qstzj-lc-265Phe2Ml9s,183
+openinference_instrumentation_beeai-0.1.3.dist-info/RECORD,,
