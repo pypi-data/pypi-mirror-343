@@ -1,0 +1,7 @@
+numpy
+numba
+scipy
+wfdb
+matplotlib
+scikit-learn
+PyWavelets
