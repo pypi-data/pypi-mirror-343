@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: fatkun
+Version: 0.1.3
+Summary: target resourse file downloader and converter
+Home-page: https://github.com/
+Author: yan wang
+Author-email: 1449349985@qq.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests==2.31.0
+
+
+# Installation
+    pip install fatkun
+    
+# Usage 1
+
+    from fatkun import Fatkun
+    
+    
+    fatkun = Fatkun()
+    url = 'http://sns-na-i2.xhscdn.com/1040g00831g8rgina1u004b43duem6ilnicrgu98?imageView2/2/w/540/format/heif/q/46;imageMogr2/strip&redImage/frame/0&ap=11&sc=HF_PRV'
+    fatkun.pre_url_process(url, 'heif')
+    content = fatkun.get_requests()
+    file_dir = r'D:\files\example'
+    fatkun.save_file(content, file_dir)
+
+# Install Requires
+
+    python>=3.9.0
+
+
+
+    
