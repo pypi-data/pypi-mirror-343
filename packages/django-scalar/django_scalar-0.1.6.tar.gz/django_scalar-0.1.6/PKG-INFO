@@ -1,0 +1,137 @@
+Metadata-Version: 2.4
+Name: django-scalar
+Version: 0.1.6
+Summary: Publish your Django API docs with Scalar
+License: MIT
+Requires-Python: >=3.11
+Requires-Dist: django-filter>=24
+Requires-Dist: djangorestframework>=3.15.0
+Requires-Dist: drf-spectacular>=0.28.0
+Provides-Extra: build
+Requires-Dist: hatchling>=1.26.3; extra == 'build'
+Provides-Extra: dev
+Requires-Dist: ruff; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# Django Scalar
+
+Django-Scalar provides an easy way to serve your API docs with [Scalar](https://scalar.com).
+
+> **Note**: This project is still in its early stages. Pull requests are welcome.
+
+## Installation
+
+The python package to install is `django-scalar`. You can install it with `pip install django-scalar`
+or `uv add django-scalar` based on your preferred python package manager.
+
+## Integrate in your Django app
+
+At this stage, it is required that you have your OpenAPI schema published
+with `DRF-Spectacular` under the `api/schema/` endpoint.
+
+To integrate django scalar include `django-scalar.views.scalar_viewer` in your `urls.py`.
+
+```python
+from django.urls import path
+from django_scalar.views import scalar_viewer
+from drf_spectacular.views import SpectacularAPIView
+
+urlpatterns = [
+    # ...existing URL patterns...
+    path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
+    # Add this:
+    path("api-docs/", scalar_viewer, name="scalar-viewer"),
+]
+``` 
+
+Feel free to change `api-docs/` to your liking. We've seen `api/docs` etc. in the wild.
+
+## Requirements:
+There are two main requirements for this project:
+- [drf-spectacular](https://drf-spectacular.readthedocs.io/en/latest/)
+- [django-filters](https://django-filter.readthedocs.io/en/stable/) (optional)
+
+This project implicitly depends on Django and Django-Rest-Framework.
+
+## Documentation example:
+```python
+    #views.py
+    @extend_schema(
+        responses={200: UserSerializer},
+        tags=["User"],
+        description="Retrieve a list of all users",
+        methods=["GET"],
+        parameters=get_filter_parameters(UserFilter), ## this get_filter_parameters is using the django-filters base to create the necessary parameters automatically.
+    )
+    def list(self, request: Request, *args: Any, **kwargs: Any) -> Response:
+        return super().list(request, *args, **kwargs)
+  #filters/user.py
+```
+## usage of get_filter_parameters
+- you need to create a basic or complex django-filter class and then use the script from [get_filter_parameters](https://github.com/m1guer/django-scalar/blob/main/get_filter_parameters.py) the auto-parse the class to a valid OpenApiParameter
+```python
+  #(app)/filters/users.py
+  import django_filters
+  from core.models.user import User
+
+
+  class UserFilter(django_filters.FilterSet):
+      # Filter by username (case-insensitive exact match)
+      username = django_filters.CharFilter(lookup_expr="iexact")
+  
+      # Filter by email (case-insensitive exact match)
+      email = django_filters.CharFilter(lookup_expr="iexact")
+  
+      # Filter by full name (case-insensitive partial match)
+      full_name = django_filters.CharFilter(
+          field_name="first_name", lookup_expr="icontains", label="Full Name"
+      )
+  
+      # Filter by is_active (boolean filter)
+      is_active = django_filters.BooleanFilter()
+  
+      # Filter by date joined (range filter for datetime)
+      date_joined_start = django_filters.DateTimeFilter(
+          field_name="date_joined", lookup_expr="gte", label="Joined After"
+      )
+      date_joined_end = django_filters.DateTimeFilter(
+          field_name="date_joined", lookup_expr="lte", label="Joined Before"
+      )
+  
+      # Filter by genres (many-to-many relationship)
+      genres = django_filters.ModelMultipleChoiceFilter(
+          queryset=User.objects.all(), field_name="genres__name", label="Genres"
+      )
+  
+      # Filter by trusty (boolean filter)
+      is_trusty = django_filters.BooleanFilter()
+  
+      # Filter by fee range (decimal filter)
+      min_fee = django_filters.NumberFilter(
+          field_name="fee", lookup_expr="gte", label="Min Fee"
+      )
+      max_fee = django_filters.NumberFilter(
+          field_name="fee", lookup_expr="lte", label="Max Fee"
+      )
+      type = django_filters.ChoiceFilter(
+          choices=[
+              ("music", "Musico"),
+              ("establishment", "Estabelecimento"),
+          ],
+      )
+  
+      class Meta:
+          model = User
+          fields = [
+              "username",
+              "email",
+              "is_active",
+              "is_trusty",
+              "genres",
+              "date_joined_start",
+              "date_joined_end",
+              "min_fee",
+              "max_fee",
+              "type",
+          ]
+```
