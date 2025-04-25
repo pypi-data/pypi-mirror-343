@@ -1,0 +1,14 @@
+primalbedtools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+primalbedtools/bedfiles.py,sha256=TEq0u1KbQ8-PRQdVT4fLp9sNgxdE5QfPF3WkzWcFd2A,20877
+primalbedtools/errors.py,sha256=eIuoRYC6uf94N7nSvuaj1O3-TONqVgI9mWJQqnvomAw,85
+primalbedtools/fasta.py,sha256=XacNPWmya4KQfV6OaHvHH-a4yo0OFZdV5Eedcc63l1M,973
+primalbedtools/main.py,sha256=vRK2lVHrP5tL6e7HNIy3OBQmoqSd9G9NxcnLmopCL9s,4002
+primalbedtools/primerpairs.py,sha256=PU-BKiRowazvjF-2tJUTGwe86uMNhpWbvwoWqDQ668E,4258
+primalbedtools/remap.py,sha256=nlIBQaJ7y772HnYLxtdEH3HLxpgNLTmmKJFipkvg2lE,4626
+primalbedtools/utils.py,sha256=RqicYzxGcQsvKGA56hMyRtYj-YU320kCZfEC32ndyRs,545
+primalbedtools/validate.py,sha256=NJnBKo7_dRElbxR45hRIfj301e0y2V6L34lnjKieCKM,3032
+primalbedtools-0.8.0.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+primalbedtools-0.8.0.dist-info/METADATA,sha256=ROqb3nVl1Bxf4gBkRbUwe_D5uaNieVHw7m6JUBcPuhE,2761
+primalbedtools-0.8.0.dist-info/WHEEL,sha256=RaoafKOydTQ7I_I3JTrPCg6kUmTgtm4BornzOqyEfJ8,88
+primalbedtools-0.8.0.dist-info/entry_points.txt,sha256=4G6F6b8MjYrJ_YRwhcyRp1p-UDeOXdZJl1tXLZxO7ZA,59
+primalbedtools-0.8.0.dist-info/RECORD,,
