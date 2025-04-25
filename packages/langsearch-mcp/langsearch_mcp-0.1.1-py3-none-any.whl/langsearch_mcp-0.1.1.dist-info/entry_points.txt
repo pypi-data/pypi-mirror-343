@@ -1,0 +1,2 @@
+[console_scripts]
+langsearch-mcp = langsearch.langsearch:run_server

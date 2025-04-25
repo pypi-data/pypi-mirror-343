@@ -1,0 +1,84 @@
+Metadata-Version: 2.4
+Name: langsearch-mcp
+Version: 0.1.1
+Summary: Language-based search MCP server for semantic search and document reranking
+Project-URL: Repository, https://github.com/yourusername/langsearch-mcp
+Author-email: Your Name <your.email@example.com>
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Requires-Dist: fastapi>=0.115.12
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: python-dotenv>=1.1.0
+Description-Content-Type: text/markdown
+
+# LangSearch MCP
+
+A language-based search MCP server that provides semantic search and document reranking capabilities.
+
+## Features
+
+- Semantic web search
+- Document reranking based on relevance
+- Easy integration with MCP clients like Cherry Studio
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install langsearch-mcp
+```
+
+Or install from source:
+
+```bash
+git clone https://github.com/yourusername/langsearch-mcp
+cd langsearch-mcp
+pip install .
+```
+
+## Usage
+
+### As a Command Line Tool
+
+After installation, you can run the MCP server directly from the command line:
+
+```bash
+langsearch-mcp
+```
+
+### As an MCP Server
+
+The server can be used with any MCP client, including Cherry Studio. The server provides the following endpoints:
+
+- `web_search`: Perform semantic web search
+- `rerank_documents`: Rerank documents based on relevance to a query
+
+## Configuration
+
+The server can be configured using environment variables:
+
+- `PORT`: The port to run the server on (default: 8000)
+- Add any other environment variables your server uses
+
+## Development
+
+To set up the development environment:
+
+1. Clone the repository
+2. Create a virtual environment: `python -m venv .venv`
+3. Activate the virtual environment:
+   - Windows: `.venv\Scripts\activate`
+   - Unix/MacOS: `source .venv/bin/activate`
+4. Install dependencies: `pip install -e ".[dev]"`
+
+## License
+
+MIT License
