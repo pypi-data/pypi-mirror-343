@@ -1,0 +1,17 @@
+[project]
+name = "portfoliocraft"
+version = "0.1.2"
+description = "Comprehensive package for Formulating Portfolio Optimization function"
+authors = [
+    { name = "Sangram Deshpande", email = "deshpande.sangram156@gmail.com" }
+]
+readme = "README.md"
+dependencies = ["docplex==2.29.241", "numpy==2.2.5", "qiskit_optimization==0.6.1"]
+keywords = ["Portfolio_optimization_formulation", "Portfolio", "Portfolio_craft"]
+requires-python = ">=3.8"
+license = "MIT"
+
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

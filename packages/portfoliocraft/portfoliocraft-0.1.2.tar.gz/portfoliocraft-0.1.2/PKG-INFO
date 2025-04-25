@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: portfoliocraft
+Version: 0.1.2
+Summary: Comprehensive package for Formulating Portfolio Optimization function
+Author-email: Sangram Deshpande <deshpande.sangram156@gmail.com>
+License-Expression: MIT
+Keywords: Portfolio_optimization_formulation,Portfolio,Portfolio_craft
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: docplex==2.29.241
+Requires-Dist: numpy==2.2.5
+Requires-Dist: qiskit_optimization==0.6.1
+
+## Comprehensive package for Formulating Portfolio Optimization function
