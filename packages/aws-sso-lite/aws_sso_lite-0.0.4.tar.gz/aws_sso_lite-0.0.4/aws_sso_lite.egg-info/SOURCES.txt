@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+aws_sso_lite/__init__.py
+aws_sso_lite/token.py
+aws_sso_lite.egg-info/PKG-INFO
+aws_sso_lite.egg-info/SOURCES.txt
+aws_sso_lite.egg-info/dependency_links.txt
+aws_sso_lite.egg-info/top_level.txt
+aws_sso_lite/vendored/__init__.py
+aws_sso_lite/vendored/awscli/__init__.py
+aws_sso_lite/vendored/awscli/sso/__init__.py
+aws_sso_lite/vendored/awscli/sso/utils.py
+aws_sso_lite/vendored/botocore/__init__.py
+aws_sso_lite/vendored/botocore/exceptions.py
+aws_sso_lite/vendored/botocore/utils.py
