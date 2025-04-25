@@ -1,0 +1,15 @@
+setup.py
+pretty_admin/__init__.py
+pretty_admin/admin.py
+pretty_admin/apps.py
+pretty_admin/models.py
+pretty_admin/tests.py
+pretty_admin/views.py
+pretty_admin.egg-info/PKG-INFO
+pretty_admin.egg-info/SOURCES.txt
+pretty_admin.egg-info/dependency_links.txt
+pretty_admin.egg-info/requires.txt
+pretty_admin.egg-info/top_level.txt
+pretty_admin/migrations/__init__.py
+pretty_admin/templatetags/__init__.py
+pretty_admin/templatetags/form_filters.py

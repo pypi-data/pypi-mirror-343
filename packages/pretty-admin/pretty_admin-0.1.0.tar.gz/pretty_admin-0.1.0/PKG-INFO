@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: pretty_admin
+Version: 0.1.0
+Summary: A Tailwind-based Django admin UI skin
+Author: Pruthviraj Chokake
+Requires-Dist: Django>=3.2
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary
