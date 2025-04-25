@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: grapa
+Version: 0.7.0.0
+Summary: Grapa - graphing and photovoltaics analysis
+Home-page: https://github.com/carronr/grapa/
+Author: Romain Carron
+Author-email: carron.romain@gmail.com
+License: MIT
+Description-Content-Type: text/plain
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: python-dateutil
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+Grapa is a python package providing a graphical interface and the underlying code dedicated to the visualization, analysis and presentation of scientific data, with a focus on photovoltaic research.
