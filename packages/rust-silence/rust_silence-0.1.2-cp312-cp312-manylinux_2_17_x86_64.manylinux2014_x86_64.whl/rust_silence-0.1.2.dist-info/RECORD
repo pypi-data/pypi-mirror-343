@@ -1,0 +1,8 @@
+rust_silence/__init__.py,sha256=UJ101f2zqiv47RzLXMLbesbunnbw7dMS1TLk0EXmc30,229
+rust_silence/_rust_silence.cpython-312-x86_64-linux-gnu.so,sha256=-iqYzh2FfigtRHOwjMGXUVHbdSOGheF5u09ea5s3hgY,2276400
+rust_silence/core.py,sha256=40biluLpvgOp8aQBViq8GXBQdat65ixm8qKsx5KVovs,2881
+rust_silence-0.1.2.dist-info/METADATA,sha256=VuZYQo4VH_nrHdGlhehsCoUho3FzF_lC6HTjCfbwhAg,4050
+rust_silence-0.1.2.dist-info/WHEEL,sha256=trHj1qW3EkAhWv1ELcwheHcxBVKlEciio0KUN1Wz2Ho,151
+rust_silence-0.1.2.dist-info/top_level.txt,sha256=k98XW2zErznv2WmbZvckFZlQGQ34cMRtW4P4VDh4-Xw,13
+rust_silence-0.1.2.dist-info/RECORD,,
+rust_silence-0.1.2.dist-info/licenses/LICENSE,sha256=o31T88Seh14fS0dEKr9tuvGv6d0neVdkJmzX0wQNlGg,1063
