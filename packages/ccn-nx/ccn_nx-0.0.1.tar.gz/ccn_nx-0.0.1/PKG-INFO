@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: ccn-nx
+Version: 0.0.1
+Summary: Graph-based compositional neural network model
+Author-email: Jack Douglass <jackdouglass58@gmail.com>
+Project-URL: Homepage, https://github.com/Bpoole908/Cellular-Computational-Network
+Project-URL: Issues, https://github.com/Bpoole908/Cellular-Computational-Network
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: networkx
+Requires-Dist: torch
+Requires-Dist: matplotlib
+Dynamic: license-file

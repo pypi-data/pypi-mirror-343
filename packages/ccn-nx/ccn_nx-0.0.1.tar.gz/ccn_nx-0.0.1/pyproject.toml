@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ccn-nx"
+version = "0.0.1"
+description = "Graph-based compositional neural network model"
+license = {file = "licenses/license.txt"}
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Jack Douglass", email = "jackdouglass58@gmail.com" }]
+dependencies = ["numpy", "networkx", "torch", "matplotlib"]
+
+[project.urls]
+Homepage = "https://github.com/Bpoole908/Cellular-Computational-Network"
+Issues = "https://github.com/Bpoole908/Cellular-Computational-Network"
