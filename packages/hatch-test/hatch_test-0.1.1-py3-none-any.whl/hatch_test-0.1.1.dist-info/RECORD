@@ -1,0 +1,8 @@
+hatch_test/__about__.py,sha256=8oAxKUG747GUokmxjkrWejyJa5yPNEsoJDlXxoedxTw,21
+hatch_test/__init__.py,sha256=Eh7Xb6yS-TPwnPxj7JFDlBuMwGIfdG2RpbACId0tX3c,304
+hatch_test/__main__.py,sha256=BoPTbMEp34I3wKK2a4hxXHNu9j0DGZLoXmIC9-jSQvA,30
+hatch_test/server.py,sha256=yVNnIx-7L2Y2d2Cc5nOOCZXXtAjBqr1wLvUTgiU2sBE,35
+hatch_test-0.1.1.dist-info/METADATA,sha256=YpyXOo-vI55bc26bH6H2lufJvtpP9w5THuR2tgXs_xY,705
+hatch_test-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hatch_test-0.1.1.dist-info/entry_points.txt,sha256=v8o4QnLjNTC8VHuLnVuuQPrKKkQCmoPy9mt4docTZzc,47
+hatch_test-0.1.1.dist-info/RECORD,,
