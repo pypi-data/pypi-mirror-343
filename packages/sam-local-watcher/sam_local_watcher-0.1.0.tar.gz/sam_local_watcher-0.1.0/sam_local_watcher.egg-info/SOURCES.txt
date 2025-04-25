@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+sam_local_watcher/__init__.py
+sam_local_watcher/cli.py
+sam_local_watcher/watcher.py
+sam_local_watcher.egg-info/PKG-INFO
+sam_local_watcher.egg-info/SOURCES.txt
+sam_local_watcher.egg-info/dependency_links.txt
+sam_local_watcher.egg-info/entry_points.txt
+sam_local_watcher.egg-info/requires.txt
+sam_local_watcher.egg-info/top_level.txt
