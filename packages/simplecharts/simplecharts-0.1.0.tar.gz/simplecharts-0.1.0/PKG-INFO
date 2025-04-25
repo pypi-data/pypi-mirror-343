@@ -1,0 +1,53 @@
+Metadata-Version: 2.4
+Name: simplecharts
+Version: 0.1.0
+Summary: SVG charts without dependencies
+Author-email: Tobias Bengfort <tobias.bengfort@posteo.de>
+License: MIT
+Project-URL: Homepage, https://github.com/xi/simplecharts
+Keywords: svg,charts
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Features
+
+-   no external dependencies
+-   produces clean SVG
+-   available charts: grouped columns, stacked columns, lines, stacked
+    areas
+
+# Limitations
+
+-   not interactive
+-   not configurable
+-   maximum of 6 colors
+-   no wrapping for long labels
+
+# Usage
+
+```python
+from simplecharts import StackedColumnRenderer
+
+renderer = StackedColumnRenderer()
+data = {
+    'rows': [{
+        'label': 'Apples',
+        'values': [3, 2, 5],
+    }, {
+        'label': 'Oranges',
+        'values': [4, 2, 3],
+    }, {
+        'label': 'Pears',
+        'values': [4, 3, 4],
+    }, {
+        'label': 'Bananas',
+        'values': [5, 1, 2],
+    }],
+    'legend': ['John', 'Jane', 'Joe'],
+}
+svg = renderer.render(data)
+```
+
+![example](https://github.com/xi/simplecharts/blob/main/tests/simple_StackedColumnRenderer.svg)
