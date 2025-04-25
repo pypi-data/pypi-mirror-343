@@ -1,0 +1,10 @@
+build
+dist
+docs
+requirements
+tests
+tools
+tutorials
+venv
+wheelhouse
+xgi_optimized
