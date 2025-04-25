@@ -1,0 +1,4 @@
+include README.md LICENSE
+recursive-include jwt_passwordless/templates *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
