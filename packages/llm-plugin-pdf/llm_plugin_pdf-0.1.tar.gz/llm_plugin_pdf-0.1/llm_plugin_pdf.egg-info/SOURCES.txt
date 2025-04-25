@@ -1,0 +1,11 @@
+LICENSE
+README.md
+llm_plugin_pdf.py
+pyproject.toml
+llm_plugin_pdf.egg-info/PKG-INFO
+llm_plugin_pdf.egg-info/SOURCES.txt
+llm_plugin_pdf.egg-info/dependency_links.txt
+llm_plugin_pdf.egg-info/entry_points.txt
+llm_plugin_pdf.egg-info/requires.txt
+llm_plugin_pdf.egg-info/top_level.txt
+tests/test_pdf.py

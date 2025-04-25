@@ -1,0 +1,6 @@
+llm
+PyMuPDF
+requests
+
+[test]
+pytest
