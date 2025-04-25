@@ -1,0 +1,12 @@
+simple_file_repository/__init__.py,sha256=6W7YxLPawPDao2AJH_u1y7Dnb3bIlCor_FiHmZ_cV78,610
+simple_file_repository/exceptions.py,sha256=SqsUz5Yz-MKqnDLCB1WJ-baCivt4AAWiueG4eAN0n_Q,398
+simple_file_repository/filestorage.py,sha256=kMQpkDweoPbMj1CzzlCsYkJ2123rU-aEpNaf8Wyoo4E,7800
+simple_file_repository/photostorage.py,sha256=uemJX1r8PwjqIa87jj0RpFfIO_5zQ0vWhXZw7edVLC4,4387
+simple_file_repository/photostorages.py,sha256=a0d3t8En1Tt28ZyEdkzZK0KKf3BKaAENzveDg1CtpPA,3510
+simple_file_repository/s3storage.py,sha256=piu02PHHSP4BTYYkWEPn5klAJZjalDFy02zMfDyvgEw,6944
+simple_file_repository/storage.py,sha256=QXXzTMrJ2g49zTSf8Vk9KPZFyB1ZAK4JVg-_5Y2FBkw,1690
+simple_file_repository/utils.py,sha256=RJtMVQYcVYCnL17EI_tqKcr6K1PnY3TGUNu45OEieUs,416
+simple_file_repository-0.11.0.dist-info/LICENSE,sha256=5qn3QEPZewpTf_AX_9ve1PjUCXIYBNzxqjZgaCdzbjo,1312
+simple_file_repository-0.11.0.dist-info/METADATA,sha256=5uAxb6bKrx3hpJkmRB0r8bAAyUskcHTOQeRxyLKt1WY,2028
+simple_file_repository-0.11.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+simple_file_repository-0.11.0.dist-info/RECORD,,
