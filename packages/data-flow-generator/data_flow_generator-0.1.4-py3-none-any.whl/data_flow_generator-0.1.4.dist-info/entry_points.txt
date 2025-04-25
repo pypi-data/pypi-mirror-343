@@ -1,0 +1,4 @@
+[console_scripts]
+data-flow-cli = src.dataflow:main
+data-flow-command = src.dataflow_command:main
+data-flow-generator = src.dataflow:main
