@@ -1,0 +1,14 @@
+hyprnav/__init__.py,sha256=eIwWEgse8l8FYVQqWJeGmdKoEDvOCXHPTJu0mIH59ME,527
+hyprnav/config.py,sha256=KJOdQjaHx-5IDz8-bm7cK6Pxt12hJKti183nrGH5mA0,2675
+hyprnav/constants.py,sha256=pSQuCGs9FbsapZ_j1Fqx-ZU-ijaj941qyXkhdY04CG4,360
+hyprnav/listen.py,sha256=N5yzJeQgQlgVarz5TDKvq-8sM9m7m3SNmltGxScYHZo,2086
+hyprnav/window.py,sha256=aOc-QmP99Opt3CZFa8aRVx1KtDaB7eIcYfVZZdfNxlE,3236
+hyprnav/assets/config.yaml,sha256=kkM_G6VQQ7Q1IHr_vz66IlPuKMKEcBhDmFEEz0GOVds,625
+hyprnav/assets/hyprnav.kdenlive,sha256=LMOPDLUNEOAQnHPgcRbSG1MxxvtobY-_NpEsOzwPD7A,25974
+hyprnav/assets/style.css,sha256=hPXf0BRFSGhklGwsJEqrBnmbxSCUd526nv3YJ-bTPRA,669
+hyprnav/assets/transition.wav,sha256=2FKjl-raFH14lfhwlSShGCPIJMM7H_PzXhFSjivLgHY,76514
+hyprnav-0.0.18.dist-info/METADATA,sha256=O_9bBsi5rCNRyVCpmYCU98do5OCtW6hLGtW4VfgzFDg,4639
+hyprnav-0.0.18.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hyprnav-0.0.18.dist-info/entry_points.txt,sha256=pQj2dB2LA6VMAxRCBb-q-3iuWYINN9n2HavZiskhEB4,41
+hyprnav-0.0.18.dist-info/licenses/LICENSE,sha256=hzatDUY2y22rrj6X6ZwI9cDAi4xFHx1Imymg1jvr8HQ,1076
+hyprnav-0.0.18.dist-info/RECORD,,
