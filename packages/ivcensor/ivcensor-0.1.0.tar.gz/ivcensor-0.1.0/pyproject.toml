@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ivcensor"
+version = "0.1.0"
+description = "IV with right censor data"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["censoring", "neural network", "estimation", "survival analysis"]
+authors = [
+  { name = "bqs", email = "buqiushi17@mails.ucas.ac.cn" },
+]
+license = { text = "MIT" }
+dependencies = [
+  "numpy>=1.19",
+  "torch>=1.8",
+  "scipy>=1.5",
+  "scikit-learn>=0.24",
+  "xgboost>=1.3",
+]
