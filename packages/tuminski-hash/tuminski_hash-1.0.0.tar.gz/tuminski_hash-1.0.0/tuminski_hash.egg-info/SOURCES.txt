@@ -1,0 +1,7 @@
+setup.py
+tuminski_hash/__init__.py
+tuminski_hash/core.py
+tuminski_hash.egg-info/PKG-INFO
+tuminski_hash.egg-info/SOURCES.txt
+tuminski_hash.egg-info/dependency_links.txt
+tuminski_hash.egg-info/top_level.txt
