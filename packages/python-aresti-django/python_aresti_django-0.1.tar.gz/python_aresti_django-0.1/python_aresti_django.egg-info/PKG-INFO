@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: python-aresti-django
+Version: 0.1
+Summary: Aresti-rajapintojen Django-testaustyökalut
+Author-email: Antti Hautaniemi <antti.hautaniemi@pispalanit.fi>
+License: MIT
+Project-URL: Repository, https://github.com/an7oine/python-aresti-django.git
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: Django
+Requires-Dist: python-aresti>=0.8
+
+django-aresti
+=============
+
+Aresti-rajapintojen Django-testaustyökalut

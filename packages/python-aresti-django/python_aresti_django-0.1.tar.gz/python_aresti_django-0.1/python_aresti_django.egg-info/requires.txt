@@ -1,0 +1,2 @@
+Django
+python-aresti>=0.8

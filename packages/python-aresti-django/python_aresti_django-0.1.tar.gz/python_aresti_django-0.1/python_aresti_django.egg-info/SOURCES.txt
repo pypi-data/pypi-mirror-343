@@ -1,0 +1,9 @@
+README.md
+aresti_django.py
+pyproject.toml
+python_aresti_django.egg-info/PKG-INFO
+python_aresti_django.egg-info/SOURCES.txt
+python_aresti_django.egg-info/dependency_links.txt
+python_aresti_django.egg-info/historia.json
+python_aresti_django.egg-info/requires.txt
+python_aresti_django.egg-info/top_level.txt
