@@ -1,0 +1,104 @@
+Metadata-Version: 2.1
+Name: pretty-admin
+Version: 0.1.5
+Summary: A Tailwind-based Django admin UI skin
+Home-page: https://github.com/Pruthvi2121/pretty_admin
+Author: Pruthviraj Chokake
+Author-email: chokake.pruthvi@gmail.com
+License: MIT
+Project-URL: Homepage, https://github.com/Pruthvi2121/pretty_admin
+Project-URL: Bug Tracker, https://github.com/Pruthvi2121/pretty_admin/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# 🌈 Pretty Admin – Tailwind-powered Django Admin Skin
+[![PyPI version](https://badge.fury.io/py/pretty-admin.svg)](https://badge.fury.io/py/pretty-admin)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+
+**Pretty Admin** is a beautiful, customizable Django admin interface built with Tailwind CSS. It enhances the default Django admin with modern UI and responsive design.
+
+> ⚠️ This package is under active development. Full-featured updates will be released soon. Stay tuned!
+
+---
+
+## 🚀 Features
+
+- 🎨 Beautiful Tailwind-based UI
+- 🌙 Light/Dark theme toggle
+- 📱 Fully responsive layout
+- ⚡ Minimal setup, plug & play
+
+---
+
+## 📦 Installation
+
+You can install Pretty Admin directly from PyPI:
+
+```bash
+pip install pretty-admin
+```
+
+## ⚙️ Setup Instructions
+
+Follow these steps to integrate `pretty_admin` into your Django project:
+
+### 1. Add `pretty_admin` to `INSTALLED_APPS`
+
+Make sure it's placed **before** `django.contrib.admin`:
+
+```
+# settings.py
+
+INSTALLED_APPS = [
+    'pretty_admin',               # 👈 Add this at the top before django.contrib.admin
+    'django.contrib.admin',
+    'django.contrib.auth',
+    ...
+]
+```
+
+
+
+### 2. `Set STATIC_URL` and `STATIC_ROOT`
+Add this to your settings.py if not already set:
+
+```
+# settings.py
+
+import os
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+```
+
+### 3. Run collectstatic
+To gather all static files (including Pretty Admin's Tailwind assets), run:
+
+
+```
+python manage.py collectstatic
+```
+This will generate a staticfiles/ folder containing all necessary static files.
+
+
+### 4. Start your server
+
+```
+python manage.py runserver
+```
+## Visit your admin panel at:
+```
+http://127.0.0.1:8000/admin/
+```
+You should now see the beautiful Pretty Admin UI ✨
+
+
