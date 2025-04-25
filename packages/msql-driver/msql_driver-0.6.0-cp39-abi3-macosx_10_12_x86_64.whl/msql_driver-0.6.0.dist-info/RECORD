@@ -1,0 +1,9 @@
+msql_driver-0.6.0.dist-info/METADATA,sha256=vDri_HTtnBGWt5RDhhu3yN3ys8ZaNB5FCn5xUnVcDHM,3872
+msql_driver-0.6.0.dist-info/WHEEL,sha256=LVKiu9bgLUJICf_rdtmZa1cUv-Xgh7w2DRRx_2zV2Fs,104
+msql_driver-0.6.0.dist-info/licenses/LICENSE.txt,sha256=sD7COFdrKTZ06HLPAfkj_ekhlyw6OPAqY9Cq0plCrpM,1500
+msql_driver/__init__.py,sha256=OOO3VAf7qNzkglqyad3e4sQgv6XPiDnK5gGMMlTHtnc,104
+msql_driver/__pycache__/__init__.cpython-311.pyc,sha256=W1y3lMaJslus2pX4GEFee6YzryACNmkN8iIMAScLdLQ,289
+msql_driver/__pycache__/__init__.cpython-313.pyc,sha256=N-B-SznR7btwComvEw0LpzQOB6DvVM_Mx-4kFbbQCXs,302
+msql_driver/__pycache__/__init__.cpython-39.pyc,sha256=Tw1vWiqtq4dSqYVfrV9BYCPu217OMuD-54spfn4hrHw,237
+msql_driver/_msql_driver_py.abi3.so,sha256=li4-pqXXmmaN2LJUxYa5Z9tcAjQvHOAXNw5E1C0yzc0,2047912
+msql_driver-0.6.0.dist-info/RECORD,,
