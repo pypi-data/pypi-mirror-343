@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+beets_logimport.egg-info/PKG-INFO
+beets_logimport.egg-info/SOURCES.txt
+beets_logimport.egg-info/dependency_links.txt
+beets_logimport.egg-info/requires.txt
+beets_logimport.egg-info/top_level.txt
+beetsplug/__init__.py
+beetsplug/logimport.py

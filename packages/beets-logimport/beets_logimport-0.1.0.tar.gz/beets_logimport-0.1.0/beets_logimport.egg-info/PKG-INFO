@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: beets-logimport
+Version: 0.1.0
+Summary: A beets plugin that adds logging of the destination paths when importing tracks
+Author-email: halloleo <beets_devel@halloleo.hailmail.net>
+License: MIT
+Project-URL: Homepage, https://github.com/halloleo/beets-logimport
+Project-URL: Documentation, https://github.com/halloleo/beets-logimport#readme
+Project-URL: Bug Tracker, https://github.com/halloleo/beets-logimport/issues
+Keywords: beets,plugin,music,logging,import
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Multimedia :: Sound/Audio
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: beets>=2.2.0
+Requires-Dist: requests>=2.32.3
+Dynamic: license-file
+
+# LogImport plugin for Beets
+
+This [beets] plugin adds logging of the destination paths when  you import tracks.
+
+For this add the `logimport` plugin to your config. Then the destination paths of your imported tracks are logged. 
+
+These are logged by default under the `INFO` level. This logging level is _for imports_ only emitted with the `--verbose` option.
+
+If you want to see the destination paths without `--verbose`, you can set `logimport`'s configuration option `atlevel`:
+
+```
+logimport:
+    atlevel: warning
+```
+
+  [beets]: https://beets.io
