@@ -1,0 +1,5 @@
+service_name: "Unisound Agent Framework"
+service_description: "Unisound Agent Framework"
+service_version: "1.0.0"
+
+service_env: "dev"
