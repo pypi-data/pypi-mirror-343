@@ -1,0 +1,5 @@
+recursive-include core *
+recursive-include admin_panel *
+
+include requirements.txt
+include README.md

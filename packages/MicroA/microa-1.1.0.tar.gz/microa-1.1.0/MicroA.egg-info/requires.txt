@@ -1,0 +1,17 @@
+django>=4.0
+djangorestframework
+psycopg2-binary
+mysqlclient
+python-dotenv
+django-cors-headers
+whitenoise
+djangorestframework-simplejwt
+django-redis
+celery
+django-q
+daphne
+channels
+djoser
+drf_yasg
+django-debug-toolbar
+streamlit

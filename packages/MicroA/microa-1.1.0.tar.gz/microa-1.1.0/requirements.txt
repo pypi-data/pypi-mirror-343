@@ -1,0 +1,38 @@
+# Django və DRF
+django>=4.0
+djangorestframework
+
+# PostgreSQL
+psycopg2-binary  
+
+# MySQL
+mysqlclient  
+
+# Ətraf mühit dəyişənləri üçün
+python-dotenv  
+
+# CORS (Frontend-Backend arasında bağlantı üçün)
+django-cors-headers  
+
+# Django Static və Media fayllarını rahat idarə etmək üçün
+whitenoise  
+
+# Authentication (JWT üçün)
+djangorestframework-simplejwt  
+
+# Redis Cache istifadə edəcəksənsə
+django-redis  
+
+# Async Task-lar üçün (Əgər Celery istifadə edəcəksənsə)
+celery  
+
+# Background job-lar üçün (Əgər `django-q` istifadə edəcəksənsə)
+django-q  
+
+# OTHER
+daphne
+channels
+djoser
+drf_yasg
+django-debug-toolbar
+streamlit
