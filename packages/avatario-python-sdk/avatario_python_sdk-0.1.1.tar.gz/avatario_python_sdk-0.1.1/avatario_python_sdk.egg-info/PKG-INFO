@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: avatario-python-sdk
+Version: 0.1.1
+Summary: Python SDK for Avatario services
+Home-page: https://github.com/onezot-python-sdk
+Author: OneZot Team
+Author-email: info@onezot.com
+License-Expression: Apache-2.0
+Project-URL: Documentation, https://docs.avatario.io
+Project-URL: Source, https://github.com/avatario-python-sdk
+Project-URL: Bug Tracker, https://github.com/avatario-python-sdk/issues
+Project-URL: Changelog, https://github.com/avatario-python-sdk/blob/main/CHANGELOG.md
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: livekit
+Requires-Dist: livekit-api
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+
+SDK to be used along with agents that run on python

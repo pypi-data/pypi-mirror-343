@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+avatario_python_sdk/__init__.py
+avatario_python_sdk/client.py
+avatario_python_sdk.egg-info/PKG-INFO
+avatario_python_sdk.egg-info/SOURCES.txt
+avatario_python_sdk.egg-info/dependency_links.txt
+avatario_python_sdk.egg-info/requires.txt
+avatario_python_sdk.egg-info/top_level.txt
