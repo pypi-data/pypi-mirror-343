@@ -1,0 +1,9 @@
+flask_api_sqlalchemy/__init__.py,sha256=zm63ZwGcQCND7FUk73WPwOqfXEp7TNltzYB0R1AvLMI,162
+flask_api_sqlalchemy/api.py,sha256=BSEDfO4VIfygcWY2Nqpyf7tbCYUUW5QrW49JdXLTWRo,18643
+flask_api_sqlalchemy/cli.py,sha256=LWIt8jRL5CUnNoD1gbOie5qw6Bfxfg33pDnO0NkHKeI,6247
+flask_api_sqlalchemy/exceptions.py,sha256=_DV6hvSS0vlbaCGG-6TJYF4rQ_75oU-mCk3IdzyEZ78,370
+flask_api_sqlalchemy-0.1.4.dist-info/AUTHORS.md,sha256=5ogsJS4BLpQfMWwGOY8MMTh8vbckjTV7XUVMcTrTrAk,1189
+flask_api_sqlalchemy-0.1.4.dist-info/LICENSE,sha256=orUGKxNpZVgn7pB85PUnYsXnJ2u3ugbwKg1XdcDjqw0,1070
+flask_api_sqlalchemy-0.1.4.dist-info/METADATA,sha256=vt9cyQxCaLHCVb0OCnmQDYSxBbqwabQXXDnOoYx-woo,10132
+flask_api_sqlalchemy-0.1.4.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+flask_api_sqlalchemy-0.1.4.dist-info/RECORD,,
