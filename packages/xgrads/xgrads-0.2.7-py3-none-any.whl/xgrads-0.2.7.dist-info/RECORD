@@ -1,0 +1,9 @@
+xgrads/__init__.py,sha256=dyF1Nc9Lo5Flp1b_isSTcDFZ_hK2bJVDpazxDfScuWM,251
+xgrads/core.py,sha256=6b21VHxaDTuSBI41ZrF4C0FC-t80mWtbUzZw645q4fg,40803
+xgrads/io.py,sha256=clP4_O692GclABJojbLFw12uVG4GrNEqEa486pk3edE,22032
+xgrads/utils.py,sha256=aNOwBicSjIMpRuicIwGVcGdJCvpXKkXTF0kI1VxT2-Y,18794
+xgrads-0.2.7.dist-info/licenses/LICENSE,sha256=WAw0jfympwAKXoul--kEhxAJwGnngiwGNCy6ld5Sz_0,1087
+xgrads-0.2.7.dist-info/METADATA,sha256=2z3ogfz7_v2PlhOXhp7Co1-rEx7J6e1y7w_-t9l_KfY,5834
+xgrads-0.2.7.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+xgrads-0.2.7.dist-info/top_level.txt,sha256=veVLJKczJBBeVucuHVy2LZ030jyBx3gZ2CVkMie3b7Y,7
+xgrads-0.2.7.dist-info/RECORD,,
