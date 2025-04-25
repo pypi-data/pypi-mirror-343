@@ -1,0 +1,11 @@
+directa_api/__init__.py,sha256=N4o1QbzIyPVIxgF8EmsomaAto3s6vQ6Yxp5UH3CCYjg,559
+directa_api/connection.py,sha256=_XRCgqmwgxuEsiPH-BT1quHIENmY8xPOqqULos3y2-c,22302
+directa_api/errors.py,sha256=53z6VWfEwjpPMUaEaI83Fg_SQJPaUKKQ-KITCXgnC8s,4798
+directa_api/historical.py,sha256=AaTqrsHGHIgDqaBAblqJo2BM_Ew8dlHn6JCmkOZberk,16315
+directa_api/parsers.py,sha256=g9Q1jSEklRkCzGuE32TOXTV3GiUsEG_UOYv42emk3bM,15932
+directa_api/simulation.py,sha256=VrJ1Gw0KVTM92coiwupZraGVmNZ-Pkvhk3K6uoeuyas,17313
+directa_api/trading.py,sha256=GZUmvnWBX2I94gpprX6ngyCuoHBMDKkYBSFUcXdPJSg,46649
+directa_api_wrapper-0.2.0.dist-info/LICENSE,sha256=W7k3M3IT63v6Hr5lHcRtzRWC0z39eS8swlk_Fv3NNxg,1072
+directa_api_wrapper-0.2.0.dist-info/METADATA,sha256=VyGT8UPHWDSu9w-jbK72Zg20vYAYGkvOZ8Q_y_cYKr4,5580
+directa_api_wrapper-0.2.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+directa_api_wrapper-0.2.0.dist-info/RECORD,,
