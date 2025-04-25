@@ -1,0 +1,2 @@
+[console_scripts]
+taskify = taskify.main:taskify
