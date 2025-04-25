@@ -1,0 +1,20 @@
+{
+    "name": "Signal Indicator 2.4 & Sub1g Sync",
+    "module": "Energizer 2.4GHz",
+    "purpose": "Verify the signal indicator tx sync mechanism when transmitting in both sub1g & 2.4 GHz bands.",
+    "documentation": "<TEST_DOCUMENTATION_LINK>",
+    "initialCondition": "1 GW and at least 1 BRG (tx brg) connected to the GW.",
+    "procedure": ["Test prolog",
+                  "Configure rx BRG to receive signal indicator packets (can be BRG or internal BRG)",
+                  "Configure tx BRG to transmit signal indicator 2.4 GHz packets",
+                  "Configure tx BRG to transmit signal indicator sub1g packets with same repetitions & cycle time as 2.4 GHz",
+                  "Scan packets for 3 cycles",
+                  "Verify same number of packets received in both sub1g & 2.4 GHz bands",
+                  "Test epilog"],
+    "expectedOutcome": "Sync mechanism should work correctly, with the same number of packets received in both sub1g & 2.4 GHz bands.",
+    "mandatory": 0,
+    "multiBridgeTest": 1,
+    "gwOnlyTest": 0,
+    "internalBridge": 1,
+    "allSupportedValues": []
+}
