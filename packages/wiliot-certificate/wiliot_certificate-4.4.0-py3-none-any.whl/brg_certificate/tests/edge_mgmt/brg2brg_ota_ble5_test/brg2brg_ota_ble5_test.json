@@ -1,0 +1,20 @@
+{
+    "name": "Bridge to Bridge OTA BLE5",
+    "module": "Edge Management",
+    "purpose": "Verify BRG2BRG OTA firmware/bootloader version upgrade functionality using BLE_5.0.",
+    "documentation": "<TEST_DOCUMENTATION_LINK>",
+    "initialCondition": "1 GW and 2 BRG's (source, destination) from the same type connected to the GW - the source BRG  posses the newer firmware/bootloader version, and the destination BRG posses older firmware/bootloader version.",
+    "procedure": ["Test prolog",
+                  "Verify initial conditions - same board type, different firmware/bootloader versions",
+                  "Determine the source & destination BRG according to version",
+                  "Configure destination BRG rx channel to BLE_5.0 channel (channel 10)",
+                  "Send brg2brg ota message to the source BRG - initiate brg2brg ota",
+                  "Verify destination BRG firmware/bootloader version upgrade through module IF packet",
+                  "Test epilog"],
+    "expectedOutcome": "Destination BRG firmware/bootloader version is upgraded to the source BRG firmware/bootloader version.",
+    "mandatory": 0,
+    "multiBridgeTest": 1,
+    "gwOnlyTest": 0,
+    "internalBridge": 0,
+    "allSupportedValues": ["BOOTLOADER", "APP"]
+}
