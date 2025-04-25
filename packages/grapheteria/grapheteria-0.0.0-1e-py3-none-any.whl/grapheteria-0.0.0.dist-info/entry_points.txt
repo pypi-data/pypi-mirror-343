@@ -1,0 +1,3 @@
+[console_scripts]
+grapheteria = grapheteria.server.main:run_app
+grapheteria-prod = grapheteria.server.main:run_production
