@@ -1,0 +1,11 @@
+isoc_airbyte_transformations/__init__.py,sha256=e2_Wu-pGxXEe_JcLTkVH6BqswLIF37rJs60VIZfZ8js,44
+isoc_airbyte_transformations/main.py,sha256=w3Dq1ZjwxEDw4B8mDqTV5KnlBjXHtUV-i36VC88bkoA,3143
+isoc_airbyte_transformations/transformers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+isoc_airbyte_transformations/transformers/dimensions_transformer.py,sha256=UYtlWh4ip4oTm19gOEblX4bWJHEO4hdWrxFzhK4rh_E,1968
+isoc_airbyte_transformations/transformers/generic_transformer.py,sha256=iCyCUuPvzZeoHWorcQTZOXLiVuBra9SJuCAHry5Ezkc,2051
+isoc_airbyte_transformations/transformers/metrics_transformer.py,sha256=yooV6GHM_GpnHTykZRO2nvf_afHq60uBU8H1cTubohM,2167
+isoc_airbyte_transformations-0.1.0.dist-info/licenses/LICENSE,sha256=fDBHiafcc-GMdsirUMwBP4Zjr8Whsv6sYX4tJihs9o8,1136
+isoc_airbyte_transformations-0.1.0.dist-info/METADATA,sha256=6t8UsJLMWZgaC6if8NR51__VAURxCXN8WLB8CQhb1zI,607
+isoc_airbyte_transformations-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+isoc_airbyte_transformations-0.1.0.dist-info/top_level.txt,sha256=yzde-hnlLcQMNDSEJ7SsRKp-GYdUO-tChF87Y3-axEw,29
+isoc_airbyte_transformations-0.1.0.dist-info/RECORD,,

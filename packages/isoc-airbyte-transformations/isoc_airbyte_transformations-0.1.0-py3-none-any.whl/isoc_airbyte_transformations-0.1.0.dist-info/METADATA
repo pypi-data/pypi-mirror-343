@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: isoc_airbyte_transformations
+Version: 0.1.0
+Summary: A simple transformations utility package
+Author: Softroniclabs Pvt Ltd
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# isoc_airbyte_transformations
+
+**isoc_airbyte_transformations** is a simple Python package that provides transformations processing utilities.
+
+## 📦 Installation
+
+To install the package (after building):
+
+```bash
+pip install dist/isoc_airbyte_transformations-0.1.0-py3-none-any.whl
