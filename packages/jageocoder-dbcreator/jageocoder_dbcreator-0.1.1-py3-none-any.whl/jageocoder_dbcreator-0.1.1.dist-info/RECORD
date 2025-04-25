@@ -1,0 +1,10 @@
+jageocoder_dbcreator/__main__.py,sha256=9i_6U7VKXto76HjeTT8jyMWF1RccahJhGkqHrphUeeI,4080
+jageocoder_dbcreator/convertor.py,sha256=Azt-Gtx5JlcCmmdBIkUSeiie06NVA1NUFZFAfN2Kek4,16300
+jageocoder_dbcreator/data/aliases.json,sha256=N1F-Xz3GaBn2H1p7uKzhkhKCQV8QVR0t76XD6wmFtXA,3
+jageocoder_dbcreator/data_manager.py,sha256=I_RWGQc_pp7H2-0Qf0a7pQ6KZZRm06a0uomNB6U8u1Q,24251
+jageocoder_dbcreator/spatial.py,sha256=n-2ORVydbClcrBEl6zRRcjpskUK81UQI2TbIAX7fK08,2486
+jageocoder_dbcreator-0.1.1.dist-info/LICENSE,sha256=z_rIfUR_cYdDEJhtiKZmHdsI9RsDGFmjl-z4ldUO31E,1071
+jageocoder_dbcreator-0.1.1.dist-info/METADATA,sha256=tFbrAnrUsAIIoAySrAaK6criwIbWcn1bJ-hozSFOGPk,991
+jageocoder_dbcreator-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+jageocoder_dbcreator-0.1.1.dist-info/entry_points.txt,sha256=NtxTCaqJQX7LLQ-tV-YFrpUGXaMww9ONjVCCpAlP7J8,75
+jageocoder_dbcreator-0.1.1.dist-info/RECORD,,

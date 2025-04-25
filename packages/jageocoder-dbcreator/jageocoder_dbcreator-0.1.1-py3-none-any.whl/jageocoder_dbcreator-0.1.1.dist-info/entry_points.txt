@@ -1,0 +1,3 @@
+[console_scripts]
+jageocoder_dbcreator=jageocoder_dbcreator.__main__:main
+
