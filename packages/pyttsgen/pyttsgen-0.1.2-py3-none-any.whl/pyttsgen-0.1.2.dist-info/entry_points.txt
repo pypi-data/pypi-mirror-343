@@ -1,0 +1,3 @@
+[console_scripts]
+app = pyttsgen.cli:launch_app
+pyttsgen = pyttsgen.cli:main
