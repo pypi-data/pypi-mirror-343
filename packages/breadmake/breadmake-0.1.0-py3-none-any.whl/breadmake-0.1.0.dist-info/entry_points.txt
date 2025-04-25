@@ -1,0 +1,2 @@
+[console_scripts]
+breadmake = breadmake.breadmake_cli:main
