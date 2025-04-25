@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/SoftExpertAPI/SoftExpertBaseAPI.py
+src/SoftExpertAPI/SoftExpertException.py
+src/SoftExpertAPI/SoftExpertOptions.py
+src/SoftExpertAPI/SoftExpertWorkflowApi.py
+src/SoftExpertAPI/__init__.py
+src/SoftExpertAPI.egg-info/PKG-INFO
+src/SoftExpertAPI.egg-info/SOURCES.txt
+src/SoftExpertAPI.egg-info/dependency_links.txt
+src/SoftExpertAPI.egg-info/requires.txt
+src/SoftExpertAPI.egg-info/top_level.txt
