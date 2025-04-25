@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: stratkit
+Version: 0.0.0
+Summary: Strategy Analysis Toolkit
+Author-email: Furechan <furechan@xsmail.com>
+License-File: LICENSE.txt
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
