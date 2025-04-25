@@ -1,0 +1,7 @@
+LICENSE.txt
+setup.py
+hsopyt/__init__.py
+hsopyt.egg-info/PKG-INFO
+hsopyt.egg-info/SOURCES.txt
+hsopyt.egg-info/dependency_links.txt
+hsopyt.egg-info/top_level.txt

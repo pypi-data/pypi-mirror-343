@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: hsopyt
+Version: 0.0
+Summary: lib for tik tok get Ladon & Gorgon & Argus &
+Author: HUSSAIN
+Author-email: reco9678785@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-python
+Dynamic: summary
