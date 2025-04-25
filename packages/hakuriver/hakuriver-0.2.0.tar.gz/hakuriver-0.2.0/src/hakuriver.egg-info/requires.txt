@@ -1,0 +1,12 @@
+peewee
+fastapi
+httpx
+psutil
+toml
+uvicorn[standard]
+snowflake-id
+docker
+websockets
+
+[gpu]
+pynvml
