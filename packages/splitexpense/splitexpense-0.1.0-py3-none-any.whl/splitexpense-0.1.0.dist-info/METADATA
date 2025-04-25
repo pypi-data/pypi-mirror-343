@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: splitexpense
+Version: 0.1.0
+Summary: A Tkinter-based app to split expenses among people and export summaries to Excel.
+Author-email: "Pancham (MuddyHope)" <ljpancham@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/MuddyHope/split_expense
+Project-URL: Repository, https://github.com/MuddyHope/split_expense
+Keywords: split,expense,tkinter,grocery,ui
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Dynamic: license-file
+
+# SplitExpense
+
+A Tkinter-based desktop application to split group expenses and export summaries to Excel.
+
+## Features
+
+- Add people and items
+- Assign payers and participants
+- Export detailed and summary data to Excel
+- View net balances for each person
+
+## Usage
+pip install splitexpense
+python -m splitexpense.app
+
