@@ -1,0 +1,15 @@
+brdr/__init__.py,sha256=v4zmKjsKOPZbp6BrWoz7iK4ST0sdZdUh9bQSJmluZ5o,23
+brdr/aligner.py,sha256=OGyLdVSW9FncH--mGkXh19aUDP_7kTdVRPEQFI_fzsk,99827
+brdr/constants.py,sha256=nt3_37a6dwnyyk2TFeKLdSmJG__HWjAHALaMHLhTn4E,3169
+brdr/enums.py,sha256=hPeQr1EUtx7rI5_i0Hx4cRJX2pkTzx8gwzpKR3ED_qk,5200
+brdr/geometry_utils.py,sha256=Igx4jByHkKxWhhDjB_J07-iFMiOXTLYx-AiKZ0758QU,41885
+brdr/grb.py,sha256=ZbUpuS08ZtGGoFou1cHFnl75Lma7a0DsFDCdMCBCbE4,22470
+brdr/loader.py,sha256=HfKfJJ2Q6A_D3LGT1SJEykOQeW7rkj0v6TQFJtjrGL0,3443
+brdr/logger.py,sha256=6xmeqmI1vKMzCNIOOjgHuFgxZ9FrY8zopgnKZBh86Sk,877
+brdr/oe.py,sha256=FxABJDWJMyt3ciJuUXNdH5v3NaVJpnwMi80Eb3HCDms,6111
+brdr/typings.py,sha256=hcFbcbhA7OiPv1ZnNMod01TsxCqziM2vra8iz2sEie4,891
+brdr/utils.py,sha256=LQp9bd8GvHKZefKpHZyN_BgyYEfZCW677vVJHkDjnRw,21297
+brdr-0.10.0.dist-info/METADATA,sha256=anjR0ucpPAmZ4KqyF4FS4l5FruwRc7R5seIkztdwFAY,14831
+brdr-0.10.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+brdr-0.10.0.dist-info/licenses/LICENSE,sha256=yLwF9gmFMt08Iep1Ct-wXNG0Puq75ocZVJcb4RnFKe4,1074
+brdr-0.10.0.dist-info/RECORD,,
