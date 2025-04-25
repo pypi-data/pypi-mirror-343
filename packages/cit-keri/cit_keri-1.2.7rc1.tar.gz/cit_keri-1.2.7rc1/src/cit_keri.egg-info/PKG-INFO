@@ -1,0 +1,148 @@
+Metadata-Version: 2.1
+Name: cit-keri
+Version: 1.2.7rc1
+Summary: Key Event Receipt Infrastructure
+Home-page: https://github.com/WebOfTrust/keripy
+Author: Samuel M. Smith
+Author-email: smith.samuel.m@gmail.com
+License: Apache Software License 2.0
+Project-URL: Documentation, https://keri.readthedocs.io/
+Project-URL: Changelog, https://keri.readthedocs.io/en/latest/changelog.html
+Project-URL: Issue Tracker, https://github.com/WebOfTrust/keripy/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Utilities
+Requires-Python: >=3.12.2
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: lmdb==1.4.1
+Requires-Dist: pysodium==0.7.17
+Requires-Dist: blake3==0.4.1
+Requires-Dist: msgpack==1.0.8
+Requires-Dist: cbor2==5.6.2
+Requires-Dist: multidict==6.0.5
+Requires-Dist: ordered-set==4.1.0
+Requires-Dist: hio==0.6.14
+Requires-Dist: multicommand==1.0.0
+Requires-Dist: jsonschema==4.21.1
+Requires-Dist: falcon==3.1.3
+Requires-Dist: hjson==3.1.0
+Requires-Dist: PyYaml==6.0.1
+Requires-Dist: apispec==6.6.0
+Requires-Dist: mnemonic==0.21
+Requires-Dist: PrettyTable==3.10.0
+Requires-Dist: http_sfv==0.9.9
+Requires-Dist: cryptography==42.0.5
+Requires-Dist: semver==3.0.2
+Requires-Dist: qrcode==7.4.2
+
+# Python Implementation of the KERI Core Libraries
+
+Project Name:  keripy
+
+[![PyPi](https://img.shields.io/pypi/v/keri.svg)](https://pypi.org/project/keri/)
+[![GitHub Actions](https://github.com/webOfTrust/keripy/actions/workflows/python-app-ci.yml/badge.svg)](https://github.com/WebOfTrust/keripy/actions)
+[![codecov](https://codecov.io/gh/WebOfTrust/keripy/branch/main/graph/badge.svg?token=FR5CB2TPYG)](https://codecov.io/gh/WebOfTrust/keripy)
+[![https://pypi.org/project/keri/](https://img.shields.io/pypi/pyversions/keri.svg)](https://pypi.org/project/keri/)
+[![Documentation Status](https://readthedocs.org/projects/keripy/badge/?version=latest)](https://keripy.readthedocs.io/en/latest/?badge=latest)
+
+## Installation
+
+### Local installation - build from source
+Once all dependencies are installed and working then run:
+
+`$ python3 -m pip install -e ./`
+
+Then you can run 
+
+`$ kli version` 
+
+to get a version string similar to the following: 
+
+`1.0.0`
+
+### Local installation - Docker build
+Run `make build-keri` to build your docker image.
+
+Then run `docker run --pull=never -it --entrypoint /bin/bash weboftrust/keri:1.1.10` and you can run `kli version` from within the running container to play with KERIpy.
+
+Make sure the image tag matches the version used in the `Makefile`.
+We use `--pull=never` to ensure that docker does not implicitly pull a remote image and relies on the local image tagged during `make build-keri`.
+
+### Dependencies
+#### Binaries
+
+python 3.12.1+
+libsodium 1.0.18+
+
+
+#### python packages
+lmdb 0.98+
+pysodium 0.7.5+
+blake3 0.1.5+
+msgpack 1.0.0+
+simplejson 3.17.0+
+cbor2 5.1.0+
+
+
+```shell
+$ pip3 install -U lmdb pysodium blake3 msgpack simplejson cbor2
+```
+
+or separately
+
+```shell
+$ pip3 install -U lmdb
+$ pip3 install -U pysodium
+$ pip3 install -U blake3
+$ pip3 install -U msgpack
+$ pip3 install -U simplejson
+$ pip3 install -U cbor2
+```
+
+
+## Development
+
+### Setup
+* Ensure Python 3.12.1 is present along with venv and dev header files;
+* Setup virtual environment: `python3 -m venv keripy`
+* Activate virtual environment: `source keripy/bin/activate`
+* Setup dependencies: `pip install -r requirements.txt`
+
+### Testing
+* Install pytest: `pip install pytest`
+
+* Run the test suites:
+
+```shell
+pytest tests/ --ignore tests/demo/
+pytest tests/demo/
+```
+
+## Building Documentation in `/docs`
+* Install sphinx: 
+  * `$ pip install sphinx`
+  * `$ pip install myst-parser`
+* Build with Sphinx in `/docs`: 
+  * `$ make html`
+
+## Publishing containers
+
+Enable the containerd image store
+
+The containerd image store isn't enabled by default. To enable the feature for Docker Desktop:
+
+Navigate to Settings in Docker Desktop.
+In the General tab, check Use containerd for pulling and storing images.
+Select Apply & Restart.
+
+```shell
+make build-keri
+make publish-keri
+```
