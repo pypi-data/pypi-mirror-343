@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+akugatauiniapatapihelo.egg-info/PKG-INFO
+akugatauiniapatapihelo.egg-info/SOURCES.txt
+akugatauiniapatapihelo.egg-info/dependency_links.txt
+akugatauiniapatapihelo.egg-info/top_level.txt
