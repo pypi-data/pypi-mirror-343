@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["split_expense"]
+
+[project]
+name = "splitexpense"
+version = "0.1.0"
+description = "A Tkinter-based app to split expenses among people and export summaries to Excel."
+authors = [
+    { name="Pancham (MuddyHope)", email="ljpancham@gmail.com" }
+]
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.7"
+dependencies = [
+    "pandas",
+]
+keywords = ['split', 'expense', 'tkinter', 'grocery', 'ui']
+
+[project.urls]
+Homepage = "https://github.com/MuddyHope/split_expense"
+Repository = "https://github.com/MuddyHope/split_expense"
+
+[project.scripts]
+splitexpense = "splitexpense.app:main"

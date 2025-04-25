@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+split_expense/__init__.py
+split_expense/app.py
+splitexpense.egg-info/PKG-INFO
+splitexpense.egg-info/SOURCES.txt
+splitexpense.egg-info/dependency_links.txt
+splitexpense.egg-info/entry_points.txt
+splitexpense.egg-info/requires.txt
+splitexpense.egg-info/top_level.txt
