@@ -1,0 +1,9 @@
+README.md
+setup.py
+qrzatca/__init__.py
+qrzatca/qr_generator.py
+qrzatca.egg-info/PKG-INFO
+qrzatca.egg-info/SOURCES.txt
+qrzatca.egg-info/dependency_links.txt
+qrzatca.egg-info/requires.txt
+qrzatca.egg-info/top_level.txt
