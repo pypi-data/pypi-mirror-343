@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+test123.py
+packagehelloworld.egg-info/PKG-INFO
+packagehelloworld.egg-info/SOURCES.txt
+packagehelloworld.egg-info/dependency_links.txt
+packagehelloworld.egg-info/top_level.txt
