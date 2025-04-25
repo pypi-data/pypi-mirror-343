@@ -1,0 +1,9 @@
+mallardetl/__init__.py,sha256=l0gTSafSG1Xap3fw02x4eW_xgAFIMXNnDg9ahSYK3Ak,1559
+mallardetl/error.py,sha256=Rz8J1wKusYcJ94DOpWBb26CRUFwuS1E5d1vYUuzQB10,126
+mallardetl/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mallardetl/tables/__init__.py,sha256=d-ftd2lMlAfDVbWUW5ok-Gyz5AqrsZVbgH-nsQZcyQc,89
+mallardetl/tables/dimension.py,sha256=01t1HNFgzswxyCVo_yHnNI4wv6iJdheBYOl2BKmSbek,6288
+mallardetl/tables/fact.py,sha256=gUfbO4ymYOHbUcfjCcKkaIhK465uv4OE5Y72JAq_sS0,2272
+mallardetl-0.1.2.dist-info/METADATA,sha256=0gaVzEeyIQDzdbYwHlmJ2I3Fv4AjU4anTftRZPA-qfk,271
+mallardetl-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mallardetl-0.1.2.dist-info/RECORD,,
