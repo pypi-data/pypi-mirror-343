@@ -1,0 +1,2 @@
+[console_scripts]
+flasksecforge = flasksecforge.cli:main
