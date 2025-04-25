@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "broadpy"
+version = "0.1.0"
+authors = [
+  { name="Bee Beans Technologies", email="sitcp@bbtech.co.jp" },
+]
+description = "BRoaD API package"
+readme = "README.pypi.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "sitcpy>=0.1.1"
+]
+
+[tool.hatch.build]
+exclude = [
+  "*.sh"
+]
+
+[project.urls]
+Homepage = "https://github.com/BeeBeansTechnologies/BRoaDpy"
