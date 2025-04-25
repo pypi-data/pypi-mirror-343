@@ -1,0 +1,47 @@
+[project]
+name = "dbis-er-diagram"
+version = "1.1.2"
+description = "RWTH Aachen Computer Science i5/dbis assets for Lecture Datenbanken und Informationssysteme"
+authors = [
+    { name = "DBIS i5 RWTH Aachen", email = "dbis-vl@dbis.rwth-aachen.de" },
+]
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+	"Programming Language :: Python :: 3.10",
+	"Programming Language :: Python :: 3.11",
+	"Programming Language :: Python :: 3.13",
+]
+dependencies = [
+	"networkx",
+	"graphviz",
+	"ipython",
+	"typeguard==3.0.2",
+	"Levenshtein",
+]
+
+license = {file="LICENSE"}
+
+[project.optional-dependencies]
+test = [
+    "black==23.12.1",
+	"pytest"
+]
+build = [
+    "twine==6.*",
+    "build==1.*"
+]
+
+[project.urls]
+"Homepage" = "https://git.rwth-aachen.de/i5/teaching/dbis/dbis-er-diagram"
+
+[options]
+include_package_data = true
+exclude = ["examples"]
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+required-version = 23

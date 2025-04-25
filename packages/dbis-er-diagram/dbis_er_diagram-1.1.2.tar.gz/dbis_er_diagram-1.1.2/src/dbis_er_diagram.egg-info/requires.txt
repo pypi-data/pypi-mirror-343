@@ -1,0 +1,13 @@
+networkx
+graphviz
+ipython
+typeguard==3.0.2
+Levenshtein
+
+[build]
+twine==6.*
+build==1.*
+
+[test]
+black==23.12.1
+pytest
