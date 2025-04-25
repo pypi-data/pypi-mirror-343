@@ -1,0 +1,128 @@
+%% LyX 2.4.3 created this file.  For more info, see https://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[11pt]{article}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\usepackage{rotfloat}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+\@ifundefined{date}{}{\date{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+
+\title{SOMO Identification via Projection of $\alpha$ Orbitals onto the $\beta$ Subspace}
+\author{}
+
+\makeatother
+
+\begin{document}
+\maketitle
+
+\section*{Methodological Details: Projection of Occupied Alpha Orbitals onto
+the Beta Orbital Space}
+
+Given a Gaussian log file from an unrestricted DFT calculation, we
+extract the molecular orbital (MO) coefficients for both alpha and
+beta orbitals, along with the AO overlap matrix $S$. The analysis
+focuses on evaluating how each occupied alpha orbital projects onto
+the full space spanned by all beta orbitals, which includes both occupied
+and virtual ones.
+
+Let $\phi_{i}^{\alpha}\in\mathbb{R}^{1\times n_{\text{basis}}}$ be
+the coefficient vector of the $i$-th occupied alpha orbital, and
+let $\Phi^{\beta}\in\mathbb{R}^{N\times n_{\text{basis}}}$ be the
+matrix of all beta orbitals stored row-wise, where $N=n_{\beta}$
+is the total number of beta orbitals. The projection vector is computed
+as: 
+\[
+\mathbf{v}_{i}=\phi_{i}^{\alpha}\cdot S\cdot(\Phi^{\beta})^{T}\in\mathbb{R}^{1\times N}
+\]
+The squared norm $\|\mathbf{v}_{i}\|^{2}$ gives the total overlap
+of the alpha orbital with the beta space.
+
+To differentiate between the contributions from occupied and virtual
+beta orbitals, we split the projection: 
+\begin{align*}
+\mathbf{v}_{i}^{\text{occ}} & =\phi_{i}^{\alpha}\cdot S\cdot(\Phi_{\text{occ}}^{\beta})^{T}\\
+\mathbf{v}_{i}^{\text{virt}} & =\phi_{i}^{\alpha}\cdot S\cdot(\Phi_{\text{virt}}^{\beta})^{T}
+\end{align*}
+We then compute:
+
+$\|\mathbf{v}_{i}^{\text{occ}}\|^{2}$ = projection of $\phi_{i}^{\alpha}$
+onto occupied beta orbitals (noted {\small\textbf{P\texttwosuperior{}
+$\boldsymbol{\beta_{\mathrm{occ}}}$}} in Table 1)
+
+$\|\mathbf{v}_{i}^{\text{virt}}\|^{2}$ = projection of $\phi_{i}^{\alpha}$
+onto virtual beta orbitals (noted {\small\textbf{P\texttwosuperior{}
+$\boldsymbol{\beta_{\mathrm{virt}}}$}} in Table 1)
+
+The total projection norm is decomposed to analyze how concentrated
+or spread the projection is across beta orbitals: 
+\begin{itemize}
+\item The three largest values among the squared projections $v_{ij}^{2}$
+are summed to compute \textbf{``Top 1 contrib (\%)}'', \textbf{``Top
+2 contrib (\%)}'' and \textbf{``Top 3 contrib (\%)}''. 
+\item The \textbf{dominance ratio} is defined as the largest single squared
+projection divided by the total projection norm: $\max_{j}v_{ij}^{2}/\|\mathbf{v}_{i}\|^{2}$. 
+\item The ``\textbf{$\beta$ MOs \textgreater 20\%}'' column lists all
+beta orbitals contributing more than the specified percentage to the
+squared projection norm, along with their contribution in the format
+$[j,p_{j}]$, where $j$ is the index (1-based) and $p_{j}$ the percentage
+contribution. For the most important contribution, it is nothing else
+than the \textbf{dominance ratio}. It provides a direct quantitative
+decomposition of each alpha orbital onto the beta orbital basis. Each
+entry explicitly identifies the beta orbital(s) that significantly
+compose the corresponding alpha orbital, along with their respective
+percentage contributions
+\end{itemize}
+An orbital is flagged as a \textbf{SOMO candidate} if its projection
+onto the virtual beta space exceeds 0.5 and its projection onto the
+occupied beta space is below 0.5: 
+\[
+\|\mathbf{v}_{i}^{\text{virt}}\|^{2}>0.5\quad\text{and}\quad\|\mathbf{v}_{i}^{\text{occ}}\|^{2}<0.5
+\]
+
+
+\section*{Projection Results for Formaldehyde (H$_{2}$CO)}
+
+The following table presents simplified projection data of occupied
+alpha orbitals onto beta orbitals for formaldehyde. Orbitals identified
+as SOMO (Single Occupied Molecular Orbitals) indicate significant
+projection onto virtual beta orbitals and negligible projection onto
+occupied beta orbitals.
+
+\begin{sidewaystable}[ph]
+\centering{}{\small{}%
+\begin{tabular}{ccccccccc}
+\toprule 
+{\small\textbf{Alpha MO }} & {\small\textbf{Occ }}{\small$\boldsymbol{\alpha}$}{\small\textbf{ }} & {\small\textbf{Energy (Ha) }} & {\small\textbf{P\texttwosuperior{} $\boldsymbol{\beta_{\mathrm{virt}}}$ }} & {\small\textbf{P\texttwosuperior{} $\boldsymbol{\beta_{\mathrm{occ}}}$ }} & {\small\textbf{$\boldsymbol{\beta}$ MO{*} }} & {\small\textbf{Occ $\boldsymbol{\beta}$ }} & {\small\textbf{SOMO? }} & \textbf{$\boldsymbol{\beta}$ MOs \textgreater 20\%}\tabularnewline
+\midrule
+\midrule 
+{\small\rowcolor{yellow!30}9} & {\small O } & {\small -0.204 } & {\small 0.996 } & {\small 0.004 } & {\small 9 } & {\small V } & {\small Y } & 9: 96.2\%\tabularnewline
+{\small 8} & {\small O } & {\small -0.367 } & {\small 0.895 } & {\small 0.105 } & {\small 8 } & {\small V } & {\small Y } & 8: 88.4\%\tabularnewline
+{\small 7} & {\small O } & {\small -0.438 } & {\small 0.005 } & {\small 0.995 } & {\small 7 } & {\small O } & {\small N } & 7: 97.5\%\tabularnewline
+{\small 6} & {\small O } & {\small -0.487 } & {\small 0.000 } & {\small 1.000 } & {\small 6 } & {\small O } & {\small N } & 6: 97.9\%\tabularnewline
+{\small 5} & {\small O } & {\small -0.529 } & {\small 0.106 } & {\small 0.894 } & {\small 5 } & {\small O } & {\small N } & 5: 89.4\%\tabularnewline
+{\small 4} & {\small O } & {\small -0.672 } & {\small 0.002 } & {\small 0.998 } & {\small 4 } & {\small O } & {\small N } & 4: 99.4\%\tabularnewline
+{\small 3} & {\small O } & {\small -1.096 } & {\small 0.001 } & {\small 0.999 } & {\small 3 } & {\small O } & {\small N } & 3: 99.6\%\tabularnewline
+{\small 2} & {\small O } & {\small -10.238 } & {\small 0.000 } & {\small 1.000 } & {\small 2 } & {\small O } & {\small N } & 2: 100.0\%\tabularnewline
+{\small 1} & {\small O } & {\small -19.240 } & {\small 0.000 } & {\small 1.000 } & {\small 1 } & {\small O } & {\small N } & 1: 100.0\%\tabularnewline
+\bottomrule
+\end{tabular}}{\small\caption{Projection of alpha molecular orbitals onto beta space for formaldehyde
+(H$_{2}$CO), highlighting SOMOs.}
+\label{tab:projection_formaldehyde} }
+\end{sidewaystable}
+
+\end{document}
