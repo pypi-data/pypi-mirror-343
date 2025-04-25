@@ -1,0 +1,5 @@
+[console_scripts]
+chroma-mcp-server = chroma_mcp.cli:main
+
+[smithery.mcps]
+chroma = chroma_mcp.cli:main
