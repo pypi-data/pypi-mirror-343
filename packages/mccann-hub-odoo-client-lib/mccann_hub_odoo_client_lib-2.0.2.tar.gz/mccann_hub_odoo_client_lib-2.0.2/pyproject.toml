@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src/"]
+include = ["mccann_hub.odoolib", "mccann_hub.odoolib.*"]
+
+[project]
+name = "mccann_hub-odoo_client_lib"
+version = "2.0.2"
+description = "Extended Odoo Client Library with additional functionality"
+readme = "README.rst"
+authors = [
+    {name = "Nicolas Vanhoren"},
+    {name = "Jimmy McCann", email = "jabez007@users.noreply.github.com"}
+]
+license = {text = "BSD-2-Clause"}
+classifiers = [
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+keywords = ["openerp", "odoo", "library", "communication", "rpc", "xml-rpc", "net-rpc", "xmlrpc", "python", "client", "lib", "web service"]
+requires-python = ">=3.10"
+dependencies = [
+    "requests",
+    "asyncio",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/jabez007/odoo-client-lib"
+"Bug Tracker" = "https://github.com/jabez007/odoo-client-lib/issues"
+"Original Project" = "https://github.com/odoo/odoo-client-lib"
+
