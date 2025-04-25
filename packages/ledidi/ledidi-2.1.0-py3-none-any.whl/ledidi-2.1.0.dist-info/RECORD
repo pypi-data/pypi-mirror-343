@@ -1,0 +1,11 @@
+ledidi/__init__.py,sha256=ooXBhy1D5vsn1541CMx_pGwjPD_TE73KVf11WW-4VKw,144
+ledidi/ledidi.py,sha256=_b-IIOGy4H3P1opQzI-j0WjzoHPILbc1AnFSRfSAJG4,18428
+ledidi/losses.py,sha256=hgjwc9zuzGHBwBke3Ik5RBeYOhm5o1YIxhLUbV4nMi4,1776
+ledidi/plot.py,sha256=94Sl0E-_U_Bdl9mWbMGsfAM5ML-j8BMot5V3PqXWm40,3232
+ledidi/pruning.py,sha256=H4t52Xzt2VPYJP7lgKu7T6fKe3754JWEGbtLgCLvCVw,2747
+ledidi/wrappers.py,sha256=beg6rIiBG06C3FGdQafCkmc7A5yFj-mC3-1ZNgFxdio,1275
+ledidi-2.1.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ledidi-2.1.0.dist-info/METADATA,sha256=lSfWKrtCNHZ2vaUbZHwlH7U2v8yKIiayiR21qpRsGmo,493
+ledidi-2.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+ledidi-2.1.0.dist-info/top_level.txt,sha256=9WjKuwo8M8cpwPsdiE3dcYKI13TJ-_G4Se2QXQkI048,7
+ledidi-2.1.0.dist-info/RECORD,,
