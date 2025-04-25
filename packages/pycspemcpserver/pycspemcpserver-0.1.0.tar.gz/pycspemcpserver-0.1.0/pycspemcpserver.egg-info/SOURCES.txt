@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+pycspemcpserver.egg-info/PKG-INFO
+pycspemcpserver.egg-info/SOURCES.txt
+pycspemcpserver.egg-info/dependency_links.txt
+pycspemcpserver.egg-info/requires.txt
+pycspemcpserver.egg-info/top_level.txt
