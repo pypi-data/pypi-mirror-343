@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: packagehelloworld
+Version: 0.1.1
+Summary: A simple hello world Python package.
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
