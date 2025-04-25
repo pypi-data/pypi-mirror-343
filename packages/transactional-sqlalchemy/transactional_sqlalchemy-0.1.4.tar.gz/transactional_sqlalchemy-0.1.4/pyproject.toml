@@ -1,0 +1,89 @@
+[project]
+name = "transactional-sqlalchemy"
+version = "0.1.4"
+description = "transactional management using sqlalchemy"
+authors = [{ name = "alban", email = 'decade_vesper.8i@icloud.com' }]
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+dependencies = [
+    "setuptools>=76.1.0",
+    "sqlalchemy[asyncio]>=2.0.0",
+]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+async = [
+    "sqlalchemy[asyncio]>=2.0.0",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "aiosqlite>=0.21.0",
+    "pre-commit>=4.2.0",
+    "pytest[asyncio]>=8.3.5",
+    "pytest-asyncio>=0.25.3",
+    "pytest-sqlalchemy>=0.2.1",
+    "sqlalchemy[asyncio]>=2.0.39",
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/AlBaneo93/transactional_sqlalchemy"
+"Bug Reports" = "https://github.com/AlBaneo93/transactional_sqlalchemy/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["transactional_sqlalchemy*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+include = [
+    "pytest_examples/**/*.py",
+    "tests/**/*.py",
+    "examples/**/*.py",
+]
+
+[tool.ruff.lint]
+extend-select = [
+    "Q",
+    "RUF100",
+    "C90",
+    "UP",
+    "I",
+    "D",
+]
+flake8-quotes = { inline-quotes = "single", multiline-quotes = "double" }
+isort = { combine-as-imports = true, known-first-party = ["pytest_examples"] }
+mccabe = { max-complexity = 15 }
+ignore = [
+    "D100", # ignore missing docstring in module
+    "D101", # ignore missing docstring in public class
+    "D102", # ignore missing docstring in public method
+    "D103", # ignore missing docstring in public function
+    "D104", # ignore missing docstring in public package
+    "D105", # ignore missing docstring in magic methods
+    "D107", # ignore missing docstring in __init__ methods
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+docstring-code-format = true
+quote-style = "single"
+
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+publish-url = "https://test.pypi.org/legacy/"
+explicit = true
