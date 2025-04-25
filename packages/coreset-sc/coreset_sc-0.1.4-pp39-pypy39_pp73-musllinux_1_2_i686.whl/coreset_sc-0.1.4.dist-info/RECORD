@@ -1,0 +1,9 @@
+coreset_sc-0.1.4.dist-info/METADATA,sha256=Z5M4tYpOYOT42tNuNNQl_U8DqtIQIKy5QdduUmSa6_s,2605
+coreset_sc-0.1.4.dist-info/WHEEL,sha256=2a7olw3UwjpWq4x5_7DGE8I1jt7ABgzGH842f1xBwFY,110
+coreset_sc-0.1.4.dist-info/licenses/LICENSE,sha256=tTVbpyLxxqErS82gPgyudl45NzzRzsOgnuWONjXzh60,1068
+coreset_sc.libs/libgcc_s-b5472b99.so.1,sha256=wh8CpjXz9IccAyeERcB7YDEx7NH2jF-PykwOyYNeRRI,453841
+coreset_sc/__init__.py,sha256=oHAc5gU6r05PsrGhJ7De99CbBN8sLmLBNji_DducXH8,2559
+coreset_sc/csc.py,sha256=jvVSTAcpS4O-oMmGlVGmxzibuc7QoE6JAk4m42O1Zn8,10440
+coreset_sc/utils.py,sha256=kcMXDXWvBZq_NWz80Y12uSDK3lJ0NXCQkpe2nnq_Sy8,1306
+coreset_sc/coreset_sc.pypy39-pp73-x86-linux-gnu.so,sha256=aWgWA2zv4MY8vXkSmwq_cA5rz-JGmEvFE6xpHl0xN4w,25144197
+coreset_sc-0.1.4.dist-info/RECORD,,
