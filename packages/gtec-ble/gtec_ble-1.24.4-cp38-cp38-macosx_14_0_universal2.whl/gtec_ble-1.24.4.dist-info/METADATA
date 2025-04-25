@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: gtec-ble
+Version: 1.24.4
+Summary: A Bluetooth Low Energy (BLE) API. To be used only as part of g.Pype.
+Home-page: https://www.gtec.at
+Author: g.tec medical engineering GmbH
+Author-email: support@gtec.at
+License: g.tec Non-Commercial License (GNCL)
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.14.4
+
