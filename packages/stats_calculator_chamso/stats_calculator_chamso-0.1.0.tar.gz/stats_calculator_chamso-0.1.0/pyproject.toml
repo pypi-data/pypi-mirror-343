@@ -1,0 +1,28 @@
+[project]
+name = "stats_calculator_chamso"
+version = "0.1.0"
+description = "A simple statistics calculator package"
+authors = [
+    {name = "Chamso",email = "chamseboulabba@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+license = {text = "MIT"}
+keywords = ["statistics", "calculator", "python"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry]
+packages = [{include = "static_calculator", from = "src"}]
+
+[tool.poetry.scripts]
+stats-cli = "stats_calculator.main:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
