@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  pydantic-ai-visual:
+    image: ghcr.io/wh1isper/pydantic-ai-visual:latest
+    restart: unless-stopped
+
+  caddy:
+    image: ghcr.io/caddybuilds/caddy-cloudflare:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    environment:
+      - CLOUDFLARE_API_TOKEN=${CLOUDFLARE_API_TOKEN}
+      - CLOUDFLARE_ZONE_ID=${CLOUDFLARE_ZONE_ID}
+      - DOMAIN=${DOMAIN}
+    restart: unless-stopped
+    depends_on:
+      - pydantic-ai-visual
+
+volumes:
+  caddy_data:
+  caddy_config:
