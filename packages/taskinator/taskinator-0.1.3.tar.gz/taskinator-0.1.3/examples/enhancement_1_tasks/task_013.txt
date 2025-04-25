@@ -1,0 +1,12 @@
+# Task ID: 13
+# Title: Create Comprehensive Documentation
+# Status: blocked
+# Dependencies: 1 (done), 2 (done), 3 (done), 4 (done), 5 (done), 6 (done), 7 (done), 8 (done), 9 (done), 10 (done), 11 (pending), 12 (done)
+# Priority: medium
+# Description: Develop detailed documentation for the NextCloud integration.
+
+# Details:
+Create user documentation explaining how to set up and use the integration. Write developer documentation for the integration architecture and APIs. Document known limitations and workarounds. Create troubleshooting guides for common issues.
+
+# Test Strategy:
+Review documentation for accuracy and completeness. Have users test the documentation by following the instructions. Verify that all features and configurations are properly documented.

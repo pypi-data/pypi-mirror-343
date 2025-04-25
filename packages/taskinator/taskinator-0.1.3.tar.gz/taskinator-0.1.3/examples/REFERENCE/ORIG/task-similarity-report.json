@@ -1,0 +1,302 @@
+{
+  "totalTasksAnalyzed": 20,
+  "totalPairsCompared": 190,
+  "potentialDuplicates": [],
+  "highSimilarity": [
+    {
+      "task_id1": 3,
+      "task_id2": 10,
+      "similarity_score": 0.8728450536727905,
+      "explanation": "Tasks 3 and 10 are highly similar and may have overlapping requirements."
+    },
+    {
+      "task_id1": 10,
+      "task_id2": 19,
+      "similarity_score": 0.8331016302108765,
+      "explanation": "Tasks 10 and 19 are highly similar and may have overlapping requirements."
+    },
+    {
+      "task_id1": 19,
+      "task_id2": 20,
+      "similarity_score": 0.7873847484588623,
+      "explanation": "Tasks 19 and 20 are highly similar and may have overlapping requirements."
+    },
+    {
+      "task_id1": 4,
+      "task_id2": 14,
+      "similarity_score": 0.7846729755401611,
+      "explanation": "Tasks 4 and 14 are highly similar and may have overlapping requirements."
+    },
+    {
+      "task_id1": 10,
+      "task_id2": 20,
+      "similarity_score": 0.7770829200744629,
+      "explanation": "Tasks 10 and 20 are highly similar and may have overlapping requirements."
+    },
+    {
+      "task_id1": 7,
+      "task_id2": 13,
+      "similarity_score": 0.7526994347572327,
+      "explanation": "Tasks 7 and 13 are highly similar and may have overlapping requirements."
+    },
+    {
+      "task_id1": 3,
+      "task_id2": 19,
+      "similarity_score": 0.7439455986022949,
+      "explanation": "Tasks 3 and 19 are highly similar and may have overlapping requirements."
+    },
+    {
+      "task_id1": 6,
+      "task_id2": 12,
+      "similarity_score": 0.7263041734695435,
+      "explanation": "Tasks 6 and 12 are highly similar and may have overlapping requirements."
+    }
+  ],
+  "moderateSimilarity": [
+    {
+      "task_id1": 6,
+      "task_id2": 13,
+      "similarity_score": 0.69955974817276,
+      "explanation": "Tasks 6 and 13 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 12,
+      "task_id2": 13,
+      "similarity_score": 0.6951307058334351,
+      "explanation": "Tasks 12 and 13 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 3,
+      "task_id2": 20,
+      "similarity_score": 0.6951186060905457,
+      "explanation": "Tasks 3 and 20 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 3,
+      "task_id2": 11,
+      "similarity_score": 0.6848737597465515,
+      "explanation": "Tasks 3 and 11 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 10,
+      "task_id2": 11,
+      "similarity_score": 0.6758406758308411,
+      "explanation": "Tasks 10 and 11 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 6,
+      "task_id2": 7,
+      "similarity_score": 0.6742916107177734,
+      "explanation": "Tasks 6 and 7 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 17,
+      "task_id2": 20,
+      "similarity_score": 0.6495919823646545,
+      "explanation": "Tasks 17 and 20 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 7,
+      "task_id2": 12,
+      "similarity_score": 0.6418616771697998,
+      "explanation": "Tasks 7 and 12 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 1,
+      "task_id2": 4,
+      "similarity_score": 0.636047899723053,
+      "explanation": "Tasks 1 and 4 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 7,
+      "task_id2": 16,
+      "similarity_score": 0.6276580691337585,
+      "explanation": "Tasks 7 and 16 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 16,
+      "task_id2": 18,
+      "similarity_score": 0.6201828718185425,
+      "explanation": "Tasks 16 and 18 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 2,
+      "task_id2": 4,
+      "similarity_score": 0.619696319103241,
+      "explanation": "Tasks 2 and 4 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 2,
+      "task_id2": 14,
+      "similarity_score": 0.5928362011909485,
+      "explanation": "Tasks 2 and 14 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 2,
+      "task_id2": 15,
+      "similarity_score": 0.5914362072944641,
+      "explanation": "Tasks 2 and 15 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 9,
+      "task_id2": 17,
+      "similarity_score": 0.5892019271850586,
+      "explanation": "Tasks 9 and 17 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 4,
+      "task_id2": 5,
+      "similarity_score": 0.5810835957527161,
+      "explanation": "Tasks 4 and 5 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 18,
+      "task_id2": 19,
+      "similarity_score": 0.5810605883598328,
+      "explanation": "Tasks 18 and 19 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 15,
+      "task_id2": 17,
+      "similarity_score": 0.5745980739593506,
+      "explanation": "Tasks 15 and 17 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 5,
+      "task_id2": 15,
+      "similarity_score": 0.5685691237449646,
+      "explanation": "Tasks 5 and 15 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 7,
+      "task_id2": 8,
+      "similarity_score": 0.5616380572319031,
+      "explanation": "Tasks 7 and 8 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 5,
+      "task_id2": 18,
+      "similarity_score": 0.557590663433075,
+      "explanation": "Tasks 5 and 18 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 8,
+      "task_id2": 9,
+      "similarity_score": 0.5479012131690979,
+      "explanation": "Tasks 8 and 9 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 6,
+      "task_id2": 20,
+      "similarity_score": 0.5382857322692871,
+      "explanation": "Tasks 6 and 20 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 5,
+      "task_id2": 19,
+      "similarity_score": 0.5378694534301758,
+      "explanation": "Tasks 5 and 19 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 5,
+      "task_id2": 14,
+      "similarity_score": 0.5268764495849609,
+      "explanation": "Tasks 5 and 14 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 2,
+      "task_id2": 17,
+      "similarity_score": 0.5268563032150269,
+      "explanation": "Tasks 2 and 17 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 5,
+      "task_id2": 10,
+      "similarity_score": 0.522621750831604,
+      "explanation": "Tasks 5 and 10 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 7,
+      "task_id2": 20,
+      "similarity_score": 0.5225858688354492,
+      "explanation": "Tasks 7 and 20 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 13,
+      "task_id2": 20,
+      "similarity_score": 0.5222923755645752,
+      "explanation": "Tasks 13 and 20 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 5,
+      "task_id2": 17,
+      "similarity_score": 0.5190746784210205,
+      "explanation": "Tasks 5 and 17 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 4,
+      "task_id2": 18,
+      "similarity_score": 0.5164974331855774,
+      "explanation": "Tasks 4 and 18 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 7,
+      "task_id2": 18,
+      "similarity_score": 0.5161911845207214,
+      "explanation": "Tasks 7 and 18 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 1,
+      "task_id2": 14,
+      "similarity_score": 0.5139550566673279,
+      "explanation": "Tasks 1 and 14 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 11,
+      "task_id2": 19,
+      "similarity_score": 0.5129067301750183,
+      "explanation": "Tasks 11 and 19 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 5,
+      "task_id2": 9,
+      "similarity_score": 0.5110486745834351,
+      "explanation": "Tasks 5 and 9 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 4,
+      "task_id2": 17,
+      "similarity_score": 0.5104066133499146,
+      "explanation": "Tasks 4 and 17 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 1,
+      "task_id2": 20,
+      "similarity_score": 0.5103988647460938,
+      "explanation": "Tasks 1 and 20 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 13,
+      "task_id2": 16,
+      "similarity_score": 0.5063144564628601,
+      "explanation": "Tasks 13 and 16 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 18,
+      "task_id2": 20,
+      "similarity_score": 0.5058812499046326,
+      "explanation": "Tasks 18 and 20 have moderate similarity and may be related."
+    },
+    {
+      "task_id1": 13,
+      "task_id2": 17,
+      "similarity_score": 0.5055195689201355,
+      "explanation": "Tasks 13 and 17 have moderate similarity and may be related."
+    }
+  ],
+  "summary": {
+    "potentialDuplicatesCount": 0,
+    "highSimilarityCount": 8,
+    "moderateSimilarityCount": 40
+  }
+}
