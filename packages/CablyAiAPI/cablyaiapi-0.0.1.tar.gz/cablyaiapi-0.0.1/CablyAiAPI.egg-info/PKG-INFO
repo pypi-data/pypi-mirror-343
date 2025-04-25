@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: CablyAiAPI
+Version: 0.0.1
+Summary: Tool for easy use CablyAiAPI (https://cablyai.com)
+Author: Fixyres
+Author-email: foxy437@outlook.com
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: summary

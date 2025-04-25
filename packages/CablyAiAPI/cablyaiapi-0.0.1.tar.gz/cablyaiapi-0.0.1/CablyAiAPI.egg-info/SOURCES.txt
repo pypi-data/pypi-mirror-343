@@ -1,0 +1,8 @@
+setup.py
+CablyAiAPI/__init__.py
+CablyAiAPI/api.py
+CablyAiAPI.egg-info/PKG-INFO
+CablyAiAPI.egg-info/SOURCES.txt
+CablyAiAPI.egg-info/dependency_links.txt
+CablyAiAPI.egg-info/requires.txt
+CablyAiAPI.egg-info/top_level.txt
