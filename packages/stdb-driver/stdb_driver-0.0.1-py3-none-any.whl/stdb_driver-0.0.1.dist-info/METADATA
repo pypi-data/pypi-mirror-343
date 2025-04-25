@@ -1,0 +1,9 @@
+Metadata-Version: 2.3
+Name: stdb-driver
+Version: 0.0.1
+Summary: Dummy package
+Author: Mireo
+Maintainer: Mireo
+Requires-Python: >=3.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
