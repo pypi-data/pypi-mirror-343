@@ -1,0 +1,8 @@
+README.md
+main.py
+pyproject.toml
+xuew.egg-info/PKG-INFO
+xuew.egg-info/SOURCES.txt
+xuew.egg-info/dependency_links.txt
+xuew.egg-info/requires.txt
+xuew.egg-info/top_level.txt
