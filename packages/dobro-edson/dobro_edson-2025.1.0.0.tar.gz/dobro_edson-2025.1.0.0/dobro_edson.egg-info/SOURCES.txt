@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+dobro-edson/__init__.py
+dobro-edson/dobro-edson.py
+dobro_edson.egg-info/PKG-INFO
+dobro_edson.egg-info/SOURCES.txt
+dobro_edson.egg-info/dependency_links.txt
+dobro_edson.egg-info/top_level.txt
