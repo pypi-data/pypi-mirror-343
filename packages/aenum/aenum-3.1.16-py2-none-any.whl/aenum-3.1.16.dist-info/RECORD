@@ -1,0 +1,16 @@
+aenum/LICENSE,SHA256=Dbg344ACAXs1JmbIPI0yFu5bmyIpN16yz0SH-MJOH4w,1525
+aenum/README.md,SHA256=8rKkqjJG59m1s0soKxtoPW2YwL8t2odxqRKi75odl3o,6207
+aenum/__init__.py,SHA256=j_ESdWoNCbcvklbo4JK3BLXD0WJTvFOvymYRIctInjE,1130
+aenum/_common.py,SHA256=V3O-7hNUtaUAo2hMXcwCNrsdxLGjPbekOiKHaEaEjoQ,8389
+aenum/_constant.py,SHA256=xPhYAYsYx9kaGT5Js3omwtor7KtwjHYngVsLXOlV1cc,5370
+aenum/_enum.py,SHA256=szkJAX9-_tNU9VVCBXn5W8gRHB5QzmJ57c8LyeCxJZA,132371
+aenum/_py2.py,SHA256=YSGnBM7f7qWQbdZ5TYgVwXfqQkd1GxW6VFdx61zfbW0,184
+aenum/_tuple.py,SHA256=D6rBK7xRGuwOAqJdlQSnP8VZPHqeT6EWTVQBMQ7AHUI,19105
+aenum/test.py,SHA256=3ppFnHm21dPk1aFLtRNbr68w6vmiWsgCXNkbF3fqAd4,303914
+aenum/test_stdlib_tests.py,SHA256=GlQkasPQ-K6nlx01oa3p5mjhSR1RoyByOgMKhDnqbhY,166150
+aenum/doc/aenum.pdf,SHA256=PC0YkRf68CNiJ2m2EeOttzabWah3Tan3BoeGKFEg-68,137027
+aenum/doc/aenum.rst,SHA256=wivY_MyUAB-jH9vhlMNNDXpCf2rxVkGwfSj_bebfcmU,46703
+aenum-3.1.16.dist-info/METADATA,SHA256=N80r3PTazks6jP5iuWm64XbzZEIdSC-aj72Tw13ZlCM,3825
+aenum-3.1.16.dist-info/WHEEL,SHA256=bK8TJl-oUKFDa18qkB68zwTZhIBCifqi4qjS_NS4aFQ,92
+aenum-3.1.16.dist-info/top_level.txt,SHA256=poFphxnbuMG5laOCfCp0KRc2LM3z1cEnaO60_b6T_SM,6
+aenum-3.1.16.dist-info/RECORD,,
