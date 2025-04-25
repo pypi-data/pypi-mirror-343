@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+proj2md/__init__.py
+proj2md/cli.py
+proj2md.egg-info/PKG-INFO
+proj2md.egg-info/SOURCES.txt
+proj2md.egg-info/dependency_links.txt
+proj2md.egg-info/entry_points.txt
+proj2md.egg-info/requires.txt
+proj2md.egg-info/top_level.txt
+tests/test_proj2md.py
