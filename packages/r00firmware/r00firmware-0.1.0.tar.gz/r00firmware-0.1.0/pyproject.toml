@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "r00firmware"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "r00logger",
+    "r00adb",
+    "r00system",
+    "r00dialoger"
+]
+
+[tool.uv.sources]
+r00logger = { path = "../../../packages/logger", editable = true }
+r00adb = { path = "../../../packages/adb", editable = true }
+r00system = { path = "../../../packages/system", editable = true }
+r00dialoger = { path = "../../../packages/dialoger", editable = true }
+
+[project.scripts]
+# на сервере запускай пакет в терминале через monitor-altcoins
+firmware = "r00firmware.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["r00firmware"]
