@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: robot-mcp-stdio
+Version: 0.1.2
+Summary: Add your description here
+Home-page: https://gitlab.ecouser.net/dev_biz_interactionplat/mcp_robot_stdio
+Author: Ecovacs
+Author-email: haiyuan.lu@ecovacs.com
+Requires-Python: >=3.13.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: requests>=2.32.3
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python

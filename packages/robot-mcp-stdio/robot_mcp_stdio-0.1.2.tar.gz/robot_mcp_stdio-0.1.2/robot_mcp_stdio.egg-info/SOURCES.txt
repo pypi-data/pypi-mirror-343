@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+robot_mcp_stdio.egg-info/PKG-INFO
+robot_mcp_stdio.egg-info/SOURCES.txt
+robot_mcp_stdio.egg-info/dependency_links.txt
+robot_mcp_stdio.egg-info/requires.txt
+robot_mcp_stdio.egg-info/top_level.txt
