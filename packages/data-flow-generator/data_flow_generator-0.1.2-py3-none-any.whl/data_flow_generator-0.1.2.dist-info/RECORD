@@ -1,0 +1,11 @@
+data_flow_generator-0.1.2.dist-info/licenses/LICENSE,sha256=gaMGE4UVnJEien9VTXWfu4yYbKo8FTHyCUiCBx7f58c,1121
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/dataflow.py,sha256=sAOS0__BBgdB33qYpjwb61SPuKNNIlPRJ85gres9zZU,20622
+src/generate_data_flow.py,sha256=dfrhuXNWB8vapbsSzyV9W7lSZRmvy69wsccEvkc_GAk,27493
+src/plotly_vis.py,sha256=Eq-WxN2Dw-ew0BEuGkls4nmnrRXLQ9qyqNVadfOrYDg,19228
+src/pyvis_mod.py,sha256=KhEpGrFxlofH5RC6lTU0AoRnVahR6bijRW3U3DcLNXI,105203
+data_flow_generator-0.1.2.dist-info/METADATA,sha256=6yZhL9hHwBtQis6U_BTKX1JvwkxH9T4PUAszsSfmjIo,12231
+data_flow_generator-0.1.2.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+data_flow_generator-0.1.2.dist-info/entry_points.txt,sha256=udu0reeby3Dd3H8PfYoP4EKv1s6s1kjH5LB-jv0kZGQ,47
+data_flow_generator-0.1.2.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+data_flow_generator-0.1.2.dist-info/RECORD,,
