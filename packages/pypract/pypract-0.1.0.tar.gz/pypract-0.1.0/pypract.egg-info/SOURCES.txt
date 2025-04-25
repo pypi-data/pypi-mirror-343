@@ -1,0 +1,11 @@
+setup.py
+practical_codes/MonkeyBanana.py
+practical_codes/__init__.py
+practical_codes/astar.py
+practical_codes/bfs.py
+practical_codes/dfs.py
+practical_codes/nQueens.py
+pypract.egg-info/PKG-INFO
+pypract.egg-info/SOURCES.txt
+pypract.egg-info/dependency_links.txt
+pypract.egg-info/top_level.txt
