@@ -1,0 +1,19 @@
+{% extends 'hidp/base_pre_login.html' %}
+{% load i18n %}
+
+{% block title %}{% translate 'Two-factor authentication' %}{% endblock %}
+
+{% block main %}
+  <h1>{% translate 'Two-factor authentication' %}</h1>
+
+  <form method="post">
+  {% csrf_token %}
+  {{ form }}
+
+  {% include 'hidp/includes/forms/submit_row.html' with submit_label=_('Verify') %}
+  </form>
+
+  <p>{% translate 'If you have lost your device, you can use a recovery code instead.' %}</p>
+  <p><a href="{% url 'hidp_otp:verify-recovery-code' %}">{% translate "use recovery code" %}</a></p>
+
+{% endblock %}
