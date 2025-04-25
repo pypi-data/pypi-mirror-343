@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/iitypes/__init__.py
+src/iitypes/classic.py
+src/iitypes/common.py
+src/iitypes/geospatial.py
+src/iitypes/standard.py
+src/iitypes/types.py
+src/iitypes.egg-info/PKG-INFO
+src/iitypes.egg-info/SOURCES.txt
+src/iitypes.egg-info/dependency_links.txt
+src/iitypes.egg-info/requires.txt
+src/iitypes.egg-info/top_level.txt
