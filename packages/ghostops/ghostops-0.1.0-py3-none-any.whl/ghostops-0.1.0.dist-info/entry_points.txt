@@ -1,0 +1,2 @@
+[console_scripts]
+ghostops = ghostops.__main__:main
