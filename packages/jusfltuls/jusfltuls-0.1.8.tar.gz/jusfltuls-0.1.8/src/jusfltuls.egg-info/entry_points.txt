@@ -1,0 +1,8 @@
+[console_scripts]
+cpuspeed = cpuspeed:main
+dtox = dtox:main
+pingy = pingy:go
+smartnow = smartnow:main
+sshconf = sshconf:main
+wavescan = wavescan:main
+zoter = zoter:main
