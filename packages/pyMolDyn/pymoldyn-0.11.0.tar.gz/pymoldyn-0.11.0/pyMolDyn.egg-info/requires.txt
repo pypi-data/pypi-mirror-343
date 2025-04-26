@@ -1,0 +1,7 @@
+gr
+h5py
+Jinja2
+numpy
+PyOpenGL
+PySide6
+python-dateutil
