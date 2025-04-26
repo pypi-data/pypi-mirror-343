@@ -1,0 +1,76 @@
+LICENSE
+README.md
+setup.py
+postgres_ddl/Cast.py
+postgres_ddl/Comment.py
+postgres_ddl/Config.py
+postgres_ddl/DDL.py
+postgres_ddl/Database.py
+postgres_ddl/Diff.py
+postgres_ddl/EventTrigger.py
+postgres_ddl/Extension.py
+postgres_ddl/ForeignServer.py
+postgres_ddl/ForeignTable.py
+postgres_ddl/Function.py
+postgres_ddl/Grabber.py
+postgres_ddl/Grant.py
+postgres_ddl/Namespace.py
+postgres_ddl/Owner.py
+postgres_ddl/PGQ.py
+postgres_ddl/Procedure.py
+postgres_ddl/Publication.py
+postgres_ddl/Sequence.py
+postgres_ddl/Subscription.py
+postgres_ddl/System.py
+postgres_ddl/TSDB_Dimension.py
+postgres_ddl/TSDB_HyperTable.py
+postgres_ddl/Table.py
+postgres_ddl/TableColumn.py
+postgres_ddl/TableConstraint.py
+postgres_ddl/TableIndex.py
+postgres_ddl/TablePolicy.py
+postgres_ddl/TableSequence.py
+postgres_ddl/TableSettings.py
+postgres_ddl/TableTrigger.py
+postgres_ddl/UserMapping.py
+postgres_ddl/View.py
+postgres_ddl/__init__.py
+postgres_ddl — копия/Cast.py
+postgres_ddl — копия/Comment.py
+postgres_ddl — копия/Config.py
+postgres_ddl — копия/DDL.py
+postgres_ddl — копия/Database.py
+postgres_ddl — копия/Diff.py
+postgres_ddl — копия/EventTrigger.py
+postgres_ddl — копия/Extension.py
+postgres_ddl — копия/ForeignServer.py
+postgres_ddl — копия/ForeignTable.py
+postgres_ddl — копия/Function.py
+postgres_ddl — копия/Grabber.py
+postgres_ddl — копия/Grant.py
+postgres_ddl — копия/Namespace.py
+postgres_ddl — копия/Owner.py
+postgres_ddl — копия/PGQ.py
+postgres_ddl — копия/Procedure.py
+postgres_ddl — копия/Publication.py
+postgres_ddl — копия/Sequence.py
+postgres_ddl — копия/Subscription.py
+postgres_ddl — копия/System.py
+postgres_ddl — копия/TSDB_Dimension.py
+postgres_ddl — копия/TSDB_HyperTable.py
+postgres_ddl — копия/Table.py
+postgres_ddl — копия/TableColumn.py
+postgres_ddl — копия/TableConstraint.py
+postgres_ddl — копия/TableIndex.py
+postgres_ddl — копия/TablePolicy.py
+postgres_ddl — копия/TableSequence.py
+postgres_ddl — копия/TableSettings.py
+postgres_ddl — копия/TableTrigger.py
+postgres_ddl — копия/UserMapping.py
+postgres_ddl — копия/View.py
+postgres_ddl — копия/__init__.py
+postgres_ddl.egg-info/PKG-INFO
+postgres_ddl.egg-info/SOURCES.txt
+postgres_ddl.egg-info/dependency_links.txt
+postgres_ddl.egg-info/requires.txt
+postgres_ddl.egg-info/top_level.txt
