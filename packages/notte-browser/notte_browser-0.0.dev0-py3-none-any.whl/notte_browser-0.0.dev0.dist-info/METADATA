@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: notte-browser
+Version: 0.0.dev0
+Summary: The web browser for LLMs agents
+Author-email: Notte Team  <hello@notte.cc>
+Requires-Python: >=3.11
+Requires-Dist: maincontentextractor
+Requires-Dist: notte-core==0.0.dev
+Requires-Dist: patchright==1.50.0
+Description-Content-Type: text/markdown
+
+# Notte Processing Pipelines
+
+Each pipeline is a set of steps that are used to preprocess either a browser snapshot or a LLM observation.
+
+Each file in this directory is a separate but mandatory in the global workflow.
