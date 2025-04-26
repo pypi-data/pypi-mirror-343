@@ -1,0 +1,203 @@
+name: Merge PR to main
+
+permissions:
+  contents: read
+
+on:
+  pull_request:
+    types:
+      - closed
+      # - opened
+      # - reopened
+      # - synchronize
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    concurrency: release
+    permissions:
+      contents: write
+
+    if: github.event.pull_request.merged == true # Ensure the PR was merged
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python version
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies for Semantic Versioning
+        run: |
+          python -m pip install --upgrade pip
+          pip install tomlkit
+
+      - name: Get Base and Latest Commits of the Merged PR
+        id: commit-range
+        run: |
+          # Get the base commit of the PR (the commit where it diverged from the main branch)
+          BASE_COMMIT=$(git merge-base HEAD^ origin/main)
+
+          # Get the commits introduced by this PR
+          COMMITS=$(git rev-list --reverse $BASE_COMMIT..HEAD)
+
+          # Extract the first and last commits
+          FIRST_COMMIT=$(echo "$COMMITS" | head -n 1)
+          LATEST_COMMIT=$(echo "$COMMITS" | tail -n 1)
+
+          # Set outputs for later steps
+          echo "base_commit=$BASE_COMMIT" >> $GITHUB_OUTPUT
+          echo "first_commit=$FIRST_COMMIT" >> $GITHUB_OUTPUT
+          echo "latest_commit=$LATEST_COMMIT" >> $GITHUB_OUTPUT
+
+          # Log for debugging
+          echo "Number of commits in PR: $(echo "$COMMITS" | wc -l)"
+          echo "Base Commit: $BASE_COMMIT"
+          echo "First Commit in PR: $FIRST_COMMIT"
+          echo "Latest Commit in PR: $LATEST_COMMIT"
+
+      - name: Get Latest Feluda Tag
+        id: latest-tag
+        run: |
+          LATEST_TAG=$(git tag -l "feluda-[0-9]*" | sort -V | tail -n1)
+          echo "current_tag=$LATEST_TAG" >> $GITHUB_OUTPUT
+          echo "current feluda tag: $LATEST_TAG"
+
+      - name: Run Dynamic Semantic Release Script
+        env:
+          FIRST_COMMIT: ${{ steps.commit-range.outputs.first_commit }}
+          LATEST_COMMIT: ${{ steps.commit-range.outputs.latest_commit }}
+        run: |
+          pwd
+          # run the script
+          python -m scripts.semantic_release_workflow "$FIRST_COMMIT" "$LATEST_COMMIT"
+
+      - name: Commit and Push Changes
+        id: push-changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions [Bot]"
+
+          if [[ -n $(git status -s) ]]; then
+            git add .
+            git commit -m "chore: semantic versioning workflow and update related files"
+            git push
+            git push --tags
+
+            # Check if new feluda tag was created
+            NEW_TAG=$(git tag -l "feluda-[0-9]*" | sort -V | tail -n1)
+            if [ "$NEW_TAG" != "${{ steps.latest-tag.outputs.current_tag }}" ]; then
+              echo "new_tag=$NEW_TAG" >> $GITHUB_OUTPUT
+              echo "tag_created=true" >> $GITHUB_OUTPUT
+            else
+              echo "tag_created=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "tag_created=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create GitHub Release
+        if: steps.push-changes.outputs.tag_created == 'true'
+        run: |
+          gh release create "${{ steps.push-changes.outputs.new_tag }}" \
+            --repo="${GITHUB_REPOSITORY}" \
+            --title="Release ${{ steps.push-changes.outputs.new_tag }}" \
+            --generate-notes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate Release Notes and Update Changelog
+        if: steps.push-changes.outputs.tag_created == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions [Bot]"
+
+          NEW_TAG="${{ steps.push-changes.outputs.new_tag }}"
+          NEW_VERSION=$(echo $NEW_TAG | sed 's/feluda-/v/')
+          PREVIOUS_TAG="${{ steps.latest-tag.outputs.current_tag }}"
+
+          # Get only commits that touch files in feluda/ or the exact pyproject.toml file
+          FELUDA_COMMITS=$(git log "${PREVIOUS_TAG}..${NEW_TAG}" --pretty=format:"* %s (%h)" --no-merges -- "feluda/" "pyproject.toml")
+
+          echo "Commits between ${PREVIOUS_TAG} and ${NEW_TAG} affecting feluda/ or pyproject.toml:"
+          echo "$FELUDA_COMMITS"
+
+          # Get current date in YYYY-MM-DD format
+          CURRENT_DATE=$(date +"%Y-%m-%d")
+
+          # Create release notes file with proper format
+          echo "## ${NEW_VERSION} (${CURRENT_DATE})" > release_notes.md
+          echo "" >> release_notes.md
+
+          add_section() {
+            local title="$1"
+            local pattern="$2"
+            local commits=$(echo "$FELUDA_COMMITS" | grep "^* $pattern" || true)
+            if [ -n "$commits" ]; then
+              echo "### ${title}" >> release_notes.md
+              echo "$commits" >> release_notes.md
+              echo "" >> release_notes.md
+            fi
+          }
+
+          # Add sections only if they have commits
+          add_section "Features" "feat"
+          add_section "Bug Fixes" "fix"
+          add_section "Chores" "chore"
+          add_section "Documentation" "docs"
+
+          # Add miscellaneous section for other commits
+          misc_commits=$(echo "$FELUDA_COMMITS" |
+            grep -v "^* feat" |
+            grep -v "^* fix" |
+            grep -v "^* chore" |
+            grep -v "^* docs" || true)
+
+          if [ -n "$misc_commits" ]; then
+            echo "### Miscellaneous" >> release_notes.md
+            echo "$misc_commits" >> release_notes.md
+            echo "" >> release_notes.md
+          fi
+
+          # Add contributors section
+          contributors=$(git log "${PREVIOUS_TAG}..${NEW_TAG}" --pretty=format:"%an" --no-merges -- "feluda/" "pyproject.toml" | sort -u)
+          if [ -n "$contributors" ]; then
+            echo "### Contributors" >> release_notes.md
+            echo "$contributors" | sed 's/^/* /' >> release_notes.md
+            echo "" >> release_notes.md
+          fi
+
+          # Update CHANGELOG.md (keep existing header and append new release notes after it)
+          if [ -f CHANGELOG.md ]; then
+            # Extract the first line (# CHANGELOG) from the existing file
+            header=$(head -n 1 CHANGELOG.md)
+
+            # Create new changelog with header, new release notes, then rest of previous content
+            echo "$header" > temp_changelog
+            echo "" >> temp_changelog
+            cat release_notes.md >> temp_changelog
+
+            # Add the rest of the existing changelog (skip the first line)
+            tail -n +2 CHANGELOG.md >> temp_changelog
+            mv temp_changelog CHANGELOG.md
+          else
+            # If no CHANGELOG.md exists, create it with proper header
+            echo "# CHANGELOG" > CHANGELOG.md
+            echo "" >> CHANGELOG.md
+            cat release_notes.md >> CHANGELOG.md
+          fi
+
+          # Show content for debugging
+          echo "Updated CHANGELOG.md:"
+          head -n 10 CHANGELOG.md
+
+          # Commit and push the updated CHANGELOG
+          git add CHANGELOG.md
+          git commit -m "docs: update CHANGELOG.md for ${NEW_VERSION}" || true
+          git push || true

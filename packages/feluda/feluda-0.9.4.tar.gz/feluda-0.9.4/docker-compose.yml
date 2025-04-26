@@ -1,0 +1,109 @@
+version: "3.5"
+
+services:
+  store:
+    container_name: es
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.16.0
+    volumes:
+      - ./.docker/es/data:/var/lib/elasticsearch/data
+    ports:
+      - "9300:9300"
+      - "9200:9200"
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+      - http.cors.enabled=true
+      - http.cors.allow-origin=http://localhost:1358,http://127.0.0.1:1358
+      - http.cors.allow-headers=X-Requested-With,X-Auth-Token,Content-Type,Content-Length,Authorization
+      - http.cors.allow-credentials=true
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    cap_add:
+      - IPC_LOCK
+
+  queue:
+    image: rabbitmq@sha256:e2505f78d58dca8c372cde3930e4d6bee5e02ac9001ce85ece5a11df606c1fa3 # rabbitmq:3.12.12-management
+    container_name: rabbitmq
+    hostname: rabbit
+    volumes:
+      - ./.docker/rabbitmq/data:/var/lib/rabbitmq
+      - ./.docker/rabbitmq/logs:/var/log/rabbitmq
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "secret-cookie"
+      RABBITMQ_DEFAULT_USER: "admin"
+      RABBITMQ_DEFAULT_PASS: "Admin123"
+    ports:
+      - 5672:5672
+      - 15672:15672
+
+  api:
+    container_name: feluda_api
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+      target: debug
+      args:
+        - "UID=${UID:-1000}"
+        - "GID=${GID:-1000}"
+    volumes:
+      - ./src:/usr/app
+      - venv:/usr/app/venv/
+    env_file: ./src/development.env
+    ports:
+      - 7000:7000
+      - 5678:5678
+      - 8888:8888
+    command: tail -f /dev/null
+    depends_on:
+      store:
+        condition: service_started
+      queue:
+        condition: service_started
+
+  indexer:
+    container_name: feluda_indexer
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+      target: debug
+      args:
+        - "UID=${UID:-1000}"
+        - "GID=${GID:-1000}"
+    env_file: ./src/development.env
+    command: tail -f /dev/null
+    depends_on:
+      store:
+        condition: service_started
+      queue:
+        condition: service_started
+
+  reporter:
+    container_name: feluda_reporter
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+      target: debug
+      args:
+        - "UID=${UID:-1000}"
+        - "GID=${GID:-1000}"
+    env_file: ./src/development.env
+    command: tail -f /dev/null
+    depends_on:
+      store:
+        condition: service_started
+      queue:
+        condition: service_started
+
+volumes:
+    venv: {}
+
+#networks:
+#  default:
+#    external: true
+#    name: kosh-v2_tattle
+

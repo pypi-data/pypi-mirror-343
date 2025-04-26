@@ -1,0 +1,1 @@
+feluda,operators/detect_text_in_image_tesseract,operators/video_hash_tmk,operators/dimension_reduction,operators/vid_vec_rep_clip,operators/classify_video_zero_shot,operators/cluster_embeddings,operators/image_vec_rep_resnet,operators/detect_lewd_images
