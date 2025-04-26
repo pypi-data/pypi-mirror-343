@@ -1,0 +1,77 @@
+[project]
+name = "comps-sif-constructor"
+version = "0.0.2"
+description = "Create a SIF file from a Singularity definition file for COMPS"
+authors = [
+  { name="Katherine Rosenfeld"},
+  { name="Kurt Frey"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "idmtools==1.7.10",
+    "idmtools_platform_comps==1.7.10",
+    "idmtools_models==1.7.10",
+]
+
+[project.scripts]
+comps_sif_constructor = "comps_sif_constructor.create_sif:main"
+
+[[tool.uv.index]]
+# Optional name for the index.
+name = "idm"
+# Required URL for the index.
+url = "https://packages.idmod.org/api/pypi/pypi-production/simple"
+
+
+[tool.uv.sources]
+idmtools = { index = "idm" }
+idmtools_platform_comps = { index = "idm" }
+idmtools_models = { index = "idm" }
+
+
+[build-system]
+requires = ["hatchling>=1.11.0"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "bump-my-version>=1.1.2",
+]
+
+[tool.bumpversion]
+current_version = "0.0.2"
+parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)"
+serialize = ["{major}.{minor}.{patch}"]
+search = "{current_version}"
+replace = "{new_version}"
+regex = false
+ignore_missing_version = false
+ignore_missing_files = false
+tag = true
+sign_tags = false
+tag_name = "v{new_version}"
+tag_message = "Bump version: {current_version} → {new_version}"
+allow_dirty = false
+commit = true
+message = "Bump version: {current_version} → {new_version}"
+commit_args = ""
+setup_hooks = []
+pre_commit_hooks = []
+post_commit_hooks = []
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "src/comps_sif_constructor/version.py"
+search = '__version__ = "{current_version}"'
+replace = '__version__ = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = 'src/comps_sif_constructor/version.py'
+search = "__versiondate__ = '\\d{{4}}-\\d{{2}}-\\d{{2}}'"
+replace = "__versiondate__ = '{now:%Y-%m-%d}'"
+regex = true
