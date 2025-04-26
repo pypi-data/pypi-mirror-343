@@ -1,0 +1,57 @@
+# Runs formatting, linting, and unit tests on any push to main or a pull request.
+
+# Useful docs:
+# https://docs.astral.sh/uv/guides/integration/github/
+# https://docs.astral.sh/ruff/integrations/#github-actions
+
+name: Code quality checks
+on:
+  pull_request:
+  push:
+    branches: ['main']
+
+jobs:
+  code-quality:
+    name: Code quality checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          version: ${{ vars.UV_VERSION }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+
+      - name: Configure AWS Credentials
+        if: vars.SIDELOAD_CACHE == 'true'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+
+      - name: Download cache files from S3
+        if: vars.SIDELOAD_CACHE == 'true'
+        run: |
+          mkdir -p .cache
+          echo "EPYMORPH_CACHE_PATH=$(realpath .cache)" >> $GITHUB_ENV
+          aws s3 sync s3://epymorph-gha-cache .cache
+
+      - name: Install dependencies
+        run: uv sync --frozen --all-extras --dev
+
+      - name: Check imports and formatting
+        run: uv run ruff check --no-fix --exclude doc/devlog --output-format=github .
+
+      - name: Check data package exports
+        run: uv run scripts/data_exports.py --check
+
+      - name: Run unit tests
+        run: uv run pytest tests/fast

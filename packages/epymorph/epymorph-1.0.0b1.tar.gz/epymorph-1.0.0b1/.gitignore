@@ -1,0 +1,27 @@
+# OS files
+.DS_Store
+
+# Secrets
+.env
+
+# Virtual environments
+/.venv*
+
+# Cached data
+/.cache
+
+# Compilation
+__pycache__/
+
+# Build
+dist/
+build/
+*.egg-info
+
+# Testing & dev
+.pytest_cache/
+.coverage
+htmlcov
+debug.log
+scratch
+doc/devlog/data/temp_synthetic_data.csv
