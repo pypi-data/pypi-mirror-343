@@ -1,0 +1,16 @@
+timecode
+fileseq==1.8.1
+pymediainfo
+
+[embedded]
+requests
+validators
+yt-dlp
+
+[lint]
+ruff
+
+[testing]
+pytest
+pytest-cov
+mock
