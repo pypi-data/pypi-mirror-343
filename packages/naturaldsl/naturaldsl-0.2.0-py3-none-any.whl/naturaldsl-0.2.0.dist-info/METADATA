@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: naturaldsl
+Version: 0.2.0
+Summary: A human-first natural language programming language for data science
+Home-page: https://github.com/pradumana/Naturaldsl
+Author: Praduman Sharma
+Author-email: Praduman Sharma <prdmn.shrm@gmail.com>
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: dask[complete]
+Requires-Dist: seaborn
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# NaturalDSL
+
+NaturalDSL is a natural-language-inspired programming language for data science. Write commands like:
+
