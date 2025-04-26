@@ -1,0 +1,10 @@
+cpuspeed
+dtox
+graphtemp
+main
+pingy
+smartnow
+sshconf
+verif_apt
+wavescan
+zoter
