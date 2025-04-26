@@ -1,0 +1,7 @@
+airless/captcha/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airless/captcha/providers/__init__.py,sha256=cqPcdCeTPTe1ecvOSr-v4fzZrjQC75haPvnOPJ9RBAA,91
+airless/captcha/providers/two_captcha.py,sha256=aY1sZLRIVQVRuRE-wjonMR-wpnTxDfDcsTJ3Rnm1Qa4,4991
+airless_captcha-0.1.0.dist-info/METADATA,sha256=kRzdRwpZL1XzB53n_Qi2En7uR1GG2_QfcufNdPbstqg,1128
+airless_captcha-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+airless_captcha-0.1.0.dist-info/top_level.txt,sha256=vPLzRICE7VNGvU-zceoZ1N7H2TkerQXR475zjg_xPzU,8
+airless_captcha-0.1.0.dist-info/RECORD,,
