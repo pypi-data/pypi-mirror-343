@@ -1,0 +1,7 @@
+Install poetry with `pip install poetry`
+
+Run `poetry install`.
+
+To generate documentation, install doxypy using pip: `pip install doxypy` and
+use doxygen to generate the files: `doxygen Doxyfile`. The generated
+documentation will be placed in "doc" folder.
