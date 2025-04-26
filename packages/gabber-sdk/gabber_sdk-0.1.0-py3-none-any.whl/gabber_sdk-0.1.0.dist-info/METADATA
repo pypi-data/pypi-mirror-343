@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: gabber-sdk
+Version: 0.1.0
+Summary: A short description of my package
+Project-URL: Homepage, https://github.com/gabber-dev/sdk-python
+Project-URL: Repository, https://github.com/gabber-dev/sdk-python
+Author-email: Neil Dwyer <neil@gabber.dev>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: aiohttp-retry
+Requires-Dist: aiohttp~=3.0
+Requires-Dist: livekit~=1.0
+Requires-Dist: pydantic~=2.11
+Requires-Dist: python-dateutil~=2.8
+Requires-Dist: urllib3~=2.4
+Description-Content-Type: text/markdown
+
+# sdk-python
