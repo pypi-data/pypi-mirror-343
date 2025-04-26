@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+Kgen.egg-info/PKG-INFO
+Kgen.egg-info/SOURCES.txt
+Kgen.egg-info/dependency_links.txt
+Kgen.egg-info/requires.txt
+Kgen.egg-info/top_level.txt
+kgen/K_functions.py
+kgen/__init__.py
+kgen/coefs.py
