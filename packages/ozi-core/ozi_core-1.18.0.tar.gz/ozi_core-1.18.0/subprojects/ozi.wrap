@@ -1,0 +1,9 @@
+[wrap-file]
+directory = OZI-1.38.2
+source_url = https://github.com/OZI-Project/OZI/archive/refs/tags/1.38.2.tar.gz
+source_hash = 82d5529240b3c9129a1544173ed39f6d45faa8b37b12fcbdb04b4e5f5a52e10b
+source_filename = OZI-1.38.2.tar.gz
+
+[provide]
+dependency_names = ozi, ozi-1.38.2
+
