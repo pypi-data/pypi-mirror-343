@@ -1,0 +1,10 @@
+markdown>=3.3.0
+pygments>=2.10.0
+jsonschema>=4.0.0
+
+[dev]
+pytest>=7.0.0
+pytest-cov>=4.0.0
+ruff>=0.1.0
+mypy>=1.0.0
+twine>=4.0.0
