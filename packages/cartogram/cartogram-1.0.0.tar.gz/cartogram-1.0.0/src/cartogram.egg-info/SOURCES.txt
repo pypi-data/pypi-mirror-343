@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/cartogram/__init__.py
+src/cartogram/cartogram.py
+src/cartogram.egg-info/PKG-INFO
+src/cartogram.egg-info/SOURCES.txt
+src/cartogram.egg-info/dependency_links.txt
+src/cartogram.egg-info/requires.txt
+src/cartogram.egg-info/top_level.txt
+tests/conftest.py
+tests/test_cartogram.py
+tests/data/Austria_PopulationByNUTS2.geojson
+tests/data/Austria_PopulationByNUTS2_cartogram.geojson
