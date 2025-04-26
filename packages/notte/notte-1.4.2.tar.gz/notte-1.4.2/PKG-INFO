@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: notte
+Version: 1.4.2
+License-File: LICENSE
+Requires-Python: >=3.11
+Requires-Dist: notte-agent
+Requires-Dist: notte-browser
+Requires-Dist: notte-core
+Requires-Dist: notte-sdk
+Provides-Extra: eval
+Requires-Dist: notte-eval; extra == 'eval'
+Provides-Extra: integrations
+Requires-Dist: notte-integrations; extra == 'integrations'
