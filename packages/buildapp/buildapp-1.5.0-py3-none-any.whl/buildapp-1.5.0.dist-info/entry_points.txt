@@ -1,0 +1,3 @@
+[console_scripts]
+buildapp = buildapp.buildapp:main
+buildapp_fetch_tools = buildapp.download_tools:main
