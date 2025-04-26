@@ -1,0 +1,2 @@
+[console_scripts]
+autopm = autopm.cli:main
