@@ -1,0 +1,6 @@
+pyproject.toml
+cudatalog/__init__.py
+cudatalog.egg-info/PKG-INFO
+cudatalog.egg-info/SOURCES.txt
+cudatalog.egg-info/dependency_links.txt
+cudatalog.egg-info/top_level.txt

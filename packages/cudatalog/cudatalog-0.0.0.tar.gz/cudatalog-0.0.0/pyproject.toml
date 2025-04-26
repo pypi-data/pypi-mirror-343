@@ -1,0 +1,8 @@
+[project]
+name = "cudatalog"
+authors = [
+    {name = "SowmithK", email = "sowmith1729@gmail.com"},
+]
+version = "0.0.0"
+description = "Datalog Engine written in CUDA" 
+
