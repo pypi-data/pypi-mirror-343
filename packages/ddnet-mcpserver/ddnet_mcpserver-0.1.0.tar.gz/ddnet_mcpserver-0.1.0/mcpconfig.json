@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "Demo": {
+      "command": "python",
+      "args": ["server.py"],
+      "env": {},
+      "disabled": false,
+      "alwaysAllow": ["add", "get_greeting"]
+    }
+  }
+} 
