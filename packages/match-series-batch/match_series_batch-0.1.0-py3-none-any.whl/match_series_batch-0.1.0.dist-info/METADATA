@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: match-series-batch
+Version: 0.1.0
+Summary: Batch non-rigid image alignment using pymatchseries.
+Home-page: https://github.com/HaoranLMaoMao/match-series-batch
+Author: Haoran Ma
+Author-email: haoran.ma@ikz-berlin.de
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: hyperspy>=1.6.1
+Requires-Dist: pymatchseries>=0.1.0
+Requires-Dist: tqdm
+Requires-Dist: Pillow
+
+# Match-Series-Batch
+
+Batch processing tool for non-rigid alignment of image stacks using pyMatchSeries.
+...
