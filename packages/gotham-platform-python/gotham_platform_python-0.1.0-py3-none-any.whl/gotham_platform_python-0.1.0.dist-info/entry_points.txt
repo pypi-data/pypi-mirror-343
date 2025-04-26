@@ -1,0 +1,3 @@
+[console_scripts]
+gotham_v1=gotham.v1.cli:cli
+
