@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: transactional_remove
+Version: 1.0.9
+Description-Content-Type: text/markdown
+Requires-Dist: colorama==0.4.6
+Requires-Dist: setuptools==79.0.1
+Dynamic: description-content-type
+Dynamic: requires-dist
