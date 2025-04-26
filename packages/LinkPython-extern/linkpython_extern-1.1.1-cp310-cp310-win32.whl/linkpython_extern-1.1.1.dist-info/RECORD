@@ -1,0 +1,9 @@
+_link.cp310-win32.pyd,sha256=UMI_x9mY8-qZH_3waNyC7V_lQEMPDubkW_E37VGcyWw,323584
+link/__init__.py,sha256=36Bt2wdW51asgLHPkN5Ea-3gmFzGMIvqV-vw2Pjnh8M,21
+link/__init__.pyi,sha256=iH9aWhrUkK1hlxRXA9Vj25O_oMnwQkhGTpWgDDOvzJA,10014
+link/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+linkpython_extern-1.1.1.dist-info/licenses/LICENSE.md,sha256=q5WXlxI4JI6pfbYaXwRHcelpf_KquERaf3hwVuv7sOU,1415
+linkpython_extern-1.1.1.dist-info/METADATA,sha256=nE3fwkTickMSAYmKLvgTerVNDg3LB8_Tm02wzOMwhEc,4510
+linkpython_extern-1.1.1.dist-info/WHEEL,sha256=fa7ehbBLR15oY-s7qfqUH83GboFClMsoP22MMPwcwz4,97
+linkpython_extern-1.1.1.dist-info/top_level.txt,sha256=w2tk0JDkL_3lYnUfJmtrZXOgBzu-erkQh4ZaYcCeCCY,23
+linkpython_extern-1.1.1.dist-info/RECORD,,
