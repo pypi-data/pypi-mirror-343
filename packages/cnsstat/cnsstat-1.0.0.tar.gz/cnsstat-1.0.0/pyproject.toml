@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=62"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cnsstat"
+version = "1.0.0"
+description = "Cheap-n-nasty text system status via psutil"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+keywords = ["psutil","load","cpu","memory","disk","network","thermal"]
+authors = [
+    {email = "ndf-zz@6-v.org", name = "Nathan Fraser"}
+]
+classifiers = [
+    "Environment :: Console",
+    "Development Status :: 3 - Alpha",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: System :: Monitoring",
+]
+dependencies = [
+    "psutil",
+]
+[project.urls]
+homepage = "https://github.com/ndf-zz/cnsstat"
+
+[project.scripts]
+cnsstat = "cnsstat:main"

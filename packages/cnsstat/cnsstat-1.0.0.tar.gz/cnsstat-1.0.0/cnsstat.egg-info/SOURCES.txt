@@ -1,0 +1,10 @@
+LICENSE
+README.md
+cnsstat.py
+pyproject.toml
+cnsstat.egg-info/PKG-INFO
+cnsstat.egg-info/SOURCES.txt
+cnsstat.egg-info/dependency_links.txt
+cnsstat.egg-info/entry_points.txt
+cnsstat.egg-info/requires.txt
+cnsstat.egg-info/top_level.txt
