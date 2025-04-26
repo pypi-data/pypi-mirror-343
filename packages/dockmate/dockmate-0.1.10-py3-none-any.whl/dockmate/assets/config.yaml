@@ -1,0 +1,28 @@
+# dockmate configuration file
+
+# docker_host represents the Docker host URL used for communication with the Docker daemon.
+# This allows the Docker client to connect to the Docker Engine, which could be local or remote.
+# Example values include: "unix:///var/run/docker.sock" for local Unix socket connection
+# or "tcp://hostname:port" for a remote Docker host.
+docker_host: "unix:///var/run/docker.sock" # Docker host URL
+
+# containers: Docker containers that will be monitored by the application.
+# This configuration defines the list of Docker containers that the application
+# will track and monitor for status, resource usage, and other metrics.
+# containers: ["mariadb", "nginx", "redis", "postgres" ]
+containers: []
+
+
+
+# Controls whether Pushover notifications are enabled.
+# When set to true, the application will send notifications through the Pushover service.
+# When set to false, Pushover notifications will be disabled.
+# @type: boolean
+# @default: true
+# Remember, you need the follow environment variables set:
+# PUSHOVER_USER_KEY
+# PUSHOVER_API_TOKEN
+pushover: false # Enable or disable Pushover notifications. Default is false.
+
+# time_main_loop: This parameter specifies the interval between each main loop iteration.
+time_main_loop: 7200
