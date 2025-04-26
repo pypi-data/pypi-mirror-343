@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+gadignore/.gitignore
+gadignore/__init__.py
+gadignore/cli.py
+gadignore.egg-info/PKG-INFO
+gadignore.egg-info/SOURCES.txt
+gadignore.egg-info/dependency_links.txt
+gadignore.egg-info/entry_points.txt
+gadignore.egg-info/requires.txt
+gadignore.egg-info/top_level.txt
