@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+smarthex.egg-info/PKG-INFO
+smarthex.egg-info/SOURCES.txt
+smarthex.egg-info/dependency_links.txt
+smarthex.egg-info/entry_points.txt
+smarthex.egg-info/top_level.txt
+smarthex/smarthex/__init__.py
+smarthex/smarthex/cli.py
+smarthex/smarthex/main.py
+smarthex/tests/test_smarthex.py
