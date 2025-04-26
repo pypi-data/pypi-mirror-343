@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: codeowners_diff
+Version: 0.2.0
+Summary: see which files have changed ownership when `CODEOWNERS` changes
+Author-email: Samuel Searles-Bryant <sam@samueljsb.co.uk>
+License-Expression: MIT
+Project-URL: Source, https://github.com/samueljsb/codeowners-diff
+Project-URL: Changelog, https://github.com/samueljsb/codeowners-diff/blob/main/CHANGELOG.md
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: codeowners
+Requires-Dist: tabulate
+Dynamic: license-file
+
+# Code Owner diff tool
+
+This tool helps to identify which files in a repository are changing ownership
+when a GitHub `CODEOWNERS` file changes.
+
+## Usage
+
+```console
+$ codeowners-diff --help
+usage: codeowners-diff [-h] [-C REPO_ROOT] [base_ref] [head_ref]
+
+get a summary of the changes to code owners between two refs
+
+positional arguments:
+  base_ref      default: HEAD
+  head_ref      default: the working tree
+
+options:
+  -h, --help    show this help message and exit
+  -C REPO_ROOT  git repository to run the tool in (default: current directory)
+```
+
+By default,
+the tool will show the changes in ownership
+between the current revision and `main`.
+
+The output is GitHub-flavoured Markdown.

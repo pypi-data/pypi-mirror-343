@@ -1,0 +1,59 @@
+[project]
+name = "codeowners_diff"
+authors = [
+    {name = "Samuel Searles-Bryant", email = "sam@samueljsb.co.uk"},
+]
+description = "see which files have changed ownership when `CODEOWNERS` changes"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+classifiers = [  # pragma: alphabetize
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dynamic = ["version"]
+
+requires-python = ">=3.10"
+dependencies = [  # pragma: alphabetize[case-insensitive]
+  "codeowners",
+  "tabulate",
+]
+
+[project.scripts]
+codeowners-diff = "codeowners_diff:main"
+
+[project.urls]
+Source = "https://github.com/samueljsb/codeowners-diff"
+Changelog = "https://github.com/samueljsb/codeowners-diff/blob/main/CHANGELOG.md"
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+
+# Mypy
+# ====
+
+[tool.mypy]
+files = "."
+exclude = [
+  "build/",
+  "venv",
+]
+
+pretty = true
+
+enable_error_code = [  # pragma: alphabetize
+  "ignore-without-code",
+  "possibly-undefined",
+  "truthy-bool",
+  "truthy-iterable",
+]
+strict = true
+warn_unreachable = true
+warn_no_return = true
