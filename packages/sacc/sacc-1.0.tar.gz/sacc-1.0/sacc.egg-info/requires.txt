@@ -1,0 +1,13 @@
+scipy
+numpy>=1.20
+astropy
+
+[all]
+qp-prob[all]
+numpydoc
+
+[doc]
+numpydoc
+
+[qp]
+qp-prob[all]
