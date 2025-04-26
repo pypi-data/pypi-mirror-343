@@ -1,0 +1,5 @@
+setup.py
+tx_math.egg-info/PKG-INFO
+tx_math.egg-info/SOURCES.txt
+tx_math.egg-info/dependency_links.txt
+tx_math.egg-info/top_level.txt
