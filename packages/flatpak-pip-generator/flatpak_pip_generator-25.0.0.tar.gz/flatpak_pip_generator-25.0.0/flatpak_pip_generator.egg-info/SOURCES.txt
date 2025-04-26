@@ -1,0 +1,9 @@
+pyproject.toml
+readme.md
+flatpak_pip_generator/__main__.py
+flatpak_pip_generator.egg-info/PKG-INFO
+flatpak_pip_generator.egg-info/SOURCES.txt
+flatpak_pip_generator.egg-info/dependency_links.txt
+flatpak_pip_generator.egg-info/entry_points.txt
+flatpak_pip_generator.egg-info/requires.txt
+flatpak_pip_generator.egg-info/top_level.txt
