@@ -1,0 +1,2 @@
+[console_scripts]
+xtnote = xtnote.cli:main_menu
