@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python_utils_AndrewGarwood"
+version = "0.0.2"
+description = "A collection of python scripts that are used to automate work tasks."
+authors = [
+    {name = "Andrew Garwood", email = "andrew.garwood.949@gmail.com"}
+]
+license = {file = "LICENSE"}
+readme = "README.md"
+dependencies = [
+    "pandas",
+    "openpyxl"
+]
+
+[project.urls]
+Homepage = "https://github.com/AndrewGarwood/python_utils_AndrewGarwood"
+Issues = "https://github.com/AndrewGarwood/python_utils_AndrewGarwood/issues"
