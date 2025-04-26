@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+pyproject.toml
+cloudwatchpy/cloudwatchpy.egg-info/PKG-INFO
+cloudwatchpy/cloudwatchpy.egg-info/SOURCES.txt
+cloudwatchpy/cloudwatchpy.egg-info/dependency_links.txt
+cloudwatchpy/cloudwatchpy.egg-info/requires.txt
+cloudwatchpy/cloudwatchpy.egg-info/top_level.txt
+tests/test_batcher.py
+tests/test_cloudwatch_logger.py
+tests/test_config.py
+tests/test_fallback_logger.py

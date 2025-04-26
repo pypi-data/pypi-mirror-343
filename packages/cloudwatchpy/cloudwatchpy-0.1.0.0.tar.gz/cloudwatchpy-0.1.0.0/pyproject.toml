@@ -1,0 +1,26 @@
+[project]
+name = "cloudwatchpy"
+version = "0.1.0.0"
+description = "Structured Python logger for AWS CloudWatch with ASGI/WSGI middleware support and fallback local logging"
+authors = [{ name = "Irfan Ahmad" }]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+    "boto3>=1.34.0",
+    "aiohttp>=3.9.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/irfan-ahmad-byte"
+"LinkedIn" = "https://www.linkedin.com/in/irfanahmad-com/"
+"Repository" = "https://github.com/irfan-ahmad-byte/cloudwatchpy"
+
+[tool.setuptools.packages.find]
+where = ["cloudwatchpy"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
