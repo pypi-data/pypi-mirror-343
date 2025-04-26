@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+litepolis_math/__init__.py
+litepolis_math/r_matrix_builder.py
+litepolis_math/validation.py
+litepolis_math.egg-info/PKG-INFO
+litepolis_math.egg-info/SOURCES.txt
+litepolis_math.egg-info/dependency_links.txt
+litepolis_math.egg-info/requires.txt
+litepolis_math.egg-info/top_level.txt
+litepolis_math/algorithms/__init__.py
+litepolis_math/algorithms/kmeans.py
+litepolis_math/algorithms/pca.py

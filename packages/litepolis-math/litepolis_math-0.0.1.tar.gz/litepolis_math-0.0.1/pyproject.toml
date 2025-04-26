@@ -1,0 +1,11 @@
+[project]
+name = "litepolis-math"
+version = "0.0.1"
+description = "Mathematical algorithms module for LitePolis platform, providing PCA and KMeans implementations for user vote data analysis"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scikit-learn",
+]
