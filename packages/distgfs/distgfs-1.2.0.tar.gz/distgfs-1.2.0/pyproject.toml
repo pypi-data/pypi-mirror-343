@@ -1,0 +1,31 @@
+[project]
+name = "distgfs"
+version = "1.2.0"
+description = "Distributed global function search via dlib"
+authors = [
+    {name = "Ivan Raikov", email = "ivan.g.raikov@gmail.com"}
+]
+license = {text = "GPL-3.0-or-later"}
+readme = "README.md"
+keywords = ["optimization", "distributed optimization", "GFS", "MPI", "mpi4py", "distributed computing"]
+requires-python = ">=3.9"
+dependencies = [
+    "mpi4py>=4.0.0",
+    "numpy>=1.26.2",
+    "ruff>=0.6.9",
+    "h5py>=3.7.0",
+    "dlib>=19.24.0",
+    "distwq>=1.1.0"
+]
+
+[tool.uv]
+dev-dependencies = [
+    "mypy>=1.11.2",
+    "pre-commit>=3.8.0",
+    "pytest>=8.3.3",
+    "scriv>=1.5.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
