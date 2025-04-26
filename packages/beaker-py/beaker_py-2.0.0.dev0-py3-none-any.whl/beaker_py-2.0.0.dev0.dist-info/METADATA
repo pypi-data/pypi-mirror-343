@@ -1,0 +1,80 @@
+Metadata-Version: 2.4
+Name: beaker-py
+Version: 2.0.0.dev0
+Summary: A Python Beaker client
+Author-email: Allen Institute for Artificial Intelligence <contact@allenai.org>, Pete Walsh <petew@allenai.org>
+Project-URL: Homepage, https://github.com/allenai/beaker
+Project-URL: Repository, https://github.com/allenai/beaker
+Project-URL: Changelog, https://github.com/allenai/beaker-py/blob/main/CHANGELOG.md
+Project-URL: Documentation, https://beaker-py.readthedocs.io/
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: packaging
+Requires-Dist: rich<14.0,>=12.3
+Requires-Dist: PyYAML
+Requires-Dist: grpcio>=1.70.0
+Requires-Dist: protobuf>=5.0
+Provides-Extra: dev
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: mypy<1.6,>=1.0; extra == "dev"
+Requires-Dist: types-requests; extra == "dev"
+Requires-Dist: types-cachetools; extra == "dev"
+Requires-Dist: types-PyYAML; extra == "dev"
+Requires-Dist: types-protobuf; extra == "dev"
+Requires-Dist: black<24.0,>=23.0; extra == "dev"
+Requires-Dist: isort<5.13,>=5.12; extra == "dev"
+Requires-Dist: pytest<8.0; extra == "dev"
+Requires-Dist: twine>=1.11.0; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: setuptools; extra == "dev"
+Requires-Dist: wheel; extra == "dev"
+Requires-Dist: petname==2.6; extra == "dev"
+Requires-Dist: grpcio-tools; extra == "dev"
+
+# Beaker-py
+
+A lightweight pure-Python client for Beaker.
+
+## Installing
+
+### Installing with `pip`
+
+**beaker-py** is available [on PyPI](https://pypi.org/project/beaker-py/). Just run
+
+```bash
+pip install beaker-py
+```
+
+### Installing from source
+
+To install **beaker-py** from source, first clone [the repository](https://github.com/allenai/beaker-py):
+
+```bash
+git clone https://github.com/allenai/beaker.git
+cd beaker/bindings/python
+```
+
+Then run:
+
+```bash
+make dev-install
+```
+
+## Quick start
+
+If you've already configured the [Beaker command-line client](https://github.com/allenai/beaker/), **beaker-py** will 
+find and use the existing configuration file (usually located at `$HOME/.beaker/config.yml`).
+Otherwise just set the environment variable `BEAKER_TOKEN` to your Beaker [user token](https://beaker.org/user).
+
+Either way, you should then instantiate the Beaker client with `.from_env()`:
+
+```python
+from beaker import Beaker
+
+beaker = Beaker.from_env(default_workspace="my_org/my_workspace")
+```
