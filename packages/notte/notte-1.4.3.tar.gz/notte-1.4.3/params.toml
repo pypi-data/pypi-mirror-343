@@ -1,0 +1,22 @@
+[RunParameters]
+n_jobs = 3
+tries_per_task = 1
+evaluator = "webvoyager"
+capture_logging = false
+max_task_duration_in_s = 300
+
+[RunParameters.task_set]
+name = "WebVoyagerSimple"
+start = 6
+
+[BrowserUse]
+use_vision = true
+model = "gpt-4o"
+headless = true
+max_steps = 20
+use_anchor = false
+
+[BrowserUse.proxy]
+server = "http://pr.oxylabs.io:7777"
+username = "customer-proxy_01_g0ZcZ-cc-us"
+password = "XUX=lZ7_nk+8FSTMTy"
