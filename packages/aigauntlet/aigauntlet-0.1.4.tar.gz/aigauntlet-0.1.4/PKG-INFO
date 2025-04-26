@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: aigauntlet
+Version: 0.1.4
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: anthropic>=0.49.0
+Requires-Dist: crewai>=0.100.1
+Requires-Dist: load-dotenv>=0.1.0
+Requires-Dist: nbformat>=5.10.4
+Requires-Dist: numpy>=2.2.2
+Requires-Dist: openai>=1.60.0
+Requires-Dist: plotly>=6.0.0
+Requires-Dist: pydantic>=2.10.5
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: requests>=2.32.3
+Requires-Dist: together==1.3.11
+Requires-Dist: types-requests>=2.32.0.20241016
+Dynamic: license-file
+
+# AIGauntlet
+A pip-installable library to locally run a gauntlet test on your AI agent or system.
