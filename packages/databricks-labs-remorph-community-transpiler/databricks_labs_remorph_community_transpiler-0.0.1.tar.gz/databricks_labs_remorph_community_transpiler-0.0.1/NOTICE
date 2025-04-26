@@ -1,0 +1,10 @@
+Copyright (2024) Databricks, Inc.
+
+This software includes software developed at Databricks (https://www.databricks.com/) and its use is subject to the included LICENSE file.
+
+This software contains code from the following open source projects, licensed under the MIT license:
+
+SQL Glot - https://github.com/tobymao/sqlglot
+Copyright 2023 Toby Mao
+License - https://github.com/tobymao/sqlglot/blob/main/LICENSE
+
