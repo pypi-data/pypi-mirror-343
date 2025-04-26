@@ -1,0 +1,2 @@
+strynova_dj_tailwindcss
+tests
