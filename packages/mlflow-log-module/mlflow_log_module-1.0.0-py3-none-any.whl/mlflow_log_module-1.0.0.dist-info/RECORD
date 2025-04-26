@@ -1,0 +1,7 @@
+mlflow_log_module-1.0.0.dist-info/licenses/LICENSE.lic,sha256=59UXjaNCo3-Rgq12eCPhmi-Rq7SWz8jfkCUt8Dc4KVc,1069
+model_transfer/__init__.py,sha256=fPMw7J0KrXiyo0UCfg2rDtC7tXadPEXLHgaPsAchIu0,44
+model_transfer/mlflow_log_module.py,sha256=gBu_e3krJjjN8XkA7u4iLIvUyc_RY3-Pj8v8CWl66rM,3758
+mlflow_log_module-1.0.0.dist-info/METADATA,sha256=r2Q-p398WycKncLRruZ3w95R-Rz-qoMykabbPVu1cAU,516
+mlflow_log_module-1.0.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+mlflow_log_module-1.0.0.dist-info/top_level.txt,sha256=7q44K5FPplyhek93ZxQCZWpABb4_irURVkdHPhjNzm4,15
+mlflow_log_module-1.0.0.dist-info/RECORD,,
