@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pwkit
+Version: 1.3.0
+Summary: Miscellaneous scientific and astronomical tools
+Home-page: https://github.com/pkgw/pwkit/
+Author: Peter Williams
+Author-email: peter@newton.cx
+License: MIT
+Keywords: astronomy science
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.6
+Provides-Extra: docs
+Requires-Dist: mock; extra == "docs"
+Requires-Dist: numpydoc; extra == "docs"
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx_rtd_theme; extra == "docs"
+Requires-Dist: sphinx-automodapi; extra == "docs"
+
+This is a collection of Peter Williams’ miscellaneous Python tools.
+
+
+For more information, including installation instructions, please visit [the
+project homepage].
+
+[the project homepage]: https://pwkit.readthedocs.io/
