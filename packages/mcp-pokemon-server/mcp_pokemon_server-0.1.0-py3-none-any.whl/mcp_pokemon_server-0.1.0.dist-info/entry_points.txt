@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-pokemon-server = mcp_pokemon_server:main

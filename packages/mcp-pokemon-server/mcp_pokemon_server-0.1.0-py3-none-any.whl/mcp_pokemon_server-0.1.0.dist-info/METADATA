@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: mcp-pokemon-server
+Version: 0.1.0
+Summary: 一个简单的宝可梦mcp工具测试使用
+Author-email: 布筝 <buzheng.life@outlook.com>
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: mcp[cli]>=1.6.0
+Description-Content-Type: text/markdown
+
+一个简答的mcp工具
