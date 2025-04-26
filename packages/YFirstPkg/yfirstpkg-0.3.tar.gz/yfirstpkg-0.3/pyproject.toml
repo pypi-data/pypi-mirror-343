@@ -1,0 +1,9 @@
+[project]
+name = "YFirstPkg"
+version = "0.3"
+description = "Simple package"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name="Anuva Das", email="anuvadas@hotmail.com" }]
+license = { text = "MIT" }
+dependencies = []
