@@ -1,0 +1,7 @@
+setup.py
+adnan/__init__.py
+adnan/main.py
+jarvis_project.egg-info/PKG-INFO
+jarvis_project.egg-info/SOURCES.txt
+jarvis_project.egg-info/dependency_links.txt
+jarvis_project.egg-info/top_level.txt
