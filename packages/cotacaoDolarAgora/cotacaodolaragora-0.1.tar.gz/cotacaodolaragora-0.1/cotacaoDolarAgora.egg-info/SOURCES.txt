@@ -1,0 +1,9 @@
+README.md
+setup.py
+cotacaoDolarAgora/__init__.py
+cotacaoDolarAgora/main.py
+cotacaoDolarAgora.egg-info/PKG-INFO
+cotacaoDolarAgora.egg-info/SOURCES.txt
+cotacaoDolarAgora.egg-info/dependency_links.txt
+cotacaoDolarAgora.egg-info/requires.txt
+cotacaoDolarAgora.egg-info/top_level.txt
