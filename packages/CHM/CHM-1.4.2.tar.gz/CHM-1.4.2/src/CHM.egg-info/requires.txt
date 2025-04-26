@@ -1,0 +1,13 @@
+vtk
+numpy
+xarray
+netCDF4
+pandas
+gdal
+dask[complete]
+pyvista>0.29
+rioxarray
+rasterio
+ninja
+cftime
+pyproj

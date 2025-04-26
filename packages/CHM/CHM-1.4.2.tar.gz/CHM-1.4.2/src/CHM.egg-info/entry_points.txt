@@ -1,0 +1,5 @@
+[console_scripts]
+pvdFromDir = CHM.tools.pvd_from_dir:main
+validateJSON = CHM.tools.validate_json:main
+vtu2geo = CHM.tools.vtu2geo:main
+windmapper2mesher = CHM.tools.windmapper2mesher:main

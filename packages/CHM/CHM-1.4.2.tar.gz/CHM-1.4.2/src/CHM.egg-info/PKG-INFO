@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: CHM
+Version: 1.4.2
+Summary: python tools for CHM
+Author: Chris Marsh
+Project-URL: Homepage, https://github.com/Chrismarsh/mesher
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Python tools for working with the Canadian Hydrological Model (CHM)
+
+Documentation can be found at https://pychm.readthedocs.io/en/latest/index.html#
