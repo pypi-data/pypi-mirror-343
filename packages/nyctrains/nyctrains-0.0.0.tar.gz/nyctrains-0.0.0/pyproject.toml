@@ -1,0 +1,75 @@
+[project]
+name = "nyctrains"
+description = "Python tools and FastAPI backend for MTA GTFS-RT subway and LIRR data"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Mikael Moise", email = "mikaelmoise00@gmail.com" }]
+dynamic = ["version"]
+dependencies = [
+    "fastapi",
+    "gtfs-realtime-bindings",
+    "httpx",
+    "yc-protobuf3-to-dict",
+    "pydantic",
+    "python-dotenv",
+    "requests",
+    "uvicorn",
+    "protobuf",
+    "pandas",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+]
+keywords = [
+    "data",
+    "trains",
+    "data science",
+    "data engineering",
+    "api"
+]
+[project.urls]
+"Repository" = "https://github.com/arrismo/nyctrains"
+"Bug Tracker" = "https://github.com/arrismo/nyctrains/issues"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.3.5",
+    "pytest-cov",
+    "pytest-asyncio",
+    "respx"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+[tool.setuptools.packages.find]
+include = ["nyctrains*"]
+
+# Add coverage configuration
+[tool.coverage.run]
+source = ["nyctrains"]
+omit = [
+    "nyctrains/models.py", # Exclude model definitions
+    "*/__main__.py", # Standard exclusion
+]
+
+[tool.coverage.report]
+# Fail if coverage drops below 100%
+# fail_under = 100 
+exclude_lines = [
+    "pragma: no cover", # Standard pragma
+    "raise NotImplementedError", # Don't require tests for abstract methods
+    "if __name__ == .__main__.:", # Standard main block exclusion
+    "if TYPE_CHECKING:", # Don't require test for type checking blocks
+    '\.\.\.', # Ignore ellipsis lines (using single quotes)
+    "pass", # Ignore simple pass statements if necessary
+    'print\(.*\)' # Optionally ignore all print statements (using single quotes)
+]
