@@ -1,0 +1,2 @@
+def rollback(items):
+    pass
