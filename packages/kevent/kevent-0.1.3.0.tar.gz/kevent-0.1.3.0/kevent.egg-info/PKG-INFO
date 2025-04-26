@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: kevent
+Version: 0.1.3.0
+Summary: KEvent
+Home-page: https://github.com/kokaito-git/kevent
+Author: kokaito-git
+Author-email: kokaito.git@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.13
+License-File: LICENSE
+Requires-Dist: klocker
+Requires-Dist: kmodels
+Requires-Dist: typeguard
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
