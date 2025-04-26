@@ -1,0 +1,12 @@
+{% extends "xblog/blog_base.html" %}
+{% block maincontent %}
+<form action="" method="post" accept-charset="utf-8">
+	{% csrf_token %}
+    <div class="alert alert-danger">
+      <strong>Danger!</strong> This post will be permanently deleted!
+    </div>
+    {% include "includes/post_template.txt" %}
+        <button type="submit">Delete</button>
+</form>
+{% endblock %}
+

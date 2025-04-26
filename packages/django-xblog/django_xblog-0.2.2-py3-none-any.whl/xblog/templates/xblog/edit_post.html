@@ -1,0 +1,9 @@
+{% extends "xblog/blog_base.html" %}
+{% block maincontent %}
+<form action="" method="post" accept-charset="utf-8">
+	{% csrf_token %}
+    {% form form %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
+
