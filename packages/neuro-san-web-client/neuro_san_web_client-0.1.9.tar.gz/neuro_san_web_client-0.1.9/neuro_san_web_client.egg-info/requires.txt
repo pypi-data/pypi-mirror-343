@@ -1,0 +1,10 @@
+leaf_common==1.2.21
+leaf_server_common==0.1.18
+neuro_san==0.5.20
+Flask==3.1.0
+Flask-SocketIO==5.5.1
+pyOpenSSL==25.0.0
+PyJWT>=2.10.1
+hvac==1.1.0
+eventlet==0.39.1
+pyvis~=0.3.2
