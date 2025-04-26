@@ -1,0 +1,51 @@
+Metadata-Version: 2.2
+Name: idtec_core
+Version: 1.5.0
+Summary: Post-Quantum Cryptographic Signature & Encryption Module for Python
+Home-page: https://github.com/idtec-secure/idtec_core
+Author: IDTec Quantum Team
+Author-email: contact@idtecsecure.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Security :: Cryptography
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: cryptography>=42.0.0
+Requires-Dist: pycryptodome>=3.19.0
+Requires-Dist: click>=8.1.3
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+# IDTec Core 🔐
+
+**IDTec Core** is a Python-based cryptographic toolkit built for post-quantum security using the proprietary **IDTec-1024** algorithm and advanced ThreeFish encryption and SHAKE hashing. Designed for enterprises, developers, and researchers working in cybersecurity, defense, finance, and healthcare.
+
+---
+
+## 🚀 Features
+- Key Exchange (RLWE)
+- Threefish Encryption and Decryption
+- Post-Quantum Encryption & Digital Signatures
+- SHAKE-based secure hashing
+- Cyclotomic Ideal Lattice Generation
+- Efficient Sampling of Error Terms
+- Lightweight CLI tools: `idtec-sign` and `idtec-encrypt`
+- Compatible with GDPR, HIPAA, and NIST frameworks
+
+---
+
+## 📦 Installation
+
+```bash
+pip install idtec_core
