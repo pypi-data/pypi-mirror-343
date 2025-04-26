@@ -1,0 +1,12 @@
+[tools]
+python = "3.13"
+uv = "latest"
+
+[env]
+mise.file = ".env"
+
+[tasks.build]
+run = ["rm -rf dist/*", "uv build"]
+
+[tasks.publish]
+run = "uv publish"
