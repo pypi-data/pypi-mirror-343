@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pspark-sdk"
+version = "0.0.16"
+requires-python = ">=3.8.0"
+description = "Python SDK for merchant REST API"
+readme = "README.md"
+authors = [{ name = "PSPark" }]
+license = { file = "LICENSE" }
+dependencies = [
+    "httpx",
+    "python-jose[cryptography]",
+]
+
+[project.urls]
+Homepage = "https://github.com/ps-park/sdk-python"
+
+[tool.flake8]
+max-line-length = 120
+extend-ignore = ["E203", "W503"]
+exclude = [".git", "__pycache__", ".venv", "build", "dist"]
+per-file-ignores = [
+    "__init__.py: F401"
+]
