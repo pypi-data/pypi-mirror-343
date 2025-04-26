@@ -1,0 +1,10 @@
+[console_scripts]
+bitget = uni_cli.bitget:app
+gate = uni_cli.gate:app
+ms = uni_cli.info:ms
+os = uni_cli.info:os
+pst = uni_cli.info:print_strf_time
+pyv = uni_cli.info:py_version
+say = uni_cli.info:say
+ts = uni_cli.info:ts
+uuid = uni_cli.info:gen_uuid
