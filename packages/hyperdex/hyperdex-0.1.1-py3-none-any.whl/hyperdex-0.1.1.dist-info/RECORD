@@ -1,0 +1,17 @@
+hyperdex/__init__.py,sha256=m9E2P-bCC3fQBzTPNfyiw7c2ptEZodbaI2-4jw3Q9b8,374
+hyperdex/cli.py,sha256=3ylbWqCPA0tijr7TmHbsy3gjyFDKNHM7uWR6JsBA8P8,5376
+tools/__init__.py,sha256=kYrOhSoxw5rERKpFL77ZTwNo6cMLJ9KFnpE5YvmISDA,113
+tools/gh_repo_fetch_forks_shane.py,sha256=uLbukOxm74XIwl9K4cB_nbHVh9osLWH-a3DI3CGTBcQ,19539
+tools/gh_repo_fetch_index_cello.py,sha256=HZQUcr9pJ5CMZtbx2CDF6C6bHFG-ZtXWX_yooaYDS-g,20226
+tools/gh_repo_fetch_index_shane.py,sha256=LsvFISlR-h5giIDScSNQdSDTw3arg5AqrCrmxzKAutg,17359
+tools/gh_repo_release_initial_cello.py,sha256=0c7D6nawj5NTS7R0ZEfLQD7WWwD2rBWcIpN9jVNh2aw,15510
+tools/gh_repo_release_initial_shane.py,sha256=6ZijI95JI_k5LqxPUR9aB58DeebNz-C201fgf_QOQOk,9296
+tools/gh_repo_release_latest_cello.py,sha256=5gT0ttwoF7m7janMhCpvG_fKcYnq-k4AnfhaCm2BHvk,20094
+tools/gh_repo_release_latest_shane.py,sha256=imRbRQAzumEjDA0cMbyE_p3GaHz8dmPLUqLTJ4EFAJU,14227
+tools/gh_repo_setup_secret.py,sha256=Rgh1Nnl45ZEqe0ntwAdv-eoRYQZ0R7AkvyxOpvQgqpk,6328
+tools/gh_repo_update_readmes.py,sha256=_narCJeJMIjBycgeaYAssht3GCN56-pQtlAk9d0otKI,9977
+tools/utils.py,sha256=Dl8K2rJkNAmk1lx3Je2QVH_RfVbk3apYc79DskrQWKw,1065
+hyperdex-0.1.1.dist-info/METADATA,sha256=yMAqsQvY17RSMQF3L0i6rsVCCJxDZq-EnMTbJIpz93c,8651
+hyperdex-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hyperdex-0.1.1.dist-info/entry_points.txt,sha256=QevbBlaZAjkGDtZw9ctNEt-KIBU71Zsfon6fyIDg6II,107
+hyperdex-0.1.1.dist-info/RECORD,,

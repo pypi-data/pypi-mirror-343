@@ -1,0 +1,3 @@
+[console_scripts]
+hyperdex = hyperdex.cli:main
+hyperdex-fetch-forks-shane = hyperdex.cli:fetch_forks_shane
