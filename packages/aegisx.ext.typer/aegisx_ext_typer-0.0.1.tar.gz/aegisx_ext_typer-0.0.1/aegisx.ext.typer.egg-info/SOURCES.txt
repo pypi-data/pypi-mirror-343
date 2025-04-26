@@ -1,0 +1,10 @@
+MANIFEST.in
+VERSION
+setup.py
+aegisx.ext.typer.egg-info/PKG-INFO
+aegisx.ext.typer.egg-info/SOURCES.txt
+aegisx.ext.typer.egg-info/dependency_links.txt
+aegisx.ext.typer.egg-info/requires.txt
+aegisx.ext.typer.egg-info/top_level.txt
+aegisx/ext/typer/__init__.py
+aegisx/ext/typer/package.json
