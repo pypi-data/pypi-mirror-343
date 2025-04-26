@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: daxpass
+Version: 1.0
+Summary: A module used to create random passwords with customizable options!
+Author: Annie
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Dax - The Password Module
+
+Dax is a simple way to _**create passwords and use then however you want!**_ If it's from cloud account protection, or to make a buddy that can auto-generate passwords for you!
+
+**!!DISCLAIMER!!**
+_**Dax does not come with any intellegent password creation,**_ it only comprises of a custom list that generates a random string of items with a certain length, so _**it should not be trusted with anything that contains any personal information, or data you wish not to share.**_
