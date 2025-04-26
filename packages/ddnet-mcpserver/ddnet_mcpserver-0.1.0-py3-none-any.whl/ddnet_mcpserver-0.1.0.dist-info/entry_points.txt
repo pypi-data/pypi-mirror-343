@@ -1,0 +1,2 @@
+[console_scripts]
+ddnet-mcpserver = ddnet_mcpserver.__main__:main
