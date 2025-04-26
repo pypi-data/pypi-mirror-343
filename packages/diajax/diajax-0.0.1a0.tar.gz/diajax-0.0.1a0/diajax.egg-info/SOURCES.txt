@@ -1,0 +1,10 @@
+LICENSE
+README.md
+dia.py
+setup.py
+diajax.egg-info/PKG-INFO
+diajax.egg-info/SOURCES.txt
+diajax.egg-info/dependency_links.txt
+diajax.egg-info/entry_points.txt
+diajax.egg-info/requires.txt
+diajax.egg-info/top_level.txt
