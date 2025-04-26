@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jsonspice"
+version = "1.0.0"
+description = "Python utility to allow JSON kernels in SpiceyPy."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT License"}
+
+dependencies = [
+    "spiceypy",
+    "json5",
+]
+
+[project.urls]
+Homepage = "https://github.com/jacobwilliams/json-spice"
+Issues = "https://github.com/jacobwilliams/json-spice/issues"
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = []
+
+[tool.pixi.dependencies]
+pip = "*"
+
