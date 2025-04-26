@@ -1,0 +1,2 @@
+[console_scripts]
+elastic-cli = elastro.cli.cli:main
