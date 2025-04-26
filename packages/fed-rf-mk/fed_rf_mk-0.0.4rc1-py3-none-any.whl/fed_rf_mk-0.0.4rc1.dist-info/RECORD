@@ -1,0 +1,16 @@
+fed_rf_mk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fed_rf_mk/client.py,sha256=f4cMJ5G6s9wq81BHoU6QLxD541vIV0aiOvaWY5_8JDw,14995
+fed_rf_mk/datasets.py,sha256=w2QdA93diH6Y6PJXKLMhBYfcGmwylB2avchpP5ef9-E,298
+fed_rf_mk/datasites.py,sha256=p8vbtnru0trDoY13brMFrV41ZCpTz6uvQUjZefPAZTY,3193
+fed_rf_mk/server.py,sha256=fGby8RTBrKag5b4-w8PfUubJ7RQRFNK26bquksFG1jM,3234
+fed_rf_mk/utils.py,sha256=WSoccCQ5qPCcXSEE8c2ph5agmgj8YGBNCbE8iIff-A8,3120
+fed_rf_mk-0.0.4rc1.dist-info/licenses/LICENSE,sha256=-Ys5-IVa1iS4xypmEy3ItDYi6oiYYpaW2Gys21BRY_U,1075
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_client.py,sha256=b-t_TGZQI4M1OyjGid4eUe4uhAbx1UAPGuvJcmFDsZ8,1367
+tests/test_server.py,sha256=DFbvSeWLmDm2OczVeN6i5L7ZwhGyleiqz3h01qQn9Ag,2152
+fed_rf_mk-0.0.4rc1.dist-info/METADATA,sha256=bvXfxy4tdHQBofoyMF76-p-UwgHoEUTcpCLPf76RMSE,8480
+fed_rf_mk-0.0.4rc1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+fed_rf_mk-0.0.4rc1.dist-info/entry_points.txt,sha256=DO5WRDoFAR2L37jVVRtQ9QawQpomVA8SpMn0VUd_Wig,59
+fed_rf_mk-0.0.4rc1.dist-info/top_level.txt,sha256=HPsHpBrDW_DRvw5GNpvUSTV9dBp7JcHrvU7QTR1V2Jo,16
+fed_rf_mk-0.0.4rc1.dist-info/RECORD,,
