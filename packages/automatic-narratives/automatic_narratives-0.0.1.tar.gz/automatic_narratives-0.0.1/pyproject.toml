@@ -1,0 +1,15 @@
+[project]
+name = "automatic_narratives"
+version = "0.0.1"
+description = "This package lets one infer agency and communion codes from life narratives based on RoBERTa transformer embeddings."
+authors = [
+    { name="Johannes Klinz", email="johannes.klinz@gmail.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = []
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

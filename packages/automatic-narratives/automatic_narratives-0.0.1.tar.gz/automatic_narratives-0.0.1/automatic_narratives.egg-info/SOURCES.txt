@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+automatic_narratives/__init__.py
+automatic_narratives/automatic_narratives.py
+automatic_narratives.egg-info/PKG-INFO
+automatic_narratives.egg-info/SOURCES.txt
+automatic_narratives.egg-info/dependency_links.txt
+automatic_narratives.egg-info/top_level.txt
