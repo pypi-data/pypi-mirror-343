@@ -1,0 +1,265 @@
+Metadata-Version: 2.4
+Name: mkdocs-table-of-figures
+Version: 0.5.0
+Summary: A MkDocs plugin listing all figures to create a table of figures
+Home-page: https://gitlab.com/thiti-mkdocs-plugins/mkdocs-table-of-figures
+Author: Thibaud Briard
+Author-email: thibaud.briard@outlook.com
+License: MIT
+Keywords: mkdocs
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: mkdocs>=1.6.0
+Requires-Dist: Jinja2>=3.1.6
+
+# mkdocs-table-of-figures
+
+This is a plugin that creates a `figcaption` with elements `alt` attribute or title and lists all figures in files into a table of figures to be integrated in `Markdown` pages for MkDocs.
+
+## Setup
+
+### Installing using pip:
+
+`pip install mkdocs-table-of-figures`
+
+## Config
+
+You need to activate the plugin in `mkdocs.yml`:
+
+``` yaml
+plugins:
+  - table-of-figures:
+      # directive_identifier: 'table-of-figures'
+      # figure_types:
+      #   - image
+      #   - table
+      #   - codeblock
+        
+      # custom_templates_path: null
+      # translations_overrides_path: null
+
+      # caption_identifier_description_separator: ' — '
+      # sections_breadcrumb_separator: ' > '
+```
+
+### Theme Recommendation
+
+The [**Material for MkDocs**](https://squidfunk.github.io/mkdocs-material/) theme is highly recommended:
+
+- If you're using another theme, you may need to add **custom CSS** for proper figure rendering and layout.
+- Some figure types might **require extra CSS tweaks** to display correctly outside of Material.
+
+``` yaml
+theme:
+  name: material
+```
+
+### Markdown extensions
+
+- `md_in_html` must be enabled if your using builtin figure types.
+- `tables` must be enabled if your using default table template. It is enabled by default when using the `material` theme.
+- Additional extensions may be needed depending on the figure types you want to use.
+
+``` yaml
+markdown_extensions:
+  - md_in_html
+  - tables # enabled by default with theme `material`
+```
+
+### Figure Types
+
+#### Builtin Types
+
+The plugin provide builtin types that can be referenced by name instead of complete configuration
+
+| name      | markdown                                               | enabled by default |
+| --------- | ------------------------------------------------------ | ------------------ |
+| image     | markdown image                                         | `true`             |
+| table     | markdown table                                         | `true`             |
+| codeblock | markdown codeblock                                     | `true`             |
+| mermaid   | markdown codeblock with `mermaid` as lang              | `false`            |
+| pair      | 2 markdown images separated and encapsulated with `\|` | `false`            |
+
+#### Order Matters
+
+The **order of `figure_types`** in your plugin config is important:
+
+- Types defined earlier in the list have **higher priority**.
+- If multiple figure types have similar patterns that could match the same content, **only the first match wins**.
+
+``` yaml
+plugins:
+  - table-of-figures:
+      figure_types:
+        - pair # Highest priority
+        - image
+        - table
+        - mermaid
+        - codeblock # Lowest priority
+```
+
+## Usage
+
+Using the command `mkdocs build` or `mkdocs serve` will trigger the plugin if it has been set correctly in the config file.
+
+you can disable the plugin by using `enabled` plugin option:
+
+``` yaml
+plugins:
+  table-of-figures:
+    enabled: false
+```
+
+### Figure detection
+
+The plugin will only look for Markdown` element along with caption. If you don't set any caption for the Markdown element it will be ignored.
+
+The caption can be empty but need the starting and closing `"` character.
+
+### Table creation
+
+The table referencing all the figures can be placed anywhere and multiple times in documentation using the directive like so:
+
+``` markdown
+# Title
+
+Content of your page
+
+<!-- <directive> -->
+
+## Subtitle
+
+Content of your page
+```
+
+`<directive>` is set by plugin option `directive_identifier` and is `table-of-figure` by default.
+
+## Customization
+
+### Figure Types
+
+Apart from the builtin types you can define your own type by providing all necessary information in the `figure_types` option.
+
+Here are the values available for a custom figure type:
+
+| Key      | Type                   | Is required | Description                                                                                                  |
+| -------- | ---------------------- | ----------- | ------------------------------------------------------------------------------------------------------------ |
+| name     | `str`                  | `true`      | The name of the figure type.                                                                                 |
+| pattern  | `str` (regex pattern)  | `true`      | The regex pattern to find the figure in markdown content.                                                    |
+| template | `str` (jinja2 pattern) | `false`     | The jinja2 pattern to replace regex match with in markdown content.                                          |
+| metadata | `dict`                 | `false`     | Additional arbitrary values that can be used in template. (builtin types have an `icon` entry in `metadata`) |
+
+Here is an example of a custom figure type with some builtin types too:
+
+``` yaml
+plugins:
+  - table-of-figures:
+      figure_types:
+        - image
+        - table
+        - name: custom
+          pattern: '\{> (?P<custom>.+?) <\}\r?\n"(?P<caption>.*?)"'
+          template: |
+            <figure>
+            {{ figure.match_groups.custom }}
+            <figcaption>{{ figure.caption }}</figcaption>
+            </figure>
+          metadata: # Whatever is need
+            i: 1
+            b: true
+            s: 'one'
+```
+
+### Translations
+
+The plugin currently have been translated to 3 languages:
+
+- `en`
+- `fr`
+- `de`
+
+Fill free to open an [issue](https://gitlab.com/thiti-mkdocs-plugins/mkdocs-table-of-figures/-/issues) if you want to add support for a sepcific language.
+
+You can override the translations by providing your own json file with the config option `translations_overrides_path`. (The path begin at the same directory as `mkdocs.yml`.)
+
+Here is the current structure of the translations file:
+
+``` json
+{
+    "table": {
+        "header": {
+            "figure": "Figure",
+            "category": "Category",
+            "caption": "Caption"
+        },
+        "no_figures": "No figures to list..."
+    },
+    "caption": {
+        "index": {
+            "prefix": "Fig. ",
+            "suffix": ""
+        }
+    },
+    "figure_types": {
+        "image": "Image",
+        "table": "Table",
+        "codeblock": "Code Block",
+        "mermaid": "Diagram",
+        "pair": "Image Pair"
+    }
+}
+```
+
+The override file does not strictly need to follow the translations structure it can add new entries if needed for custom figure types labels. It will only affect values that are set.
+
+A fallback to `en` translations is used for unset values.
+
+So the translations follow this rule: `en < theme:language|locale < overrides file`
+
+### Custom template
+
+You can set custom template by creating a directory containing the file `output.md.j2` and then referencing the path to the directory in the plugin option `custom_templates_path`
+
+Here is the default template used, feel free to use it and modify it to your needs:
+
+``` jinja2
+{%- if figures.size > 0 -%}
+
+| {{ translations['table.header.figure'] or 'figure' }} | {{ translations['table.header.category'] or 'category' }} | {{ translations['table.header.caption'] or 'caption' }} |
+| --- | --- | --- |
+
+{%- for figure in figures %}
+| [{{ figure.caption_identifier }}]({{ figure.uri }}) | {{ ':' ~ figure.figure_type_metadata.icon ~ ': ' if 'attr_list' in config.markdown_extensions and 'pymdownx.emoji' in config.markdown_extensions and figure.figure_type_metadata.get('icon') is not none }}{{ figure.figure_type_label }} | {{ figure.caption_description }} |
+{%- endfor -%}
+
+{%- else -%}
+*`{{ translations['table.no_figures'] }}`*
+{%- endif -%}
+```
+
+## Support
+
+### Custom attributes
+
+This plugin support the use of custom attributes by using markdown extension `attr_list` for the following builtin types:
+
+- `image`
+- `pair`
+
+Note that `align=left` and `align=right` attributes will be overriden by figures style from `material` theme.
+
+## License
+
+This project is under MIT license. See the `license` file for more details.
+
+## See Also
+
+- [GitLab Repo](http://www.gitlab.org/cfpt-mkdocs-plugins/mkdocs-table-of-figures/)
+- [MkDocs Website](http://www.mkdocs.org/)
+- [MkDocs-Material Documentation](https://squidfunk.github.io/mkdocs-material/)
+- [Mermaid Documentation](https://mermaid.org/intro/)
