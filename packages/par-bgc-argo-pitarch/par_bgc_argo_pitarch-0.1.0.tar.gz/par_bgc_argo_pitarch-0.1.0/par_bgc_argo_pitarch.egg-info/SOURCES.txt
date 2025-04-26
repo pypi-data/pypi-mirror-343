@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+par_bgc_argo_pitarch/__init__.py
+par_bgc_argo_pitarch/par_from_Ed_380_412_443_490_555_v5.py
+par_bgc_argo_pitarch/par_from_Ed_380_412_490_v5.py
+par_bgc_argo_pitarch/par_from_Ed_380_443_490_555_v5.py
+par_bgc_argo_pitarch/par_from_Ed_380_443_490_560_v5.py
+par_bgc_argo_pitarch/par_from_Ed_380_490_555_665_v5.py
+par_bgc_argo_pitarch.egg-info/PKG-INFO
+par_bgc_argo_pitarch.egg-info/SOURCES.txt
+par_bgc_argo_pitarch.egg-info/dependency_links.txt
+par_bgc_argo_pitarch.egg-info/requires.txt
+par_bgc_argo_pitarch.egg-info/top_level.txt
