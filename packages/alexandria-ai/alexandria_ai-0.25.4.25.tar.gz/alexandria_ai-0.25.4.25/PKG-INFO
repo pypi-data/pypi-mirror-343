@@ -1,0 +1,27 @@
+Metadata-Version: 2.3
+Name: alexandria-ai
+Version: 0.25.4.25
+Summary: Alexandria: Library for Knowledge for AI Agents
+License: Apache-2.0
+Keywords: domain,expertise,knowledge,Artificial Intelligence,A.I.,AI,agent
+Author: Aitomatic, Inc.
+Author-email: engineering@aitomatic.com
+Maintainer: Aitomatic, Inc.
+Maintainer-email: engineering@aitomatic.com
+Requires-Python: >=3.12,<3.14
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: contrib
+Requires-Dist: loguru (>=0.7)
+Requires-Dist: openai (>=1.76)
+Requires-Dist: python-dotenv (>=1.1)
+Requires-Dist: tqdm (>=4.67)
+Project-URL: Documentation, https://aitomatic.github.io/alexandria
+Project-URL: Homepage, https://aitomatic.github.io/alexandria
+Project-URL: Repository, https://github.com/aitomatic/alexandria
+Description-Content-Type: text/markdown
+
+# Alexandria: Library for Knowledge for AI Agents
+

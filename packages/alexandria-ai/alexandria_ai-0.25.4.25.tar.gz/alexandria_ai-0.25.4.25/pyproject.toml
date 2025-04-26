@@ -1,0 +1,117 @@
+[tool.poetry]
+name = "alexandria-ai"
+version = "0.25.04.25"
+
+authors = [
+  "Aitomatic, Inc. <engineering@aitomatic.com>",
+  "Christopher Nguyen <ctn@aitomatic.com>",
+  "Vinh Luong <vinh@aitomatic.com>",
+]
+maintainers = [
+  "Aitomatic, Inc. <engineering@aitomatic.com>",
+  "Christopher Nguyen <ctn@aitomatic.com>",
+  "Vinh Luong <vinh@aitomatic.com>",
+]
+
+license = "Apache-2.0"
+
+description = "Alexandria: Library for Knowledge for AI Agents"
+readme = "README.md"
+
+homepage = "https://aitomatic.github.io/alexandria"
+repository = "https://github.com/aitomatic/alexandria"
+documentation = "https://aitomatic.github.io/alexandria"
+
+keywords = [
+  "domain", "expertise", "knowledge",
+  "Artificial Intelligence", "A.I.", "AI",
+  "agent",
+]
+classifiers = [
+]
+
+packages = [
+  {include = "alexandria"},
+]
+
+include = [
+]
+exclude = [
+]
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = ">=6.29"
+notebook = ">=7.4"
+
+[tool.poetry.group.docs.dependencies]
+sphinx = ">=8.2"
+sphinx-autobuild = ">=2024.10"
+sphinx-press-theme = ">=0.9"
+myst-parser = ">=4.0"
+
+[tool.poetry.group.lint.dependencies]
+flake8 = ">=7.2"
+pylint = ">=3.3"
+ruff = ">=0.11"
+
+[tool.poetry.group.test.dependencies]
+pytest = ">=8.3"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.14"
+# OpenAI interface
+openai = ">=1.76"
+# misc / other
+loguru = ">=0.7"
+python-dotenv = ">=1.1"
+tqdm = ">=4.67"
+
+# optional dependencies required by extras
+
+[tool.poetry.extras]
+contrib = [
+]
+
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = [
+  "poetry-core >= 2.1",
+]
+
+
+# pylint.readthedocs.io/en/latest/user_guide/usage/run.html
+# pylint.readthedocs.io/en/latest/user_guide/configuration/index.html
+[tool.pylint."messages control"]
+disable = [
+  "astroid-error",
+  "attribute-defined-outside-init",
+  "duplicate-code",
+  "fixme",
+  "import-error",
+  "invalid-name",
+  "line-too-long",
+  "missing-class-docstring",
+  "missing-function-docstring",
+  "missing-module-docstring",
+  "no-name-in-module",
+  "raw-checker-failed",
+  "redefined-outer-name",
+  "relative-beyond-top-level",
+  "too-few-public-methods",
+  "too-many-positional-arguments",
+  "unexpected-keyword-arg",
+  "unknown-option-value",
+  "unnecessary-pass",
+]
+
+
+[tool.pytest.ini_options]
+addopts = [
+  "--import-mode=importlib",
+]
+filterwarnings = [
+  "ignore:pkg_resources is deprecated as an API:DeprecationWarning",
+  "ignore:Deprecated call to `pkg_resources.declare_namespace.*google.*:DeprecationWarning",
+]
