@@ -1,0 +1,8 @@
+mqsc/pyqdmi.cpython-310-x86_64-linux-gnu.so,sha256=jVXT5RbFF-Kw6dNTChyRoKu4AgqIKZIZQN2b_mnJ0h0,238776
+mqsc/pyqdmi_qiskit/__init__.py,sha256=e_-C-j4-9vtfNzIwaDzFwOpNhiiAkVNEltkLNzUwekc,335
+mqsc/pyqdmi_qiskit/backend.py,sha256=46GVohRLja5XsLex8Mw-nt9F-G2EeZDT_iIkPBPQev8,12759
+mqsc/pyqdmi_qiskit/job.py,sha256=m_Or8M07oawo4fOQWVE-PjwqNxq1YdnV8oWGg1BgWmg,3094
+mqsc_pyqdmi-0.1.1.dist-info/METADATA,sha256=ogFpAXPRJko484pDWJdDk61kOuEXokYWVAKN6VkK77Q,2569
+mqsc_pyqdmi-0.1.1.dist-info/WHEEL,sha256=w1uYtsMA2mVb-W_glL_wsZs8eHlKhgM8IpC-N9bjhY4,157
+mqsc_pyqdmi-0.1.1.dist-info/RECORD,,
+mqsc_pyqdmi-0.1.1.dist-info/licenses/LICENSE.md,sha256=iAW1GdXFllP7TSjpE1MOAYizxmPbGBlCoPn_HMdBb70,1093
