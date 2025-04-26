@@ -1,0 +1,2 @@
+[console_scripts]
+virtuered-webui = virtuered_webui.cli:main
