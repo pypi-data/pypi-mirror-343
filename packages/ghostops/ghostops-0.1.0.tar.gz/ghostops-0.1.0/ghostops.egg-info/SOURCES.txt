@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+ghostops/__init__.py
+ghostops/__main__.py
+ghostops/core.py
+ghostops/utils.py
+ghostops.egg-info/PKG-INFO
+ghostops.egg-info/SOURCES.txt
+ghostops.egg-info/dependency_links.txt
+ghostops.egg-info/entry_points.txt
+ghostops.egg-info/top_level.txt
