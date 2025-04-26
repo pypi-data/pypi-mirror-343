@@ -1,0 +1,9 @@
+README.md
+setup.py
+SamplePkg/__init__.py
+SamplePkg/mymodule1.py
+SamplePkg/mymodule2.py
+YFirstPkg.egg-info/PKG-INFO
+YFirstPkg.egg-info/SOURCES.txt
+YFirstPkg.egg-info/dependency_links.txt
+YFirstPkg.egg-info/top_level.txt

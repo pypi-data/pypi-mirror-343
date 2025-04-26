@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: YFirstPkg
+Version: 0.2
+Summary: A Simple Python library
+Home-page: https://github.com/Anuva13/SamplePkg.git
+Author: Anuva Das
+Author-email: anuvadas@hotmail.com
+License: MIT
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: summary
