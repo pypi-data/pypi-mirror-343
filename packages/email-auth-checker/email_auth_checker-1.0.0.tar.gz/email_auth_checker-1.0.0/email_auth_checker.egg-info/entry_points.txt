@@ -1,0 +1,2 @@
+[console_scripts]
+email_auth_checker = email_auth_checker.cli:main
