@@ -1,0 +1,2 @@
+[ape_cli_subcommands]
+ape_turnkey = ape_turnkey._cli:cli
