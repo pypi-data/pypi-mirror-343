@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+tests/__init__.py
+tests/test_writer.py
+wandb_tsbw/__init__.py
+wandb_tsbw/writer.py
+wandb_tsbw.egg-info/PKG-INFO
+wandb_tsbw.egg-info/SOURCES.txt
+wandb_tsbw.egg-info/dependency_links.txt
+wandb_tsbw.egg-info/requires.txt
+wandb_tsbw.egg-info/top_level.txt

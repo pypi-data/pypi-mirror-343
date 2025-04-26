@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=64.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wandb_tsbw"
+version = "0.1.0"
+description = "A compatibility layer for TensorBoard's SummaryWriter to log to Weights & Biases"
+readme = "README.md"
+authors = [
+    {name = "Kevin Denamganai", email = "denamganai.kevin@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+keywords = ["tensorflow", "tensorboard", "pytorch", "wandb", "logging", "machine learning"]
+requires-python = ">=3.6"
+dependencies = [
+    "wandb>=0.12.0",
+    "numpy>=1.19.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Near32/wandb_tsbw"
+

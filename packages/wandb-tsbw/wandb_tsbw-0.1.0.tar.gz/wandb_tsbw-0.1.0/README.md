@@ -1,0 +1,128 @@
+# wandb_tsbw
+
+A compatibility layer for TensorBoard's SummaryWriter to log to Weights & Biases.
+
+## Description
+
+`wandb_tsbw` provides a drop-in replacement for TensorBoard's SummaryWriter that logs to Weights & Biases (W&B) instead. This allows users to easily migrate from TensorBoard to W&B without changing their existing code.
+
+## Installation
+
+```bash
+pip install wandb_tsbw
+```
+
+## Requirements
+
+- Python >= 3.6
+- wandb >= 0.12.0
+- numpy >= 1.19.0
+
+## Usage
+
+Simply replace your TensorBoard import with the `wandb_tsbw` import:
+
+```python
+# Original TensorBoard code:
+# from torch.utils.tensorboard import SummaryWriter
+
+# New W&B-based code:
+from wandb_tsbw import SummaryWriter
+
+# Rest of your code remains the same
+writer = SummaryWriter(log_dir='./runs/experiment_1')
+writer.add_scalar('loss', 0.5, global_step=1)
+
+# Pass W&B specific parameters through wandb_kwargs
+writer = SummaryWriter(
+    log_dir='./runs/experiment_1',
+    wandb_kwargs={
+        'project': 'my_project',
+        'entity': 'my_team',
+        'tags': ['experiment', 'classification'],
+        'group': 'model_v1'
+    }
+)
+```
+
+## Features
+
+The `SummaryWriter` class implements the same interface as TensorBoard's `SummaryWriter` but sends all data to W&B. It supports:
+
+- Scalar logging
+- Multiple scalars logging
+- Histogram logging
+- Image logging
+- Text logging
+- Figure logging (Matplotlib)
+- Hyperparameter logging
+- PR curve logging
+- Embedding visualization
+- Audio logging
+- Video logging
+
+## Differences from TensorBoard
+
+While `wandb_tsbw` attempts to provide a drop-in replacement for TensorBoard's `SummaryWriter`, there are some subtle differences:
+
+1. W&B requires authentication. Make sure you've run `wandb login` before using this package.
+2. W&B has different visualization capabilities, so some visualizations may look different.
+3. W&B automatically syncs data to their cloud servers, while TensorBoard keeps data locally.
+4. Some advanced TensorBoard features (like debugging) may not be fully supported.
+
+## Example
+
+```python
+import torch
+import torch.nn.functional as F
+from wandb_tsbw import SummaryWriter
+import numpy as np
+
+# Initialize the SummaryWriter
+writer = SummaryWriter(log_dir='runs/experiment_1')
+
+# Log scalars
+for i in range(10):
+    writer.add_scalar('Loss/train', np.random.random(), i)
+    writer.add_scalar('Loss/test', np.random.random(), i)
+    writer.add_scalar('Accuracy/train', np.random.random(), i)
+    writer.add_scalar('Accuracy/test', np.random.random(), i)
+
+# Log histogram
+writer.add_histogram('Conv1.bias', torch.randn(100), 0)
+
+# Log image
+img = torch.zeros(3, 100, 100)  # C, H, W
+img[0] = torch.arange(0, 10000).reshape(100, 100) / 10000
+writer.add_image('Example Image', img, 0)
+
+# Log text
+writer.add_text('Text Example', 'Hello World!', 0)
+
+# Log hyperparameters
+writer.add_hparams(
+    {'lr': 0.1, 'batch_size': 64},
+    {'accuracy': 0.9, 'loss': 0.2}
+)
+
+# Close the writer
+writer.close()
+```
+
+## Debugging:
+
+### Option 1: Use pytest's command line option
+Run pytest with the --trace option to drop into the debugger at the start of each test:
+```bash
+pytest-3 tests/test_writer.py::TestSummaryWriter::test_add_hparams --trace
+```
+
+### Option 4: Debug on test failure
+You can configure pytest to automatically start the debugger when a test fails:
+```bash
+pytest-3 tests/test_writer.py -v --pdb
+```
+
+## License
+
+MIT
