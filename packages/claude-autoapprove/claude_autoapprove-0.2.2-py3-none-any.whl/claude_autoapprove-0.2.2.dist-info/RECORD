@@ -1,0 +1,9 @@
+claude_autoapprove/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+claude_autoapprove/claude_autoapprove.py,sha256=5qfUu2dVVh9o07qKO8fxkGUOJE5PvsLD1UQmXQA8Ok8,6530
+claude_autoapprove/inject.js,sha256=IcoZMGpRTHavJtV83t3rCdNLpmoJnpzK8yYmw4rP5IU,5441
+claude_autoapprove-0.2.2.dist-info/licenses/LICENSE,sha256=2pxT6TqvnhC3jJk_NkJVUb2D2TJThrim5ePE0GfXgkA,1067
+claude_autoapprove-0.2.2.dist-info/METADATA,sha256=_l3_wlcNwU4J3gEOfaKHcOUoo4SPlrMaAkcb3GAusZw,4204
+claude_autoapprove-0.2.2.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+claude_autoapprove-0.2.2.dist-info/entry_points.txt,sha256=64W5Zy123JBV8Jnqrx46AEthxtazih_QgoOdJlivicY,82
+claude_autoapprove-0.2.2.dist-info/top_level.txt,sha256=PUePX82Pa2Rf2ysqyIwa03M4sCfg9oIXz4EiJaPMdjw,19
+claude_autoapprove-0.2.2.dist-info/RECORD,,
