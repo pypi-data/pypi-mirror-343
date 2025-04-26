@@ -1,0 +1,2 @@
+[console_scripts]
+retrain_pipelines_local = retrain_pipelines.local_launcher:cli_utility
