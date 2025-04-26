@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-lcu-server = mcp_lcu_server.main:main
