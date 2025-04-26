@@ -1,0 +1,17 @@
+[project]
+name = "undercurr"
+version = "0.0.0"
+description = "A task queue and scheduler library providing unified job scheduling and background processing capabilities."
+readme = "README.md"
+authors = [
+    { name = "Nick Huang", email = "uwu@nafnix.com" }
+]
+requires-python = ">=3.11"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = []
