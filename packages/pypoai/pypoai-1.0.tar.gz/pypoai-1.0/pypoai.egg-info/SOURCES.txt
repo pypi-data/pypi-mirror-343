@@ -1,0 +1,7 @@
+README.md
+pypoai.py
+setup.py
+pypoai.egg-info/PKG-INFO
+pypoai.egg-info/SOURCES.txt
+pypoai.egg-info/dependency_links.txt
+pypoai.egg-info/top_level.txt
