@@ -1,0 +1,13 @@
+mpfutils/__init__.py,sha256=fsX6gBFJKA1BzLvg7a2pYz43ttkwJ8QYtmlzsKP-jWY,51
+mpfutils/ai/__init__.py,sha256=tunNXkVm4zXb1o2r3Q42VfF_ZGYfrzpyeGYfyCtvIpM,68
+mpfutils/ai/oai.py,sha256=6r-lSfYNjl5cN9wOjPwKSq0bn1D3C7P7U0ljWPV-8Ik,6468
+mpfutils/azstorage/__init__.py,sha256=Md1XAbr32AmmQ4pXfhJRhR1guQFWaEtE7EFGe6RbMbQ,90
+mpfutils/azstorage/azs_container.py,sha256=xWyhFecaC7C5tUSqCx3mqs5D-QIfbr3bZakw2QCLIrI,6749
+mpfutils/charts/__init__.py,sha256=zWMYhgarHiW08vCFjROUkglMjOowWntMC4DyaH_-IpY,50
+mpfutils/charts/charts.py,sha256=jxwdrjAE9pH_FU8CZXJ_l4IlCla_8wiJqsBsvc71fUE,1443
+mpfutils/cosmosdb/__init__.py,sha256=JaE5-xGacTS-e5PrtcTgCLE4AewcoPP2nfOgfT7FGsQ,89
+mpfutils/cosmosdb/cdb_client.py,sha256=S1txUOrszczyOQ0SeV7m7uLTu5KREAZLW5i4ldHRgis,8461
+mpfutils-0.4.6.dist-info/METADATA,sha256=nf-55HJo6gvC0OHDZdSN1zEU_-dB98PaYDKIuFQ7u3I,458
+mpfutils-0.4.6.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mpfutils-0.4.6.dist-info/licenses/LICENSE,sha256=K6P4bMLGuWY9ZyV7NBTarTaFOsJdr3cN8dW1hMuywS4,1099
+mpfutils-0.4.6.dist-info/RECORD,,

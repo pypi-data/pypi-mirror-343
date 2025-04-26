@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: mpfutils
+Version: 0.4.6
+Summary: Utilities used in projects by Lucas A. Meyer and the MeyerPerin Foundation
+License-File: LICENSE
+Requires-Python: >=3.12
+Requires-Dist: azure-cosmos>=4.9.0
+Requires-Dist: azure-identity>=1.21.0
+Requires-Dist: azure-storage-blob>=12.24.1
+Requires-Dist: matplotlib>=3.10.1
+Requires-Dist: openai>=1.63.0
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: seaborn>=0.13.2
