@@ -1,0 +1,1 @@
+lavender_pinyin>=0.0.3

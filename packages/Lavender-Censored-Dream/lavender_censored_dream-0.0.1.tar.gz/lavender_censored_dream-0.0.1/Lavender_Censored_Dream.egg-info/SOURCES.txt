@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+Lavender_Censored_Dream.egg-info/PKG-INFO
+Lavender_Censored_Dream.egg-info/SOURCES.txt
+Lavender_Censored_Dream.egg-info/dependency_links.txt
+Lavender_Censored_Dream.egg-info/requires.txt
+Lavender_Censored_Dream.egg-info/top_level.txt
+lavender_censored_dream/__init__.py
+lavender_censored_dream/XJP/__init__.py
+lavender_censored_dream/XJP/name_taboo.py
