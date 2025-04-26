@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: securden-sdk
+Version: 1.0.1
+Summary: Using functions which use Securden APIs, developers can retrieve credentials programmatically from Securden server.
+Home-page: https://www.securden.com
+Author: Securden Dev
+Author-email: devops-support@securden.com
+License: MIT
+Keywords: Securden,Securden SDK,Credential Retrieval APIs as functions
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >= 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: urllib3==2.0.2
+Requires-Dist: python-dateutil==2.9.0
+Requires-Dist: pydantic==2.10.4
+Requires-Dist: typing-extensions==4.12.2
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Provides-Extra: testing
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: pytest-cov; extra == "testing"
+Requires-Dist: tox; extra == "testing"
+
+# Securden Software Development Kit - Python
+
+This guide will take you through the process of installing and integrating Securden Python SDK for secure programmatic access to credentials.
+
+## Summary of Steps
+
+1. Installation
+3. Fetch credential using pre-defined commands
+
+## 1. Installation
+
+```hcl
+pip install securden_sdk
+```
+
+## 3. Fetch credential via CLI commands
+
+### Required
+
+- `server_url` (String) Securden Server URL. Example: https://company.securden.com:5454.
+- `authtoken` (String) Securden API Authentication Token.
+
+```hcl
+from securden_sdk import ApiClient
+from securden_sdk import Configuration
+from securden_sdk.api import DefaultApi 
+
+config = Configuration(
+    host="<your_securden_server_url>",
+)
+api = ApiClient(configuration=config)
+api.authtoken = "<your_api_key>"
+securden_instance = DefaultApi(api)
+
+try:
+    password = securden_instance.get_password(account_id=<your_account_id>)
+    print("Response:", password)
+except Exception as e:
+    print(e)
+```
+
+---
+-> If you have general questions or issues in using Securden SDK, you may raise a support request to devops-support@securden.com. Our support team will get back to you at the earliest and provide a timeline if there are issue fixes involved.
