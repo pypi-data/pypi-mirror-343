@@ -1,0 +1,2 @@
+[console_scripts]
+isoslam = isoslam.processing:entry_point

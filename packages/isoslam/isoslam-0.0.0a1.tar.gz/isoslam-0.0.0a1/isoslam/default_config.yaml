@@ -1,0 +1,49 @@
+# Default configuration file for running IsoSlam
+log_level: "warning"
+output_dir: output
+output_file: results.parquet
+bam_file: data/bam/.bam
+gtf_file: data/gtf/
+bed_file: data/bed/
+vcf_file: data/vcf/
+upper_pairs_limit: 2000000
+first_matched_limit: 1000
+forward_reads:
+  from: "T"
+  to: "C"
+reverse_reads:
+  from: "A"
+  to: "G"
+delim: "\t"
+schema:
+  read_uid: "int"
+  transcript_id: "str"
+  start: "int"
+  end: "int"
+  chr: "str"
+  strand: "str"
+  assignment: "str"
+  conversions: "int"
+  convertible: "int"
+  coverage: "int"
+summary_counts:
+  file_ext: ".tsv"
+  directory: "output"
+  groupby:
+    - Transcript_id
+    - Chr
+    - Strand
+    - Start
+    - End
+    - Assignment
+    - Conversions
+    - filename
+  conversions_var: "Conversions"
+  conversions_threshold: 1
+  test_file: "no4sU"
+  filename_var: "filename"
+  regex: ^d(\w+)_(\w+)hr(\w+)_
+  output:
+    outfile: summary_counts.tsv
+    sep: "\t"
+plot: false

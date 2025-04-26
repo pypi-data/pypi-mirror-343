@@ -1,0 +1,7 @@
+transcript_id,chr,len,conversion
+a,chr1,2,false
+b,chr2,2,false
+c,chr3,1,false
+d,chr4,2,false
+e,chr5,1,true
+
