@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "m6rc"
+version = "0.7"
+authors = [
+    { name="M6R", email="hello@m6r.ai" },
+]
+description = "Command line tool for compling prompts using the Metaphor format"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+m6rc = "m6rc.m6rc:main"
+
+[tool.hatch.build]
+include = [
+    "src/m6rc/**/*.py",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/m6rc"]
+
+[project.urls]
+Homepage = "https://github.com/m6r-ai/m6rc"
+Issues = "https://github.com/m6r-ai/m6rc/issues"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --cov=src/m6rc --cov-report=html"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+filterwarnings = [
+    "error",
+    "ignore::DeprecationWarning",
+]
+
+[tool.coverage.run]
+source = ["m6rc"]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+    "raise ImportError",
+    "except ImportError:",
+]
