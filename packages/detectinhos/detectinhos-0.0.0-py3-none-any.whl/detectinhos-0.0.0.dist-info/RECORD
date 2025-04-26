@@ -1,0 +1,11 @@
+detectinhos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+detectinhos/batch.py,sha256=xxSWvaGjjHdUDK9cal37-dBtpQlVoSPhJraXK76aTFY,1164
+detectinhos/data.py,sha256=txSJzkND0sH38WIIc1FXWwnsq3UC-ct7Zinq_IQjeD8,1184
+detectinhos/loss.py,sha256=KuU8pMeLQJ2Cm4ITo41qLgswb6_d4tBz70ww4cHHrHs,2960
+detectinhos/sample.py,sha256=two0OZIsBozQ33jdq7JtDlH_nfdF9LDXTUbW8I1Xnds,1344
+detectinhos/sublosses.py,sha256=9198fDYO5DjAca8fMVjalQYL6nbw6RePQ_kzbt27B_I,1124
+detectinhos-0.0.0.dist-info/METADATA,sha256=O0w-zbVa4PbD8t99PtOzl0QgAqUfTcc1gZM1AJZ7AbA,881
+detectinhos-0.0.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+detectinhos-0.0.0.dist-info/entry_points.txt,sha256=KFdSobAJ21Vi0BEeHQikoIfNyMzm6R0hhZX0dunlXXA,53
+detectinhos-0.0.0.dist-info/top_level.txt,sha256=DG45zViy1BFCInNOX1MOXFa00xcDLHTAGnXHSW70NQM,12
+detectinhos-0.0.0.dist-info/RECORD,,
