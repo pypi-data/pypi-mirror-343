@@ -1,0 +1,14 @@
+sharelatex_versioning/__init__.py,sha256=3nSW7_I3XzcvUJOIrlc9u4jXW20WtydLxV87yEpw9Z8,3907
+sharelatex_versioning/classes/__init__.py,sha256=33UVwUNjjJZyfOpY-RJC46n-FQVKzD8wCf0IsoiaOd4,274
+sharelatex_versioning/classes/cache.py,sha256=CS37dz9enSLBf3PrdkzHtVWvkDBZye0-hElnTK_3XUA,1478
+sharelatex_versioning/classes/configuration.py,sha256=IvzVSzwcdBHAE-qEfnaBi0oQdEaksoBAeoVaGXWKsHI,489
+sharelatex_versioning/logic/__init__.py,sha256=aDA9Xghx3w-f6Z-WtAHxxWEBZOY-1VwSMCAdcge8Hv0,268
+sharelatex_versioning/logic/download_zip.py,sha256=-0Jt6xaVEENCsfCOle08naukNT6NGW-I7byLrJ9bJMw,7571
+sharelatex_versioning/logic/hash_file.py,sha256=_p8mB1djg7vak7fMiuBbkR39QMEkrJpk3qtGIzrkNis,1679
+sharelatex_versioning/utils/__init__.py,sha256=YshIZqSNnsF43KX3E3QJRtILIui7mR5GYtSppoe6Otc,491
+sharelatex_versioning/utils/password_handling.py,sha256=STCt5HMKj7J523aqDBrQ972dqGK2nBRj01_Q5MSCASU,1674
+sharelatex_versioning-0.1.14.dist-info/METADATA,sha256=VmeAdIT2L5ber8arsC7VN7xGcaRY-jipupVNgm1_hHU,6954
+sharelatex_versioning-0.1.14.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sharelatex_versioning-0.1.14.dist-info/entry_points.txt,sha256=OP4vzHMh7MheHnCZvw4Dm1YYVwcli5Q3Ycmc0ygWzUk,73
+sharelatex_versioning-0.1.14.dist-info/licenses/LICENSE,sha256=jTn1YLa_bpjOWCHKSGpmD0JG1T0p4JsqE7S34oilWzc,11345
+sharelatex_versioning-0.1.14.dist-info/RECORD,,
