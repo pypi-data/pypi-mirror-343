@@ -1,0 +1,14 @@
+README.md
+setup.py
+norconsult/__init__.py
+norconsult/all_formulas.py
+norconsult/all_simple.py
+norconsult/other_utilities.py
+norconsult/sosi_calc.py
+norconsult/test.py
+norconsult.egg-info/PKG-INFO
+norconsult.egg-info/SOURCES.txt
+norconsult.egg-info/dependency_links.txt
+norconsult.egg-info/top_level.txt
+test/__init__.py
+test/testcodes.py
