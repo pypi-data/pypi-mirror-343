@@ -1,0 +1,88 @@
+Metadata-Version: 2.4
+Name: autosh
+Version: 0.0.9
+Summary: The AI-powered, noob-friendly interactive shell
+Author-email: Wenyu Zhao <wenyuzhaox@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: agent,chatgpt,cli,command line,gpt,interactive,llm,openai,openrouter,shell,terminal
+Requires-Python: >=3.12
+Requires-Dist: agentia>=0.0.8
+Requires-Dist: asyncio>=3.4.3
+Requires-Dist: markdownify>=1.1.0
+Requires-Dist: neongrid>=0.0.3
+Requires-Dist: prompt-toolkit>=3.0.51
+Requires-Dist: pydantic>=2.11.3
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: rich>=14.0.0
+Requires-Dist: tavily-python>=0.5.4
+Requires-Dist: typer>=0.12.5
+Requires-Dist: tzlocal>=5.3.1
+Description-Content-Type: text/markdown
+
+# `autosh` - The AI-powered, noob-friendly interactive shell
+
+![recording](recording.gif) <!-- https://ezgif.com/video-to-gif -->
+
+# Getting Started
+
+## Install
+
+```bash
+uv tool install autosh
+```
+
+## Usage
+
+As an interactive shell: `ash` (alternatively, `autosh`)
+
+Execute a single prompt: `ash "list current directory"`
+
+Process piped data:
+* `cat README.md | ash -y "summarize"`
+* `cat in.csv | ash -y -q "double the first numeric column" > out.csv`
+
+## Scripting
+
+Write AI-powered shell scripts in Markdown using natural language!
+
+Example script ([simple.a.md](examples/simple.a.md)):
+
+```markdown
+#!/usr/bin/env ash
+
+# This is a simple file manipulation script
+
+First, please display a welcome message:)
+
+Write "Hello, world" to _test.log
+```
+
+* Run the script: `ash simple.a.md` or `chmod +x simple.a.md && ./simple.a.md`
+* Auto-generate help messages:
+
+    ```console
+    $ ash simple.a.md -h
+
+    Usage: simple.a.md [OPTIONS]
+
+    This is a simple file manipulation script that writes "Hello, world" to a log file named _test.log.
+
+    Options:
+
+    • -h, --help     Show this message and exit.
+    ```
+
+## Plugins
+
+`autosh` comes with several plugins to expand its capabilities:
+
+* `ash "Create a directory 'my-news', list the latest news, and for each news item, put the summary in a separate markdown file in this directory"`
+
+# TODO
+
+- [ ] Image input, generation, and editing
+- [ ] RAG for non-text files
+- [ ] Plugin system
+- [ ] MCP support
+- [x] Improved input widget with history and auto-completion
