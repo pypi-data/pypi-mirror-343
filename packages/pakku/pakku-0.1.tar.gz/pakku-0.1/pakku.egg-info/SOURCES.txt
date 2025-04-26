@@ -1,0 +1,10 @@
+README.md
+setup.py
+pakku/__init__.py
+pakku/main.py
+pakku.egg-info/PKG-INFO
+pakku.egg-info/SOURCES.txt
+pakku.egg-info/dependency_links.txt
+pakku.egg-info/entry_points.txt
+pakku.egg-info/requires.txt
+pakku.egg-info/top_level.txt
