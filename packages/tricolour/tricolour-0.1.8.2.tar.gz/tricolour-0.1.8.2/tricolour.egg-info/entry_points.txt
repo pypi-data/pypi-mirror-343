@@ -1,0 +1,2 @@
+[console_scripts]
+tricolour = tricolour.apps.tricolour.app:main
