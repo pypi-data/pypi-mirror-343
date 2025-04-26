@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    services:
+      minio:
+        image: lazybit/minio
+        ports:
+          - 9000:9000
+        env:
+          MINIO_ACCESS_KEY: justtesting
+          MINIO_SECRET_KEY: justtesting
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.12
+
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Install dependencies
+        run: make .venv
+
+      - name: Set up testing minio bucket
+        run: |
+          .venv/bin/python3 - <<'EOF'
+          from minio import Minio
+
+          minio = Minio(
+              'localhost:9000',
+              access_key='justtesting',
+              secret_key='justtesting',
+              secure=False
+          )
+
+          minio.make_bucket('test')
+          print(f'{minio.list_buckets()}')
+          EOF
+
+      - name: Run tests
+        run: make test
+        env:
+          B2_APPLICATION_KEY: justtesting
+          B2_APPLICATION_KEY_ID: justtesting
+          B2_BUCKET_NAME: test
+          B2_ENDPOINT_URL: http://localhost:9000/
