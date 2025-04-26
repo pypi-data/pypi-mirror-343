@@ -1,0 +1,21 @@
+[project]
+name = "mcp-pokemon-server"
+version = "0.1.0"
+description = "一个简单的宝可梦mcp工具测试使用"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+authors = [
+    { name = "布筝", email = "buzheng.life@outlook.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+]
+
+[project.scripts]
+mcp-pokemon-server = "mcp_pokemon_server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
