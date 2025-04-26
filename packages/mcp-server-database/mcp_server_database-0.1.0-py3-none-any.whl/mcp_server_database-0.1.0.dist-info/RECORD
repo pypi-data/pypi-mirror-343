@@ -1,0 +1,11 @@
+mcp_server_database/__init__.py,sha256=Sc3LtcAyoqZxyt7UgxfDvZuOmjoWdU1fVmNbervjmUE,24
+mcp_server_database/__main__.py,sha256=EvWe994BiapNXt-SnHPGQ_DyEAD1JsBY18cws8eF9ZQ,26
+mcp_server_database/prompt.py,sha256=qIDpqweJlROkbhDgft3R3jCB82s9gSnOstEroMbh_p8,1381
+mcp_server_database/server.py,sha256=QNVpCxFVHp1nCkv1U_oFffzBOWC_aVpMdFt07l36lXs,4392
+mcp_server_database/test.py,sha256=K2whiwfWDDUgBEUu_m6NDOs8tHpxuTH2Fxsm21yw9_8,502
+mcp_server_database/utils.py,sha256=aWDBYjkEzw0bThqjRaeQL0B2ON3RvC0ibCXtjLBoJO0,3126
+mcp_server_database-0.1.0.dist-info/METADATA,sha256=Z8CC7mL30lE0xWyHDax1Xq57cz2dKAxUym8NrnrRzJ4,1140
+mcp_server_database-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+mcp_server_database-0.1.0.dist-info/entry_points.txt,sha256=wFLTGcq2f5ljp-R4Nv7UiKDz3gVhcbytwIEOQrRcf9g,69
+mcp_server_database-0.1.0.dist-info/top_level.txt,sha256=r5p2Wv4rf2JnF3l1dxPYnLfoDLWFLjntMkV1y11svl0,20
+mcp_server_database-0.1.0.dist-info/RECORD,,
