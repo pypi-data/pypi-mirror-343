@@ -1,0 +1,6 @@
+requests
+jinja2
+packaging
+
+[:python_version < "3.11"]
+tomli
