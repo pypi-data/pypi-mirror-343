@@ -1,0 +1,2 @@
+graft src/kh2rando/seed_gen/presets
+graft src/kh2rando/seed_gen/static
