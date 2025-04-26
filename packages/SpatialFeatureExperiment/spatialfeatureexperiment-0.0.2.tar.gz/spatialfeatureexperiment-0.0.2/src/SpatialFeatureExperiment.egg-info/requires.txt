@@ -1,0 +1,16 @@
+spatialexperiment>=0.0.8
+pillow
+geopandas
+shapely
+requests
+rasterio
+aicsimageio
+numcodecs<=0.15.1
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+setuptools
+pytest
+pytest-cov
