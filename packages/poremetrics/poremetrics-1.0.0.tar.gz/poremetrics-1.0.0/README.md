@@ -1,0 +1,6 @@
+# pore-fatigue-metrics
+This repo contains the source code for the poremetrics package, which provides functions which take binary numpy arratys as an input nd outputs features which can be used to predict fatigue performance in the case of defect initiated fatigue.
+
+While many packages have some of these metrics, such as [skimage,measure](https://scikit-image.org/docs/stable/api/skimage.measure.html) and [OpenCV](https://docs.opencv.org/4.x/index.html), these are meant as general purpose tools, often requiring different input formats, so when applying to large image datasets, a standard input format for all metrics is very useful. Here, the standard fomat is a numpy array of shape (x,y), with no channels, and a format of np.uint8.
+
+Since the tests are on numpy arrays, making these shapes into numpy arrays intoduces an error, since it's not an exact shape. The tests/parameters.py controls the acceptable error associated, and tests are performed on 1024x1024 images because of it's standard size.
