@@ -1,0 +1,9 @@
+[tools]
+python = "3.13"
+uv = "latest"
+
+[env]
+mise.file = ".env"
+
+[tasks.publish]
+run = "uv publish"
