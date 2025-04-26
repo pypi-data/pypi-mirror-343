@@ -1,0 +1,17 @@
+assimilate/__init__.py,sha256=WCck50bCryqmtZ0Fo5gotsf4cMmxNl0rNulHN1yidz4,112
+assimilate/assimilate.py,sha256=a8t3VhwrOjEE3mh7MJLBlh2RJaXuTKpFaB9EHZ4hG70,38622
+assimilate/collection.py,sha256=H5iuvHQG_wXgg029GCWdTUDYuJQ9xHf3XzmdC8g7JYI,7016
+assimilate/command.py,sha256=R-O_UWWtE0EngsOPcUcbo__kck-kuDrdyfX5AmDicDI,103372
+assimilate/configs.py,sha256=IICHzTsPIyIGqP0HdfustJo2O0YTxGW4gO0niV7yM7E,25520
+assimilate/help.py,sha256=n-2xgw5mDjL4zENRB1pOaB3qZp1ymln9X-Utr94F6sM,6937
+assimilate/hooks.py,sha256=ZxT_kOAKViQ8XnqvO4AjhLmQmeE_KNWODuCzrNxW4hQ,11393
+assimilate/main.py,sha256=ydnyRiiwA1XCovrzgnkA7bGBW7iygFA2w4kN6SL-TR8,5829
+assimilate/overdue.py,sha256=W9E9cdwZs39LuUKrteJ0VdUu4iV04c0xatSVvV3bzvs,12785
+assimilate/patterns.py,sha256=q_U_KI3LcBN362z7ucFyJ4aenYusYKkGAlLYMBoIwXE,6310
+assimilate/preferences.py,sha256=tlfg5uYf7nmKyuKPAYxppyAEU5Oeed5oXuep--7ZDrA,7439
+assimilate/shlib.py,sha256=_3ZFRkGin_N_omxjW4ZKGUAbftRs6T4iJySWScwCN0g,31949
+assimilate/utilities.py,sha256=1zuVuaVoMrTyOpmZS9_nqZUmGsYuu56-GRsi-TCljX0,12614
+assimilate-0.0b8.dist-info/entry_points.txt,sha256=pb-wstvAeCeZif2hLXnUf2HU540JWsLgQQyRbcpjhrY,51
+assimilate-0.0b8.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+assimilate-0.0b8.dist-info/METADATA,sha256=ysWKMiDqR1wnzpCd8tlqC17SBUSBo2h3BBYBtRo31SM,3818
+assimilate-0.0b8.dist-info/RECORD,,

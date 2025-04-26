@@ -1,0 +1,3 @@
+[console_scripts]
+assimilate=assimilate.main:main
+
