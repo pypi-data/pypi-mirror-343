@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+maytak/Abstract_attachment_extractor.py
+maytak/__init__.py
+maytak/manager_config.py
+maytak/maytak_manager.py
+maytak.egg-info/PKG-INFO
+maytak.egg-info/SOURCES.txt
+maytak.egg-info/dependency_links.txt
+maytak.egg-info/not-zip-safe
+maytak.egg-info/top_level.txt
