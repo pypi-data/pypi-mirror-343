@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/xtnote/__init__.py
+src/xtnote/cli.py
+src/xtnote.egg-info/PKG-INFO
+src/xtnote.egg-info/SOURCES.txt
+src/xtnote.egg-info/dependency_links.txt
+src/xtnote.egg-info/entry_points.txt
+src/xtnote.egg-info/requires.txt
+src/xtnote.egg-info/top_level.txt
