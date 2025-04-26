@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyumlify"
+version = "0.1.0a0"
+description = "Generate PlantUML diagrams from Python code automatically."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "GPL-3.0-or-later"}
+keywords = [
+  "plantuml",
+  "uml",
+  "python",
+  "diagrams",
+  "code generation",
+  "automation"
+]
+authors = [
+  { name = "Guilherme Ditzel Patriota", email = "gdp.ai.data.eng@gmail.com" }
+]
+dependencies = ["stdlib_list"]
+
+[project.scripts]
+pyumlify = "pyumlify.cli:main"
+
+[tool.setuptools]
+packages = ["pyumlify"]
+
+[tool.setuptools.package-data]
+pyumlify = ["*.py"]
