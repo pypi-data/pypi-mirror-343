@@ -1,0 +1,7 @@
+pyyaml>=6.0
+ruamel.yaml>=0.17.0
+tomlkit>=0.12.0
+python-dotenv>=1.0.0
+click>=8.0
+xmltodict>=0.13.0
+jsonschema>=4.0.0
