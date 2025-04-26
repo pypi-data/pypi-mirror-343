@@ -1,0 +1,27 @@
+{% load static %}
+
+{% for url in urls %}
+
+    {% if forloop.counter == 1 %}
+        {% if first_separator %}
+        <span class="breadcrumbs-separator-first breadcrumbs-separator"> {{first_separator}} </span>
+        {% else %}
+        <span class="breadcrumbs-separator-first breadcrumbs-separator"> {{separator}} </span>
+        {% endif %}
+    {% endif %}
+
+    {% if forloop.counter < urls|length and forloop.counter > 1 or forloop.counter == urls|length and forloop.counter != 1  %}
+    <span class="breadcrumbs-separator"> {{separator}} </span>
+    {% endif %}
+
+    <span class="breadcrumbs-item"><a href="{{url.path}}">{{url.name}}</a></span>
+
+    {% if forloop.counter == urls|length %}
+        {% if last_separator %}
+        <span class="breadcrumbs-separator-last breadcrumbs-separator"> {{last_separator}} </span>
+        {% else %}
+        <span class="breadcrumbs-separator-last breadcrumbs-separator"> {{separator}} </span>
+        {% endif %}
+    {% endif %}
+
+{% endfor %}

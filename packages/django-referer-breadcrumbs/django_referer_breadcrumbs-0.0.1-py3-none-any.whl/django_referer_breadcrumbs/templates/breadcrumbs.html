@@ -1,0 +1,9 @@
+{% load static %}
+
+<div class="breadcrumbs-container">
+    {% if custom_urls %}
+        {% include 'breadcrumbs-items.html' with urls=custom_urls %}
+    {% else %}
+        {% include 'breadcrumbs-items.html' with urls=breadcrumbs_urls %}
+    {% endif %}
+</div>
