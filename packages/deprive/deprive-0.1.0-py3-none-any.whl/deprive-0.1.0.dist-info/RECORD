@@ -1,0 +1,13 @@
+deprive/__init__.py,sha256=ZqE5uuN_LZgUCpAacKRM4s0uaPv4IjytI3TeLOxWqg0,744
+deprive/collect.py,sha256=Tzp_m3vbMfAbE6DLYAC5KiKpX1Rb9F8sLLI4-lKq_Zg,2453
+deprive/handler.py,sha256=FpH4NeE6bINTVUKKMR6kVGBpNQW78HtMQZ0SLFNE4pk,4518
+deprive/modifier.py,sha256=Cd2SJ7Z9QHNNE_eMyfydyp2pRzZNkX0lAmwj727jegQ,2619
+deprive/names.py,sha256=uIQ76O5VQWiyBMsUTWKnSCiwdmm-PrqvwI6v0tX7tMY,4706
+deprive/scope.py,sha256=DdVXkLNkU52FhM2Cf3HD_STuzQ6BOqgv9Mbwo4ulfLo,7275
+deprive/tracker.py,sha256=RJUGcyZFaGl4-ySE5oBLyckQn_BR8y7KJ8Fr3icPmk4,2333
+deprive/visitor.py,sha256=0Q0xgESgpzM7PavvvHHoM_U-PDGSHbIgM9HIQh_TKHo,17005
+deprive-0.1.0.dist-info/licenses/LICENSE,sha256=vyyk_1LFXVJd3Ru6UTV7yqANMEJzKCxn2grmiR2tmjU,1068
+deprive-0.1.0.dist-info/METADATA,sha256=8zw8HMMcJUt7g59U8yZRP2omsXwT351xa7H0GcH2XVo,1807
+deprive-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+deprive-0.1.0.dist-info/top_level.txt,sha256=N11UWpBI7E8bLlVc-KqOVjG5iwHlrpJTLg36mwPzkYk,8
+deprive-0.1.0.dist-info/RECORD,,
