@@ -1,0 +1,9 @@
+gadignore/.gitignore,sha256=QTCmhqKQpSy_G3Kc6snfDSCUzcTTs62ZjVPu22aDoPM,1107
+gadignore/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gadignore/cli.py,sha256=zLG2uOFlwD5Q2DSLirK26kLNcs3isAWnDHbFUua8rrY,261
+gadignore-0.0.4.dist-info/LICENSE,sha256=SH0JBGOTQ8tElhDklplwDbsgpxWoycK5p2Db-M64VPM,1078
+gadignore-0.0.4.dist-info/METADATA,sha256=X8fw65vO2tp43yih0g2f_WoddE_uGR99BrAjz6Y3XLY,885
+gadignore-0.0.4.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+gadignore-0.0.4.dist-info/entry_points.txt,sha256=7ZGJJNMSZNrCfd6b5rqZHck3a6qiohvjFUH5JLs19SU,48
+gadignore-0.0.4.dist-info/top_level.txt,sha256=0Ym99Is28h-MvSb8fPYqSlRdXx8F2_UUEySeow1VrWc,10
+gadignore-0.0.4.dist-info/RECORD,,

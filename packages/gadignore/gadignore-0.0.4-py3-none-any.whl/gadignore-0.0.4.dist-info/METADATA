@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: gadignore
+Version: 0.0.4
+Summary: CLI tool for quickly generating a .gitignore file for Python projects
+Home-page: https://github.com/AlexDemure/gadignore
+Author: Alexander Grishchenko
+Author-email: alexanderdemure@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer
+
+<p align="center">
+  <a href="https://github.com/AlexDemure/gadignore">
+    <a href="https://ibb.co/39sRV2np"><img src="https://i.ibb.co/Nd3Tf5M9/logo.png" alt="logo" border="0"></a>
+  </a>
+</p>
+
+<p align="center">
+  CLI tool for quickly generating a .gitignore file for Python projects.
+</p>
+
+---
+
+### Installation
+
+```
+pip install gadignore
+```
+
+### Usage
+
+```sh
+gadignore
+```
