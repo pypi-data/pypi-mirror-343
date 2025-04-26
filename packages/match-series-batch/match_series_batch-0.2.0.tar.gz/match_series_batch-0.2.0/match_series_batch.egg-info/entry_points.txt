@@ -1,0 +1,2 @@
+[console_scripts]
+match-series-batch = match_series_batch.main:main
