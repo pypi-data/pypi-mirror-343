@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tria_hr_data_gatherer"
+version = "0.1.1"
+description = "A library for gathering and processing employee data from TriaHR API"
+readme = "README.md"
+authors = [{name = "Daniel Simanek", email = "daniel.simanek@decathlon.com"}]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "tria_hr_api",
+    "python-dateutil",
+]
+requires-python = ">=3.8"
+
+[project.urls]
+"Homepage" = "https://github.com/daniel-simanek/tria-hr-data-gatherer"
+"Bug Tracker" = "https://github.com/daniel-simanek/tria-hr-data-gatherer/issues"

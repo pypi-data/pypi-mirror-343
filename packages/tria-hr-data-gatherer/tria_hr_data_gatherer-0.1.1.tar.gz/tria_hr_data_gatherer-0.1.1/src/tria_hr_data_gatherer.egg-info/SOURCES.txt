@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+setup.py
+src/tria_hr_data_gatherer/__init__.py
+src/tria_hr_data_gatherer/exceptions.py
+src/tria_hr_data_gatherer/gatherer.py
+src/tria_hr_data_gatherer.egg-info/PKG-INFO
+src/tria_hr_data_gatherer.egg-info/SOURCES.txt
+src/tria_hr_data_gatherer.egg-info/dependency_links.txt
+src/tria_hr_data_gatherer.egg-info/requires.txt
+src/tria_hr_data_gatherer.egg-info/top_level.txt
+test/test1.py
+test/test2.py
+test/test3.py
+test/test4.py
+test/test5.py
+test/test_with_mock_server.py
