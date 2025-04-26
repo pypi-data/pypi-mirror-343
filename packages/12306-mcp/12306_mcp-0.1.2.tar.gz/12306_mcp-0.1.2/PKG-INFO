@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: 12306-mcp
+Version: 0.1.2
+Summary: Add your description here
+Requires-Python: >=3.11
+Requires-Dist: mcp>=1.0.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: tzdata>=2024.2
+Description-Content-Type: text/markdown
+
+### 运行脚本
+
+```shell
+cd src/12306-mcp
+mcpo --port 8000 -- uvicorn main:app
+```
+
+```shell
+uvx mcpo --port 8000 -- uvicorn main:app
+```
