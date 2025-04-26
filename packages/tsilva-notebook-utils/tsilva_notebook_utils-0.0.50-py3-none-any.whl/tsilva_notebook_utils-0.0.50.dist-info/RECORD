@@ -1,0 +1,14 @@
+tsilva_notebook_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tsilva_notebook_utils/colab.py,sha256=Y4-eM8clVzvIbYUrJbkvpi27s0fXF8g9orgb8ZFSOqY,3275
+tsilva_notebook_utils/datasets.py,sha256=9Dy2mGbdI_0Lu_vXkx00JBG6rPKMpNgg2Cz2m3LGLLk,984
+tsilva_notebook_utils/huggingface.py,sha256=AyKRRByLzLQ3gNTeCZWx_T7CyaLi4zukLa5XuTMJddI,5120
+tsilva_notebook_utils/notifications.py,sha256=4zZhjjAv3ljiA5GsmQ5tFG3l2-pcA5R9stbHHR2_qSM,325
+tsilva_notebook_utils/numpy.py,sha256=zXnKN_D-iWA_3l5so1RK5uUoCxJQxaJ5DB6_QOHcmwE,968
+tsilva_notebook_utils/plots.py,sha256=vV4ZtrK6fx0N_wao29eEc5KrJMLrrhDlepsNLOZyV5s,9320
+tsilva_notebook_utils/torch.py,sha256=014lVTpJ4YRnrFXoMl5FN6YY5ySN5In3SArRVLe00N4,8714
+tsilva_notebook_utils/video.py,sha256=BEH6lw90fKkycq91f2Wc8iw1ZaYYFKW-RYI4g_2Gu7E,6246
+tsilva_notebook_utils/wandb.py,sha256=5ZNoryXK1-hnixQEj3G2omPtj8VLybZ7DIwP8htiM3U,284
+tsilva_notebook_utils-0.0.50.dist-info/METADATA,sha256=YpNr8Xwgm2WrqJi0Xrfd3SrP845ll0fngOUC_O7DBCs,2259
+tsilva_notebook_utils-0.0.50.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tsilva_notebook_utils-0.0.50.dist-info/licenses/LICENSE,sha256=gTrdDdqFDu7VtWezebCYIHmebmc-XTVxqWTZGKvDux0,1068
+tsilva_notebook_utils-0.0.50.dist-info/RECORD,,
