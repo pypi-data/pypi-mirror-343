@@ -1,0 +1,12 @@
+hamcc/__init__.py,sha256=pM81-J3EMJQ9lk1dspW0mEIYaLgFcWHWMWoS2GijvgE,406
+hamcc/__main__.py,sha256=uyNCQFantPyEcJb6B-Rx-6ZsaLcucO1B_bH7e43R7xs,8026
+hamcc/__version__.py,sha256=hhaYu9_bUT_1TuNPjAkK8IF3cC8mTK90c_nf-BbabN4,87
+hamcc/_console_.py,sha256=4qwZtBXPupTXONeSeMgVtIPHdHOr10QQMPB67od81h4,9250
+hamcc/hamcc.py,sha256=ppiH0F2lBkCvjts0bEwZsFN7giXdZnFKvwjvAQGq-kk,26689
+hamcc/data/bands.json,sha256=cGUE0VBr9OlmiY1zpD4ii5utOF0bVWsbMKetR5_X9Vw,346
+hamcc/data/modes.json,sha256=AvyMjBG-OWR6novLXBApTaDIa5MwM0Xa64FRkVa2NqU,516
+hamcc-1.0.dist-info/METADATA,sha256=iy9V_jDrSx16O1XEQxd9_y1JtjwCJgqVGY1uZFfYijs,13585
+hamcc-1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+hamcc-1.0.dist-info/entry_points.txt,sha256=vFdKVViuVzse8SV7CEoPWQSuA699HHE_VSY7YQEy_eU,46
+hamcc-1.0.dist-info/top_level.txt,sha256=GhEijgjpu3La37xcJQwOLnHCTN5Bav6JxRtEge4WOlI,6
+hamcc-1.0.dist-info/RECORD,,
