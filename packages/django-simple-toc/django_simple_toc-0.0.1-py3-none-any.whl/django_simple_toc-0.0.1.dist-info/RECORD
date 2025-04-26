@@ -1,0 +1,11 @@
+django_simple_toc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_simple_toc/apps.py,sha256=2z41HYFLF7GWji3XcXauuYIjQGS6g7DEOG8V2n8fI00,166
+django_simple_toc/middleware.py,sha256=xMn9fRvslKtyiSJXipB0Z8QT2uTtY44ONyWK4pBfJLk,1030
+django_simple_toc/tests.py,sha256=2uDafv3Ns6f7Vy1ekUtgYxCZEi1KRyesZDTAFhYcX-E,63
+django_simple_toc/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_simple_toc/templates/table-of-content-element.html,sha256=-ZyjV4VusreFQpn7R0Q1m49mBv2PPebFtvqojpi_yAQ,184
+django_simple_toc/templates/table-of-content.html,sha256=AhNC8y5PYBvHsq1Agir-E2W30tC931Rc2QuLYyIlimc,1253
+django_simple_toc-0.0.1.dist-info/METADATA,sha256=VujyA1hRBxZRjHBM3t9czyWd1Q_i9ajDsAsvSzMsEjQ,1855
+django_simple_toc-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+django_simple_toc-0.0.1.dist-info/licenses/LICENCE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+django_simple_toc-0.0.1.dist-info/RECORD,,
