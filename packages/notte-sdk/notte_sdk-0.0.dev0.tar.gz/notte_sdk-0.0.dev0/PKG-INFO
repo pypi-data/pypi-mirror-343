@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: notte-sdk
+Version: 0.0.dev0
+Summary: The SDK for Notte
+Author-email: Notte Team  <hello@notte.cc>
+Requires-Python: >=3.11
+Requires-Dist: notte-core==0.0.dev
+Requires-Dist: websockets>=13.1
