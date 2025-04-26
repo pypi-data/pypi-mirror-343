@@ -1,0 +1,4 @@
+add s3 tests
+add all data types including struct
+fix any issues that come from table made but no data
+better errors for the table validator 
