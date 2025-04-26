@@ -1,0 +1,10 @@
+mcp_lcu_server/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mcp_lcu_server/config.py,sha256=AiJYKeyyn_e5vBECQ2vCFzuOIBX4wNLVkqdavA_8rIc,6769
+mcp_lcu_server/main.py,sha256=wSSU_L4ZZKGc2uaHk87Rbi-LPl7ngsDIHTk6z5rget8,2179
+mcp_lcu_server/server.py,sha256=05QV9wOepysgNAgwkeWvbp6EveiVQdqw0QX6Y11AixI,8111
+mcp_lcu_server-0.1.1.dist-info/licenses/LICENSE,sha256=b85C3kxsJnmCV4iSf4T1yrVU5IE_GcBWj14Nj-ZgoW8,1065
+mcp_lcu_server-0.1.1.dist-info/METADATA,sha256=wSU8rwayHtZRzScGw8h3v83azZJEmdV1CqmbEKDQ29M,12251
+mcp_lcu_server-0.1.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+mcp_lcu_server-0.1.1.dist-info/entry_points.txt,sha256=GOrlTP_L-BVr8oysMofH_Zkxt27aqW-Pg1paZ5jFJHs,60
+mcp_lcu_server-0.1.1.dist-info/top_level.txt,sha256=BoeVls1olAUI9AdjjFFNwM-3pfYD_N6EF01lGsYZsa0,15
+mcp_lcu_server-0.1.1.dist-info/RECORD,,
