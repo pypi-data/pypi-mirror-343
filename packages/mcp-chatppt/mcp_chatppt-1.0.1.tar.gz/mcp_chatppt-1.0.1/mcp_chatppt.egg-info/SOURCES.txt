@@ -1,0 +1,7 @@
+README.md
+ppt.py
+pyproject.toml
+mcp_chatppt.egg-info/PKG-INFO
+mcp_chatppt.egg-info/SOURCES.txt
+mcp_chatppt.egg-info/dependency_links.txt
+mcp_chatppt.egg-info/top_level.txt
