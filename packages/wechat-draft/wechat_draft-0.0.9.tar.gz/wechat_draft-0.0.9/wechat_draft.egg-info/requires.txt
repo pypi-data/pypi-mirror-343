@@ -1,0 +1,8 @@
+DrissionPage
+requests
+pillow
+
+[linux]
+
+[windows]
+pypiwin32
