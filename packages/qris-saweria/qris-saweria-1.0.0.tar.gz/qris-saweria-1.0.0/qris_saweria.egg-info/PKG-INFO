@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: qris-saweria
+Version: 1.0.0
+Summary: API tidak resmi saweria.co untuk membuat dan cek QRIS otomatis
+Home-page: https://github.com/AutoFTbot/saweria-qris
+Author: AutoFTbot
+Author-email: aginazharmhlutpi14@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/AutoFTbot/saweria-qris
+Project-URL: Donate, https://ko-fi.com/FighterTunnel
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# qris-saweria (Python)
+
+API tidak resmi saweria.co yang dapat membuat dan memeriksa kode QRIS secara otomatis, serta generate gambar QR (dengan/atau tanpa template DANA).
+
+## Fitur
+- Membuat kode pembayaran QRIS
+- Generate gambar QR (dengan/atau tanpa template DANA)
+- Pengecekan status pembayaran
+- Nama pengirim dan pesan dibuat otomatis
+- Header request sama dengan versi JS
+- Mudah digunakan
+
+## Instalasi
+
+```bash
+pip install qris-saweria
+```
+
+## Penggunaan
+
+```python
+from qris_saweria import create_payment_qr, check_paid_status, generate_qr_image
+
+# Membuat QRIS
+qr_string, transaction_id = create_payment_qr('nama_saweria', 10000, 'donatur@email.com')
+print('QR String:', qr_string)
+print('Transaction ID:', transaction_id)
+
+# Generate gambar QR saja
+generate_qr_image(qr_string, 'qris.png')
+
+# Generate gambar QR dengan template DANA bawaan (tidak perlu template_path, otomatis pakai bawaan)
+generate_qr_image(qr_string, 'qris_template.png', saweria_username='nama_saweria')
+
+# Jika ingin pakai template custom, bisa isi template_path sendiri
+# generate_qr_image(qr_string, 'qris_custom.png', template_path='my_template.png', saweria_username='nama_saweria')
+
+# Cek status pembayaran
+is_paid = check_paid_status(transaction_id)
+print('Sudah dibayar?' , is_paid)
+```
+
+## API
+
+### create_payment_qr(saweria_username, amount, email)
+- `saweria_username` (str): Username Saweria
+- `amount` (int): Jumlah donasi (minimal 1000)
+- `email` (str): Email donatur
+- Return: tuple `(qr_string, transaction_id)`
+
+### check_paid_status(transaction_id)
+- `transaction_id` (str): ID transaksi dari create_payment_qr
+- Return: `bool` (`True` jika sudah dibayar, `False` jika belum)
+
+### generate_qr_image(qr_string, output_path='qris.png', template_path=None, saweria_username=None)
+- `qr_string` (str): String QRIS
+- `output_path` (str): Path file output gambar
+- `template_path` (str, opsional): Path template DANA (PNG, 710x844). Default: template bawaan package
+- `saweria_username` (str, opsional): Nama Saweria untuk ditampilkan di template
+- Return: path file output
+
+## Template DANA Bawaan
+- File `template.png` sudah otomatis tersedia di package. Tidak perlu download manual.
+- Jika ingin pakai template custom, cukup isi argumen `template_path`.
+
+## Lisensi
+MIT 
