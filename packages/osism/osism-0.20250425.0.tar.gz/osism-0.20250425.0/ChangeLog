@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+v0.20250425.0
+-------------
+
+* Allow osism to update multiple netbox instances (#1300)
