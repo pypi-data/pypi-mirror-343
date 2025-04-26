@@ -1,0 +1,11 @@
+doFolder/__init__.py,sha256=FMLH-Sg6kgZKdA4EkoIwCRv_apeF70Li7wAoFFbduqg,182
+doFolder/exception.py,sha256=pspIwgB4agOyYKpNq_GhheLjgdoFCWWyMVtimWmH96c,233
+doFolder/fileSystem.py,sha256=PNKrUcTMmWCE0q1Z13nDuV2lriCY4uh7d30ahURK-Dk,6389
+doFolder/globalType.py,sha256=6SZcGknRrxysMUYMLn-A0ISzuSi6iDPi0MQC5GoVdmw,593
+doFolder/path.py,sha256=yJr17bFZ10z_YBAzLCl-VtElaxhfuGE7QEfAW-EGui4,61
+doFolder/warn.py,sha256=ahYRxNZOjXJ0I9opL3KlQuPBK9T9DNwDBt5EtOXzCh8,175
+dofolder-2.0.1.dist-info/licenses/LICENSE,sha256=YyauYN14yFsfL2_zCO8WFf-TkyMnDYOOjrqyD13hqMU,9719
+dofolder-2.0.1.dist-info/METADATA,sha256=ctLNWDAFvrjqYsdc5-R_Trre2nh1ciJ_zN8QSoe52ys,1569
+dofolder-2.0.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+dofolder-2.0.1.dist-info/top_level.txt,sha256=nuSHKRdnJ10OIYjfzc2T9UnC0YZYulLL4jx3PqTOO3c,9
+dofolder-2.0.1.dist-info/RECORD,,
