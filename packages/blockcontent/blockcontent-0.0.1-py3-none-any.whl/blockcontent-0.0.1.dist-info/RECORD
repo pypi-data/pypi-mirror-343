@@ -1,0 +1,17 @@
+blockcontent/__init__.py,sha256=-tc86wp8FNI9xf0jN4_ZtsUQJrt-UpmXdDdbCTW3azI,1111
+blockcontent/api_client.py,sha256=_yQppoGkLJbphSITrMlD55otb2tpRMXjkfk_xVTPcwM,27472
+blockcontent/api_response.py,sha256=eMxw1mpmJcoGZ3gs9z6jM4oYoZ10Gjk333s9sKxGv7s,652
+blockcontent/configuration.py,sha256=UKfH2_Pv80jGTLjcCn_nFuX1axt8b8aDUzAgYoK5TOc,17926
+blockcontent/exceptions.py,sha256=ybPYL1rOlHn0sTtSPpSghOH4jweEKWQtdVN7zKY1bR0,6481
+blockcontent/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+blockcontent/rest.py,sha256=JHbZqcA_9xp1lD5pr3P_lQN7qQWVM7gtgdZ5HfthxI0,9476
+blockcontent/api/__init__.py,sha256=sXdmdRrEnzrlL248Snh7Wv7sVnovfBDWGEf1WvAdjPo,48
+blockcontent/models/__init__.py,sha256=kG1kd8p3Ga2TcJOS6gjVY6kuqT3gkpLUwGkoCI_rQWs,585
+blockcontent/models/block.py,sha256=8qh-nqo6HoHZaM8l9C1y9G4Q-Flgrjx04GTRrZ8BGcg,4162
+blockcontent/models/chart_block.py,sha256=5VHP70elyiJAoF8pIfGV1t4DrSHROYU0hdjCix7m5OE,2908
+blockcontent/models/table_block.py,sha256=ZAH2PKZN0aocpWB2WC8WYwXzn0CcZF_kpPGDktHPZNQ,2605
+blockcontent/models/text_block.py,sha256=jPIg_i9Cdqi4YHtrbYF7z4wBPun44yFEn9IS8PW3sI4,2501
+blockcontent-0.0.1.dist-info/METADATA,sha256=LSW_kgy5_QCPRUcwSYne_Q5Q3R1MXQ0k-47SfuyDujY,672
+blockcontent-0.0.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+blockcontent-0.0.1.dist-info/top_level.txt,sha256=csyCdU7FN1jI5aiHA-8yD-EjOIH8W73OZe7eG5yWkGw,13
+blockcontent-0.0.1.dist-info/RECORD,,
