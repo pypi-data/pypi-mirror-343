@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "universal-config-converter"
+version = "0.1.0" # Initial version
+authors = [
+  { name="velibenek", email="velibenek@gmail.com" }, # Updated email
+]
+description = "A command-line tool to convert between various configuration file formats (JSON, YAML, TOML, .env, INI, XML)."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Utilities",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "pyyaml>=6.0",
+    "ruamel.yaml>=0.17.0",
+    "toml>=0.10.2",
+    "python-dotenv>=1.0.0", # Updated requirement based on common usage
+    "click>=8.0",
+    "xmltodict>=0.13.0",
+    "jsonschema>=4.0.0", # Add jsonschema for validation
+]
+
+[project.urls]
+Homepage = "https://github.com/velibenek/universal-config-converter"
+Issues = "https://github.com/velibenek/universal-config-converter/issues"
+
+[project.scripts]
+config-converter = "config_converter.main:main"

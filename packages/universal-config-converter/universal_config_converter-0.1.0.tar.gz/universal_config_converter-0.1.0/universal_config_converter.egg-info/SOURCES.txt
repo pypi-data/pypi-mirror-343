@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+config_converter/__init__.py
+config_converter/converter.py
+config_converter/main.py
+tests/test_converter.py
+universal_config_converter.egg-info/PKG-INFO
+universal_config_converter.egg-info/SOURCES.txt
+universal_config_converter.egg-info/dependency_links.txt
+universal_config_converter.egg-info/entry_points.txt
+universal_config_converter.egg-info/requires.txt
+universal_config_converter.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+[console_scripts]
+config-converter = config_converter.main:main
