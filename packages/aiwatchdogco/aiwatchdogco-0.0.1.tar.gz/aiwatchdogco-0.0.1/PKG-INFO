@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: aiwatchdogco
+Version: 0.0.1
+Summary: Placeholder package to reserve the aiwatchdog name.
+Author-email: Jeet Parekh <jp@aiwatchdog.co>
+License-Expression: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# aiwatchdogco
+
+This is a placeholder package to reserve the `aiwatchdogco` name on PyPI.
+
+## Installation
+
+This package currently does not provide any functionality. It is reserved for future development.
+
+## License
+
+MIT License

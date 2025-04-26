@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aiwatchdogco"
+version = "0.0.1"
+description = "Placeholder package to reserve the aiwatchdog name."
+authors = [
+    { name="Jeet Parekh", email="jp@aiwatchdog.co" }
+]
+readme = "README.md"
+requires-python = ">=3.7"
+license = "MIT"

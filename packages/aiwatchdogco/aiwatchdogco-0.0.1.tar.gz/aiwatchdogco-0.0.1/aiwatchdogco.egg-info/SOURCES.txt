@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+aiwatchdog_sdk/__init__.py
+aiwatchdogco.egg-info/PKG-INFO
+aiwatchdogco.egg-info/SOURCES.txt
+aiwatchdogco.egg-info/dependency_links.txt
+aiwatchdogco.egg-info/top_level.txt
