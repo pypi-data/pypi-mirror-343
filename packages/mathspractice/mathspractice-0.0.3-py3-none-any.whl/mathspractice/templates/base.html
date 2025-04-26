@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Maths Practice - {% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <nav>
+            <h1><a href="{{ url_for('index') }}">Maths Practice</a></h1>
+        </nav>
+        <section class="content">
+          <header>
+            {% block header %}{% endblock %}
+          </header>
+          {% for category, message in get_flashed_messages(with_categories=true) %}
+            <div class="flash {{ category }}">{{ message }}</div>
+          {% endfor %}
+          {% block content %}{% endblock %}
+        </section>
+    </body>
+</html>
