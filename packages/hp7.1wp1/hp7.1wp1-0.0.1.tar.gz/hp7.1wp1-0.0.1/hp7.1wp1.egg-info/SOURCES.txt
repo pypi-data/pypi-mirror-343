@@ -1,0 +1,9 @@
+MANIFEST.in
+setup.py
+data/01. Alexandre Desplat - Obliviate.wav
+data/02. Alexandre Desplat - Snape To Malfoy Manor.wav
+data/03. Alexandre Desplat - Polyjuice Potion.wav
+hp7.1wp1.egg-info/PKG-INFO
+hp7.1wp1.egg-info/SOURCES.txt
+hp7.1wp1.egg-info/dependency_links.txt
+hp7.1wp1.egg-info/top_level.txt
