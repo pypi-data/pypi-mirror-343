@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-database = mcp_server_database:main
