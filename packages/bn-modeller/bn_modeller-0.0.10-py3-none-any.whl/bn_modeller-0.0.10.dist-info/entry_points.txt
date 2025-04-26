@@ -1,0 +1,3 @@
+[console_scripts]
+bn_modeller=bn_modeller.app:main
+
