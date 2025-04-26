@@ -1,0 +1,5 @@
+[tools]
+uv = "latest"
+lefthook = "latest"
+task = "latest"
+protoc = "latest"
