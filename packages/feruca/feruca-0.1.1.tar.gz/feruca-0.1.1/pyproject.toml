@@ -1,0 +1,26 @@
+[project]
+name = "feruca"
+description = "Python bindings for feruca, a Rust implementation of the Unicode Collation Algorithm"
+authors = [{ name = "Theodore Beers", email = "theo.beers@drexel.edu" }]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+classifiers = [
+  "Programming Language :: Rust",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = ["version"]
+
+[project.urls]
+Repository = "https://github.com/theodore-s-beers/feruca-py"
+
+[build-system]
+requires = ["maturin>=1.8,<2.0"]
+build-backend = "maturin"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+
+[dependency-groups]
+dev = ["maturin>=1.8.3"]
