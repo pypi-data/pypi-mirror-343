@@ -1,0 +1,28 @@
+[project]
+name = "mpfutils"
+version = "0.4.5"
+description = "Utilities used in projects by Lucas A. Meyer and the MeyerPerin Foundation"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "azure-cosmos>=4.9.0",
+    "azure-identity>=1.21.0",
+    "azure-storage-blob>=12.24.1",
+    "matplotlib>=3.10.1",
+    "openai>=1.63.0",
+    "pandas>=2.2.3",
+    "python-dotenv>=1.0.1",
+    "seaborn>=0.13.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+]
