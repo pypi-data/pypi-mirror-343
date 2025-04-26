@@ -1,0 +1,4 @@
+[console_scripts]
+publish=xnbtd.publish:publish
+xnbtd-publish=xnbtd.publish:main
+
