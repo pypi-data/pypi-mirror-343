@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: daxpass
+Version: 2.0
+Summary: A module used to create random passwords with customizable options and to encode/decode strings!
+Author: Annie
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+Dax let's you not only create passwords with custom requirements, it can also encode and decode strings in your own custom charset!
+
+___
+
+**DISCLAIMER**
+
+It is recommended that dax should only be used in your own custom databases/servers, dax is not secure to use when creating passwords for products like Google. We are also not responsible for any harm according to the MIT license.
+___
+
+createpass:
+```python
+import daxpass
+
+print(daxpass.createpass(['a', 'b'], 5))
+```
+Output:
+baaba
+
+___
+
+en:
+```python
+import daxpass
+print(daxpass.en('abc', ['a', 'b', 'c']))
+```
+Output:
+```
+- -- ---
+```
+___
+
+de:
+```python
+import daxpass
+print(daxpass.de('- -- ---', ['a', 'b', 'c']))
+```
+Output:
+```
+abc
+```
