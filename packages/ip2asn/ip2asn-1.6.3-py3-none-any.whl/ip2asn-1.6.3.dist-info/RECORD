@@ -1,0 +1,12 @@
+ip2asn/__init__.py,sha256=vAo3Bb36zGNQfxnNX7Awxob-86w3MW9gqBrBcr6xww8,10583
+ip2asn/main.py,sha256=TKtoNCI7jOnPqqy8zzmZhPYqFKd909DcEGYzUP9lWr4,9181
+ip2asn/main.py.~1~,sha256=yZe3fHuWw9wSk3-dkaitjJEWJE928_Hlw8i_SYP3-RY,8
+ip2asn/main.py.~2~,sha256=TBgOfaIyaM4ugI1VKfnQf3e9dOtCpoUaNW3SctfPstk,21
+ip2asn/tests/test_big_numbers_converter.py,sha256=B2n3waQfkyT-oKplC8fwnbPspIVuWWc-9BwcYkIdR-4,1366
+ip2asn/tests/test_ip2asn.py,sha256=iICOPP_nHGM-jZwqNEq1DEB4pHOfru-SQPyDakpdbGU,8645
+ip2asn/tests/test_ip2asn.py.~1~,sha256=7nd9kr3InonEuPKwFkF-1YJxtm8-UJH3_-pkPHbeNc4,78
+ip2asn-1.6.3.dist-info/METADATA,sha256=l-mRApqY3CrWw9Y2bLfy_b195ydeU58XbB1tLGvRfy8,3823
+ip2asn-1.6.3.dist-info/WHEEL,sha256=C2FUgwZgiLbznR-k0b_5k3Ai_1aASOXDss3lzCUsUug,87
+ip2asn-1.6.3.dist-info/entry_points.txt,sha256=_CO09_7yZAaV8DWYIXsK0SPUxBdciKIUPNTxM0BaTOM,44
+ip2asn-1.6.3.dist-info/licenses/LICENSE.txt,sha256=URoFoPv3Yt2Qu2GV9GLs8dCFRFtO0bHB_HC_A-PjIjw,1127
+ip2asn-1.6.3.dist-info/RECORD,,
