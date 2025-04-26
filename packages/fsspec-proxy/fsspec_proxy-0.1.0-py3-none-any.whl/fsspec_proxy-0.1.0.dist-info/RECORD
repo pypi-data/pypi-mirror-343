@@ -1,0 +1,10 @@
+fsspec_proxy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fsspec_proxy/__main__.py,sha256=tFFQD6gnP3uf4DmAMRJzESriRs6H6GArh7xR735mo_4,468
+fsspec_proxy/_version.py,sha256=ac3tgjoOzsODOlacRPCwz99LbZv0NK7ZYAaBWulFo7E,171
+fsspec_proxy/bytes_server.py,sha256=_tULA5_M1qguxpGb0HSuAD-RFs8Q7ST5ESH5kk8kfFg,4493
+fsspec_proxy/file_manager.py,sha256=z_kszaZaaSgZs812cebotZ1klJ0yApizu2xXdC-R4xM,2077
+fsspec_proxy-0.1.0.dist-info/METADATA,sha256=_0CRTPiYYzYBoB-joD-M7HTTwOK5DZHgD3byJcrRe9g,3915
+fsspec_proxy-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fsspec_proxy-0.1.0.dist-info/entry_points.txt,sha256=MabZ83-jU-7mYphcyjA-y6QeRgFyq3tM0IpQy1C_PkA,64
+fsspec_proxy-0.1.0.dist-info/licenses/LICENSE,sha256=m4PGWPwc3-2-qGBZGryAi3NmpPRWsrbp_1RlmiA4fz0,1535
+fsspec_proxy-0.1.0.dist-info/RECORD,,
