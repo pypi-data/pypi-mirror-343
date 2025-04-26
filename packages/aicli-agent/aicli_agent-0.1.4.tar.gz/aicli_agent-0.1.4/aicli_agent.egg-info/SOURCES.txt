@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.py
+aicli/__init__.py
+aicli/agentlib.py
+aicli/cli.py
+aicli/conf.py
+aicli/decorator.py
+aicli/role.py
+aicli/tools.py
+aicli_agent.egg-info/PKG-INFO
+aicli_agent.egg-info/SOURCES.txt
+aicli_agent.egg-info/dependency_links.txt
+aicli_agent.egg-info/entry_points.txt
+aicli_agent.egg-info/requires.txt
+aicli_agent.egg-info/top_level.txt
