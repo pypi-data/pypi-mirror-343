@@ -1,0 +1,9 @@
+matplotlib
+numpy
+
+[develop]
+coverage[toml]
+pip-tools
+pytest>=8.1
+pre-commit
+ruff

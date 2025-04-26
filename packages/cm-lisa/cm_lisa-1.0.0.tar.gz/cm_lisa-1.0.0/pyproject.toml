@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=61.2"]
+build-backend = "setuptools.build_meta"
+
+# https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
+[project]
+name = "cm_lisa"
+version = "1.0.0"
+description = "Matplotlib colormaps inspired by the colours of famous artists"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+	{name = "Harrison Nicholls, email = harrison.nicholls@physics.ox.ac.uk"},
+]
+keywords = [
+    "Visualization",
+    "Color",
+    "Plotting",
+]
+license = "GPL-3.0-or-later"
+dependencies = [
+    "matplotlib",
+    "numpy",
+]
+
+[project.urls]
+homepage = "https://github.com/nichollsh/cm_lisa"
+issues = "https://github.com/nichollsh/cm_lisa/issues"
+
+[project.optional-dependencies]
+develop = [
+    "coverage[toml]",
+    "pip-tools",
+    "pytest >= 8.1",
+    "pre-commit",
+    "ruff",
+]
+
+[tool.setuptools]
+package-dir = {"lisa" = "src/lisa" }
+include-package-data = true
+
+[tool.coverage.run]
+branch = true
+source = ["lisa"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 96
+target-version = "py311"
+extend-exclude = ["*ipynb"]
+
+[tool.ruff.lint]
+select = [
+	"F",  # Pyflakes
+	"E",  # pycodestyle (error)
+	"W",  # pycodestyle (warning)
+    "I",    # isort
+]
+ignore = [
+    "E501", # Line too long
+]
+
+[tool.ruff.lint.isort]
+known-first-party=["lisa"]
+required-imports = ["from __future__ import annotations"]
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"

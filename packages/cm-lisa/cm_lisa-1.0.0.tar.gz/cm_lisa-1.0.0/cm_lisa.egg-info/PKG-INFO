@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: cm_lisa
+Version: 1.0.0
+Summary: Matplotlib colormaps inspired by the colours of famous artists
+Author: Harrison Nicholls, email = harrison.nicholls@physics.ox.ac.uk
+License-Expression: GPL-3.0-or-later
+Project-URL: homepage, https://github.com/nichollsh/cm_lisa
+Project-URL: issues, https://github.com/nichollsh/cm_lisa/issues
+Keywords: Visualization,Color,Plotting
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Provides-Extra: develop
+Requires-Dist: coverage[toml]; extra == "develop"
+Requires-Dist: pip-tools; extra == "develop"
+Requires-Dist: pytest>=8.1; extra == "develop"
+Requires-Dist: pre-commit; extra == "develop"
+Requires-Dist: ruff; extra == "develop"
+Dynamic: license-file
+
+# Lisa
+
+A simple Python package providing colormaps inspired by the colours of famous artists.
+
+Based on the [Color Lisa](https://colorlisa.com/) project.
+
+### Installation
+Install the package from PyPI:
+```bash
+pip install cm_lisa
+```
+
+Or to develop it, clone this repository and install locally:
+```bash
+pip install -e .
+```
+
+### Usage
+Simply import the package to make the colormaps available for use with Matplotlib:
+```python
+import lisa
+```
+### Demonstration
+![Image demonstrating the Lisa colormaps](docs/assets/lisa.svg)
+
+-----------------------------
+Available under the GNU General Public License v3.
+
+Copyright (C) 2025 Harrison Nicholls
