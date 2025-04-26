@@ -1,0 +1,3 @@
+[console_scripts]
+idtec-encrypt = idtec_core.crypto:encrypt_cli
+idtec-sign = idtec_core.signer:main
