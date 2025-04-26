@@ -1,0 +1,5 @@
+[console_scripts]
+pymoldyn-cli = pymoldyn.cli:main
+
+[gui_scripts]
+pymoldyn = pymoldyn.gui:main
