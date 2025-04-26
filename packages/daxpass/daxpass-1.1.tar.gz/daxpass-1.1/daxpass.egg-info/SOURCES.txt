@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+daxpass/__init__.py
+daxpass.egg-info/PKG-INFO
+daxpass.egg-info/SOURCES.txt
+daxpass.egg-info/dependency_links.txt
+daxpass.egg-info/top_level.txt

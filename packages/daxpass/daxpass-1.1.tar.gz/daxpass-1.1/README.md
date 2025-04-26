@@ -1,0 +1,16 @@
+# Dax - The Password Module
+
+Dax is a simple way to _**create passwords and use then however you want!**_ If it's from cloud account protection, or to make a buddy that can auto-generate passwords for you!
+
+**!!DISCLAIMER!!**
+
+_**Dax does not come with any intellegent password creation,**_ it only comprises of a custom list that generates a random string of items with a certain length, so _**it should not be trusted with anything that contains any personal information, or data you wish not to share.**_
+
+Example:
+```python
+import daxpass
+
+print(daxpass.createpass(['a', 'b'], 5))
+```
+Output:
+baaba
