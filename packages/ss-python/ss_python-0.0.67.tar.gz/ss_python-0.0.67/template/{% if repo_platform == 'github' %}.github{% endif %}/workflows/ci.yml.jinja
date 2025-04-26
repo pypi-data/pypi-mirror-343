@@ -1,0 +1,84 @@
+{% from pathjoin("includes", "version_compare.jinja") import version_between %}
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+concurrency:
+  cancel-in-progress: true
+  group: {{ '${{ github.workflow }}-${{ github.ref }}' }}
+
+jobs:
+  ci:
+    if: {{ '${{ !cancelled() && ! failure() }}' }}
+    runs-on: {{ '${{ matrix.os }}' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+      - name: Set up PDM
+        uses: pdm-project/setup-pdm@deb8d8a4e2a03aabcef6f2cc981923fc6b29ef99 # v4.3
+        with:
+          cache: true
+          python-version: {{ '${{ matrix.python-version }}' }}
+          version: 2.24.0
+          cache-dependency-path: |
+            ./pdm.dev.lock
+            ./pdm.lock
+      - run: env | sort
+      - run: make prerequisites
+      - run: make dev
+      - run: make lint test doc build
+    strategy:
+      matrix:
+        os:
+{% if "macos" in platforms %}
+          # renovate: github-runner
+          - macos-14
+{% endif %}
+{% if "linux" in platforms %}
+          # renovate: github-runner
+          - ubuntu-24.04
+{% endif %}
+{% if "windows" in platforms %}
+          # renovate: github-runner
+          - windows-2022
+{% endif %}
+        python-version:
+{% if version_between("3.9", min_py, max_py) %}
+          - '3.9'
+{% endif %}
+{% if version_between("3.10", min_py, max_py) %}
+          - '3.10'
+{% endif %}
+{% if version_between("3.11", min_py, max_py) %}
+          - '3.11'
+{% endif %}
+{% if version_between("3.12", min_py, max_py) %}
+          - '3.12'
+{% endif %}
+{% if version_between("3.13", min_py, max_py) %}
+          - '3.13'
+{% endif %}
+{% if project_name == "Serious Scaffold Python" %}
+  consistency:
+    if: {{ '${{ !cancelled() && ! failure() }}' }}
+    runs-on: ubuntu-24.04
+    steps:
+      - run: env | sort
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Set up Git
+        run: |
+          git config --global user.name github-actions
+          git config --global user.email github-actions@github.com
+      - run: pipx install copier==9.6.0
+      - run: make template-build
+      - run: git diff
+      - run: git status --porcelain
+      - run: test -z "$(git status --porcelain)"
+{% endif %}

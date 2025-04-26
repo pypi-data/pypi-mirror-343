@@ -1,0 +1,24 @@
+{% from pathjoin("includes", "variable.jinja") import releases_url with context %}
+# Welcome to {{ project_name }}'s documentation
+
+```{toctree}
+:hidden:
+Overview <self>
+management/index
+development/index
+advanced/index
+cli/index
+api/index
+reports/index
+Changelog <{{ releases_url() }}>
+```
+
+```{include} ../README.md
+:start-line: 1
+```
+
+## 🔖 Indices and tables
+
+* {ref}`genindex`
+* {ref}`modindex`
+* {ref}`search`

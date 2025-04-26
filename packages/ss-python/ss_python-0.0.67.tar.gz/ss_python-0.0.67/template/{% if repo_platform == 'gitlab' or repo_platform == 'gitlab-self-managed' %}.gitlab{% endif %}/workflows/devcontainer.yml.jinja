@@ -1,0 +1,79 @@
+{% from pathjoin("includes", "version_compare.jinja") import version_between %}
+dev-container-publish:
+  image: docker:28.1.1@sha256:f49e1c71b5d9f8ebe53715f78996ce42b8be4b1ec03875d187dfe3c03de1dc00
+  parallel:
+    matrix:
+      - PYTHON_VERSION:
+{% if version_between("3.9", min_py, max_py) %}
+          - '3.9'
+{% endif %}
+{% if version_between("3.10", min_py, max_py) %}
+          - '3.10'
+{% endif %}
+{% if version_between("3.11", min_py, max_py) %}
+          - '3.11'
+{% endif %}
+{% if version_between("3.12", min_py, max_py) %}
+          - '3.12'
+{% endif %}
+{% if version_between("3.13", min_py, max_py) %}
+          - '3.13'
+{% endif %}
+  rules:
+    - changes:
+        - .devcontainer/Dockerfile
+        - .devcontainer/Dockerfile.dockerignore
+        - .gitlab/workflows/devcontainer.yml
+        - Makefile
+      if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE == "push"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE == "web"
+    - changes:
+        - .devcontainer/Dockerfile
+        - .devcontainer/Dockerfile.dockerignore
+        - .gitlab/workflows/devcontainer.yml
+        - Makefile
+      if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+  script:
+    - docker login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}
+    - docker context create builder
+    - docker buildx create builder --name container --driver docker-container --use
+    - docker buildx inspect --bootstrap --builder container
+    - |
+      docker buildx build . \
+        --build-arg PYTHON_VERSION=${PYTHON_VERSION} \
+        --cache-from type=registry,ref=${CI_REGISTRY_IMAGE}/dev-cache:py${PYTHON_VERSION} \
+        --file .devcontainer/Dockerfile \
+        --load \
+        --tag ${CI_REGISTRY_IMAGE}/dev:py${PYTHON_VERSION} \
+        --target dev
+    - |
+      docker run --rm \
+        -e CI=true \
+        -v ${PWD}:/workspace \
+        ${CI_REGISTRY_IMAGE}/dev:py${PYTHON_VERSION} \
+        make dev lint test doc build
+    - |
+      docker buildx build . \
+        --build-arg PYTHON_VERSION=${PYTHON_VERSION} \
+        --file .devcontainer/Dockerfile \
+        --load \
+        --tag ${CI_REGISTRY_IMAGE}:py${PYTHON_VERSION} \
+        --target prod
+    - docker run --rm ${CI_REGISTRY_IMAGE}:py${PYTHON_VERSION}
+    - |
+      if [ "$CI_PIPELINE_SOURCE" != "merge_request_event" ]; then
+        docker buildx build . \
+          --build-arg PYTHON_VERSION=${PYTHON_VERSION} \
+          --cache-to type=registry,ref=${CI_REGISTRY_IMAGE}/dev-cache:py${PYTHON_VERSION},mode=max \
+          --file .devcontainer/Dockerfile \
+          --push \
+          --tag ${CI_REGISTRY_IMAGE}/dev:py${PYTHON_VERSION} \
+          --target dev
+      fi
+  services:
+    - docker:28.1.1@sha256:f49e1c71b5d9f8ebe53715f78996ce42b8be4b1ec03875d187dfe3c03de1dc00
+  stage: build
+  variables:
+    DOCKER_TLS_CERTDIR: /certs
+    PYTHON_VERSION: ${PYTHON_VERSION}
+    SOURCE_DATE_EPOCH: 0

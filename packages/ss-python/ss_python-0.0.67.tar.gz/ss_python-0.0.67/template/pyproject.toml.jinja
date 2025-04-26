@@ -1,0 +1,188 @@
+{% from pathjoin("includes", "variable.jinja") import page_url with context %}
+{% from pathjoin("includes", "variable.jinja") import repo_url with context %}
+{% from pathjoin("includes", "version_compare.jinja") import version_between %}
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools==79.0.0",
+    "setuptools-scm==8.2.0",
+]
+
+[project]
+name = "{{ package_name }}"
+description = "{{ project_description }}"
+readme = "README.md"
+keywords = [
+{% set keywords = (project_keywords.split(",") | map("trim") | list) + ["serious-scaffold"] %}
+{% for keyword in keywords | sort %}
+    "{{ keyword }}",
+{% endfor %}
+]
+{% if copyright_license == "Apache Software License" %}
+license = { text = "Apache-2.0" }
+{% elif copyright_license == "Boost Software License 1.0 (BSL-1.0)" %}
+license = { text = "BSL-1.0" }
+{% elif copyright_license == "GNU Affero General Public License v3" %}
+license = { text = "AGPLv3" }
+{% elif copyright_license == "GNU General Public License v3 (GPLv3)" %}
+license = { text = "GPLv3" }
+{% elif copyright_license == "GNU Lesser General Public License v3 (LGPLv3)" %}
+license = { text = "LGPLv3" }
+{% elif copyright_license == "MIT License" %}
+license = { text = "MIT" }
+{% elif copyright_license == "Mozilla Public License 2.0 (MPL 2.0)" %}
+license = { text = "MPL-2.0" }
+{% elif copyright_license == "The Unlicense (Unlicense)" %}
+license = { text = "Unlicense" }
+{% endif %}
+authors = [
+    { email = "{{ author_email }}", name = "{{ author_name }}" },
+]
+requires-python = ">={{ min_py }}"
+classifiers = [
+{% if development_status == "Alpha" %}
+    "Development Status :: 3 - Alpha",
+{% elif development_status == "Beta" %}
+    "Development Status :: 4 - Beta",
+{% elif development_status == "Stable" %}
+    "Development Status :: 5 - Production/Stable",
+{% endif %}
+    "License :: OSI Approved :: {{ copyright_license }}",
+{% if "macos" in platforms %}
+    "Operating System :: MacOS :: MacOS X",
+{% endif %}
+{% if "windows" in platforms %}
+    "Operating System :: Microsoft :: Windows",
+{% endif %}
+{% if "linux" in platforms %}
+    "Operating System :: POSIX :: Linux",
+{% endif %}
+    "Programming Language :: Python :: 3 :: Only",
+{% if version_between("3.9", min_py, max_py) %}
+    "Programming Language :: Python :: 3.9",
+{% endif %}
+{% if version_between("3.10", min_py, max_py) %}
+    "Programming Language :: Python :: 3.10",
+{% endif %}
+{% if version_between("3.11", min_py, max_py) %}
+    "Programming Language :: Python :: 3.11",
+{% endif %}
+{% if version_between("3.12", min_py, max_py) %}
+    "Programming Language :: Python :: 3.12",
+{% endif %}
+{% if version_between("3.13", min_py, max_py) %}
+    "Programming Language :: Python :: 3.13",
+{% endif %}
+]
+dynamic = [
+    "version",
+]
+dependencies = [
+    "click>=8.1.8",
+    "pydantic-settings>=2.7.1",
+]
+urls.documentation = "https://{{ page_url() }}"
+{% if repo_platform == 'github' %}
+urls.issue = "https://{{ repo_url() }}/issues"
+{% elif repo_platform == 'gitlab' or repo_platform == 'gitlab-self-managed' %}
+urls.issue = "https://{{ repo_url() }}/-/issues"
+{% endif %}
+urls.repository = "https://{{ repo_url() }}"
+scripts.{{ package_name }}-cli = "{{ module_name }}.cli:cli"
+
+[dependency-groups]
+test = [
+    "coverage>=7.6.10",
+    "pytest>=8.3.4",
+]
+doc = [
+    "autodoc-pydantic>=2.2.0",
+    "coverage>=7.6.10",
+    "furo>=2024.8.6",
+    "mypy[reports]>=1.14.1",
+    "myst-parser>=3.0.1",
+    "pytest>=8.3.4",
+    "sphinx>=7.4.7",
+    "sphinx-click>=6.0.0",
+    "sphinx-design>=0.6.1",
+]
+lint = [
+    "mypy>=1.14.1",
+]
+
+[tool.pdm]
+distribution = true
+
+[tool.setuptools_scm]
+fallback_version = "0.0.0"
+
+[tool.ruff]
+src = [
+    "src",
+]
+{% if project_name == "Serious Scaffold Python" %}
+extend-exclude = [
+    "template",
+]
+{% endif %}
+fix = true
+lint.select = [
+    "B",      # flake8-bugbear
+    "D",      # pydocstyle
+    "E",      # pycodestyle error
+    "F",      # Pyflakes
+    "I",      # isort
+    "RUF100", # Unused noqa directive
+    "S",      # flake8-bandit
+    "SIM",    # flake8-simplify
+    "UP",     # pyupgrade
+    "W",      # pycodestyle warning
+]
+lint.per-file-ignores."tests/*" = [
+    "S101",
+]
+lint.pydocstyle.convention = "google"
+
+[tool.codespell]
+write-changes = true
+check-filenames = true
+
+[tool.pyproject-fmt]
+indent = 4
+keep_full_version = true
+max_supported_python = "{{ max_py }}"
+
+[tool.pytest.ini_options]
+addopts = "-l -s --durations=0"
+log_cli = true
+log_cli_level = "info"
+log_date_format = "%Y-%m-%d %H:%M:%S"
+log_format = "%(asctime)s %(levelname)s %(message)s"
+minversion = "6.0"
+
+[tool.coverage.report]
+fail_under = {{ coverage_threshold }}
+
+[tool.coverage.run]
+source = [
+    "{{ module_name }}",
+]
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_unimported = true
+disallow_untyped_defs = true
+enable_error_code = [
+    "ignore-without-code",
+]
+exclude = [
+    "build",
+    "doc",
+{% if project_name == "Serious Scaffold Python" %}
+    "template",
+{% endif %}
+]
+no_implicit_optional = true
+show_error_codes = true
+warn_return_any = true
+warn_unused_ignores = true

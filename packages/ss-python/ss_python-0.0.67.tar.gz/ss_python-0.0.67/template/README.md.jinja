@@ -1,0 +1,48 @@
+{% from pathjoin("includes", "variable.jinja") import coverage_badge with context %}
+{% from pathjoin("includes", "variable.jinja") import license_badge with context %}
+{% from pathjoin("includes", "variable.jinja") import license_url with context %}
+{% from pathjoin("includes", "variable.jinja") import logo_badge with context %}
+{% from pathjoin("includes", "variable.jinja") import logo_badge_url with context %}
+{% from pathjoin("includes", "variable.jinja") import page_url with context %}
+{% from pathjoin("includes", "variable.jinja") import pipeline_badge with context %}
+{% from pathjoin("includes", "variable.jinja") import release_badge with context %}
+{% from pathjoin("includes", "variable.jinja") import repo_url with context %}
+# {{ project_name }}
+
+{{ project_description }}
+
+{{ pipeline_badge() }}
+{{ coverage_badge() }}
+{{ release_badge() }}
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/{{ package_name }})](https://pypi.org/project/{{ package_name }}/)
+{{ license_badge() }}
+
+[![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm-project.org)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+[![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
+[![Pydantic v2](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/pydantic/pydantic/5697b1e4c4a9790ece607654e6c02a160620c7e1/docs/badge/v2.json)](https://pydantic.dev)
+[![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-orange.json)](https://github.com/copier-org/copier)
+{{ logo_badge() }}
+[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://{{ repo_url() }})
+
+{% if development_status == "Alpha" %}
+> [!WARNING]
+{% elif development_status == "Beta" %}
+> [!IMPORTANT]
+{% elif development_status == "Stable" %}
+> [!NOTE]
+{% endif %}
+> _{{ project_name }}_ is in the **{{ development_status }}** phase.
+{% if development_status == "Alpha" %}
+> Frequent changes and instability should be anticipated.
+{% elif development_status == "Beta" %}
+> Changes and potential instability should be anticipated.
+{% endif %}
+> Any feedback, comments, suggestions and contributions are welcome!
+
+{{ readme_content }}
+## 📜 License
+
+{{ copyright_license }}, for more details, see the [LICENSE]({{ license_url() }}) file.
