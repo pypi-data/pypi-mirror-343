@@ -1,0 +1,11 @@
+{
+  "name": "SecuredFiles",
+  "version": "1.1.0",
+  "authors": [
+    {
+      "name": "LassaInora",
+      "email": "contact@lassainora.fr"
+    }
+  ],
+  "description": "Python's library for protect your files."
+}
