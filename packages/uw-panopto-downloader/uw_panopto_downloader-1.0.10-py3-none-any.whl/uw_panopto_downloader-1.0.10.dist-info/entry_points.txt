@@ -1,0 +1,2 @@
+[console_scripts]
+uwpd = uw_panopto_downloader.cli.app:app
