@@ -1,0 +1,2 @@
+[console_scripts]
+codeconcat = codeconcat.main:main
