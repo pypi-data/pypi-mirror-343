@@ -1,0 +1,3 @@
+[console_scripts]
+ztcli=zerotier_api_cli._cli:cli
+
