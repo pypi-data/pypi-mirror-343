@@ -1,0 +1,3 @@
+
+[AzureMonitor]
+azure-monitor-events-extension<2.0.0
