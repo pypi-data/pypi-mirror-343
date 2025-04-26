@@ -1,0 +1,6 @@
+dect
+pandas>=2.2.3
+pydantic>=2.10.6
+scikit-learn>=1.6.1
+scipy>=1.15.2
+torch>=2.6.0
