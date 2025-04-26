@@ -1,0 +1,8 @@
+biopython
+tqdm
+ete4
+six
+PyYAML
+pyhmmer
+pysam
+greedyFAS>=1.11.2
