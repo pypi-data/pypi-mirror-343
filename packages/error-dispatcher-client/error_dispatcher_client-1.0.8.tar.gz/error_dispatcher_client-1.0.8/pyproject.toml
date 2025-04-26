@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "error_dispatcher_client"
+version = "1.0.8"
+description = "A Python package for tracking and handling errors with support for multiple providers like Kafka and Email."
+readme = "README.md"
+authors = [
+    { name = "Willian Antunes", email = "willian.antunes@solinftec.com" }
+]
+license = { file = "LICENSE" }
+keywords = ["error handling", "kafka", "email", "tracking"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+requires-python = ">=3.7"
+dependencies = [
+    "flask",
+    "fastapi>=0.108.0",
+    "confluent-kafka",
+    "discord-webhook"
+]
+
+[project.urls]
+Documentation = "https://github.com/solinftec/error_dispatcher_client#readme"
+Repository = "https://github.com/solinftec/error_dispatcher_client"

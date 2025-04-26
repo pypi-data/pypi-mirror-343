@@ -1,0 +1,4 @@
+flask
+fastapi>=0.108.0
+confluent-kafka
+discord-webhook
