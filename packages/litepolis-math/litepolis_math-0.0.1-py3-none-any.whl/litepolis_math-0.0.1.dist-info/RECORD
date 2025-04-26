@@ -1,0 +1,10 @@
+litepolis_math/__init__.py,sha256=zEDfBeO22MDzzn6OWJh3LNe-UAJLkLOz5IKvHOURjI8,120
+litepolis_math/r_matrix_builder.py,sha256=CrSybVO71uemXHr-M3qW61X88UW0qdwXOa92SAwsSyw,1829
+litepolis_math/validation.py,sha256=E03-j7zODvSJwKNOYNXu9MTOpoPvJsn-VlM1fO_zaU4,321
+litepolis_math/algorithms/__init__.py,sha256=XAg5JuGoQNxCyPD3we69DJhGAyYvJmiaPjEHBMrGGUQ,47
+litepolis_math/algorithms/kmeans.py,sha256=DtMYm8sc7J3O0kdVaytFwkVkyLsAyH7OohEFTZVuF0w,859
+litepolis_math/algorithms/pca.py,sha256=h29Ud_O-j-YBycJli1HKOvAxuZZ8-HJCQ2GR-oIXe54,3426
+litepolis_math-0.0.1.dist-info/METADATA,sha256=qQCDR0Fwbvk-xMuzg8-s32SI71s2n04IQXdcmGZyD9M,5091
+litepolis_math-0.0.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+litepolis_math-0.0.1.dist-info/top_level.txt,sha256=XFxQu8lI5KTBhFeGE1NrFcI0HJNZ9cBOFuCArdGIXag,15
+litepolis_math-0.0.1.dist-info/RECORD,,
