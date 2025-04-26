@@ -1,0 +1,6 @@
+include LICENSE
+include README.md
+recursive-include strynova_dj_tailwindcss/templates *
+recursive-include strynova_dj_tailwindcss/templatetags *
+recursive-include strynova_dj_tailwindcss/management *
+recursive-include strynova_dj_tailwindcss/bin *
