@@ -1,0 +1,74 @@
+"""
+JWT claims validation models for Spryx authentication.
+
+This module provides Pydantic models for validating and working with JWT claims
+used in Spryx authentication system. It includes models for different token types
+(user and application tokens) with automatic discrimination between them.
+"""
+
+from __future__ import annotations
+
+from datetime import UTC, datetime
+from typing import Annotated, Literal, Union
+
+from pydantic import BaseModel, Field, model_validator
+
+from .permissions import Permission
+
+
+class _CoreModel(BaseModel):
+    """Shared Pydantic config for core models."""
+
+    model_config = {
+        "extra": "forbid",
+        "frozen": True,  # immutable instances
+        "populate_by_name": True,
+        "str_strip_whitespace": True,
+    }
+
+
+class BaseClaims(_CoreModel):
+    """Fields common to every access token issued by Spryx Auth."""
+
+    iss: str = Field(..., description="Issuer of the token")
+    sub: str = Field(..., description="Subject of the token (user or app ID)")
+    aud: str = Field(..., description="Audience for the token (client ID)")
+    iat: datetime = Field(..., description="Issued at timestamp")
+    exp: datetime = Field(..., description="Expiration timestamp")
+    token_type: str = Field(..., frozen=True, description="Type of token (user or app)")
+
+    @model_validator(mode="after")
+    def _check_exp(self):
+        """Validate that the token hasn't expired."""
+        if self.exp < datetime.now(UTC):
+            raise ValueError("token already expired")
+        return self
+
+
+class UserClaims(BaseClaims):
+    """Token issued to a *human* user belonging to an organization."""
+
+    token_type: Literal["user"] = Field(
+        ..., description="Must be 'user' for user tokens"
+    )
+    permissions: list[Permission] = Field(
+        default_factory=list, description="User's permissions"
+    )
+
+
+class AppClaims(BaseClaims):
+    """Token issued to a *machine* / application integrating with Spryx."""
+
+    token_type: Literal["app"] = Field(
+        ..., description="Must be 'app' for application tokens"
+    )
+    scopes: list[str] = Field(
+        default_factory=list, description="Application's OAuth scopes"
+    )
+
+
+# Discriminated union → automatic down-casting after validation
+TokenClaims = Annotated[
+    Union[UserClaims, AppClaims],
+    Field(discriminator="token_type"),
+]
