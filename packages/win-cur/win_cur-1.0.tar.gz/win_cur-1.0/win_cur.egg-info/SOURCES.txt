@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+win_cur/__init__.py
+win_cur/cursor.py
+win_cur/test.py
+win_cur.egg-info/PKG-INFO
+win_cur.egg-info/SOURCES.txt
+win_cur.egg-info/dependency_links.txt
+win_cur.egg-info/top_level.txt
