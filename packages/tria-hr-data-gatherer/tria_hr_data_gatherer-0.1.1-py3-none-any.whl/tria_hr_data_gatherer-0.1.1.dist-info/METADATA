@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: tria_hr_data_gatherer
+Version: 0.1.1
+Summary: A library for gathering and processing employee data from TriaHR API
+Author-email: Daniel Simanek <daniel.simanek@decathlon.com>
+License: MIT
+Project-URL: Homepage, https://github.com/daniel-simanek/tria-hr-data-gatherer
+Project-URL: Bug Tracker, https://github.com/daniel-simanek/tria-hr-data-gatherer/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: tria_hr_api
+Requires-Dist: python-dateutil
+
+# TriaHRDataGatherer
+
+A Python library for gathering and processing employee data from the TriaHR API.
+
+## Installation
+
+```bash
+pip install tria_hr_data_gatherer
