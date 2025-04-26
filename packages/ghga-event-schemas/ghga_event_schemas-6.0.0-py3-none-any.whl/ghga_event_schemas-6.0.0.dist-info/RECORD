@@ -1,0 +1,11 @@
+ghga_event_schemas/__init__.py,sha256=jEsr7bkS-uIc2h2quxmNwTqs5Gtg5dXEbYpLlWBgY88,848
+ghga_event_schemas/pydantic_.py,sha256=N0PfmSvdmiI40dZXDvNUya7SJLtNykups6r5-sFBNPg,16282
+ghga_event_schemas/validation.py,sha256=dwHcUX0mm5z4QnDbRLdVUj72-lbsVWSKawpakHHlgaY,2410
+ghga_event_schemas/configs/__init__.py,sha256=qQx-dxdNCDBdRH9RtBIRG463wuncRYomqsEE7oIR7XI,1473
+ghga_event_schemas/configs/stateful.py,sha256=ML0UE57OumTw4hD__vJ3Bpe81_c-niQiNjZp2-Xu5cc,2646
+ghga_event_schemas/configs/stateless.py,sha256=SFqBPNJ7c_PB9jtE0JWMR9IA8KyViJnEMyBNG9cBMdM,10711
+ghga_event_schemas-6.0.0.dist-info/licenses/LICENSE,sha256=nKgIWA3zoWy18_YSW6e9Gd6_p7d7ccwjNZrfJzvKALE,11452
+ghga_event_schemas-6.0.0.dist-info/METADATA,sha256=jSiCYjnVUxkGIbK7Jt0Cb7e0yX9yK0bNwa_S0nj-q-w,10710
+ghga_event_schemas-6.0.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+ghga_event_schemas-6.0.0.dist-info/top_level.txt,sha256=S0Syqz-ZeogimhrrW9kmW3ipY_9RS8_SwnrWmRBT1Vo,19
+ghga_event_schemas-6.0.0.dist-info/RECORD,,
