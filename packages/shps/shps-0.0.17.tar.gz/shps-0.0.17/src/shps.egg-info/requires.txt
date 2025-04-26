@@ -1,0 +1,6 @@
+pygmsh
+shapely
+numpy
+scipy
+sympy
+matplotlib
