@@ -1,0 +1,14 @@
+anontex/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+anontex/anontex_cli.py,sha256=B_r7MdSko-DZLUGIqYewMoBmGICXrdW5Z0bHps0K_pA,2617
+anontex/constants.py,sha256=0-UpB7kLGHr4YeDxMI3ESdWyczw_Oj-23OXh-6y4v4c,576
+anontex/engines.py,sha256=dqU_5UAOP-5EfrngoESfeTNo4QjVpjzO-2S-Z47BOyw,3829
+anontex/exceptions.py,sha256=LKs491cZGAVSYIKVUp0vxcZVoR3-qI3MWcZ3vWv_8HE,218
+anontex/languages-config-transformer.yml,sha256=YN3flnQxbEkkqieTmido4ZuN1dKXx1yPb-Y9J5XTHfI,753
+anontex/languages-config.yml,sha256=9y8ibsuYJVU5x0uk5ZeyRm6qCFzDreqUGCiwwwrmXYU,628
+anontex/routes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+anontex/routes/openai_proxy.py,sha256=PTH28ani25fGpaQeTHKEGjBQa5t4ow0TSrOOIz7bbvk,3327
+anontex-0.2.5.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+anontex-0.2.5.dist-info/METADATA,sha256=vyxmc7QGFTzDOxO0KwNiKeHoSekU-xP3AOBzW18PAUg,17643
+anontex-0.2.5.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+anontex-0.2.5.dist-info/entry_points.txt,sha256=cRZKLlEW7oGclEf9EpyTkF8vN85_xyHc4-agAIkkYu0,55
+anontex-0.2.5.dist-info/RECORD,,

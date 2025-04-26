@@ -1,0 +1,3 @@
+[console_scripts]
+anontex=anontex.anontex_cli:anontex
+
