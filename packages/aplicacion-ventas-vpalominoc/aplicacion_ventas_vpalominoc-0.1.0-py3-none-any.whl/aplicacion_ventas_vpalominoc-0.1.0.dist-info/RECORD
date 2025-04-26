@@ -1,0 +1,13 @@
+aplicacion_ventas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aplicacion_ventas/descuentos.py,sha256=2OmffVlT7pmOSPAjPW_HpZpm5XF0j2KMNegA1pqvZ0c,363
+aplicacion_ventas/excepcions.py,sha256=bVw220GICNMvD7z9aLdbOXcOxC8qimk-7jZ1mCUJlo0,103
+aplicacion_ventas/gestor_ventas.py,sha256=JBA6MBghOIfOfKNWzVp-2J-szkkGYDWE4aiRTAnxmXo,698
+aplicacion_ventas/impuestos.py,sha256=PwM0QY24f1EhDImQvdcger66IDrkRYm3padYmBKXQH0,345
+aplicacion_ventas/precios.py,sha256=0HuoNP2VwhGvUHeJffKfuAIqmOySGyZo1o5hEK2pPhg,144
+aplicacion_ventas_vpalominoc-0.1.0.dist-info/licenses/LICENCE,sha256=7bnzpTuqoBseyftZlUZdR_fIcw0mBbcoOxYzKLqczhA,1206
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_aplicacion_ventas.py,sha256=LoUUTZUqAem74RlWrbRpLlVfsUfuOP_ICtMjuKe9VIU,735
+aplicacion_ventas_vpalominoc-0.1.0.dist-info/METADATA,sha256=4afIqEhP8f7ctCxgsmnIIEYme2Zw9Rm2qSmxr00lshQ,884
+aplicacion_ventas_vpalominoc-0.1.0.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+aplicacion_ventas_vpalominoc-0.1.0.dist-info/top_level.txt,sha256=e68vDMUd0q6tO18ZL6CxZSvXsWFGh3xXNwO4KUgPHvI,24
+aplicacion_ventas_vpalominoc-0.1.0.dist-info/RECORD,,
