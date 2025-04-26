@@ -1,0 +1,2 @@
+[console_scripts]
+prompt-logger = prompt_logger.cli:main
