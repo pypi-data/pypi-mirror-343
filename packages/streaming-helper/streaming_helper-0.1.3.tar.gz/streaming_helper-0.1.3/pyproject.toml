@@ -1,0 +1,35 @@
+[project]
+name = "streaming-helper"
+version = "0.1.3"
+
+authors = [
+  { name="ven.ajie", email="venoajie@gmail.com" },
+]
+description = "app to relay data from exchanges"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies =  [
+  "aiohttp",
+  "aioredis>=2.0.1",
+  "aiosqlite==0.21.0",
+  "build>=1.2.2.post1",
+  "ccxt==4.4.74",
+  "dataclassy==1.0.1",
+  "loguru==0.7.3",
+  "oci==2.150.2",
+  "orjson==3.10.15",
+  "redis[hiredis]>=5.2.1",
+  "tomli==2.0.2",
+  "twine>=6.1.0",
+  "uvloop>=0.21.0",
+  "websockets==15.0",
+]
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/streaming_helper"]
+
+
