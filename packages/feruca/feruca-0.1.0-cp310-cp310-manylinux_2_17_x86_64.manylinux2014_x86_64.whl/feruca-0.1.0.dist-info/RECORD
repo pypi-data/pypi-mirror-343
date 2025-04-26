@@ -1,0 +1,5 @@
+feruca-0.1.0.dist-info/METADATA,sha256=MG46P9KoA3fAmnpznmQtfRid8SORRvC6trg3WJ-4k6g,256
+feruca-0.1.0.dist-info/WHEEL,sha256=vZCrFUqux3RT3x-5MYcfGpyb4lW1eii-LV1Nx1Zs4nE,129
+feruca/__init__.py,sha256=VO2ulr4jBFzby-NjWz7VbRbP0CSQ2iXU3NWUam2Ci-g,107
+feruca/feruca.cpython-310-x86_64-linux-gnu.so,sha256=XuTgbWh1KIxeAl2QRCrzttMhAg3BiuEAx6UQ2dPkhYk,2808000
+feruca-0.1.0.dist-info/RECORD,,
