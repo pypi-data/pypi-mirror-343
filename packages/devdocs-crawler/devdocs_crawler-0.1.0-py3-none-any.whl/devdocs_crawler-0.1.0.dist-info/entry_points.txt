@@ -1,0 +1,2 @@
+[console_scripts]
+devdocs-crawler = devdocs_crawler.cli:main
