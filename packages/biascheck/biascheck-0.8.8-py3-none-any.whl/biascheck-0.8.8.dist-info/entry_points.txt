@@ -1,0 +1,3 @@
+[console_scripts]
+biascheck=biascheck.cli:main
+
