@@ -1,0 +1,83 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "parplot"
+version = "0.1.2"
+description = "Plot data from a parquet, CSV or JSON file."
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Unix",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: Console",
+    "Environment :: MacOS X",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet",
+]
+requires-python = ">=3.11"
+dependencies = [
+    "altair>=5.5.0",
+    "polars>=1.27.1",
+    "vl-convert-python>=1.7.0",
+]
+
+[project.scripts]
+parplot = "parplot.cli:main"
+pp = "parplot.cli:main"
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+include = [
+    "parplot/**/*.py",
+]
+
+[tool.ruff.lint]
+extend-select = [
+    "Q",
+    "RUF100",
+    "C90",
+    "UP",
+    "I",
+]
+flake8-quotes = { inline-quotes = "single", multiline-quotes = "double" }
+isort = { combine-as-imports = true }
+mccabe = { max-complexity = 15 }
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+# don't format python in docstrings, pytest-examples takes care of it
+docstring-code-format = false
+quote-style = "single"
+
+[tool.pyright]
+pythonVersion = "3.13"
+typeCheckingMode = "strict"
+reportUnnecessaryTypeIgnoreComment = true
+include = [
+    "parplot",
+]
+venvPath = ".venv"
+
+[dependency-groups]
+dev = [
+    "devtools>=0.12.2",
+    "ipython>=9.1.0",
+    "pyright>=1.1.399",
+    "ruff>=0.11.5",
+]
