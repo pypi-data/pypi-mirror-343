@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tsmd"  # le nom sous lequel les gens feront `pip install mon-package`
+version = "0.1.0"
+description = "The TSMD project brings together Motif Discovery methods for Time Series, aiming to compare their performance through well-defined research questions and to simplify their practical use. It provides both guidelines for selecting the most suitable methods based on the data, and accessible implementations of the most relevant approaches."
+authors = [
+  { name = "Valerio Guerrini", email = "valerio.guerrini@ens-paris-saclay.fr"},
+  {name = "Thibaut Germain", email = "thibaut.germain@ens-paris-saclay.fr"},
+  {name = "Charles Truong", email = "charles.truong@ens-paris-saclay.fr"},
+  {name= "Laurent Oudre", email ="laurent.oudre@ens-paris-saclay.fr"},
+  {name= "Paul Boniol", email = "paul.boniol@inria.fr"}
+]
+readme = "README.md"
+license  = "MIT"
+requires-python = ">=3.8"
+dependencies = [
+  "numpy>=1.20.0",
+  "scipy>=1.7.0",
+  "matplotlib>=3.3.0",
+  "pandas>=1.3.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/grrvlr/TSMD"
+
+[tool.setuptools.packages.find]
+where = ["tsmd"]
