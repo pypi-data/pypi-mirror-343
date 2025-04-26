@@ -1,0 +1,82 @@
+Metadata-Version: 2.3
+Name: pynans
+Version: 0.1.0
+Summary: Investment library for Python
+License: MIT
+Keywords: pynans,fastapi,python,finance,investment
+Author: Naga Sanka
+Author-email: nsanka@me.com
+Maintainer: Naga Sanka
+Maintainer-email: nsanka@me.com
+Requires-Python: >=3.10
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Provides-Extra: dev
+Provides-Extra: text
+Requires-Dist: black ; extra == "dev"
+Requires-Dist: fastapi[all] ; extra == "text"
+Requires-Dist: matplotlib (>=3.10.1,<4.0.0)
+Requires-Dist: mypy ; extra == "dev"
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: pre-commit ; extra == "dev"
+Requires-Dist: pytest ; extra == "dev"
+Requires-Dist: yfinance (>=0.2.56,<0.3.0)
+Project-URL: Documentation, https://pynans.readthedocs.io/en/latest/
+Project-URL: Homepage, https://pynans.com
+Project-URL: Repository, https://github.com/nsanka/pynans
+Description-Content-Type: text/markdown
+
+# Investment Library for Python
+
+A simple and flexible Python library for building, analyzing, and managing investment portfolios. Designed for ease of use by financial analysts, researchers, and individual investors.
+
+## Features
+
+- Portfolio construction and optimization
+- Asset performance tracking
+- Risk and return analysis
+- Visualization tools for financial data
+- Support for custom strategies and backtesting
+
+## Installation
+
+```bash
+pip install pynans
+```
+
+## Quick Start
+
+```python
+from pynance import Portfolio
+
+# Create a portfolio with assets
+portfolio = Portfolio(assets={
+    'AAPL': 0.4,
+    'MSFT': 0.3,
+    'GOOGL': 0.3
+})
+
+# Fetch performance data and analyze
+portfolio.fetch_data(start_date="2020-01-01", end_date="2023-01-01")
+portfolio.calculate_metrics()
+portfolio.plot_performance()
+```
+
+## Documentation
+
+Full documentation is available at: [Pynans Docs](https://pynans.readthedocs.io/en/latest/)
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+Happy Investing! 🌊
+

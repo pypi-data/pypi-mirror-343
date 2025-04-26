@@ -1,0 +1,46 @@
+[project]
+name = "pynans"
+version = "0.1.0"
+description = "Investment library for Python"
+authors = [
+    {name = "Naga Sanka", email = "nsanka@me.com"}
+]
+maintainers = [
+    {name = "Naga Sanka", email = "nsanka@me.com"}
+]
+readme = "README.md"
+readme-content-type = "text/markdown"
+license = {text = "MIT"}
+keywords = ["pynans", "fastapi", "python", "finance", "investment"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "yfinance (>=0.2.56,<0.3.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "matplotlib (>=3.10.1,<4.0.0)",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "mypy",
+    "pytest",
+    "pre-commit",
+]
+text = [
+    "fastapi[all]",
+]
+
+[project.urls]
+Homepage = "https://pynans.com"
+Repository = "https://github.com/nsanka/pynans"
+Documentation = "https://pynans.readthedocs.io/en/latest/"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
