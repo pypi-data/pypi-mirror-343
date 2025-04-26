@@ -1,0 +1,9 @@
+README.md
+setup.py
+iCompress/__init__.py
+iCompress/compress.py
+iCompress/decompress.py
+iCompress.egg-info/PKG-INFO
+iCompress.egg-info/SOURCES.txt
+iCompress.egg-info/dependency_links.txt
+iCompress.egg-info/top_level.txt
