@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "sag-py-auth"
+version = "1.1.1"
+description = "secure fastapi service  with keycloak jwt bearer authentication"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+anyio = "^4.4.0"
+contextvars = "*"
+cryptography = "*"
+fastapi = {version = ">=0.109.1", extras = ["all"]}
+PyJWT = "*"
+starlette = "*"
+types-requests = "*"
+zipp = ">=3.19.1"
+
+[tool.poetry.group.dev.dependencies]
+build = "*"
+cachetools = "*"
+contextvars = "*"
+starlette = ">=0.40.0"
+flake8 = "*"
+mock = "*"
+mypy = "*"
+pytest = "*"
+pytest-asyncio = "*"
+pytest-cov = "*"
+requests = "*"
+types-cachetools = "*"
+types-requests = "*"
+types-mock = "*"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
