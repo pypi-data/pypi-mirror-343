@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: sm123
+Version: 1.0.2
+Summary: A package.
+Home-page: https://github.com/SHillman836/ClonedSML
+Author: Sam Hillman
+Author-email: sam.hillman399@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: numpy==1.26.3
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Provides-Extra: sklearn
+Requires-Dist: skl2onnx==1.16.0; extra == "sklearn"
+Requires-Dist: scikit-learn==1.4.0; extra == "sklearn"
+Provides-Extra: torch
+Requires-Dist: torch==2.1.2; extra == "torch"
+Provides-Extra: tensorflow
+Requires-Dist: tf2onnx==1.16.1; extra == "tensorflow"
+Requires-Dist: tensorflow==2.16.1; extra == "tensorflow"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

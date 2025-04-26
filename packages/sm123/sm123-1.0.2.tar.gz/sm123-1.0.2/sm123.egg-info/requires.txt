@@ -1,0 +1,16 @@
+numpy==1.26.3
+
+[dev]
+build
+twine
+
+[sklearn]
+skl2onnx==1.16.0
+scikit-learn==1.4.0
+
+[tensorflow]
+tf2onnx==1.16.1
+tensorflow==2.16.1
+
+[torch]
+torch==2.1.2
