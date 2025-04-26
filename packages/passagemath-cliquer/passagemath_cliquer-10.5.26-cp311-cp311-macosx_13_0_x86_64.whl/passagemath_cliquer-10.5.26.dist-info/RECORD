@@ -1,0 +1,10 @@
+passagemath_cliquer-10.5.26.dist-info/RECORD,,
+passagemath_cliquer-10.5.26.dist-info/WHEEL,sha256=snBwEc47-PmkLfRb1by6wPN3JZ1x_-ZdnkNNRhXynGY,110
+passagemath_cliquer-10.5.26.dist-info/top_level.txt,sha256=Kmzulf9WsphADFQuqgvdy5mvTLDj_V2zkFHU2s3UXos,6
+passagemath_cliquer-10.5.26.dist-info/METADATA,sha256=YeR1X5t2XxqvqvEUk-lT5n5ZcV3IOM6GwfFS-d4llCc,3193
+passagemath_cliquer.dylibs/libcliquer.1.dylib,sha256=-HCKoszWya9AeXHu0iArfrMnSQYFSZsgEiuFRcXaWSM,122496
+sage/all__sagemath_cliquer.py,sha256=5rEM-F-fdIbjUSxWEH57axum7EemBIu3HT1N43zDArQ,87
+sage/graphs/cliquer.cpython-311-darwin.so,sha256=qrP7oYQ6ib7rWmw5UqVkm2giSc8kBRjitbxU__AWHDI,167648
+sage/graphs/cliquer.pyx,sha256=H2IMZxZu8xeKynaefRM6_8zzCu-w4TVAtcrwp-07Z_U,9640
+sage/graphs/cliquer.pxd,sha256=NTJnYsne4hPSF65aG6CayHmkTJ3NwEJkngGTV3M7uQ0,654
+sage/graphs/all__sagemath_cliquer.py,sha256=Rby8pG2esTxBpJcnmT0FiU_RsBsT_mzMEXds-AjXrUI,46
