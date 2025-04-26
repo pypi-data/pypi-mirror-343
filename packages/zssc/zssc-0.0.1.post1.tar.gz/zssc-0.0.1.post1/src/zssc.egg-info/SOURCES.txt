@@ -1,0 +1,14 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+.vscode/extensions.json
+.vscode/settings.json
+src/zssc/.gitignore
+src/zssc/_version.py
+src/zssc/cache.py
+src/zssc.egg-info/PKG-INFO
+src/zssc.egg-info/SOURCES.txt
+src/zssc.egg-info/dependency_links.txt
+src/zssc.egg-info/top_level.txt
