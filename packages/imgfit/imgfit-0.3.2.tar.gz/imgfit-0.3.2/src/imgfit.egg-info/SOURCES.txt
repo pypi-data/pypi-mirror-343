@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/img_fit/__init__.py
+src/img_fit/__main__.py
+src/imgfit.egg-info/PKG-INFO
+src/imgfit.egg-info/SOURCES.txt
+src/imgfit.egg-info/dependency_links.txt
+src/imgfit.egg-info/entry_points.txt
+src/imgfit.egg-info/requires.txt
+src/imgfit.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+pillow>=8
+matplotlib>=3.4
+PyLaTeXenc>=2

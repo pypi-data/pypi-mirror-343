@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imgfit"
+version = "0.3.2"
+authors = [{ name = "xystudio", email = "173288240@qq.com" }]
+description = "Change your images."
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.7"
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["pillow >= 8", "matplotlib >= 3.4", "PyLaTeXenc >= 2"]
+keywords = ["img", "pillow", "fit", "latex"]
+[project.scripts]
+img = "img_fit.__init__:main"
+[tool.setuptools.package-dir]
+img_fit = "src/img_fit"
