@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aiwebscrapper"
+version = "0.1.7" # Use appdirs for .env, pathlib for paths
+authors = [
+  { name="Deepesh", email="damndeepesh@tutanota.com" }, # Updated placeholder
+]
+description = "A CLI tool to scrape websites, download files, generate sitemaps, and extract info using AI models."
+readme = "README.md"
+requires-python = ">=3.8" # Updated based on common modern practices
+license = {text = "MIT License"} # Specify license type
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing",
+    "Development Status :: 3 - Alpha", # Added development status
+]
+dependencies = [
+    "crawl4ai",
+    "google-generativeai",
+    "groq",
+    "python-dotenv",
+    "click",
+    "openai",
+    "ollama",
+    "requests",
+    "beautifulsoup4",
+    "aiohttp",
+    "rich",
+    "playwright",
+    "appdirs", # Added for user config directory
+]
+
+[project.urls]
+"Homepage" = "https://github.com/damndeepesh/webscrapper/" # Updated placeholder
+"Bug Tracker" = "https://github.com/damndeepesh/webscrapper/issues" # Updated placeholder
+
+[project.scripts]
+aiwebscrapper = "cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]  # look in the src/ directory for packages
