@@ -1,0 +1,15 @@
+[tools]
+python = "3.13"
+uv = "0.5.26"
+
+[env]
+mise.file = ".env"
+
+[tasks.run]
+run = "uv run python -m src.khashimoto_echo_dt"
+
+[tasks.build]
+run = ["if [ -d dist ]; then rm dist/* -rf; fi", "uv build"]
+
+[tasks.publish]
+run = "uv publish"
