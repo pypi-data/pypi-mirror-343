@@ -1,0 +1,112 @@
+Metadata-Version: 2.4
+Name: pypoai
+Version: 1.0
+Summary: poai: A comprehensive tool for Gettext PO (.po) translation files. It automates translations using artificial intelligence and provides seamless bidirectional conversion between PO and JSON formats.
+Home-page: https://github.com/hasancagrigungor/poai
+Author: Hasan Çağrı Güngör
+Author-email: iletisim@cagrigungor.com
+License: MIT
+Keywords: .po translate,po to json,json to po
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: summary
+
+# poai
+
+A `.po` to JSON and JSON to `.po` converter with optional AI translation support.
+
+## Features
+
+- **Bidirectional conversion**: `.po` → JSON and JSON → `.po`
+- **AI-powered translation** (optional): Use Google Gemini to fill translations
+- **Empty translation filtering**: Skip untranslated messages or process all
+- **Plural form support**: Handles `msgid_plural` and `msgstr[n]`
+- **Batch processing**: Translate large files in configurable chunks
+- **Fallback to source**: Automatically fall back to source text for missing translations
+- **Replace from external JSON**: Bulk update translations from a JSON file
+- **Programmatic and CLI usage**: Use as a Python library or via command-line script
+
+## Installation
+
+```bash
+pip install poai
+```
+
+## Usage
+
+### As a Python library
+
+```python
+from poai import PoJsonConverter
+
+# Initialize converter
+conv = Poai(
+    encoding='utf-8',        # File encoding
+    show_empty=False,        # Only include translated messages
+    api_key='YOUR_API_KEY'   # Optional Gemini API key for AI translation
+)
+
+# Read .po and convert to JSON
+data = conv.read_po('locale/tr/LC_MESSAGES/django.po')
+conv.save_json('translations.json')
+
+# Load JSON, edit or replace translations, then save back to .po
+conv.read_json('translations.json')
+conv.set_messages(data['messages'])
+conv.save_po('locale/tr/LC_MESSAGES/new.po')
+
+# AI translate missing messages and save results
+conv.translate_with_ai(only_empty=True)
+conv.save_json('translations_with_ai.json')
+```
+
+### CLI (if enabled)
+
+```bash
+# Read PO, translate all strings, and write JSON
+poai read-po --input locale/tr/app.po --show-empty --api-key $GEMINI_KEY \
+     | poai save-json --output translations.json
+
+# Replace translations from JSON and write updated PO
+poai read-json --input translations.json \
+     | poai save-po --output locale/tr/app_updated.po
+```
+
+## Development
+
+```bash
+# Clone and install dev requirements
+git clone https://github.com/cagrigungor/poai.git
+cd poai
+pip install -e .[dev]
+
+# Run tests
+pytest
+```
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+## Author
+
+**Hasan Çağrı Güngör**  
+✉️ iletisim@cagrigungor.com  
+🔗 https://github.com/cagrigungor/poai
