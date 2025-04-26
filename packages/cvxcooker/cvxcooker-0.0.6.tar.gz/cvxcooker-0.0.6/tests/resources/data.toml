@@ -1,0 +1,11 @@
+[project]
+name = "test"
+version = "0.0.0"
+description = "..."
+authors = ["Peter Maffay"]
+readme = "README.md"
+
+
+[project.urls]
+repository = "https://github.com/cvxgrp/boilerplate"
+homepage = "https://www.cvxgrp.com/boilerplate"
