@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: FunnyPack
+Version: 0.1
+Summary: Gabe similarity finder
+Author: Dr Gabe O'Reilly
+Author-email: <g.oreilly@garvan.org,au>
+Keywords: python,test,Genetics,Diversity
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: math
+Requires-Dist: statistics
+Requires-Dist: csv
+Requires-Dist: gzip
+Requires-Dist: sys
+Requires-Dist: collections
+
+A package to find similarity between a pair of genomes
