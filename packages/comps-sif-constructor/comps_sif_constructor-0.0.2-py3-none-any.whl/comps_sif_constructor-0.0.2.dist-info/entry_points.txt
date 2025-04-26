@@ -1,0 +1,2 @@
+[console_scripts]
+comps_sif_constructor = comps_sif_constructor.create_sif:main

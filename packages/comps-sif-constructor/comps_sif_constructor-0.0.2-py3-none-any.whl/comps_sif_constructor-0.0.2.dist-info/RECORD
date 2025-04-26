@@ -1,0 +1,13 @@
+comps_sif_constructor/__init__.py,sha256=vt8_VwGvayLPj8wXPHgNAhjpt9Jd_1AMccXn14Mc0Z0,63
+comps_sif_constructor/analyzers.py,sha256=cCXlreyeFdXLlHzjyMELctVBsAyGKHCDVEvVOdT3OyA,1077
+comps_sif_constructor/constructors.py,sha256=16Fn20CrsjZaB-muKLHk29kPFVi9t8KlQaaowLAq51E,1076
+comps_sif_constructor/create_sif.py,sha256=BBp14xfX_k-BynnMPPSYoQ414HHywvFPoYku2sl3WSI,2057
+comps_sif_constructor/io.py,sha256=fS4fjhN459ymC_qxVgkcB3-tv13Bux33QYDy0dEXezY,1236
+comps_sif_constructor/login.py,sha256=2ppss9YjLAq_MTZIYVIJX-tjZM2x4pYc9XpdqLCGDLQ,1883
+comps_sif_constructor/main.py,sha256=7p28UdwbtKnjKY7SkzwAcIihOVN4VKJ0BFt3WtW04ww,78
+comps_sif_constructor/version.py,sha256=EduAx21GcC068AF8riX6BAkmj8C0NzuzmXOxBOAIUvM,182
+comps_sif_constructor-0.0.2.dist-info/METADATA,sha256=IOGbiBAG8UWUwgLYm_jnfbxNjnFyXW6eF2_t1vIIGzI,868
+comps_sif_constructor-0.0.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+comps_sif_constructor-0.0.2.dist-info/entry_points.txt,sha256=Zye9iNq0MTAAfTm2ucF4CDHafxLltfAMTX1fx6B-aqc,80
+comps_sif_constructor-0.0.2.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+comps_sif_constructor-0.0.2.dist-info/RECORD,,

@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: comps-sif-constructor
+Version: 0.0.2
+Summary: Create a SIF file from a Singularity definition file for COMPS
+Author: Katherine Rosenfeld, Kurt Frey
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: idmtools-models==1.7.10
+Requires-Dist: idmtools-platform-comps==1.7.10
+Requires-Dist: idmtools==1.7.10
+Description-Content-Type: text/markdown
+
+# comps-sif-constructor
+Create SIF images for COMPS
+
+## Usage
+
+To create a Singularity image from a definition file:
+
+```bash
+python -m comps_sif_constructor.create_sif \
+  -d <path_to_definition_file> \
+  -o <output_id> \
+  -i <image_name> \
+  -w <work_item_name> \
+  [-r <requirements_file>]
+```
+
+Or using the console script:
+
+```bash
+comps_sif_constructor \
+  -d <path_to_definition_file> \
+  -o <output_id> \
+  -i <image_name> \
+  -w <work_item_name> \
+  [-r <requirements_file>]
+```
