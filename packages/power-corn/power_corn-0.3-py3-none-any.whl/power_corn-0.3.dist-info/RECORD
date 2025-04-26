@@ -1,0 +1,16 @@
+config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+config/settings.py,sha256=wd56EP2Uw_ysJbQb2xVLJtocotrhA8YRqxGiqgW4i3s,275
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/main.py,sha256=ZMdefCfe5TfpwNsqUFf633ausgdHU_iJNz7oBZ5kTC4,199
+src/modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/modules/supabasefuncs.py,sha256=mpZBhKLqN88lZkVFP1MKrFVPAHuunimlr5NvaRYnvxs,2069
+src/modules/utilities.py,sha256=DvPTIYWzVkB_I02FDiDSlXXEJ9bj9MrVHJwDNspv-D8,4855
+src/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/scripts/get_power_info.py,sha256=5Yf2mgMV069AjmIqgBSWQeNdqAo3b28lHzLl4_uIYug,231
+src/scripts/simplev7.py,sha256=yIurVGTHy3hHTd2Ezn-TXqbhDvq7QG99o6x-_zeZAw4,1710
+power_corn-0.3.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+power_corn-0.3.dist-info/METADATA,sha256=I0RTZt9zf9pFGA4_dlBRpr1lWsbRZMYqRyc6JiF36Hw,924
+power_corn-0.3.dist-info/WHEEL,sha256=Wyh-_nZ0DJYolHNn1_hMa4lM7uDedD_RGVwbmTjyItk,91
+power_corn-0.3.dist-info/entry_points.txt,sha256=e47pBqJclF7jHAcSeUAiZCqDAbHiKNkcS2a_EngAPq4,45
+power_corn-0.3.dist-info/top_level.txt,sha256=Pyh7sIgU8q2dKwtkA3VHH22vkc0Q7t8Tnytux1AhIiA,11
+power_corn-0.3.dist-info/RECORD,,
