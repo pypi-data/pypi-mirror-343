@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+omnidim/__init__.py
+omnidim/client.py
+omnidim/resources/__init__.py
+omnidimension.egg-info/PKG-INFO
+omnidimension.egg-info/SOURCES.txt
+omnidimension.egg-info/dependency_links.txt
+omnidimension.egg-info/requires.txt
+omnidimension.egg-info/top_level.txt
