@@ -1,0 +1,10 @@
+rapidocr_pdf/__init__.py,sha256=uMAzvcQYKh7cwzlsYn6lXICCYH_cv1U454vKbGj5Fzg,122
+rapidocr_pdf/logger.py,sha256=IQ_RUSTyfWO5mF6WaAl6JCE3Qst-NlALWfOfrIM7Cbo,1098
+rapidocr_pdf/main.py,sha256=sqwKRm7dUQ39apG2WLOLws649oGjI-_m95Lg8Xv24OM,4634
+rapidocr_pdf/utils.py,sha256=PY9mFV0gNInNIoD-4u2D9r-d7tVIQSO_fFKNFh41VU0,690
+rapidocr_pdf-0.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+rapidocr_pdf-0.2.0.dist-info/METADATA,sha256=w3JukXITveYKbkGXKzIy9QY5jZkhGeUkFWQ-398m-cM,971
+rapidocr_pdf-0.2.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+rapidocr_pdf-0.2.0.dist-info/entry_points.txt,sha256=Tn3_89lHUWrQ71NrFiy2l9wOZ2WKehwUiKjtZqHZVIE,56
+rapidocr_pdf-0.2.0.dist-info/top_level.txt,sha256=cUWcSy5Kx0UwXhykCHUGic4Ldb3_z-frD6O7gKShomQ,13
+rapidocr_pdf-0.2.0.dist-info/RECORD,,
