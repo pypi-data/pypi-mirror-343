@@ -1,0 +1,1 @@
+from .main import cotacao_dolar
