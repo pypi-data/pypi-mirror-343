@@ -1,0 +1,188 @@
+[project]
+name = "SpectraFit"
+version = "1.2.2"
+description = "Fast fitting of 2D- and 3D-Spectra with established routines"
+authors = [{ name = "Anselm Hahn", email = "anselm.hahn@gmail.com" }]
+requires-python = ">=3.8,<3.14"
+readme = "README.md"
+license = "BSD-3-Clause"
+maintainers = [{ name = "Anselm Hahn", email = "anselm.hahn@gmail.com" }]
+keywords = [
+  "2D-Spectra",
+  "3D-Spectra",
+  "fitting",
+  "curve-fitting",
+  "peak-fitting",
+  "spectrum",
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: BSD License",
+  "Environment :: Console",
+  "Framework :: Matplotlib",
+  "Framework :: Jupyter :: JupyterLab",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Topic :: Scientific/Engineering :: Physics",
+  "Topic :: Scientific/Engineering :: Chemistry",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+
+dependencies = [
+  "art>=6.5",
+  "emcee>=3.1.6",
+  "lmfit>=1.3.2",
+  "numdifftools>=0.9.41",
+  "numpy>=1.24.4",
+  "openpyxl>=3.1.5",
+  "pandas>=2.0.3",
+  "pydantic>=2.10.6",
+  "pyyaml>=6.0.2",
+  "scikit-learn>=1.3.2",
+  "scipy>=1.10.1",
+  "seaborn>=0.13.2",
+  "tabulate>=0.9.0",
+  "tomli>=2.2.1",
+  "tomli-w>=1.0.0",
+  "tqdm>=4.67.1",
+]
+
+[project.optional-dependencies]
+jupyter = [
+  "dtale>=3.17.0",
+  "itables>=2.3.0",
+  "jupyterlab>=4.3.6",
+  "kaleido==0.2.1",
+  "plotly>=6.0.1",
+  "python-pptx>=1.0.2",
+]
+jupyter-dash = [
+  "dash-bootstrap-components>=1.6.0",
+  "dash-bootstrap-templates>=2.1.0",
+  "ipywidgets>=8.1.6",
+  "jupyter-dash>=0.4.2",
+]
+graph = ["networkx>=3.1", "pydot>=3.0.4"]
+all = [
+  "dash-bootstrap-components>=1.6.0",
+  "dash-bootstrap-templates>=2.1.0",
+  "dtale>=3.17.0",
+  "ipywidgets>=8.1.6",
+  "itables>=2.3.0",
+  "jupyter-dash>=0.4.2",
+  "jupyterlab>=4.3.6",
+  "kaleido>=0.2.1",
+  "networkx[all]>=3.1",
+  "plotly>=6.0.1",
+  "pydot>=3.0.4",
+  "python-pptx>=1.0.2",
+]
+
+[project.urls]
+Homepage = "https://pypi.org/project/spectrafit/"
+Repository = "https://github.com/Anselmoo/spectrafit"
+Documentation = "https://anselmoo.github.io/spectrafit/"
+Changelog = "https://github.com/Anselmoo/spectrafit/blob/main/CHANGELOG.md"
+Issues = "https://github.com/Anselmoo/spectrafit/issues"
+
+[project.scripts]
+spectrafit = "spectrafit.spectrafit:command_line_runner"
+spectrafit-file-converter = "spectrafit.plugins.file_converter:command_line_runner"
+spectrafit-data-converter = "spectrafit.plugins.data_converter:command_line_runner"
+spectrafit-pkl-visualizer = "spectrafit.plugins.pkl_visualizer:command_line_runner"
+spectrafit-pkl-converter = "spectrafit.plugins.pkl_converter:command_line_runner"
+spectrafit-rixs-converter = "spectrafit.plugins.rixs_converter:command_line_runner"
+spectrafit-rixs-visualizer = "spectrafit.plugins.rixs_visualizer:command_line_runner"
+spectrafit-jupyter = "spectrafit.app.app:jupyter"
+spectrafit-pptx-converter = "spectrafit.plugins.pptx_converter:command_line_runner"
+
+[dependency-groups]
+dev = [
+  "bandit>=1.7.10",
+  "black[jupyter]>=24.8.0",
+  "bump-pydantic>=0.8.0",
+  "dash[testing]>=2.18.2",
+  "mypy>=1.14.1",
+  "pre-commit>=3.5.0",
+  "pytest>=8.3.5",
+  "pytest-clarity>=1.0.1",
+  "pytest-console-scripts>=1.4.1",
+  "pytest-cov>=5.0.0",
+  "pytest-mock>=3.14.0",
+  "pytest-plt>=1.1.1",
+  "pytest-xdist>=3.6.1",
+  "ruff>=0.9.10",
+  "types-mock>=5.1.0.20240425",
+  "types-pyyaml>=6.0.12.20241230",
+  "types-setuptools>=75.8.0.20250110",
+  "types-tabulate>=0.9.0.20241207",
+  "types-toml>=0.10.8.20240310",
+]
+docs = [
+  "jupytext>=1.17.0",
+  "mathjax>=0.1.2",
+  "mike>=2.1.3",
+  "mkdocs-autorefs>=1.2.0",
+  "mkdocs-jupyter>=0.24.8",
+  "mkdocs-literate-nav>=0.6.1",
+  "mkdocs-material>=9.6.12",
+  "mkdocs-minify-plugin>=0.8.0",
+  "mkdocs-section-index>=0.3.9",
+  "mkdocs-table-reader-plugin>=3.1.0",
+  "mkdocstrings[python]>=0.26.1",
+]
+
+
+[tool.uv]
+default-groups = ["dev", "docs"]
+
+[tool.hatch.build.targets.sdist]
+include = ["spectrafit", "examples/", "spectrafit/plugins/img/SpectraFit.png"]
+exclude = ["docs/", "tools/", "spectrafit/test/", "spectrafit/**/test/"]
+
+[tool.hatch.build.targets.wheel]
+include = ["spectrafit", "examples/", "spectrafit/plugins/img/SpectraFit.png"]
+exclude = ["docs/", "tools/", "spectrafit/test/", "spectrafit/**/test/"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+extend-ignore = ["E721", "E731"]
+
+[tool.pytest]
+script_launch_mode = "subprocess"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "--cov=./spectrafit/ --cov-report=xml:coverage.xml --diff-symbols --plots -vv"
+testpaths = ["spectrafit"]
+
+[tool.mypy]
+plugins = ["pydantic.mypy", "numpy.typing.mypy_plugin"]
+follow_imports = "silent"
+warn_redundant_casts = true
+warn_unused_ignores = true
+disallow_any_generics = true
+check_untyped_defs = true
+no_implicit_reexport = true
+disallow_untyped_defs = true
+pretty = true
+show_error_context = true
+show_error_codes = true
+exclude = "**/test/test_*.py"
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true
+warn_untyped_fields = true
