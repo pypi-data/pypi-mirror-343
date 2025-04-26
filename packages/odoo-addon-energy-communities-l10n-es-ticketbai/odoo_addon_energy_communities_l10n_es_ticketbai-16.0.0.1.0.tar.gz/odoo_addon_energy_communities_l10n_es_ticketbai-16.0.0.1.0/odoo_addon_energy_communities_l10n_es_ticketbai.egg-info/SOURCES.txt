@@ -1,0 +1,11 @@
+setup.py
+odoo/addons/energy_communities_l10n_es_ticketbai/__init__.py
+odoo/addons/energy_communities_l10n_es_ticketbai/__manifest__.py
+odoo/addons/energy_communities_l10n_es_ticketbai/wizard/__init__.py
+odoo/addons/energy_communities_l10n_es_ticketbai/wizard/ticketbai_info.py
+odoo_addon_energy_communities_l10n_es_ticketbai.egg-info/PKG-INFO
+odoo_addon_energy_communities_l10n_es_ticketbai.egg-info/SOURCES.txt
+odoo_addon_energy_communities_l10n_es_ticketbai.egg-info/dependency_links.txt
+odoo_addon_energy_communities_l10n_es_ticketbai.egg-info/not-zip-safe
+odoo_addon_energy_communities_l10n_es_ticketbai.egg-info/requires.txt
+odoo_addon_energy_communities_l10n_es_ticketbai.egg-info/top_level.txt
