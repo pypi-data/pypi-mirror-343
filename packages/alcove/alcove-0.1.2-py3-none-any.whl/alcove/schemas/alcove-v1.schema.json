@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Alcove config",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "integer",
+      "description": "Version of the alcove config file"
+    },
+    "data_dir": {
+      "type": "string",
+      "description": "Directory where the alcove data is stored, relative to this file.",
+      "default": "data"
+    },
+    "steps": {
+      "type": "object",
+      "description": "List of available steps to run",
+      "patternProperties": {
+        "^snapshot://": {
+          "type": "array",
+          "maxItems": 0
+        },
+        "^table://": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "type": "string",
+            "$oneOf": [
+              {
+                "pattern": "^snapshot://[a-z0-9-/]+$"
+              },
+              {
+                "pattern": "^table://[a-z0-9-/]+.(jsonl|csv|feather)$"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
