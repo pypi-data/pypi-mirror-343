@@ -1,0 +1,9 @@
+LICENSE.lic
+README.md
+setup.py
+mlflow_log_module.egg-info/PKG-INFO
+mlflow_log_module.egg-info/SOURCES.txt
+mlflow_log_module.egg-info/dependency_links.txt
+mlflow_log_module.egg-info/top_level.txt
+model_transfer/__init__.py
+model_transfer/mlflow_log_module.py
