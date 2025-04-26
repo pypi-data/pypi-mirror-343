@@ -1,0 +1,16 @@
+fastapi
+gtfs-realtime-bindings
+httpx
+yc-protobuf3-to-dict
+pydantic
+python-dotenv
+requests
+uvicorn
+protobuf
+pandas
+
+[test]
+pytest>=8.3.5
+pytest-cov
+pytest-asyncio
+respx
