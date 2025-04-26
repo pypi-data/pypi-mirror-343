@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: netpywork
+Version: 0.0.7
+Summary: Python library that simplifies UDP and TCP server and client
+Home-page: https://github.com/MurkyYT/netpywork
+Author: Murky
+Author-email: shooterkingof@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+
+# *netpywork* 
+
+![PYPI Version](https://img.shields.io/pypi/v/netpywork?style=for-the-badge&logo=python&logoColor=orange)
+[![PyPI Downloads](https://static.pepy.tech/badge/netpywork)](https://pepy.tech/projects/netpywork)
+
+
+**netpywork** is a library that makes using tcp and udp server and client easier
+
+# Features
+- Creating a server and client which uses `TCP` and `UDP`
+- Callbacks for `On Receive`, `On Connect` and `On Disconnect` for server
+- Callbacks for `On Receive` and `On Connect` for client
+- Sending messages from server to client both with tcp and udp by specifing the address to send to (see examples [here](https://github.com/MurkyYT/netpywork/tree/main))
+- Sending *large* `UDP` messages

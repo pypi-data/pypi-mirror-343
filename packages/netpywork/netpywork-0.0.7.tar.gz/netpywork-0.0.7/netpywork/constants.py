@@ -1,0 +1,5 @@
+TUPLE_VERSION = (0,0,7)
+VERSION = "".join(str(x) + '.' for x in TUPLE_VERSION)[:-1]
+MAX_UDP_PACKET_SIZE = 65507 - 4 - 2 - 4 - 2 - 2
+UDP_TIMEOUT = 0.25
+UDP_RECV_BUFFER_SIZE = 65536 * 2
