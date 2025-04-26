@@ -1,0 +1,2 @@
+[console_scripts]
+twitterapi-mcp = twitterapi_server:main
