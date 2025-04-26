@@ -1,0 +1,2 @@
+[console_scripts]
+aws-nova-canvas-mcp = aws_nova_canvas_mcp.server:main
