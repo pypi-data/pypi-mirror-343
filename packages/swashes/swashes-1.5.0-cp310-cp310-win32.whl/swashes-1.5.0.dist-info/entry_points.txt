@@ -1,0 +1,3 @@
+[console_scripts]
+swashes = swashes:main
+
