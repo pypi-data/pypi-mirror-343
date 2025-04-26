@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "task-6-report"
+version = "0.1.5"
+authors = [
+    { name = "Yurii Stepanenko", email = "step.crypt@email.com" }
+]
+description = "Python package for generating a Formula 1 report based on logs."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.setuptools]
+packages = { find = { where = ["src"] } }
+
+[project.scripts]
+race-report = "race_report.report:main"
+
+[tool.hatch.build.targets.sdist]
+include = ["src/race_report"]
