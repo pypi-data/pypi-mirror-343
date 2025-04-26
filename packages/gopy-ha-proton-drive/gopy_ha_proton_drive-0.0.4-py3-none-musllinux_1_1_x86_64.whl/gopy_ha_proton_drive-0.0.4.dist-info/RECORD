@@ -1,0 +1,9 @@
+gopy_ha_proton_drive-0.0.4.dist-info/licenses/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+proton/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+proton/_go_exec,sha256=F4hzizrF8IR0k88r3et-z-1kI74_jIeSd-frlT7I_M0,18500775
+proton/proton.py,sha256=yLts-vqyGIi0lBpb_CQVDN8czIoBfKaMTaVhSusfTfQ,7315
+proton/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gopy_ha_proton_drive-0.0.4.dist-info/METADATA,sha256=whgjfl9eONkE-KVutq0iJGI0-rddY9omCBaQ7-FaVE0,1694
+gopy_ha_proton_drive-0.0.4.dist-info/WHEEL,sha256=saQD19SLNhoE4szuMOVAqdUC9uYKTZda6Yg9T4TA-Oc,108
+gopy_ha_proton_drive-0.0.4.dist-info/top_level.txt,sha256=FNFHrx8Wt-s3bnwMaC7olz7tJBsAX4FDC8sChrmi4OQ,7
+gopy_ha_proton_drive-0.0.4.dist-info/RECORD,,
