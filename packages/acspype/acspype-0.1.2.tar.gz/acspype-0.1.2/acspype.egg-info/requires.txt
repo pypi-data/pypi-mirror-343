@@ -1,0 +1,9 @@
+bottleneck
+gsw
+numpy
+pandas
+pyserial
+requests
+scipy
+serial
+xarray
