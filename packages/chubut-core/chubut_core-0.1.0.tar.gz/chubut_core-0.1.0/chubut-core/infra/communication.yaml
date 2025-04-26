@@ -1,0 +1,232 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: Crea un SNS Topic que publica mensajes en una SQS Queue
+
+Resources:
+# -- START RESOURCES --
+
+# Request queue microservice 1
+  TestBeeneuQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: TestBeeneuQueue
+# Request queue microservice 2
+  TestBeeneuQueue2:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: TestBeeneuQueue2
+
+# Request topic
+  TestBeeneuSNS:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: TestBeeneuSNS
+
+
+
+# Response queue
+  TestBeeneuResponseQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: TestBeeneuResponseQueue
+
+# Respone topic
+  TestBeeneuResponseSNS:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: TestBeeneuResponseSNS
+
+# -- END RESOURCES --
+
+
+
+#? -- START SUBCRIPTIONS --
+
+# Request sns->sqs subscription microservice 1
+  TestBeeneuSQS:
+    Type: AWS::SNS::Subscription
+    Properties:
+      Endpoint: !GetAtt TestBeeneuQueue.Arn
+      Protocol: sqs
+      TopicArn: !Ref TestBeeneuSNS
+# Request sns->sqs subscription microservice 2
+  TestBeeneuSQS2:
+    Type: AWS::SNS::Subscription
+    Properties:
+      Endpoint: !GetAtt TestBeeneuQueue2.Arn
+      Protocol: sqs
+      TopicArn: !Ref TestBeeneuSNS
+
+# Response sns->sqs subscription
+  TestBeeneuResponseSQS:
+    Type: AWS::SNS::Subscription
+    Properties:
+      Endpoint: !GetAtt TestBeeneuResponseQueue.Arn
+      Protocol: sqs
+      TopicArn: !Ref TestBeeneuResponseSNS
+
+#? -- END SUBCRIPTIONS --
+
+
+
+#: -- START POLICIES --
+
+# Request queue policy
+  TestBeeneuQueuePolicy:
+    Type: AWS::SQS::QueuePolicy
+    Properties:
+      Queues:
+        - !Ref TestBeeneuQueue
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: AllowSNSPublish
+            Effect: Allow
+            Principal:
+              Service: sns.amazonaws.com
+            Action: sqs:SendMessage
+            Resource: !GetAtt TestBeeneuQueue.Arn
+            Condition:
+              ArnEquals:
+                aws:SourceArn: !Ref TestBeeneuSNS
+# Request queue policy microservice 2 
+  TestBeeneuQueuePolicy2:
+    Type: AWS::SQS::QueuePolicy
+    Properties:
+      Queues:
+        - !Ref TestBeeneuQueue2
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: AllowSNSPublish
+            Effect: Allow
+            Principal:
+              Service: sns.amazonaws.com
+            Action: sqs:SendMessage
+            Resource: !GetAtt TestBeeneuQueue2.Arn
+            Condition:
+              ArnEquals:
+                aws:SourceArn: !Ref TestBeeneuSNS
+
+# Response queue policy
+  TestBeeneuResponseQueuePolicy:
+    Type: AWS::SQS::QueuePolicy
+    Properties:
+      Queues:
+        - !Ref TestBeeneuResponseQueue
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: AllowSNSPublish
+            Effect: Allow
+            Principal:
+              Service: sns.amazonaws.com
+            Action: sqs:SendMessage
+            Resource: !GetAtt TestBeeneuResponseQueue.Arn
+            Condition:
+              ArnEquals:
+                aws:SourceArn: !Ref TestBeeneuResponseSNS
+
+#: -- END POLICIES --
+
+
+
+#! -- START SECRETS --
+
+# Request SNSSecret
+  SNSSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: SNS_REQUEST_TOPIC_ARN
+      Description: "Secreto que contiene el ARN del SNS Topic de request"
+      SecretString: !Sub '{"SNS_REQUEST_TOPIC_ARN": "${TestBeeneuSNS}"}'
+
+# Response SNSSecret
+  SNSResponseSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: SNS_RESPONSE_TOPIC_ARN
+      Description: "Secreto que contiene el ARN del SNS Topic de response"
+      SecretString: !Sub '{"SNS_RESPONSE_TOPIC_ARN": "${TestBeeneuResponseSNS}"}'
+
+# Request SQSSecret
+  SQSSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: SQS_REQUEST_QUEUE_URL
+      Description: "Secreto que contiene la URL del SQS Queue de request"
+      SecretString: !Sub '{"SQS_REQUEST_QUEUE_URL": "${TestBeeneuQueue}"}'
+# Request SQSSecret microservices 2
+  SQSSecret2:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: SQS_REQUEST_QUEUE_URL_2
+      Description: "Secreto que contiene la URL del SQS Queue de request microservices 2" 
+      SecretString: !Sub '{"SQS_REQUEST_QUEUE_URL_2": "${TestBeeneuQueue2}"}'
+
+# Response SQSSResponseSecret
+  SQSResponseSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: SQS_RESPONSE_QUEUE_URL
+      Description: "Secreto que contiene la URL del SQS Queue de response"
+      SecretString: !Sub '{"SQS_RESPONSE_QUEUE_URL": "${TestBeeneuResponseQueue}"}'
+
+#! -- END SECRETS --
+
+
+Outputs:
+# Request SNSTopicArn
+  SNSTopicArn:
+    Description: ARN del SNS Topic de request
+    Value: !Ref TestBeeneuSNS
+
+# Request SQSQueueUrl
+  SQSQueueUrl:
+    Description: URL de la SQS Queue de request
+    Value: !Ref TestBeeneuQueue
+# Request SQSQueueUrl microservices 2
+  SQSQueueUrl2:
+    Description: URL de la SQS Queue de request microservices 2
+    Value: !Ref TestBeeneuQueue2
+
+
+
+# Response SNSTopicResponseArn
+  SNSTopicResponseArn:
+    Description: ARN del SNS Topic de response
+    Value: !Ref TestBeeneuResponseSNS
+
+# Response SQSQueueResponseUrl
+  SQSQueueResponseUrl:
+    Description: URL de la SQS Queue de response
+    Value: !Ref TestBeeneuResponseQueue
+
+
+
+# Request SNSSecretArn
+  SNSSecretArn:
+    Description: ARN del secreto que contiene el ARN del SNS Topic de request
+    Value: !Ref SNSSecret
+
+
+# Response SNSSecretArn
+  SNSSecretResponseArn:
+    Description: ARN del secreto que contiene el ARN del SNS Topic de response
+    Value: !Ref SNSResponseSecret
+
+    
+# Request SQSSecretUrl
+  SQSSecretUrl:
+    Description: ARN del secreto que contiene el URL del SQS Queue de request
+    Value: !Ref SQSSecret
+# Request SQSSecretUrl microservices 2
+  SQSSecretUrl2:
+    Description: ARN del secreto que contiene el URL del SQS Queue de request microservices 2
+    Value: !Ref SQSSecret2
+
+
+# Response SQSSecretUrl
+  SQSSecretResponseUrl:
+    Description: ARN del secreto que contiene el URL del SQS Queue de response
+    Value: !Ref SQSResponseSecret

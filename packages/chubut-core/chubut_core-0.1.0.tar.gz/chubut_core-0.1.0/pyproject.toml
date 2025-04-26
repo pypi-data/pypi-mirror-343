@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "chubut-core"
+version = "0.1.0"
+description = "Core dependencies for chubut-micro-services"
+authors = ["Jadamecc <jadamec@luleypharma.com>"]
+readme = "README.md"
+packages = [{ include = "chubut-core" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+mypy-boto3-sns = "^1.37.0"
+mypy-boto3-sqs = "^1.37.0"
+boto3 = "^1.38.1"
+loguru = "^0.7.3"
+pydantic = "^2.11.3"
+fastapi = "^0.115.12"
+
+[tool.poetry.extras]
+mypy_boto3_sns = ["mypy-boto3-sns"]
+mypy_boto3_sqs = ["mypy-boto3-sqs"]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
