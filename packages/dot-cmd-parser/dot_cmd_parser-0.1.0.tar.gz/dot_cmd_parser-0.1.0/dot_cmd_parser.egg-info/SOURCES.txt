@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+dot_cmd_parser.egg-info/PKG-INFO
+dot_cmd_parser.egg-info/SOURCES.txt
+dot_cmd_parser.egg-info/dependency_links.txt
+dot_cmd_parser.egg-info/top_level.txt
