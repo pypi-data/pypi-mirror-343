@@ -1,0 +1,98 @@
+# Copyright © Patrick Stoeckle 2020 - 2025
+#
+# Licensed under the Apache License License 2.0
+#
+# Authors: Patrick Stoeckle, Patrick Stöckle
+#
+# SPDX-FileCopyrightText: 2020 Patrick Stoeckle
+#
+# SPDX-License-Identifier: Apache-2.0
+
+[project]
+name = "sharelatex-versioning"
+version = "0.1.15"
+description = "Tool to backup ShareLaTeX files locally."
+authors = [{ name = "Patrick Stöckle", email = "patrick.stoeckle@posteo.de" }]
+requires-python = ">=3.11,<4.0"
+readme = "README.md"
+license = "Apache-2.0"
+maintainers = [{ name = "Patrick Stöckle", email = "patrick.stoeckle@posteo.de" }]
+dependencies = [
+    "bs4==0.0.2",
+    "keyring==25.6.0",
+    "requests==2.32.3",
+    "typer==0.15.2",
+]
+
+[project.urls]
+Repository = "https://github.com/pstoeckle/ShareLaTeX-Versioning.git"
+
+[dependency-groups]
+dev = [
+    "lxml==5.4.0",
+    "mypy==1.15.0",
+    "pre-commit==4.2.0",
+    "pre-commit-hooks==5.0.0",
+    "pytest==8.3.5",
+    "pytest-cov==6.1.1",
+    "ruff==0.11.5",
+    "types-requests==2.32.0.20250328",
+]
+
+[tool.uv]
+default-groups = ["dev"]
+
+[tool.hatch.build.targets.sdist]
+include = ["sharelatex_versioning"]
+
+[tool.hatch.build.targets.wheel]
+include = ["sharelatex_versioning"]
+
+[tool.hatch.build.targets.wheel.sources]
+"sharelatex_versioning" = "sharelatex_versioning"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+src = ["src"]
+target-version = "py311"
+line-length = 80
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["ANN", "COM812", "D107", "ISC001"]
+
+[tool.ruff.lint.isort]
+force-single-line = true
+required-imports = ["from __future__ import annotations"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.flake8-type-checking]
+strict = true
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "PT009", "D101"]
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+addopts = "--cov --cov-report=term-missing"
+
+[tool.coverage.run]
+branch = true
+parallel = true
+source = ["sharelatex_versioning"]
+
+[tool.coverage.paths]
+source = ["sharelatex_versioning"]
+
+[tool.coverage.report]
+show_missing = true
+
+[project.scripts]
+sharelatex-versioning = "sharelatex_versioning:app"
