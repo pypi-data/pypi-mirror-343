@@ -1,0 +1,620 @@
+Metadata-Version: 2.4
+Name: pipmaster
+Version: 0.7.0
+Summary: A versatile Python package manager utility for simplifying package installation, updates, checks, and environment management.
+Author-email: ParisNeo <parisneoai@gmail.com>
+License:                                  Apache License
+                                   Version 2.0, January 2004
+                                http://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+        
+           APPENDIX: How to apply the Apache License to your work.
+        
+              To apply the Apache License to your work, attach the following
+              boilerplate notice, with the fields enclosed by brackets "[]"
+              replaced with your own identifying information. (Don't include
+              the brackets!)  The text should be enclosed in the appropriate
+              comment syntax for the file format. We also recommend that a
+              file or class name and description of purpose be included on the
+              same "printed page" as the copyright notice for easier
+              identification within third-party archives.
+        
+           Copyright [yyyy] [name of copyright owner]
+        
+           Licensed under the Apache License, Version 2.0 (the "License");
+           you may not use this file except in compliance with the License.
+           You may obtain a copy of the License at
+        
+               http://www.apache.org/licenses/LICENSE-2.0
+        
+           Unless required by applicable law or agreed to in writing, software
+           distributed under the License is distributed on an "AS IS" BASIS,
+           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+           See the License for the specific language governing permissions and
+           limitations under the License.
+        
+Project-URL: Homepage, https://github.com/ParisNeo/pipmaster
+Project-URL: Repository, https://github.com/ParisNeo/pipmaster
+Project-URL: Issues, https://github.com/ParisNeo/pipmaster/issues
+Keywords: pip,package manager,installer,dependency,venv,environment
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: System :: Software Distribution
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: packaging>=21.0
+Requires-Dist: ascii_colors>=0.8.0
+Provides-Extra: audit
+Requires-Dist: pip-audit>=2.5.0; extra == "audit"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.20; extra == "dev"
+Requires-Dist: pip-audit>=2.5.0; extra == "dev"
+Requires-Dist: sphinx>=5.0; extra == "dev"
+Requires-Dist: sphinx-rtd-theme>=1.0; extra == "dev"
+Requires-Dist: myst-parser>=0.17; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"
+Requires-Dist: mypy>=1.0; extra == "dev"
+Provides-Extra: all
+Requires-Dist: pipmaster[audit]; extra == "all"
+Requires-Dist: pipmaster[dev]; extra == "all"
+Dynamic: license-file
+
+# pipmaster
+
+<!-- Badges - Update URLs/paths as needed -->
+[![PyPI version](https://badge.fury.io/py/pipmaster.svg)](https://badge.fury.io/py/pipmaster)
+[![Python Versions](https://img.shields.io/pypi/pyversions/pipmaster.svg)](https://pypi.org/project/pipmaster/)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/ParisNeo/pipmaster/blob/main/LICENSE)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ParisNeo/pipmaster/docs.yml?branch=main&label=docs)](https://github.com/ParisNeo/pipmaster/actions/workflows/docs.yml)
+[![GitHub stars](https://img.shields.io/github/stars/ParisNeo/pipmaster.svg?style=social&label=Stars)](https://github.com/ParisNeo/pipmaster)
+[![Documentation Status](https://readthedocs.org/projects/pipmaster/badge/?version=latest)](https://parisneo.github.io/pipmaster/) 
+
+
+`pipmaster` is a versatile Python library designed to simplify and automate Python package management tasks directly from your code. It provides a robust, programmatic interface to `pip`, allowing you to install, update, check, and uninstall packages, manage requirements, target different Python environments, perform vulnerability checks, and more, with both synchronous and asynchronous interfaces.
+
+**View the full documentation at [parisneo.github.io/pipmaster/](https://parisneo.github.io/pipmaster/).**
+
+## Why pipmaster?
+
+*   **Programmatic Control:** Manage packages within your scripts, setup routines, or automation tasks.
+*   **Environment Targeting:** Install and check packages in different virtual environments, not just the current one.
+*   **Rich Feature Set:** Handles specific versions, custom indexes, editable installs, requirements files, conditional installs, dry runs, and vulnerability scanning.
+*   **Modern & Robust:** Uses modern standard libraries like `importlib.metadata` and `packaging` for reliable checks.
+*   **Async Support:** Provides asynchronous functions for integration into async applications.
+*   **Extensible:** Designed with placeholders for future support of backends like UV or Conda.
+
+## Key Features
+
+*   Install/upgrade single or multiple packages (`install`, `install_multiple`).
+*   Install specific package versions (`install_version`).
+*   Install packages only if they are missing (`install_multiple_if_not_installed`).
+*   Conditionally install/update based on version specifiers (`install_if_missing`).
+*   Install packages in editable mode (`install_edit`).
+*   Install packages from requirements files (`install_requirements`).
+*   Check if packages are installed, optionally matching version specifiers (`is_installed`, `is_version_compatible`).
+*   Get installed package versions (`get_installed_version`) and details (`get_package_info`).
+*   Install or update packages (`install_or_update`, `install_or_update_multiple`).
+*   Uninstall single or multiple packages (`uninstall`, `uninstall_multiple`).
+*   **Target specific Python environments** by providing the path to the Python executable.
+*   **Dry Run mode** (`dry_run=True`) to simulate commands without making changes.
+*   **Asynchronous API** (e.g., `async_install`) for non-blocking operations.
+*   **Vulnerability Checking** using `pip-audit` integration (`check_vulnerabilities`).
+*   Convenient module-level functions for common tasks.
+*   Instantiable `PackageManager` and `AsyncPackageManager` classes for more control.
+
+## Installation
+
+`pipmaster` requires Python 3.8 or higher.
+
+```bash
+pip install pipmaster
+```
+
+### Optional Features
+
+`pipmaster` offers optional features that require extra dependencies. Install them as needed:
+
+*   **Vulnerability Auditing:** Enables the `check_vulnerabilities` function.
+    ```bash
+    pip install pipmaster[audit]
+    ```
+
+*   **Development Tools:** Includes tools for testing, linting, and building documentation (pytest, ruff, sphinx, etc.).
+    ```bash
+    pip install pipmaster[dev]
+    # Or for editable install during development:
+    # pip install -e .[dev]
+    ```
+
+*   **All Extras:** Install all optional dependencies at once.
+    ```bash
+    pip install pipmaster[all]
+    # Or for editable install:
+    # pip install -e .[all]
+    ```
+
+## Basic Usage
+
+Import the library and use the module-level functions for quick tasks targeting the current Python environment:
+
+```python
+import pipmaster as pm
+import asyncio # For async examples
+
+# Install the latest version of 'requests' (or upgrade if present)
+print("Installing requests...")
+if pm.install("requests"):
+    print("Requests installed/updated.")
+else:
+    print("Failed to install requests.")
+
+# Check if 'numpy' version 1.20 or higher is installed
+print("\nChecking numpy version...")
+if pm.is_installed("numpy", version_specifier=">=1.20.0"):
+    version = pm.get_installed_version("numpy")
+    print(f"Compatible numpy version ({version}) found.")
+else:
+    print("Compatible numpy not found. Installing...")
+    pm.install("numpy>=1.20.0") # Install with the required specifier
+```
+
+## Detailed Usage & Examples
+
+### 1. Installation Functions
+
+```python
+# Install latest (or upgrade)
+pm.install("pandas")
+
+# Install without implicit upgrade
+pm.install("matplotlib", upgrade=False)
+
+# Force reinstall
+pm.install("scipy", force_reinstall=True)
+
+# Install from a custom index URL
+pm.install("torch", index_url="https://download.pytorch.org/whl/cu121")
+
+# Install a specific version
+pm.install_version("requests", "2.28.1")
+
+# Install multiple packages (will upgrade by default)
+pm.install_multiple(["seaborn", "plotly"])
+
+# Install multiple from a specific index, forcing reinstall
+pm.install_multiple(
+    ["torchvision", "torchaudio"],
+    index_url="https://download.pytorch.org/whl/cu121",
+    force_reinstall=True
+)
+
+# Install only if missing (checks presence, not version)
+pm.install_multiple_if_not_installed(["python-dotenv", "tqdm"])
+
+# Install from requirements file
+# Create a dummy requirements.txt:
+# with open("reqs.txt", "w") as f: f.write("colorama\ntermcolor")
+pm.install_requirements("reqs.txt")
+
+# Install local package in editable mode
+# Assume 'my_local_package' exists at './my_local_package' with a setup.py or pyproject.toml
+# pm.install_edit("./my_local_package") # Uncomment if you have a local package
+
+# Conditional installation with version checking
+# Install numpy>=1.21 only if it's missing OR if installed version is < 1.21
+pm.install_if_missing("numpy", version_specifier=">=1.21.0")
+
+# Install exactly version 3.10.0 of protobuf if missing or different version installed
+pm.install_if_missing("protobuf", version_specifier="==3.10.0")
+
+# Install if missing, or ensure it's updated to latest if present
+pm.install_if_missing("pip", always_update=True)
+```
+
+### 2. Checking Package Status
+
+```python
+# Check if installed
+if pm.is_installed("requests"):
+    print("Requests is installed.")
+
+# Check if specific version specifier is met
+if pm.is_installed("packaging", version_specifier=">=21.0"):
+    print("Compatible 'packaging' version installed.")
+
+# Get installed version (returns str or None)
+numpy_ver = pm.get_installed_version("numpy")
+if numpy_ver:
+    print(f"Installed numpy version: {numpy_ver}")
+else:
+    print("Numpy is not installed.")
+
+# Explicitly check version compatibility
+if pm.is_version_compatible("pip", ">=23.0"):
+    print("Pip version is >= 23.0")
+else:
+    print("Pip version is older than 23.0")
+
+# Get detailed package info (output of 'pip show')
+info = pm.get_package_info("pipmaster") # Get info about pipmaster itself
+if info:
+    print("\n--- pipmaster info ---")
+    print(info)
+    print("----------------------\n")
+```
+
+### 3. Uninstalling Packages
+
+```python
+# Uninstall a single package (assuming 'termcolor' was installed via reqs.txt)
+# print("Uninstalling termcolor...")
+# pm.uninstall("termcolor")
+
+# Uninstall multiple packages
+# print("Uninstalling colorama and python-dotenv...")
+# pm.uninstall_multiple(["colorama", "python-dotenv"])
+```
+
+### 4. Advanced Features
+
+**Targeting Other Environments**
+
+```python
+# Specify the path to the python executable of another virtual environment
+other_env_python = "/path/to/your/other/venv/bin/python" # Linux/macOS example
+# other_env_python = "C:/path/to/your/other/venv/Scripts/python.exe" # Windows example
+
+# Get a dedicated manager instance for that environment
+# Replace with a valid path if you want to test this
+# try:
+#     other_pm = pm.get_pip_manager(python_executable=other_env_python)
+#     print(f"\nChecking 'requests' in environment: {other_env_python}")
+#     if other_pm.is_installed("requests"):
+#         print("'requests' is installed in the other environment.")
+#         other_pm.uninstall("requests") # Example: Uninstall from other env
+#     else:
+#         print("'requests' is NOT installed in the other environment.")
+#         other_pm.install("requests") # Example: Install into other env
+# except FileNotFoundError:
+#      print(f"Skipping environment targeting test: Path not found '{other_env_python}'")
+
+```
+
+**Dry Run Mode**
+
+Simulate commands without making changes.
+
+```python
+print("\n--- Dry Run Examples ---")
+# Simulate installing requests
+pm.install("requests", dry_run=True)
+
+# Simulate uninstalling multiple packages
+pm.uninstall_multiple(["numpy", "pandas"], dry_run=True)
+
+# Simulate installing requirements
+pm.install_requirements("reqs.txt", dry_run=True)
+print("----------------------\n")
+```
+
+**Vulnerability Scanning**
+
+Requires `pipmaster[audit]` to be installed.
+
+```python
+print("\n--- Vulnerability Check ---")
+# Check the current environment (or the one targeted by a PackageManager instance)
+# Note: Needs pip-audit installed in the *environment running this script*
+try:
+    found_vulns, report = pm.check_vulnerabilities()
+    if found_vulns:
+        print("WARNING: Vulnerabilities found!")
+        # print(report) # Optionally print the full report
+    else:
+        print("No vulnerabilities found in the environment.")
+except ImportError: # Or handle FileNotFoundError if pip-audit isn't installed
+    print("Skipping vulnerability check: pip-audit not found. Install with 'pip install pipmaster[audit]'")
+print("-------------------------\n")
+```
+
+### 5. Asynchronous Usage
+
+Use the `async_` prefixed functions within an `async` context.
+
+```python
+async def run_async_tasks():
+    print("\n--- Async Examples ---")
+
+    # Async install
+    print("Async: Installing 'aiohttp'...")
+    success = await pm.async_install("aiohttp")
+    if success:
+        print("Async: aiohttp installed.")
+    else:
+        print("Async: Failed to install aiohttp.")
+
+    # Async check vulnerabilities
+    print("Async: Checking vulnerabilities...")
+    try:
+         # Note: check_vulnerabilities itself isn't fully async internally yet,
+         # but the wrapper uses asyncio.create_subprocess_shell
+        found, report = await pm.async_check_vulnerabilities()
+        if found:
+             print("Async: WARNING: Vulnerabilities found!")
+        else:
+             print("Async: No vulnerabilities found.")
+    except Exception as e:
+         print(f"Async: Vulnerability check failed: {e}")
+
+    # Add more async examples as needed (e.g., async_uninstall)
+    print("--------------------\n")
+
+# To run the async functions:
+# asyncio.run(run_async_tasks()) # Uncomment to run
+```
+
+### 6. Using the `PackageManager` Class Directly
+
+For more control, especially when repeatedly targeting a specific environment or using custom pip commands:
+
+```python
+from pipmaster import PackageManager
+
+# Manager for the current environment (same as module functions)
+default_pm = PackageManager()
+default_pm.install("rich")
+
+# Manager targeting a specific environment
+# other_env_python = "/path/to/other/venv/bin/python"
+# try:
+#     other_pm = PackageManager(python_executable=other_env_python)
+#     other_pm.install("requests") # Install requests in the other environment
+#     print(f"Version in other env: {other_pm.get_installed_version('requests')}")
+# except FileNotFoundError:
+#     print(f"Path not found, cannot create manager for: {other_env_python}")
+
+
+# Advanced: Custom base command (Use with caution!)
+# custom_pm = PackageManager(pip_command_base=["/path/to/custom/pip", "--no-cache-dir"])
+# custom_pm.install("somepackage")
+```
+### 7. Ensuring Multiple Package Requirements (`ensure_packages`)
+
+For managing a set of required packages with specific versions efficiently, use `ensure_packages`. It checks all requirements and performs a single installation/update command for only those packages that need it.
+
+```python
+# Define your project's requirements
+my_requirements = {
+    "requests": ">=2.25.0,<3.0.0",
+    "pandas": ">=1.3.0",
+    "numpy": None, # Install latest if missing, otherwise accept any version
+    "torch": "==1.13.1" # Example: exact version
+}
+
+print("\n--- Ensuring Project Requirements ---")
+# This will check all packages and install/update if needed
+success = pm.ensure_packages(my_requirements)
+
+if success:
+    print("All project requirements are met.")
+else:
+    print("Failed to ensure all project requirements.")
+
+# You can also use it with index_url, extra_args, dry_run
+# pm.ensure_packages(
+#     my_requirements,
+#     index_url="https://custom-index.com",
+#     extra_args=["--no-cache-dir"],
+#     dry_run=True
+# )
+print("-----------------------------------\n")
+```
+
+**How it Works:**
+
+1.  It takes the `requirements` dictionary.
+2.  It iterates through each `package`, `specifier` pair.
+3.  It uses `self.is_installed(package, version_specifier=specifier)` to check if the current state meets the requirement.
+4.  If a requirement is *not* met, it formats the package string (e.g., `"package>=1.2.3"` or just `"package"`) and adds it to a list `packages_to_process`.
+5.  If `packages_to_process` is not empty after checking all requirements, it calls `self.install_multiple(packages=packages_to_process, upgrade=True, ...)` once to handle all necessary installations/updates efficiently.
+6.  It returns `True` if everything was okay initially or the `install_multiple` call succeeded, `False` otherwise.
+
+
+## Command-Line Interface (CLI)
+
+A dedicated command-line interface for `pipmaster` is planned for future development, allowing easy environment creation and package management from the terminal using different backends (pip, uv, conda).
+
+## Contributing
+
+Contributions are welcome! If you find a bug, have a feature request, or want to contribute code:
+
+1.  **Search Issues:** Check the GitHub Issues page to see if a similar issue or request already exists.
+2.  **Open an Issue:** If not, open a new issue describing the bug or feature.
+3.  **Fork & Pull Request:** For code contributions, please fork the repository, create a new branch for your changes, and submit a pull request. Ensure your code includes tests and follows the project's style guidelines (use `ruff` for linting/formatting).
+
+## License
+
+This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
