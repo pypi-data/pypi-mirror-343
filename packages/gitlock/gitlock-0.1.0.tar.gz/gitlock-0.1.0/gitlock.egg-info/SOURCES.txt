@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+gitlock/__init__.py
+gitlock/encryption_utils.py
+gitlock/gitlock.py
+gitlock.egg-info/PKG-INFO
+gitlock.egg-info/SOURCES.txt
+gitlock.egg-info/dependency_links.txt
+gitlock.egg-info/entry_points.txt
+gitlock.egg-info/requires.txt
+gitlock.egg-info/top_level.txt
