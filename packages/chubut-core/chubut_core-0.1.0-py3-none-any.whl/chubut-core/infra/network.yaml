@@ -1,0 +1,103 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: VPC, API Gateway, EC2 y Aurora PostgreSQL for Microservices
+
+Resources:
+  # VPC
+  MyVPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: '10.0.0.0/16'
+      EnableDnsSupport: 'true'
+      EnableDnsHostnames: 'true'
+
+  # Subred Pública para API Gateway
+  PublicSubnet:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref MyVPC
+      CidrBlock: '10.0.1.0/24'
+      AvailabilityZone: 'us-east-1a'
+      MapPublicIpOnLaunch: true
+
+  # Subred Privada para Microservicios y Base de Datos
+  PrivateSubnet:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref MyVPC
+      CidrBlock: '10.0.2.0/24'
+      AvailabilityZone: 'us-east-1a'
+
+  # API Gateway (Publico)
+  ApiGateway:
+    Type: 'AWS::ApiGateway::RestApi'
+    Properties:
+      Name: 'MyApiGateway'
+      Description: 'API Gateway para la aplicación'
+  
+  # Security Group para EC2s (Microservicios)
+  MicroserviceSG:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      VpcId: !Ref MyVPC
+      GroupDescription: 'Security group para los microservicios'
+      SecurityGroupIngress:
+        - IpProtocol: 'tcp'
+          FromPort: '80'
+          ToPort: '80'
+          CidrIp: '0.0.0.0/0'  # Se puede restringir
+        - IpProtocol: 'tcp'
+          FromPort: '443'
+          ToPort: '443'
+          CidrIp: '0.0.0.0/0'
+
+  # EC2 para Microservicio 1
+  MicroserviceEC2:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      InstanceType: 't3a.small'
+      ImageId: 'ami-0c55b159cbfafe1f0'
+      SubnetId: !Ref PrivateSubnet
+      SecurityGroupIds:
+        - !Ref MicroserviceSG
+      KeyName: 'your-key-name'  # Asegúrate de tener una clave para acceder a la instancia
+
+  # Aurora PostgreSQL Database Cluster
+  AuroraDBCluster:
+    Type: 'AWS::RDS::DBCluster'
+    Properties:
+      Engine: 'aurora-postgresql'
+      MasterUsername: 'admin'
+      MasterUserPassword: 'your-password'  # Usa un parámetro secreto o gestión de secretos para mayor seguridad
+      DBClusterParameterGroupName: !Ref AuroraDBClusterParamGroup
+      DBSubnetGroupName: !Ref AuroraDBSubnetGroup
+      VpcSecurityGroupIds:
+        - !Ref MicroserviceSG
+      BackupRetentionPeriod: 7
+
+  # Aurora DB Subnet Group
+  AuroraDBSubnetGroup:
+    Type: 'AWS::RDS::DBSubnetGroup'
+    Properties:
+      DBSubnetGroupDescription: 'Aurora Subnet Group'
+      SubnetIds:
+        - !Ref PrivateSubnet
+
+  # Aurora DB Cluster Parameter Group
+  AuroraDBClusterParamGroup:
+    Type: 'AWS::RDS::DBClusterParameterGroup'
+    Properties:
+      Description: 'Aurora PostgreSQL parameter group'
+      Family: 'aurora-postgresql10'
+      Parameters: {}
+
+Outputs:
+  # API Gateway URL
+  ApiGatewayUrl:
+    Description: 'URL del API Gateway'
+    Value: !Sub 'https://${ApiGateway}.execute-api.${AWS::Region}.amazonaws.com/'
+
+  # EC2 Instance Public IP (si es necesario)
+  MicroserviceEC2PublicIP:
+    Description: 'IP pública de la EC2 para Microservicio 1'
+    Value: !GetAtt MicroserviceEC2.PublicIp
