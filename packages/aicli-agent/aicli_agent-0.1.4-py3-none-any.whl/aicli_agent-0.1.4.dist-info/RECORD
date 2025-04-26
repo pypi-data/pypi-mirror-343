@@ -1,0 +1,12 @@
+aicli/__init__.py,sha256=9ByBOIdM8DebChjNz-RH2atdz4vWe8somlwNEsbhwh4,40
+aicli/agentlib.py,sha256=LxTxgh_pvp9PnUOrjk_x7IPPLgl28f0ihe8I2vXjhyc,1904
+aicli/cli.py,sha256=bFaUDWGXSnioLWs7PvclPtzj_5tOKEVDc2JhD-GTq-g,3879
+aicli/conf.py,sha256=i9enh1_CQtmHiIKOdzEr6NN5M72bjk1lDE62LaL3vv4,682
+aicli/decorator.py,sha256=R3mHb7dyp4jJdqMJAnMxq5h2VR48yJXA4jSeLgZHvrE,471
+aicli/role.py,sha256=IoqRy5urSP14oUFmSYJHJy2CdDb4AwTIirkIAa5YnEg,1273
+aicli/tools.py,sha256=QB45xufGPaOeVP-Rp9Ec2mK-p73tz0MlVSBR0dtD_ms,3586
+aicli_agent-0.1.4.dist-info/METADATA,sha256=KmNPYdFjNUA62AgcpWqCfKvTizAv-IVUfiG1Dgnf6I0,1280
+aicli_agent-0.1.4.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+aicli_agent-0.1.4.dist-info/entry_points.txt,sha256=URlv6kmv84f6Tm2dVEjQ0GopDsEJZI8L8qHC0EzqJtY,36
+aicli_agent-0.1.4.dist-info/top_level.txt,sha256=JEnBGrfT43NeeM1SKZtD1-dTb5YL9Isrjjfh9Llnai8,6
+aicli_agent-0.1.4.dist-info/RECORD,,
