@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python3-cyberfusion-foundry-agent"
+version = "1.0.1"
+description = "VM/device agent for Foundry."
+readme = "README.md"
+authors = [
+    { name = "Cyberfusion", email = "support@cyberfusion.io" },
+]
+dependencies = [
+    "requests==2.28.1",
+    "PyYAML==6.0",
+    "typer==0.7.0",
+]
+
+[project.urls]
+"Source" = "https://vcs.cyberfusion.nl/foundation/python3-cyberfusion-foundry-agent"
+
+[project.scripts]
+foundry-agent = "cyberfusion.FoundryAgent.cli:app"
