@@ -1,0 +1,2 @@
+[console_scripts]
+khashimoto_echo_now = khashimoto_echo_now.__main__:main
