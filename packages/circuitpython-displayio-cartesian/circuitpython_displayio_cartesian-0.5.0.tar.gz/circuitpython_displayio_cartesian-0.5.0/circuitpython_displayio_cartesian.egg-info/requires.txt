@@ -1,0 +1,5 @@
+Adafruit-Blinka
+adafruit-circuitpython-display-text
+adafruit-circuitpython-displayio-layout
+
+[optional]
