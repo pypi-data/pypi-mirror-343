@@ -1,0 +1,2 @@
+[console_scripts]
+fancifypy = fancifypy.cli:main
