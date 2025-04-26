@@ -1,0 +1,94 @@
+Metadata-Version: 2.4
+Name: fsspec-proxy
+Version: 0.1.0
+Dynamic: Summary
+Dynamic: Keywords
+Dynamic: Project-URL
+Author: martindurant
+License: BSD 3-Clause License
+        
+        Copyright (c) 2024, Jupyter fsspec contributors
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Requires-Dist: fastapi
+Requires-Dist: fastapi-cli
+Requires-Dist: fsspec>=2025.3.0
+Provides-Extra: test
+Requires-Dist: anaconda-cloud-storage; extra == 'test'
+Requires-Dist: s3fs; extra == 'test'
+Description-Content-Type: text/markdown
+
+fsspec proxy and client
+=======================
+
+Allows reading/writing files via standard fsspec/python operations via a
+proxy which doesn't expose any of its internal credentials. 
+
+This is particularly useful for pyscript, which cannot call the backend
+packages required to talk to remote filesystems, like botocore.
+
+Quickstart
+----------
+
+Install the two sub-packages:
+- fsspec-proxy, a fastAPI-based server which reads/writes to configured storage
+  locations
+- pyscript-fsspec-client, a filesystem implementation that connects to the proxy, 
+  allowing even pyscript to access bytes in remote stores
+
+Now run:
+```bash
+$ fsspec-proxy dev
+```
+to start the (unsecured) proxy server, with port 8000. Further arguments
+will be passed to fastAPI to configure, for example, the port and address
+to listen on.
+
+The default config in `config.yaml` has entry "Conda Stats", 
+which is available anonymously from S3. The location of the config
+file to read can be set with FSSPEC_PROXY_CONFIG. Optionally, the
+server can be reconfigured via an API call.
+
+*WARNING*: the proxy server does not currently implement secure connections
+or auth. It can be regarded as a prototype to base production-level 
+implementations on.
+
+Demo
+----
+
+With the server running locally, 
+now navigate to: https://martindurant.pyscriptapps.com/empty-tundra/latest/
