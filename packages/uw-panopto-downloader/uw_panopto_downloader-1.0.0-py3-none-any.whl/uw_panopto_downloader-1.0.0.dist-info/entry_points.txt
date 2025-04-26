@@ -1,0 +1,2 @@
+[console_scripts]
+uw-panopto-downloader = uw_panopto_downloader.cli:main

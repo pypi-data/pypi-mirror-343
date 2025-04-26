@@ -1,0 +1,8 @@
+uw_panopto_downloader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uw_panopto_downloader/cli.py,sha256=SZag8Sm5U8S7KlJd3ITjcxA2-Oosk9OqcoljJ1sqSNg,18623
+uw_panopto_downloader/convert_to_audio.py,sha256=T_efE2kwNQzhkYmenODTiHg5glMv5QZMOcgVwRARdkI,4440
+uw_panopto_downloader-1.0.0.dist-info/METADATA,sha256=VE7kHR50x-WcwDVz8gRv9j2E8KOlTKuogEQbHpWto6U,1604
+uw_panopto_downloader-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+uw_panopto_downloader-1.0.0.dist-info/entry_points.txt,sha256=BKo1X8rdIrbPUjHN0qbx4SZsio5LbIoQsTpYxGxQK6k,73
+uw_panopto_downloader-1.0.0.dist-info/licenses/LICENSE,sha256=HrrLi_Ge9XjEX_fuucgfVkZnaIdGuzB0PU-ulidu7LA,1070
+uw_panopto_downloader-1.0.0.dist-info/RECORD,,
