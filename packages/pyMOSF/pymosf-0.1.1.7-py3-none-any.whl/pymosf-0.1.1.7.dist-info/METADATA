@@ -1,0 +1,61 @@
+Metadata-Version: 2.4
+Name: pyMOSF
+Version: 0.1.1.7
+Summary: Python package for Multi-OS, Multi-Framework UI apps.
+Home-page: https://github.com/rpazuki/pyMOSF
+Author: Roozbeh H. Pazuki
+Author-email: "Roozbeh H. Pazuki" <rpazuki@gmail.com>
+License-Expression: GPL-3.0-or-later
+Project-URL: Homepage, https://github.com/rpazuki/pyMOSF
+Project-URL: Issues, https://github.com/rpazuki/pyMOSF/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.18.0
+Requires-Dist: addict>=2.4.0
+Requires-Dist: pytoml>=0.1.21
+Requires-Dist: rubicon-objc>=0.4.9
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0.0; extra == "dev"
+Requires-Dist: flake8>=3.8.0; extra == "dev"
+Provides-Extra: beeware
+Requires-Dist: PyGObject==3.50.0; extra == "beeware"
+Requires-Dist: briefcase>=0.3.22; extra == "beeware"
+Requires-Dist: toga==0.4.9; extra == "beeware"
+Provides-Extra: kivy
+Requires-Dist: kivy>=2.3.1; extra == "kivy"
+Provides-Extra: all
+Requires-Dist: pytest>=6.0.0; extra == "all"
+Requires-Dist: flake8>=3.8.0; extra == "all"
+Requires-Dist: PyGObject==3.50.0; extra == "all"
+Requires-Dist: briefcase>=0.3.22; extra == "all"
+Requires-Dist: toga==0.4.9; extra == "all"
+Requires-Dist: kivy>=2.3.1; extra == "all"
+Provides-Extra: release
+Dynamic: license-file
+
+# pyMOSF
+
+[![rpazuki github](https://img.shields.io/badge/GitHub-rpazuki-181717.svg?style=flat&logo=github)](https://github.com/rpazuki)
+[![python](https://img.shields.io/badge/Python-3.10-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org)
+[![License: GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+### platforms
+![iOS](https://img.shields.io/badge/macOS-999999.svg?style=flat&logo=apple)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white)
+![iOS](https://img.shields.io/badge/iOS-999999.svg?style=flat&logo=apple)
+
+## pyMOSF (python Multi-OF Multi-Framework)
+> A lightweight python package for Multi-OS, Multi-Framework UI apps. It support [BeeWare](https://beeware.org/) and [Kivy](https://kivy.org/) frameworks.
+
+## macOS
+
+```
+brew install cairo
+brew install pyobject3
+
+```
+
+
