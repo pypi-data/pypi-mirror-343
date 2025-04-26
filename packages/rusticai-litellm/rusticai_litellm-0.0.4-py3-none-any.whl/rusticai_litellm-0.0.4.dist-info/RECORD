@@ -1,0 +1,9 @@
+rustic_ai/litellm/__init__.py,sha256=FXBphQ8MajgEVFy2S4gIeqOErmsSVzbOIkbp0KriUO0,105
+rustic_ai/litellm/agent.py,sha256=KJgVKKJcfPi3kVMacZhbEJTcbt7bG9y57X3NjATcxBM,4336
+rustic_ai/litellm/agent_ext/__init__.py,sha256=oJ1_ytpo9DBY_w5iqmNIl0wEpXbDuY9low4Ljh_DlwE,91
+rustic_ai/litellm/agent_ext/llm.py,sha256=6ZcM8arDyx96CfHz5-80qc7mXz3DrQLP_0F1lqdo8Gw,2546
+rustic_ai/litellm/conf.py,sha256=IS_GSMC9ZDdl-HnmLhqtwy2gMdJvIqAnhveGJc0dO2U,2569
+rustic_ai/litellm/utils.py,sha256=3nh7Ug-VnPycHzEGcqPblNBX2Af3jwz_yH61ts1GhJg,2617
+rusticai_litellm-0.0.4.dist-info/METADATA,sha256=zTyoZAS8TDIgK1NE5PeHey9ffgyly49HKxJqL8KJKts,1290
+rusticai_litellm-0.0.4.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+rusticai_litellm-0.0.4.dist-info/RECORD,,
