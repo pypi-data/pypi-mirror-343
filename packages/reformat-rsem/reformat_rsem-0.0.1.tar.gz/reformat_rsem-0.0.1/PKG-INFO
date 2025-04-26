@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: reformat_rsem
+Version: 0.0.1
+Summary: Reformat RSEM output files
+Project-URL: Homepage, https://github.com/ajgouhier/reformat_rsem
+Author-email: Arthur Gouhier <ajgouhier@gmail.com>
+License: MIT
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+Reformat RSEM output files.

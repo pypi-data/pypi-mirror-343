@@ -1,0 +1,22 @@
+[build-system]
+requires = [ "hatchling" ]
+build-backend = "hatchling.build"
+
+[project]
+name = "reformat_rsem"
+version = "0.0.1"
+authors = [
+    { name = "Arthur Gouhier", email = "ajgouhier@gmail.com" },
+]
+description = "Reformat RSEM output files"
+readme = "README.md"
+license = { text="MIT" }
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/ajgouhier/reformat_rsem"
