@@ -1,0 +1,2 @@
+[console_scripts]
+k-nine = kitty_plotnine.main:main

@@ -1,0 +1,10 @@
+README.md
+setup.py
+kitty_plotnine/__init__.py
+kitty_plotnine/main.py
+kitty_plotnine.egg-info/PKG-INFO
+kitty_plotnine.egg-info/SOURCES.txt
+kitty_plotnine.egg-info/dependency_links.txt
+kitty_plotnine.egg-info/entry_points.txt
+kitty_plotnine.egg-info/requires.txt
+kitty_plotnine.egg-info/top_level.txt
