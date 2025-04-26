@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: STCAT
+Version: 1.0.8
+Summary: An automated T cell type annotation tool for scRNA-seq datasets.
+Home-page: https://github.com/GuoBioinfoLab/STCAT
+License: MIT
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: anndata ==0.10.9
+Requires-Dist: array-api-compat ==1.10.0
+Requires-Dist: click ==8.1.8
+Requires-Dist: contourpy ==1.3.0
+Requires-Dist: cycler ==0.12.1
+Requires-Dist: et-xmlfile ==2.0.0
+Requires-Dist: exceptiongroup ==1.2.2
+Requires-Dist: fonttools ==4.55.3
+Requires-Dist: h5py ==3.12.1
+Requires-Dist: igraph ==0.11.8
+Requires-Dist: importlib-resources ==6.5.2
+Requires-Dist: joblib ==1.4.2
+Requires-Dist: kiwisolver ==1.4.7
+Requires-Dist: leidenalg ==0.10.2
+Requires-Dist: llvmlite ==0.43.0
+Requires-Dist: matplotlib ==3.9.4
+Requires-Dist: natsort ==8.4.0
+Requires-Dist: networkx ==3.2.1
+Requires-Dist: numba ==0.60.0
+Requires-Dist: numpy ==1.26.4
+Requires-Dist: openpyxl ==3.1.5
+Requires-Dist: packaging ==24.2
+Requires-Dist: pandas ==2.2.0
+Requires-Dist: patsy ==1.0.1
+Requires-Dist: pillow ==11.1.0
+Requires-Dist: pynndescent ==0.5.13
+Requires-Dist: pyparsing ==3.2.1
+Requires-Dist: python-dateutil ==2.9.0.post0
+Requires-Dist: pytz ==2024.2
+Requires-Dist: scanpy ==1.9.3
+Requires-Dist: scikit-learn ==1.2.2
+Requires-Dist: scipy ==1.13.1
+Requires-Dist: seaborn ==0.13.2
+Requires-Dist: session-info ==1.0.0
+Requires-Dist: six ==1.17.0
+Requires-Dist: statsmodels ==0.14.4
+Requires-Dist: stdlib-list ==0.11.0
+Requires-Dist: texttable ==1.7.0
+Requires-Dist: threadpoolctl ==3.5.0
+Requires-Dist: tqdm ==4.67.1
+Requires-Dist: tzdata ==2024.2
+Requires-Dist: umap-learn ==0.5.7
+Requires-Dist: zipp ==3.21.0
+
+# STCAT  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3.9+-brightgreen.svg" alt="Python Versions" width="80"></a>
+
+STCAT is an automated T cell type annotation tool for scRNA-seq datasets. 
+It based on a high-confidence T cell subtypes and states reference. 
+The reference can be found in our TCellAtlas portal. 
+STCAT can automatically annotate T cell subtypes and states for scRNA-seq data of different conditions and tissues.
+
+# TCellAtlats Website
+TCellAtlas contains 1,677,799 high-quality T cells of 339 samples from 38 10x Genomics projects across 37 conditions and 16 tissues. It also includes 47,215 high-quality T cells in 21 conditions and 8 tissues from 18 Smart-seq projects. TCellAtlas contains all 68 T cell subtypes/states, which makes it the most comprehensive T cell subtypes/states and T cell database with the largest number of cells.
+Information of STCAT can be also found in our TCellAtlas portal. The database is accessible at [TCellAtlas](https://guolab.wchscu.cn/TCellAtlas/#/). Our TCellAtlas portal provides STCAT online services, which you can click [here](https://guolab.wchscu.cn/TCellAtlas/#/annotation) to access the service.
+
+# PyPI Page
+STCAT homepage on PyPI: [https://pypi.org/project/STCAT/](https://pypi.org/project/STCAT/)
+
+# Install STCAT
+## 1.Create environment
+
+```
+conda create -n STCAT python=3.9.16
+conda activate STCAT
+```
+## 2.Install using pip
+```console
+pip install STCAT
+```
+# Usage 
+STCAT expects a raw count matrix as input and can be implemented with only one line of code in Python. 
+STCAT expects to use an Anndata object ( .h5ad file format ) as input, and at the same time, a raw count matrix ( reads or UMIs ) is required. 
+The file input is in a cell-by-gene format ( cells as rows and genes as columns ). For more information, please see [anndata](https://anndata.readthedocs.io/en/latest/).
+The barcode should be unique for each cell, with no duplicates.
+As for the annotation result, STCAT will be automatically added to the common anndata format of scRNA-seq analysis for easy viewing.
+```python
+import scanpy as sc
+import STCAT
+adata = sc.read_h5ad(<file_path>)
+results = STCAT.STCAT(adata)
+```
+## Example:
+Here is an example for guidance, and the demo.h5ad file mentioned in the example can be found below.
+[Tutorial](tutorial.ipynb)
+### demo.h5ad file in Tutorial
+[demo.h5ad](demo.h5ad.bz2)
+
+# Citation
+An automatic annotation tool and reference database for T cell subtypes and states at single-cell resolution. Wen-Kang Shen, Chu-Yu Zhang, Yi-Min Gu, Tao Luo, Si-Yi Chen, Tao Yue, Gui-Yan Xie, Yu Liao, Yong Yuan, Qian Lei, and An-Yuan Guo, Science Bulletin. 2025 Mar.
+https://doi.org/10.1016/j.scib.2025.02.043
