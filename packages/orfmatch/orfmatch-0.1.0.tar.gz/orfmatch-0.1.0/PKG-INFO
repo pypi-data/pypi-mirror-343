@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: orfmatch
+Version: 0.1.0
+Summary: Transfer feature annotations from a reference genome to a de novo assembled one.
+Author-email: mcgilmore <michael_gilmore@live.com>
+License-Expression: GPL-3.0-only
+License-File: LICENSE
+Requires-Python: >=3.11
+Requires-Dist: biopython<2,>=1.85
+Requires-Dist: pyhmmer<0.12,>=0.11.0
+Requires-Dist: pyrodigal<4,>=3.6.3.post1
+Requires-Dist: tqdm<5,>=4.67.1
+Description-Content-Type: text/markdown
+
+# orfmatch
+
+Transfer feature annotations from a reference genome to a *de novo* assembled one.
+
+## Installation
+
+Install from github:
+`pip install git+https://github.com/mcgilmore/orfmatch.git`
+
+## Usage
+
+`orfmatch [-v (Optional: outputs sequence variants as fasta and alignments)] --input <assembly.fasta> --reference <reference.gbff> --output <output.gbff>`
