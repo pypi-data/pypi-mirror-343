@@ -1,0 +1,4 @@
+prune **/ __pycache__ 
+
+graft scripts
+graft src/assimp
