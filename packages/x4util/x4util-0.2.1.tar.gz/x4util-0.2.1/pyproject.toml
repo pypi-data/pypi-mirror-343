@@ -1,0 +1,111 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "x4util"
+dynamic = ["version"]
+description = 'exfor utility codes'
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+  "pyspellchecker",
+  "requests",
+  "pylatexenc"
+  ]
+
+[project.urls]
+Repository = "https://git.oecd-nea.org/exfor/tools/x4util"
+Issues = "https://git.oecd-nea.org/exfor/tools/x4util/-/issues"
+
+[project.scripts]
+x4_dirini = "x4util.conversion.x4_dirini:main"
+x4_dirupd = "x4util.conversion.x4_dirupd:main"
+x4_maklib = "x4util.conversion.x4_maklib:main"
+x4_seqadd = "x4util.conversion.x4_seqadd:main"
+x4_x4toj4 = "x4util.conversion.x4_x4toj4:main"
+x4_j4tox4 = "x4util.conversion.x4_j4tox4:main"
+x4_poipoi = "x4util.conversion.x4_poipoi:main"
+x4_extmul = "x4util.extract.x4_extmul:main"
+x4_makcov = "x4util.extract.x4_makcov:main"
+x4_refbib = "x4util.extract.x4_refbib:main"
+x4_refdoi = "x4util.extract.x4_refdoi:main"
+x4_spells = "x4util.spelling.x4_spells:main"
+x4_dic227 = "x4util.dict.x4_dic227:main"
+x4_dica2j = "x4util.dict.x4_dica2j:main"
+x4_dicdis = "x4util.dict.x4_dicdis:main"
+x4_dicj2a = "x4util.dict.x4_dicj2a:main"
+x4_dicj2t = "x4util.dict.x4_dicj2t:main"
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/x4util"]
+
+[tool.hatch.version]
+path = "src/x4util/__about__.py"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "coverage[toml]>=6.5",
+]
+
+
+[tool.hatch.envs.hatch-test]
+extra-dependencies = [
+  "toml>=0.10.2",
+  "pytest>=8"
+]
+
+[tool.hatch.envs.default.scripts]
+test = "pytest {args:tests}"
+test-cov = "coverage run -m pytest {args:tests}"
+cov-report = [
+  "- coverage combine",
+  "coverage report",
+]
+cov = [
+  "test-cov",
+  "cov-report",
+]
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+[tool.hatch.envs.types]
+dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/x4util tests}"
+
+[tool.coverage.run]
+source_pkgs = ["x4util", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/x4util/__about__.py",
+]
+
+[tool.coverage.paths]
+x4util = ["src/x4util", "*/x4util/src/x4util"]
+tests = ["tests", "*/x4util/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]

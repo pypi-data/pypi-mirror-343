@@ -1,0 +1,259 @@
+stages:
+  - test
+  - prepare
+  - release
+  - publish
+  - cleanup
+
+.job:default:
+  tags:
+    - has_internet
+    - datacentre
+
+.job:hatch:
+  image: python:3.12-slim
+  before_script:
+    - pip install hatch
+
+.job:publish:
+  rules:
+    - if: '$CI_COMMIT_TAG =~ /v?\d+\.\d+\.\d+(\.(rc|dev|a|b)\d+)?/'
+    
+variables:
+  GIT_STRATEGY: clone
+  GIT_SUBMODULE_STRATEGY: none
+  FOREXY_COMMIT_HASH:
+    value: ""
+    description: "The forexy commit to include in x4utils"
+
+
+
+test_job:
+ rules:
+  - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+  - if: $CI_PIPELINE_SOURCE == 'web'
+  - if: '$CI_COMMIT_TAG =~ /v?\d+\.\d+\.\d+(\.(rc|dev|a|b)\d+)?/'
+  - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE == "push"
+    # note that CI_COMMIT_TAG and CI_COMMIT_BRANCH are never set at the same time
+    # as tags are not related to branches, see https://stackoverflow.com/questions/78201569/how-to-run-a-gitlab-ci-job-only-if-a-tag-is-created-on-the-main-branch
+ extends:
+   - .job:default
+   - .job:hatch
+ stage: test
+ script:
+   - hatch test
+
+check_version_consistency_job:
+  stage: prepare
+  rules:
+   - if: '$CI_COMMIT_TAG =~ /v?\d+\.\d+\.\d+(\.(rc|dev|a|b)\d+)?/'
+  extends:
+    - .job:default
+    - .job:hatch
+    - .job:publish
+  artifacts:
+    reports:
+      dotenv: variables.env   
+  script:
+    # compare tag and code version
+    - RELEASE_VERSION=$(hatch version)
+    - echo "RELEASE_VERSION=$(hatch version)" >> variables.env
+    - TAG_VERSION=$CI_COMMIT_TAG
+
+    - |
+      if [ "$RELEASE_VERSION" != "$TAG_VERSION" ]; then
+        echo Release and tag version do not match: "$RELEASE_VERSION" != "$TAG_VERSION"
+        exit 1
+      fi
+
+prepare_release_notes_job:
+  stage: prepare
+  image: alpine:latest
+  rules:
+   - if: '$CI_COMMIT_TAG =~ /v?\d+\.\d+\.\d+(\.(rc|dev|a|b)\d+)?/'
+  extends:
+    - .job:default
+    - .job:publish
+  script:
+    - apk add curl jq
+    - 'NOTES=$(curl -H PRIVATE-TOKEN: $CI_API_TOKEN $CI_API_V4_URL/projects/$CI_PROJECT_ID/repository/changelog?version=$CI_COMMIT_TAG | jq -r .notes)'
+    # cleanup content if empty
+    - |
+      if [ "$NOTES" = "null" ]; then
+        NOTES=''
+      fi
+    - echo $NOTES > release_notes.md
+  
+  artifacts:
+    paths:
+    - release_notes.md
+
+
+publication_test_job:
+  stage: prepare
+  extends:
+    - .job:default
+    - .job:hatch
+    - .job:publish
+  rules:
+   - if: '$CI_COMMIT_TAG =~ /v?\d+\.\d+\.\d+(\.(rc|dev|a|b)\d+)?/'
+  needs:
+    - check_version_consistency_job
+  script:
+    # ensure version does not exist yet. To be removed once !reference 
+    # https://github.com/pypa/hatch/issues/937 is resolved
+    - apt-get -qq update
+    - apt-get install -y -q jq curl
+    - set -e
+    - PACKAGE_JSON_URL="https://test.pypi.org/pypi/x4util/json"
+    - "AVAIL_VERSIONS=$(curl -L -s $PACKAGE_JSON_URL | jq  -r '.releases | keys | .[]' | sort -V)"
+    - |
+      case "$AVAIL_VERSIONS" in
+        *"$RELEASE_VERSION"* )
+        echo "$RELEASE_VERSION is already uploaded. Can not release again."
+        exit 1;;
+      esac 
+
+    # ensure release version number
+    - hatch build
+    - hatch publish --repo test --user __token__ --auth "$TEST_PYPI_API_TOKEN"
+
+check_test_publication_job:
+  # skip checkout of repo for this job
+  variables:
+    GIT_STRATEGY: none
+  stage: prepare
+  rules:
+   - if: '$CI_COMMIT_TAG =~ /v?\d+\.\d+\.\d+(\.(rc|dev|a|b)\d+)?/'
+  needs:
+    - publication_test_job
+    - check_version_consistency_job
+  extends:
+    - .job:default
+    - .job:hatch
+    - .job:publish
+  script:
+    # hardcoded install test
+    #- pip install -i https://test.pypi.org/simple/ --no-cache-dir --no-dependencies x4util=="0.1.1.dev8"
+    - echo "The version to release is $RELEASE_VERSION and no other one"
+    #- echo 'Installing now...'
+    #- pip install -i https://test.pypi.org/simple/ --no-cache-dir --no-dependencies x4util=="0.1.1.dev15"
+    
+    # debugging
+    - echo $(pip cache list x4util)
+    - echo $(pip install -i https://test.pypi.org/simple/ --no-dependencies --no-cache-dir x4util==)
+
+    # purge pips https and wheel cache to make new version discoverable
+    - pip cache purge
+
+    # debugging
+    - echo $(pip cache list x4util)
+    - echo $(pip install -i https://test.pypi.org/simple/ --no-dependencies --no-cache-dir x4util==)
+
+    # debugging: install old version
+    - pip install -i https://test.pypi.org/simple/ --no-cache-dir --no-dependencies x4util=="0.1.1.dev15"
+    # install version that has just been released
+    - pip install -i https://test.pypi.org/simple/ --no-cache-dir --no-dependencies x4util=="$RELEASE_VERSION"
+
+
+publish_job:
+  stage: publish
+  extends:
+    - .job:default
+    - .job:hatch
+    - .job:publish
+  rules:
+   - if: '$CI_COMMIT_TAG =~ /v?\d+\.\d+\.\d+(\.(rc|dev|a|b)\d+)?/'
+  script:
+    - hatch build
+    - hatch publish --repo main --user __token__ --auth "$PYPI_API_TOKEN"
+
+create_gitlab_release_job:
+  rules:
+   - if: '$CI_COMMIT_TAG =~ /v?\d+\.\d+\.\d+(\.(rc|dev|a|b)\d+)?/'
+  stage: release
+  extends:
+    - .job:default
+    - .job:publish
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  dependencies:
+    - prepare_release_notes_job
+    - check_version_consistency_job
+  script:
+    - echo "Creating release"
+  release:
+    name: "Release $RELEASE_VERSION"
+    description: release_notes.md
+    tag_name: "$RELEASE_VERSION"
+
+post_release_version_bump_job:
+  rules:
+   - if: '$CI_COMMIT_TAG =~ /v?\d+\.\d+\.\d+(\.(rc|dev|a|b)\d+)?/'
+  stage: cleanup
+  extends:
+    - .job:default
+    - .job:hatch
+    - .job:publish
+  dependencies:
+    - check_version_consistency_job
+  script:
+    # make at least a minor version bump after a full release
+    - |
+      if [ $RELEASE_VERSION =~ '/v?\d+\.\d+\.\d+/' ]; then
+        hatch version minor
+      fi
+      
+    # continue working in dev version
+    - hatch version dev
+
+    # push new version to repository
+    - apt-get -qq update
+    - apt-get install -y -q git
+
+    - git config --global user.name "CI-Bot"
+    - git config --global user.email "ci-bot@oecd-nea.org"
+
+    - git remote add gitlab_origin https://oauth2:$CI_API_TOKEN@$CI_SERVER_HOST/$CI_PROJECT_PATH.git
+    - git add .
+    - git commit -m "Post release version bump to $RELEASE_VERSION"
+    - git push --tag gitlab_origin HEAD:main -o ci.skip # prevent triggering pipeline again
+
+
+include_forexy_update:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "web"
+    - if: $CI_PIPELINE_SOURCE == "pipeline"
+    - if: $CI_PIPELINE_SOURCE == "trigger"
+  extends:
+    - .job:default
+  variables:
+    GIT_STRATEGY: none
+  image:
+    entrypoint: ['']
+    name: alpine/git:latest
+  script:
+    - apk add bash
+
+    # debugging
+    - ls -a
+    - pwd
+
+    - git config --global user.name "CI-Bot"
+    - git config --global user.email "ci-bot@oecd-nea.org"
+
+    # checkout forexy and x4util in dedicated folders
+    - git clone https://git.oecd-nea.org/exfor/tools/forexy.git forexy_repo
+    - git clone https://git.oecd-nea.org/exfor/tools/x4util.git x4util_repo
+
+    # update x4util files based on forexy updates
+    - bash x4util_repo/.gitlab/apply_forexy_patch.sh forexy_repo x4util_repo $FOREXY_COMMIT_HASH
+
+    # commit changes and push to repo
+    - cd x4util_repo
+    - git remote add gitlab_origin https://oauth2:$CI_API_TOKEN@$CI_SERVER_HOST/$CI_PROJECT_PATH.git
+    - git add .
+    - git commit -m "Include forexy changes (https://git.oecd-nea.org/exfor/tools/forexy/-/commit/$FOREXY_COMMIT_HASH)"
+    - git push gitlab_origin HEAD:main
+
+
+
