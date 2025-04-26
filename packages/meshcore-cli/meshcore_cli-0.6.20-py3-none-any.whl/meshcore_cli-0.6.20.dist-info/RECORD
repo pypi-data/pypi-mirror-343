@@ -1,0 +1,9 @@
+meshcore_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+meshcore_cli/__main__.py,sha256=PfYgibmu2LEtC-OV7L1UgmvV3swJ5rQ4bbXHlwUFlgE,83
+meshcore_cli/meshcore_cli.py,sha256=H67rLqF5gJ_YErEpYFVwAmSW9HPhPScn-hYLTcdiDuk,60501
+meshcore_cli/test,sha256=Wca29g1cw8Ela7d4xtV6RQwqceJGSMa66KauJIZfHVE,24
+meshcore_cli-0.6.20.dist-info/METADATA,sha256=6PIJme8zXykMs9NrNrosyiY-xDXYxS6uh9hmiUzI7xw,8786
+meshcore_cli-0.6.20.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+meshcore_cli-0.6.20.dist-info/entry_points.txt,sha256=77V29Pyth11GteDk7tneBN3MMk8JI7bTlS-BGSmxCmI,103
+meshcore_cli-0.6.20.dist-info/licenses/LICENSE,sha256=F9s987VtS0AKxW7LdB2EkLMkrdeERI7ICdLJR60A9M4,1066
+meshcore_cli-0.6.20.dist-info/RECORD,,
