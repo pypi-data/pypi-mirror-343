@@ -1,0 +1,111 @@
+"""
+{{ description }}
+"""
+from typing import Any, Dict, Optional, List
+
+from fastapi import HTTPException, status
+
+
+class {{ class_name }}Exception(HTTPException):
+    """Base exception for {{ name }} errors"""
+    
+    def __init__(
+        self,
+        status_code: int = status.HTTP_500_INTERNAL_SERVER_ERROR,
+        detail: str = "An error occurred",
+        headers: Optional[Dict[str, Any]] = None,
+    ) -> None:
+        super().__init__(status_code=status_code, detail=detail, headers=headers)
+
+
+class {{ class_name }}NotFoundError({{ class_name }}Exception):
+    """Error raised when a {{ name }} is not found"""
+    
+    def __init__(
+        self,
+        detail: str = "{{ class_name }} not found",
+        headers: Optional[Dict[str, Any]] = None,
+    ) -> None:
+        super().__init__(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=detail,
+            headers=headers,
+        )
+
+
+class {{ class_name }}ValidationError({{ class_name }}Exception):
+    """Error raised when a {{ name }} validation fails"""
+    
+    def __init__(
+        self,
+        detail: str = "Invalid {{ class_name }} data",
+        errors: Optional[List[Dict[str, Any]]] = None,
+        headers: Optional[Dict[str, Any]] = None,
+    ) -> None:
+        if errors:
+            detail = {"detail": detail, "errors": errors}
+        super().__init__(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=detail,
+            headers=headers,
+        )
+
+
+class {{ class_name }}AlreadyExistsError({{ class_name }}Exception):
+    """Error raised when a {{ name }} already exists"""
+    
+    def __init__(
+        self,
+        detail: str = "{{ class_name }} already exists",
+        headers: Optional[Dict[str, Any]] = None,
+    ) -> None:
+        super().__init__(
+            status_code=status.HTTP_409_CONFLICT,
+            detail=detail,
+            headers=headers,
+        )
+
+
+class {{ class_name }}ForbiddenError({{ class_name }}Exception):
+    """Error raised when a user does not have permission to perform an action on a {{ name }}"""
+    
+    def __init__(
+        self,
+        detail: str = "You do not have permission to perform this action",
+        headers: Optional[Dict[str, Any]] = None,
+    ) -> None:
+        super().__init__(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail=detail,
+            headers=headers,
+        )
+
+
+class {{ class_name }}DatabaseError({{ class_name }}Exception):
+    """Error raised when a database operation fails for a {{ name }}"""
+    
+    def __init__(
+        self,
+        detail: str = "Database error occurred",
+        headers: Optional[Dict[str, Any]] = None,
+    ) -> None:
+        super().__init__(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=detail,
+            headers=headers,
+        )
+
+
+class {{ class_name }}DependencyError({{ class_name }}Exception):
+    """Error raised when a {{ name }} has dependencies that prevent an operation"""
+    
+    def __init__(
+        self,
+        detail: str = "This {{ name }} has dependencies that prevent this operation",
+        headers: Optional[Dict[str, Any]] = None,
+    ) -> None:
+        super().__init__(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=detail,
+            headers=headers,
+        )

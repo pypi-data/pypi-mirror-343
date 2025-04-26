@@ -1,0 +1,86 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: ${DOCKER_TARGET:-development}  # development or production
+    image: {{ project_name|lower|replace(' ', '-') }}:latest
+    container_name: {{ project_name|lower|replace(' ', '-') }}-app
+    restart: always
+    ports:
+      - "${APP_PORT:-8000}:8000"
+    environment:
+      - DATABASE_URL=postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@db:5432/${POSTGRES_DB:-{{ project_name|lower|replace(' ', '_') }}}
+      - REDIS_URL=redis://redis:6379/0
+      - SECRET_KEY=${SECRET_KEY:-insecuresecretkey}
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - ./:/app
+    networks:
+      - {{ project_name|lower|replace(' ', '_') }}-network
+
+  db:
+    image: postgres:15-alpine
+    container_name: {{ project_name|lower|replace(' ', '-') }}-db
+    restart: always
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+      - POSTGRES_DB=${POSTGRES_DB:-{{ project_name|lower|replace(' ', '_') }}}
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - {{ project_name|lower|replace(' ', '_') }}-db-data:/var/lib/postgresql/data
+    networks:
+      - {{ project_name|lower|replace(' ', '_') }}-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:alpine
+    container_name: {{ project_name|lower|replace(' ', '-') }}-redis
+    restart: always
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    networks:
+      - {{ project_name|lower|replace(' ', '_') }}-network
+    volumes:
+      - {{ project_name|lower|replace(' ', '_') }}-redis-data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: {{ project_name|lower|replace(' ', '-') }}-pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_EMAIL:-admin@{{ project_name|lower|replace(' ', '-') }}.com}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_PASSWORD:-admin}
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    depends_on:
+      - db
+    networks:
+      - {{ project_name|lower|replace(' ', '_') }}-network
+    volumes:
+      - {{ project_name|lower|replace(' ', '_') }}-pgadmin-data:/var/lib/pgadmin
+    restart: unless-stopped
+
+volumes:
+  {{ project_name|lower|replace(' ', '_') }}-db-data:
+  {{ project_name|lower|replace(' ', '_') }}-redis-data:
+  {{ project_name|lower|replace(' ', '_') }}-pgadmin-data:
+
+networks:
+  {{ project_name|lower|replace(' ', '_') }}-network:
+    driver: bridge

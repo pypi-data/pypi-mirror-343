@@ -1,0 +1,246 @@
+"""
+{{ description }}
+"""
+import json
+import logging
+import re
+from datetime import datetime, date
+from typing import Any, Dict, List, Optional, Union
+
+from fastapi import HTTPException, status
+from pydantic import BaseModel, ValidationError
+
+
+logger = logging.getLogger(__name__)
+
+
+def validate_{{ name }}_data(data: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Validate {{ name }} data.
+    
+    Args:
+        data: Dictionary of {{ name }} data
+        
+    Returns:
+        Validated data
+        
+    Raises:
+        HTTPException: If validation fails
+    """
+    # Example validation
+    required_fields = ["name"]
+    for field in required_fields:
+        if field not in data or not data[field]:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Field '{}' is required for {{ name }}".format(field)
+            )
+    
+    # Validate specific fields
+    if "name" in data and len(data["name"]) < 3:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Field 'name' must be at least 3 characters long"
+        )
+    
+    if "status" in data and data["status"] not in ["active", "inactive", "pending", "archived"]:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid status value: {}".format(data['status'])
+        )
+    
+    return data
+
+
+def format_{{ name }}_response({{ name }}: Any) -> Dict[str, Any]:
+    """
+    Format {{ name }} for API response.
+    
+    Args:
+        {{ name }}: {{ name.title() }} object
+        
+    Returns:
+        Formatted {{ name }} data
+    """
+    return {
+        "id": {{ name }}.id,
+        "name": {{ name }}.name,
+        "description": {{ name }}.description,
+        "created_at": {{ name }}.created_at.isoformat() if {{ name }}.created_at else None,
+        "updated_at": {{ name }}.updated_at.isoformat() if {{ name }}.updated_at else None,
+        "is_active": not {{ name }}.is_deleted,
+        # Add other fields as needed
+    }
+
+
+def parse_{{ name }}_filters(query_params: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Parse and validate query parameters for filtering {{ name }}s.
+    
+    Args:
+        query_params: Dictionary of query parameters
+        
+    Returns:
+        Validated filters
+    """
+    filters = {}
+    
+    # Process each query parameter
+    for key, value in query_params.items():
+        # Skip pagination parameters
+        if key in ["skip", "limit", "sort_by", "sort_order"]:
+            continue
+        
+        # Handle special filter operators (e.g., created_at_gt, name_like)
+        if "_" in key:
+            field, operator = key.rsplit("_", 1)
+            
+            # Handle specific operators
+            if operator == "like":
+                filters["{}{}".format(field, "_like")] = value
+            elif operator in ["gt", "lt", "gte", "lte", "ne", "in"]:
+                filters["{}{}".format(field, "_" + operator)] = value
+            else:
+                # Direct equals filter for fields with underscore
+                filters[key] = value
+        else:
+            # Direct equals filter
+            filters[key] = value
+    
+    return filters
+
+
+def snake_to_camel(snake_str: str) -> str:
+    """
+    Convert snake_case to camelCase.
+    
+    Args:
+        snake_str: String in snake_case
+        
+    Returns:
+        String in camelCase
+    """
+    components = snake_str.split('_')
+    return components[0] + ''.join(x.title() for x in components[1:])
+
+
+def camel_to_snake(camel_str: str) -> str:
+    """
+    Convert camelCase to snake_case.
+    
+    Args:
+        camel_str: String in camelCase
+        
+    Returns:
+        String in snake_case
+    """
+    snake_str = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', camel_str)
+    return re.sub('([a-z0-9])([A-Z])', r'\1_\2', snake_str).lower()
+
+
+def model_to_dict(model: Any) -> Dict[str, Any]:
+    """
+    Convert SQLAlchemy model to dictionary.
+    
+    Args:
+        model: SQLAlchemy model instance
+        
+    Returns:
+        Dictionary representation of the model
+    """
+    result = {}
+    for key, value in model.__dict__.items():
+        if not key.startswith('_'):
+            if isinstance(value, (datetime, date)):
+                value = value.isoformat()
+            result[key] = value
+    return result
+
+
+def dict_to_model(model_class: Any, data: Dict[str, Any]) -> Any:
+    """
+    Convert dictionary to SQLAlchemy model.
+    
+    Args:
+        model_class: SQLAlchemy model class
+        data: Dictionary of data
+        
+    Returns:
+        SQLAlchemy model instance
+    """
+    return model_class(**data)
+
+
+def paginate_results(query: Any, page: int = 1, page_size: int = 100) -> Dict[str, Any]:
+    """
+    Paginate database query results.
+    
+    Args:
+        query: SQLAlchemy query
+        page: Page number (1-indexed)
+        page_size: Number of items per page
+        
+    Returns:
+        Dictionary with paginated results
+    """
+    total = query.count()
+    pages = (total + page_size - 1) // page_size if page_size > 0 else 1
+    
+    if page < 1:
+        page = 1
+    elif page > pages and pages > 0:
+        page = pages
+    
+    items = query.offset((page - 1) * page_size).limit(page_size).all()
+    
+    return {
+        "items": items,
+        "total": total,
+        "page": page,
+        "pages": pages,
+        "size": page_size,
+    }
+
+
+def filter_query_by_date_range(query: Any, model: Any, field_name: str, start_date: Optional[datetime] = None, end_date: Optional[datetime] = None) -> Any:
+    """
+    Filter query by date range.
+    
+    Args:
+        query: SQLAlchemy query
+        model: SQLAlchemy model class
+        field_name: Name of the date field
+        start_date: Start date (inclusive)
+        end_date: End date (inclusive)
+        
+    Returns:
+        Filtered SQLAlchemy query
+    """
+    if start_date:
+        query = query.filter(getattr(model, field_name) >= start_date)
+    if end_date:
+        query = query.filter(getattr(model, field_name) <= end_date)
+    return query
+
+
+def get_{{ name }}_by_id_or_404(service: Any, {{ name }}_id: int) -> Any:
+    """
+    Get {{ name }} by ID or raise 404 error.
+    
+    Args:
+        service: {{ name.title() }} service
+        {{ name }}_id: ID of the {{ name }}
+        
+    Returns:
+        {{ name.title() }} object
+        
+    Raises:
+        HTTPException: If {{ name }} not found
+    """
+    {{ name }} = service.fetch_resource_by_id({{ name }}_id)
+    if not {{ name }}:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="{{ name.title() }} with ID {} not found".format({{ name }}_id)
+        )
+    return {{ name }}

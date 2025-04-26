@@ -1,0 +1,274 @@
+"""
+{{ description }}
+"""
+from uuid import UUID
+from typing import Any, Dict, List, Optional, Union
+from sqlalchemy.orm import Session
+from fastapi import Depends, HTTPException, status
+
+from {{ package_name }}.core.database import get_db
+from {{ package_name }}.models.{{ name }} import {{ class_name | replace('Service', '') }}
+
+
+class {{ class_name }}:
+    """Service for {{ name }} operations"""
+    
+    def __init__(self, db: Session = Depends(get_db)):
+        """
+        Initialize the service with a database session.
+        
+        Args:
+            db: SQLAlchemy database session
+        """
+        self.db = db
+        self.model = {{ class_name | replace('Service', '') }}
+        
+    def fetch_resource_by_id(self, resource_id: UUID) -> Optional[{{ class_name | replace('Service', '') }}]:
+        """
+        Fetch a {{ name }} by ID.
+        
+        Args:
+            resource_id: ID of the {{ name }}
+            
+        Returns:
+            {{ class_name | replace('Service', '') }} object if found, None otherwise
+        """
+        try:
+            return self.db.query({{ class_name | replace('Service', '') }}).filter(
+                {{ class_name | replace('Service', '') }}.id == resource_id,
+                {{ class_name | replace('Service', '') }}.is_deleted == False
+            ).first()
+        except Exception as e:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Database error: {str(e)}"
+            ) from e
+    
+    def fetch_resource_by_filters(
+        self, 
+        filters: Dict[str, Any], 
+        skip: int = 0, 
+        limit: int = 100,
+        sort_by: Optional[str] = None,
+        sort_order: str = "asc"
+    ) -> List[{{ class_name | replace('Service', '') }}]:
+        """
+        Fetch {{ name }}s by filters.
+        
+        Args:
+            filters: Dictionary of filters to apply
+            skip: Number of records to skip
+            limit: Maximum number of records to return
+            sort_by: Field to sort by
+            sort_order: Sort order (asc or desc)
+            
+        Returns:
+            List of {{ class_name | replace('Service', '') }} objects
+        """
+        try:
+            query = self.db.query({{ class_name | replace('Service', '') }}).filter({{ class_name | replace('Service', '') }}.is_deleted == False)
+            
+            # Apply filters
+            for key, value in filters.items():
+                if hasattr({{ class_name | replace('Service', '') }}, key):
+                    if key.endswith('_like'):
+                        field_name = key[:-5]  # Remove '_like' suffix
+                        query = query.filter(getattr({{ class_name | replace('Service', '') }}, field_name).ilike(f"%{value}%"))
+                    elif key.endswith('_gt'):
+                        field_name = key[:-3]  # Remove '_gt' suffix
+                        query = query.filter(getattr({{ class_name | replace('Service', '') }}, field_name) > value)
+                    elif key.endswith('_lt'):
+                        field_name = key[:-3]  # Remove '_lt' suffix
+                        query = query.filter(getattr({{ class_name | replace('Service', '') }}, field_name) < value)
+                    elif key.endswith('_gte'):
+                        field_name = key[:-4]  # Remove '_gte' suffix
+                        query = query.filter(getattr({{ class_name | replace('Service', '') }}, field_name) >= value)
+                    elif key.endswith('_lte'):
+                        field_name = key[:-4]  # Remove '_lte' suffix
+                        query = query.filter(getattr({{ class_name | replace('Service', '') }}, field_name) <= value)
+                    elif key.endswith('_in'):
+                        field_name = key[:-3]  # Remove '_in' suffix
+                        query = query.filter(getattr({{ class_name | replace('Service', '') }}, field_name).in_(value))
+                    else:
+                        query = query.filter(getattr({{ class_name | replace('Service', '') }}, key) == value)
+            
+            # Apply sorting
+            if sort_by and hasattr({{ class_name | replace('Service', '') }}, sort_by):
+                order_field = getattr({{ class_name | replace('Service', '') }}, sort_by)
+                if sort_order.lower() == "desc":
+                    order_field = order_field.desc()
+                query = query.order_by(order_field)
+            
+            # Apply pagination
+            query = query.offset(skip).limit(limit)
+            
+            return query.all()
+        except Exception as e:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Database error: {str(e)}"
+            ) from e
+    
+    def create_resource(self, data: Dict[str, Any]) -> {{ class_name | replace('Service', '') }}:
+        """
+        Create a new {{ name }}.
+        
+        Args:
+            data: Dictionary of {{ name }} data
+            
+        Returns:
+            Created {{ class_name | replace('Service', '') }} object
+        """
+        try:
+            resource = {{ class_name | replace('Service', '') }}(**data)
+            self.db.add(resource)
+            self.db.commit()
+            self.db.refresh(resource)
+            return resource
+        except Exception as e:
+            self.db.rollback()
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Database error: {str(e)}"
+            ) from e
+    
+    def update_resource_by_id(self, resource_id: UUID, data: Dict[str, Any]) -> Optional[{{ class_name | replace('Service', '') }}]:
+        """
+        Update a {{ name }} by ID.
+        
+        Args:
+            resource_id: ID of the {{ name }}
+            data: Dictionary of data to update
+            
+        Returns:
+            Updated {{ class_name | replace('Service', '') }} object if found, None otherwise
+        """
+        try:
+            resource = self.fetch_resource_by_id(resource_id)
+            if not resource:
+                return None
+            
+            for key, value in data.items():
+                if hasattr(resource, key):
+                    setattr(resource, key, value)
+            
+            self.db.commit()
+            self.db.refresh(resource)
+            return resource
+        except Exception as e:
+            self.db.rollback()
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Database error: {str(e)}"
+            ) from e
+    
+    def update_resource_by_filters(self, filters: Dict[str, Any], data: Dict[str, Any]) -> List[{{ class_name | replace('Service', '') }}]:
+        """
+        Update {{ name }}s by filters.
+        
+        Args:
+            filters: Dictionary of filters to apply
+            data: Dictionary of data to update
+            
+        Returns:
+            List of updated {{ class_name | replace('Service', '') }} objects
+        """
+        try:
+            resources = self.fetch_resource_by_filters(filters)
+            
+            for resource in resources:
+                for key, value in data.items():
+                    if hasattr(resource, key):
+                        setattr(resource, key, value)
+            
+            self.db.commit()
+            
+            # Refresh all resources
+            for resource in resources:
+                self.db.refresh(resource)
+            
+            return resources
+        except Exception as e:
+            self.db.rollback()
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Database error: {str(e)}"
+            ) from e
+    
+    def remove_resource_by_id(self, resource_id: UUID) -> bool:
+        """
+        Soft delete a {{ name }} by ID.
+        
+        Args:
+            resource_id: ID of the {{ name }}
+            
+        Returns:
+            True if deleted, False otherwise
+        """
+        try:
+            resource = self.fetch_resource_by_id(resource_id)
+            if not resource:
+                return False
+            
+            resource.is_deleted = True
+            self.db.commit()
+            return True
+        except Exception as e:
+            self.db.rollback()
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Database error: {str(e)}"
+            ) from e
+    
+    def remove_resources_by_filters(self, filters: Dict[str, Any]) -> int:
+        """
+        Soft delete {{ name }}s by filters.
+        
+        Args:
+            filters: Dictionary of filters to apply
+            
+        Returns:
+            Number of resources deleted
+        """
+        try:
+            resources = self.fetch_resource_by_filters(filters)
+            
+            for resource in resources:
+                resource.is_deleted = True
+            
+            self.db.commit()
+            return len(resources)
+        except Exception as e:
+            self.db.rollback()
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Database error: {str(e)}"
+            ) from e
+    
+    def hard_delete_resource_by_id(self, resource_id: UUID) -> bool:
+        """
+        Hard delete a {{ name }} by ID.
+        
+        Args:
+            resource_id: ID of the {{ name }}
+            
+        Returns:
+            True if deleted, False otherwise
+        """
+        try:
+            resource = self.db.query({{ class_name | replace('Service', '') }}).filter(
+                {{ class_name | replace('Service', '') }}.id == resource_id
+            ).first()
+            
+            if not resource:
+                return False
+            
+            self.db.delete(resource)
+            self.db.commit()
+            return True
+        except Exception as e:
+            self.db.rollback()
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Database error: {str(e)}"
+            ) from e

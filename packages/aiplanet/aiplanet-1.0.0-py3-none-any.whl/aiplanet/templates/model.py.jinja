@@ -1,0 +1,52 @@
+"""
+{{ description }}
+"""
+from sqlalchemy import Boolean, Column, DateTime, ForeignKey, UUID, String, Text, Float, Enum
+from sqlalchemy.orm import relationship
+from sqlalchemy.sql import func
+import enum
+import uuid
+
+from {{ package_name }}.core.database import Base
+
+
+class {{ class_name }}(Base):
+    """{{ class_name }} database model"""
+    
+    # Set table name based on class name with proper pluralization
+    {% if class_name.endswith('y') %}
+    __tablename__ = "{{ class_name[:-1] }}ies".lower()
+    {% elif class_name.endswith('s') or class_name.endswith('x') or class_name.endswith('z') or class_name.endswith('ch') or class_name.endswith('sh') %}
+    __tablename__ = "{{ class_name }}es".lower()
+    {% else %}
+    __tablename__ = "{{ class_name }}s".lower()
+    {% endif %}
+    
+    # Primary key
+    id = Column(UUID, primary_key=True, index=True, default=uuid.uuid4)
+    
+    # Basic fields
+    name = Column(String(255), index=True, nullable=False)
+    description = Column(Text, nullable=True)
+    
+    # Timestamps
+    created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    updated_at = Column(DateTime(timezone=True), onupdate=func.now())
+    
+    # Soft delete flag - Always include this in models
+    is_deleted = Column(Boolean, default=False, nullable=False, index=True)
+    
+    # Add your custom fields here
+    # Examples:
+    # status = Column(String(50), default="active", nullable=False)
+    # price = Column(Float, nullable=True)
+    # is_active = Column(Boolean, default=True, nullable=False)
+    # parent_id = Column(UUID, ForeignKey("{{ table_name }}.id"), nullable=True)
+    
+    # Relationships
+    # Example: 
+    # children = relationship("{{ class_name }}", back_populates="parent", cascade="all, delete-orphan")
+    # parent = relationship("{{ class_name }}", back_populates="children", remote_side=[id])
+    
+    def __repr__(self):
+        return "<{{ class_name }}(id={}, name={})>".format(self.id, self.name)

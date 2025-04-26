@@ -1,0 +1,103 @@
+"""
+{{ description }}
+"""
+from datetime import datetime
+from typing import List, Optional, Dict, Any
+
+from pydantic import BaseModel, Field, validator
+
+
+class {{ class_name }}Base(BaseModel):
+    """Base schema for {{ name }}"""
+    name: str = Field(..., description="Name of the {{ name }}", min_length=1, max_length=255)
+    description: Optional[str] = Field(None, description="Description of the {{ name }}")
+    # Add your custom fields here
+
+
+class {{ class_name }}Create({{ class_name }}Base):
+    """Schema for creating a {{ name }}"""
+    # Add creation-specific fields here
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "name": "Example {{ class_name }}",
+                "description": "This is an example {{ name }}",
+                # Add example values for other fields
+            }
+        }
+
+
+class {{ class_name }}Update(BaseModel):
+    """Schema for updating a {{ name }}"""
+    name: Optional[str] = Field(None, description="Name of the {{ name }}", min_length=1, max_length=255)
+    description: Optional[str] = Field(None, description="Description of the {{ name }}")
+    # Add your custom fields here
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "name": "Updated {{ class_name }}",
+                "description": "This is an updated {{ name }}",
+                # Add example values for other fields
+            }
+        }
+
+
+class {{ class_name }}Response({{ class_name }}Base):
+    """Schema for {{ name }} response"""
+    id: int = Field(..., description="Unique identifier")
+    created_at: datetime = Field(..., description="Creation timestamp")
+    updated_at: Optional[datetime] = Field(None, description="Last update timestamp")
+    is_deleted: bool = Field(False, description="Whether the resource is deleted")
+    # Include additional fields from your model here
+
+    class Config:
+        from_attributes = True
+        json_schema_extra = {
+            "example": {
+                "id": 1,
+                "name": "Example {{ class_name }}",
+                "description": "This is an example {{ name }}",
+                "created_at": "2023-01-01T00:00:00Z",
+                "updated_at": "2023-01-02T00:00:00Z",
+                "is_deleted": False,
+                # Add example values for other fields
+            }
+        }
+
+
+class {{ class_name }}List(BaseModel):
+    """Schema for paginated list of {{ name }}s"""
+    items: List[{{ class_name }}Response] = Field(..., description="List of {{ name }}s")
+    total: int = Field(..., description="Total number of {{ name }}s")
+    page: int = Field(1, description="Current page number")
+    pages: int = Field(1, description="Total number of pages")
+    size: int = Field(100, description="Number of items per page")
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "items": [
+                    {
+                        "id": 1,
+                        "name": "Example {{ class_name }} 1",
+                        "description": "This is an example {{ name }}",
+                        "created_at": "2023-01-01T00:00:00Z",
+                        "updated_at": "2023-01-02T00:00:00Z",
+                        "is_deleted": False,
+                    },
+                    {
+                        "id": 2,
+                        "name": "Example {{ class_name }} 2",
+                        "description": "This is another example {{ name }}",
+                        "created_at": "2023-01-03T00:00:00Z",
+                        "updated_at": "2023-01-04T00:00:00Z",
+                        "is_deleted": False,
+                    }
+                ],
+                "total": 2,
+                "page": 1,
+                "pages": 1,
+                "size": 100
+            }
+        }

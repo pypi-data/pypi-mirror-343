@@ -1,0 +1,77 @@
+"""
+{{ description }}
+"""
+from enum import Enum, auto
+from typing import Dict, List, Any
+
+
+class {{ name.replace('_', ' ').title().replace(' ', '') }}Status(str, Enum):
+    """Status enum for {{ name }}"""
+    ACTIVE = "active"
+    INACTIVE = "inactive"
+    PENDING = "pending"
+    ARCHIVED = "archived"
+    DELETED = "deleted"
+
+
+class {{ name.replace('_', ' ').title().replace(' ', '') }}Type(str, Enum):
+    """Type enum for {{ name }}"""
+    TYPE_A = "type_a"
+    TYPE_B = "type_b"
+    TYPE_C = "type_c"
+    # Add your custom types here
+
+
+# Constants for {{ name }}
+{{ name.upper() }}_DEFAULT_LIMIT = 100
+{{ name.upper() }}_MAX_LIMIT = 1000
+{{ name.upper() }}_MIN_NAME_LENGTH = 3
+{{ name.upper() }}_MAX_NAME_LENGTH = 255
+
+# Error messages
+{{ name.upper() }}_NOT_FOUND = "{{ name.replace('_', ' ').title() }} not found"
+{{ name.upper() }}_ALREADY_EXISTS = "{{ name.replace('_', ' ').title() }} with this name already exists"
+{{ name.upper() }}_INVALID_STATUS = "Invalid status for {{ name }}"
+{{ name.upper() }}_PERMISSION_DENIED = "Permission denied for this {{ name }}"
+
+# Validation rules
+{{ name.upper() }}_VALIDATION_RULES = {
+    "name": {
+        "min_length": {{ name.upper() }}_MIN_NAME_LENGTH,
+        "max_length": {{ name.upper() }}_MAX_NAME_LENGTH,
+        "required": True,
+    },
+    "description": {
+        "required": False,
+    },
+    # Add more validation rules as needed
+}
+
+# Default values
+{{ name.upper() }}_DEFAULT_CONFIG: Dict[str, Any] = {
+    "timeout": 30,
+    "retry_attempts": 3,
+    "cache_ttl": 300,
+    "status": {{ name.replace('_', ' ').title().replace(' ', '') }}Status.PENDING.value,
+}
+
+# Cache keys
+{{ name.upper() }}_CACHE_KEY_PREFIX = "{{ name }}"
+{{ name.upper() }}_LIST_CACHE_KEY = "{}:list".format({{ name.upper() }}_CACHE_KEY_PREFIX)
+{{ name.upper() }}_DETAIL_CACHE_KEY = "{}:detail:{}".format({{ name.upper() }}_CACHE_KEY_PREFIX, "{}")  # Format with ID
+
+# Rate limiting
+{{ name.upper() }}_RATE_LIMIT = {
+    "create": {
+        "rate": 10,
+        "per": 60,  # seconds
+    },
+    "update": {
+        "rate": 20,
+        "per": 60,  # seconds
+    },
+    "delete": {
+        "rate": 5,
+        "per": 60,  # seconds
+    },
+}
