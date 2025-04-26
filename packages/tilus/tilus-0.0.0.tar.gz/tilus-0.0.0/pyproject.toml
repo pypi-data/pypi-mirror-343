@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tilus"
+version = "0.0.0"
+authors = [
+    { name = "Hidet Team" },
+]
+description = "A placeholder package for the tilus project"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache License 2.0" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
