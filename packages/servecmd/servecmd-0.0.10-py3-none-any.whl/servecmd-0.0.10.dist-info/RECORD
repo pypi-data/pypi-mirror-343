@@ -1,0 +1,13 @@
+servecmd/__init__.py,sha256=ZKzcfWoii3tB--1jQe23WGY9mGBn8-CgbmwtZNx0yjw,169
+servecmd/__main__.py,sha256=Z0HLeLntzhCvt3Jx-nI5BOowiBvcOBcQ08uAwJKnIOc,1484
+servecmd/client.py,sha256=9hkMheepC0eGb_3ptF3jg0CRKhgPtGHeTmQHTLXQZ4c,514
+servecmd/cmd_manager.py,sha256=trp66z8dIvQCqHvHCoJpVUFWt3Z0rVFMo1fipOPR9Kg,557
+servecmd/cmd_session.py,sha256=w8DSZ245dqfvjwiBagijQsP0c9Zbo44t2aqOzl0tFTg,9016
+servecmd/conf.py,sha256=6d6DG7r9oGrquykVkWZ7wri3HVQXTYOWRsnThslv0kA,1157
+servecmd/server.py,sha256=ZY_8kupPxnznpqT8WjmyRIo_Q47vnVPyFA90E07S_zs,1176
+servecmd/util.py,sha256=jVTuD2sjDkqZMq6jpY7_8Jg3kf2EDY3bjmOchx-r4cw,3149
+servecmd-0.0.10.dist-info/LICENSE,sha256=ojjV8sdsECQ8wAnw73e73k1vWBc-zCvY5_o3UuWRTsE,1064
+servecmd-0.0.10.dist-info/METADATA,sha256=FQ6HFubjZKef2YMqCI9tnLXQYdXp7xQbkDtPRLltEf4,785
+servecmd-0.0.10.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+servecmd-0.0.10.dist-info/entry_points.txt,sha256=0IirehndBgvPKTvwqkhjb0RFNK9w069CY4ajqZMtwGQ,51
+servecmd-0.0.10.dist-info/RECORD,,
