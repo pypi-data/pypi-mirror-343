@@ -1,0 +1,16 @@
+abogen/VERSION,sha256=klIfw8vZZL3J9YSpkbif3apXVO0cyW1tQkRTOGacEwU,5
+abogen/__init__.py,sha256=L1-YkFkyD5ny8ZLZp9Epppya_nnLYKUsD7PT3y2uRbw,275
+abogen/book_handler.py,sha256=9TtAKuagZV2sSKeHd0ep_idQdk-SlFmoE1iyqFx6LTM,50196
+abogen/conversion.py,sha256=sYXMMVtNTPQyQBYiUtmOsUkDS_YBYaNJDsjntn_pWS4,30874
+abogen/gui.py,sha256=woPhxQ4CoQ8HJ_yGjAhiOYyk3oT__KJz9Ae-Vpp2etY,76849
+abogen/main.py,sha256=EyKRdDtZI3Uesq82NK98JbH39L7bg5HQDR0EpZW_Dfo,1460
+abogen/utils.py,sha256=CoxoOBUausOe04qBPZLe_QyxT4w63Z4AfteS6EwtPZg,8063
+abogen/assets/icon.ico,sha256=oQ7f5dNBueQc45aeK_yzJ8NVb0XR8CZsugdm93X4jRw,51950
+abogen/assets/loading.gif,sha256=-YgfyuvI-OympabwHsnqpeXrVcacs5cqIz1BWjOrOyE,123265
+abogen/assets/settings.png,sha256=AuSoDEMl52YjGYwMgrXXshWCOldHYrPGEB-mgYgCFts,585
+abogen-1.0.0.dist-info/licenses/LICENSE,sha256=Qr_F5vBoiGsAPXBkZuSoz0u9SKuD4GdtdKKaWGuqEx8,1090
+abogen-1.0.0.dist-info/METADATA,sha256=pzjLmiQHK4UYlo1oDUbZ6ikWP6IybVP2VLrWXpKj074,9684
+abogen-1.0.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+abogen-1.0.0.dist-info/entry_points.txt,sha256=M5fz1n8t-zY5bYANavgtfnZP-8Jhc1KhP69dLFRWhDc,40
+abogen-1.0.0.dist-info/top_level.txt,sha256=yr1nGwLTk6zhUvaE_0De3frpVg6vlh0XO4f6kELyy24,7
+abogen-1.0.0.dist-info/RECORD,,
