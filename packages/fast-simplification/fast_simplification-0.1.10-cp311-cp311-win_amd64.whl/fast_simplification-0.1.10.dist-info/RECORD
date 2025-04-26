@@ -1,0 +1,13 @@
+fast_simplification/__init__.py,sha256=mQ9IihrwBO96gCgizR55URbsQeBzpY9TbWeTXGEgPcE,189
+fast_simplification/_replay.cp311-win_amd64.pyd,sha256=Tj-vWSiOrf_TsitPrWRrg3fs6DKx2tkUI5oexNIXcwo,233472
+fast_simplification/_simplify.cp311-win_amd64.pyd,sha256=5byUFh1U5gCrM0KmEUvkV7SZwTpF9pC1BaXBUnj3KvA,208384
+fast_simplification/_version.py,sha256=EgMt9SnkFVFy44FToStJIOJRIvCuzKAjAuKxSWphyrI,231
+fast_simplification/fast_simplification.py,sha256=MlAQQuJ5OTinBoFX2S7cTEvH_atf1VVPGhn1_RFnBsk,27
+fast_simplification/replay.py,sha256=xFr8a7pRvvXdPch3imE47wi9dJaaU1tpz2kL8U9Evuc,7433
+fast_simplification/simplify.py,sha256=0tx-sJKR0gCggt7wVD3PCOG6Qu2eeGwcWH6IAko5WhI,7795
+fast_simplification/utils.py,sha256=bR3IxuwujYs3uH23uWH6tobf4r4k3w1boDjJFFMGMc0,767
+fast_simplification-0.1.10.dist-info/licenses/LICENSE,sha256=HbsIg5Zl25bSWrrxDLiwSAbIIkg8CfRn6Z2PfTYWP-s,1109
+fast_simplification-0.1.10.dist-info/METADATA,sha256=drfslwP9U-u9p4LT1G27grrMr60y80Vkl8sxu0mSHbs,10299
+fast_simplification-0.1.10.dist-info/WHEEL,sha256=oEjOS__eymZOlbVKA4cO_63xUK8u3m8eSPjzCdMe61I,101
+fast_simplification-0.1.10.dist-info/top_level.txt,sha256=mOYWsXJnx7nticQc3052sz-Gwz_iZqn0v8yPy_vkiCM,20
+fast_simplification-0.1.10.dist-info/RECORD,,
