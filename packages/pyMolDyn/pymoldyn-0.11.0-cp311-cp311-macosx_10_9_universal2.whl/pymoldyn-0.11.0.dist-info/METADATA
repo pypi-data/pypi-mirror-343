@@ -1,0 +1,108 @@
+Metadata-Version: 2.4
+Name: pyMolDyn
+Version: 0.11.0
+Summary: A molecule viewer with cavity computation.
+Author: David Knodt, Florian Macherey
+Author-email: Florian Rhiem <f.rhiem@fz-juelich.de>, Fabian Beule <f.beule@fz-juelich.de>, Ingo Meyer <i.meyer@fz-juelich.de>, Torben Moll <t.moll@fz-juelich.de>
+Maintainer-email: Ingo Meyer <i.meyer@fz-juelich.de>
+License: Copyright 2015-2024 Forschungszentrum Jülich GmbH
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of
+        this software and associated documentation files (the "Software"), to deal in
+        the Software without restriction, including without limitation the rights to
+        use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+        the Software, and to permit persons to whom the Software is furnished to do so,
+        subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+        FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+        COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+        IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+        CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        
+Project-URL: Homepage, https://pgi-jcns.fz-juelich.de/portal/pages/pymoldyn-main.html
+Keywords: scientific
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: gr
+Requires-Dist: h5py
+Requires-Dist: Jinja2
+Requires-Dist: numpy
+Requires-Dist: PyOpenGL
+Requires-Dist: PySide6
+Requires-Dist: python-dateutil
+Dynamic: license-file
+
+pyMolDyn
+########
+
+
+pyMolDyn is a viewer for atomic clusters, crystalline and amorphous materials in a unit cell corresponding to one of
+the seven 3D Bravais lattices. The program calculates cavities (vacancies, voids) according to three definitions.
+
+.. image:: http://pgi-jcns.fz-juelich.de/portal/static/images/pymoldyn-gui.png
+    :width: 80%
+    :alt: pyMolDyn GUI
+    :align: center
+
+Features
+========
+
+-   Interactive viewer based on GR3
+-   Computation of cavities in all seven 3D Bravais lattice systems
+-   Creation of high resolution images appropriate for publications
+-   Video creation from a set of input frames to analyze cavity changes in materials over time
+-   Statistics including
+
+    -   Surfaces, volumes and surface volume ratios of cavities and domains
+    -   Pair distribution functions (including cavities), bonds, bond (dihedral) angles
+    -   Gyration tensor, asphericity, acylindricity
+
+-   Filter for atoms and cavities
+-   Batch mode for simultaneous processing of multiple files
+
+
+Documentation
+=============
+
+Further information on supported input formats and the bravais lattice systems can be found on the
+`pyMolDyn documentation page <https://pgi-jcns.fz-juelich.de/portal/pages/pymoldyn-doc.html>`_.
+
+`A quick introduction to the gui version <https://pgi-jcns.fz-juelich.de/portal/pages/pymoldyn-gui.html>`_ is also
+available.
+
+
+Download
+========
+
+We provide binary software packages for Linux and Mac OS X at our
+`pyMolDyn homepage <https://pgi-jcns.fz-juelich.de/portal/pages/pymoldyn-main.html>`_.
+
+
+Contact
+=======
+
+For questions, bug reports or feature requests please contact `Ingo Meyer <mailto:i.meyer@fz-juelich.de>`_
+(software maintainer).
