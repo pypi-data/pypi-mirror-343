@@ -1,0 +1,2 @@
+[console_scripts]
+nia = nia_cli.__main__:main
