@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: braglog
+Version: 0.5.1
+Summary: A concise command-line tool for quickly logging daily tasks and milestones, ideal for personal and professional record-keeping.
+Project-URL: Homepage, https://github.com/greatbahram/braglog
+Project-URL: Changelog, https://github.com/greatbahram/braglog/releases
+Project-URL: Issues, https://github.com/greatbahram/braglog/issues
+Project-URL: CI, https://github.com/greatbahram/braglog/actions
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click-default-group>=1.2.4
+Requires-Dist: click>=8.1.8
+Requires-Dist: peewee>=3.17.9
+Requires-Dist: dateparser>=1.2.1
+Provides-Extra: dev
+Requires-Dist: mkdocs-material>=9.6.11; extra == "dev"
+Requires-Dist: pre-commit>=4.2.0; extra == "dev"
+Requires-Dist: pytest>=8.3.5; extra == "dev"
+Requires-Dist: ruff>=0.11.2; extra == "dev"
+Dynamic: license-file
+
+# braglog
+Easily log and manage daily work achievements to boost transparency and productivity 🌟
+
+## Background
+BragLog was inspired by an insightful article on [keeping a work changelog](https://code.dblock.org/2020/09/01/keep-a-changelog-at-work.html). This tool addresses that challenge by providing a simple yet powerful way to track professional achievements over time, making it easier to showcase your impact and growth.
+
+## Installation
+Install this tool using pip:
+```bash
+pip install braglog
+```
+Or using [pipx](https://pipx.pypa.io/stable/):
+```bash
+pipx install braglog
+```
+Or using [uv](https://docs.astral.sh/uv/guides/tools/):
+```bash
+uv tool install braglog
+```
+## Usage
+
+For help, run:
+```bash
+braglog --help
+```
+You can also use:
+```bash
+python -m braglog --help
+```
