@@ -1,0 +1,194 @@
+"""
+{{ description }}
+"""
+from uuid import UUID
+from typing import Dict, List, Optional, Any
+from fastapi import APIRouter, Depends, HTTPException, Query, Path, status
+from sqlalchemy.orm import Session
+
+from {{ package_name }}.core.database import get_db
+from {{ package_name }}.services.{{ name }}_service import {{ class_name }}Service
+from {{ package_name }}.schemas.{{ name }} import {{ class_name }}Create, {{ class_name }}Update, {{ class_name }}Response, {{ class_name }}List
+
+
+router = APIRouter(
+    prefix="{{ prefix }}",
+    tags=["{{ tag }}"],
+)
+
+
+@router.get("/", response_model={{ class_name }}List)
+async def get_{{ name }}s(
+    skip: int = Query(0, description="Number of records to skip", ge=0),
+    limit: int = Query(100, description="Maximum number of records to return", le=1000),
+    sort_by: Optional[str] = Query(None, description="Field to sort by"),
+    sort_order: str = Query("asc", description="Sort order (asc or desc)"),
+    name: Optional[str] = Query(None, description="Filter by name"),
+    name_like: Optional[str] = Query(None, description="Filter by name (partial match)"),
+    is_active: Optional[bool] = Query(None, description="Filter by active status"),
+    db: Session = Depends(get_db),
+):
+    """
+    Get a list of {{ name }}s with filtering, sorting, and pagination.
+    """
+    # Build filters dictionary from query parameters
+    filters = {}
+    if name:
+        filters["name"] = name
+    if name_like:
+        filters["name_like"] = name_like
+    if is_active is not None:
+        filters["is_active"] = is_active
+    
+    service = {{ class_name }}Service(db)
+    {{ name }}s = service.fetch_resource_by_filters(
+        filters, 
+        skip=skip, 
+        limit=limit,
+        sort_by=sort_by,
+        sort_order=sort_order
+    )
+    
+    total_count = len({{ name }}s)  # This should be replaced with a proper count query in a real app
+    
+    return {
+        "items": {{ name }}s,
+        "total": total_count,
+        "page": skip // limit + 1 if limit > 0 else 1,
+        "pages": (total_count + limit - 1) // limit if limit > 0 else 1,
+        "size": limit,
+    }
+
+
+@router.get("/{resource_id}", response_model={{ class_name }}Response)
+async def get_{{ name }}_by_id(
+    resource_id: UUID = Path(..., description="ID of the {{ name }} to get"),
+    db: Session = Depends(get_db),
+):
+    """
+    Get a specific {{ name }} by ID.
+    """
+    service = {{ class_name }}Service(db)
+    {{ name }} = service.fetch_resource_by_id(resource_id)
+    if not {{ name }}:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Resource not found"
+        )
+    return {{ name }}
+
+
+@router.post("/", response_model={{ class_name }}Response, status_code=status.HTTP_201_CREATED)
+async def create_{{ name }}(
+    {{ name }}_data: {{ class_name }}Create,
+    db: Session = Depends(get_db),
+):
+    """
+    Create a new {{ name }}.
+    """
+    service = {{ class_name }}Service(db)
+    
+    # Check if a resource with the same name already exists
+    existing = service.fetch_resource_by_filters({"name": {{ name }}_data.name})
+    if existing:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="Resource with this name already exists"
+        )
+    
+    return service.create_resource({{ name }}_data.model_dump())
+
+
+@router.put("/{resource_id}", response_model={{ class_name }}Response)
+async def update_{{ name }}(
+    resource_id: UUID = Path(..., description="ID of the {{ name }} to update"),
+    {{ name }}_data: {{ class_name }}Update = None,
+    db: Session = Depends(get_db),
+):
+    """
+    Update a {{ name }}.
+    """
+    service = {{ class_name }}Service(db)
+    
+    # Verify resource exists
+    existing = service.fetch_resource_by_id(resource_id)
+    if not existing:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Resource not found"
+        )
+    
+    # Exclude None values to implement partial updates
+    data = {{ name }}_data.model_dump(exclude_unset=True)
+    
+    # Check if name is being updated and if it conflicts with existing resources
+    if "name" in data and data["name"] != existing.name:
+        name_conflicts = service.fetch_resource_by_filters({"name": data["name"]})
+        if name_conflicts:
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail="Resource with this name already exists"
+            )
+    
+    {{ name }} = service.update_resource_by_id(resource_id, data)
+    return {{ name }}
+
+
+@router.delete("/{resource_id}", response_model=Dict[str, bool])
+async def delete_{{ name }}(
+    resource_id: UUID = Path(..., description="ID of the {{ name }} to delete"),
+    permanent: bool = Query(False, description="Permanently delete the resource"),
+    db: Session = Depends(get_db),
+):
+    """
+    Delete a {{ name }}. By default, this is a soft delete.
+    Set permanent=true to permanently delete the resource.
+    """
+    service = {{ class_name }}Service(db)
+    
+    if permanent:
+        success = service.hard_delete_resource_by_id(resource_id)
+    else:
+        success = service.remove_resource_by_id(resource_id)
+    
+    if not success:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Resource not found"
+        )
+    
+    return {"success": True}
+
+
+@router.post("/{resource_id}/restore", response_model={{ class_name }}Response)
+async def restore_{{ name }}(
+    resource_id: UUID = Path(..., description="ID of the {{ name }} to restore", gt=0),
+    db: Session = Depends(get_db),
+):
+    """
+    Restore a soft-deleted {{ name }}.
+    """
+    service = {{ class_name }}Service(db)
+    
+    # Try to fetch the resource including deleted ones
+    query = db.query(service.model).filter(service.model.id == resource_id)
+    resource = query.first()
+    
+    if not resource:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Resource not found"
+        )
+    
+    if not resource.is_deleted:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Resource is not deleted"
+        )
+    
+    # Restore the resource
+    resource.is_deleted = False
+    db.commit()
+    db.refresh(resource)
+    
+    return resource

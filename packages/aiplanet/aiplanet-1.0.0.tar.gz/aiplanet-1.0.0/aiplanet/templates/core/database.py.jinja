@@ -1,0 +1,145 @@
+"""
+Database configuration and utilities
+"""
+import logging
+from contextlib import contextmanager
+from typing import Generator, Any
+
+from sqlalchemy import create_engine, event
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker, Session
+from fastapi import Depends
+
+from {{ package_name }}.core.config import get_settings
+
+
+logger = logging.getLogger(__name__)
+settings = get_settings()
+
+# Create SQLAlchemy engine - ensure DATABASE_URL is converted to string
+engine = create_engine(
+    str(settings.DATABASE_URL),  # Convert to string to handle Pydantic URL types
+    pool_pre_ping=True,
+    echo=settings.SQL_ECHO,
+    pool_size=settings.DB_POOL_SIZE,
+    max_overflow=settings.DB_MAX_OVERFLOW,
+    pool_timeout=settings.DB_POOL_TIMEOUT,
+    pool_recycle=settings.DB_POOL_RECYCLE,
+)
+
+# Add event listeners for detailed SQL logging if enabled
+if settings.SQL_ECHO:
+    @event.listens_for(engine, "before_cursor_execute")
+    def before_cursor_execute(conn, cursor, statement, parameters, context, executemany):
+        conn.info.setdefault('query_start_time', []).append(logging.Formatter.converter())
+        logger.debug(f"SQL Query: {statement}")
+        logger.debug(f"Parameters: {parameters}")
+
+    @event.listens_for(engine, "after_cursor_execute")
+    def after_cursor_execute(conn, cursor, statement, parameters, context, executemany):
+        total = logging.Formatter.converter() - conn.info['query_start_time'].pop(-1)
+        logger.debug(f"Query complete in {total:.3f}s")
+
+# Create sessionmaker
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+# Create declarative base
+Base = declarative_base()
+
+
+def get_db() -> Generator[Session, None, None]:
+    """
+    Get a database session.
+    
+    Yields:
+        SQLAlchemy session
+    """
+    db = SessionLocal()
+    try:
+        yield db
+    except Exception as e:
+        logger.error(f"Database session error: {str(e)}")
+        db.rollback()
+        raise
+    finally:
+        db.close()
+
+
+@contextmanager
+def get_db_context() -> Generator[Session, None, None]:
+    """
+    Get a database session with context manager.
+    
+    Yields:
+        SQLAlchemy session
+    """
+    db = SessionLocal()
+    try:
+        yield db
+        db.commit()
+    except Exception as e:
+        logger.error(f"Database context error: {str(e)}")
+        db.rollback()
+        raise
+    finally:
+        db.close()
+
+
+def init_db() -> None:
+    """
+    Initialize database by creating all tables.
+    """
+    # Dynamically import all models from the models directory
+    import importlib
+    import os
+    import pkgutil
+    
+    from {{ package_name }} import models
+    
+    # Get the path to the models package
+    models_path = os.path.dirname(models.__file__)
+    
+    # Import all modules in the models package
+    for _, name, _ in pkgutil.iter_modules([models_path]):
+        importlib.import_module(f"{{ package_name }}.models.{name}")
+    
+    logger.info("Creating database tables...")
+    Base.metadata.create_all(bind=engine)
+    logger.info("Database tables created successfully")
+
+
+class DatabaseService:
+    """Base service with database operations"""
+    
+    def __init__(self, db: Session = Depends(get_db)):
+        """
+        Initialize the service with a database session.
+        
+        Args:
+            db: SQLAlchemy database session
+        """
+        self.db = db
+    
+    def commit(self) -> None:
+        """Commit the current transaction."""
+        try:
+            self.db.commit()
+        except Exception as e:
+            self.db.rollback()
+            raise e
+    
+    def rollback(self) -> None:
+        """Rollback the current transaction."""
+        self.db.rollback()
+    
+    def refresh(self, instance: Any) -> None:
+        """
+        Refresh an instance.
+        
+        Args:
+            instance: SQLAlchemy model instance
+        """
+        try:
+            self.db.refresh(instance)
+        except Exception as e:
+            raise e

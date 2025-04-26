@@ -1,0 +1,175 @@
+# {{ project_name }}
+
+A FastAPI project created with AIplanet CLI.
+
+## Features
+
+- FastAPI backend with SQLAlchemy ORM
+- PostgreSQL database with Alembic migrations
+- Modular project structure with services, routers, and models
+- Authentication with JWT
+- Docker and docker-compose support
+- Environment-based configuration
+- Comprehensive error handling
+- Database session management with connection pooling
+- API documentation with Swagger UI
+
+## Requirements
+
+- Python 3.10+
+- Poetry
+- PostgreSQL
+- Docker & Docker Compose (optional)
+
+## Installation
+
+### Local Development
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd {{ project_name|lower|replace(' ', '-') }}
+```
+
+2. Install dependencies with Poetry:
+
+```bash
+poetry install
+```
+
+3. Create a `.env` file based on the provided `.env.example`:
+
+```bash
+cp .env.example .env
+```
+
+4. Set up the database:
+
+```bash
+# Create the database
+createdb {{ project_name|lower|replace(' ', '_') }}
+
+# Run migrations
+poetry run alembic upgrade head
+```
+
+5. Run the development server:
+
+```bash
+poetry run uvicorn main:app --reload
+```
+
+### Docker Development
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd {{ project_name|lower|replace(' ', '-') }}
+```
+
+2. Start the Docker containers:
+
+```bash
+docker-compose up -d
+```
+
+3. Run migrations:
+
+```bash
+docker-compose exec app poetry run alembic upgrade head
+```
+
+## Project Structure
+
+```
+{{ project_name|lower|replace(' ', '-') }}/
+├── alembic.ini                 # Alembic configuration
+├── docker-compose.yml          # Docker Compose configuration
+├── docker/                     # Docker configuration files
+├── main.py                     # FastAPI application entry point
+├── core/                       # Core modules
+│   ├── config.py               # Application configuration
+│   ├── database.py             # Database configuration
+│   ├── security.py             # Security utilities
+│   └── logging.py              # Logging configuration
+├── models/                     # SQLAlchemy models
+├── schemas/                    # Pydantic schemas
+├── services/                   # Business logic
+├── routers/                    # API routes
+├── constants/                  # Application constants
+├── exceptions/                 # Custom exceptions
+├── utils/                      # Utility functions
+├── jobs/                       # Background jobs
+├── middleware/                 # Custom middleware
+├── migrations/                 # Alembic migrations
+│   ├── env.py                  # Alembic environment
+│   └── versions/               # Migration versions
+└── tests/                      # Tests
+```
+
+## API Documentation
+
+Once the application is running, you can access the API documentation at:
+
+- Swagger UI: http://127.0.0.1:8000/api/v1/docs
+- ReDoc: http://127.0.0.1:8000/api/v1/redoc
+
+## Database Migrations
+
+Create a new migration:
+
+```bash
+alembic revision --autogenerate -m "Your migration message"
+```
+
+Apply migrations:
+
+```bash
+alembic upgrade head
+```
+
+Rollback migrations:
+
+```bash
+alembic downgrade -1  # Rollback one migration
+```
+
+## Testing
+
+Run tests:
+
+```bash
+pytest
+```
+
+Run tests with coverage:
+
+```bash
+pytest --cov=app
+```
+
+## Docker Commands
+
+Build and start containers:
+
+```bash
+docker-compose up -d --build
+```
+
+View logs:
+
+```bash
+docker-compose logs -f
+```
+
+Stop containers:
+
+```bash
+docker-compose down
+```
+
+## License
+
+[MIT](LICENSE)

@@ -1,0 +1,221 @@
+"""
+Security utilities for authentication and authorization
+"""
+from datetime import datetime, timedelta
+from typing import Any, Dict, Optional, Union
+
+from fastapi import Depends, HTTPException, status
+from fastapi.security import OAuth2PasswordBearer
+from jose import JWTError, jwt
+from passlib.context import CryptContext
+from pydantic import BaseModel, Field, validator
+
+from core.config import get_settings
+
+
+settings = get_settings()
+
+# Define token security scheme
+oauth2_scheme = OAuth2PasswordBearer(
+    tokenUrl=f"{settings.API_V1_PREFIX}/auth/token"
+)
+
+# Password hashing context
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+
+class Token(BaseModel):
+    """Token schema"""
+    access_token: str
+    token_type: str
+
+
+class TokenData(BaseModel):
+    """Token data schema"""
+    sub: Optional[str] = None
+    scopes: list[str] = []
+    exp: Optional[datetime] = None
+
+
+class UserPayload(BaseModel):
+    """User payload for JWT"""
+    sub: str  # User ID
+    username: str
+    scopes: list[str] = []
+    exp: datetime
+    
+    @validator("exp", pre=True, always=True)
+    def set_exp(cls, v: Optional[datetime], values: Dict[str, Any]) -> datetime:
+        if v:
+            return v
+        return datetime.utcnow() + timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
+
+
+def verify_password(plain_password: str, hashed_password: str) -> bool:
+    """
+    Verify a password against a hash.
+    
+    Args:
+        plain_password: Plain-text password
+        hashed_password: Hashed password
+        
+    Returns:
+        True if password matches hash, False otherwise
+    """
+    return pwd_context.verify(plain_password, hashed_password)
+
+
+def get_password_hash(password: str) -> str:
+    """
+    Hash a password.
+    
+    Args:
+        password: Plain-text password
+        
+    Returns:
+        Hashed password
+    """
+    return pwd_context.hash(password)
+
+
+def create_access_token(
+    data: Dict[str, Any],
+    expires_delta: Optional[timedelta] = None
+) -> str:
+    """
+    Create a JWT access token.
+    
+    Args:
+        data: Data to encode in the token
+        expires_delta: Token expiration time delta
+        
+    Returns:
+        Encoded JWT
+    """
+    to_encode = data.copy()
+    
+    if expires_delta:
+        expire = datetime.utcnow() + expires_delta
+    else:
+        expire = datetime.utcnow() + timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
+    
+    to_encode.update({"exp": expire})
+    
+    encoded_jwt = jwt.encode(
+        to_encode,
+        settings.SECRET_KEY,
+        algorithm="HS256"
+    )
+    
+    return encoded_jwt
+
+
+def decode_token(token: str) -> Dict[str, Any]:
+    """
+    Decode a JWT token.
+    
+    Args:
+        token: JWT token
+        
+    Returns:
+        Decoded token data
+        
+    Raises:
+        HTTPException: If token is invalid
+    """
+    try:
+        payload = jwt.decode(
+            token,
+            settings.SECRET_KEY,
+            algorithms=["HS256"]
+        )
+        return payload
+    except JWTError:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Could not validate credentials",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+
+
+async def get_current_user(token: str = Depends(oauth2_scheme)) -> Dict[str, Any]:
+    """
+    Get the current user from the JWT token.
+    
+    Args:
+        token: JWT token
+        
+    Returns:
+        Current user data
+        
+    Raises:
+        HTTPException: If token is invalid or user not found
+    """
+    try:
+        payload = decode_token(token)
+        user_id: str = payload.get("sub")
+        if user_id is None:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid authentication credentials",
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+        
+        token_data = TokenData(
+            sub=user_id,
+            scopes=payload.get("scopes", []),
+            exp=datetime.fromtimestamp(payload.get("exp"))
+        )
+        
+        # Check if token is expired
+        if token_data.exp < datetime.utcnow():
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Token expired",
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+        
+        # Here you would typically load the user from the database
+        # For example:
+        # user = await get_user(user_id=token_data.sub)
+        # if user is None:
+        #     raise HTTPException(status_code=404, detail="User not found")
+        # return user
+        
+        # For now, just return the token data
+        return {
+            "id": token_data.sub,
+            "scopes": token_data.scopes,
+        }
+        
+    except JWTError:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Could not validate credentials",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+
+
+def create_scope_checker(*required_scopes: str):
+    """
+    Create a dependency that checks if the current user has the required scopes.
+    
+    Args:
+        *required_scopes: Required scopes
+        
+    Returns:
+        Dependency function
+    """
+    async def check_scopes(current_user: Dict[str, Any] = Depends(get_current_user)):
+        user_scopes = current_user.get("scopes", [])
+        
+        for scope in required_scopes:
+            if scope not in user_scopes:
+                raise HTTPException(
+                    status_code=status.HTTP_403_FORBIDDEN,
+                    detail=f"Permission denied. Required scope: {scope}",
+                )
+        
+        return current_user
+    
+    return check_scopes

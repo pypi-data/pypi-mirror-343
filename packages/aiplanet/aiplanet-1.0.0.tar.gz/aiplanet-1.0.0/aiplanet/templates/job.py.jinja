@@ -1,0 +1,173 @@
+"""
+{{ description }}
+"""
+import logging
+from datetime import datetime, timedelta
+from typing import Any, Dict, List, Optional, Union
+
+from sqlalchemy.orm import Session
+from fastapi import Depends
+
+from {{ package_name }}.core.database import get_db
+from {{ package_name }}.services.{{ name }}_service import {{ class_name|replace('Job', 'Service') }}
+
+
+logger = logging.getLogger(__name__)
+
+
+class {{ class_name }}:
+    """Job for {{ name }} operations"""
+    
+    def __init__(self, db: Session = Depends(get_db)):
+        """
+        Initialize the job with a database session.
+        
+        Args:
+            db: SQLAlchemy database session
+        """
+        self.db = db
+        self.service = {{ class_name|replace('Job', 'Service') }}(db)
+    
+    async def process_pending_{{ name }}s(self) -> int:
+        """
+        Process all pending {{ name }}s.
+        
+        Returns:
+            Number of processed {{ name }}s
+        """
+        try:
+            # Get all pending {{ name }}s
+            pending_{{ name }}s = self.service.fetch_resource_by_filters(
+                {"status": "pending"},
+                limit=100
+            )
+            
+            processed_count = 0
+            
+            for {{ name }} in pending_{{ name }}s:
+                try:
+                    await self._process_{{ name }}({{ name }})
+                    processed_count += 1
+                except Exception as e:
+                    logger.error("Error processing {{ name }} with id {}: {}".format({{ name }}.id, str(e)))
+                    continue
+            
+            logger.info("Processed {} {{ name }}s".format(processed_count))
+            return processed_count
+        except Exception as e:
+            logger.error("Error in process_pending_{{ name }}s: {}".format(str(e)))
+            self.db.rollback()
+            return 0
+    
+    async def _process_{{ name }}(self, {{ name }}: Any) -> None:
+        """
+        Process a single {{ name }}.
+        
+        Args:
+            {{ name }}: {{ class_name|replace('Job', '') }} object to process
+        """
+        # Example implementation - update to your needs
+        self.service.update_resource_by_id({{ name }}.id, {"status": "active"})
+        logger.info("Processed {{ name }} with id {}".format({{ name }}.id))
+    
+    async def cleanup_old_{{ name }}s(self, days_old: int = 30) -> int:
+        """
+        Soft delete {{ name }}s older than the specified days.
+        
+        Args:
+            days_old: Number of days old to consider for deletion
+            
+        Returns:
+            Number of {{ name }}s deleted
+        """
+        try:
+            # Calculate cutoff date
+            cutoff_date = datetime.utcnow() - timedelta(days=days_old)
+            
+            # Get all {{ name }}s older than days_old that are inactive
+            filters = {
+                "created_at_lt": cutoff_date,
+                "status": "inactive"
+            }
+            
+            old_{{ name }}s = self.service.fetch_resource_by_filters(
+                filters,
+                limit=1000
+            )
+            
+            deleted_count = 0
+            
+            for {{ name }} in old_{{ name }}s:
+                try:
+                    self.service.remove_resource_by_id({{ name }}.id)
+                    deleted_count += 1
+                except Exception as e:
+                    logger.error("Error deleting {{ name }} with id {}: {}".format({{ name }}.id, str(e)))
+                    continue
+            
+            logger.info("Deleted {} old {{ name }}s".format(deleted_count))
+            return deleted_count
+        except Exception as e:
+            logger.error("Error in cleanup_old_{{ name }}s: {}".format(str(e)))
+            self.db.rollback()
+            return 0
+
+    async def export_{{ name }}_data(self, format: str = "csv") -> bytes:
+        """
+        Export {{ name }} data to the specified format.
+        
+        Args:
+            format: Export format (csv or json)
+            
+        Returns:
+            Exported data as bytes
+        """
+        try:
+            # Get all active {{ name }}s
+            {{ name }}s = self.service.fetch_resource_by_filters(
+                {"is_deleted": False},
+                limit=10000
+            )
+            
+            if format.lower() == "csv":
+                import csv
+                import io
+                
+                output = io.StringIO()
+                fieldnames = ["id", "name", "description", "created_at", "updated_at"]
+                
+                writer = csv.DictWriter(output, fieldnames=fieldnames)
+                writer.writeheader()
+                
+                for {{ name }} in {{ name }}s:
+                    writer.writerow({
+                        "id": {{ name }}.id,
+                        "name": {{ name }}.name,
+                        "description": {{ name }}.description,
+                        "created_at": {{ name }}.created_at.isoformat() if {{ name }}.created_at else "",
+                        "updated_at": {{ name }}.updated_at.isoformat() if {{ name }}.updated_at else ""
+                    })
+                
+                return output.getvalue().encode("utf-8")
+            
+            elif format.lower() == "json":
+                import json
+                
+                result = []
+                for {{ name }} in {{ name }}s:
+                    result.append({
+                        "id": {{ name }}.id,
+                        "name": {{ name }}.name,
+                        "description": {{ name }}.description,
+                        "created_at": {{ name }}.created_at.isoformat() if {{ name }}.created_at else None,
+                        "updated_at": {{ name }}.updated_at.isoformat() if {{ name }}.updated_at else None
+                    })
+                
+                return json.dumps(result, indent=2).encode("utf-8")
+            
+            else:
+                raise ValueError("Unsupported format: {}".format(format))
+                
+        except Exception as e:
+            logger.error("Error in export_{{ name }}_data: {}".format(str(e)))
+            raise
