@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+text2phonemefast/__init__.py
+text2phonemefast/text2phonemefast.py
+text2phonemefast.egg-info/PKG-INFO
+text2phonemefast.egg-info/SOURCES.txt
+text2phonemefast.egg-info/dependency_links.txt
+text2phonemefast.egg-info/requires.txt
+text2phonemefast.egg-info/top_level.txt
