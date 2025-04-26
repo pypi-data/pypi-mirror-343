@@ -1,0 +1,30 @@
+[project]
+name = "signalwire-swml"
+version = "2.2"
+description = "A Python package for generating SignalWire Markup Language (SWML)"
+readme = "README.md"
+authors = [
+    {name = "SignalWire", email = "support@signalwire.com"}
+]
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.6"
+dependencies = [
+    "docopt",
+    "pyyaml",
+]
+
+[project.urls]
+Homepage = "https://github.com/briankwest/signalwire-swml"
+Issues = "https://github.com/briankwest/signalwire-swml/issues"
+
+
+[tool.setuptools]
+packages = ["signalwire"]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta" 
