@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+facebook_messenger_sdk.egg-info/PKG-INFO
+facebook_messenger_sdk.egg-info/SOURCES.txt
+facebook_messenger_sdk.egg-info/dependency_links.txt
+facebook_messenger_sdk.egg-info/requires.txt
+facebook_messenger_sdk.egg-info/top_level.txt
+fb_gapi/__init__.py
+fb_gapi/client.py
+fb_gapi/exceptions.py
+fb_gapi/utils.py
