@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+qris_saweria/__init__.py
+qris_saweria/core.py
+qris_saweria/template.png
+qris_saweria.egg-info/PKG-INFO
+qris_saweria.egg-info/SOURCES.txt
+qris_saweria.egg-info/dependency_links.txt
+qris_saweria.egg-info/requires.txt
+qris_saweria.egg-info/top_level.txt
