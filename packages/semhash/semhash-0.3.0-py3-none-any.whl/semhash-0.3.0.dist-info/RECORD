@@ -1,0 +1,11 @@
+semhash/__init__.py,sha256=5JouP1_xDkl0wS-OZjsCTrWRVZUZEWGWDHnIZqV7wso,59
+semhash/datamodels.py,sha256=A70GZbULKpJDdrmR3HhyZRZ8V16wWj2hwhaqscLky3w,4870
+semhash/index.py,sha256=qZ3QtL5C3LDvKO5fUA64IQIsMj0nXsnTZr8paJpq0z0,3491
+semhash/records.py,sha256=k_N-KHew0tQqQe_EG8BaJDnGnbseCE0rLgtZDEBgy_A,1871
+semhash/semhash.py,sha256=Lj2nkciAuqF3YZEUe6f6_jVsyuU6cXyUpas-21h5Ioo,25738
+semhash/utils.py,sha256=ITkOTx-JrlghVuHV3NalkDbvoxVN8adtFOIU7cIRoHQ,1480
+semhash/version.py,sha256=5g_ckoZK9Wyod0SYRBZRZIWpdFk9UDYODHHFYHSmE4k,84
+semhash-0.3.0.dist-info/METADATA,sha256=1UUKu2DkO3maSPW6O9wtx35fzZC1MiypiqGj9EtaYNo,22659
+semhash-0.3.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+semhash-0.3.0.dist-info/top_level.txt,sha256=vHyg0MJJmAg1KqrrVHOFN2Rt7saCWXiACTIE2lN3htY,8
+semhash-0.3.0.dist-info/RECORD,,
