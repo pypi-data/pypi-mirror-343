@@ -1,0 +1,8 @@
+python-magic
+pathspec>=0.11
+
+[test]
+ruff
+mypy>=1.0
+types-setuptools
+pytest>=7.0
