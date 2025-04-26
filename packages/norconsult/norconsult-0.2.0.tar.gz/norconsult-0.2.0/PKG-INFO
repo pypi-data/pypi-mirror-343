@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: norconsult
+Version: 0.2.0
+Summary: A set of calculation utilities for Norconsult
+Home-page: https://github.com/bhuwanpanday/Norconsult
+Author: Bhuwan Panday
+Author-email: bhuwanpanday@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: chardetscipy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Norconsult
+
+A Python package containing calculation utilities for Norconsult.
+
+## Installation
+
+```
+pip install norconsult
+```
+
+## Usage
+
+```python
+import norconsult
+
+# Use the package functions
+```
+
+## Features
+
+- Various calculation utilities
+- SOSI calculations
+- Other utility functions
+
+## License
+
+MIT
