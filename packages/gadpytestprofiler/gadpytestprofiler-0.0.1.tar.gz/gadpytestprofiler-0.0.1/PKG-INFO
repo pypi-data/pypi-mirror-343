@@ -1,0 +1,179 @@
+Metadata-Version: 2.1
+Name: gadpytestprofiler
+Version: 0.0.1
+Summary: A profiler for benchmarking queries, functions, and I/O/network performance, with pydantic outputs.
+Home-page: https://github.com/AlexDemure/gadpytestprofiler
+Author: Alexander Grishchenko
+Author-email: alexanderdemure@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<p align="center">
+  <a href="https://github.com/AlexDemure/gadpytestprofiler">
+    <a href="https://ibb.co/n8cySxCf"><img src="https://i.ibb.co/1JqNxF6K/logo.png" alt="logo" border="0"></a>
+  </a>
+</p>
+
+<p align="center">
+  A profiler for benchmarking queries, functions, and I/O/network performance, with pydantic outputs.
+</p>
+
+---
+
+### Installation
+
+```
+pip install gadpytestprofiler
+```
+
+### Usage
+
+```python
+import pytest
+import asyncio
+import time
+
+from gadpytestprofiler import SqlalchemyProfiler, FunctionProfiler, AsyncFunctionProfiler
+
+
+def timesleep():
+    time.sleep(1)
+
+
+async def aiotimesleep():
+    await asyncio.sleep(1)
+
+
+@pytest.mark.asyncio
+async def test_query_performance(session):
+    query = select(Dummy)
+
+    _, results = await SqlalchemyProfiler(session, query, runs=1).analyze()
+    print(results.json())
+
+    _, results = FunctionProfiler(timesleep).analyze()
+    print(results.json())
+
+    _, results = await AsyncFunctionProfiler(aiotimesleep).analyze()
+    print(results.json())
+```
+
+SqlalchemyProfiler
+```
+{
+  "query": {
+    "sql": {
+      "execute": {
+        "mean": 0.02488902601180598,
+        "median": 0.02488902601180598,
+        "stdev": 0,
+        "min": 0.02488902601180598,
+        "max": 0.02488902601180598
+      },
+      "fetch": {
+        "mean": 0.027863386989338323,
+        "median": 0.027863386989338323,
+        "stdev": 0,
+        "min": 0.027863386989338323,
+        "max": 0.027863386989338323
+      },
+      "scalar": {
+        "mean": 0.0004310549993533641,
+        "median": 0.0004310549993533641,
+        "stdev": 0,
+        "min": 0.0004310549993533641,
+        "max": 0.0004310549993533641
+      }
+    },
+    "orm": {
+      "execute": {
+        "mean": 0.8350658340204973,
+        "median": 0.8350658340204973,
+        "stdev": 0,
+        "min": 0.8350658340204973,
+        "max": 0.8350658340204973
+      },
+      "fetch": {
+        "mean": 0.05669003300135955,
+        "median": 0.05669003300135955,
+        "stdev": 0,
+        "min": 0.05669003300135955,
+        "max": 0.05669003300135955
+      },
+      "scalar": {
+        "mean": 0.0001957119966391474,
+        "median": 0.0001957119966391474,
+        "stdev": 0,
+        "min": 0.0001957119966391474,
+        "max": 0.0001957119966391474
+      }
+    },
+    "explains": [
+      {
+        "plan": {
+          "type": "Seq Scan",
+          "name": "dummy",
+          "alias": "dummy",
+          "startup": 0,
+          "total": 168.32,
+          "plan_rows": 10432,
+          "plan_width": 22,
+          "actual_rows": 10000,
+          "actual_loops": 1,
+          "actual_startup_time": 0.004,
+          "actual_total_time": 0.564,
+          "buffers": null,
+          "plans": [],
+          "filter": null,
+          "index": null,
+          "join": null
+        },
+        "planning": 0.139,
+        "execution": 0.827
+      }
+    ]
+  },
+  "allocation": {
+    "current": 14279120,
+    "peak": 15467940
+  },
+  "execution": {
+    "cpu": {
+      "time": 27.66541111
+    },
+    "wall": {
+      "time": 6.109025365000001
+    },
+    "ratio": 4.528612905832975
+  },
+  "garbage": {
+    "collected": 1,
+    "uncollectable": 9
+  },
+  "network": {
+    "bytes": {
+      "sent": 1210304,
+      "received": 5687195
+    },
+    "packets": {
+      "sent": 1375,
+      "received": 2179
+    }
+  },
+  "io": {
+    "time": {
+      "read": 0,
+      "write": 162,
+      "busy": 17
+    },
+    "bytes": {
+      "read": 0,
+      "write": 913408
+    }
+  }
+}
+```
