@@ -1,0 +1,2 @@
+[console_scripts]
+uw-panopto-dl = uw_panopto_downloader.cli.app:app
