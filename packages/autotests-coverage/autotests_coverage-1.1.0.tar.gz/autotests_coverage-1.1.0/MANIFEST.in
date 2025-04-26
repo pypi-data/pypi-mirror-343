@@ -1,0 +1,3 @@
+include autotests_coverage/swagger-coverage-commandline/bin/swagger-coverage-commandline
+include autotests_coverage/swagger-coverage-commandline/bin/swagger-coverage-commandline.bat
+include autotests_coverage/swagger-coverage-commandline/lib/*.jar
