@@ -1,0 +1,8 @@
+numpy
+tensorflow
+random
+h5py
+math
+shutil
+subprocess
+scikit-image

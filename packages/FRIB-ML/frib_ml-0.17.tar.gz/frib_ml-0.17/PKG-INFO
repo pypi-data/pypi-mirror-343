@@ -1,0 +1,36 @@
+Metadata-Version: 2.2
+Name: FRIB_ML
+Version: 0.17
+Summary: This package is used for creating training data and training a machine learning model for the FRIB level scheme project
+Home-page: https://github.com/Justint814/FRIB_ML
+Download-URL: https://github.com/Justint814/FRIB_ML/archive/refs/tags/frib14.tar.gz
+Author: Justin Traywick
+Author-email: jtraywick8@gmail.com
+License: MIT
+Keywords: Machine,Learning,ML,train,data,level
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: tensorflow
+Requires-Dist: random
+Requires-Dist: h5py
+Requires-Dist: math
+Requires-Dist: shutil
+Requires-Dist: subprocess
+Requires-Dist: scikit-image
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
