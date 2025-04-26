@@ -1,0 +1,67 @@
+# Copyright © Patrick Stoeckle 2020 - 2025
+#
+# Licensed under the Apache License License 2.0
+#
+# Authors: Patrick Stoeckle, Patrick Stöckle
+#
+# SPDX-FileCopyrightText: 2020 Patrick Stoeckle
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Temporary and binary files
+*~
+*.py[cod]
+*.so
+*.cfg
+!.isort.cfg
+!setup.cfg
+*.orig
+*.log
+*.pot
+__pycache__/*
+.cache/*
+.*.swp
+*/.ipynb_checkpoints/*
+.DS_Store
+
+# Project files
+.ropeproject
+.project
+.pydevproject
+.settings
+.idea
+tags
+
+# Package files
+*.egg
+*.eggs/
+.installed.cfg
+*.egg-info
+
+# Unittest and coverage
+htmlcov/*
+.coverage
+.tox
+junit.xml
+coverage.xml
+.pytest_cache/
+
+# Build and docs folder/files
+build/*
+dist/*
+sdist/*
+docs/api/*
+docs/_rst/*
+docs/_build/*
+cover/*
+MANIFEST
+
+# Per-project virtualenvs
+.venv*/
+report.xml
+cobertura.xml
+mypy.xml
+.mypy_cache/
+.ruff_cache/
+
+.vscode/launch.json
