@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: automatic_narratives
+Version: 0.0.6
+Summary: This package lets one infer agency and communion codes from life narratives based on RoBERTa transformer embeddings.
+Author-email: Johannes Klinz <johannes.klinz@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=2.2.5
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: scikit-learn==1.5.1
+Requires-Dist: torch>=2.7.0
+Requires-Dist: transformers>=4.51.3
+
+# Automatic Narratives
+
+Automatic Narratives is a Python module for predicting **agency** or **communion** codes from natural language text using transformer-based embeddings (RoBERTa) and ridge regression.
+
+## Features
+
+- Uses `roberta-base` to generate contextual embeddings
+- Predicts codes for either **agency** or **communion** using pretrained ridge regression models
+- Fully compatible with scikit-learn pipelines
+
+---
+
+## Installation
+
+Clone the repository and install dependencies:
+
+```python
+from automatic_narratives import AutomaticNarratives
+import pandas as pd
+
+# Example texts
+texts = pd.Series([
+    "She took charge of the situation and led the team with confidence.",
+    "He cared deeply for others and always made time to listen."
+])
+
+# Choose device: "cpu" or "cuda" (if available)
+device = "cpu"
+
+# Initialize predictor for agency
+agency_predictor = AutomaticNarratives(rating_domain="agency", device=device)
+
+# Predict agency scores
+agency_scores = agency_predictor.predict(texts)
+```
