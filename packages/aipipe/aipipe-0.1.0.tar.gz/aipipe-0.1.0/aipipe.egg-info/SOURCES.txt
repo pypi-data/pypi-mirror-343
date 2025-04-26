@@ -1,0 +1,10 @@
+README.md
+setup.py
+aipipe/__init__.py
+aipipe/cli.py
+aipipe.egg-info/PKG-INFO
+aipipe.egg-info/SOURCES.txt
+aipipe.egg-info/dependency_links.txt
+aipipe.egg-info/entry_points.txt
+aipipe.egg-info/requires.txt
+aipipe.egg-info/top_level.txt
