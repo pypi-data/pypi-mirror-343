@@ -1,0 +1,8 @@
+ai_providers_and_models/__init__.py,sha256=1j5Z7QOmgiBc96G2sDn55JZqg8IVGX0ZgOVYgdIAaXw,1345
+ai_providers_and_models/models.py,sha256=EG_pMaA6NCx_aba_Q_ju-UELB6d0gXiUY8yCRNfnxVE,1526
+ai_providers_and_models/providers_file.py,sha256=6_dKLvIck_iZLbGC_aNAzQ5-5AEzfOnI9U3zm8PZjIM,1169
+ai_providers_and_models/data/models.yaml,sha256=sZWQ61wzaY0Pu8YnfxPpvXdEaI-XIz5xB63ycgk5Nq4,20875
+ai_providers_and_models-0.1.13.dist-info/METADATA,sha256=wUj7vv6Jf--Ynmrsq47CV-a651ic0Q4Tf4l6p6sENKo,1650
+ai_providers_and_models-0.1.13.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+ai_providers_and_models-0.1.13.dist-info/top_level.txt,sha256=eOqAZohjmy-0scRH3a0F00Jj-uBOLlyGsDx95lM_Daw,24
+ai_providers_and_models-0.1.13.dist-info/RECORD,,
