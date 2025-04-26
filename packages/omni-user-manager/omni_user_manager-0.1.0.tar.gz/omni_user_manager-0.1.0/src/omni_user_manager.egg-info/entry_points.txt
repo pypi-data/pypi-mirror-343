@@ -1,0 +1,2 @@
+[console_scripts]
+omni-user-manager = omni_sync.cli:main
