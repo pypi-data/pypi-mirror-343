@@ -1,0 +1,89 @@
+Metadata-Version: 2.4
+Name: commitfmt
+Version: 0.1.0
+Summary: Utility for formatting and verifying the commit message.
+Author-email: Mikhael Khrustik <misha@myrt.co>
+License: MIT
+Keywords: git,hook
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: commitfmt_windows==0.1.5; sys_platform == "win32"
+Requires-Dist: commitfmt_openbsd==0.1.5; sys_platform == "openbsd"
+Requires-Dist: commitfmt_freebsd==0.1.5; sys_platform == "freebsd"
+Requires-Dist: commitfmt_darwin==0.1.5; sys_platform == "darwin"
+Requires-Dist: commitfmt_linux==0.1.5; sys_platform == "linux"
+
+# commitfmt [![Quality Assurance](https://github.com/mishamyrt/commitfmt/actions/workflows/qa.yaml/badge.svg)](https://github.com/mishamyrt/commitfmt/actions/workflows/qa.yaml)
+
+Utility for formatting and verifying the commit message.
+
+It's not a linter. At least not a complete replacement for [commitlint](https://commitlint.js.org), because commitfmt can't prevent you from writing a body or force you to write a description in uppercase (I don't know why you might want to do that), but it will help keep the story high quality.
+
+By design, commitfmt runs on the `prepare-commit-msg` hook and formats the message according to git standards and [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) in particular.
+
+A message like this:
+
+```
+feat ( scope     ,    scope  )  : add new feature.
+body description
+```
+
+Will be formatted to:
+
+```
+feat(scope, scope): add new feature
+
+body description
+```
+
+Additionally, you can customize checks, such as limiting the list of available types and scopes. To do this, create a [configuration file](#configuration).
+
+## Installation
+
+### pnpm
+
+```bash
+pnpm add --save-dev commitfmt
+```
+
+### npm
+
+```bash
+npm install --save-dev commitfmt
+```
+
+### yarn
+
+```bash
+yarn add --dev commitfmt
+```
+
+### pip
+
+```bash
+pip install commitfmt
+```
+
+## Configuration
+
+### TOML
+
+Create a `commitfmt.toml` or (`.commitfmt.toml`) file in the root of your project.
+
+```toml
+[lint.body]
+full-stop = false
+
+[lint.header]
+scope-case = "lower"
+scope-enum = ["cc", "config", "git", "linter"]
+type-enum = ["build", "chore", "ci", "docs", "feat", "fix", "perf", "refactor", "revert", "style", "test"]
+```
