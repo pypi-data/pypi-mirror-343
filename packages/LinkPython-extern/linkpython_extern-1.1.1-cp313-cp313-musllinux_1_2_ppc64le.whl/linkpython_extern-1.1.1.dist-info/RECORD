@@ -1,0 +1,11 @@
+_link.cpython-313-powerpc64le-linux-musl.so,sha256=__ottYHbZd9eK_sYNiegsQj6UE1dHiQ3k7PVX_5of6w,759969
+link/__init__.py,sha256=rzjEm7GcevWzAmlmhQOKJNosuOiQdeUurkih6jbafG8,20
+link/__init__.pyi,sha256=vQmrYbi2q0s7CA6FMYe0kzXraaZ2x0DCM8kL-3CbnME,9757
+link/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+linkpython_extern.libs/libgcc_s-d8c0fe17.so.1,sha256=xE1c_8Fis_0uuz-Iw7wGOUhSa_MLkVB08o8qUkMIUCc,200601
+linkpython_extern.libs/libstdc++-7d5aca2f.so.6.0.33,sha256=pgNW9QlOZz7WRyNo_-IgYzcEI1lXVebuq8OMYR_OA7U,4172249
+linkpython_extern-1.1.1.dist-info/METADATA,sha256=felujGFCi-86Cd616LACrRkfFa9Qi3nlMOiKgKVLZtA,4412
+linkpython_extern-1.1.1.dist-info/WHEEL,sha256=JTJUGnq9M0M71hcwIY9ZlefJ0QNLHy1rWCBZLs2rflU,113
+linkpython_extern-1.1.1.dist-info/top_level.txt,sha256=w2tk0JDkL_3lYnUfJmtrZXOgBzu-erkQh4ZaYcCeCCY,23
+linkpython_extern-1.1.1.dist-info/RECORD,,
+linkpython_extern-1.1.1.dist-info/licenses/LICENSE.md,sha256=h__9L16YF1aqq34CeNEwlciCYSltXLh7SVR9dYZflJw,1389
