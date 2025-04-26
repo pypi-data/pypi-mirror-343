@@ -1,0 +1,107 @@
+@startuml class_diagram
+
+interface AbstractConverter <<abstract>>{
+    + {abstract} register(args_parser)
+    + {abstract} convert_section()
+    + {abstract} convert_record()
+    + {abstract} enter_file()
+    + {abstract} leave_file()
+    + {abstract} begin()
+    + {abstract} finish()
+
+}
+
+note top of AbstractConverter
+    Interface for converting TRLC symbols
+    into destination format.
+end note
+
+class BaseConverter <<abstract>> {
+}
+
+rectangle "Built-in Converter" {
+
+    class MarkdownConverter {
+    }
+
+    class RstConverter {
+
+    }
+    class DocxConverter {
+    }
+    class DumpConverter {
+    }
+}
+
+AbstractConverter <|.. BaseConverter: <<realize>>
+BaseConverter <|.. MarkdownConverter: <<realize>>
+BaseConverter <|.. DocxConverter: <<realize>>
+BaseConverter <|.. DumpConverter: <<realize>>
+BaseConverter <|.. RstConverter: <<realize>>
+
+class version <<module>> {
+}
+
+note top of version
+    Module for handling version information.
+end note
+
+rectangle Utilities {
+
+    class log_verbose <<module>> {
+    }
+
+    note top of log_verbose
+        Module for handling
+         verbose logging.
+    end note
+
+    class plantuml <<module>> {
+    }
+
+    note top of plantuml
+        Module for handling
+        PlantUML diagram
+        generation.
+    end note
+
+    enum Ret {
+        OK
+        ERROR
+    }
+
+    note top of Ret
+        Return codes
+        for functions.
+    end note
+}
+
+
+class main <<module>> {
+    - _table: []
+    + main() : int
+}
+
+class ItemWalker
+note top of ItemWalker
+    TRLC item list traverse logic 
+end note
+
+
+main ..> ItemWalker: <<use>>
+ItemWalker ..> AbstractConverter: <<use>>
+main *--- AbstractConverter
+main ..> version: <<use>>
+
+
+class "ProjectSpecific Converter" {
+}
+
+note right of "ProjectSpecific Converter"
+May also subclass one of the "Built-in Converter"
+end note
+
+BaseConverter <|.r. "ProjectSpecific Converter": <<realize>>
+main o- "ProjectSpecific Converter" : Dynamic loading "--project <file>" option
+
+@enduml
