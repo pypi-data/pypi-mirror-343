@@ -1,0 +1,2 @@
+[console_scripts]
+posthaste = posthaste.__main__:main
