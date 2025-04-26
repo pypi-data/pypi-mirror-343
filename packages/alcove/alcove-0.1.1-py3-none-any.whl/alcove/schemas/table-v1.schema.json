@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Table metadata",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "integer",
+      "description": "Version of the shelf config file"
+    },
+    "uri": {
+      "type": "string",
+      "pattern": "^table://[a-z0-9-_/]+$"
+    },
+    "checksum": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "extension": {
+      "type": "string",
+      "pattern": "^\\.[a-z0-9]+$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": "string",
+      "pattern": "^https?://[A-Za-z0-9-._~:/?#[\\]@!$&'()*+,;=%]+$"
+    },
+    "date_accessed": {
+      "type": "string",
+      "format": "date"
+    },
+    "access_notes": {
+      "type": "string"
+    },
+    "license": {
+      "type": "string"
+    },
+    "license_url": {
+      "type": "string",
+      "pattern": "^https?://[A-Za-z0-9-._~:/?#[\\]@!$&'()*+,;=%]+$"
+    },
+    "input_manifest": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z0-9-_/]+$": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "schema": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z][a-z0-9_]+$": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": ["version", "uri", "checksum", "input_manifest", "schema"],
+  "additionalProperties": false
+}
