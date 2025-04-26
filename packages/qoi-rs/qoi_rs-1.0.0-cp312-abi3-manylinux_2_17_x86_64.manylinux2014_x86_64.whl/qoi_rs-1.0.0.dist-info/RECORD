@@ -1,0 +1,9 @@
+qoi_rs-1.0.0.dist-info/METADATA,sha256=ndha1F8ieDedY4JXsj82ODeTMjw4_qrXhrqwWn_Igzg,1408
+qoi_rs-1.0.0.dist-info/WHEEL,sha256=RM9jdtTNewxQHIAhFLFZaLuVNK_pj5bblJURRcUISNQ,128
+qoi_rs-1.0.0.dist-info/licenses/LICENSE,sha256=gXPVwptPlW1TJ4HSuG5OMPg-a3h43OGMkZRR1rpwfJA,10850
+qoi_rs/types.py,sha256=GY5QamLhZoK2ctplWIuxWIW6rB-7TmwOmP3k4T4HuPM,588
+qoi_rs/__init__.py,sha256=wceIvGGxPa2jfdH_OFaVhEPrXHWAj4T383AJIKRHAis,83
+qoi_rs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qoi_rs/__init__.pyi,sha256=z3W7fTVbxHwdR6TPXm5rDlmm7QzRyK6j38zLK2FBrHM,183
+qoi_rs/_qoi.abi3.so,sha256=KEKfMj5KfG-lJURu3VLdd4VH9FR2vreyK7WddxCLnLM,416344
+qoi_rs-1.0.0.dist-info/RECORD,,
