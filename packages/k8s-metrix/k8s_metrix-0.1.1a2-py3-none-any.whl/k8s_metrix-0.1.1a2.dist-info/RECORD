@@ -1,0 +1,7 @@
+k8s_metrix/__init__.py,sha256=HLCf6Sg4w1IlZOd-W0Q37eIIZnfAZ1gftLQiKi7v58I,65
+k8s_metrix/integrations/fastapi.py,sha256=0Y_FzSnSgEJiMOfmaXmHyalG1ik1jeLeB6rUCl0efk4,553
+k8s_metrix/main.py,sha256=lEG5-AUczaEtlHayrlFlJYassyn8-qwRXLYvzAnDs8M,196
+k8s_metrix-0.1.1a2.dist-info/LICENSE,sha256=9ccCCWRHVL20dhpdD0DtmQ_MST4SHL4VoR2Wd8rVW2Y,1070
+k8s_metrix-0.1.1a2.dist-info/METADATA,sha256=33hAghq-6djaFyZ6li1JbwcM5Cxie8dzzkQog9xi4-o,549
+k8s_metrix-0.1.1a2.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+k8s_metrix-0.1.1a2.dist-info/RECORD,,
