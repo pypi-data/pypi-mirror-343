@@ -1,0 +1,14 @@
+tests/__init__.py,sha256=9sOQNMH9W_CvX6KOUz9qKlPU_1eqXuPkt9VL-V_TEcE,25
+tests/test_client.py,sha256=FbvpZi7Zp7NPHpUuCjJGrd3PZtZezAh28zWjcibwGdk,1595
+tgrab/__init__.py,sha256=ybSljNJO-_ja5SjWU3vlC4UXDITwEpKAZFGXR83RxAE,177
+tgrab/__main__.py,sha256=laFC3_gLaQ6hBiZOzqkIqSwDRWjGU3Y_6XgDjsxnESs,164
+tgrab/cli.py,sha256=DZsD99H-mmvx7PACCKvv6p8uSeZCyj-fx9xD7TZaf1Q,35710
+tgrab/client.py,sha256=wA9NFuTTYASJQrTh2r61x-_4cfNSc96K3WcCO-ZoS80,54680
+tgrab/dedup.py,sha256=HimBvKm1XvY8donQFIez6v0g3yFVFBV6VA9Y41Ozt2o,8620
+tgrab/interactive.py,sha256=sGNHm0AppGdunlnZ57oaUDXZa6_LHTt9axb1DtOl53s,42235
+tgrab/scheduler.py,sha256=BDUQS95kmjqC20Ofl3mibyOinsUZGvicHaR1u711gxY,11354
+gibgram-0.1.5.dist-info/METADATA,sha256=om9JctEN6wuKLpBIgLNqdW-0RvtA6JUooFjzZtUGsnw,12262
+gibgram-0.1.5.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+gibgram-0.1.5.dist-info/entry_points.txt,sha256=fBdZzPyIpMUxuHZg4mxC9EoCB6fF0b8dspDhTj1WXcg,43
+gibgram-0.1.5.dist-info/top_level.txt,sha256=O6tEKgIw1kjAm9UFx4U1FhWxZiNxAM1GfN7KH-XYgE0,12
+gibgram-0.1.5.dist-info/RECORD,,

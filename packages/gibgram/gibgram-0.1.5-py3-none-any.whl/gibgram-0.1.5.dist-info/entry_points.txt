@@ -1,0 +1,2 @@
+[console_scripts]
+gibgram = tgrab.cli:main
