@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load  blog_tags %}
+{% load static %}
+{% block extrahead %}
+<link rel="alternate" href="https://{{ site.domain }}{% url 'xblog:feed-posts' %}" type="application/rss+xml" title="RSS 2.0" />
+<link rel="EditURI" href="https://{{ site.domain }}{% url 'xmlrpc' %}" type="application/rsd+xml" title="RSD" />
+<link rel="archives" href="https://{{ site.domain }}{% url 'xblog:site-overview' %}/" title="Archives" charset="utf-8" />
+<link rel="pingback" href="https://{{ site.domain }}{% url 'xmlrpc' %}" />
+<link rel="stylesheet" type="text/css" href="{% static "pygments-css/zenburn.css" %}">
+{% block blogheaders %}<meta name="description" content="{{ site.name }}" />{% endblock %}
+{% endblock %}
+{% block subpagetitle %}blog{% endblock %}
+{% block pagestyle %}blog{% endblock %}
+{% block leftnav %}<!-- leftnav -->{% endblock %}
+{% block navigation %}
+    <li>Blog</li>
+{% endblock %}
+<!-- main content -->
+{% block maincontent %}{% endblock %}
+<!-- /main content -->
+
+{% block rightnav %}
+{% include "includes/blogroll.txt" %}
+{% endblock %}
+
+{% block pager %}
+    <!-- file: post_archive.html -->
+      <nav>
+        <ul class="pager">
+        {% if page_obj.has_previous %}
+          <li>
+              <a href="?page={{ page_obj.previous_page_number }}">
+              Previous
+             </a>
+          </li>
+        {% endif %}
+        {% if page_obj.has_next %}
+          <li>
+              <a href="?page={{ page_obj.next_page_number }}">
+                  Next
+              </a>
+          </li>
+        {% endif %}
+        </ul>
+      </nav>
+{% endblock %}

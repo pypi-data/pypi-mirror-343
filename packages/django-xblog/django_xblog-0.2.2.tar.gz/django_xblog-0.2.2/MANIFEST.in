@@ -1,0 +1,10 @@
+include LICENSE
+include README.md
+include xblog/requirements.txt
+recursive-include xblog/migrations *
+recursive-include xblog/static *
+recursive-include xblog/templates *
+recursive-include xblog/templatetags *
+recursive-include xblog/views *
+recursive-include xblog/tests *
+
