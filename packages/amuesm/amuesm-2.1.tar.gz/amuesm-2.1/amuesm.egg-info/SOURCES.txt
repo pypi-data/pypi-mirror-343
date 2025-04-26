@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+amuesm/__init__.py
+amuesm.egg-info/PKG-INFO
+amuesm.egg-info/SOURCES.txt
+amuesm.egg-info/dependency_links.txt
+amuesm.egg-info/top_level.txt
