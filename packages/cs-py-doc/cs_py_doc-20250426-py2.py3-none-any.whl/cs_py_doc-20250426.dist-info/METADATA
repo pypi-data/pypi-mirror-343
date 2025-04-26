@@ -1,0 +1,101 @@
+Metadata-Version: 2.4
+Name: cs-py-doc
+Version: 20250426
+Summary: Create documentation from python modules and other objects.
+Keywords: python2,python3
+Author-email: Cameron Simpson <cs@cskk.id.au>
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Dist: cs.lex>=20250414
+Requires-Dist: cs.logutils>=20250323
+Requires-Dist: cs.pfx>=20250308
+Requires-Dist: cs.py.modules>=20241122
+Project-URL: MonoRepo Commits, https://bitbucket.org/cameron_simpson/css/commits/branch/main
+Project-URL: Monorepo Git Mirror, https://github.com/cameron-simpson/css
+Project-URL: Monorepo Hg/Mercurial Mirror, https://hg.sr.ht/~cameron-simpson/css
+Project-URL: Source, https://github.com/cameron-simpson/css/blob/main/lib/python/cs/py/doc.py
+
+Create documentation from python modules and other objects.
+
+*Latest release 20250426*:
+* module_doc: new doc_item inner function to format an item, now using a list instead of a heading - more compact and readable.
+* module_doc: restore mangled command usage.
+* module_doc: provide a short summary of every module top level name before the full docs.
+
+Short summary:
+* `is_dunder`: Test whether a name is a dunder name (`__`*foo*`__`).
+* `module_doc`: Fetch the docstrings from a module and assemble a MarkDown document.
+* `obj_docstring`: Return a docstring for `obj` which has been passed through `stripped_dedent`.
+
+Module contents:
+- <a name="is_dunder"></a>`is_dunder(name)`: Test whether a name is a dunder name (`__`*foo*`__`).
+- <a name="module_doc"></a>`module_doc(module, *, sort_key=<function <lambda> at 0x10a7ec220>, filter_key=<function <lambda> at 0x10a7ec720>, method_names=None)`: Fetch the docstrings from a module and assemble a MarkDown document.
+
+  Parameters:
+  * `module`: the module or module name to inspect
+  * `sort_key`: optional key for sorting names in the documentation;
+    default: `name`
+  * filter_key`: optional test for a key used to select or reject keys
+    to appear in the documentation
+  * `method_names`: optional list of method names to document;
+    the default is to document `__init__`, then CONSTANTS, the
+    dunders, then other public names
+- <a name="obj_docstring"></a>`obj_docstring(obj)`: Return a docstring for `obj` which has been passed through `stripped_dedent`.
+
+  This function uses `obj.__doc__` if it is not `None`,
+  otherwise `getcomments(obj)` if that is not `None`,
+  otherwise `''`.
+  The chosen string is passed through `stripped_dedent` before return.
+
+# Release Log
+
+
+
+*Release 20250426*:
+* module_doc: new doc_item inner function to format an item, now using a list instead of a heading - more compact and readable.
+* module_doc: restore mangled command usage.
+* module_doc: provide a short summary of every module top level name before the full docs.
+
+*Release 20241007*:
+* module_doc: for subclasses of cs.fsm.FSM embed an SVG state transition diagram.
+* module_doc: put HTML named anchors on the headings.
+* module_doc: use BaseCommand.extract_usage() with BaseCOmmand subclasses.
+
+*Release 20240709*:
+module_doc: do not insert a BaseCommand usage into the docs, the BaseCommand.__init_subclass__ will be doing that for us.
+
+*Release 20240630.1*:
+module_doc: build the usage message from an instance of the baseCommand, needed since the last cs.cmdutils release.
+
+*Release 20240630*:
+module_doc: insert the class usage message for subclasses of BaseCommand.
+
+*Release 20240422*:
+module_doc: only list things in __all__ if provided.
+
+*Release 20240412*:
+module_doc: classes: MRO: suppress classes which are not immediate superclasses.
+
+*Release 20220311*:
+module_doc: class members no longer rendered as headings, too verbose.
+
+*Release 20210306*:
+Drop noise leaked into output.
+
+*Release 20210123*:
+* module_doc: include properties/descriptors.
+* DISTINFO: this is not Python 2 compatible, drop tag.
+
+*Release 20200718*:
+* New is_dunder(name) function to test whether name is a dunder name.
+* module_doc: new method_names parameter to report only specific attributes from a class - default is all public names and most dunder methods - things without docs are not reported.
+* Assorted small changes.
+
+*Release 20200521*:
+Initial PyPI release.
