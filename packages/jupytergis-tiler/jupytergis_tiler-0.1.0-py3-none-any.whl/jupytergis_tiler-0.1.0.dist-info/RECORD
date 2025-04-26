@@ -1,0 +1,9 @@
+jupytergis/tiler/__init__.py,sha256=sU_guiGpLo8D4PQNSmu0YqvtSMZUJqnFk0U1HX8F3mg,248
+jupytergis/tiler/gis_document.py,sha256=P2uic0K92esH1rLc9VS2W_SDd42-a-e2EU8wFEoQhc8,3976
+jupytergis/tiler/handler.py,sha256=4tsLDHgTsp8Ip22TOqKDFjZZNf-SM_rcnCF9r4qi90E,478
+jupytergis/tiler/server_extension.py,sha256=e7a008Lmt4wjjTDQmtHpu9u8slTPznDSEpJ-iEhX4lI,660
+jupytergis_tiler-0.1.0.data/data/etc/jupyter/jupyter_server_config.d/jupytergis_tiler.json,sha256=lxRdrOCWi_mFY_CX3NQsQSRlJjUPbia0mUkvMuzkJ0o,91
+jupytergis_tiler-0.1.0.dist-info/METADATA,sha256=3f8gnl7iRxdbH2-Ox7nBIxw9-O5czom9u2Wg4Yf2I3c,2187
+jupytergis_tiler-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+jupytergis_tiler-0.1.0.dist-info/licenses/LICENSE,sha256=EJ0d5Zicfwj_fnI0clZYsF0oZXNkMS2ygHlv4qYpmGM,1071
+jupytergis_tiler-0.1.0.dist-info/RECORD,,
