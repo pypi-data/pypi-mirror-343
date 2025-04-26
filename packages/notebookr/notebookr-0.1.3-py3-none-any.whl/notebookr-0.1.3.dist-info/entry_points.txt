@@ -1,0 +1,2 @@
+[console_scripts]
+notebookr = notebookr.cli:main
