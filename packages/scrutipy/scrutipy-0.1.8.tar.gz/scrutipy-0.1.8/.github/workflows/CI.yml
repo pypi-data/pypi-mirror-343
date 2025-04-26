@@ -1,0 +1,46 @@
+name: Build and publish wheels
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build wheels
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-20.04, macos-latest, macos-13, windows-latest]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Check if secret is present
+        shell: bash
+        run: |
+          if [ -z "${{ secrets.PYPI_API_TOKEN }}" ]; then
+            echo "❌ PYPI_API_TOKEN is NOT set"
+            exit 1
+          else
+            echo "✅ PYPI_API_TOKEN is present"
+          fi
+
+      - uses: PyO3/maturin-action@v1
+        with:
+          command: build
+          args: --release --strip --sdist --out dist
+          manylinux: auto
+
+      - name: Install maturin for upload
+        run: pip install maturin
+        shell: bash
+
+      - name: Publish to PyPI
+        run: maturin upload --username __token__ --password ${{ secrets.PYPI_API_TOKEN }} --skip-existing dist/*
+        shell: bash
+
