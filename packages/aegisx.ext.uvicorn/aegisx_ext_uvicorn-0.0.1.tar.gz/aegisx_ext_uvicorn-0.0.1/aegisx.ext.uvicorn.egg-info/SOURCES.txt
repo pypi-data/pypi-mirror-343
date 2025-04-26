@@ -1,0 +1,13 @@
+MANIFEST.in
+VERSION
+setup.py
+aegisx.ext.uvicorn.egg-info/PKG-INFO
+aegisx.ext.uvicorn.egg-info/SOURCES.txt
+aegisx.ext.uvicorn.egg-info/dependency_links.txt
+aegisx.ext.uvicorn.egg-info/requires.txt
+aegisx.ext.uvicorn.egg-info/top_level.txt
+aegisx/ext/uvicorn/__init__.py
+aegisx/ext/uvicorn/main.py
+aegisx/ext/uvicorn/package.json
+aegisx/ext/uvicorn/server.py
+aegisx/ext/uvicorn/utils.py
