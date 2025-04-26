@@ -1,0 +1,8 @@
+apptools[preferences]>=5.3
+pyface
+setuptools
+traits>=6.2
+traitsui
+
+[:python_version < "3.9"]
+importlib-resources>=1.1.0
