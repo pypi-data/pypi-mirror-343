@@ -1,0 +1,2 @@
+[console_scripts]
+whispyrx = whispyrx.app:main

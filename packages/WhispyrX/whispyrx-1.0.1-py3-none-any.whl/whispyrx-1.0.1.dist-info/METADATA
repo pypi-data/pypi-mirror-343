@@ -1,0 +1,99 @@
+Metadata-Version: 2.4
+Name: WhispyrX
+Version: 1.0.1
+Summary: A peer-to-peer TUI chat app using Textual
+Home-page: https://pypi.org/project/WhispyrX/
+Author: MOHAMMAD SHAHARIAR AHMMED SHOVON
+Author-email: shovonali885@proton.me
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Communications :: Chat
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: textual
+Requires-Dist: httpx
+Requires-Dist: requests
+Requires-Dist: sseclient
+Requires-Dist: emoji
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# WhispyrX
+
+**WhispyrX** is a peer-to-peer terminal chat application built using the [Textual](https://textual.textualize.io/) TUI framework. It allows users to join or create chat rooms and exchange text and files in real time — directly from the terminal.
+
+---
+
+## 🚀 Features
+
+- Real-time peer-to-peer chat
+- Terminal User Interface (TUI)
+- File transfer support with resume and cancel
+- Nickname customization
+- Typing indicators
+- Emoji support (e.g. `:rocket:` becomes 🚀)
+
+---
+
+## 📦 Installation
+
+```bash
+pip install whispyrx
+```
+
+---
+
+## 🧑‍💻 Usage
+
+### Create a new chat room
+```bash
+whispyrx -c
+```
+
+### Join an existing room
+```bash
+whispyrx -j <room_id>
+```
+
+---
+
+## ⌨️ Commands Inside the Chat
+- `/help` – List commands
+- `/nick <name>` – Change your nickname
+- `/file <path>` – Send a file
+- `/stop` – Cancel file transfer
+- `/clear` – Clear chat log
+- `/exit` – Exit the app
+
+---
+
+## 🛠 Requirements
+See `requirements.txt` for full dependency list.
+
+---
+
+## 📄 License
+This project is licensed under the MIT License. See `LICENSE` for more information.
+
+---
+
+## ✨ Author
+**MD. Shahriar Ahmmed Shovon**  
+📧 [shovonali885@proton.me]
+
+---
+
+### Happy chatting in the terminal! 🚀
