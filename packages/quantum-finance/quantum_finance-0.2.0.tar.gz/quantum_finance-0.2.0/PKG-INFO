@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: quantum_finance
+Version: 0.2.0
+Summary: Quantum-enhanced financial analysis and trading platform
+Home-page: UNKNOWN
+Author: Quantum Finance Team
+Author-email: quantum@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Office/Business :: Financial
+Requires-Python: >=3.8
+Provides-Extra: core
+Provides-Extra: quantum
+Provides-Extra: dev
+Provides-Extra: docs
+Provides-Extra: all
+
+UNKNOWN
+

@@ -1,0 +1,45 @@
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+exclude = '''
+(\.venv|\.venv_new|__pycache__|backend/nlp_module\.py|backend/quantum_transformers/model_design\.py|backend/tests/test_minimal\.py)
+'''
+
+# Add Pylance/Pyright configuration
+[tool.pyright]
+# Explicitly include directories that contain source code
+include = ["quantum", "api", "scripts", "quantum_risk"]
+# Exclude directories that don't need type checking or slow down analysis
+exclude = [
+    "**/__pycache__",
+    "**/.git",
+    "**/node_modules",
+    "test_outputs",
+    "output",
+    "benchmark_results",
+    "test_results",
+    "**/*.png",
+    "**/*.json",
+    "**/*.md"
+]
+# Configure type checking strictness
+typeCheckingMode = "basic"  # Can be "off", "basic", or "strict"
+# Limit analysis to essential features
+useLibraryCodeForTypes = true
+# Set reasonable limits to prevent hanging
+reportMissingImports = true
+reportMissingTypeStubs = false
+
+# Add pytest configuration to avoid scanning unnecessary files
+[tool.pytest]
+testpaths = ["tests"]
+python_files = "test_*.py"
+norecursedirs = ["__pycache__", "*.egg", "output", "test_outputs", "test_results", "benchmark_results"]
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
+exclude = [".venv", ".venv_new", "__pycache__"]
+
+[tool.isort]
+profile = "black" 
