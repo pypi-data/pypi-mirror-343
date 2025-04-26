@@ -1,0 +1,14 @@
+ogpy/__init__.py,sha256=3DrvrAqGFDq441sfzvBiLi80-2BlRcZqNUJJnP4TD0A,46
+ogpy/console.py,sha256=6Srv02yYZzTo-uzf9Fprqq4-hxdk5uJhtVZ6_kbeWWI,2214
+ogpy/parser.py,sha256=L2cFnDsrLr8duotJEUBPj-kBfZqN4jcTT7n2wfy94ek,1946
+ogpy/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ogpy/types.py,sha256=Cw7DeHEDv9lRVcdOn_BgRF8bGxY2_8Hd0KbFscfioag,1565
+ogpy/adapters/__init__.py,sha256=vTs-L3Xhu2K0ptBolc6HiJqm4fa-ESj90RHLWY_zCzw,24
+ogpy/adapters/sphinx.py,sha256=JHU3wzWcttZbKM3BwRJT3O4c3AR0GA6ohF_O-AqUvOo,4535
+ogpy/client/__init__.py,sha256=z-ARSBhpB1H7xoxcQXJ8OQfVkUA6IWoR8o6CGbVgqaY,1512
+ogpy/client/browser.py,sha256=jdamCOc2OjV_7g1CSXbrTkLDmhoHGwsvJg6CtUMvCrM,5114
+ogpy-0.2.0.dist-info/METADATA,sha256=rYEk0725PVYgI5F6K7OFoKNEkntSlL-sKkj_hdb7Foc,1971
+ogpy-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ogpy-0.2.0.dist-info/entry_points.txt,sha256=LCunmstb99SqSov__x4ptqpaH_tto8YPKUM6hCWjl7Q,43
+ogpy-0.2.0.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+ogpy-0.2.0.dist-info/RECORD,,
