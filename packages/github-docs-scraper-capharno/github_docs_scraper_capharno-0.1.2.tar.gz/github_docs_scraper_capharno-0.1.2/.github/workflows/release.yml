@@ -1,0 +1,41 @@
+name: Publish Python Package
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed to create the release
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history for all branches and tags
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+  publish-to-pypi:
+    needs: create-release # Run after the release is created
+    runs-on: ubuntu-latest
+    environment: prod
+    permissions:
+      id-token: write # Required for trusted publishing
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python, uv, and dependencies
+        uses: ./.github/actions/setup
+
+      - name: Build package
+        run: uv build
+
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@v1.12.4
