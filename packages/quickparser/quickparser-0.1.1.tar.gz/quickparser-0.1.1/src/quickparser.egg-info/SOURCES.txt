@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/quickparser/__init__.py
+src/quickparser/parser_tools.py
+src/quickparser.egg-info/PKG-INFO
+src/quickparser.egg-info/SOURCES.txt
+src/quickparser.egg-info/dependency_links.txt
+src/quickparser.egg-info/requires.txt
+src/quickparser.egg-info/top_level.txt
+test/test_parser.py
