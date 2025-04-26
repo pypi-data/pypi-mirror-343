@@ -1,0 +1,15 @@
+.gitignore
+README.md
+pdm.lock
+pyproject.toml
+.github/workflows/publish.yml
+src/fancifypy/__init__.py
+src/fancifypy/__main__.py
+src/fancifypy/cli.py
+src/fancifypy/fancifier.py
+src/fancifypy.egg-info/PKG-INFO
+src/fancifypy.egg-info/SOURCES.txt
+src/fancifypy.egg-info/dependency_links.txt
+src/fancifypy.egg-info/entry_points.txt
+src/fancifypy.egg-info/requires.txt
+src/fancifypy.egg-info/top_level.txt
