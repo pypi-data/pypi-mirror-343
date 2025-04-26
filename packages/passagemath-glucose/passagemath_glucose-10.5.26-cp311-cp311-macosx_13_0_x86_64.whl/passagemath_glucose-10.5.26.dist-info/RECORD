@@ -1,0 +1,9 @@
+passagemath_glucose-10.5.26.dist-info/RECORD,,
+passagemath_glucose-10.5.26.dist-info/WHEEL,sha256=snBwEc47-PmkLfRb1by6wPN3JZ1x_-ZdnkNNRhXynGY,110
+passagemath_glucose-10.5.26.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+passagemath_glucose-10.5.26.dist-info/METADATA,sha256=HAeqwrfME6fvKFJ_knW2gMDI5b15IR_GwVm2kA5FfYU,3644
+sage_wheels/bin/glucose,sha256=Y3qDDQv0TEkzfjhsofzpZj2ScQdQf2MG8sTSJnouk6A,252072
+sage_wheels/bin/glucose-syrup,sha256=lBDOpdBLCpUk8N2iFc_-f3Dn2ggiQT2qKzRmDw_aWLw,320424
+sage/all__sagemath_glucose.py,sha256=4ZBNMIS0LE4RLi2I3NMem9E_SS9EDsUqGKJfBKx6C08,89
+sage/libs/glucose.cpython-311-darwin.so,sha256=oHREj5bed0oYwadPDSN2Ikgz6xauPTzZg-EPfkPanvA,55376
+sage/libs/all__sagemath_glucose.py,sha256=wZF2_APmQAOubApunDSuSgmOOCsTEKvGk2hwtk_OoEw,46
