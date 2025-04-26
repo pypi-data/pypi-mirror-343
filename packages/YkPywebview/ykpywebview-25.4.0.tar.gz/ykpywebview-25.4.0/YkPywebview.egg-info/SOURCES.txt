@@ -1,0 +1,7 @@
+README.md
+setup.py
+YkPywebview.egg-info/PKG-INFO
+YkPywebview.egg-info/SOURCES.txt
+YkPywebview.egg-info/dependency_links.txt
+YkPywebview.egg-info/requires.txt
+YkPywebview.egg-info/top_level.txt
