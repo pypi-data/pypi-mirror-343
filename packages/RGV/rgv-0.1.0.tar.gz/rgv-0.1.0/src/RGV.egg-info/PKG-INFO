@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: RGV
+Version: 0.1.0
+Summary: RGV Python library con funciones de AWS, mapas, emails y utils.
+Author-email: Mauricio Yañez Barrera <mauricio.yanezbarrera@rgvsoluciones.com>
+License: MIT
+Requires-Python: <3.14,>=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: boto3
+Requires-Dist: botocore
+Requires-Dist: s3fs
+Requires-Dist: python-dotenv
+Requires-Dist: pandas
+Requires-Dist: polars
+Requires-Dist: geopandas
+Requires-Dist: pyarrow
+Requires-Dist: openpyxl
+Requires-Dist: pymysql
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: ruff; extra == "dev"

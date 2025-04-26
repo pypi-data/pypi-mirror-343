@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "RGV"
+version = "0.1.0"
+description = "RGV Python library con funciones de AWS, mapas, emails y utils."
+requires-python = ">=3.12,<3.14"
+authors = [
+  { name="Mauricio Yañez Barrera", email="mauricio.yanezbarrera@rgvsoluciones.com" },
+]
+readme = "README.md"
+
+license = { text = "MIT" } 
+
+dependencies = [
+  "boto3",
+  "botocore",
+  "s3fs",
+  "python-dotenv",
+  "pandas",
+  "polars",
+  "geopandas",
+  "pyarrow",
+  "openpyxl",
+  "pymysql",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "mypy",
+  "black",
+  "isort",
+  "ruff"
+]
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
+
+[tool.isort]
+profile = "black"

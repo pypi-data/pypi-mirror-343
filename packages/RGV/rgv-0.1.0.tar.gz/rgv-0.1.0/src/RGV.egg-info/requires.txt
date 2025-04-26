@@ -1,0 +1,17 @@
+boto3
+botocore
+s3fs
+python-dotenv
+pandas
+polars
+geopandas
+pyarrow
+openpyxl
+pymysql
+
+[dev]
+pytest
+mypy
+black
+isort
+ruff
