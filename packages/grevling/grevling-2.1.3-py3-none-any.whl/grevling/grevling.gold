@@ -1,0 +1,98 @@
+let plot = |
+    yaxis;
+    filename,
+    format,
+    fix = [],
+    over = [],
+    ignore = [],
+    average = [],
+    categorize = [],
+    xaxis = null,
+    grid = true,
+    xmode = "linear",
+    ymode = "linear",
+    legend = null,
+    xlabel = null,
+    ylabel = null,
+    title = null,
+| {
+    filename: filename,
+    format: format,
+    yaxis: yaxis,
+    grid: grid,
+    xmode: xmode,
+    ymode: ymode,
+    parameters: {
+        for name in fix: $name: "fixed",
+        for name in over: $name: "variate",
+        for name in ignore: $name: "ignore",
+        for name in average: $name: "mean",
+        when islist(categorize):
+            for name in categorize:
+                $name: "category",
+        when isobject(categorize):
+            for [name, style] in items(categorize):
+                $name: {mode: "category", style: style},
+    },
+    when xaxis != null: xaxis: xaxis,
+    when legend != null: legend: legend,
+    when xlabel != null: xlabel: xlabel,
+    when ylabel != null: ylabel: ylabel,
+    when title != null: title: title,
+}
+
+in {
+    linspace: |lo, hi; npts| {
+        type: "uniform",
+        interval: [lo, hi],
+        num: npts,
+    },
+
+    gradspace: |lo, hi; npts, grading = 1.0| {
+        type: "graded",
+        interval: [lo, hi],
+        num: npts,
+        grading: grading,
+    },
+
+    copy: |from, to = null; template = false| {
+        source: from,
+        target: to or from,
+        template: template,
+        mode: "simple",
+    },
+
+    glob: |from, to = "."| {
+        source: from,
+        target: to,
+        template: false,
+        mode: "glob",
+    },
+
+    cmd: |
+        cmd = null;
+        name = null,
+        env = {},
+        container = null,
+        container_args = [],
+        allow_failure = false,
+        retry_on_fail = false,
+        capture = [],
+        workdir = null,
+    | {
+        name: name,
+        command: cmd,
+        env: env,
+        container: container,
+        container-args: container_args,
+        allow-failure: allow_failure,
+        retry-on-fail: retry_on_fail,
+        capture: capture,
+        workdir: workdir,
+    },
+
+    plot: plot,
+    semilogx: |...args; ...kwargs| plot(...args, ...kwargs, ymode: "linear", xmode: "log"),
+    semilogy: |...args; ...kwargs| plot(...args, ...kwargs, ymode: "log", xmode: "linear"),
+    loglog: |...args; ...kwargs| plot(...args, ...kwargs, ymode: "log", xmode: "log"),
+}

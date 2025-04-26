@@ -1,0 +1,4 @@
+[console_scripts]
+badger=grevling.__main__:main
+grevling=grevling.__main__:main
+
