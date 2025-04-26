@@ -1,0 +1,132 @@
+Metadata-Version: 2.1
+Name: fastsecforge
+Version: 0.1.1
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# 🔐 FastSecForge
+
+**FastSecForge** is a robust, pluggable Python security boilerplate generator built on top of FastAPI, SQLAlchemy, and MongoDB. It provides JWT authentication, user management, and a powerful CLI (`typer`) to scaffold fully functional, secure project templates in one command.
+
+---
+
+## 🚀 Features
+
+- 🔑 JWT Authentication with secure password hashing (`passlib[bcrypt]`)
+- 🧩 Supports SQL (SQLAlchemy) & MongoDB (Motor)
+- 📦 Pydantic v2+ for type-safe data validation and settings
+- 🔧 Typer-based CLI for instant FastAPI boilerplate creation
+- ♻️ Async-ready architecture optimized for performance
+- 🔐 Security best practices out of the box (OAuth2 flows, CORS, rate limiting)
+
+---
+
+## 📦 Installation
+
+Install FastSecForge from PyPI:
+
+```bash
+pip install fastsecforge
+```
+
+Or install in editable mode from source:
+
+```bash
+git clone https://github.com/reprompts/fastsecforge.git
+cd fastsecforge
+python -m venv venv
+source venv/bin/activate    # Windows: venv\\Scripts\\activate
+pip install -e .            # editable mode
+```
+
+---
+
+## 🛠️ CLI Usage
+
+FastSecForge exposes one primary command: `new_project`. This will scaffold a complete FastAPI project for you.
+
+```bash
+fastsecforge new_project <project_name>
+```
+
+- `<project_name>`: Name of the new project (also used as package name).
+
+After running this, you will have:
+
+```
+<project_name>/
+└── src/
+    └── <project_name>/
+        ├── __init__.py
+        ├── main.py          # FastAPI app entrypoint
+        ├── config.py        # Settings loader
+        ├── database.py      # DB session & models
+        ├── core/
+        │   ├── __init__.py
+        │   └── security.py  # Auth, password hashing, JWT utilities
+        ├── models/
+        │   ├── __init__.py
+        │   └── user.py      # User ORM models
+        ├── routers/
+        │   ├── __init__.py
+        │   ├── auth.py      # Authentication routes
+        │   └── users.py     # User management routes
+        ├── schemas/
+        │   ├── __init__.py
+        │   └── user.py      # Pydantic schemas
+        └── templates/      # Additional template assets
+```
+
+---
+
+## 🚀 Running the Generated Project
+
+1. **Navigate into the new project**
+   ```bash
+   cd <project_name>
+   ```
+
+2. **Create & activate a virtual environment**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate    # Windows: venv\\Scripts\\activate
+   ```
+
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Configure environment variables**
+   - Rename `.env.example` to `.env`
+   - Fill in your database URIs, JWT secret key, and other settings
+
+5. **Start the development server**
+   ```bash
+   uvicorn src.<project_name>.main:app --reload
+   ```
+
+   Your API will be available at <http://127.0.0.1:8000> with interactive docs at <http://127.0.0.1:8000/docs>.
+
+---
+
+## 🧪 Tests (Optional)
+
+If you scaffold tests, run:
+
+```bash
+pytest
+```
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🤝 Contributing
+
+Contributions welcome! Open an issue or submit a pull request against `main`.
+
