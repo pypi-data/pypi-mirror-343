@@ -1,0 +1,4 @@
+pyserial
+pytest
+piper-tts
+sounddevice
