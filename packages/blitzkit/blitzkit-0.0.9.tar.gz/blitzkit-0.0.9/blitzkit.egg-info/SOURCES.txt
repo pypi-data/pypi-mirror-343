@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+blitzkit.egg-info/PKG-INFO
+blitzkit.egg-info/SOURCES.txt
+blitzkit.egg-info/dependency_links.txt
+blitzkit.egg-info/entry_points.txt
+blitzkit.egg-info/requires.txt
+blitzkit.egg-info/top_level.txt
+scripts/__init__.py

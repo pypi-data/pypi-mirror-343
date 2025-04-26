@@ -1,0 +1,2 @@
+[console_scripts]
+blitzkit = blitzkit.cli:BlitzkitCLI.run
