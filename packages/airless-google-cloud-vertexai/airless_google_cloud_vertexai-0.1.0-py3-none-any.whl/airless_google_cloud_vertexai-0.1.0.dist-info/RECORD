@@ -1,0 +1,7 @@
+airless/google/cloud/vertexai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airless/google/cloud/vertexai/hook/__init__.py,sha256=tm0LEzPQUrvNuWsQkvDGJvhjsMezUPcYU8AFiwS_nQI,93
+airless/google/cloud/vertexai/hook/generative_model.py,sha256=w_z4FRi5LyH63bOqZkcmdOS3eS0lo73OEDTA4KcY0V4,1150
+airless_google_cloud_vertexai-0.1.0.dist-info/METADATA,sha256=zYEOYMgWoP7OgFgS5NxayQdf4iyi0A2Y4Eredj5_8Rk,875
+airless_google_cloud_vertexai-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+airless_google_cloud_vertexai-0.1.0.dist-info/top_level.txt,sha256=vPLzRICE7VNGvU-zceoZ1N7H2TkerQXR475zjg_xPzU,8
+airless_google_cloud_vertexai-0.1.0.dist-info/RECORD,,
