@@ -1,0 +1,11 @@
+[console_scripts]
+SajadDE = SajadDE.__main__:main
+SajadDE-run = SajadDE.__main__:main
+
+[distutils.commands]
+bdist_SajadDE = SajadDE.distutils.DistutilCommands:bdist_SajadDE
+build_SajadDE = SajadDE.distutils.DistutilCommands:build
+install_SajadDE = SajadDE.distutils.DistutilCommands:install
+
+[distutils.setup_keywords]
+build_with_SajadDE = SajadDE.distutils.DistutilCommands:setupSajadQDistutilsCommands
