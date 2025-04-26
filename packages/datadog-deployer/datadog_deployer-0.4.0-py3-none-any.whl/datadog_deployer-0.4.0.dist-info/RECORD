@@ -1,0 +1,13 @@
+datadog_deployer/__init__.py,sha256=ddBGWHrI1Kg2cAFH8mTKayj6VVbevy_o8u47kEsKxMw,185
+datadog_deployer/config.py,sha256=1BUQ43l2MdLUF-T8YKaSHndLSoEJ9CKqhgS5G2B3ZgQ,2250
+datadog_deployer/deployer.py,sha256=lAelC9LrPqQTkdT1_LkSxbqEM_PwnALmaTXYC-rNoCg,3618
+datadog_deployer/dumper.py,sha256=j2M0yin9w3k-KEBr2DPxz_LpbkTDY8CZCIZTFvaaJ1Q,1339
+datadog_deployer/main.py,sha256=xHmqUdXqqwoLeEitYdUAyaPYOqZZ5DJ1WLWtkkFYb_c,1957
+datadog_deployer/monitor.py,sha256=k1SyB1XtLXbyn8hIm0HijmkIXsqpCCPK0ue_NLiMC1M,1578
+datadog_deployer/query_metric.py,sha256=WyvdR73YhpzAd-JAuSKuLRgyJbPmHBiQNMAdll6hxVI,200
+datadog_deployer-0.4.0.dist-info/licenses/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+datadog_deployer-0.4.0.dist-info/METADATA,sha256=cXyO7W5qgTX5P976GV97uOrp6xpO1AtPNT9w9_m2Kxo,2483
+datadog_deployer-0.4.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+datadog_deployer-0.4.0.dist-info/entry_points.txt,sha256=--GWylRXE9gQng85g3gwMs4Xp-Xv58B-RZadz9PkQpg,64
+datadog_deployer-0.4.0.dist-info/top_level.txt,sha256=mM6QXGvBUPk6EbccZFJeRV48jqJDQkwgWGKsFj_WnLY,17
+datadog_deployer-0.4.0.dist-info/RECORD,,
