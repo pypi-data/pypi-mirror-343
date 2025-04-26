@@ -1,0 +1,18 @@
+[console_scripts]
+x4_dic227 = x4util.dict.x4_dic227:main
+x4_dica2j = x4util.dict.x4_dica2j:main
+x4_dicdis = x4util.dict.x4_dicdis:main
+x4_dicj2a = x4util.dict.x4_dicj2a:main
+x4_dicj2t = x4util.dict.x4_dicj2t:main
+x4_dirini = x4util.conversion.x4_dirini:main
+x4_dirupd = x4util.conversion.x4_dirupd:main
+x4_extmul = x4util.extract.x4_extmul:main
+x4_j4tox4 = x4util.conversion.x4_j4tox4:main
+x4_makcov = x4util.extract.x4_makcov:main
+x4_maklib = x4util.conversion.x4_maklib:main
+x4_poipoi = x4util.conversion.x4_poipoi:main
+x4_refbib = x4util.extract.x4_refbib:main
+x4_refdoi = x4util.extract.x4_refdoi:main
+x4_seqadd = x4util.conversion.x4_seqadd:main
+x4_spells = x4util.spelling.x4_spells:main
+x4_x4toj4 = x4util.conversion.x4_x4toj4:main
