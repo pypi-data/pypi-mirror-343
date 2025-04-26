@@ -1,0 +1,1 @@
+default_app_config = 'strynova_dj_hotreload.apps.StrynovaDJHotReloadConfig'

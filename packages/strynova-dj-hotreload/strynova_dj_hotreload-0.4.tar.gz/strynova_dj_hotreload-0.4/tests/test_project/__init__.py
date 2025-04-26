@@ -1,0 +1,1 @@
+# Test project for strynova_dj_hotreload
