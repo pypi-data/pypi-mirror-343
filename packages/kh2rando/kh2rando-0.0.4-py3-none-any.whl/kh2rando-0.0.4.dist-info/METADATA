@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: kh2rando
+Version: 0.0.4
+Summary: A collection of tools for KH2 Randomizer
+Author-email: Jeff Hobson <jeff@possiblybad.com>
+License-Expression: Apache-2.0
+Project-URL: Homepage, https://kh2rando.com
+Project-URL: Issues, https://github.com/tommadness/KH2RandomizerGenerator/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: ==3.9.2
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: altgraph==0.17.2
+Requires-Dist: bitstring==3.1.9
+Requires-Dist: khbr==4.0.5
+Requires-Dist: pillow==9.3.0
+Requires-Dist: PyYAML==5.4.1
+Dynamic: license-file
+
+# KH2Randomizer
+
+[Website](https://tommadness.github.io/KH2Randomizer/)
+
+![Screenshot of the seed generator user interface](docs/seed-generator-screenshot.png)
+
+## Acknowledgements
+
+Icons and font by Televo
+
+Special thanks to Sonicshadowsilver2 for the creation of the Garden of Assemblage mod, 1234567890num for helping bring
+it to PC, and Bizkit047, Valaxor, and Desa3579 for the original Randomizer
+
+Special thanks to Xeeynamo and the OpenKH team for their reverse engineering effort and the OpenKH Mods Manager, both of
+which makes this all possible.
