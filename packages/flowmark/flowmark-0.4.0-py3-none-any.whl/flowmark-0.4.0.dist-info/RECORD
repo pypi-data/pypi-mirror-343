@@ -1,0 +1,13 @@
+flowmark/__init__.py,sha256=QQqQE7cQVy6zs7ej1wJcSfe9kSEQbj5WaOUfnm9Zd6U,604
+flowmark/cli.py,sha256=e9btIspDexFazMY25kRtFZoPJyFgGWGL-0-WXaKwFys,5606
+flowmark/frontmatter.py,sha256=aJzuMWDTmJV3BjjMLykI27fwtO8Kinq0OKeQI0N87lQ,1453
+flowmark/line_wrappers.py,sha256=ijDMsw8L9F160UJrLyzkCi4b_PJtOEuoxVlVsQzb5hE,3440
+flowmark/markdown_filling.py,sha256=qmisXKPu_JAy8NsLpDCTVhsDzTvVWAG0P15TUye4pNM,14707
+flowmark/sentence_split_regex.py,sha256=9-UnP3rNe_Z7YnZRrO3dMvsgvaCncCN21uo6ElX1AVA,3181
+flowmark/text_filling.py,sha256=Hx7sEFBVoMKRVjZ5of6xS8EbEPyb9pLH48WeuMBuT9U,4456
+flowmark/text_wrapping.py,sha256=lxkQkGCZOFtqnR4mSEjJ_Aej2J9PDRHKpIOF_g7Ih7E,4942
+flowmark-0.4.0.dist-info/METADATA,sha256=OEJM_lkjkHEqa6qPBWdv4g14VqhDwn4Lifgo93kwmBU,7215
+flowmark-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+flowmark-0.4.0.dist-info/entry_points.txt,sha256=DaygQ2QIxIOKeFTv9lEso0eWLW9GSxuYWOutPMYBSzM,47
+flowmark-0.4.0.dist-info/licenses/LICENSE,sha256=JhzkmuO3Ur7MsQaef8szzVks_bSjkLP_fYjwwUW8-xI,1068
+flowmark-0.4.0.dist-info/RECORD,,
