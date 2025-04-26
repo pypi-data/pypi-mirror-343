@@ -1,0 +1,15 @@
+pyelink_connector/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyelink_connector/utils.py,sha256=TbMF7KHCT5s6EgDqYqSHgnJy8mlrF8pXJGJqPjN5yEo,737
+pyelink_connector/psychopy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyelink_connector/psychopy/connector.py,sha256=IL1xKh2PgaE5M-4WYwpd6QsuYROv07WvanIMvSMCeFg,27492
+pyelink_connector/psychopy/utils.py,sha256=C77keLO6UOsmwXha-5P4ZAFj47wELfWOq0LvlbQXLus,2482
+pyelink_connector/pygame/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyelink_connector/pygame/connector.py,sha256=fmRCXxLQGh-YDWLoElf7C2MDqMe2zDpOB0Uo_a8fxI8,30224
+pyelink_connector/pygame/utils.py,sha256=XusuOIQbvav1xsOdlDEbUf2ujwNrtzwW3UgXng-emGg,3716
+pyelink_connector/pyglet/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyelink_connector/pyglet/connector.py,sha256=Pa9LTuP7ZJe1302I3cU7OB8YKCU5Fl-lt2KEKNO6S-s,24988
+pyelink_connector/pyglet/utils.py,sha256=xw9DIZgXEU_dz46V-k-_1XZlpJgc2l2zAVEbnczFUmY,974
+pyelink_connector-0.2.0.dist-info/METADATA,sha256=V9wIfG2OchEULOQr_z7RZQjV8r7Uv05PuRlcY-HdRVc,4985
+pyelink_connector-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pyelink_connector-0.2.0.dist-info/licenses/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+pyelink_connector-0.2.0.dist-info/RECORD,,
