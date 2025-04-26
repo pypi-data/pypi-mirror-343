@@ -1,0 +1,5 @@
+gemini_agent/__init__.py,sha256=3nn6YdImhRa8SN7VOAJVo2lPbBu2cYjzxgInerYhDvc,71
+gemini_agent/agent.py,sha256=tMsgexMEsKVvfVTlluihJay4Dadkk6LWf84qe-rv4qc,24146
+gemini_agent_framework-0.1.4.dist-info/METADATA,sha256=V2RVV60ovE07FCsSfXA3mRKcr5YV6ajU-qvaQ4jeLFQ,2386
+gemini_agent_framework-0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gemini_agent_framework-0.1.4.dist-info/RECORD,,
