@@ -1,0 +1,17 @@
+argclz/__init__.py,sha256=Npfb5ilBBYqRtGZY2o1zatifXMD6_e35wv5aFXc2ntA,273
+argclz/_types.py,sha256=gvGHhbmuAD7v4almC4KVkolDmDolESWPUYn2WIT1Aw8,4267
+argclz/_validator.py,sha256=DjlcA5jstnJzSkEicn-4LHuo-3CL_W9lDj0aMuNaNcg,97
+argclz/clone.py,sha256=Ip7RKJAWO_Ow5fCxvQltn1TAFho9fNgQS9_rvo3ULUA,1072
+argclz/commands.py,sha256=pMA3_8DP-GK-_58FL-fuIWicIynoyhk74AHOVWUwniI,6984
+argclz/core.py,sha256=9V_WpfrqD54CDw0wd8Usdh4yDF2hTnYVRgjiyHy6sS4,31421
+argclz/types.py,sha256=bOHb821bTD6Of2eugu79t12-nYTN12M3lnDnryZkwns,7375
+argclz/validator.py,sha256=bcD3t4krYkg6xzyX5lqrKMch8dhPWzeuHxAU_bf-GlQ,33799
+argclz/dispatch/__init__.py,sha256=FMCRvo9dTpLyXDzme_hCZ5MU2f-NmHdDzr0voY1FGPk,79
+argclz/dispatch/annotations.py,sha256=r8SsSvE-kky10I8YlVFB0Kxt8KOOVpqcE_WEi-e-5ww,2990
+argclz/dispatch/builder.py,sha256=uP8p3hkDSoCpnG6FB0JABclORSnsL92R-MRiG8aJxXw,2856
+argclz/dispatch/core.py,sha256=BgPElLBVVo50Qki0mpEDjZhnBTFzbleTlqjcejUaGXg,8656
+argclz-0.0.1.dist-info/licenses/LICENSE,sha256=6_X-Hdk9P836gtURnKJEC16jMLBZ3acxLzoujnE1kD8,1498
+argclz-0.0.1.dist-info/METADATA,sha256=MMyKTsNA1nsrXTABVMbKRUX2GLeUvhWTmwJSPWC_kFA,7448
+argclz-0.0.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+argclz-0.0.1.dist-info/top_level.txt,sha256=4KJH_d3KB8rOsLjO2-OVY5C82gKO5DUFdOvPl5m8oi0,7
+argclz-0.0.1.dist-info/RECORD,,
