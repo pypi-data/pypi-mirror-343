@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: credalabs-python-toolbox
+Version: 0.1.1
+Summary: We want to provide basic tools for our day-to-day work.
+Author: graph@credalabs.one
+Requires-Python: <4,>=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: black==24.2.0
+Requires-Dist: ipykernel==6.29.5
+Requires-Dist: isort==5.13.2
+Requires-Dist: jupytext==1.17.0
+Requires-Dist: nbqa==1.9.1
+Requires-Dist: nbstripout==0.8.1
+Requires-Dist: notebook==7.4.1
+Requires-Dist: poetry==2.1.1
+Requires-Dist: pynvim==0.5.2
