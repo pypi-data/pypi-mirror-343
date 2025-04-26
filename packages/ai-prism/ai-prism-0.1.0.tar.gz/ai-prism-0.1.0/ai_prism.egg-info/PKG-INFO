@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ai-prism
+Version: 0.1.0
+Summary: PRISM: Low-Cost LLM-Powered Data Processing
+Home-page: https://github.com/szeighami/prism
+Author: Sepanta Zeighami
+Author-email: zeighami@berkeley.edu
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+
+UNKNOWN
+
