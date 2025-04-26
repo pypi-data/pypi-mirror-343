@@ -1,0 +1,10 @@
+aws_nova_canvas_mcp/__init__.py,sha256=fGlJXSaTyGdSe25XyS7mDcth6DUQceXDn6LvprJ5eD0,58
+aws_nova_canvas_mcp/config.py,sha256=baI-nGPT17dtxC0wQ-IbSNJhw6upZl-O_UAdSdM8_wk,1593
+aws_nova_canvas_mcp/exceptions.py,sha256=6KgWGa2NNeost9897pCU28pY0aiUhvFgWw8JCegfOjw,163
+aws_nova_canvas_mcp/server.py,sha256=XPWfwKdFpzOU3qmeq9GKabSJvoGIYnvAMsgIakIUxvQ,1378
+aws_nova_canvas_mcp-0.1.2.dist-info/licenses/LICENSE,sha256=rcBWkV1-RcYJXBa4C1l6HI_IiDhBNhvFfFlQySZ5ksA,1075
+aws_nova_canvas_mcp-0.1.2.dist-info/METADATA,sha256=4J63JuNB6EMh7--SIiuvhLtKeta1EUp-ArrPDJS8R4w,3231
+aws_nova_canvas_mcp-0.1.2.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+aws_nova_canvas_mcp-0.1.2.dist-info/entry_points.txt,sha256=fPkuTfTJvh3145ESbz5ufbv3tLy7mNCq2S2OmBQM39Q,68
+aws_nova_canvas_mcp-0.1.2.dist-info/top_level.txt,sha256=51kkTG60GD8eBT6m6MvMm04zVYGFwOeu2PKDmr3WCzk,20
+aws_nova_canvas_mcp-0.1.2.dist-info/RECORD,,
