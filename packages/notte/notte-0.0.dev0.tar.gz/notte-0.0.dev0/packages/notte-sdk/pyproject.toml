@@ -1,0 +1,21 @@
+[project]
+name = "notte-sdk"
+version = "0.0.dev"
+description = "The SDK for Notte"
+readme = "README.md"
+authors = [
+    { name = "Notte Team ", email = "hello@notte.cc" }
+]
+packages = [
+  { include = "notte_sdk", from = "src" },
+]
+
+requires-python = ">=3.11"
+dependencies = [
+    "notte-core==0.0.dev",
+    "websockets>=13.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
