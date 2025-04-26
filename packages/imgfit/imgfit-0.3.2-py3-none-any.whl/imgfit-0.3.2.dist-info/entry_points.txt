@@ -1,0 +1,2 @@
+[console_scripts]
+img = img_fit.__init__:main
