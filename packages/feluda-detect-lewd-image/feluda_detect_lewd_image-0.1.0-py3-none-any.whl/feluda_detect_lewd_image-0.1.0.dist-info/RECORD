@@ -1,0 +1,9 @@
+./.gitignore,sha256=aufV-uwMFs2rmzfXo8F94X_pE86taqqXjAxsWQsfCng,1909
+./PKG-INFO,sha256=hbGwIrmjF-TAtFQk5FZz_xW-ZIjIrlWgbd6l-2Vt1Ro,165
+./__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+./detect_lewd_images.py,sha256=kb1yU7tP79ZpldMdFNjsG5J4JnPTwJPJT50I-NrTmQA,3912
+./pyproject.toml,sha256=T22mz-eYF8k9p3_ywZOHzg3SPy2Ro5Cr880VXUMrt9c,464
+./test.py,sha256=TDkQsTOa7c3ROjqXjzdn67_SkGUWQmeXuMapPpA_v1s,1384
+feluda_detect_lewd_image-0.1.0.dist-info/METADATA,sha256=hbGwIrmjF-TAtFQk5FZz_xW-ZIjIrlWgbd6l-2Vt1Ro,165
+feluda_detect_lewd_image-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+feluda_detect_lewd_image-0.1.0.dist-info/RECORD,,
