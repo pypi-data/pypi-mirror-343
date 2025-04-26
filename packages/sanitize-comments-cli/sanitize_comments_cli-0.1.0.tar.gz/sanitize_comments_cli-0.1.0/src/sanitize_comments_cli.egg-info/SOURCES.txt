@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/sanitize_cli/__init__.py
+src/sanitize_cli/cli.py
+src/sanitize_comments_cli.egg-info/PKG-INFO
+src/sanitize_comments_cli.egg-info/SOURCES.txt
+src/sanitize_comments_cli.egg-info/dependency_links.txt
+src/sanitize_comments_cli.egg-info/entry_points.txt
+src/sanitize_comments_cli.egg-info/requires.txt
+src/sanitize_comments_cli.egg-info/top_level.txt
