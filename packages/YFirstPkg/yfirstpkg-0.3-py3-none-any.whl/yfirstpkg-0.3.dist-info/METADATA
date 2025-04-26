@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: YFirstPkg
+Version: 0.3
+Summary: Simple package
+Home-page: https://github.com/Anuva13/SamplePkg.git
+Author: Anuva Das
+Author-email: Anuva Das <anuvadas@hotmail.com>
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: home-page
+
+# YFirstPkg
+
+** This is my **first** package.

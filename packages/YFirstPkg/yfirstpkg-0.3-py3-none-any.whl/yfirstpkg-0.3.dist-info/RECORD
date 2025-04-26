@@ -1,0 +1,7 @@
+SamplePkg/__init__.py,sha256=TitIdplnvxadDNGFjCwUtpfJKQ5SX2d1Q1QVtUhN3Ac,128
+SamplePkg/mymodule1.py,sha256=pVwUNGtcDhHahzeT2xde_SjUhAozCl7boY0D19cxBiY,46
+SamplePkg/mymodule2.py,sha256=TnEvomb0T8ivfFTDK5N3-MjnkU_00FythTa7RjHBHWo,32
+yfirstpkg-0.3.dist-info/METADATA,sha256=n86stnC-A_BN-_eTc59Q3kOW0063-F4cOMm07PUflC8,351
+yfirstpkg-0.3.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+yfirstpkg-0.3.dist-info/top_level.txt,sha256=fr0W0EsuLcusWpRBD5mKWFOoCDoRXEhGfpykQ35AOk0,10
+yfirstpkg-0.3.dist-info/RECORD,,
