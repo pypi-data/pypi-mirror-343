@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: MicroA
+Version: 1.3.0
+Author: Ali Mammadov
+Author-email: ali.mammadov@gmail.com
+License: MA
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Django
+Requires-Dist: django>=4.0
+Requires-Dist: djangorestframework
+Requires-Dist: djangorestframework-simplejwt
+Requires-Dist: django-redis
+Requires-Dist: django-cors-headers
+Requires-Dist: psycopg2-binary
+Requires-Dist: mysqlclient
+Requires-Dist: python-dotenv
+Requires-Dist: whitenoise
+Requires-Dist: django-q
+Requires-Dist: celery
+Requires-Dist: daphne
+Requires-Dist: channels
+Requires-Dist: djoser
+Requires-Dist: drf_yasg
+Requires-Dist: django-debug-toolbar
+Requires-Dist: streamlit
