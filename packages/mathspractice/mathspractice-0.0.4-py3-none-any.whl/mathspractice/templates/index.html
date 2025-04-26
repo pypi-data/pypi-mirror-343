@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Home{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <ul>
+    <li><a href="{{ url_for("lesson1.index") }}">Lesson 1 - Addition and Subtraction</a></li>
+    <li><a href="{{ url_for("lesson2.index") }}">Lesson 2 - Multiplication</a></li>
+    <li><a href="{{ url_for("lesson3.index") }}">Lesson 3 - Division</a></li>
+    </ul>
+{% endblock %}
