@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: BackboneTools
+Version: 2025.0.0a0
+Summary: BackboneTools is a Python package for working with Backbone.
+Project-URL: Repository, https://gitlab.ruhr-uni-bochum.de/ee/backbonetools.git
+Author-email: David Huckebrink <david.huckebrink@rub.de>, Leonie Plaga <leonie.plaga@rub.de>
+Requires-Dist: gamsapi
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: openpyxl
+Requires-Dist: pandas
+Requires-Dist: plotly
+Requires-Dist: tsam
+Description-Content-Type: text/markdown
+
+hello world
