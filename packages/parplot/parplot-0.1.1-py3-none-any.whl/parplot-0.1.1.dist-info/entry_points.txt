@@ -1,0 +1,3 @@
+[console_scripts]
+parplot = parplot.cli:main
+pp = parplot.cli:main
