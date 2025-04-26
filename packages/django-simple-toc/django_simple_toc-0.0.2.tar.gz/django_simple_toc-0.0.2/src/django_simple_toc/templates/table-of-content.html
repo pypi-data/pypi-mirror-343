@@ -1,0 +1,34 @@
+{% load static %}
+
+{% if WITH_TITLE %}
+<h2 class="toc-title"><b>
+    {{WITH_TITLE}}
+</b></h2>
+{% else %}
+<h2 class="toc-title"><b>
+    Table of content
+</b></h2>
+{% endif %}
+<ol class="toc-list-container">
+    {% for header in toc_headers %}
+        {% if header.name not in DISALLOWED_TAGS and header.content not in DISALLOWED_HEADERS %}
+            <li class="toc-list-item" style="list-style-type: {{LIST_STYLE}}; 
+                {% if WITH_PADDING == 'True' %}
+                padding-left: {{header.padding}}px;
+                {% endif %}
+            ">
+                {% if NO_REF != 'True' %}
+                    {% if header.ref %}
+                    <a href="#{{header.ref}}">
+                        {% include 'table-of-content-element.html' with WITH_HEADER_TYPE=WITH_HEADER_TYPE %}
+                    </a>
+                    {% else %}
+                        {% include 'table-of-content-element.html' with WITH_HEADER_TYPE=WITH_HEADER_TYPE %}
+                    {% endif %}
+                {% else %}
+                        {% include 'table-of-content-element.html' with WITH_HEADER_TYPE=WITH_HEADER_TYPE %}
+                {% endif %}
+            </li>
+        {% endif %}
+    {% endfor %}
+</ol>
