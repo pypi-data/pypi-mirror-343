@@ -1,0 +1,2 @@
+[console_scripts]
+sharelatex-versioning = sharelatex_versioning:app
