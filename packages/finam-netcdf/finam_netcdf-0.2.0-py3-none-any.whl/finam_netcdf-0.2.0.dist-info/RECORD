@@ -1,0 +1,12 @@
+finam_netcdf/__init__.py,sha256=CMHBKjqU5YnDe14AJRZpd2mhh2xaRUECWlHchHRsqgM,871
+finam_netcdf/_version.py,sha256=clN3TnyYyt5T_wUJLVBmutS2kYLLBET4JFB2QXnRm2Q,21
+finam_netcdf/reader.py,sha256=C6ragxHpwT71dq8YujNh7VNziQdnS9z6QELXH5x-lNo,8027
+finam_netcdf/tools.py,sha256=HKwJl14z-ewy92uR2wjE_CocZp7PTXhjJxybTBMHgMM,25960
+finam_netcdf/writer.py,sha256=Jbs1BTM4pNdb4OIzaBm5fookCcuntm4wJ-yycWnp3t0,12148
+finam_netcdf-0.2.0.dist-info/METADATA,sha256=uYb9rA8pJK2B2yazV8H0l-eXFUlrKGfQGMct87dAu3k,2594
+finam_netcdf-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+finam_netcdf-0.2.0.dist-info/licenses/AUTHORS.md,sha256=PdlOKMFlxyb2bZoOVYTBTXILSGPMxFx8ntEwInsVfd0,574
+finam_netcdf-0.2.0.dist-info/licenses/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+finam_netcdf-0.2.0.dist-info/licenses/COPYING.LESSER,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+finam_netcdf-0.2.0.dist-info/licenses/LICENSE.md,sha256=uyQN3iRRT8xtEg6pw2IsrwMdwFlyz88lf_egd7MZE24,2771
+finam_netcdf-0.2.0.dist-info/RECORD,,

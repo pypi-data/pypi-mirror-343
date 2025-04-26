@@ -1,0 +1,61 @@
+Metadata-Version: 2.4
+Name: finam_netcdf
+Version: 0.2.0
+Summary: FINAM NetCDF I/O components.
+Project-URL: Homepage, https://FINAM-NetCDF.pages.ufz.de/
+Project-URL: Documentation, https://FINAM-NetCDF.pages.ufz.de/
+Project-URL: Source, https://git.ufz.de/FINAM/finam-netcdf
+Project-URL: Tracker, https://git.ufz.de/FINAM/finam-netcdf/-/issues
+Project-URL: Changelog, https://git.ufz.de/FINAM/finam-netcdf/-/blob/main/finam-netcdf/CHANGELOG.md
+Author-email: FINAM Developers <finam@ufz.de>
+License-Expression: LGPL-3.0
+License-File: AUTHORS.md
+License-File: COPYING
+License-File: COPYING.LESSER
+License-File: LICENSE.md
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Requires-Dist: finam>=1.0.0
+Requires-Dist: netcdf4<2,>=1.5.8
+Requires-Dist: numpy>=1.14.5
+Provides-Extra: doc
+Requires-Dist: docutils>=0.18; extra == 'doc'
+Requires-Dist: myst-parser>=1.0; extra == 'doc'
+Requires-Dist: numpydoc>=1.1; extra == 'doc'
+Requires-Dist: pydata-sphinx-theme<0.14,>=0.13; extra == 'doc'
+Requires-Dist: sphinx-design>=0.4; extra == 'doc'
+Requires-Dist: sphinx>=6; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: pytest-cov>=3; extra == 'test'
+Description-Content-Type: text/markdown
+
+# FINAM-NetCDF
+
+FINAM components for reading and writing spatial and temporal data from and to [NetCDF](https://www.unidata.ucar.edu/software/netcdf/) files.
+
+<a href="https://finam.pages.ufz.de/finam-netcdf" title="FINAM NetCDF homepage" target="_blank">
+  <img width="300" src="https://git.ufz.de/FINAM/finam-netcdf/-/raw/main/docs/source/_static/logo_large.svg" />
+</a>
+
+See the FINAM-NetCDF [documentation](https://finam.pages.ufz.de/finam-netcdf).
+
+## License
+
+LGPLv3, Copyright © 2021-2025, the FINAM developers from Helmholtz-Zentrum für Umweltforschung GmbH - UFZ. All rights reserved.
