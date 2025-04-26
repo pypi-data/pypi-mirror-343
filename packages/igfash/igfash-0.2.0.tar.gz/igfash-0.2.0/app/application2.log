@@ -1,0 +1,63 @@
+15:17:42,276 igfash.io DEBUG Looking for magnitudes with label Mw
+15:17:42,729 igfash INFO M mode - Magnitude distribution modeling
+15:17:42,729 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+15:17:42,807 igfash INFO Magnitude KDE Computation time: 0.1 seconds
+15:17:43,348 igfash INFO L mode - Location distribution modeling
+15:17:43,348 igfash INFO Computing KDE of each window...
+15:17:43,818 igfash INFO 2D KDE Computation time: 0.5 seconds
+15:17:46,937 igfash INFO R mode - activity Rate modeling
+15:17:46,937 igfash.io DEBUG Looking for magnitudes with label Mw
+15:17:51,511 igfash DEBUG Activity rates [4.96666667 4.66666667] with percentages [0.5 0.5]
+15:17:51,511 igfash INFO Forecast mode - seismic hazard asssessment
+15:17:51,511 igfash.gm INFO lasocki_2013.py already exists in the openquake gsim folder C:\Users\ftong\AppData\Local\anaconda3\Lib\site-packages\openquake\hazardlib\gsim
+15:17:51,511 igfash DEBUG Verification that f(x,y) is normalized; Sum of all f(x,y) values = 1.0
+15:17:51,713 igfash INFO Estimating ground motion at 6 grid points...
+15:17:56,888 igfash.gm INFO Receiver: 3
+15:17:56,888 igfash.gm INFO Function value at PGA = 0.0 : 84.84575591823294
+15:17:56,888 igfash.gm INFO Function value at PGA = 1.0 : -0.04999999999973058
+15:17:56,888 igfash.gm INFO Function value at PGA = 2.0 : -0.05
+15:17:56,888 igfash.gm DEBUG Now trying Scipy brenth
+15:18:17,897 igfash.gm INFO Ground motion estimation computation time: 21.0 seconds
+15:18:17,897 igfash.gm INFO Estimated PGA: 0.14696773284480005
+15:18:17,897 igfash INFO Estimated PGA at rx 3 is 0.14696773284480005
+15:18:23,412 igfash.gm INFO Receiver: 6
+15:18:23,412 igfash.gm INFO Function value at PGA = 0.0 : 84.84575591823294
+15:18:23,412 igfash.gm INFO Function value at PGA = 1.0 : -0.049999999998079254
+15:18:23,412 igfash.gm INFO Function value at PGA = 2.0 : -0.05
+15:18:23,412 igfash.gm DEBUG Now trying Scipy brenth
+15:18:40,133 igfash.gm INFO Ground motion estimation computation time: 16.7 seconds
+15:18:40,133 igfash.gm INFO Estimated PGA: 0.24000190385364642
+15:18:40,135 igfash INFO Estimated PGA at rx 6 is 0.24000190385364642
+15:18:45,345 igfash.gm INFO Receiver: 7
+15:18:45,346 igfash.gm INFO Function value at PGA = 0.0 : 84.84575591823294
+15:18:45,346 igfash.gm INFO Function value at PGA = 1.0 : -0.04999999998281323
+15:18:45,346 igfash.gm INFO Function value at PGA = 2.0 : -0.05
+15:18:45,346 igfash.gm DEBUG Now trying Scipy brenth
+15:19:05,164 igfash.gm INFO Ground motion estimation computation time: 19.8 seconds
+15:19:05,164 igfash.gm INFO Estimated PGA: 0.31408752954978036
+15:19:05,164 igfash INFO Estimated PGA at rx 7 is 0.31408752954978036
+15:19:10,259 igfash.gm INFO Receiver: 11
+15:19:10,259 igfash.gm INFO Function value at PGA = 0.0 : 84.84575591823294
+15:19:10,259 igfash.gm INFO Function value at PGA = 1.0 : -0.0499999999948472
+15:19:10,260 igfash.gm INFO Function value at PGA = 2.0 : -0.05
+15:19:10,260 igfash.gm DEBUG Now trying Scipy brenth
+15:19:29,164 igfash.gm INFO Ground motion estimation computation time: 18.9 seconds
+15:19:29,164 igfash.gm INFO Estimated PGA: 0.27351911513454474
+15:19:29,164 igfash INFO Estimated PGA at rx 11 is 0.27351911513454474
+15:19:34,162 igfash.gm INFO Receiver: 12
+15:19:34,162 igfash.gm INFO Function value at PGA = 0.0 : 84.84575591823294
+15:19:34,162 igfash.gm INFO Function value at PGA = 1.0 : -0.04999999983806267
+15:19:34,162 igfash.gm INFO Function value at PGA = 2.0 : -0.05
+15:19:34,162 igfash.gm DEBUG Now trying Scipy brenth
+15:20:00,918 igfash.gm INFO Ground motion estimation computation time: 26.8 seconds
+15:20:00,920 igfash.gm INFO Estimated PGA: 0.3842654572463581
+15:20:00,920 igfash INFO Estimated PGA at rx 12 is 0.3842654572463581
+15:20:07,761 igfash.gm INFO Receiver: 16
+15:20:07,761 igfash.gm INFO Function value at PGA = 0.0 : 84.84575591823294
+15:20:07,763 igfash.gm INFO Function value at PGA = 1.0 : -0.04999999994665633
+15:20:07,763 igfash.gm INFO Function value at PGA = 2.0 : -0.05
+15:20:07,763 igfash.gm DEBUG Now trying Scipy brenth
+15:20:27,929 igfash.gm INFO Ground motion estimation computation time: 20.2 seconds
+15:20:27,929 igfash.gm INFO Estimated PGA: 0.35041454726606025
+15:20:27,929 igfash INFO Estimated PGA at rx 16 is 0.35041454726606025
+15:20:27,931 igfash INFO Ground motion exceedance computation time: 156.2 seconds
