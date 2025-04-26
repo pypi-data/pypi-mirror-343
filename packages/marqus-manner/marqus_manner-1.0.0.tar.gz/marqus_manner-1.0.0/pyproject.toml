@@ -1,0 +1,88 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marqus-manner"
+description = "Security scanner for Model Context Protocol (MCP) servers"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+dynamic = ["version"]
+keywords = ["security", "mcp", "aibom", "scanning", "vulnerability", "ai-security"]
+authors = [
+    {name = "Marqus AI", email = "dev-support@marqus.ai"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Security",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "rich>=10.0.0",
+    "pyjson5>=1.6.0",
+    "lark>=1.1.0",
+    "pydantic>=2.0.0",
+    "aiohttp>=3.8.0",
+    "asyncio>=3.4.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "isort>=5.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+    "build>=0.8.0",
+    "twine>=4.0.0",
+]
+test = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/marqus-ai/marqus-manner"
+"Bug Tracker" = "https://github.com/marqus-ai/marqus-manner/issues"
+"Documentation" = "https://github.com/marqus-ai/marqus-manner/blob/main/README.md"
+
+[project.scripts]
+marqus = "marqus_manner.cli.main:run_cli"
+
+[tool.setuptools]
+packages = ["marqus_manner"]
+
+[tool.setuptools.dynamic]
+version = {attr = "marqus_manner.version_info"}
+
+[tool.black]
+line-length = 88
+target-version = ["py38", "py39", "py310", "py311"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"

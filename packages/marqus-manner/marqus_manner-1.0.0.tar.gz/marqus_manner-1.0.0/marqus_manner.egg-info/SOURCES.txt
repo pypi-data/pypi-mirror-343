@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+marqus_manner/__init__.py
+marqus_manner/py.typed
+marqus_manner/version.py
+marqus_manner.egg-info/PKG-INFO
+marqus_manner.egg-info/SOURCES.txt
+marqus_manner.egg-info/dependency_links.txt
+marqus_manner.egg-info/entry_points.txt
+marqus_manner.egg-info/requires.txt
+marqus_manner.egg-info/top_level.txt
