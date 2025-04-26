@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/winding/__init__.py
+src/winding.egg-info/PKG-INFO
+src/winding.egg-info/SOURCES.txt
+src/winding.egg-info/dependency_links.txt
+src/winding.egg-info/top_level.txt
