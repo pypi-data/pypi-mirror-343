@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: yuanqiserver
+Version: 1.1.7
+Summary: A mcp server
+Home-page: UNKNOWN
+Author: yuanqi_mcp163
+Author-email: yuanqi_mcp_test@163.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.10
+Requires-Dist: mcp
+Requires-Dist: httpx
+Requires-Dist: uvicorn
+
+UNKNOWN
+
+

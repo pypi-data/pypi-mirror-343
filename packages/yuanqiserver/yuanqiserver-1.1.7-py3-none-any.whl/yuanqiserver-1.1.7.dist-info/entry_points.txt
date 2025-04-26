@@ -1,0 +1,3 @@
+[console_scripts]
+yuanqiserver = yuanqiserver.main:run_mcp
+
