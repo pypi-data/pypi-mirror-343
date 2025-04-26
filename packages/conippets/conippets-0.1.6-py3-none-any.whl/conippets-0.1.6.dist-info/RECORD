@@ -1,0 +1,13 @@
+conippets/__init__.py,sha256=8zLGg-DfQhnDl2Ky0n-zXpN-8e-g7iR0AcaI4l4Vvpk,32
+conippets/args.py,sha256=PcXG-GfbMkAdYSMODmPflbHiNwD551t0o_GUGji8Ylw,175
+conippets/datetime.py,sha256=i9lSaQ1HnNHlBDddSBL3y_0VOs-tAphBu68xaLdUlHI,510
+conippets/git.py,sha256=V7IsHZpBjt1WYP1p7iCowibDHsp7f5RW4-9HOXsgsDs,1377
+conippets/json.py,sha256=rxCF3IwZIEKznoAtvwQC7AIsX-i4eFkAzN4p1MrrOX4,401
+conippets/jsonl.py,sha256=OiZgL6fXpiGm0GiwR7l2emNW7suk_tw3i6ec06ezaCE,747
+conippets/path.py,sha256=GisCOuvuSEJG9smlB48aekNqbd--VZIV5TTzYQ80Ews,242
+conippets/version.py,sha256=kBM8jwQ9r_ZMq7P43-SvMT6w6DhdPd9jFFTBA3HEZdg,21
+conippets-0.1.6.dist-info/LICENSE,sha256=IFlLzogpFgwy9-F6goWSyFi28b5v2XKBdOVzf1vPk8A,1067
+conippets-0.1.6.dist-info/METADATA,sha256=aDbMEaBjkiil2Ed1eXYCr0-1DUcbdeKJ8NFpptu-7dE,1372
+conippets-0.1.6.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+conippets-0.1.6.dist-info/top_level.txt,sha256=7jtKP2ta9By68EDjEn96F3ur3TXt-cIev4HhEgeAbwE,10
+conippets-0.1.6.dist-info/RECORD,,
