@@ -1,0 +1,2 @@
+[console_scripts]
+seed-gen = kh2rando:seed_gen_cli
