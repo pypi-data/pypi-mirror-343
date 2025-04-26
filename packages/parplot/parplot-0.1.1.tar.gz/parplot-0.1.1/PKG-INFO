@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: parplot
+Version: 0.1.1
+Summary: Plot data from a parquet, CSV or JSON file.
+License-Expression: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.11
+Requires-Dist: altair>=5.5.0
+Requires-Dist: polars>=1.27.1
+Requires-Dist: vl-convert-python>=1.7.0
+Description-Content-Type: text/markdown
+
+# Parplot
+
+Utility for plotting data from parquet files. CSV and JSON files are also supported.
+
+## Usage
+
+By default simply running the CLI will attempt to plot data from the most recently updated parquet file in the current directory:
+
+```bash
+uvx parquet
+```
+
+## Help
+
+More information about customizing behavior is available with:
+
+```bash
+uvx parquet --help
+```
