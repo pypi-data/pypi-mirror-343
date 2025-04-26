@@ -1,0 +1,387 @@
+Metadata-Version: 2.4
+Name: hcolor
+Version: 0.0.6
+Summary: Color manipulation tool. Extension to colorsys.
+Home-page: https://gitlab.com/kamichal/hcolor
+Author: Michał Kaczmarczyk
+Author-email: michal.s.kaczmarczyk@gmail.com
+License: Custom MIT license
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# hcolor - A color manipulation tool
+
+The goal of this package is to provide a color manipulation tool for use in the Python environments.
+The original intention was to bring mathematics to color space generation and to provide a set of
+useful functions that are missing from the standard `colorsys` library.
+
+The package provides the `HColor` class, which represents a color by RGBA components, stored as
+floats (0-to-1) and provides handy manipulation methods for the object.
+
+The main features of the HColor class are:
+
+- instant cast to HTML color definition,
+- creation from HSL parameters (hue/saturation/lightness),
+- manipulation of HLS parameters,
+- creation of color palettes as a series of HLS variations
+- creation from HTML color definition (from string).
+
+# Usage basics
+
+## Installation
+
+```shell
+pip install hcolor
+```
+*The package does not require any dependencies and weights just around 10kB.*
+
+## Crating color objects
+
+There are several ways to create a color object.
+
+
+```python
+from hcolor import HColor
+
+# Create color knowing RGB components, integers
+red_from_rgb_1 = HColor(255, 0, 0)
+
+# Create color knowing RGB components, floats
+red_from_rgb_2 = HColor(1.0, 0, 0)
+
+# Create color knowing HLS components, only floats
+red_from_hls = HColor.from_hls(0, 0.5, 1)
+
+# Create color from HTML color code
+red_from_long_code = HColor("#ff0000")
+red_from_short_code = HColor("#f00")
+
+# So all the above give exactly the same color
+assert red_from_rgb_1 == red_from_rgb_2 == red_from_hls == red_from_long_code == red_from_short_code
+
+```
+
+Before going further let's write a method to show the new color in this Jupyter Notebook, since it's a tool that we use to write this documentation. It will generate a html to show the resulting colors.
+
+
+```python
+from IPython.display import display, Markdown
+
+def show_color(color_obj: HColor, name: str = None):
+    """This code is only for showing the color in this readme, it's specific to Jupyter Notebooks."""
+    # create a new color with inverted lightness
+    opposite_color = color_obj.ch_light(1 - color_obj.lightness)
+    display(Markdown(
+        f'<span style="max-width: 850px; padding: .3em 1em; color: {opposite_color}; background-color: {color_obj}; '
+        f'font-family: monospace; display:inline-block;">'
+        f'<span style="font-size: 120%; font-family: monospace">{color_obj}</span></span> '
+        f'<span style="color: {color_obj}">{name}</small>'
+    ))
+```
+
+*You don't need to bother with the code of `show_color` function. It's here only for the sake of color's presentation and can work only in Jupyter Notebooks.*
+
+## Creating color objects from hue names
+
+There is an effective method for creating your own color using color names. A namespace class `Colors` has been provided for this purpose. Its  methods create color objects based on the hue name. The saturation, lightness, and alpha can be customized according to the user's preferences. The base colors are:
+
+* `red`
+* `orange_red`
+* `orange`
+* `yellow_orange`
+* `yellow`
+* `yellow_green`
+* `green`
+* `green_cyan`
+* `cyan`
+* `sky_blue`
+* `blue`
+* `indigo`
+* `violet`
+* `purple`
+* `magenta`
+* `pink_magenta`
+* `rose`
+* `red_rose`
+
+The default values are: `light = 0.5`, `sat = 0.5`, `alpha = 1.0`.
+The object returned is a new instance of `HColor` class.
+
+
+
+```python
+from hcolor import Colors
+
+# Create basic color palette in sky_blue tones
+light_bluish = Colors.sky_blue(light=0.92)
+bluish_1 = Colors.sky_blue(light=0.65)
+bluish_2 = Colors.sky_blue(light=0.35)
+dark_bluish = Colors.sky_blue(light=0.18)
+
+show_color(light_bluish, "light bluish")
+show_color(bluish_1, "bluish 1")
+show_color(bluish_2, "bluish 2")
+show_color(dark_bluish, "dark bluish")
+```
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #0a141f; background-color: #e0ebf5; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#e0ebf5</span></span> <span style="color: #e0ebf5">light bluish</small>
+
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #2d5986; background-color: #79a6d2; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#79a6d2</span></span> <span style="color: #79a6d2">bluish 1</small>
+
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #79a6d2; background-color: #2d5986; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#2d5986</span></span> <span style="color: #2d5986">bluish 2</small>
+
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #bad1e8; background-color: #172e45; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#172e45</span></span> <span style="color: #172e45">dark bluish</small>
+
+
+Check out how it differs when we crank up the saturation. Of course the saturation can be set to any `float` value between 0 and 1.
+
+
+```python
+# Create basic color palette in sky_blue tones
+show_color(Colors.sky_blue(sat=1.0, light=0.92), "100% saturated light bluish")
+show_color(Colors.sky_blue(sat=1.0, light=0.65), "100% saturated bluish 1")
+show_color(Colors.sky_blue(sat=1.0, light=0.35), "100% saturated bluish 2")
+show_color(Colors.sky_blue(sat=1.0, light=0.18), "100% saturated dark bluish")
+```
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #001429; background-color: #d6ebff; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#d6ebff</span></span> <span style="color: #d6ebff">100% saturated light bluish</small>
+
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #005ab2; background-color: #4da6ff; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#4da6ff</span></span> <span style="color: #4da6ff">100% saturated bluish 1</small>
+
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #4da6ff; background-color: #005ab2; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#005ab2</span></span> <span style="color: #005ab2">100% saturated bluish 2</small>
+
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #a3d1ff; background-color: #002e5c; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#002e5c</span></span> <span style="color: #002e5c">100% saturated dark bluish</small>
+
+
+## Color object's attributes
+
+The `HColor` object exposes direct attributes for `RGB` and `alpha` components and `HLS` components
+as properties, so that those are dynamically computed.
+
+
+
+```python
+the_greenest = Colors.green(sat=0.97, light=0.4)
+show_color(the_greenest, "the_greenest")
+print("Its RGBA components are:")
+print(f"{the_greenest.red = }")
+print(f"{the_greenest.green = }")
+print(f"{the_greenest.blue = }")
+print(f"{the_greenest.alpha = }")
+
+print("\nIts HLS components are:")
+print(f"{the_greenest.hue = }")
+print(f"{the_greenest.lightness = }")
+print(f"{the_greenest.saturation = }")
+
+```
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #36fc36; background-color: #03c903; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#03c903</span></span> <span style="color: #03c903">the_greenest</small>
+
+
+    Its RGBA components are:
+    the_greenest.red = 0.01355199999999984
+    the_greenest.green = 0.788
+    the_greenest.blue = 0.01200000000000001
+    the_greenest.alpha = 1.0
+    
+    Its HLS components are:
+    the_greenest.hue = 0.333
+    the_greenest.lightness = 0.4
+    the_greenest.saturation = 0.97
+
+
+## Explicit type of color notation
+
+By default, calling `str()` on `HColor` object will render as hexadecimal color code or in case if there is transparency set, as `rgba(..)` notation.
+If we want to use explicit notation, we can use those methods:
+
+
+```python
+print(f"{the_greenest.as_rgb() = }")
+print(f"{the_greenest.as_rgba() = }")
+print(f"{the_greenest.as_hex() = }")
+print(f"{the_greenest.as_shex() = }")
+```
+
+    the_greenest.as_rgb() = 'rgb(3, 201, 3)'
+    the_greenest.as_rgba() = 'rgba(3, 201, 3, 1.00)'
+    the_greenest.as_hex() = '#03c903'
+    the_greenest.as_shex() = '#0c0'
+
+
+## Opacity
+
+To add a transparency, we add additional `alpha` parameter to the constructor call.
+
+
+```python
+# This is how to construct a transparent color using RGBA components
+from_rgba = HColor(0.62888, 0.63, 0.06999999999999995, 0.6)
+
+# This is how to construct a transparent color using its name
+yellowish = Colors.yellow(sat=0.8, light=0.35, alpha=0.6)
+
+show_color(yellowish, "yellow-fish")
+assert yellowish == from_rgba, "Result should be the same"
+
+print(f"Yellowish casted to string is: {yellowish}")
+```
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: rgba(237, 237, 94, 0.60); background-color: rgba(160, 161, 18, 0.60); font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">rgba(160, 161, 18, 0.60)</span></span> <span style="color: rgba(160, 161, 18, 0.60)">yellow-fish</small>
+
+
+    Yellowish casted to string is: rgba(160, 161, 18, 0.60)
+
+
+As soon as we set `alpha` component set to `1.0` it behaves naturally to HTML rules, gives just hexadecimal code.
+
+
+```python
+# Create a new object from existing one - but with changed alpha
+opaque_yellowish = yellowish.ch_alpha(1.0)
+show_color(opaque_yellowish, "opaque yellow-fish")
+print(f"Opaque yellowish casted to string is: {opaque_yellowish}")
+```
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #eded5e; background-color: #a0a112; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#a0a112</span></span> <span style="color: #a0a112">opaque yellow-fish</small>
+
+
+    Opaque yellowish casted to string is: #a0a112
+
+
+## Pseudo-random color
+
+Another nice feature of `HColor` is when we want to create a unique color from any object, without caring what the actual hue should be, but are more interested in its lightness and saturation.
+
+
+```python
+my_names = ["Peter", "Lois", "Stewie", "Brian", "Joe Swanson"]
+
+for name in my_names:
+    its_color = Colors.from_hash(name, light=0.34567, sat=0.58)
+    show_color(its_color, f'Pseudo-random color for the string "{name}"')
+```
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #74bdda; background-color: #256f8b; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#256f8b</span></span> <span style="color: #256f8b">Pseudo-random color for the string "Peter"</small>
+
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #daca74; background-color: #8b7b25; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#8b7b25</span></span> <span style="color: #8b7b25">Pseudo-random color for the string "Lois"</small>
+
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #74dab8; background-color: #258b69; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#258b69</span></span> <span style="color: #258b69">Pseudo-random color for the string "Stewie"</small>
+
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #da7493; background-color: #8b2544; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#8b2544</span></span> <span style="color: #8b2544">Pseudo-random color for the string "Brian"</small>
+
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #74da82; background-color: #258b33; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#258b33</span></span> <span style="color: #258b33">Pseudo-random color for the string "Joe Swanson"</small>
+
+
+The argument passed to the `.from_hash()` method must be a string or bytes object. It's then used to compute a `sha1` hash from its value, which is then converted to a float (in a crude, but reproducible way). You can expect it to produce the same color on different machines.
+
+## Modifying existing colors
+
+There are two mechanisms for changing the RGBA and HLS values of a color. Use one depending on the needs of your use case.
+
+### Modifying color attributes
+One method works "in place", i.e. it modifies the object parameters and happens while assigning new values to any of its attributes: `red, green, blue, alpha, hue, saturation and lightness`.
+
+
+
+```python
+the_color = HColor("#258b33")
+show_color(the_color, "Original color")
+the_color.saturation = 0.2
+show_color(the_color, "The color after assigning new saturation value")
+the_color.alpha = 0.3
+the_color.lightness = 0.6
+show_color(the_color, "The color after assigning new alpha and lightness value")
+
+```
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #74da82; background-color: #258b33; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#258b33</span></span> <span style="color: #258b33">Original color</small>
+
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #95b99a; background-color: #466a4b; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#466a4b</span></span> <span style="color: #466a4b">The color after assigning new saturation value</small>
+
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: rgba(82, 122, 87, 0.30); background-color: rgba(133, 173, 138, 0.30); font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">rgba(133, 173, 138, 0.30)</span></span> <span style="color: rgba(133, 173, 138, 0.30)">The color after assigning new alpha and lightness value</small>
+
+
+### Cloning colors with changing the attributes
+
+The second method creates a copy of the base object and happens when using one of `HColor.ch_{attribute}` methods. I.e.: `ch_hue(), ch_light(), ch_sat() or ch_alpha()`.
+
+
+
+```python
+old_color = HColor("#258b33")
+show_color(old_color, "Original color")
+saturated_color = old_color.ch_sat(0.2)
+show_color(saturated_color, "A new color with changed saturation value")
+transparent_color = saturated_color.ch_alpha(0.3).ch_light(0.6)
+show_color(transparent_color, "Another new color object with changed alpha value")
+```
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #74da82; background-color: #258b33; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#258b33</span></span> <span style="color: #258b33">Original color</small>
+
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: #95b99a; background-color: #466a4b; font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">#466a4b</span></span> <span style="color: #466a4b">A new color with changed saturation value</small>
+
+
+
+<span style="max-width: 850px; padding: .3em 1em; color: rgba(82, 122, 87, 0.30); background-color: rgba(133, 173, 138, 0.30); font-family: monospace; display:inline-block;"><span style="font-size: 120%; font-family: monospace">rgba(133, 173, 138, 0.30)</span></span> <span style="color: rgba(133, 173, 138, 0.30)">Another new color object with changed alpha value</small>
+
+
+*Note that unlike the previous example, we must assign the method result to a new variable.
+This is because the `ch_*` methods don't change the source color parameters.*
