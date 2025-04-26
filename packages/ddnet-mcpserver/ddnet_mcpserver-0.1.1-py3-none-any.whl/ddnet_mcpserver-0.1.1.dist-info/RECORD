@@ -1,0 +1,8 @@
+ddnet_mcpserver/__init__.py,sha256=mntvFQzUGo9b1VSekZhtUJqJaZQftWxre20Ah-so8x8,80
+ddnet_mcpserver/__main__.py,sha256=FcUXO5XwvQSMKRYxjhRLKNZdAcBDxeQvA3g-fW4vw2E,1406
+ddnet_mcpserver/server.py,sha256=Xf8jVLbjzph0AAp0QcLTmS_KWuYmYoqbfzpjITsSyTM,2710
+ddnet_mcpserver-0.1.1.dist-info/METADATA,sha256=JjW1VYwF6QamQVgwsjA5vVKiPjWbhS4Db4i1qfF8uJw,1943
+ddnet_mcpserver-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ddnet_mcpserver-0.1.1.dist-info/entry_points.txt,sha256=wdYaRGrGAMFE0TbhdWsPvNNJIBF2WU31TkkZXHMZqfw,66
+ddnet_mcpserver-0.1.1.dist-info/licenses/LICENSE,sha256=unVbuzKfpKsPzHcdzMwg00c1aPJbV1seMWocsiu6w18,1085
+ddnet_mcpserver-0.1.1.dist-info/RECORD,,

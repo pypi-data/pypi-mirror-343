@@ -1,0 +1,111 @@
+Metadata-Version: 2.4
+Name: ddnet-mcpserver
+Version: 0.1.1
+Summary: 基于FastMCP的MCP服务器，提供简单的计算和问候功能
+Project-URL: Homepage, https://github.com/silverhi/ddnet-mcpserver
+Project-URL: Bug Tracker, https://github.com/silverhi/ddnet-mcpserver/issues
+Author-email: silverhi <molei8686138@gmail.com>
+License: MIT
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Requires-Dist: fastmcp>=2.2.3
+Requires-Dist: mcp>=1.6.0
+Description-Content-Type: text/markdown
+
+# DDNet MCP Server
+
+一个基于FastMCP的Model Context Protocol服务器，提供简单的计算和问候功能。
+
+## 功能
+
+- 加法工具：执行两个数字的加法运算
+- 问候资源：根据提供的名称返回个性化的问候语
+
+## 安装
+
+### 使用pip安装
+
+```bash
+pip install ddnet-mcpserver
+```
+
+### 使用uv安装
+
+```bash
+uv install ddnet-mcpserver
+```
+
+## 使用方法
+
+### 直接运行
+
+作为Python模块运行:
+
+```bash
+python -m ddnet_mcpserver
+```
+
+### 在Claude或其他MCP客户端中配置
+
+在您的MCP客户端配置文件中添加以下配置:
+
+```json
+{
+  "mcpServers": {
+    "ddnet": {
+      "command": "python",
+      "args": ["-m", "ddnet_mcpserver"],
+      "env": {},
+      "disabled": false
+    }
+  }
+}
+```
+
+如果使用uv:
+
+```json
+{
+  "mcpServers": {
+    "ddnet": {
+      "command": "uvx",
+      "args": ["ddnet-mcpserver"],
+      "env": {},
+      "disabled": false
+    }
+  }
+}
+```
+
+## 可用工具和资源
+
+### 工具
+
+- `add(a: int, b: int)`: 将两个数字相加并返回结果
+
+### 资源
+
+- `greeting://{name}`: 返回一个针对指定名称的问候语
+
+## 开发
+
+### 设置开发环境
+
+```bash
+git clone https://github.com/silverhi/ddnet-mcpserver.git
+cd ddnet-mcpserver
+pip install -e .
+```
+
+### 运行测试
+
+```bash
+pytest tests/
+```
+
+## 许可证
+
+MIT
