@@ -1,0 +1,16 @@
+hyprpwmenu/__init__.py,sha256=JkntOlXaXgoURDsI1Q9yLVBXx_pL75f1N7m4s6Eu7Rs,203
+hyprpwmenu/click.py,sha256=3t0QGn3grseBo7OE8_durxqIZyFYcP_1tIEQlwS_W-Y,2516
+hyprpwmenu/config.py,sha256=6gl1qI_-68DU9-R-7-AYBM2jFqVw-_dtPU-w3-gT9cU,1868
+hyprpwmenu/constants.py,sha256=-NeD8SVimfu9kYaJP0n2ous7zHLAVdjF6Iy7ks_kd3g,363
+hyprpwmenu/kernel.py,sha256=K_u6RA2GOSJjilxbDOT0eDWwloGX_16P2LptPgDAzro,11095
+hyprpwmenu/assets/Font Awesome 6 Brands-Regular-400.otf,sha256=ryN7KiCqqpaDhHcwwzyfky70RHgP6rUvaOc4UGuxeYU,563196
+hyprpwmenu/assets/Font Awesome 6 Free-Regular-400.otf,sha256=96dfGK3CAgXeUVMFk99wjD0cd_D23fEd41cMsX_zXuI,191468
+hyprpwmenu/assets/Font Awesome 6 Free-Solid-900.otf,sha256=0kfdLk-x1LSMi5rwdQNyJ_VEEjjiAyDg8iLAk6EHYRw,1049188
+hyprpwmenu/assets/banner.jpg,sha256=Q2wceo61OM58ByinnMj0tFdTZOQH06mu0_NmsWU0dgI,35457
+hyprpwmenu/assets/config.yaml,sha256=wMjhf2aafmMRWV8Cdfdp2QUc0M9pXKzL_Lb6qnVJxY4,689
+hyprpwmenu/assets/style.css,sha256=vYRaEML5tGr2DpH-tTRrKLtmMkEs1I3jRrB84bO1Xco,2287
+hyprpwmenu-0.1.16.dist-info/METADATA,sha256=kR299vu5i83wK0iBlaAj0oV6A9lSdcYn-lu8zmir6-o,7191
+hyprpwmenu-0.1.16.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hyprpwmenu-0.1.16.dist-info/entry_points.txt,sha256=6f9xh-579TZLkowJ9PEPuvnokOw-NWE13zfyFHDiOTw,47
+hyprpwmenu-0.1.16.dist-info/licenses/LICENSE,sha256=hzatDUY2y22rrj6X6ZwI9cDAi4xFHx1Imymg1jvr8HQ,1076
+hyprpwmenu-0.1.16.dist-info/RECORD,,
