@@ -1,0 +1,11 @@
+assimp_py/assimp_py.pyi,sha256=viHh9QbiDyKD3TNx9MOnk7Iq7nHTJpzAZh4OZRZsZ5U,1961
+assimp_py/assimp_py.cpython-39-powerpc64le-linux-gnu.so,sha256=BSjptC9csTI1D5rCq-hMX_dV-a5Dec2Oe2HLGXL-2cI,13406529
+assimp_py/__init__.py,sha256=WBs1pXsxJihp5kONygZoeAfU1zJPj7_gJqXJMyNlG3o,24
+assimp_py-1.1.0.dist-info/top_level.txt,sha256=US-2pUlGIE_GjnxrgwEBFPOKuWXWfd4PY1Dr_7ay3Ts,10
+assimp_py-1.1.0.dist-info/METADATA,sha256=FeJgSFK4_mdiT-sndS9QW7gR3XY5tH2jkPe4DDwI4HI,3847
+assimp_py-1.1.0.dist-info/RECORD,,
+assimp_py-1.1.0.dist-info/WHEEL,sha256=hPGgZhU_kB--iF8qYt63mya28tapeoVoROsq3XAimyQ,111
+assimp_py-1.1.0.dist-info/licenses/LICENSE,sha256=TVWkcbN4N9JkYDqYigMu7tvhc8E7eyUynN5RIvrrpeo,1067
+assimp_py-1.1.0.dist-info/licenses/src/assimp/LICENSE,sha256=FHh0RD0kK04rrpcDbibsnWs39wYXTBvV7PzIwSlM71E,3791
+assimp_py.libs/libstdc++-29c3693a.so.6.0.32,sha256=7pf4QLdG7P4-aVKnlhOHU7zBGpB-CaqtnNcVcYKmyD8,4173945
+assimp_py.libs/libgcc_s-18b5a48e.so.1,sha256=X8nOhj6mV31CR0pvcD4XBrQK5m2OqE48A-QRQDIm-e4,200345
