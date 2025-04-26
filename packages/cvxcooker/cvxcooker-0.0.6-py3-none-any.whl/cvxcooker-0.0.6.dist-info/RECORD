@@ -1,0 +1,9 @@
+cvx/cook.py,sha256=qv4QQIicJcb-E_PG-PovCVc4_r8rLF_fkzxq1pH-T7I,1940
+cvx/cooker/__init__.py,sha256=FjtVvzBiMgxkG8wKzAzESexxe-jdDw7C3NgUwBwnF30,639
+cvx/cooker/parse.py,sha256=8X4nyRUetqt9F5lWi2Dgl_TBdjnUTGLS94SIy0lMgHU,1130
+cvx/templates/readme/README.md,sha256=17lENTUOyUWSpxhgBITPWAkydl7d8zuTgq7F7mQLImg,639
+cvxcooker-0.0.6.dist-info/METADATA,sha256=hIFq-rPpEpeLFHxYgTuW7CtVNcnrVu1NAWqze9Xy51s,2954
+cvxcooker-0.0.6.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+cvxcooker-0.0.6.dist-info/entry_points.txt,sha256=qqgGRvl9HIyxYTmIoPH2jRUBlYZ-OUE1PGb8yVtEi2w,39
+cvxcooker-0.0.6.dist-info/licenses/LICENSE,sha256=psuoW8kuDP96RQsdhzwOqi6fyWv0ct8CR6Jr7He_P_k,10173
+cvxcooker-0.0.6.dist-info/RECORD,,
