@@ -1,0 +1,10 @@
+active_semi_supervised_clustering>=0.0.1
+clustering_benchmarks>=1.0.0
+cvxopt<1.4
+matplotlib<3.11
+numpy<2.3
+polars<1.28
+setuptools<79.1
+scikit_fuzzy
+scikit_learn
+scipy<1.16
