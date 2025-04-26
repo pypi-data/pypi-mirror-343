@@ -1,0 +1,17 @@
+es_to_pinecone_transfer/__init__.py,sha256=YNkuPVpQpd24pdrsLo5Rt1UM4DOHzYs2F78yUIfxLjI,544
+es_to_pinecone_transfer/elasticsearch_client.py,sha256=93iCJShB7af9yBzwi7LgHeEG8TqYwQWkuZCdqUMvzu4,7004
+es_to_pinecone_transfer/embeddings.py,sha256=eGZmPjxudOv_A02HqusLya2fsAd9xXdI4jA8U6mFCr4,6353
+es_to_pinecone_transfer/exceptions.py,sha256=zNTl7-OXSOt37V0xbtPHDiR3Gc78DEnTrYy8ieYFpMg,782
+es_to_pinecone_transfer/pinecone_client.py,sha256=70gldknfOo2YSj1qPQyYcu85hP_y93wkxN-Pe_OKc-k,7886
+es_to_pinecone_transfer/pipeline.py,sha256=Bvfh1wK27Ugct8uuHJG93K5A8cFa1801FODaF07baNg,10585
+es_to_pinecone_transfer/utils.py,sha256=jz2KCXAt3u7n7IuvNaVzHcQmb_tktlaEiS8AvTNyTts,5551
+tests/__init__.py,sha256=qqzshmnoEBH3VcX5m8xvf-1Z2S31Y8NsuEzC-2OGRKE,55
+tests/test_elasticsearch_client.py,sha256=YD1mwxVmeoBKatWeNi19UgwD2aLsNewxhqBKvmdBVA8,11535
+tests/test_embeddings.py,sha256=uF_7CdTi2CEVSvFdc1bzEmdrSz5fYIgkbZowtnovUFg,7433
+tests/test_pinecone_client.py,sha256=z_C4mqdjfMb7Pw678VjBfW0AGg9F6efQhTA7sHZr6AQ,8838
+tests/test_pipeline.py,sha256=aBCJj0H-v1qDELs6GvrLEyz9EZwdwH7m2WNcbo7V2fQ,5855
+es_to_pinecone_transfer-0.1.0.dist-info/METADATA,sha256=bE0AU5H1xyrcevL3qq4f5JN_XWhjYliEJSyyTGb6gJo,4822
+es_to_pinecone_transfer-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+es_to_pinecone_transfer-0.1.0.dist-info/entry_points.txt,sha256=jfoHJ-ORjvKn6-Rf6-WifKyH5TzIyUaehgYdbdEsHp8,73
+es_to_pinecone_transfer-0.1.0.dist-info/top_level.txt,sha256=1XThFy45yrn7pAh3CuHxrZh9NfOV64SaAjNTz1-SJpY,30
+es_to_pinecone_transfer-0.1.0.dist-info/RECORD,,
