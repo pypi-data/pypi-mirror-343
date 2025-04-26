@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cnstats-py"
+version = "0.0.3"
+authors = [
+  { name="Clsrfish", email="clsrfish@gmail.com" },
+]
+description = "Download macroeconomic data from China's National Bureau of Statistics (data.stats.gov.cn)."
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "requests",
+    "pandas",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/clsrfish/cnstats-py"
+"Bug Tracker" = "https://github.com/clsrfish/cnstats-py/issues"
+
+[project.optional-dependencies]
+excel = ["openpyxl"]
+dev = [
+    "black",
+    "pytest",
+    "build",
+    "twine",
+]
+
+[tool.black]
+line-length = 88
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "DEBUG"
+log_cli_format = "%(asctime)s [%(levelname)s] %(name)s: %(message)s (%(filename)s:%(lineno)s)"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"

@@ -1,0 +1,11 @@
+requests
+pandas
+
+[dev]
+black
+pytest
+build
+twine
+
+[excel]
+openpyxl
