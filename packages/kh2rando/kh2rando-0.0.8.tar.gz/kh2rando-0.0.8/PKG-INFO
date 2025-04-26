@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: kh2rando
+Version: 0.0.8
+Summary: A collection of tools for KH2 Randomizer
+Author-email: Jeff Hobson <jeff@possiblybad.com>
+License-Expression: Apache-2.0
+Project-URL: Homepage, https://kh2rando.com
+Project-URL: Issues, https://github.com/tommadness/KH2RandomizerGenerator/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: ==3.9.*
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: altgraph==0.17.2
+Requires-Dist: bitstring==3.1.9
+Requires-Dist: khbr==4.0.5
+Requires-Dist: pillow==9.3.0
+Requires-Dist: PyYAML==5.4.1
+Dynamic: license-file
+
+# KH2RandomizerGenerator
+
+⚠ Under development! Main branch is not guaranteed to be in a working state! ⚠
+
+This is a fork of [KH2Randomizer](https://github.com/tommadness/KH2Randomizer) for development of a headless version of the seed generator.
