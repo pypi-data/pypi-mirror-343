@@ -1,0 +1,12 @@
+hladl/__init__.py,sha256=lOmKOWTG5iyueflGoqwFsCvYN1JvJ9auxGHvntHp0mI,186
+hladl/download.py,sha256=aPDMdWraOcBYSuT37NMtGQu6rNug6Q4TiLgn2DuDsH0,2536
+hladl/get_seq.py,sha256=pAU1Hf67ZAeozkzaGPdpvPacuS1TNWqJON75bh5fHLA,2219
+hladl/hladlfunctions.py,sha256=awRZF_zp8d6HeYZl5ctZVn4R9nM6Pzmu2PWAj1XVsjo,5172
+hladl/infer_allele.py,sha256=MDTlvmPsIrPV5USgVvloHwH4SpshPCu5EmX9zPrDHzs,5502
+hladl/main.py,sha256=kUdtC0DypyQqEEc1VO3DsltgjitReQLvmNxfSiYjq0s,4232
+hladldata/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hladl-0.2.0.dist-info/LICENSE,sha256=QHi0lFUi8o4Rs8pM3Se65HVPBPBx9dm25CNxgBu8Pqo,1074
+hladl-0.2.0.dist-info/METADATA,sha256=1MxCG6ozWsvSXfk33hhPM_BA6eZ44QuIPUNAafM7RVY,9489
+hladl-0.2.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+hladl-0.2.0.dist-info/entry_points.txt,sha256=D3Xak1C30i_lRDilmv053oDg0wOH_mp1NktcYdqd-vA,40
+hladl-0.2.0.dist-info/RECORD,,
