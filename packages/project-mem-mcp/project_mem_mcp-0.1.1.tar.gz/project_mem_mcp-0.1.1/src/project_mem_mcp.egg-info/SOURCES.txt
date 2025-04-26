@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/project_mem_mcp/__init__.py
+src/project_mem_mcp/server.py
+src/project_mem_mcp.egg-info/PKG-INFO
+src/project_mem_mcp.egg-info/SOURCES.txt
+src/project_mem_mcp.egg-info/dependency_links.txt
+src/project_mem_mcp.egg-info/entry_points.txt
+src/project_mem_mcp.egg-info/requires.txt
+src/project_mem_mcp.egg-info/top_level.txt
