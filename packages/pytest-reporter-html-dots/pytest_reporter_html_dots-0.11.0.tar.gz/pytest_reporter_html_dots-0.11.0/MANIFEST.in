@@ -1,0 +1,6 @@
+include LICENSE
+include README.rst
+graft pytest_reporter_html_dots/templates/html-dots
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
