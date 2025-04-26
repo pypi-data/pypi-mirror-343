@@ -1,0 +1,16 @@
+example/example1/main.py,sha256=qUbxI09yfqBmLkptqFl2Ll4J6sQoMZYxbLEspWJVu6I,1150
+example/example2/main.py,sha256=srIxinwJKeKGIPuo-3EWGDmI9zdquGchpsBzEd3boI4,803
+gamuLogger/__init__.py,sha256=GXP_tz0mS7bIgomCtO6PSTOqafwCHMfSAZK5TFMstNo,382
+gamuLogger/config.py,sha256=BawmsqzElP3mjnFQ9PhhWsr-ns7_Rr7mCjNaQEGN6rg,1513
+gamuLogger/custom_types.py,sha256=Yl04A_KTW8i5y-dsohQVWjQbizbCpZelAvm52LXKbWs,17695
+gamuLogger/gamu_logger.py,sha256=R9dGs-ZyUsDPCOf30vgm1E3NoD59ZAW2H4gVLj_G5cY,18132
+gamuLogger/utils.py,sha256=qOLo08xiIqMBbrawXltnNbNCMqpS8u4JNTzOY4Og1lE,4476
+gamulogger-3.1.1.dist-info/licenses/LICENSE,sha256=Q_O4Ccc2r80E1JcTyE3T-aFlXeGHYbRjnyFqdAhFPek,1068
+tests/config_test.py,sha256=fJBSSBqouV6Z6HTB_A0V2UDabe-zupZWrZS6nir41fA,5092
+tests/customTypes_test.py,sha256=i0uaJSc_vEpauJ4UH6c_UVaB9Bz7Hq7KVtx-pKn6wD4,24206
+tests/gamuLogger_test.py,sha256=VhrMoWsR9ehBOeg3unydhoXzZo9FPFp8uOAMr-79Ycc,8407
+tests/utils_test.py,sha256=D2DkF1SAThbPzSnsIksu-nRJOGAQpjBwNsjNm_oBjAM,8972
+gamulogger-3.1.1.dist-info/METADATA,sha256=_bAwy0G35ixsQ13Bh_MV9C-6R72FcjchE9L9DhvYxGY,3270
+gamulogger-3.1.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+gamulogger-3.1.1.dist-info/top_level.txt,sha256=QrZ9J3cFUJMtzSNIeThCaJ2gmULef495x9s09WYr8YE,35
+gamulogger-3.1.1.dist-info/RECORD,,
