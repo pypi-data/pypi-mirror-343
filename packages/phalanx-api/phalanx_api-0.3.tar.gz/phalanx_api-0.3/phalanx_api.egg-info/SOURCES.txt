@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+dev.txt
+setup.py
+phalanx/__init__.py
+phalanx/api.py
+phalanx/exceptions.py
+phalanx/version_info.py
+phalanx_api.egg-info/PKG-INFO
+phalanx_api.egg-info/SOURCES.txt
+phalanx_api.egg-info/dependency_links.txt
+phalanx_api.egg-info/requires.txt
+phalanx_api.egg-info/top_level.txt
