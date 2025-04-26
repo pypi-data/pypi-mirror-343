@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smarthex"
+version = "0.2.2"
+authors = [
+    { name = "Victor Matos", email = "contact@byteram.co" },
+]
+description = "A library for generating and validating SmartHex16 identifiers"
+readme = "README.md"
+requires-python = ">=3.7"
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+dev = [
+    "black>=23.0.0",
+    "isort>=5.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://byteram.co/opensource/smarthex16"
+"Documentation" = "https://byteram.co/opensource/smarthex16"
+"Repository" = "https://github.com/Byteram/SmartHex16"
+"Bug Tracker" = "https://github.com/Byteram/SmartHex16/issues"
+
+[project.scripts]
+smhex = "smarthex.cli:main"
