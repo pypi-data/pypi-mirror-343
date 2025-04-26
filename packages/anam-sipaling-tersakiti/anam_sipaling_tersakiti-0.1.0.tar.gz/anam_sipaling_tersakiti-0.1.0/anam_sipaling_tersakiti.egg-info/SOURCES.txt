@@ -1,0 +1,7 @@
+README.md
+setup.py
+Kuat/__init__.py
+anam_sipaling_tersakiti.egg-info/PKG-INFO
+anam_sipaling_tersakiti.egg-info/SOURCES.txt
+anam_sipaling_tersakiti.egg-info/dependency_links.txt
+anam_sipaling_tersakiti.egg-info/top_level.txt
