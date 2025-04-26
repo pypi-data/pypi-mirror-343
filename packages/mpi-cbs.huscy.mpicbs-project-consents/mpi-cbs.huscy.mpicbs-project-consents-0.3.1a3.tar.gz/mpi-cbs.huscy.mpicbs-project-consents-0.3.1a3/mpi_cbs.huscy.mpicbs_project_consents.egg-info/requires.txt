@@ -1,0 +1,9 @@
+huscy.project_consents
+mpi-cbs.huscy.subjects-wrapper
+
+[development]
+psycopg2-binary
+
+[testing]
+tox
+watchdog==0.9

@@ -1,0 +1,18 @@
+<h1>Signed consents for project "{{ view.project.title }}"</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>signed</th>
+    </tr>
+  </thead>
+  </tbody>
+    {% for consent_file in object_list %}
+    <tr>
+      <td>{{ consent_file.subject }}</td>
+      <td>{{ consent_file.created_at }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
