@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: RPG-Dice-Roller
+Version: 1.0.1
+Author: Milton Ávila
+License: MIT License
+Requires-Python: >=3.9.4
+Description-Content-Type: text/markdown
+
+# 🎲 Dice Roller Parser
+
+Uma biblioteca Python leve e extensível para interpretar e rolar dados no estilo RPG (ex: `2d6+1d4-2`). Ideal para jogos, bots de Discord, sistemas de mesa...
+
+![MIT License](https://img.shields.io/badge/license-MIT-green)
+![Made with 💻](https://img.shields.io/badge/made%20with-python-blue)
+![PyPI](https://img.shields.io/pypi/v/RPG-Dice-Roller)
+
+## ✨ Funcionalidades
+
+- Interpreta expressões de dados como `2d6+1d4-2`
+- Suporta múltiplos dados e bônus/penalidades
+- Fornece range de valores mínimos e máximos
+- Valida entradas automaticamente
+
+## 🧙‍♂️ Exemplos de uso
+
+```python
+from dice_roller import roll_dice, get_dice_range, get_dice_rolled
+
+print(roll_dice("2d6+1d4-2"))      # Ex: 10
+print(get_dice_range("2d6+1d4-2"))  # Ex: {'min': 3, 'max': 17}
+print(get_dice_rolled())          # Total de rolagens realizadas
+```
+
+## 📦 Instalação
+Utilize o comando pypi:
+
+```bash
+pip install RPG-Dice-Roller
+```
+
+Ou clone manualmente:
+
+```bash
+git clone https://github.com/Milton-Avila/Rpg-Dice-Roller.git
+cd dice-roller
+pip install .
+```
+
+## 🛠 Estrutura do projeto
+
+```bash
+dice_roller/
+├── __init__.py
+├── src/
+│   ├── models/
+│   │   ├── dice_input.py
+│   │   ├── dice_controller.py
+│   │   └── errors.py
+│   └── functions/
+│       ├── dice_roll.py
+│       └── statistics.py
+```
+
+## 📜 Licença
+
+MIT — faça bom uso, modifique, distribua, e se for monetizar... me chama pra rolar uns dados 😄
+
+## 💌 Contribuindo
+
+Sinta-se livre pra abrir issues, enviar PRs ou melhorar qualquer parte do projeto. Feedbacks, bugs e novas ideias são sempre bem-vindos!
+
+## 🎲 Que os dados estejam a seu favor.
