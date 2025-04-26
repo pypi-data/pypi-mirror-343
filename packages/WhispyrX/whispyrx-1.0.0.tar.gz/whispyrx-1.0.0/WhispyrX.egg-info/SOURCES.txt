@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+WhispyrX.egg-info/PKG-INFO
+WhispyrX.egg-info/SOURCES.txt
+WhispyrX.egg-info/dependency_links.txt
+WhispyrX.egg-info/entry_points.txt
+WhispyrX.egg-info/requires.txt
+WhispyrX.egg-info/top_level.txt
+whispyrx/__init__.py
+whispyrx/app.py

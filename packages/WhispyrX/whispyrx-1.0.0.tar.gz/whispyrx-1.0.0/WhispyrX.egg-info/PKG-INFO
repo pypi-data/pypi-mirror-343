@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: WhispyrX
+Version: 1.0.0
+Summary: A peer-to-peer TUI chat app using Textual
+Author: MOHAMMAD SHAHARIAR AHMMED SHOVON
+Author-email: shovonali885@proton.me
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: textual
+Requires-Dist: httpx
+Requires-Dist: requests
+Requires-Dist: sseclient
+Requires-Dist: emoji
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
