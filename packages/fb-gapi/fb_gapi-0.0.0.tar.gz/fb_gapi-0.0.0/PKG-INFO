@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: fb-gapi
+Version: 0.0.0
+Summary: A lightweight Python SDK for sending messages via Facebook Messenger
+Home-page: https://github.com/yourusername/facebook-messenger-sdk
+Author: Jayed
+Author-email: jayedbinjahangir@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+# Facebook Messenger Python SDK
+
+A lightweight Python library to send messages via the Facebook Graph API.
+
+## Installation
+
+```
+pip install -r requirements.txt
+```
+
+## Usage
+
+```python
+from facebook_messenger import MessengerClient
+
+ACCESS_TOKEN = "YOUR_FACEBOOK_PAGE_ACCESS_TOKEN"
+client = MessengerClient(access_token=ACCESS_TOKEN)
+
+response = client.send_text_message(recipient_id="USER_ID", message_text="Hello from Python!")
+print(response)
+```
+
+## Error Handling
+
+The library raises `MessengerAPIError` for API-related errors.
