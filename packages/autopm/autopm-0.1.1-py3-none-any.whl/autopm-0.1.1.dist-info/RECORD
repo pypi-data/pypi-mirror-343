@@ -1,0 +1,8 @@
+autopm/__init__.py,sha256=qPoZ3IaB-XgGVRECOixbfrIsL0UHJAz9-h307x7hIm4,107
+autopm/cli.py,sha256=LD0CJ1igfXTrW9v5uVLoCW0K5WKOSGLxJHg2mzdcraw,862
+autopm/tracker.py,sha256=BOS6NFKtZqxCnh1fhuzHBDJAnlHB_e5xTtY5PUmxRN8,3112
+autopm-0.1.1.dist-info/METADATA,sha256=JRy3XLmRaZXLjkg6iXwrrLsWL37hicWkdfSNJq22yTU,311
+autopm-0.1.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+autopm-0.1.1.dist-info/entry_points.txt,sha256=aaTElz5GtehR2sqkhsB-45b4gIH2jh-Jwyoz7oBPqHY,43
+autopm-0.1.1.dist-info/top_level.txt,sha256=v95G8yk0vyVGO8PfwCZ9xohGndRknpKDi1AKZuDDkGw,7
+autopm-0.1.1.dist-info/RECORD,,
