@@ -1,0 +1,14 @@
+urllib3==2.0.2
+python-dateutil==2.9.0
+pydantic==2.10.4
+typing-extensions==4.12.2
+
+[dev]
+black
+flake8
+mypy
+
+[testing]
+pytest
+pytest-cov
+tox
