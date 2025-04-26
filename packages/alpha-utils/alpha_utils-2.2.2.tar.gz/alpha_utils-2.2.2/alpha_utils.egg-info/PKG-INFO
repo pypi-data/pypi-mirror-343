@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: alpha_utils
+Version: 2.2.2
+Summary: alpha utils
+Home-page: https://github.com/zengbaocheng-996/alpha_utils
+Author: ZENGBAOCHENG
+Author-email: 3180102361@zju.edu.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Cross-section
+
+| Function| Definition |
+|:---|:---|
+|rank(x) | Cross-sectional rank|
+|scale(x, a) | Rescaled x such that sum(abs(x)) = a (the default is a = 1)|
+|indneutralize(x, g) | x cross-sectionally demeaned within groups g (subindustries, industries, etc.)
+
+# Operators
+
+- abs(x), log(x), sign(x), power(x, a) = standard definitions
+- same for the operators “+”, “-”, “*”, “/”, “>”, “<”, “==”, “||”, “x ? y : z”
+
+# Time Series
+
+| Function                | Definition                                                   |
+| :---------------------- | :----------------------------------------------------------- |
+| ts_{O}(x, d)            | Operator O applied to the time-series for the past d days; non-integer number of days d is converted to floor(d) |
+| ts_lag(x, d)            | Value of x d days ago                                        |
+| ts_delta(x, d)          | Difference between the value of x today and d days ago       |
+| ts_weighted_mean(x, d)  | Weighted moving average over the past d days with linearly decaying weights d, d – 1, …, 1 (rescaled to sum up to 1) |
+| ts_sum(x, d)            | Rolling sum over the past d days                             |
+| ts_product(x, d)        | Rolling product over the past d days                         |
+| ts_stddev(x, d)         | Moving standard deviation over the past d days               |
+| ts_rank(x, d)           | Rank over the past d days                                    |
+| ts_min(x, d)            | Rolling min over the past d days \[alias: min(x, d)\]        |
+| ts_max(x, d)            | Rolling max over the past d days \[alias: max(x, d)\]        |
+| ts_argmax(x, d)         | Day of ts_max(x, d)                                          |
+| ts_argmin(x, d)         | Day of ts_min(x, d)                                          |
+| ts_correlation(x, y, d) | Correlation of x and y for the past d days                   |
+| ts_covariance(x, y, d)  | Covariance of x and y for the past d days                    |
