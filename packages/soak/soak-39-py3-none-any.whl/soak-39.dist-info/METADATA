@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: soak
+Version: 39
+Summary: Process aridity templates en masse, like Helm but much more DRY
+Home-page: https://pypi.org/project/soak/
+Author: foyono
+Author-email: shrovis@foyono.com
+Description-Content-Type: text/markdown
+Requires-Dist: aridity >=89
+Requires-Dist: diapyr >=25
+Requires-Dist: lagoon >=52
+Requires-Dist: PyYAML >=5.2
+
+# soak
+Process aridity templates en masse, like Helm but much more DRY.
+
+This README is auto-generated, see [project wiki](https://wikiwheel.net/s/foyono/w/soak) for details.
+
+## Commands
+
+### soak
+Process aridity templates as per all soak.arid configs in directory tree.
+
+## API
+
+<a id="soak.context"></a>
+
+### soak.context
+
+<a id="soak.util"></a>
+
+### soak.util
+
