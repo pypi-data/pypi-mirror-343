@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: tensortrade_tdy
+Version: 1.0.4.dev1
+Summary: TensorTrade: A reinforcement learning library for training, evaluating, and deploying robust trading agents.
+Home-page: https://github.com/tensortrade-org/tensortrade
+Author: Adam King <adamjking3@gmail.com>, Matthew Brulhardt <mwbrulhardt@gmail.com>
+Maintainer: Carlo Grisetti <carlo.grisetti@gmail.com>
+License: Apache 2.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: System :: Distributed Computing
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.11.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.17.0
+Requires-Dist: pandas>=0.25.0
+Requires-Dist: gymnasium>=0.28.1
+Requires-Dist: pyyaml>=5.1.2
+Requires-Dist: stochastic>=0.6.0
+Requires-Dist: tensorflow>=2.7.0
+Requires-Dist: ipython>=7.12.0
+Requires-Dist: matplotlib>=3.1.1
+Requires-Dist: plotly>=4.5.0
+Requires-Dist: deprecated>=1.2.13
+Provides-Extra: tests
+Requires-Dist: pytest>=5.1.1; extra == "tests"
+Requires-Dist: ta>=0.4.7; extra == "tests"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx_rtd_theme; extra == "docs"
+Requires-Dist: sphinxcontrib.apidoc; extra == "docs"
+Requires-Dist: nbsphinx; extra == "docs"
+Requires-Dist: nbsphinx_link; extra == "docs"
+Requires-Dist: recommonmark; extra == "docs"
+Requires-Dist: sphinx_markdown_tables; extra == "docs"
+Requires-Dist: ipykernel; extra == "docs"
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: maintainer
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+TensorTrade: A reinforcement learning library for training, evaluating, and deploying robust trading agents.
