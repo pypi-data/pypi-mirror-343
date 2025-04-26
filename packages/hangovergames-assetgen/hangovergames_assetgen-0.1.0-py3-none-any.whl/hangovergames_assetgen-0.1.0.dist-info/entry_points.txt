@@ -1,0 +1,2 @@
+[console_scripts]
+assetgen = src.main:main
