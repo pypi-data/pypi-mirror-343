@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ddnet-mcpserver"
+version = "0.1.2"
+description = "基于FastMCP的MCP服务器，提供简单的计算和问候功能"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+authors = [
+    {name = "silverhi", email = "molei8686138@gmail.com"}
+]
+dependencies = [
+    "fastmcp>=2.2.3",
+    "mcp>=1.6.0",
+    "psutil>=7.0.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/silverhi/ddnet-mcpserver"
+"Bug Tracker" = "https://github.com/silverhi/ddnet-mcpserver/issues"
+
+[project.scripts]
+ddnet-mcpserver = "ddnet_mcpserver.__main__:main"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.2.0",
+]
