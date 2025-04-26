@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: benson
+Version: 0.1.4
+Summary: A multiverse data cleaning tool for agent pickup.
+Author-email: Krv Analytics <team@krv.ai>
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: dect
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: scikit-learn>=1.6.1
+Requires-Dist: scipy>=1.15.2
+Requires-Dist: torch>=2.6.0
+Dynamic: license-file
+
+# Benson
+
+Benson is the powerhouse behind `Phil`, the advanced imputation engine designed to intelligently handle missing data in complex datasets. Whether you're dealing with high-dimensional gaps, inconsistent encodings, or stubborn anomalies, Benson ensures your data gets the cleanup it deserves—efficiently and at scale.
+
+🔥 **Capabilities**
+
+• Phil 🧩: _PHIL: a Progressive High-Dimensional Imputation Lab._
+
+👉 Phil is an advanced data imputation tool that combines scikit-learn's IterativeImputer with topological methods to generate and analyze multiple versions of a dataset. It allows users to impute missing data using various techniques, generate representations of imputed datasets, and democratically select a representative version.
+
+🚀 **Coming Soon**
+
+• Bob 🛠️: A structured data repair module that cleans, normalizes, and reconciles inconsistencies in your datasets.
+
+• AgentBenson 🤖: A seamless integration layer for popular agentic frameworks, enabling automated data cleaning and repair with minimal intervention.
+
+Stay tuned for more updates as Benson continues to evolve!

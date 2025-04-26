@@ -1,0 +1,16 @@
+benson/__init__.py,sha256=dNgCU3FcL7ttb2FhPwbQrcDtiz6SfX8V8EQnrYVh47o,1622
+benson/gallery.py,sha256=szYwFJdSd9atueK-jKdpItAk3yaP8zlmcJyGHfh3qUA,8845
+benson/phil.py,sha256=b4llazwiGtH-pTCELKxwSt8qwTnxpC4p2l5DedVjHgE,22858
+benson/transformers.py,sha256=0xa7zwoPdc2IjnFFzf8WjRjPuz4epxlfCy0E_HfSiRw,4185
+benson/imputation/__init__.py,sha256=yEw8QswImOEeKNU9TFCz_EXrvQ7Tg5lHvCKnEdCD8S4,372
+benson/imputation/config.py,sha256=9im_ijJglVegxmHFFxGtVY_toSMhzFbQuKDV3ghxUG8,2644
+benson/imputation/distribution.py,sha256=Y874iWYJFjBWaE4FNJ2wgD-Lg6Gz_FQmRPOIoKgy8AA,6577
+benson/magic/__init__.py,sha256=v87tPFtzpYyGZddUN0lm5ElLLH-NepBxxIZDRQrHpXw,358
+benson/magic/base.py,sha256=S6itIMbMtBu7KbiYfyq4Q4VX4DCqnCa2L4in-4Xlgsw,2331
+benson/magic/config.py,sha256=Pyxt5uUL-tW69CHOMgCuPkYSOjUHm2Z9ncpyxAgY47M,2077
+benson/magic/ect.py,sha256=guX9-XDf1rQt5jAGijZs-JRM8SJ4V0Z1BEGp6y0AWbc,5946
+benson-0.1.4.dist-info/licenses/LICENSE,sha256=HfxHaB1HkeMGtfAEnffSxaXnFC6VIy4rrZnTxPD7xJo,1500
+benson-0.1.4.dist-info/METADATA,sha256=PXPNDsakOijzK7lVx7DXe9G4i0qiWLIAF6W2Kcl4y94,1553
+benson-0.1.4.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+benson-0.1.4.dist-info/top_level.txt,sha256=wfg27lypjfDIPJPxX6mfZy7Hf_lLeFDs1VVbI9-7mSc,7
+benson-0.1.4.dist-info/RECORD,,
