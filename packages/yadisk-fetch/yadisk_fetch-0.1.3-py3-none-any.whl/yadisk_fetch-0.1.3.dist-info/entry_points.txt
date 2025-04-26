@@ -1,0 +1,2 @@
+[console_scripts]
+yadisk-fetch = yadisk_fetch:fetch_yadisk
