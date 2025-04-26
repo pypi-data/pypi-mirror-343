@@ -1,0 +1,7 @@
+setup.py
+zbc_package/__init__.py
+zbc_package/my_module.py
+zbc_package.egg-info/PKG-INFO
+zbc_package.egg-info/SOURCES.txt
+zbc_package.egg-info/dependency_links.txt
+zbc_package.egg-info/top_level.txt
