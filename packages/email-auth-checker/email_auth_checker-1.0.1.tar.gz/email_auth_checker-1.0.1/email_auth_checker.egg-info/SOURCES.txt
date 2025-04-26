@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+email_auth_checker/__init__.py
+email_auth_checker/cli.py
+email_auth_checker/email_auth.py
+email_auth_checker/reports.py
+email_auth_checker.egg-info/PKG-INFO
+email_auth_checker.egg-info/SOURCES.txt
+email_auth_checker.egg-info/dependency_links.txt
+email_auth_checker.egg-info/entry_points.txt
+email_auth_checker.egg-info/requires.txt
+email_auth_checker.egg-info/top_level.txt
