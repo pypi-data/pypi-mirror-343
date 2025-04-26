@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+nodegraph = mkdocs_nodegraph.plugin:GraphViewPlugin
