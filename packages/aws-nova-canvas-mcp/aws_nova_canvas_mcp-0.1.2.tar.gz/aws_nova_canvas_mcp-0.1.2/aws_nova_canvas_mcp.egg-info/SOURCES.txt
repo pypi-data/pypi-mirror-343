@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+aws_nova_canvas_mcp.egg-info/PKG-INFO
+aws_nova_canvas_mcp.egg-info/SOURCES.txt
+aws_nova_canvas_mcp.egg-info/dependency_links.txt
+aws_nova_canvas_mcp.egg-info/entry_points.txt
+aws_nova_canvas_mcp.egg-info/requires.txt
+aws_nova_canvas_mcp.egg-info/top_level.txt
+src/__init__.py
+src/config.py
+src/exceptions.py
+src/server.py
