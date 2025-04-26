@@ -1,0 +1,8 @@
+universal_edit_distance-0.4.1.dist-info/METADATA,sha256=lp1oIeFHDK-B08_YWeqE8ONcYD1r3DIz0ifSAqYUPiQ,5989
+universal_edit_distance-0.4.1.dist-info/WHEEL,sha256=eVEPsvxthi8EIBSHZQotyXii-LvSD_KOdtdmmh6i2YM,123
+universal_edit_distance-0.4.1.dist-info/licenses/LICENSE,sha256=cJa4AerEFJAw74to36lNA1_6yKmfgWmKWho-S1YAfKg,1072
+universal_edit_distance/__init__.py,sha256=4sjm-gy4w5bsj100u9Yz7-2FdjAst33_oniMlE2zWUU,175
+universal_edit_distance/__init__.pyi,sha256=JhMASRwB1nKGllAJntDXJ7cTayo0T_snhnRjObjmGvc,5059
+universal_edit_distance/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+universal_edit_distance/universal_edit_distance.cpython-38-i386-linux-gnu.so,sha256=U2RENY7uzxBObV2jmJBduP80y8a0qeNIVY5XSMP_GDc,628884
+universal_edit_distance-0.4.1.dist-info/RECORD,,
