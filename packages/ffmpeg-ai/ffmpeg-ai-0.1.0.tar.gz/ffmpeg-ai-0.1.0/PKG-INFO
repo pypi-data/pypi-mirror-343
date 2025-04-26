@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: ffmpeg-ai
+Version: 0.1.0
+Summary: AI-powered FFmpeg command generator
+Home-page: https://github.com/Aliasgar-Jiwani/ffmpeg-ai
+Author: Aliasgar Jiwani
+Author-email: aliasgarjiwani@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
