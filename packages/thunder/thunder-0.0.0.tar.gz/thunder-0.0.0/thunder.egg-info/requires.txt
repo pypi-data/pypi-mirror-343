@@ -1,0 +1,14 @@
+lightning<3.0.0,>=2.0.0
+lazycon<1.0.0,>=0.6.3
+typer<1.0.0,>=0.9.0
+pydantic<3.0.0
+click
+toolz
+rich
+numpy
+more_itertools
+pyyaml
+deli
+joblib
+pytimeparse
+typing-extensions
