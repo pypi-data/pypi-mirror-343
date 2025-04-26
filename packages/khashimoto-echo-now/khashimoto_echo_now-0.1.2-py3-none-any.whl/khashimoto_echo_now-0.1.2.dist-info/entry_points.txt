@@ -1,0 +1,2 @@
+[uvx]
+khashimoto-echo-now = khashimoto-echo-now.main:main
