@@ -1,0 +1,23 @@
+[project]
+name = "livros_da_biblia"
+version = "0.1.0"
+description = "\"Retorna os livros da bíblia e divisão por categorias\""
+authors = [
+    { name = "Elizeu Barbosa Abreu", email = "elizeubarbosaabreu@outlook.com" },
+]
+dependencies = [
+    "requests>=2.32.3",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-pep517>=1.0.0",
+]
+build-backend = "pdm.pep517.api"
+
+[tool.pdm]
