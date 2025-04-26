@@ -1,0 +1,9 @@
+README.md
+setup.py
+yadisk_fetch.py
+yadisk_fetch.egg-info/PKG-INFO
+yadisk_fetch.egg-info/SOURCES.txt
+yadisk_fetch.egg-info/dependency_links.txt
+yadisk_fetch.egg-info/entry_points.txt
+yadisk_fetch.egg-info/requires.txt
+yadisk_fetch.egg-info/top_level.txt

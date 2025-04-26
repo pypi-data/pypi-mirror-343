@@ -1,0 +1,58 @@
+Metadata-Version: 2.4
+Name: yadisk-fetch
+Version: 0.1.3
+Summary: Download Yandex.Disk folders easily by faking mobile browser headers
+Author: YourName
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# yadisk-fetch
+
+Download public Yandex.Disk folders easily by faking a mobile browser and bypassing "install our app" popups.
+
+## Why?
+
+Yandex tries to force desktop users to install their app when downloading large folders.  
+Mobile users, however, can download directly without installing anything.  
+This tool pretends to be a mobile browser and lets you download files and folders directly.
+
+## Installation
+
+```
+pip install yadisk-fetch
+```
+
+## Usage
+
+```
+yadisk-fetch <public_yandex_disk_link>
+```
+
+Example:
+
+```
+yadisk-fetch https://disk.yandex.ru/d/gWW6aj1qWDdfTg
+```
+
+The file will be downloaded and saved as `yadisk_download.zip` in the current directory.
+
+## Notes
+
+- Only works for public links.
+- Large folders are automatically zipped by Yandex for mobile devices — this tool takes advantage of that.
+- If Yandex triggers a CAPTCHA, you may need to manually solve it in a browser first.
+
+## License
+
+MIT License
