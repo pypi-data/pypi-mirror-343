@@ -1,0 +1,40 @@
+Metadata-Version: 2.2
+Name: blacknet-os
+Version: 1.0
+Summary: A hacker OS terminal-based toolset with web browsing, port scanning, reverse shells, and more
+Home-page: https://github.com/your-repo
+Author: Xscripts Inc.
+Author-email: sunnyplaysyt9@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# BLACKNET OS
+
+BLACKNET OS is a terminal-based hacking toolset for performing a variety of tasks such as web browsing, port scanning, reverse shells, and keylogging.
+
+## Features
+- Web browser (CLI-based)
+- Port scanner
+- Reverse shell listener
+- Keylogger
+- Local network sweep
+- Python code execution
+
+## Installation
+
+To install BLACKNET OS, you can download and install from PyPI:
+
+```bash
+pip install blacknet-os
