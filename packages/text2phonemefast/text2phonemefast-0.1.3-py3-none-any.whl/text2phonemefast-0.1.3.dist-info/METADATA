@@ -1,0 +1,112 @@
+Metadata-Version: 2.2
+Name: text2phonemefast
+Version: 0.1.3
+Summary: A Python Library to convert text to phoneme sequence fast - used for XPhoneBERT (Forked and enhanced from original work by Linh The Nguyen)
+Home-page: https://github.com/manhcuong02/Text2PhonemeFast
+Author: Nguyễn Mạnh Cường
+Author-email: manhcuong17072002@gmail.com
+Maintainer: Nguyễn Mạnh Cường
+Maintainer-email: manhcuong17072002@gmail.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: transformers==4.51.3
+Requires-Dist: tqdm==4.67.1
+Requires-Dist: segments==2.3.0
+Requires-Dist: unidecode==1.4.0
+Requires-Dist: torch==2.7.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# text2phonemefast: A Python Library for Fast Text to Phoneme Conversion
+
+> **Fork Notice**: This repository is maintained by [Nguyễn Mạnh Cường](https://github.com/manhcuong02) as a fork with enhancements from the original [Text2PhonemeSequence](https://github.com/thelinhbkhn2014/Text2PhonemeSequence) library created by Linh The Nguyen. Thanks to Linh The Nguyen and the co-developers of the project.
+
+This repository is an enhanced and faster version of the original [Text2PhonemeSequence](https://github.com/thelinhbkhn2014/Text2PhonemeSequence) library, which converts text to phoneme sequences for [XPhoneBERT](https://github.com/VinAIResearch/XPhoneBERT).
+
+## Key Improvements
+
+### Vietnamese Pronunciation Fixes
+
+- ✅ Fixed "uy" incorrectly pronounced as "ui"
+- ✅ Fixed "gì" incorrectly pronounced as "ghì" 
+- ✅ Fixed "oo" sound pronunciation
+- ✅ Fixed "r", "d", "gi" being pronounced identically
+- 🔄 In progress: Fixing "s" and "x" pronounced identically
+
+### Performance & Architecture Enhancements
+
+- ✅ Applied phoneme post-processing to the dataset inference method (improved consistency)
+- ✅ Refactored codebase for better organization and maintainability
+- ✅ Created a unique phoneme dictionary per word (instead of segmenting) for improved speed
+- ✅ Allow saving words that have never appeared in the G2P dictionary before, so that they do not need to be processed again through the pretrained G2P model, which helps improve speed
+- ✅ Merging Vietnamese and English TSV dictionaries for easier multilingual support (Prioritize Vietnamese in case of overlapping sounds, with an estimated 405 overlapping sounds).
+
+### Supported Dictionaries
+
+This library supports several specialized pronunciation dictionaries:
+
+- **Standard dictionaries** - Automatically downloaded from CharsiuG2P when needed (e.g., `vie-n.tsv`, `eng-us.tsv`)
+- **Enhanced dictionaries** - Specifically optimized for better performance:
+  - `vie-n.unique.tsv` - Vietnamese dictionary with optimized pronunciation
+  - `eng-us.unique.tsv` - English dictionary with optimized pronunciation
+  - `vie-n.mix-eng-us.tsv` - Mixed Vietnamese-English dictionary for multilingual support
+
+When using the `.unique` or `.mix` dictionaries, the library will automatically download them from our repository. These specialized dictionaries provide better pronunciation accuracy, especially for Vietnamese.
+
+## Installation <a name="install"></a>
+
+To install **text2phonemefast**:
+
+```
+$ pip install text2phonemefast
+```
+
+## Usage Examples <a name="example"></a>
+
+This library uses [CharsiuG2P](https://github.com/lingjzhu/CharsiuG2P/tree/main) and [segments](https://pypi.org/project/segments/) toolkits for text-to-phoneme conversion. Information about `pretrained_g2p_model` and `language` can be found in the [CharsiuG2P](https://github.com/lingjzhu/CharsiuG2P/tree/main) repository.
+
+**Note**: For languages where words are not separated by spaces (e.g., Vietnamese and Chinese), an external tokenizer should be used before feeding the text into the library.
+
+```python
+from text2phonemefast import Text2PhonemeFast
+
+# Load Text2PhonemeFast
+model = Text2PhonemeFast(
+    pretrained_g2p_model='charsiu/g2p_multilingual_byT5_small_100',
+    tokenizer="google/byt5-small",
+    g2p_dict_path="vie-n.unique.tsv",
+    device="cpu", # or cuda
+    language="vie-n",
+)
+
+# Convert a raw corpus
+model.infer_dataset(input_file="/absolute/path/to/input/file", output_file="/absolute/path/to/output/file") 
+
+# Convert a raw sentence
+model.infer_sentence("'xin chào tôi là Mạnh Cường .")
+##Output: "s i n ˧˧ ▁ c a w ˧˨ ▁ t o j ˧˧ ▁ l a ˧˨ ▁ m ɛ ŋ ˨ˀ˩ ʔ ▁ k ɯ ə ŋ ˧˨ ▁ ."
+```
+
+## Credits
+
+This project is a fork of the original work developed by:
+- **Linh The Nguyen** - Original author of Text2PhonemeSequence
+- **VinAI Research** - Developers of [XPhoneBERT](https://github.com/VinAIResearch/XPhoneBERT)
+
+### Current Maintainer
+- **Nguyễn Mạnh Cường** ([manhcuong02](https://github.com/manhcuong02) or [manhcuong17072002](https://github.com/manhcuong17072002)) - Enhanced features and fixes for Vietnamese pronunciation
+
