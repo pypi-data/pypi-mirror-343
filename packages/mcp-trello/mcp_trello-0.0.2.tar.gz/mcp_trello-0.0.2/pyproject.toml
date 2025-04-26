@@ -1,0 +1,21 @@
+[project]
+name = "mcp-trello"
+version = "0.0.2"
+description = "MCP server for Trello integration"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "httpx>=0.24.0",
+]
+
+[project.scripts]
+mcp-trello = "mcp_trello.__init__:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/mcp-trello"
+"Bug Tracker" = "https://github.com/yourusername/mcp-trello/issues"

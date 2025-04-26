@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-trello = mcp_trello.__init__:main

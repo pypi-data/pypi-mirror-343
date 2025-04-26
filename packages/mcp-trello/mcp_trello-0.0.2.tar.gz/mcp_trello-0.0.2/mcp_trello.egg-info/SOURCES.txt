@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+mcp_trello/__init__.py
+mcp_trello/server.py
+mcp_trello.egg-info/PKG-INFO
+mcp_trello.egg-info/SOURCES.txt
+mcp_trello.egg-info/dependency_links.txt
+mcp_trello.egg-info/entry_points.txt
+mcp_trello.egg-info/requires.txt
+mcp_trello.egg-info/top_level.txt
