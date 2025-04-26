@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+amisproxy/__init__.py
+amisproxy/admin.py
+amisproxy/apps.py
+amisproxy/models.py
+amisproxy/tests.py
+amisproxy/urls.py
+amisproxy/views.py
+amisproxy/migrations/__init__.py
+django_amisproxy.egg-info/PKG-INFO
+django_amisproxy.egg-info/SOURCES.txt
+django_amisproxy.egg-info/dependency_links.txt
+django_amisproxy.egg-info/requires.txt
+django_amisproxy.egg-info/top_level.txt
