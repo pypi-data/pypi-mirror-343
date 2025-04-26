@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+src/email_stuff.py
+src/email_stuff.egg-info/PKG-INFO
+src/email_stuff.egg-info/SOURCES.txt
+src/email_stuff.egg-info/dependency_links.txt
+src/email_stuff.egg-info/top_level.txt
