@@ -1,0 +1,10 @@
+ag_utils-0.0.1.dist-info/licenses/LICENSE,sha256=dFiSqzJlwcr7gr8Z2CwdydQRiJ9Y5CaVI0cNPAoEBf4,1072
+agutils/__init__.py,sha256=9OThpHlsWafDlaiROUHjeigS6qDKRqcPV-aRiI7MoCo,187
+agutils/classproperty.py,sha256=pEwpioSEL6YLBLKVO1tG33FidvPVIY4Dkyni1mxKF2Q,260
+agutils/colored_message.py,sha256=4VHoq70rLs0E1quXJ_D0tDtG1ae58JXUvvfn4WgkfiY,2440
+agutils/decorator_injector.py,sha256=k9UGzxSLpZLQY5jQLkE-Weci5GXry0fvXJGkdH2J5Kc,781
+agutils/logger_meta.py,sha256=qx1VhIdTia4hPafSKZ8Qmm7I_d_OAsDk11n-Xv_2XM8,6545
+ag_utils-0.0.1.dist-info/METADATA,sha256=rgbeyX3wFs32o5lx0DZwIWo7BwhUvstsdgEs6oacH6Y,447
+ag_utils-0.0.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+ag_utils-0.0.1.dist-info/top_level.txt,sha256=mgZlGysFQtivQthvDimxMhA9mGF8mDU7RIeD2cLDJIg,8
+ag_utils-0.0.1.dist-info/RECORD,,
