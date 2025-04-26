@@ -1,0 +1,51 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = [
+    "SecuredFiles",
+    "metadata.json",
+    "hatch_plugin.py"
+]
+
+
+[project]
+dynamic = ["name", "version", "authors", "description"]
+keywords = ["Secured", "Files", "File"]
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Topic :: File Formats",
+    "Topic :: Security :: Cryptography",
+    "Development Status :: 6 - Mature",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3 :: Only",
+]
+license = "GPL-3.0-or-later"
+license-files = ["LICEN[CS]E*"]
+
+dependencies = [
+    "cryptography>=41.0.3",
+    "PyQt5"
+]
+
+[project.urls]
+Homepage = "https://github.com/LassaInora/SecuritedFiles"
+Repository = "https://github.com/LassaInora/SecuredFiles.git"
+Issues = "https://github.com/LassaInora/SecuritedFiles/issues"
+
+[tool.hatch.metadata.hooks.custom]
+path = "hatch_plugin.py"
+
+[tool.hatch.build.hooks.custom]
+path = "hatch_plugin.py"
