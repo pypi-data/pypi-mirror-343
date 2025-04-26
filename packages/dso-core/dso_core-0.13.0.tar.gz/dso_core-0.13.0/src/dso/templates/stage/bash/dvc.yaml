@@ -1,0 +1,14 @@
+stages:
+  "{{ name }}":
+    params: []
+    deps: []
+    outs:
+      - output
+    cmd:
+      - |
+        bash -euo pipefail << EOF
+
+        # add bash code here
+        mkdir -p output && echo "Hello World" > output/hello.txt
+
+        EOF
