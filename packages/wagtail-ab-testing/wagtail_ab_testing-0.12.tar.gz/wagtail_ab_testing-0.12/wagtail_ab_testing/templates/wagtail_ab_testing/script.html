@@ -1,0 +1,6 @@
+{% load static %}
+
+{% if track %}
+    {{ tracking_parameters|json_script:"abtesting-tracking-params" }}
+    <script src="{% static 'wagtail_ab_testing/js/tracker.js' %}" defer async></script>
+{% endif %}
