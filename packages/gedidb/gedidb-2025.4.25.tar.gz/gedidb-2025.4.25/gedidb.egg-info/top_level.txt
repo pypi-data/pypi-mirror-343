@@ -1,0 +1,6 @@
+ci
+dist
+doc
+examples
+gedidb
+paper
