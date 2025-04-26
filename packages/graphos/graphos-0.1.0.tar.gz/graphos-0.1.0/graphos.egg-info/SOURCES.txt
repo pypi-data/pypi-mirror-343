@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+graphos.egg-info/PKG-INFO
+graphos.egg-info/SOURCES.txt
+graphos.egg-info/dependency_links.txt
+graphos.egg-info/requires.txt
+graphos.egg-info/top_level.txt
