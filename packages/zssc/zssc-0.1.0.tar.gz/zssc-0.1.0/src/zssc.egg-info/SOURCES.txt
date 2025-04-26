@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/zssc/cache.py
+src/zssc.egg-info/PKG-INFO
+src/zssc.egg-info/SOURCES.txt
+src/zssc.egg-info/dependency_links.txt
+src/zssc.egg-info/top_level.txt
