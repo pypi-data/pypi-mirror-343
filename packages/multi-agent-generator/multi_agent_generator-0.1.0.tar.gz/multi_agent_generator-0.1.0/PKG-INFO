@@ -1,0 +1,113 @@
+Metadata-Version: 2.4
+Name: multi-agent-generator
+Version: 0.1.0
+Summary: Generate multi-agent AI teams using CrewAI, LangGraph, and ReAct
+Home-page: https://github.com/aakriti1318/multi-agent-generator
+Author: Your Name
+Author-email: Your Name <your@email.com>
+License: MIT
+Project-URL: Homepage, https://github.com/aakriti1318/multi-agent-generator
+Project-URL: Bug Tracker, https://github.com/aakriti1318/multi-agent-generator/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: streamlit>=1.22.0
+Requires-Dist: crewai>=0.28.0
+Requires-Dist: langchain>=0.1.0
+Requires-Dist: langgraph>=0.0.10
+Requires-Dist: openai>=1.0.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: pydantic>=2.0.0
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# Multi-Agent Generator
+
+A powerful tool that transforms plain English instructions into fully configured multi-agent AI teams - no scripting, no complexity. Powered by OpenAI GPT models with an intuitive Streamlit UI.
+
+## Features
+
+- Generate agent code for multiple frameworks:
+  - **CrewAI**: Structured workflows for multi-agent collaboration
+  - **CrewAI Flow**: Event-driven workflows with state management
+  - **LangGraph**: LangChain's framework for stateful, multi-actor applications
+  - **ReAct**: Reasoning + Acting framework for adaptive AI agents
+
+- **User-Friendly Interface**: Streamlit-based UI for effortless code generation
+- **Intelligent Analysis**: Analyzes natural language requirements to suggest appropriate agents, roles, and tasks
+- **Visualizations**: View agent relationships, workflow paths, and execution flow
+
+## Installation
+
+```bash
+pip install multi-agent-generator
+```
+
+## Prerequisites
+
+- OpenAI API key
+- Environment variables setup
+  - `OPENAI_API_KEY`: Your OpenAI API key
+
+## Usage
+
+### Command Line
+
+```bash
+multi-agent-generator "I need a research assistant that summarizes papers and answers questions" --framework crewai
+```
+
+### Streamlit UI
+
+```bash
+streamlit run -m multi_agent_generator.streamlit_app.app
+```
+
+## Examples
+
+### Research Assistant
+
+```
+I need a research assistant that summarizes papers and answers questions
+```
+
+### Content Creation Team
+
+```
+I need a team to create viral social media content and manage our brand presence
+```
+
+### Data Analysis
+
+```
+I need a team to analyze customer data and create visualizations
+```
+
+## Frameworks
+
+### CrewAI
+
+CrewAI is a framework for orchestrating role-playing autonomous AI agents. It allows you to create a crew of agents that work together to accomplish tasks, with each agent having a specific role, goal, and backstory.
+
+### CrewAI Flow
+
+CrewAI Flow extends CrewAI with event-driven workflows. It enables you to define multi-step processes with clear transitions between steps, maintaining state throughout the execution, and allowing for complex orchestration patterns like sequential, parallel, and conditional execution.
+
+### LangGraph
+
+LangGraph is LangChain's framework for building stateful, multi-actor applications with LLMs. It provides a way to create directed graphs where nodes are LLM calls, tools, or other operations, and edges represent the flow of information between them.
+
+### ReAct
+
+ReAct (Reasoning + Acting) is a framework that combines reasoning and action in LLM agents. It prompts the model to generate both reasoning traces and task-specific actions in an interleaved manner, creating a synergy between the two that leads to improved performance.
+
+## License
+
+MIT
