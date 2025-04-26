@@ -1,0 +1,6 @@
+py-bsor
+
+[dev]
+pytest>=6.0
+pytest-cov
+black
