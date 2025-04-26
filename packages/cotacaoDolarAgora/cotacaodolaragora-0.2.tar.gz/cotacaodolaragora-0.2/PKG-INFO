@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: cotacaoDolarAgora
+Version: 0.2
+Summary: Busca a cotação do dólar em tempo real utilizando a API da AwesomeAPI
+Home-page: https://github.com/riconrado/cotacaoDiaria
+Author: Ricardo Conrado
+Author-email: riconrado1976@hotmail.com
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: certifi==2025.1.31
+Requires-Dist: charset-normalizer==3.4.1
+Requires-Dist: idna==3.10
+Requires-Dist: requests==2.32.3
+Requires-Dist: setuptools==79.0.1
+Requires-Dist: urllib3==2.4.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+## CotaÃ§Ã£o do DÃ³lar Agora
+
+Busca a cotaÃ§Ã£o do dÃ³lar em tempo real utilizando a API da AwesomeAPI
