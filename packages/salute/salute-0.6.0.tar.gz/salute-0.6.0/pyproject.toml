@@ -1,0 +1,20 @@
+[project]
+name = "salute"
+version = "0.6.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "loguru>=0.7.3",
+    "pydantic>=2.11.3",
+    "sanic>=25.3.0",
+    "twine>=6.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+]
+
+[project.scripts]
+salute = "salute.cli.cli:command"
