@@ -1,0 +1,13 @@
+office_assistant_mcp/__init__.py,sha256=cibhmweOraCBwITo0Q25MHCzOpd6IjsMdpS5iUVcGcE,223
+office_assistant_mcp/brand_list_lower.txt,sha256=Sm6hkYHRzBSJZhUHE_sNEHMsakz5Gge90xe0AAvT1rw,98769
+office_assistant_mcp/category.json,sha256=ko8mkSpMR-MNNB7dFxYO1XSI9PILcm1aJMHq---8-FY,61455
+office_assistant_mcp/log_util.py,sha256=ZACrsRL41Fr91nxNfxcdxo-wKj40BD3PHzydPxjnUFM,4554
+office_assistant_mcp/mcp_server.py,sha256=aGZOmRgLa5YVjr_yNqwyqUNHLpGahiX_aZUpgrwzFIE,20417
+office_assistant_mcp/playwright_message.py,sha256=QqZCGngdtpHYdursXNsLjEakCaOgskXz4bbR_m3SeU4,9026
+office_assistant_mcp/playwright_util.py,sha256=PY1m1XoVfFOHvti-W7ifRvoMsqGmjjzeZTQjYHfl-Nk,27915
+office_assistant_mcp/prompt.py,sha256=v_gFzoYfW-QL5eI5beKz1SfLK3jGVjoX0cSAb_0hrlo,7057
+office_assistant_mcp-0.0.14.dist-info/METADATA,sha256=OkOIB6LMQY4apflqzLYgfMMHvK4e-6XpTQfy9RpHTyk,990
+office_assistant_mcp-0.0.14.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+office_assistant_mcp-0.0.14.dist-info/entry_points.txt,sha256=4McTbA8E4czby-whDPW_qukmK0sYloRRAqOZ9s5CpLU,78
+office_assistant_mcp-0.0.14.dist-info/top_level.txt,sha256=GF6-dDZP-yOWb8XR8FB22Ax8FI5l6L7DVydNt_NsJ5Y,21
+office_assistant_mcp-0.0.14.dist-info/RECORD,,
