@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: hunyuan-image-mcp
+Version: 0.1.1
+Summary: Hunyuan Image MCP
+Home-page: UNKNOWN
+Author: YuanqiMcp
+Author-email: yuanqi_mcp@tencent.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.10
+Requires-Dist: mcp
+Requires-Dist: httpx
+Requires-Dist: uvicorn
+
+UNKNOWN
+
+
