@@ -1,0 +1,41 @@
+[build-system]
+requires = [
+    "scikit-build-core>=0.11",  # PEP 639 compliant
+]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "swashes"
+version = "1.05.00"
+description = "A Python package for the SWASHES executable."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "CECILL-2.0" }
+authors = [
+    { name = "Laurent Courty", email = "lrntct@gmail.com" }
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: C++",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Hydrology",
+]
+dependencies = []
+
+[project.scripts]
+swashes = "swashes:main"
+
+[project.urls]
+Homepage = "https://www.idpoisson.fr/swashes/"
+Repository = "https://github.com/lrntct/swashes-python"
+
+[tool.scikit-build]
+cmake.source-dir = "."
+wheel.install-dir = "swashes/data"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
