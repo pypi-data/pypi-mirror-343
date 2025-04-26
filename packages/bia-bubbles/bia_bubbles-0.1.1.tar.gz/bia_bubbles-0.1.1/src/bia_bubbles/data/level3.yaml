@@ -1,0 +1,25 @@
+children:
+- children: []
+  filename: null
+  id: 1
+  name: filter/transpose_xy
+  type: intensity
+  x: 622.0606608732473
+  y: 482.7138285230496
+filename: blobs.tif
+id: 0
+name: original
+type: intensity
+view_settings:
+  rotation: 0
+  scale: 1.2
+x: 300.1254057454881
+y: 256.7721276159198
+title: "Level 3: Spatial transformations"
+function_filters:
+- transpose_xy
+- rotate_clockwise
+- rotate_counterclockwise
+- flip_x
+- flip_y
+
