@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: ultrasound_processing
+Version: 0.1.0
+Summary: Ultrahang képfeldolgozó csomag
+Home-page: https://github.com/Mart-SciecPyt/ScPytone_ultrasound_processing
+Author: A Te Neved
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: opencv-python
+Requires-Dist: scipy
+Requires-Dist: Pillow
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# ScPytone_ultrasound_processing
+Ultrasound image transformation and noise removal package
