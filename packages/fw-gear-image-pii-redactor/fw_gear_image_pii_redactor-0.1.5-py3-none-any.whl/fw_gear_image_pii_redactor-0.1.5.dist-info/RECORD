@@ -1,0 +1,8 @@
+fw_gear_image_pii_redactor/__init__.py,sha256=vsnmdHccCFfQyksyfW_8stTmY6hyeNe3HlEN5zJiic4,162
+fw_gear_image_pii_redactor/main.py,sha256=AKCBKGkg3p4o23CPpMubocR4RcJ61WpV1u1AUJ_9yV4,4776
+fw_gear_image_pii_redactor/parser.py,sha256=rmbQexhpBCYFsRcX7cf0qCrYkVhRwv2ouLf6soOIMQE,1553
+fw_gear_image_pii_redactor/utility_helpers.py,sha256=Vz13hSgH07xUPryp0dqwtyaK9llJEXEYkpUWOtpjvwU,5294
+fw_gear_image_pii_redactor-0.1.5.dist-info/LICENSE,sha256=NNC8xrLtqnhvmkJdOB71ctPp2jBi_2V5u9RzRVEpBcs,1092
+fw_gear_image_pii_redactor-0.1.5.dist-info/METADATA,sha256=C7SJP2oc63WS9GFRy8MRt8oiHN3gAZZqWQ-QbDOUr-w,595
+fw_gear_image_pii_redactor-0.1.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+fw_gear_image_pii_redactor-0.1.5.dist-info/RECORD,,

@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: fw-gear-image-pii-redactor
+Version: 0.1.5
+Summary: 
+Author: Flywheel
+Author-email: support@flywheel.io
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: flywheel-gear-toolkit (>=0.6,<0.7)
+Requires-Dist: flywheel-sdk (>=18,<19)
+Requires-Dist: fw-client (>=0.8,<0.9)
+Requires-Dist: fw-file (>=3.4,<4.0)
+Requires-Dist: numpy (>=1.26,<2.0)
+Requires-Dist: pydicom (>=2.3,<3.0)
