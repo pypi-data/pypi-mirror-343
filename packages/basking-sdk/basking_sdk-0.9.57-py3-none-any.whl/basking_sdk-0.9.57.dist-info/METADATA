@@ -1,0 +1,134 @@
+Metadata-Version: 2.1
+Name: basking-sdk
+Version: 0.9.57
+Summary: Basking.io python SDK
+Home-page: https://basking.io
+Author: Basking Automation GmbH
+Author-email: info@basking.io
+License: Copyright © 2022 Basking Automation GmbH
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+        IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        
+Project-URL: Homepage, https://basking.io
+Keywords: occupancy analytics data api bas basking basking.io
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: backoff (>=2.0.0)
+Requires-Dist: boto3 (>=1.0.0)
+Requires-Dist: botocore (>=1.0.0)
+Requires-Dist: certifi
+Requires-Dist: charset-normalizer
+Requires-Dist: graphqlclient (>=0.2.0)
+Requires-Dist: idna
+Requires-Dist: jmespath
+Requires-Dist: numpy
+Requires-Dist: pandas (>=1.0.0)
+Requires-Dist: python-dateutil (>=2.0.0)
+Requires-Dist: pytz
+Requires-Dist: requests (>=2.0.0)
+Requires-Dist: s3transfer
+Requires-Dist: six
+Requires-Dist: urllib3
+
+# Basking.io SDK
+
+Integrate your data with the Basking API, customize the reports & experience,
+and join the community of developers building with workplace software apps together with Basking.
+
+Basking.io is a cloud based workplace occupancy platform.
+More Information about Basking can be found here: https://basking.io
+
+Basking uses a GraphQL API. The following Python SDK is a wrapper around the production API
+designed for our customers that require to access to data programmatically.
+
+## Requirements
+
+* python >=3.7 (current tested version: 3.9)
+* pipenv
+* A [basking.io account](https://app.basking.io)
+
+## Getting started
+
+#### set the following environment variables:
+* `BASKING_USERNAME`: Your username (usually your email)
+* `BASKING_USER_PASSWORD`: Your password for Basking. 
+* _Optional_: `BASKING_AWS_REGION`: the aws region where your Basking.io instance is hosted. (Defaults to `eu-central-1`)
+* _Optional_: `BASKING_API_URL`: the url of the Basking API you would like to query. (Defaults to `api.basking.io`)
+
+```
+from basking.basking_sdk import Basking
+
+logger.info('initialize the SDK. See constructor documentation for parameter overrides')
+basking = Basking()
+
+logger.info('List sites the current user has access to')
+sites = basking.location.get_user_buildings(pandify=False)
+
+logger.info('Select a site from the list of sites')
+site_id = sites[0]['id']
+organization_id = sites[0]['organizationId']
+start_date_obj = date(2025, 1, 1)
+end_date_obj = date(2025, 1, 14)
+
+logger.info('get site meta data')
+site_meta_data = basking.location.get_building(
+    building_id=site_id
+)
+
+logger.info('get building daily occupancy statistics')
+df_daily = basking.occupancy.get_building_occupancy_stats_daily(
+    building_id=site_id,
+    start_date=start_date_obj,
+    end_date=end_date_obj,
+    pandify=True,
+    # floor_ids=[site_meta_data['data']['getBuilding']['floors'][0]['id']]
+)
+
+logger.info('metadata for all site areas')
+areas_meta_data = basking.location.get_floor_areas_for_building(
+    building_id=site_id
+)
+
+logger.info('get the density of the last 7 days')
+density_last_week = basking.occupancy.get_density_for_building_last_days(
+    building_id=site_id,
+    days=7
+)
+
+logger.info('Frequency of Visits at Site Level')
+df_freq_of_visits = basking.occupancy.get_location_frequency_of_visits(
+    building_id=site_id,
+    start_date=start_date_obj,
+    end_date=end_date_obj,
+    pandify=True
+)
+
+logger.info('Duration of Visits at Site Level')
+df_duration_of_visits = basking.occupancy.get_location_duration_of_visits(
+    building_id=site_id,
+    start_date=start_date_obj,
+    end_date=end_date_obj,
+    pandify=True
+)
+
+logger.info('Popular Visitation days at Site Level')
+df_preferred_visit_day = basking.occupancy.get_location_popular_days_of_visits(
+    building_id=site_id,
+    start_date=start_date_obj,
+    end_date=end_date_obj,
+    pandify=True
+)
+```
+
+
+For more examples, see `basking.api_usage_example`, or [contact us](https://basking.io/contact-us/)
