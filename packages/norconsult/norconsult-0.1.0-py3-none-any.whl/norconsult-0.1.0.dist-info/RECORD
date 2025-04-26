@@ -1,0 +1,12 @@
+norconsult/__init__.py,sha256=0P2vhWhmspQWSUsWnyeAgz_of4LvMGpkzj6UqSmUPEw,379
+norconsult/all_formulas.py,sha256=_tbYxfBQAt0v99npxN-t6NDy08szJ1keT8K5rAbYo1Q,12201
+norconsult/all_simple.py,sha256=0mlqXRKwrF0bLuIVcv9rxP62eUcx8at0k2gI0yz59S0,1267
+norconsult/other_utilities.py,sha256=FIAbbB2soRHnPMo5qsnFI82w8ewmqUWBsM3psq1zCMI,1660
+norconsult/sosi_calc.py,sha256=klu3TEi1cM8hAZq7o67o9JkZWvu2RyFMQC1lxShG3P8,14171
+norconsult/test.py,sha256=LRRQrb2UrjMTW0Ke0T6MOyzYGPT1VcazVUiVZjTAOsw,2045
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/testcodes.py,sha256=Z6_nxAJvnHPuTyuYd-O6ZD8qrxudQ2jMMdSX-Sk9YME,3035
+norconsult-0.1.0.dist-info/METADATA,sha256=NqZqgOp9DIXLLxVUZQuGWsVmuNZxXiNyRL2qS3EQZ6M,966
+norconsult-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+norconsult-0.1.0.dist-info/top_level.txt,sha256=tqiB_y_vx8toz4DTA8pZa4Ya90ChG5fTq8vb1ZuVYJE,16
+norconsult-0.1.0.dist-info/RECORD,,
