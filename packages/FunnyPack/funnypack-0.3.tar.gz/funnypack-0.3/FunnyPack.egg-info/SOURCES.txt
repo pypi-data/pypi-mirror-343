@@ -1,0 +1,5 @@
+setup.py
+FunnyPack.egg-info/PKG-INFO
+FunnyPack.egg-info/SOURCES.txt
+FunnyPack.egg-info/dependency_links.txt
+FunnyPack.egg-info/top_level.txt
