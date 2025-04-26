@@ -1,0 +1,5 @@
+13:37:54,772 igfash DEBUG Number of physical cores: 14
+13:37:54,772 igfash.io DEBUG Looking for magnitudes with label Mw
+13:37:55,351 igfash INFO M mode - Magnitude distribution modeling
+13:37:55,351 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+13:38:06,354 igfash INFO Magnitude KDE Computation time: 11.0 seconds

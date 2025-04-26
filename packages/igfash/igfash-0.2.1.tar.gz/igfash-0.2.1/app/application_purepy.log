@@ -1,0 +1,69 @@
+18:32:25,212 igfash DEBUG Number of physical cores: 14
+18:32:25,212 igfash.io DEBUG Looking for magnitudes with label Mw
+18:32:25,529 igfash INFO M mode - Magnitude distribution modeling
+18:32:25,529 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+18:32:31,517 igfash INFO Magnitude KDE Computation time: 6.0 seconds
+18:32:31,728 igfash INFO L mode - Location distribution modeling
+18:32:31,728 igfash INFO Computing KDE of each window...
+18:32:31,995 igfash INFO 2D KDE Computation time: 0.3 seconds
+18:32:33,746 igfash INFO R mode - activity Rate modeling
+18:32:33,747 igfash.io DEBUG Looking for magnitudes with label Mw
+18:32:36,179 igfash DEBUG Activity rates [4.96666667 4.66666667] with percentages [0.5 0.5]
+18:32:36,179 igfash INFO Forecast mode - seismic hazard asssessment
+18:32:36,179 igfash DEBUG Verification that f(x,y) is normalized; Sum of all f(x,y) values = 0.9999999999999999
+18:32:36,279 igfash INFO Estimating ground motion at 11 grid points...
+18:32:36,279 igfash INFO Estimating 0.03
+18:33:57,209 igfash.gm DEBUG Copied into openquake gsim directory: C:\igf\git\igfash\igfash\gsim\lasocki_2013.py
+18:33:57,307 igfash.gm DEBUG Copied into openquake gsim directory: C:\igf\git\igfash\igfash\gsim\lasocki_2013.py
+18:33:57,310 igfash DEBUG Number of physical cores: 14
+18:33:57,310 igfash.io DEBUG Looking for magnitudes with label Mw
+18:33:57,548 igfash INFO M mode - Magnitude distribution modeling
+18:33:57,549 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+18:34:03,400 igfash INFO Magnitude KDE Computation time: 5.9 seconds
+18:34:03,587 igfash INFO L mode - Location distribution modeling
+18:34:03,588 igfash INFO Computing KDE of each window...
+18:34:03,590 igfash INFO 2D KDE Computation time: 0.0 seconds
+18:34:05,190 igfash INFO R mode - activity Rate modeling
+18:34:05,190 igfash.io DEBUG Looking for magnitudes with label Mw
+18:34:07,680 igfash DEBUG Activity rates [4.96666667 4.66666667] with percentages [0.5 0.5]
+18:34:07,681 igfash INFO Forecast mode - seismic hazard asssessment
+18:34:07,681 igfash DEBUG Verification that f(x,y) is normalized; Sum of all f(x,y) values = 0.9999999999999999
+18:34:07,781 igfash INFO Estimating ground motion at 11 grid points...
+18:34:07,781 igfash INFO Estimating 1.0
+18:36:24,26 igfash INFO Ground motion exceedance computation time: 136.2 seconds
+18:41:14,122 igfash.gm DEBUG Copied into openquake gsim directory: C:\igf\git\igfash\igfash\gsim\lasocki_2013.py
+18:41:14,190 igfash.gm DEBUG Copied into openquake gsim directory: C:\igf\git\igfash\igfash\gsim\lasocki_2013.py
+18:41:14,193 igfash DEBUG Number of physical cores: 14
+18:41:14,193 igfash.io DEBUG Looking for magnitudes with label Mw
+18:41:14,428 igfash INFO M mode - Magnitude distribution modeling
+18:41:14,429 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+18:41:20,587 igfash INFO Magnitude KDE Computation time: 6.2 seconds
+18:41:20,773 igfash INFO L mode - Location distribution modeling
+18:41:20,774 igfash INFO Computing KDE of each window...
+18:41:20,776 igfash INFO 2D KDE Computation time: 0.0 seconds
+18:41:22,393 igfash INFO R mode - activity Rate modeling
+18:41:22,393 igfash.io DEBUG Looking for magnitudes with label Mw
+18:41:24,946 igfash DEBUG Activity rates [4.96666667 4.66666667] with percentages [0.5 0.5]
+18:41:24,946 igfash INFO Forecast mode - seismic hazard asssessment
+18:41:24,947 igfash DEBUG Verification that f(x,y) is normalized; Sum of all f(x,y) values = 0.9999999999999999
+18:41:25,54 igfash INFO Estimating ground motion at 11 grid points...
+18:41:25,54 igfash INFO Estimating 1.0
+18:43:45,965 igfash INFO Ground motion exceedance computation time: 140.9 seconds
+18:47:02,97 igfash.gm DEBUG Copied into openquake gsim directory: C:\igf\git\igfash\igfash\gsim\lasocki_2013.py
+18:47:02,163 igfash.gm DEBUG Copied into openquake gsim directory: C:\igf\git\igfash\igfash\gsim\lasocki_2013.py
+18:47:02,166 igfash DEBUG Number of physical cores: 14
+18:47:02,166 igfash.io DEBUG Looking for magnitudes with label Mw
+18:47:02,402 igfash INFO M mode - Magnitude distribution modeling
+18:47:02,402 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+18:47:08,486 igfash INFO Magnitude KDE Computation time: 6.1 seconds
+18:47:08,674 igfash INFO L mode - Location distribution modeling
+18:47:08,675 igfash INFO Computing KDE of each window...
+18:47:08,677 igfash INFO 2D KDE Computation time: 0.0 seconds
+18:47:10,294 igfash INFO R mode - activity Rate modeling
+18:47:10,294 igfash.io DEBUG Looking for magnitudes with label Mw
+18:47:12,700 igfash DEBUG Activity rates [4.96666667 4.66666667] with percentages [0.5 0.5]
+18:47:12,700 igfash INFO Forecast mode - seismic hazard asssessment
+18:47:12,700 igfash DEBUG Verification that f(x,y) is normalized; Sum of all f(x,y) values = 0.9999999999999999
+18:47:12,801 igfash INFO Estimating ground motion at 11 grid points...
+18:47:12,802 igfash INFO Estimating 1.0
+18:49:52,940 igfash INFO Ground motion exceedance computation time: 160.1 seconds

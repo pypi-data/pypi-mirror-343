@@ -1,0 +1,44 @@
+18:55:17,671 igfash.io DEBUG Looking for magnitudes with label Mw
+18:55:17,823 igfash INFO M mode - Magnitude distribution modeling
+18:55:17,824 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+18:55:17,845 igfash INFO Magnitude KDE Computation time: 0.0 seconds
+18:55:17,875 igfash INFO L mode - Location distribution modeling
+18:55:17,875 igfash INFO Computing KDE of each window...
+18:55:18,87 igfash INFO 2D KDE Computation time: 0.2 seconds
+18:55:19,537 igfash INFO R mode - activity Rate modeling
+18:55:19,537 igfash.io DEBUG Looking for magnitudes with label Mw
+18:55:21,522 igfash DEBUG Activity rates [4.96666667 4.66666667] with percentages [0.5 0.5]
+18:55:21,522 igfash INFO Forecast mode - seismic hazard asssessment
+18:55:21,523 igfash DEBUG Verification that f(x,y) is normalized; Sum of all f(x,y) values = 1.0000000000000002
+18:55:21,525 igfash INFO Estimating ground motion at 6 grid points...
+18:55:21,526 cy_brenth INFO Receiver: 3
+18:55:21,526 cy_brenth INFO Function value at PGA = 0.0 : 84.84575591823295
+18:55:21,526 cy_brenth INFO Function value at PGA = 10.0 : 0.08267614982715295
+18:55:21,526 cy_brenth INFO Function value at PGA = 20.0 : -0.03681821347674211
+18:55:21,529 igfash INFO Estimated PGA at rx 3 is 13.405236528453147
+18:55:21,529 cy_brenth INFO Receiver: 6
+18:55:21,530 cy_brenth INFO Function value at PGA = 0.0 : 84.84575591823295
+18:55:21,530 cy_brenth INFO Function value at PGA = 10.0 : 0.08267614982715295
+18:55:21,530 cy_brenth INFO Function value at PGA = 20.0 : -0.03681821347674211
+18:55:21,532 igfash INFO Estimated PGA at rx 6 is 13.405236528453147
+18:55:21,533 cy_brenth INFO Receiver: 7
+18:55:21,533 cy_brenth INFO Function value at PGA = 0.0 : 84.84575591823295
+18:55:21,533 cy_brenth INFO Function value at PGA = 10.0 : 0.08267614982715295
+18:55:21,533 cy_brenth INFO Function value at PGA = 20.0 : -0.03681821347674211
+18:55:21,535 igfash INFO Estimated PGA at rx 7 is 13.405236528453147
+18:55:21,536 cy_brenth INFO Receiver: 11
+18:55:21,536 cy_brenth INFO Function value at PGA = 0.0 : 84.84575591823295
+18:55:21,536 cy_brenth INFO Function value at PGA = 10.0 : 0.08267614982715295
+18:55:21,536 cy_brenth INFO Function value at PGA = 20.0 : -0.03681821347674211
+18:55:21,538 igfash INFO Estimated PGA at rx 11 is 13.405236528453147
+18:55:21,539 cy_brenth INFO Receiver: 12
+18:55:21,539 cy_brenth INFO Function value at PGA = 0.0 : 84.84575591823295
+18:55:21,540 cy_brenth INFO Function value at PGA = 10.0 : 0.08267614982715295
+18:55:21,540 cy_brenth INFO Function value at PGA = 20.0 : -0.03681821347674211
+18:55:21,542 igfash INFO Estimated PGA at rx 12 is 13.405236528453147
+18:55:21,543 cy_brenth INFO Receiver: 16
+18:55:21,543 cy_brenth INFO Function value at PGA = 0.0 : 84.84575591823295
+18:55:21,543 cy_brenth INFO Function value at PGA = 10.0 : 0.08267614982715295
+18:55:21,543 cy_brenth INFO Function value at PGA = 20.0 : -0.03681821347674211
+18:55:21,545 igfash INFO Estimated PGA at rx 16 is 13.405236528453147
+18:55:21,546 igfash INFO Ground motion exceedance computation time: 0.0 seconds
