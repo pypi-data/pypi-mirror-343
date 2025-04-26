@@ -1,0 +1,14 @@
+kvp/__init__.py,sha256=gtR4AwsZQxDRtvy8cEi78kXtvXN-oJJdEQ5pT6ijpA4,2560
+kvp/api.py,sha256=zkJP9a9_odPflnTa3EPPe_iKh5sarrZHvfKd3iJU8TI,13545
+kvp/callers.py,sha256=ZwshlIDO_QjNDdOns7MPeCOt8AplrY9pwBnGqDk8z3k,14163
+kvp/cf.py,sha256=0SNtYmXYD3kNNOEYHgH9NueRQvI82MooeRoj6YdYbgI,4678
+kvp/filter.py,sha256=OA8NsUFzU_L-T4jQklZ9EZGvx2wxBzuPiYMqkNQbDtY,5332
+kvp/picker.py,sha256=3_Fard1kzk1tOJnurM1EisC_mxWbmkoeOGF_9Fdxy5A,9206
+kvp/trigger.py,sha256=xGUkTzvtBSAwmkRsgaqdm44FhH1z_qyBKE1zs6GE0yE,6303
+kvp/lib/__init__.py,sha256=yp-bctDS-viqP8twSxW9pAaBAuKyyXx1FQ46Mz1JSN0,3540
+kvp/lib/libkvp-maco.so,sha256=KVgDHTsTHT_a-0XBYypJkQAmCmBCXsIhWj6EmGiKR_0,34864
+kvp-0.1.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+kvp-0.1.0.dist-info/METADATA,sha256=15mfukEIcHtlqRnQxW_tW5L9w_WvCvjHf6VgnSxOFtw,41076
+kvp-0.1.0.dist-info/WHEEL,sha256=dtgwo8rBVhCpjxN9dau7--rW9Mhl9jvZlIS83NVpTGU,104
+kvp-0.1.0.dist-info/top_level.txt,sha256=ItRKgNcntAbANh6_lX8XuV2CzzNYT8_BliJT6nuSh_0,4
+kvp-0.1.0.dist-info/RECORD,,
