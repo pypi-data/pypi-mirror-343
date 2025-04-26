@@ -1,0 +1,2 @@
+database_wrapper==0.1.84
+pymssql>=2.2.10
