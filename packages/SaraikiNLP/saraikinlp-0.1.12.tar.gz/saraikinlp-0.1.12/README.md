@@ -1,0 +1,42 @@
+# SaraikiNLP: The Python NLP Framework for Saraiki Language Research
+
+<div align="center">
+<a href="https://github.com/SaraikiNLP/SaraikiNLP"><img src="https://img.shields.io/badge/Github-SaraikiNLP-blue?logo=github"/></a>
+<a href="https://huggingface.co/SaraikiNLP"><img src="https://img.shields.io/badge/Hugging%20Face-SaraikiNLP-yellow?logo=huggingface"/></a>
+<a href="https://github.com/SaraikiNLP/SaraikiNLP/graphs/contributors"><img src="https://img.shields.io/github/contributors/SaraikiNLP/SaraikiNLP.svg" /></a>
+<a href="https://pepy.tech/project/SaraikiNLP"><img src="https://pepy.tech/badge/SaraikiNLP" /></a>
+<a href="https://github.com/SaraikiNLP/SaraikiNLP/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" /></a>
+</div>
+
+<img src="https://raw.githubusercontent.com/SaraikiNLP/SaraikiNLP/main/Images/SaraikiNLP_stylized_logo.jpg" alt="Saraiki NLP logo with stylized script and the letters 'NLP' below, framed with traditional decorative borders." style="width:100%; height:100%;">
+
+## Introduction
+
+**SaraikiNLP** is the world's first and fundamental **Python framework** for **Saraiki language research**. It comes with **basic NLP functions** to help researchers, students, and anyone interested in Saraiki NLP work.
+
+<br>
+
+## Why Saraiki?
+
+### About the Saraiki Language
+
+**Saraiki (skr)** is an **Indo-Aryan** language spoken by over 25–30 million people, primarily in Pakistan. It is spoken in **Southern Punjab** in cities like **Multan**, **Bahawalpur**, **Dera Ghazi Khan**, and **Rahim Yar Khan**, and extends into parts of **Sindh**, **Balochistan**, and **Khyber Pakhtunkhwa**. Despite its rich linguistic and cultural heritage, Saraiki remains underrepresented in NLP and computational research.
+
+### Why Should One Work on Saraiki NLP?
+
+Despite having millions of speakers, Saraiki still lacks digital resources, computational tools, and NLP support. Major challenges include:
+
+- **Limited Text Datasets** – Few machine-readable corpora are available.
+- **Minimal NLP Research** – There is less work on tokenization, lemmatization, named entity recognition (NER), or speech recognition.
+- **No Official Status** – Unlike Urdu or Punjabi, Saraiki lacks mainstream software support in AI and ML applications.
+
+### The Goal of SaraikiNLP
+
+The **SaraikiNLP project** aims to:
+
+- **Developing Core NLP Tools** – Implement normalization, tokenization, lemmatization, stemming, and NER models.
+- **Promote Saraiki Research** – Increase awareness and support for research in this low resource language.
+
+## Copyright and license
+
+Code released under the [MIT License](https://github.com/SaraikiNLP/SaraikiNLP/blob/master/LICENSE.md).
