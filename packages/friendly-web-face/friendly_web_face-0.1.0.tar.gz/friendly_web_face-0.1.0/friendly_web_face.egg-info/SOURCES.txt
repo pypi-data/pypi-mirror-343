@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+friendly_web_face/__init__.py
+friendly_web_face/ip_utils.py
+friendly_web_face/translation.py
+friendly_web_face/web_content.py
+friendly_web_face.egg-info/PKG-INFO
+friendly_web_face.egg-info/SOURCES.txt
+friendly_web_face.egg-info/dependency_links.txt
+friendly_web_face.egg-info/requires.txt
+friendly_web_face.egg-info/top_level.txt
