@@ -1,0 +1,14 @@
+django_xmlrpc_dx/__init__.py,sha256=mXjBWmZslBK37i-cIsmdKcGrnWX7-T1UYcLunU-YB7c,1990
+django_xmlrpc_dx/apps.py,sha256=tcBGRNPFeEKbl9duwuH0gwy-QOeEl_o-YC2A_dc1c3A,2119
+django_xmlrpc_dx/decorators.py,sha256=sOBqZ7_ArarRvAxYZgPdEzlsMMckT0hz6-0bp1ssGvw,6282
+django_xmlrpc_dx/dispatcher.py,sha256=e7MZBRP-9MLDZcBBxuhSPLQx7byVpeDhb9J1mKGEYFA,3073
+django_xmlrpc_dx/registry.py,sha256=xkJWUEuWflXOf0nsFbAjnrbQK0T7Ha-lo3RVy4Dfmp4,5318
+django_xmlrpc_dx/views.py,sha256=zFQ8q2N7PgnuQxRGh8z-OETt5y5lNHRSVM8eF1isL1w,3439
+django_xmlrpc_dx/locale/fr/LC_MESSAGES/django.mo,sha256=LabZOBA0j00iMx206SVH0WPmfe2iCsAcXlo-Er6Fkak,1030
+django_xmlrpc_dx/locale/fr/LC_MESSAGES/django.po,sha256=W7IEguQsiuI7SSG6YYa4kFXXtAQwPnmfYX8TFRRAVuI,1446
+django_xmlrpc_dx/templates/xmlrpc_get.html,sha256=OdxiUGVUmhDTUEr-j1Z2l45FaIS6iO1g7Bn7w_Kj_AU,699
+django_xmlrpc_dx-0.1.9.dist-info/licenses/LICENSE,sha256=pqw6a8f7PLX_v4BrEr-9oKjWe8g9R205tOTdIHmHpPU,1472
+django_xmlrpc_dx-0.1.9.dist-info/METADATA,sha256=NJ4hNnaFnrkNdp89dVJRX4rWybbg2zA9FRvqFSIHzfw,3118
+django_xmlrpc_dx-0.1.9.dist-info/WHEEL,sha256=AeO2BvogYWm3eGaHCvhzmUYt8ia7KfURiHzO_1atlys,109
+django_xmlrpc_dx-0.1.9.dist-info/top_level.txt,sha256=FLQAAN0cHNbsu_b3QcNyRUtT8ZzTdgC22Kb3rD9kZCM,17
+django_xmlrpc_dx-0.1.9.dist-info/RECORD,,
