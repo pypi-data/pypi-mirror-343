@@ -1,0 +1,13 @@
+syntax = "proto3";
+package topk.control.v1;
+
+import "google/api/annotations.proto";
+import "topk/control/v1/schema.proto";
+
+message Collection {
+  string name = 1;
+  string org_id = 2;
+  string project_id = 3;
+  map<string, FieldSpec> schema = 4;
+  string region = 5;
+}
