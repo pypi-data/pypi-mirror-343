@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: feluda-cluster-embeddings
+Version: 0.1.4
+Requires-Python: >=3.10
+Requires-Dist: numpy<2.2.0,>=1.26
+Requires-Dist: scikit-learn>=1.6.1
