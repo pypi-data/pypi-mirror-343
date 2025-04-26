@@ -1,0 +1,11 @@
+ipykernel>=6.20
+pandas>=2
+matplotlib>=3.4
+metaflow>=2.9
+wandb>0.15
+plotly>=4
+jinja2>=3
+scikit-learn>=1
+numpy<2,>=1.17.3
+regex>=2022.10.31
+colorama>=0.4
