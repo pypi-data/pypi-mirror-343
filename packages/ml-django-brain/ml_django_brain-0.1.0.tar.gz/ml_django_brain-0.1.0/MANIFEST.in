@@ -1,0 +1,25 @@
+include LICENSE
+include README.md
+include MANIFEST.in
+include pyproject.toml
+
+recursive-include ml_django_brain/static *
+recursive-include ml_django_brain/templates *
+recursive-include ml_django_brain/migrations *
+recursive-include ml_django_brain/management *
+recursive-include ml_django_brain/templatetags *
+
+# Include documentation
+recursive-include docs *
+
+# Exclude development and test files
+prune tests
+prune example_project
+prune docs/_build
+prune *.egg-info
+prune .git
+prune .github
+prune venv
+prune env
+prune __pycache__
+global-exclude *.py[cod] __pycache__ *.so .DS_Store
