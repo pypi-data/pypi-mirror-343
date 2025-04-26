@@ -1,0 +1,11 @@
+o25/O25_hyp.py,sha256=NF87aN3jnMwY9xZgSw_0eZLiAhFZMepaGwoRXSYVYTg,3756
+o25/__init__.py,sha256=VIl-K_isCdV-v9FkKAjisbQiLhUtY-ygcfByQGj__Kg,64
+o25/test_O25.py,sha256=3u5kjkGPCyo0u_ODlAC8gLktbKhAK1oApS2gxoRNLUg,6934
+o25/Aux_functions/__init__.py,sha256=VIl-K_isCdV-v9FkKAjisbQiLhUtY-ygcfByQGj__Kg,64
+o25/Aux_functions/get_G_O25_4D.py,sha256=H8j-cBKMUrdPMSqGOerxkrT6d3yIXUD3h57rOlmdm9U,2275
+o25/Aux_functions/get_aw_bbw.py,sha256=m6JekKXlSxdWMMatkSQ6wSA8qy9ijAR3inMQxtvIjlU,1810
+o25-0.1.9.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+o25-0.1.9.dist-info/METADATA,sha256=v7Adp42kQLZFdMd71nFSIZ0qTw2YJDjA-Ior63b7UP8,44829
+o25-0.1.9.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+o25-0.1.9.dist-info/top_level.txt,sha256=hCrk-b5ruj9oNZebySrW__QgiDdy6QW8CM5UfVPQSHc,4
+o25-0.1.9.dist-info/RECORD,,
