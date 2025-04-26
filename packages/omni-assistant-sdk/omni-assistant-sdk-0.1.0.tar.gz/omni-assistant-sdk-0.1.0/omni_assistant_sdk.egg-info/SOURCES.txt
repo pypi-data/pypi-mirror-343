@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+omni_assistant_sdk.egg-info/PKG-INFO
+omni_assistant_sdk.egg-info/SOURCES.txt
+omni_assistant_sdk.egg-info/dependency_links.txt
+omni_assistant_sdk.egg-info/requires.txt
+omni_assistant_sdk.egg-info/top_level.txt
+omnidim/__init__.py
+omnidim/client.py
+omnidim/resources/__init__.py
