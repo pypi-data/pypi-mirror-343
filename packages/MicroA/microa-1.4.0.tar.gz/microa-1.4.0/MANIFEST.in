@@ -1,0 +1,5 @@
+recursive-include microa *
+recursive-include microaAdmin *
+
+include requirements.txt
+include README.md
