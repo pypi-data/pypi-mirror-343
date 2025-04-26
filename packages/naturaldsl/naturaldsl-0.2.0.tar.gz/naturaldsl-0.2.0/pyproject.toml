@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "naturaldsl"
+version = "0.2.0"
+description = "A human-first natural language programming language for data science"
+readme = "README.md"
+authors = [
+    { name = "Praduman Sharma", email = "prdmn.shrm@gmail.com" }
+]
+license = { text = "MIT" }
+dependencies = [
+    "dask[complete]",  # Complete Dask installation
+    "seaborn",         # Data visualization
+    "matplotlib",      # Plotting library
+    "pandas",          # Data manipulation
+    "numpy"            # Numerical operations
+]
+requires-python = ">=3.6"
+
+[project.scripts]
+naturaldsl = "cli:main"  # Entry point to the CLI main function in cli.py
+
+[tool.setuptools.packages.find]
+where = ["."]
