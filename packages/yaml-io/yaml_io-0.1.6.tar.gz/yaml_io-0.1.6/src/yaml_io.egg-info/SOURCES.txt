@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.py
+src/yaml_io/__init__.py
+src/yaml_io/loader.py
+src/yaml_io.egg-info/PKG-INFO
+src/yaml_io.egg-info/SOURCES.txt
+src/yaml_io.egg-info/dependency_links.txt
+src/yaml_io.egg-info/requires.txt
+src/yaml_io.egg-info/top_level.txt
+tests/test_yaml_io.py
