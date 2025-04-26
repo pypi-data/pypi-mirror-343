@@ -1,0 +1,2 @@
+[console_scripts]
+trm = trm:main
