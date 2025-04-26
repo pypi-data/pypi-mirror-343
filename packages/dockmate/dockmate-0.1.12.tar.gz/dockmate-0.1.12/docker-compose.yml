@@ -1,0 +1,10 @@
+services:
+  web:
+    container_name: dockmate
+    restart: always
+    environment:
+      - PUSHOVER_USER_KEY
+      - PUSHOVER_API_TOKEN
+    build:
+      context: .
+      dockerfile: Dockerfile
