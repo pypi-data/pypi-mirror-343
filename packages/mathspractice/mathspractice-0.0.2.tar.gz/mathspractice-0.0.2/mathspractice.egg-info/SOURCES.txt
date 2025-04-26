@@ -1,0 +1,16 @@
+LICENSE.md
+README.md
+pyproject.toml
+mathspractice/__init__.py
+mathspractice/__main__.py
+mathspractice/lesson1.py
+mathspractice/lesson2.py
+mathspractice/lesson3.py
+mathspractice/main.py
+mathspractice/stats.py
+mathspractice.egg-info/PKG-INFO
+mathspractice.egg-info/SOURCES.txt
+mathspractice.egg-info/dependency_links.txt
+mathspractice.egg-info/entry_points.txt
+mathspractice.egg-info/requires.txt
+mathspractice.egg-info/top_level.txt
