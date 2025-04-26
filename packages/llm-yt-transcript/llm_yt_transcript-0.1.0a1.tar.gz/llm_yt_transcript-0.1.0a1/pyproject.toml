@@ -1,0 +1,40 @@
+[project]
+name = "llm-yt-transcript"
+version = "0.1.0a1"
+description = "A LLM plugin for YouTube transcripts as fragments"
+readme = "README.md"
+authors = [{name = "kj-9"}]
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "build>=1.2.2.post1",
+    "llm>=0.24.2",
+    "setuptools>=78.1.0",
+    "wheel>=0.45.1",
+    "yt-dlp>=2025.3.31",
+]
+
+[dependency-groups]
+dev = [
+    "marimo>=0.12.8",
+]
+test = [
+    "pytest>=8.3.5",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/kj-9/llm-yt-transcript"
+Changelog = "https://github.com/kj-9/llm-yt-transcript/releases"
+Issues = "https://github.com/kj-9/llm-yt-transcript/issues"
+CI = "https://github.com/kj-9/llm-yt-transcript/actions"
+
+[project.entry-points.llm]
+yt_transcript = "llm_yt_transcript"
+
+[tool.setuptools]
+# see https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/#py-modules
+py-modules = ["llm_yt_transcript"]

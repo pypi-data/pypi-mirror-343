@@ -1,0 +1,5 @@
+build>=1.2.2.post1
+llm>=0.24.2
+setuptools>=78.1.0
+wheel>=0.45.1
+yt-dlp>=2025.3.31
