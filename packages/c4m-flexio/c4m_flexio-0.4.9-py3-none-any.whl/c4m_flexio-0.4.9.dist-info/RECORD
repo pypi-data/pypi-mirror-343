@@ -1,0 +1,10 @@
+c4m/flexio/__init__.py,sha256=Nfqo7iUDuTYgjQ-XnmzWvB258P0_VqWshmZcdqtfXQU,170
+c4m/flexio/_helpers.py,sha256=AhSSa5Nt6HRZLCjhPZMvi3EuLK2P_QjYoemTJND_cYo,18950
+c4m/flexio/cell.py,sha256=mUv5jRzA_fhvy1hDDRhSSeKbUCKtoUsV0kyDoZfryog,109296
+c4m/flexio/factory.py,sha256=oVHl4sxJXKMtt1yiqN9wMUSd8bxsaYB-ssS7LDCzxjQ,233240
+c4m/flexio/specification.py,sha256=GOo1S4RDcvMF8BQed88uWHMVOwT47O0-Q6lvJ5vu5kw,37386
+c4m_flexio-0.4.9.dist-info/METADATA,sha256=WybXclNmC1T3U_6JnscpmxBKhx1QrOkShSqlJxrmUlI,4064
+c4m_flexio-0.4.9.dist-info/WHEEL,sha256=tSfRZzRHthuv7vxpI4aehrdN9scLjk-dCJkPLzkHxGg,90
+c4m_flexio-0.4.9.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+c4m_flexio-0.4.9.dist-info/licenses/LICENSE.md,sha256=ELbsQhI7P0Gz-NcIVjgFtpz3jDp5QMHKgIk0IkdbZhg,1044
+c4m_flexio-0.4.9.dist-info/RECORD,,
