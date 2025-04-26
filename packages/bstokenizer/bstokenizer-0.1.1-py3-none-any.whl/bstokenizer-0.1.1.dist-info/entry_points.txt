@@ -1,0 +1,2 @@
+[console_scripts]
+bsconvert = bstokenizer.cli:convert_map
