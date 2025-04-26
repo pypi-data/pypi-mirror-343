@@ -1,0 +1,11 @@
+pygame
+numpy
+matplotlib
+pyclesperanto
+scikit-image
+scipy
+
+[testing]
+tox
+pytest
+pytest-cov
