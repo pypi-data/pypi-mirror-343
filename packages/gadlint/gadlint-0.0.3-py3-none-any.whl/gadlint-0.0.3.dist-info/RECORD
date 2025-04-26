@@ -1,0 +1,11 @@
+gadlint/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gadlint/cli.py,sha256=3VhD1nvzDLG5oZ8HtEsinqY0QOnrPp6-Bm7AF4wNXxY,662
+gadlint/configs/.isort.cfg,sha256=k23cM_Ne5d1s5lqJ3jd84-1CsGUL4gDxwQLDgw3u-LU,125
+gadlint/configs/mypy.ini,sha256=HqUCclYUBjhdhDLaFTUTu7JD9Qghy--78R5ILVvx_qE,918
+gadlint/configs/ruff.toml,sha256=WRTUtAwltx6K-f5puNKQ_ETta4jehUaMmTiOZ5idIB0,1479
+gadlint-0.0.3.dist-info/LICENSE,sha256=SH0JBGOTQ8tElhDklplwDbsgpxWoycK5p2Db-M64VPM,1078
+gadlint-0.0.3.dist-info/METADATA,sha256=tcqAKa4xAI3d-Fr7zhZ_nkBBwkmFOhTXiG2hK3a7GTw,974
+gadlint-0.0.3.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+gadlint-0.0.3.dist-info/entry_points.txt,sha256=ogIp6stsPqC-8Za5-T8y3idqU5YQSNzhk-n1piDgYWk,44
+gadlint-0.0.3.dist-info/top_level.txt,sha256=3xRY3E0DTkFoRSclWsMOW76QDo0GWv6VlOYOGIX1IiU,8
+gadlint-0.0.3.dist-info/RECORD,,
