@@ -1,0 +1,6 @@
+zbc_package/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zbc_package/my_module.py,sha256=xhKLVAxqUncda3aCjV2ugkU6nLXvpiKty8n2g_u469g,40
+zbc_package-0.1.0.dist-info/METADATA,sha256=3kPUqONLGd9z2kkbwtP1ZpsC2qyxhqQf8YnEPM8aVq8,151
+zbc_package-0.1.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+zbc_package-0.1.0.dist-info/top_level.txt,sha256=5h_IzpZ1keimrM1LW4KkKqHRb_Gp1jMlQ2TS56TtWus,12
+zbc_package-0.1.0.dist-info/RECORD,,
