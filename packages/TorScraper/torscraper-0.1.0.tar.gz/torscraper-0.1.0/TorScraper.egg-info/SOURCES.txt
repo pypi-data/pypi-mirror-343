@@ -1,0 +1,9 @@
+pyproject.toml
+setup.py
+TorScrape/torscrape.py
+TorScraper.egg-info/PKG-INFO
+TorScraper.egg-info/SOURCES.txt
+TorScraper.egg-info/dependency_links.txt
+TorScraper.egg-info/entry_points.txt
+TorScraper.egg-info/requires.txt
+TorScraper.egg-info/top_level.txt

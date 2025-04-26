@@ -1,0 +1,2 @@
+[console_scripts]
+ls6 = TorScrape.torscrape:main
