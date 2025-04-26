@@ -1,0 +1,14 @@
+TensorFrost/random.py,sha256=eIAGY8LlHcK9eYZzcJWx2n9fSwDFA-vXnZjIRaPYwxM,1246
+TensorFrost/optimizers.py,sha256=HNCgrK-axlvky4OAKIeArs4CBK9OeHiH3HPEaLps79Y,7082
+TensorFrost/libglad_gl_core_46.so,sha256=zpkzpRAU4BaoXbEdf_vplff0tiPPy6IuWF7ZOTly1Eg,653216
+TensorFrost/clipping.py,sha256=xB43jXQvcZryXlocnB5XIVt5Ed2muXIwM1pDW-MmEus,152
+TensorFrost/regularizers.py,sha256=HDhPaYxVzUVmD_MiXCy-68UdIXs-xfxWzxYbuK2R4fQ,151
+TensorFrost/sort.py,sha256=CZjnyDBclZiNB3pfkr0wvWk61htZyDr-1CRk4JyB68g,7833
+TensorFrost/TensorFrost.cpython-38-x86_64-linux-gnu.so,sha256=ydciSNqP3Rk0xHLJ2IKe0jNOkys8Ehz82SijsC70uls,2772985
+TensorFrost/default.py,sha256=E2sV4k50SIHrJQei55eE14trFDApsY0nyNW_4bjFbls,310
+TensorFrost/__init__.py,sha256=m3I1_ekLbqzqDvuo6BwbX2VGnDXleRl7DHJPCvsQDM0,165
+tensorfrost.libs/libglad_gl_core_46-ce9933a5.so,sha256=hbSYsC3In2sv4Pi2fuNr8a7um7UCPzVkB7EKwLmWqqQ,769265
+tensorfrost-0.7.1.dist-info/top_level.txt,sha256=PafjOtDEIhPtrWPB_5a-_4FdGJWufiVjVInbJLp8nZc,12
+tensorfrost-0.7.1.dist-info/METADATA,sha256=vi1q2DYbeY0mHSoFN2QKbu_G4nlo6tT-UEWqeSg_8N8,43757
+tensorfrost-0.7.1.dist-info/RECORD,,
+tensorfrost-0.7.1.dist-info/WHEEL,sha256=4bDjsNqNiwr2G2bLNR18ftAr5l4l03O656kYhb6U22c,111
