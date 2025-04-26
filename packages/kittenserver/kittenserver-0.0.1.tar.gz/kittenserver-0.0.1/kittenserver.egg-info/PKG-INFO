@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: kittenserver
+Version: 0.0.1
+Summary: 让您扩展海龟函数的功能
+Home-page: https://www.bilibili.com/video/BV1GJ411x7h7/
+Author: Inventocode
+Author-email: 359148497@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# KittenServer
+
+KittenServer可以让您扩展海龟函数的功能
+
+# 示例
+## 代码
+```python
+from kittenserver import KittenServer
+
+def func_event(event):
+    print(event)
+    return '{"errno": 0, "result": "https://pypi.org/project/kittenserver/"}'
+
+ks = KittenServer()
+ks.run(func_event)
+```
+## 运行结果
+```
+> python test.py
+https://localhost:8964/
+Client ('::1', 19425, 0, 0) lost — peer dropped the TLS connection suddenly, during handshake: (1, '[SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:992)')
+::1:19426 - - [26/Apr/2025 17:47:18] "HTTP/1.1 OPTIONS /" - 204 No Content
+{'action': 'execFunc', 'param': 'function1', 'pyParams': []}
+::1:19426 - - [26/Apr/2025 17:47:18] "HTTP/1.1 POST /" - 200 OK
+......

@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+kittenserver.egg-info/PKG-INFO
+kittenserver.egg-info/SOURCES.txt
+kittenserver.egg-info/dependency_links.txt
+kittenserver.egg-info/top_level.txt
