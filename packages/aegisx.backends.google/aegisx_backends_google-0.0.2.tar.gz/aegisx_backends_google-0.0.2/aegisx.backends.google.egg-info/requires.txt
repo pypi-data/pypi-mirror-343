@@ -1,0 +1,14 @@
+aegisx>=0.1.0a1
+libcanonical>=0.1.4
+
+[datastore]
+google-cloud-datastore>=2.13.2
+
+[develop]
+pytest
+pytest_asyncio
+coverage
+
+[oauth]
+aegisx.ext.oauth>=0.0.9
+google-cloud-datastore>=2.13.2
