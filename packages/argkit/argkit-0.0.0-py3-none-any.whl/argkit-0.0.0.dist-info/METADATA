@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: argkit
+Version: 0.0.0
+Summary: A simple kit for handling arguments between parser and class definition.
+Author: Jiyuan Yang
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/ygjiyn/argkit_project
+Project-URL: Issues, https://github.com/ygjiyn/argkit_project/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# The `argkit` Package
+
+This will be updated later.
