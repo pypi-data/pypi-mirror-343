@@ -1,0 +1,4 @@
+[console_scripts]
+jobrun-reload = jobrun.config:reload
+jobrun-setup = jobrun.config:setup
+

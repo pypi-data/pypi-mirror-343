@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: jobrun
+Version: 0.1.4
+Summary: Jobrun is a configurable tool to run simulation jobs in HPC clusters
+Home-page: https://github.com/josemvas/jobrun
+License: LGPLv3+
+Keywords: job queue hpc cluster
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Operating System :: POSIX
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: json5conf
+Requires-Dist: boolparse
+Requires-Dist: abspathlib
+Requires-Dist: clinterface
+
+UNKNOWN
+
+
