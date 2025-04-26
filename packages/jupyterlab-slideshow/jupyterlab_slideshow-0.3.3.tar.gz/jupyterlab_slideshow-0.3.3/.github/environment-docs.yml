@@ -1,0 +1,45 @@
+name: jupyterlab-slideshow-docs
+
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  - python >=3.10,<3.13
+  ### environment-base.yml ###
+  - doit-with-toml
+  - ipywidgets >=7
+  - jupyterlab >=3.5,<5.0.0a0
+  - jupyterlab-fonts >=3.0.0
+  - notebook >=6.5,<8.0.0a0
+  - pip
+  - python >=3.8,<3.13
+  - python-dotenv
+  ### environment-base.yml ###
+  ### environment-build.yml ###
+  # runtimes
+  - nodejs >=20,<21
+  # host app
+  - ipywidgets >=7
+  # build
+  - flit >=3.9.0,<4.0.0
+  - twine
+  ### environment-build.yml ###
+  ### environment-docs.yml ###
+  # docs
+  - docutils >=0.18
+  - mdit-py-plugins <0.4.0
+  - myst-nb
+  - pydata-sphinx-theme ==0.14.2
+  - sphinx >=5.1,<6
+  - sphinx-autobuild
+  - sphinx-copybutton
+  # check
+  - hunspell
+  - hunspell-en
+  - pytest-check-links
+  # lite
+  - python-libarchive-c
+  - jupyterlite-core ==0.2.1
+  - jupyterlite-pyodide-kernel ==0.2.0
+  ### environment-docs.yml ###

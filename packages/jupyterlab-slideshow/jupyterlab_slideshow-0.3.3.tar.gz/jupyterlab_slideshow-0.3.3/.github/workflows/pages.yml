@@ -1,0 +1,99 @@
+name: pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+env:
+  PYTHONUNBUFFERED: '1'
+  PIP_DISABLE_PIP_VERSION_CHECK: '1'
+  CI: '1'
+
+  # our stuff
+  ROBOT_RETRIES: '3'
+  CACHE_EPOCH: '6'
+  PABOT_PROCESSES: '3'
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}-latest
+    strategy:
+      matrix:
+        os: [ubuntu]
+        python-version: ['3.10']
+    env:
+      WITH_JS_COV: 1
+    defaults:
+      run:
+        shell: bash -l {0}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: cache (conda)
+        uses: actions/cache@v3
+        with:
+          path: ~/conda_pkgs_dir
+          key: |
+            ${{ env.CACHE_EPOCH }}-${{ runner.os }}-conda-demo-${{ matrix.python-version }}-${{ hashFiles('.binder/environment.yml') }}
+          restore-keys: |
+            ${{ env.CACHE_EPOCH }}-${{ runner.os }}-conda-demo-${{ matrix.python-version }}-
+
+      - name: Cache (node_modules)
+        uses: actions/cache@v3
+        id: cache-node-modules
+        with:
+          path: node_modules/
+          key: |
+            ${{ env.CACHE_EPOCH }}-${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
+
+      - name: install (conda)
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          environment-file: .binder/environment.yml
+          use-mamba: true
+
+      - name: lint
+        run: doit lint
+
+      - name: dev
+        run: doit dev
+
+      - name: test latest (pytest)
+        run: doit test:pytest
+
+      - name: test latest (robot with cov)
+        run: doit test:robot
+
+      - name: test legacy (pytest)
+        run: doit legacy:pytest
+
+      - name: test legacy (robot with cov)
+        run: doit legacy:robot
+
+      - name: rport
+        run: doit report
+
+      - name: site
+        run: doit site
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/pages-lite
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

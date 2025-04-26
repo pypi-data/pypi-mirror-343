@@ -1,0 +1,138 @@
+/** heavy ui tweaks **/
+.jp-Deck:not(.jp-deck-showCodeCellPrompt) .jp-InputPrompt,
+.jp-Deck:not(.jp-deck-showCodeCellPrompt) .jp-OutputPrompt,
+.jp-Deck .jp-Notebook-footer,
+.jp-Deck .jp-cell-toolbar {
+  display: none;
+}
+
+.jp-Deck.jp-deck-showCodeCellPrompt .jp-InputPrompt,
+.jp-Deck.jp-deck-showCodeCellPrompt .jp-OutputPrompt {
+  /* uses visibility instead of display to keep alignment between markdown and code cell */
+  visibility: hidden;
+}
+
+.jp-Deck.jp-deck-showCodeCellPrompt .jp-CodeCell .jp-InputPrompt,
+.jp-Deck.jp-deck-showCodeCellPrompt .jp-CodeCell .jp-OutputPrompt {
+  display: inherit;
+  visibility: inherit;
+}
+
+.jp-Deck .jp-NotebookPanel-toolbar {
+  position: absolute;
+  border: 0;
+  opacity: 0;
+  bottom: 0;
+  left: 0;
+  right: 6em;
+  height: var(--jp-private-toolbar-height) !important;
+  max-height: var(--jp-private-toolbar-height) !important;
+  box-shadow: unset;
+}
+
+.jp-Deck .jp-NotebookPanel-toolbar:hover {
+  opacity: 0.8;
+  transition: opacity 0.1s;
+}
+
+.jp-Deck.jp-NotebookPanel {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: var(--jp-private-sidebar-tab-width);
+  right: var(--jp-private-sidebar-tab-width);
+  place-content: center center;
+  align-items: stretch;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.jp-Deck .jp-Notebook {
+  flex-shrink: 0;
+  gap: 0;
+  overflow-y: auto;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.jp-Deck .jp-Notebook .jp-WindowedPanel-outer,
+.jp-Deck .jp-Notebook .jp-WindowedPanel-inner,
+body[data-notebook='notebooks'] .jp-Deck .jp-WindowedPanel-window,
+body[data-notebook='notebooks'] .jp-Deck .jp-Notebook-cell {
+  background: transparent;
+}
+
+/* Remove shadow around notebook widget for Notebook application */
+body[data-jp-deck-mode='presenting'] .jp-Deck .jp-Notebook .jp-WindowedPanel-viewport {
+  box-shadow: unset;
+}
+
+body[data-notebook='notebooks']
+  .jp-Deck
+  .jp-Notebook.jp-mod-commandMode
+  .jp-Cell.jp-mod-active.jp-mod-selected:not(.jp-mod-multiSelected) {
+  background: transparent !important;
+}
+
+/* Both are required for compatibility with Jupyterlab before and after 4.1.0, after
+https://github.com/jupyterlab/jupyterlab/commit/6a86d8f163fe11cf7b1964b1ed54999ee2234c8c#diff-ccf3f53605be6603fd5fd949742f25ea8919c48dcc75322c483ebf9988404 */
+.jp-Deck .jp-Notebook.jp-mod-scrollPastEnd::after,
+.jp-Deck .jp-Notebook.jp-mod-scrollPastEnd > .jp-WindowedPanel-outer::after {
+  display: none;
+}
+
+.jp-Deck .jp-Collapser {
+  margin-right: 0.25em;
+}
+
+/** on-screen real-estate management **/
+.jp-Deck .jp-Cell:not(.jp-deck-mod-onscreen) {
+  max-height: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+  padding: 0;
+  margin: 0;
+}
+
+.jp-Deck .jp-Cell.jp-deck-mod-onscreen {
+  flex: 0;
+}
+
+.jp-Deck .jp-Cell.jp-deck-mod-onscreen:not(.jp-deck-mod-visible) {
+  opacity: 0;
+}
+
+.jp-Deck .jp-Cell.jp-deck-mod-onscreen.jp-deck-mod-visible {
+  opacity: 1;
+  transition: opacity 0.1s;
+}
+
+.jp-Deck .jp-deck-mod-layer {
+  position: fixed;
+}
+
+/** cell focus not visible **/
+.jp-Deck .jp-Notebook.jp-mod-commandMode .jp-Cell.jp-mod-active:focus-visible {
+  box-shadow: none;
+}
+
+/** markdown tweaks **/
+.jp-Deck .jp-MarkdownOutput {
+  border: 0;
+}
+
+/** editor **/
+.jp-Deck .jp-InputArea-editor,
+.jp-Deck .jp-Notebook.jp-mod-editMode .jp-Cell.jp-mod-active .jp-InputArea-editor {
+  border: 0;
+  box-shadow: unset;
+}
+
+/** side-by-side **/
+.jp-Deck .jp-mod-sideBySide.jp-Notebook .jp-Notebook-cell {
+  margin: 0 !important;
+}
