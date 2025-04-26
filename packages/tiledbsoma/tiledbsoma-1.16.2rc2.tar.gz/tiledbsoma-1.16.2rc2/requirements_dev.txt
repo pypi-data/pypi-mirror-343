@@ -1,0 +1,10 @@
+black
+pytest
+pytest-cov
+ruff
+sparse
+typeguard==4.4.2
+types-setuptools
+more-itertools
+hypothesis
+deepdiff
