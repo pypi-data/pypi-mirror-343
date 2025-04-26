@@ -1,0 +1,10 @@
+gp_core-6.0.1.dist-info/METADATA,sha256=oJBEAPqx3fcJ2YcfYVrQNv7wjERoJjN_t2bglaMSjCI,503
+gp_core-6.0.1.dist-info/WHEEL,sha256=pZOpl1KSk9xtYg_uP7seImKwTzKfo52acAa-H5xjXiw,136
+gp_core-6.0.1.dist-info/licenses/LICENSE,sha256=brmJ1GyPsyFm-KQo59ncA1Bd9lrhzsO7-l9ap6TZ1_0,1064
+gp_core/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gp_core/models.pyi,sha256=uizg359-0xKCYjMZX4Ut778zMQE1LEQgwqvhjC0ZE64,4583
+gp_core/algorithms.pyi,sha256=wedflbGN8_MlzTAVQPSmFUg1xI_yFtkSz3zbQ7fx1FU,6102
+gp_core/literal_matchers.pyi,sha256=vlZ_w4hS8hDPh4TYayAv8Nluu7dXUk226YUQkFcoJbI,1529
+gp_core/__init__.py,sha256=CwPgEYKpEMJ414_ELyuintYobxO3EpXewQG9Vvp-mxk,47
+gp_core/gp_core.pypy311-pp73-x86_64-linux-gnu.so,sha256=bYqe9JDl3f33-U_ZDH7xQcuZPXP7Z_wA7HkL1fhpsX4,33284168
+gp_core-6.0.1.dist-info/RECORD,,
