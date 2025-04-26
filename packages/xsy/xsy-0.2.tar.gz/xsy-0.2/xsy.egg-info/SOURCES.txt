@@ -1,0 +1,12 @@
+LICENSE
+setup.cfg
+setup.py
+xsy/__init__.py
+xsy/xsy.py
+xsy.egg-info/PKG-INFO
+xsy.egg-info/PKG-INFO.bak
+xsy.egg-info/SOURCES.txt
+xsy.egg-info/SOURCES.txt.bak
+xsy.egg-info/dependency_links.txt
+xsy.egg-info/top_level.txt
+xsy.egg-info/top_level.txt.bak
