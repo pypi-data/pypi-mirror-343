@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/CustomLogger.py
+src/ScraperLib.py
+src/__init__.py
+src/Scraper_Lib_RMP.egg-info/PKG-INFO
+src/Scraper_Lib_RMP.egg-info/SOURCES.txt
+src/Scraper_Lib_RMP.egg-info/dependency_links.txt
+src/Scraper_Lib_RMP.egg-info/requires.txt
+src/Scraper_Lib_RMP.egg-info/top_level.txt
+tests/test_customlogger.py
+tests/test_downloadstate.py
+tests/test_scraperlib.py
