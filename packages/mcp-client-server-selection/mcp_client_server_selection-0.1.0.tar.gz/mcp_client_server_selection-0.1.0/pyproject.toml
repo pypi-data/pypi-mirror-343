@@ -1,0 +1,25 @@
+[project]
+name = "mcp-client-server-selection"
+version = "0.1.0"
+description = "百度天气查询mcp"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp>=1.6.0",
+    "openai>=1.74.0",
+    "python-dotenv>=1.1.0",
+    "requests>=2.32.3",
+    "uvicorn>=0.34.1",
+]
+
+
+[tool.setuptools]
+packages = {find = {where = ["src"]}}
+
+[project.optional-dependencies]
+dev = ["httpx", "pydantic"]  # 开发依赖
+
+# 定义命令行入口
+[project.scripts]
+mcp_server = "mcp_server.server:main"  # 安装后可通过命令直接运行

@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: mcp-client-server-selection
+Version: 0.1.0
+Summary: 百度天气查询mcp
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp>=1.6.0
+Requires-Dist: openai>=1.74.0
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: uvicorn>=0.34.1
+Provides-Extra: dev
+Requires-Dist: httpx; extra == "dev"
+Requires-Dist: pydantic; extra == "dev"
