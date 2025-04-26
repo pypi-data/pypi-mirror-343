@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: pynep_cpu
+Version: 0.1.dev9
+Summary: 
+Author: 
+License: GPL-3.0
+Project-URL: Homepage, https://github.com/tamaswells/pynep_cpu
+Project-URL: Documentation, https://github.com/tamaswells/pynep_cpu
+Project-URL: Repository, https://github.com/tamaswells/pynep_cpu
+Project-URL: Issues, https://github.com/tamaswells/pynep_cpu/issues
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: <3.13,>=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: ase
+Dynamic: license-file
+
+# pynep_cpu
+Redistributed from https://github.com/aboys-cb/NepTrainKit
