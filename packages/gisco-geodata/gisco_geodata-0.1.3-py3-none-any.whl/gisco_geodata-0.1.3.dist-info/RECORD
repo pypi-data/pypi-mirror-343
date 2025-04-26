@@ -1,0 +1,10 @@
+gisco_geodata/__init__.py,sha256=BVrvJnIRcS4GFu2krQzTKTlq9gSRiR4bEl-ft0GlpsY,761
+gisco_geodata/parser.py,sha256=Zpbxk53TtsXyEWKKt51-xTKxD4ntMdY0IUxvW-u8ZEs,2336
+gisco_geodata/theme.py,sha256=zJC0wiQR8qgfQdAPGvlstz_p2Q39qllEV4q918xH2xI,26130
+gisco_geodata/typing.py,sha256=yqRcBgx2W-UsuoG87658WDVR-kmJU602MmK5TCbk5mI,1032
+gisco_geodata/utils.py,sha256=jWa8yc-tt49AQu8VmKtDl72kCk8tlsYSKLmbZ1ftfTk,4866
+gisco_geodata-0.1.3.dist-info/licenses/LICENSE,sha256=3otsbo5KBU0TfKlxcfCRcjYVKA9IWZ5Ow6F8fGR5U5E,1077
+gisco_geodata-0.1.3.dist-info/METADATA,sha256=zr086u_YYH8DotAt7vsuPAna-R3GyEWUc5C3W_PuDww,5564
+gisco_geodata-0.1.3.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+gisco_geodata-0.1.3.dist-info/top_level.txt,sha256=eCPwsaQL2vo930_4a_oluqquXH7mIFAJ9DPLEeyED3g,14
+gisco_geodata-0.1.3.dist-info/RECORD,,
