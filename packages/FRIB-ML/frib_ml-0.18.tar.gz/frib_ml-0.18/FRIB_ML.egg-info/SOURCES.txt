@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+FRIB_ML/ML.py
+FRIB_ML/ML_config.py
+FRIB_ML/__init__.py
+FRIB_ML/bash.py
+FRIB_ML/data_process.py
+FRIB_ML/generate.py
+FRIB_ML.egg-info/PKG-INFO
+FRIB_ML.egg-info/SOURCES.txt
+FRIB_ML.egg-info/dependency_links.txt
+FRIB_ML.egg-info/requires.txt
+FRIB_ML.egg-info/top_level.txt
