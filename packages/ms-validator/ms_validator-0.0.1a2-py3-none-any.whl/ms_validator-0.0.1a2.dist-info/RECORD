@@ -1,0 +1,12 @@
+ms_validator/cli.py,sha256=SQ2Kok0B6ECg9sEaW_ohTBBoAyPi-weyL5SC0J2PUGE,988
+ms_validator/utils.py,sha256=1yXv6mJt6i0xZdFKKb3PyLcLeTGCLWSMC1RNKZN7Dic,305
+ms_validator/validation_manager.py,sha256=hypgxCP_JyLsQjxI-TZ64H9RXn-PK24M9IRXmayGg70,2129
+ms_validator/validators/__init__.py,sha256=-J2pt6TUfRsEWYpXFbcX7QL3010xjjHdu54FPWijWuk,155
+ms_validator/validators/base_validator.py,sha256=sH7N9zWtM4A8t5_1867DOOa3fB8_tinA3F8iRkkpK-I,201
+ms_validator/validators/service_profiler_validator.py,sha256=R5reaM2iQt0MEZe1BT-RNi5rZzwxvhJdSkfn2jsORaQ,2173
+ms_validator/validators/version_validator.py,sha256=UMf8duDZ-iNyaGQrJRvOffpsJDMU6N2vwligzS03NPY,1403
+ms_validator-0.0.1a2.dist-info/METADATA,sha256=aXpURFNzVRB-Pzn-WD4VIKSXYg-gqUpdctvGxpudi3s,253
+ms_validator-0.0.1a2.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+ms_validator-0.0.1a2.dist-info/entry_points.txt,sha256=VCKo7GsK5FRfK3JttcHzmVc3VCToqCblUl9PDHoMIdc,55
+ms_validator-0.0.1a2.dist-info/top_level.txt,sha256=ryR_myOdvyzuaSPUKAU157cAER2flrG4hSaU51zFMd8,13
+ms_validator-0.0.1a2.dist-info/RECORD,,
