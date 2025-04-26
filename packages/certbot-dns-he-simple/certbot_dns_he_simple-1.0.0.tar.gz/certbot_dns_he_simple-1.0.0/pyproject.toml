@@ -1,0 +1,17 @@
+[project]
+name = "certbot-dns-he-simple"
+version = "1.0.0"
+description = "Simple Hurricane Electric DNS Authenticator plugin for Certbot"
+authors = [{ name="Tobias Girstmair", email="tobi@isticktoit.net" }]
+urls = { Homepage="https://git.gir.st/certbot-dns-he-simple.git" }
+license = "BSD-2-Clause"
+readme = "README.md"
+
+dependencies = [
+    'certbot',
+    'zope.interface',
+    'requests',
+]
+
+[project.entry-points."certbot.plugins"]
+dns-he-simple = "certbot_dns_he_simple:Authenticator"

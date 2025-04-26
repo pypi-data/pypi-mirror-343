@@ -1,0 +1,10 @@
+LICENSE
+README.md
+certbot_dns_he_simple.py
+pyproject.toml
+certbot_dns_he_simple.egg-info/PKG-INFO
+certbot_dns_he_simple.egg-info/SOURCES.txt
+certbot_dns_he_simple.egg-info/dependency_links.txt
+certbot_dns_he_simple.egg-info/entry_points.txt
+certbot_dns_he_simple.egg-info/requires.txt
+certbot_dns_he_simple.egg-info/top_level.txt
