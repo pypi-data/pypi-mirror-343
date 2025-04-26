@@ -1,0 +1,10 @@
+tencentcloud/__init__.py,sha256=9AnCQEpeaSLMM-YJCkGwPqEt_3wNsUS73UySmvxjT3w,631
+tencentcloud/tcaplusdb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/tcaplusdb/v20190823/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/tcaplusdb/v20190823/errorcodes.py,sha256=IPoHxrhUGHp8Jbgda591KJUj9pMtUm_YH1RpKQtpvIY,3614
+tencentcloud/tcaplusdb/v20190823/models.py,sha256=DO9l8f9mxGCPePADVDDMQLlECCxrR9faMu6OKd_q3YY,385586
+tencentcloud/tcaplusdb/v20190823/tcaplusdb_client.py,sha256=nrtSJ9L4fxITtFM6IfifHySYXRrmXg8PaZ7o7kyHWjM,49203
+tencentcloud_sdk_python_tcaplusdb-3.0.1368.dist-info/METADATA,sha256=iEac-BNPToWhGhQ-UTz7I3tRuKKMjDQr1gCBEI8go5M,1526
+tencentcloud_sdk_python_tcaplusdb-3.0.1368.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+tencentcloud_sdk_python_tcaplusdb-3.0.1368.dist-info/top_level.txt,sha256=g-8OyzoqI6O6LiS85zkeNzhB-osEnRIPZMdyRd_0eL0,13
+tencentcloud_sdk_python_tcaplusdb-3.0.1368.dist-info/RECORD,,
