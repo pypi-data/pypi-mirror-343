@@ -1,0 +1,2 @@
+[console_scripts]
+khashimoto_echo_dt = khashimoto_echo_dt.__main__:main
