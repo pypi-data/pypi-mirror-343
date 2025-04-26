@@ -1,0 +1,12 @@
+uodm-0.3.1.dist-info/METADATA,sha256=as_R-BWDIn6U6Pqk-CgsMdFP1f6fdZBOi3jokbgBq5U,7549
+uodm-0.3.1.dist-info/WHEEL,sha256=tSfRZzRHthuv7vxpI4aehrdN9scLjk-dCJkPLzkHxGg,90
+uodm-0.3.1.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+uodm-0.3.1.dist-info/licenses/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+uodm/__init__.py,sha256=0sGdPhNlYwd02-Ca6rypWhCgjg5lEOJ0B-xaFZiJ1b4,668
+uodm/file_motor.py,sha256=mJMx_jOf1FkvS4VfE6zdZb6Chp_CVUhlQIgqlUD1BjE,9548
+uodm/file_motor_filtering.py,sha256=5VZ9THi4NRpzTddrpFoq6eqt4MAgzL2lXwXNuYwHjFY,5170
+uodm/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uodm/sqlite_motor.py,sha256=GsHd1LOnrqZ9iExKCxokp3sblkqtFSe09gJ5hbiVjjo,22150
+uodm/types.py,sha256=ypamOWERaUX69TJsJoQ3PF5utfJ1BewbN7WU55g1-Bo,1587
+uodm/uodm.py,sha256=zZyf6qrZIIKU0ysiXIfj-VZhWlR8yzePy7iKMFc3TXA,10213
+uodm-0.3.1.dist-info/RECORD,,
