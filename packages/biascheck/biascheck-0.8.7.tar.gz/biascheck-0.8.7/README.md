@@ -1,0 +1,224 @@
+# **BiasCheck: An Open-Source Library for Bias Detection**
+
+BiasCheck is a robust and modular Python library designed to analyze and detect bias in text, models, and datasets. It provides tools for researchers, data scientists, and developers to measure various forms of bias (e.g., stereotypical, cultural) and assess the quality of language model outputs or textual data.
+
+---
+
+## **Features**
+- **Modular Design**: BiasCheck offers modular and extensible classes for different bias analysis tasks.
+- **Bias Detection**: Analyze text, datasets, language models or databases for various types of bias.
+- **Support for RAG**: Automatically create Retrieval-Augmented Generation (RAG) pipelines using documents or PDFs.
+- **Sentiment Analysis**: Assess sentiment polarity alongside bias.
+- **Visualization**: Visualize flagged sentences and bias types in your analysis.
+
+---
+
+## **Main Classes**
+
+### **1. `DocuCheck`**
+Analyze bias in standalone text documents or files.
+
+#### Key Features:
+- Accepts text data or documents (e.g., PDF, TXT).
+- Detects flagged sentences and calculates a bias score.
+- Optionally uses a list of polarizing terms for context-specific bias detection.
+
+#### Example:
+```python
+from biascheck.analysis.docucheck import DocuCheck
+
+data = "This is a sample document that may contain biases."
+terms = ["biased", "lazy", "discrimination"]
+
+analyzer = DocuCheck(data=data, terms=terms)
+result = analyzer.analyze(verbose=False)
+print(result)
+```
+
+### **2. SetCheck**
+
+Analyze entire datasets (e.g., DataFrames) for skewed or biased records.
+
+#### Key Features:
+- Works with Python DataFrames and CSV files.
+- Adds bias-related columns to the dataset.
+- Returns flagged records and overall bias analysis.
+
+#### Example:
+```python
+from biascheck.analysis.setcheck import SetCheck
+
+data = [{"text": "A biased example."}, {"text": "A neutral sentence."}]
+terms = ["bias", "stereotype"]
+
+analyzer = SetCheck(data=data, input_cols=["text"], terms=terms)
+flagged_df = analyzer.analyze(top_n=5)
+print(flagged_df)
+```
+
+### **3. ModuCheck**
+
+Analyze bias in language model outputs.
+
+#### Key Features:
+- Supports HuggingFace, Ollama, and local GGUF models.
+- Detects bias in generated outputs based on user-provided topics.
+- Automatically builds a RAG pipeline if a document is provided.
+- Saves flagged outputs and bias results to a DataFrame.
+
+#### Example:
+```python
+from biascheck.analysis.moducheck import ModuCheck
+from langchain.llms import Ollama
+
+model = Ollama(model="llama3")
+topics = ["The role of gender in leadership", "Cultural diversity"]
+
+analyzer = ModuCheck(model=model, terms=["bias", "stereotype"], document="file.pdf")
+result = analyzer.analyze(topics=topics, num_responses=5)
+print(result)
+```
+
+### **4. RAGCheck**
+
+Analyze bias in RAG pipelines by combining document retrieval and natural language generation.
+
+### Key Features:
+- Builds Retrieval-Augmented Generation pipelines from documents or PDFs.
+- Supports hypothesis-based contextual bias detection using NLI models.
+- Integrates FAISS for vectorized document retrieval.
+- Identifies bias in retrieved content and generated outputs.
+
+#### Example:
+```python
+from biascheck.analysis.ragcheck import RAGCheck
+from langchain_ollama import Ollama
+
+model = Ollama(model="llama3")
+terms = ["bias", "discrimination"]
+
+analyzer = RAGCheck(model=model, document="sample.pdf", terms=terms, verbose=True)
+result = analyzer.analyze(top_n=5)
+print(result)
+```
+
+### **5. Visualiser**
+
+Visualize the results of bias analysis.
+
+### Key Features:
+- Generates bar charts for flagged bias categories.
+- Visualizes flagged sentences and bias distribution.
+
+#### Example:
+```python
+from biascheck.visualisation.visualiser import Visualiser
+
+visualiser = Visualiser()
+visualiser.plot_bias_categories(flagged_records)
+```
+
+### **6. BaseCheck** (under construction)
+Analyze bias in databases similar to the rest of the library.
+
+#### Key Features:
+- Database Compatibility: Supports both vector databases (e.g., FAISS) and graph databases (e.g., Neo4j).
+- Saves flagged outputs and bias results to a DataFrame.
+
+## **Installation**
+
+### Prerequisites
+
+- Python 3.9 or 3.10
+- pip (Python package installer)
+- For GPU support: CUDA-compatible GPU and CUDA toolkit
+
+### Basic Installation
+
+For CPU-only installation:
+```bash
+pip install biascheck
+```
+
+### Optional Dependencies
+
+For GPU support (requires CUDA-compatible GPU):
+```bash
+pip install "biascheck[gpu]"
+```
+
+For development and testing:
+```bash
+pip install "biascheck[test]"
+```
+
+For all features (GPU + testing):
+```bash
+pip install "biascheck[all]"
+```
+
+### Platform-Specific Notes
+
+#### macOS
+- No additional requirements for basic installation
+- For GPU support, ensure you have CUDA installed via Homebrew or other package manager
+
+#### Linux
+- No additional requirements for basic installation
+- For GPU support, ensure CUDA toolkit is installed
+- Some distributions may require additional system packages for PDF processing
+
+#### Windows
+- No additional requirements for basic installation
+- For GPU support, ensure CUDA toolkit is installed
+- May require Visual C++ Redistributable for some dependencies
+
+### Troubleshooting
+
+If you encounter any installation issues:
+
+1. Ensure you're using Python 3.9 or 3.10
+2. Try creating a fresh virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install biascheck
+   ```
+3. For GPU-related issues, verify CUDA installation:
+   ```bash
+   nvidia-smi  # Should show GPU information
+   ```
+4. If specific dependencies fail, try installing them separately:
+   ```bash
+   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+   pip install biascheck
+   ```
+
+### System Requirements
+
+- Minimum 4GB RAM (8GB recommended)
+- 2GB free disk space
+- For GPU support: NVIDIA GPU with CUDA support
+
+## **Usage**
+
+### Run Examples
+The notebooks/ directory contains example scripts for all analysis classes:
+```bash
+python notebooks/moducheck_example.py
+python notebooks/docucheck_example.py
+```
+
+## **Contributing**
+
+We welcome contributions! Please fork the repository, make your changes, and submit a pull request. Ensure all new features are covered with appropriate tests.
+
+## **Future Work**
+- Multimodal Support: Expand the library to include image, video, and audio bias detection.
+- Enhanced RAG Pipelines: Improve integration with custom retrievers.
+- Advanced Bias Categories: Expand predefined bias categories for deeper contextual analysis.
+
+## **Contact**
+
+For questions, suggestions, or feedback, reach out to the project maintainer:
+- Name: Arjun Balaji
