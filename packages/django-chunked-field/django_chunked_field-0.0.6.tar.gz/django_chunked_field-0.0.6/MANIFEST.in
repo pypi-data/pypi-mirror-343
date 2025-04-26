@@ -1,0 +1,4 @@
+include LICENSE
+include README.md
+recursive-include chunked_field *.py
+recursive-include chunked_field/migrations *.py
