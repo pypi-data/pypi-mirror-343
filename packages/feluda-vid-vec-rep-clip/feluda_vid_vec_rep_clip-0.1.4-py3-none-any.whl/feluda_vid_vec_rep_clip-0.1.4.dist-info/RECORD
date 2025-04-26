@@ -1,0 +1,9 @@
+./.gitignore,sha256=aufV-uwMFs2rmzfXo8F94X_pE86taqqXjAxsWQsfCng,1909
+./PKG-INFO,sha256=dAuZh8iVRvs74x3iWrtySjB6H5Eim9eSGYtXGDHZFBE,220
+./__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+./pyproject.toml,sha256=gAb8pSVuWW2gSK7CLBO7d7Eab55ckn3f0t3yq-RgNdE,514
+./test.py,sha256=9TlnqjbSX2UGAjN8bzT_FArCTF7ZYqViBS73x2jrAIk,1084
+./vid_vec_rep_clip.py,sha256=paGxB4BPGUqlbeK18Jadn-VPIPee-tyYpX_6AMsr_og,5001
+feluda_vid_vec_rep_clip-0.1.4.dist-info/METADATA,sha256=dAuZh8iVRvs74x3iWrtySjB6H5Eim9eSGYtXGDHZFBE,220
+feluda_vid_vec_rep_clip-0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+feluda_vid_vec_rep_clip-0.1.4.dist-info/RECORD,,
