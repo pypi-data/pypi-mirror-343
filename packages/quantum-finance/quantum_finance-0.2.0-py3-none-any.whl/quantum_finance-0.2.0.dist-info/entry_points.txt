@@ -1,0 +1,6 @@
+[console_scripts]
+pdata = src.unified_data_pipeline:main
+prisk = src.real_time_risk_monitor:main
+qrisk = quantum.cli.risk:main
+qtrading = quantum.cli:main
+

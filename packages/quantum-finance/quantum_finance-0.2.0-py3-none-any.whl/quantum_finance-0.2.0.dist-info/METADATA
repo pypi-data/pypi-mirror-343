@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: quantum-finance
+Version: 0.2.0
+Summary: Quantum-enhanced financial analysis and trading platform
+Home-page: UNKNOWN
+Author: Quantum Finance Team
+Author-email: quantum@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Office/Business :: Financial
+Requires-Python: >=3.8
+Provides-Extra: all
+Requires-Dist: numpy<2.0.0,>=1.22.0; extra == "all"
+Requires-Dist: scipy<2.0.0,>=1.8.0; extra == "all"
+Requires-Dist: pandas<3.0.0,>=2.0.0; extra == "all"
+Requires-Dist: matplotlib<4.0.0,>=3.5.0; extra == "all"
+Requires-Dist: python-dotenv<1.0.0,>=0.19.0; extra == "all"
+Requires-Dist: pyyaml<7.0.0,>=6.0.0; extra == "all"
+Requires-Dist: tqdm<5.0.0,>=4.62.0; extra == "all"
+Requires-Dist: typing-extensions>=4.9.0; extra == "all"
+Requires-Dist: torch<3.0.0,>=2.0.0; extra == "all"
+Requires-Dist: numba<1.0.0,>=0.58.0; extra == "all"
+Requires-Dist: seaborn<0.13.0,>=0.12.0; extra == "all"
+Requires-Dist: yfinance<0.3.0,>=0.2.0; extra == "all"
+Requires-Dist: plotly<6.0.0,>=5.0.0; extra == "all"
+Requires-Dist: memory-profiler<0.62.0,>=0.60.0; extra == "all"
+Requires-Dist: hypothesis<7.0.0,>=6.0.0; extra == "all"
+Requires-Dist: gudhi<4.0.0,>=3.5.0; extra == "all"
+Requires-Dist: qiskit<1.5.0,>=1.4.0; extra == "all"
+Requires-Dist: qiskit-aer<0.18.0,>=0.17.0; extra == "all"
+Requires-Dist: qiskit-ibm-runtime<0.38.0,>=0.37.0; extra == "all"
+Requires-Dist: qiskit-ibm-provider<0.12.0,>=0.11.0; extra == "all"
+Requires-Dist: qiskit-algorithms<0.4.0,>=0.3.0; extra == "all"
+Requires-Dist: pytest<8.0.0,>=7.0.0; extra == "all"
+Requires-Dist: pytest-asyncio<0.19.0,>=0.18.0; extra == "all"
+Requires-Dist: pytest-mock<4.0.0,>=3.6.0; extra == "all"
+Requires-Dist: pytest-cov<4.0.0,>=3.0.0; extra == "all"
+Requires-Dist: black<23.0.0,>=22.0.0; extra == "all"
+Requires-Dist: flake8<6.0.0,>=5.0.0; extra == "all"
+Requires-Dist: mypy<1.0.0,>=0.950; extra == "all"
+Requires-Dist: isort<6.0.0,>=5.10.0; extra == "all"
+Requires-Dist: Flask~=2.3.0; extra == "all"
+Requires-Dist: Werkzeug~=2.3.0; extra == "all"
+Requires-Dist: Flask-Cors<5.0.0,>=4.0.0; extra == "all"
+Requires-Dist: Flask-Limiter<4.0.0,>=3.0.0; extra == "all"
+Requires-Dist: pipdeptree<3.0.0,>=2.0.0; extra == "all"
+Requires-Dist: sphinx<6.0.0,>=5.0.0; extra == "all"
+Requires-Dist: sphinx-rtd-theme<2.0.0,>=1.0.0; extra == "all"
+Requires-Dist: nbsphinx<0.9.0,>=0.8.0; extra == "all"
+Requires-Dist: jupyterlab<4.0.0,>=3.4.0; extra == "all"
+Provides-Extra: core
+Requires-Dist: numpy<2.0.0,>=1.22.0; extra == "core"
+Requires-Dist: scipy<2.0.0,>=1.8.0; extra == "core"
+Requires-Dist: pandas<3.0.0,>=2.0.0; extra == "core"
+Requires-Dist: matplotlib<4.0.0,>=3.5.0; extra == "core"
+Requires-Dist: python-dotenv<1.0.0,>=0.19.0; extra == "core"
+Requires-Dist: pyyaml<7.0.0,>=6.0.0; extra == "core"
+Requires-Dist: tqdm<5.0.0,>=4.62.0; extra == "core"
+Requires-Dist: typing-extensions>=4.9.0; extra == "core"
+Requires-Dist: torch<3.0.0,>=2.0.0; extra == "core"
+Requires-Dist: numba<1.0.0,>=0.58.0; extra == "core"
+Requires-Dist: seaborn<0.13.0,>=0.12.0; extra == "core"
+Requires-Dist: yfinance<0.3.0,>=0.2.0; extra == "core"
+Requires-Dist: plotly<6.0.0,>=5.0.0; extra == "core"
+Requires-Dist: memory-profiler<0.62.0,>=0.60.0; extra == "core"
+Requires-Dist: hypothesis<7.0.0,>=6.0.0; extra == "core"
+Requires-Dist: gudhi<4.0.0,>=3.5.0; extra == "core"
+Requires-Dist: aihwkit<1.0.0,>=0.6.0; extra == "core"
+Provides-Extra: dev
+Requires-Dist: pytest<8.0.0,>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio<0.19.0,>=0.18.0; extra == "dev"
+Requires-Dist: pytest-mock<4.0.0,>=3.6.0; extra == "dev"
+Requires-Dist: pytest-cov<4.0.0,>=3.0.0; extra == "dev"
+Requires-Dist: black<23.0.0,>=22.0.0; extra == "dev"
+Requires-Dist: flake8<6.0.0,>=5.0.0; extra == "dev"
+Requires-Dist: mypy<1.0.0,>=0.950; extra == "dev"
+Requires-Dist: isort<6.0.0,>=5.10.0; extra == "dev"
+Requires-Dist: Flask~=2.3.0; extra == "dev"
+Requires-Dist: Werkzeug~=2.3.0; extra == "dev"
+Requires-Dist: Flask-Cors<5.0.0,>=4.0.0; extra == "dev"
+Requires-Dist: Flask-Limiter<4.0.0,>=3.0.0; extra == "dev"
+Requires-Dist: pipdeptree<3.0.0,>=2.0.0; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx<6.0.0,>=5.0.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme<2.0.0,>=1.0.0; extra == "docs"
+Requires-Dist: nbsphinx<0.9.0,>=0.8.0; extra == "docs"
+Requires-Dist: jupyterlab<4.0.0,>=3.4.0; extra == "docs"
+Provides-Extra: quantum
+Requires-Dist: qiskit<1.5.0,>=1.4.0; extra == "quantum"
+Requires-Dist: qiskit-aer<0.18.0,>=0.17.0; extra == "quantum"
+Requires-Dist: qiskit-ibm-runtime<0.38.0,>=0.37.0; extra == "quantum"
+Requires-Dist: qiskit-ibm-provider<0.12.0,>=0.11.0; extra == "quantum"
+Requires-Dist: qiskit-algorithms<0.4.0,>=0.3.0; extra == "quantum"
+
+UNKNOWN
+
