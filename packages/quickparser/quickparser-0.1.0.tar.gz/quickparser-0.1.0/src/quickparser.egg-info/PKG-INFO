@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: quickparser
+Version: 0.1.0
+Summary: Create lightweight CLI arg parsers from pydantic models
+Author-email: John Raines <johndanielraines@gmail.com>
+License: MIT
+Requires-Dist: pydantic>=2.11
+Provides-Extra: dev
+Requires-Dist: pytest>=8.3.5; extra == "dev"
+Requires-Dist: pytest-cov>=6.1.1; extra == "dev"
