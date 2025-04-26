@@ -1,0 +1,11 @@
+bs4
+rich
+pydub
+psutil
+aiohttp
+asyncio
+selenium
+setuptools
+SpeechRecognition
+webdriver-manager
+undetected-chromedriver
