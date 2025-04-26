@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: Lavender-Pinyin
+Version: 0.0.3
+Summary: A Python package to get any kind of pinyin of Chinese characters.
+Home-page: https://github.com/Zeyu-Xie/Lavender-Pinyin
+Author: Zeyu Xie
+Author-email: xie.zeyu20@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# Lavender-Pinyin
+
+A Python package for obtaining various pinyin representations of Chinese characters.
+
+## Quick Start
+
+Install the package with pip:
+
+```bash
+pip install Lavender-Pinyin
+```
+
+Import it in your Python scripts:
+
+```python
+from lavender_pinyin import *
+```
+
+## Functions
+
+| Usage                                  | Description                                                  |
+| -------------------------------------- | ------------------------------------------------------------ |
+| `pinyin_list(cc, style_name="normal")` | Returns a list of all possible pinyin pronunciations for the given Chinese character `cc`. You can specify the pinyin style by setting `style_name` (default: "normal"). |
