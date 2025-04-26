@@ -1,0 +1,16 @@
+pre_commit_update/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pre_commit_update/cli.py,sha256=7OayF4t07eO8af1GYQqZx2i9axHkI1SvoXsUu3j-oTE,6655
+pre_commit_update/managers/__init__.py,sha256=llEt-j12UndkKCLzwcCuKm6PmLzjkGD_RRLXhcdS0Iw,278
+pre_commit_update/managers/env.py,sha256=rE4UVmIavTLOAQB60Ol1CBPnsB7R2XicnxNtFvxEdnE,691
+pre_commit_update/managers/message.py,sha256=LsDvk7NW_fi-fztfgj7em4XuJOYiYvEscnEuMVFL2XU,7075
+pre_commit_update/managers/option.py,sha256=fCvoSmGnu9FnU7bUMmjiOFlkaTJ8-iD84nP_uEXSdGM,6197
+pre_commit_update/managers/repo.py,sha256=7jILhRjLB1zKCWtViAHuVOkwK3BC_SyL5SledfOx7vQ,8225
+pre_commit_update/managers/yaml.py,sha256=dIxlteLYTFrR2D7a7z2l37i6ebuoGyB9s6F5wEhrXA8,1044
+pre_commit_update/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pre_commit_update/repo.py,sha256=ovhY7E_UMQBLTCWAnIW7EemYDUpJynuGU4zyBBpakEs,3780
+pre_commit_update/utils.py,sha256=2T2JRZ_-4JtKoNov4kr2yixpc1DzZEv4k7foN2mQg_M,2139
+pre_commit_update-0.7.0.dist-info/LICENSE,sha256=4aZqZaBhCRedgLg5-9Lf6Un8SmabmtBDpBkfaYIxjnU,1059
+pre_commit_update-0.7.0.dist-info/METADATA,sha256=OgsaGY_o5BuNx1fqUejLl1k4PvQT20gzRZzu7JZnbyA,17530
+pre_commit_update-0.7.0.dist-info/WHEEL,sha256=RaoafKOydTQ7I_I3JTrPCg6kUmTgtm4BornzOqyEfJ8,88
+pre_commit_update-0.7.0.dist-info/entry_points.txt,sha256=u5JxxJCmUT1PvnJegM5pm8DgYJHfSMDhv-GUrZQJatE,63
+pre_commit_update-0.7.0.dist-info/RECORD,,
