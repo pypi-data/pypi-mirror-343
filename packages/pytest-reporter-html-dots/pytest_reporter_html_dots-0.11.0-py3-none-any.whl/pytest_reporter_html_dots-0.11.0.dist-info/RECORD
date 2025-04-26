@@ -1,0 +1,17 @@
+pytest_reporter_html_dots/__init__.py,sha256=4Nuh4T7WuHdfGHKSGSTnjM_Ok4PpdFyolZ08_eMQMwg,159
+pytest_reporter_html_dots/plugin.py,sha256=LBvP_MCMk3UGaXgUF6eQVNqLTuFlzF-SB3-2W0Rg7gA,6565
+pytest_reporter_html_dots/templates/html-dots/base.html,sha256=8W6vZrBgYyLWHdJ1FGSDUhqHRUm4500cNR103aKyL1k,1069
+pytest_reporter_html_dots/templates/html-dots/index.html,sha256=oEjYLJ2s0kIq_wD0GZhiUxXjpggtyy-F_YPSApoqihk,5347
+pytest_reporter_html_dots/templates/html-dots/module.html,sha256=qonHyiBEd2Z8vy491lQWh_sEzTeLwZO8Vk4QVKW3zk0,988
+pytest_reporter_html_dots/templates/html-dots/normalize.css,sha256=WAgYcAck1C1_zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI,6138
+pytest_reporter_html_dots/templates/html-dots/style.css,sha256=z21-OHt92Y4ZcL3-v-x9aKquk7AYMouYDNnOTF4PEJg,7715
+pytest_reporter_html_dots/templates/html-dots/test.html,sha256=-l6nsDXXSisKlyYiXda0pkgOtKlFzY-vy0uDEnSUVBc,3932
+pytest_reporter_html_dots/templates/html-dots/icons/arrow.svg,sha256=7Oa5KYAJ2XUF23RzLBPGckM3v_VT3yxhnSGgzWbQeYk,177
+pytest_reporter_html_dots/templates/html-dots/icons/nok.svg,sha256=LD33JnLHj9OONZFaJVZloVIsKk54f6qbnA9FeG3YnDc,266
+pytest_reporter_html_dots/templates/html-dots/icons/ok.svg,sha256=ulmO9KuTFevTKUPSThSi-V2i3hFxslC-k5iucpARlso,177
+pytest_reporter_html_dots/templates/html-dots/icons/skip.svg,sha256=zdvc2jJPY3xKBJBySMi-JRXpPCgIULeyl66KpTEbiiw,168
+pytest_reporter_html_dots-0.11.0.dist-info/entry_points.txt,sha256=Die0nkLJMlTULOvp4T5SfV_pFiZMXngKoNoQb5sqFfs,64
+pytest_reporter_html_dots-0.11.0.dist-info/licenses/LICENSE,sha256=9UEk_CYqFfXf04Jsh6AIBXmPa3-rS--7h67Kqu996Bo,1086
+pytest_reporter_html_dots-0.11.0.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+pytest_reporter_html_dots-0.11.0.dist-info/METADATA,sha256=z0Ic3_Y-Q0eA7bM4-9xsOEqPv8zLjSI6t6IG8sgv_0M,5583
+pytest_reporter_html_dots-0.11.0.dist-info/RECORD,,
