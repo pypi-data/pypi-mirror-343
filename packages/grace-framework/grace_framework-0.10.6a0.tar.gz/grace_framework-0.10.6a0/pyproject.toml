@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+
+[project]
+name = "grace-framework"
+version = "0.10.6-alpha"
+authors = [
+	{ name="Code Society Lab" },
+	{ name="Simon Roy", email="simon.roy1211@gmail.com" }
+]
+description = "Extensible Discord bot framework based on Discord.py"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.10"
+
+dependencies = [
+	"discord>2.0",
+	"logger",
+	"coloredlogs",
+	"python-dotenv",
+	"configparser",
+	"click",
+	"sqlalchemy",
+	"sqlalchemy-utils",
+	"alembic",
+	"cookiecutter",
+	"jinja2-strcase",
+	"inflect",
+	"mypy",
+	"pytest",
+	"flake8",
+	"pytest-mock",
+	"coverage",
+	"watchdog"
+]
+
+[project.urls]
+"Homepage" = "https://codesociety.xyz"
+"Source" = "https://github.com/Code-Society-Lab/grace-framework"
+
+[project.scripts]
+grace = "grace.cli:main"
+
+[tool.setuptools]
+packages = ["grace"]
+license-files = []
+
+[tool.mypy]
+exclude = ['grace/generators/templates']
+
+[[tool.mypy.overrides]]
+module = ["jinja2_pluralize.*", "cookiecutter.*"]
+follow_untyped_imports = true
