@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: metarag
+Version: 0.1.4
+Summary: MetaRAG: A multi-LLM ensemble Retrieval-Augmented Generation framework with cosine similarity ranking.
+Home-page: https://github.com/OpenRAG128/META-RAG
+Author: Nisharg Nargund
+Author-email: nisarg.nargund@gmail.com
+Keywords: llm,retrieval,augmented,generation,ai,nlp
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: langchain
+Requires-Dist: langchain-groq
+Requires-Dist: sentence-transformers
+Requires-Dist: faiss-cpu
+Requires-Dist: numpy
+Requires-Dist: PyPDF2
+Requires-Dist: scikit-learn
+
+MetaRAG is a Python framework for multi-model Retrieval-Augmented Generation. It queries multiple LLMs in parallel, scores the responses based on cosine similarity with the context, and aggregates the top responses for a more accurate and comprehensive answer.
+
+## Features
+- 🔍 Multi-LLM querying using Groq's LLMs (LLaMA3, Gemma, etc.)
+- 🤝 Cosine similarity scoring of responses
+- 🧠 Top-k response aggregation
+- 📄 Works with PDFs and plain text
+- ⚡ Fast execution with thread pooling
+
+## Installation
+```bash
+pip install metarag
+
+```
+## Pre-requisites
+Load your GROQ_API_KEY to the project from https://console.groq.com/keys and follow the sample example shown below.
+## Example Usage
+```python
+import metarag
+from dotenv import load_dotenv
+load_dotenv()  
+def test_metarag_functionality():
+    
+    document_paths = ["VectorDB_Paper.pdf"]  
+
+    rag_instance = metarag.MetaRAG(document_paths=document_paths)
+
+    query = "What is the methodology in 5 lines like a professor and extract 5 keywords?"
+
+    result = rag_instance.run(query)
+
+    print(f"Aggregated Response: {result}")
+
+if __name__ == "__main__":
+    test_metarag_functionality()
+
+```
+
+## Requirements
+Python 3.8+
+
+## License
+MIT License - see LICENSE file for details.
+
+## Author
+**Nisharg Nargund**  
+Founder @OpenRAG
