@@ -1,0 +1,11 @@
+hugo-0.147.0.dist-info/top_level.txt,sha256=1YLtTirNxzts10vTa7nWCluyqrKG0jKpK87fgAIvTqI,5
+hugo-0.147.0.dist-info/METADATA,sha256=Twt0RJTZstEJbThOQsMGfyqhbtoVFcLpow_TUDjQYnk,23215
+hugo-0.147.0.dist-info/RECORD,,
+hugo-0.147.0.dist-info/entry_points.txt,sha256=Ls4oXWdn8_WPbp5MRF8E8fSO0sbSv780-1MwtEbjUTI,41
+hugo-0.147.0.dist-info/WHEEL,sha256=oBvwjgruTK-5V64t3DzVaIWtO9ca-OevFqETcmez7VI,145
+hugo-0.147.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+hugo-0.147.0.dist-info/licenses/LICENSE-hugo.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+hugo/cli.py,sha256=xgRm53q0EipdO2uv1cMJaI0eMW0uiLDRItVwvQSO65Y,1773
+hugo/__main__.py,sha256=oivVy03lY91Mbd-m9lhsKaceYjtCFkvlL27ja35lBbI,278
+hugo/binaries/hugo-0.147.0-linux-amd64,sha256=W8gpcncD9LEo0hW3CI6qUpzxsrWGUQDFcj49gneFjws,76019160
+hugo/binaries/.gitignore,sha256=kCpRPdl3S_jqYYZaOrc0-xa6-l3KqVjNRXc6jCkd_-Q,12
