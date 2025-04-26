@@ -1,0 +1,28 @@
+# `oxford-stats-lib`
+
+## Example
+
+```python
+clouds = pd.read_csv('https://raw.githubusercontent.com/jillxoreilly/StatsCourseBook_2025/main/data/cloudSeeding.csv')
+
+test = HypothesisTest(clouds)
+test.measuring_column('rainfall').query_on_column('status').set_datapoints('Unseeded', 'Seeded')
+
+print(test.using_permutation().exec())
+```
+
+This yields:
+
+```
+H0: The difference in mean rainfall between group Unseeded and group Seeded is zero.
+H1: The difference in mean rainfall between group Unseeded and group Seeded is two-sided than zero.
+This is a two-sided (non-directional) alternative hypothesis.
+
+Test statistic: difference in mean rainfall between group Unseeded and group Seeded (-277)
+Alpha: 0.05
+
+P-value: 0.052 (after 10000 permutations)
+
+0.052 > 0.05.
+There is insufficient evidence to reject the null hypothesis.
+```
