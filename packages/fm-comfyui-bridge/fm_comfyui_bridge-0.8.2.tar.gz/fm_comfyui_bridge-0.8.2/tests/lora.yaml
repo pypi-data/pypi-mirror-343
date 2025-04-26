@@ -1,0 +1,13 @@
+checkpoint: catTowerNoobaiXL_v15Vpred.safetensors
+vpred: true
+image-size:
+  height: 768
+  width: 1344
+lora:
+- enabled: true
+  model: lora-ix-tillhi-v1.safetensors
+  strength: 0.9
+  trigger: tillhi
+sampling:
+  steps: 12
+  cfg: 5.0
