@@ -1,0 +1,12 @@
+dlslime/__init__.py,sha256=UDGE1fc-H88n5FcYxuCXxu-7oGjIPIEaBY6rYZlbr8c,86
+dlslime/_slime_c.cpython-312-x86_64-linux-gnu.so,sha256=5AJLt2uIJUKZS2WEE3S4r2EnkfdrzCCiT_qf7ozgKXE,327584
+dlslime/lib_slime_engine.so,sha256=TYCENOA0VEsBnN5iLT5ZnQcfuWmjkBhutpHql4-dYiM,18800
+dlslime/lib_slime_ops.so,sha256=aJYO7yV16bQyZ79Nwp_zuuRLVyK1kr5RjDwL26c37B0,63872
+dlslime/lib_slime_rdma.so,sha256=7ZhONZhUXxSSx1uXhSOGvL9li4c_01PUi7fDYcQXnFo,307336
+dlslime/lib_slime_utils.so,sha256=sGTIomLa7fxapTEHuvkAkqekaSh3tkAMGKqlP5Np4Rc,18816
+dlslime/transport/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dlslime/transport/rdma_endpoint.py,sha256=KUM4-ASITjdBHtIRqBZNmujutn_kVpb3jUOW60aVfbA,4237
+dlslime-0.0.1.post4.dist-info/METADATA,sha256=_OKO9VxqR5GUKAiP2826Rdoit_pWMdmuQc-_C42Ht-0,4724
+dlslime-0.0.1.post4.dist-info/WHEEL,sha256=LDGS7-1-HjNx3_q5PfKqs36zTjHrkMvRHFo5yDrRAl8,109
+dlslime-0.0.1.post4.dist-info/licenses/LICENSE,sha256=YNu3sNv5Dn1m9wgzw5HOHJ9YZFh2Pp3HKBwpearEXcg,1494
+dlslime-0.0.1.post4.dist-info/RECORD,,
