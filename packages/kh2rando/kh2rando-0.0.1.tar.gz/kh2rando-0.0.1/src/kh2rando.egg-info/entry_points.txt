@@ -1,0 +1,2 @@
+[console_scripts]
+seed-gen = seed_gen:seed_gen
