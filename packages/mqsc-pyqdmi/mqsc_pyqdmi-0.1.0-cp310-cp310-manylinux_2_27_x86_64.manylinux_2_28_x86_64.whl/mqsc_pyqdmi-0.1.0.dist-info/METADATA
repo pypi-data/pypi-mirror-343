@@ -1,0 +1,24 @@
+Metadata-Version: 2.2
+Name: mqsc-pyqdmi
+Version: 0.1.0
+Summary: MQSC PyQDMI Library
+Author-Email: Lukas Burgholzer <lukas@munichquantum.software>
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)
+Classifier: Typing :: Typed
+Requires-Python: >=3.9
+Provides-Extra: qiskit
+Requires-Dist: qiskit>=1.0; extra == "qiskit"
+
