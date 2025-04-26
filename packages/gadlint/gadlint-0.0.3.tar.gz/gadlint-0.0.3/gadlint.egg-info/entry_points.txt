@@ -1,0 +1,2 @@
+[console_scripts]
+gadlint = gadlint.cli:app

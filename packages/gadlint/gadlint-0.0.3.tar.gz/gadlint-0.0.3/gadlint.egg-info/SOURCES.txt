@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+gadlint/__init__.py
+gadlint/cli.py
+gadlint.egg-info/PKG-INFO
+gadlint.egg-info/SOURCES.txt
+gadlint.egg-info/dependency_links.txt
+gadlint.egg-info/entry_points.txt
+gadlint.egg-info/requires.txt
+gadlint.egg-info/top_level.txt
+gadlint/configs/.isort.cfg
+gadlint/configs/mypy.ini
+gadlint/configs/ruff.toml

@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: gadlint
+Version: 0.0.3
+Summary: CLI tool that runs isort, ruff, mypy, and radon with built-in configurations.
+Home-page: https://github.com/AlexDemure/gadlint
+Author: Alexander Grishchenko
+Author-email: alexanderdemure@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<p align="center">
+  <a href="https://github.com/AlexDemure/gadlint">
+    <a href="https://ibb.co/Vc0tFPnw"><img src="https://i.ibb.co/rRKmB18d/logo.png" alt="logo" border="0"></a>
+  </a>
+</p>
+
+<p align="center">
+  CLI tool that runs isort, ruff, mypy, and radon with built-in configurations.
+</p>
+
+---
+
+### Installation
+
+```
+pip install gadlint
+```
+
+### Usage
+
+```sh
+gadlint .
+```
