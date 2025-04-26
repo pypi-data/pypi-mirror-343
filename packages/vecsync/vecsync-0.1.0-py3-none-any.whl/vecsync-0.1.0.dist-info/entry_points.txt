@@ -1,0 +1,2 @@
+[console_scripts]
+vecsync = vecsync:cli.cli
