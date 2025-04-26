@@ -1,0 +1,3 @@
+[console_scripts]
+vigi = vigilinux.main:main
+
