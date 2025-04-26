@@ -1,0 +1,7 @@
+alpha_utils/__init__.py,sha256=fxjq6fzcoKg33ZlgElMa8HADSlO72L5GWhNFFsojMGo,22
+alpha_utils/function.cp310-win_amd64.pyd,sha256=A3HBZ7DfdjD_VKgwu6fkBKO1ODcE7kzXRFvlGRLYzMA,78848
+alpha_utils/function.py,sha256=DPWTCJ-IgC_khCNY_OUJDyGcZX-oAoXUdkBnIUPqhNA,5188
+alpha_utils-2.2.2.dist-info/METADATA,sha256=b-zL3oSd02eFbx2vsaUVbtfWCopFdQoWUwoLQa96D0Y,2486
+alpha_utils-2.2.2.dist-info/WHEEL,sha256=fsW6--WFfuzX2scefE6JfcSZ5dXg5h59u8lqlpL5uuo,101
+alpha_utils-2.2.2.dist-info/top_level.txt,sha256=tc4PK4kwyXghl6hhLfrzwF55yj1yTd3UGJpPoQFLFvY,12
+alpha_utils-2.2.2.dist-info/RECORD,,
