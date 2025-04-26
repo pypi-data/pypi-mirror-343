@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+mlaflow/__init__.py
+mlaflow/mlaflow.py
+mlaflow.egg-info/PKG-INFO
+mlaflow.egg-info/SOURCES.txt
+mlaflow.egg-info/dependency_links.txt
+mlaflow.egg-info/requires.txt
+mlaflow.egg-info/top_level.txt

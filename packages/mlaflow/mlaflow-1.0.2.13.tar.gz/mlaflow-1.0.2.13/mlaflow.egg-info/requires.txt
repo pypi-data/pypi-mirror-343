@@ -1,0 +1,4 @@
+scanpy>=1.7.2
+optuna>=2.8.0
+cma>=3.0
+umap-learn>=0.5.1
