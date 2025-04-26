@@ -1,0 +1,2 @@
+[console_scripts]
+whl_env = whl_env.main:main
