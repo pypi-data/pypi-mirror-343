@@ -1,0 +1,2 @@
+[console_scripts]
+swaig_cli = signalwire.cli:main
