@@ -1,0 +1,112 @@
+Metadata-Version: 2.4
+Name: thunder
+Version: 0.0.1
+Summary: A small experiments runner for Pytorch Lightning
+Author-email: NeuroML Group <max@ira-labs.com>, Arseni Bialkou <arsfizteh@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2023 NeuroML Group
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/neuro-ml/thunder
+Project-URL: Issues, https://github.com/neuro-ml/thunder/issues
+Project-URL: Source, https://github.com/neuro-ml/thunder
+Keywords: deep learning,experiments
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: lightning<3.0.0,>=2.0.0
+Requires-Dist: lazycon<1.0.0,>=0.6.3
+Requires-Dist: typer<1.0.0,>=0.9.0
+Requires-Dist: pydantic<3.0.0
+Requires-Dist: click
+Requires-Dist: toolz
+Requires-Dist: rich
+Requires-Dist: numpy
+Requires-Dist: more_itertools
+Requires-Dist: pyyaml
+Requires-Dist: deli
+Requires-Dist: joblib
+Requires-Dist: pytimeparse
+Requires-Dist: typing-extensions
+Dynamic: license-file
+
+[![docs](https://img.shields.io/badge/-docs-success)](https://neuro-ml.github.io/thunder/)
+![License](https://img.shields.io/github/license/neuro-ml/thunder)
+[![codecov](https://codecov.io/gh/neuro-ml/thunder/branch/master/graph/badge.svg)](https://codecov.io/gh/neuro-ml/thunder)
+[![pypi](https://img.shields.io/pypi/v/thunder?logo=pypi&label=PyPi)](https://pypi.org/project/thunder/)
+
+> _You saw the lightning. Now it's time to hear the thunder_ 🌩️
+
+# Thunder 🌩️ 
+
+The Deep Learning framework based on [Lightning](https://github.com/Lightning-AI/lightning).
+
+## Install
+
+```bash
+pip install thunder
+```
+
+:warning:  
+> Currently thunder is not published on pypi. Install it via git clone.  
+
+## Start experimenting
+
+It's as simple as 1, 2, 3:
+
+1. Create a config (e.g. `base.config`):
+    ```python
+    from myproject import MyDataset, MyModule
+    from lightning import Trainer
+    from torch.utils.data import DataLoader
+    
+    # these 3 fields are required
+    train_data = DataLoader(MyDataset())
+    module = MyModule()
+    trainer = Trainer()
+    ```
+
+2. Build the experiment:
+   ```shell
+   thunder build base.config /path/to/some/folder
+   ```
+
+3. Run it
+    ```shell
+    thunder run /path/to/some/folder
+    ```
+
+Also, 2 and 3 can be combined into a single command:
+```shell
+thunder build-run base.config /path/to/some/folder
+```
+
+## More advanced stuff
+
+See [our docs](https://neuro-ml.github.io/thunder/) for a full list of neat things `thunder`🌩️ can do for you
