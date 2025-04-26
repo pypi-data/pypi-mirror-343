@@ -1,0 +1,32 @@
+[project]
+name = "ola-maps-mcp-server"
+version = "0.1.7"
+description = "MCP server for Ola Maps"
+authors = [
+    { name = "Ola Maps Team"},
+    { name = "Prasad Kavuri"},
+    { name = "Gaurav Garg"},
+    { name = "Pankaj Verma", email = "pankaj.verma1@olakrutrim.com"}
+]
+maintainers = [
+  {name = "Pankaj Verma", email = "pankaj.verma1@olakrutrim.com"}
+]
+keywords = ["Ola", "Maps", "mcp", "llm"]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.6.0",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.scripts]
+ola-maps-mcp-server = "mcp_ola_maps.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["mcp_ola_maps"]
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
