@@ -1,0 +1,5 @@
+[console_scripts]
+sing-box-config = singbox_config.cmd:main
+
+[gui_scripts]
+
