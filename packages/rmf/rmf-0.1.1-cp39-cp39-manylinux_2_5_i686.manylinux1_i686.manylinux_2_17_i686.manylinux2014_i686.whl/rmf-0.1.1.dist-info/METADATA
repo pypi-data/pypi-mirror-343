@@ -1,0 +1,81 @@
+Metadata-Version: 2.4
+Name: rmf
+Version: 0.1.1
+Summary: Relativistic Mean Field package for neutron star and nuclear matter equation of state
+Author: Zhenyu Zhu
+Author-email: zxzsma@rit.edu
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: jax>=0.4.30
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Relativistic Mean Field
+
+## 1. Purpose
+
+This project provides the code to compute the equation of state (EoS) using Relativistic Mean Field (RMF) Theory. It can automatically generate the RMF coupling constants [ $g_\sigma$, $g_\omega$, $g_\rho$, $g_2$, $g_3$, $\Lambda_v$, $c_3$] based on input saturation properties [ $n_0$, $E$/ $A$, $E_{sym}$, $K_0$, $J_0$, $M^\ast$/ $M_{_N}$, $J_0$]. Using these coupling constants, the code can compute the EoS for neutron star matter or symmetric nuclear matter.
+
+## 2. Installation
+
+### Using Pip
+```bash
+pip install rmf
+```
+
+or
+
+```bash
+git clone git@github.com:zzhu-astro/RMF.git; cd RMF
+pip install .
+```
+
+### Build from Scratch
+#### Clone the Repository
+```bash
+git clone git@github.com:zzhu-astro/RMF.git; cd RMF
+```
+
+#### Environment Variable
+To compile the project, you must set the `HOME_MF` environment variable. If you are currently in the root directory of `RMF` (e.g. `$HOME/RMF`), you can run:
+```bash
+export HOME_MF=`pwd`
+```
+
+#### Configuration File
+To ensure Makefile works correctly, you need to specify the configurations in the config file (e.g. `$HOME/macos_clang-config.mk`). An example can be found at `$HOME_TOV\macos_clang-config.mk`, where the Clang compiler, library paths, includes directories and flags are defined. Once your configuration file is ready, compile the project by running:
+```bash
+make CONFIG=macos_clang-config.mk python
+```
+
+#### Python Package
+Then run:
+```bash
+pip install .
+```
+This will install the Python package and automatically copy the `librmf.so` shared library you just built into the package directory.
+
+
+## 3. Dependencies
+1. C++ compiler - gcc or clang++ is recommended
+2. GSL
+3. Python3.9 or newer
+4. JAX (Automatic differentiation)
+
+## 4. Related Publications
+See the references below for more details on the Relativistic Mean Field model:
+1. Zhenyu Zhu, Ang Li, Jinniu Hu, Hong Shen: https://arxiv.org/abs/2305.16058
+2. Zhenyu Zhu, Ang Li, Tong Liu: https://arxiv.org/abs/2211.02007
+3. Zhenyu Zhu, Ang Li: https://arxiv.org/abs/1802.07441
+
