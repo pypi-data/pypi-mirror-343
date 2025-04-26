@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: langchain_sandbox
+Version: 0.0.4
+Summary: LangChain Sandbox
+Requires-Python: >=3.10
+Requires-Dist: langchain-core<0.4.0,>=0.3.56
