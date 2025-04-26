@@ -1,0 +1,11 @@
+_link.cpython-38-s390x-linux-gnu.so,sha256=YHj9hzBMAeXAmVFCzxPUeTqvcehdMv4l4OSYNlY02ug,534505
+link/__init__.py,sha256=rzjEm7GcevWzAmlmhQOKJNosuOiQdeUurkih6jbafG8,20
+link/__init__.pyi,sha256=vQmrYbi2q0s7CA6FMYe0kzXraaZ2x0DCM8kL-3CbnME,9757
+link/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+linkpython_extern.libs/libgcc_s-6d9300e1.so.1,sha256=5pcoaEjHRPVxqC_enEF5FcCIwoAWlFWK45Zza_GKQ9g,85417
+linkpython_extern.libs/libstdc++-59eb5e78.so.6.0.33,sha256=ZzNVAXOMnNCo-qN8twhbxy7q-2OxLvjWzkkvnWCmEl4,4008209
+linkpython_extern-1.1.1.dist-info/LICENSE.md,sha256=h__9L16YF1aqq34CeNEwlciCYSltXLh7SVR9dYZflJw,1389
+linkpython_extern-1.1.1.dist-info/METADATA,sha256=iK0qidVXqGaB0hc5uS6H5_X3xz6xsL4V9GvCvKFjw0E,4390
+linkpython_extern-1.1.1.dist-info/WHEEL,sha256=56_HRcbTkdGqB3IOAr265saioK7snMCb8sOC6Jey6fU,109
+linkpython_extern-1.1.1.dist-info/top_level.txt,sha256=w2tk0JDkL_3lYnUfJmtrZXOgBzu-erkQh4ZaYcCeCCY,23
+linkpython_extern-1.1.1.dist-info/RECORD,,
