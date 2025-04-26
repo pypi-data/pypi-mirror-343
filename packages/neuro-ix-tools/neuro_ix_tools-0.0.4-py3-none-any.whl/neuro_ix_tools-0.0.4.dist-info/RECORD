@@ -1,0 +1,13 @@
+neuro_ix_tools/__init__.py,sha256=xsbml1BbeIxSI8xJkCXMdCmFQFUweMwI-4363uLVqeQ,1491
+neuro_ix_tools/bids.py,sha256=LrJdvLANOMtIM0eb33cb3EgdUH3d14P4eOlO5Q1invc,4346
+neuro_ix_tools/config.py,sha256=XGJiM2S9tMSKWWgbzblfi2a9vLuSn5kMicaTTgrjicY,664
+neuro_ix_tools/processing/__init__.py,sha256=bC5E9GJfyDvNVIASTLyRKlbJx9wtUPpHWqcaBbudfmM,2255
+neuro_ix_tools/processing/apptainer.py,sha256=d1GWXNCWtos8N4qLA-YjGekyxOuSGXDmU0omHQjUUGQ,1818
+neuro_ix_tools/processing/base_cmd.py,sha256=btYhTGGsVfhSd21RgTvLKjZMR0ZAp-IOjmLZgmzND1A,306
+neuro_ix_tools/processing/freesurfer.py,sha256=SXXInIUIfYuyMjMT2l5k86Cp27ay_VwqMxoTo2JByAw,7032
+neuro_ix_tools/processing/slurm.py,sha256=06w4JEvfvJiaJMsMLSN07tXbi8sZObBJN7pdHMsr3YY,741
+neuro_ix_tools-0.0.4.dist-info/METADATA,sha256=BbB8oVm7VrmNj2bOd6bGcJBRT7y-UKMSTTxxY11DuVk,3558
+neuro_ix_tools-0.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+neuro_ix_tools-0.0.4.dist-info/entry_points.txt,sha256=WAqmptWQbfe5QxbvDD3qstqU7HvbwdaHBRa4mt_cQIA,48
+neuro_ix_tools-0.0.4.dist-info/licenses/LICENSE,sha256=6cDMdqeTRDKFJwO7FZ3qw55XgevP-HfnQv_ykwBVON4,1083
+neuro_ix_tools-0.0.4.dist-info/RECORD,,
