@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: TkinterLite
+Version: 1.9.1
+Summary: tkinter库的简化版
+Home-page: https://github.com/Yanxinle1123/LeleEasyTkinter
+Author: YanXinle
+Author-email: 1020121123@qq.com
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: summary
