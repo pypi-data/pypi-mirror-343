@@ -1,0 +1,128 @@
+{% comment %}
+Chart Component
+
+Usage:
+{% include 'dashboard/components/chart.html' with 
+    id="my-chart"
+    type="line"
+    title="Sales Overview"
+    labels=labels
+    datasets=datasets
+    height=300
+%}
+
+Parameters:
+- id: Unique identifier for the chart (required)
+- type: Chart type (line, bar, pie, doughnut, radar, polarArea) - default: line
+- title: Chart title (optional)
+- labels: List of labels for the chart (required)
+- datasets: List of datasets for the chart (required)
+- height: Height of the chart in pixels (default: 300)
+{% endcomment %}
+
+{% if not id %}
+    {% comment %}Ensure id is provided{% endcomment %}
+    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+        Error: 'id' parameter is required for chart component
+    </div>
+{% else %}
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+        {% if title %}
+            <h2 class="text-lg font-semibold text-gray-800 dark:text-white mb-4">{{ title }}</h2>
+        {% endif %}
+        <div style="height: {{ height|default:300 }}px;">
+            <canvas id="{{ id }}"></canvas>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if Chart.js is loaded
+            if (typeof Chart === 'undefined') {
+                // Load Chart.js if not already loaded
+                const script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/chart.js';
+                script.onload = initChart;
+                document.head.appendChild(script);
+            } else {
+                initChart();
+            }
+            
+            function initChart() {
+                const ctx = document.getElementById('{{ id }}').getContext('2d');
+                
+                // Get system theme (dark/light)
+                const isDarkMode = document.documentElement.classList.contains('dark');
+                
+                // Set colors based on theme
+                const textColor = isDarkMode ? '#e5e7eb' : '#374151';
+                const gridColor = isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
+                
+                // Parse datasets from Django template
+                const datasets = {{ datasets|safe }};
+                
+                // Apply theme colors to datasets if not specified
+                datasets.forEach(dataset => {
+                    if (!dataset.borderColor && !dataset.backgroundColor) {
+                        // Generate colors if not provided
+                        const hue = Math.floor(Math.random() * 360);
+                        dataset.borderColor = `hsl(${hue}, 70%, 60%)`;
+                        dataset.backgroundColor = `hsla(${hue}, 70%, 60%, 0.2)`;
+                    }
+                });
+                
+                // Create chart
+                new Chart(ctx, {
+                    type: '{{ type|default:"line" }}',
+                    data: {
+                        labels: {{ labels|safe }},
+                        datasets: datasets
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: textColor
+                                }
+                            }
+                        },
+                        scales: {
+                            {% if type != 'pie' and type != 'doughnut' and type != 'polarArea' %}
+                            x: {
+                                grid: {
+                                    color: gridColor
+                                },
+                                ticks: {
+                                    color: textColor
+                                }
+                            },
+                            y: {
+                                grid: {
+                                    color: gridColor
+                                },
+                                ticks: {
+                                    color: textColor
+                                }
+                            }
+                            {% endif %}
+                        }
+                    }
+                });
+                
+                // Update chart colors when theme changes
+                const themeToggle = document.getElementById('themeToggle');
+                if (themeToggle) {
+                    themeToggle.addEventListener('click', function() {
+                        // Reload the page to update chart colors
+                        // This is a simple solution, a more complex one would update the chart in-place
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 100);
+                    });
+                }
+            }
+        });
+    </script>
+{% endif %}

@@ -1,0 +1,77 @@
+{% comment %}
+Modal Component
+
+Usage:
+{% include 'dashboard/components/modal.html' with 
+    id="my-modal"
+    title="Modal Title"
+    content="Modal content goes here"
+    primary_button="Save"
+    secondary_button="Cancel"
+    size="md"
+%}
+
+Parameters:
+- id: Unique identifier for the modal (required)
+- title: Modal title (required)
+- content: Modal content (HTML allowed)
+- primary_button: Text for primary button (optional)
+- secondary_button: Text for secondary button (optional)
+- size: Modal size (sm, md, lg, xl) - default: md
+{% endcomment %}
+
+{% if not id %}
+    {% comment %}Ensure id is provided{% endcomment %}
+    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+        Error: 'id' parameter is required for modal component
+    </div>
+{% else %}
+    <!-- Modal Backdrop -->
+    <div id="{{ id }}-backdrop" class="fixed inset-0 bg-gray-900 bg-opacity-50 z-40 hidden" aria-hidden="true"></div>
+    
+    <!-- Modal Dialog -->
+    <div id="{{ id }}" class="fixed inset-0 z-50 overflow-y-auto hidden" role="dialog" aria-modal="true" aria-labelledby="{{ id }}-title">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <!-- Modal Panel -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl overflow-hidden transform transition-all 
+                {% if size == 'sm' %}max-w-sm w-full{% elif size == 'lg' %}max-w-2xl w-full{% elif size == 'xl' %}max-w-4xl w-full{% else %}max-w-md w-full{% endif %}">
+                
+                <!-- Modal Header -->
+                <div class="px-6 py-4 border-b dark:border-gray-700 flex items-center justify-between">
+                    <h3 id="{{ id }}-title" class="text-lg font-medium text-gray-900 dark:text-white">{{ title }}</h3>
+                    <button type="button" class="text-gray-400 hover:text-gray-500 focus:outline-none" data-modal-close="{{ id }}">
+                        <span class="sr-only">Close</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Modal Content -->
+                <div class="px-6 py-4">
+                    {% if content %}
+                        {{ content|safe }}
+                    {% else %}
+                        <div id="{{ id }}-content"></div>
+                    {% endif %}
+                </div>
+                
+                <!-- Modal Footer -->
+                {% if primary_button or secondary_button %}
+                    <div class="px-6 py-4 bg-gray-50 dark:bg-gray-700 border-t dark:border-gray-600 flex justify-end space-x-3">
+                        {% if secondary_button %}
+                            <button type="button" class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 dark:focus:ring-offset-gray-800" data-modal-close="{{ id }}">
+                                {{ secondary_button }}
+                            </button>
+                        {% endif %}
+                        {% if primary_button %}
+                            <button type="button" id="{{ id }}-primary-btn" class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 dark:focus:ring-offset-gray-800">
+                                {{ primary_button }}
+                            </button>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endif %}

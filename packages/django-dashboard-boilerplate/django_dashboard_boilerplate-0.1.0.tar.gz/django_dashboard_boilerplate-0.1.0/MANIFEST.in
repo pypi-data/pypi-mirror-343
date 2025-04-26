@@ -1,0 +1,6 @@
+include LICENSE
+include README.md
+recursive-include dashboard/templates *
+recursive-include dashboard/static *
+recursive-include static *
+recursive-include templates *
