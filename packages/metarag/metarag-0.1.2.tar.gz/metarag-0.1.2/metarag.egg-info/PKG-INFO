@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: metarag
+Version: 0.1.2
+Summary: MetaRAG: A multi-LLM ensemble Retrieval-Augmented Generation framework with cosine similarity ranking.
+Home-page: https://github.com/OpenRAG128/META-RAG
+Author: Nisharg Nargund
+Author-email: nisarg.nargund@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
