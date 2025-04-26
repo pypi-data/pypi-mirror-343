@@ -1,0 +1,6 @@
+README.md
+setup.py
+yandex_sdg_web_components.egg-info/PKG-INFO
+yandex_sdg_web_components.egg-info/SOURCES.txt
+yandex_sdg_web_components.egg-info/dependency_links.txt
+yandex_sdg_web_components.egg-info/top_level.txt
