@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+email_reply_parser/__init__.py
+email_reply_parser_jimmy927.egg-info/PKG-INFO
+email_reply_parser_jimmy927.egg-info/SOURCES.txt
+email_reply_parser_jimmy927.egg-info/dependency_links.txt
+email_reply_parser_jimmy927.egg-info/top_level.txt
+test/test_email_reply_parser.py
