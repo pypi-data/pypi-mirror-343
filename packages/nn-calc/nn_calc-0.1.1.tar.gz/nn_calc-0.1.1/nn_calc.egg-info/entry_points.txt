@@ -1,0 +1,2 @@
+[console_scripts]
+nn-calc = nn_calc:main
