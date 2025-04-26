@@ -1,0 +1,2 @@
+[console_scripts]
+scrape-docs = github_docs_scraper_capharno.cli:main
