@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=77", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "requests-gracedb"
+description = "generic connection pooling HTTP client for GraceDB and similar services"
+license = "GPL-3.0-or-later"
+readme = "README.md"
+authors = [
+    { name = "Leo Singer", email = "leo.p.singer@nasa.gov" }
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Topic :: Scientific/Engineering :: Physics"
+]
+dependencies = [
+    "cryptography >=42",
+    "igwn-auth-utils >=1.3.0",
+    "pyjwt",
+    "requests",
+    "safe-netrc"
+]
+requires-python = ">=3.9"
+dynamic = [ "version" ]
+
+[project.urls]
+source = "https://git.ligo.org/emfollow/requests-gracedb"
+"Bug Tracker" = "https://git.ligo.org/emfollow/requests-gracedb/issues"
+"Documentation" = "https://requests-gracedb.readthedocs.io/"
+"Source Code" = "https://git.ligo.org/emfollow/requests-gracedb"
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-freezer",
+    "pytest-httpserver",
+    "pytest-socket"
+]
+
+[tool.setuptools_scm]
+version_file = "src/requests_gracedb/_version.py"
+
+[tool.coverage.run]
+source = [ "requests_gracedb", "tests" ]

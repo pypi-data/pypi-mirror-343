@@ -1,0 +1,11 @@
+cryptography>=42
+igwn-auth-utils>=1.3.0
+pyjwt
+requests
+safe-netrc
+
+[test]
+pytest
+pytest-freezer
+pytest-httpserver
+pytest-socket

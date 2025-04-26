@@ -1,0 +1,56 @@
+include:
+  - project: computing/gitlab-ci-templates
+    file: python.yml
+  - project: computing/gitlab-ci-templates
+    file: workflow/sccb.yml
+
+# Build source and binary distributions
+build:
+  image: python
+  extends:
+    - .python:build
+
+.test: &test
+  stage: test
+  extends:
+    - .python:pytest
+  variables:
+    INSTALL_TARGET: .[test]
+
+test-3.9:
+  image: python:3.9
+  <<: *test
+
+test-3.10:
+  image: python:3.10
+  <<: *test
+
+test-3.11:
+  image: python:3.11
+  <<: *test
+
+test-3.12:
+  image: python:3.12
+  <<: *test
+
+test-3.13:
+  image: python:3.13
+  <<: *test
+
+# SCCB request
+sccb:
+  stage: deploy
+
+# Upload package to PyPI.
+# Place your PyPI API token in the repository's GitLab CI secrets.
+pypi:
+  stage: deploy
+  image: python:slim
+  extends:
+    - .python:twine
+  variables:
+    TWINE_PASSWORD: $PYPI_API_TOKEN
+  dependencies:
+    - build
+  only:
+    - tags@emfollow/requests-gracedb
