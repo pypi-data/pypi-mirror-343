@@ -1,0 +1,33 @@
+[project]
+name = "CirclePathFinder"
+version = "1.0.0"
+authors = [
+  { name="Michal Krupa", email="michalkrupa@gmail.com" },
+]
+description = "Pathfinding in constrained environments designed for navigating structured networks formed by intersecting circles."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+dependencies = [
+    "scipy>=1.8,<2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/michalkrupa/pathfinding/"
+Issues = "https://github.com/michalkrupa/pathfinding/issues"
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
