@@ -1,0 +1,9 @@
+black==24.2.0
+ipykernel==6.29.5
+isort==5.13.2
+jupytext==1.17.0
+nbqa==1.9.1
+nbstripout==0.8.1
+notebook==7.4.1
+poetry==2.1.1
+pynvim==0.5.2
