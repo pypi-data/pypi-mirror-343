@@ -1,0 +1,96 @@
+/* disable big blue border in main content */
+#main-content :focus {
+  outline: none !important;
+}
+
+/* disable global transitions */
+* {
+  -webkit-transition-duration: unset;
+  transition-duration: unset;
+  -webkit-transition-property: background-color, border-color, color, opacity, text-shadow, -webkit-box-shadow, -webkit-transform;
+  transition-property: background-color, border-color, color, opacity, text-shadow, -webkit-box-shadow, -webkit-transform;
+  transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, transform;
+  transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, transform, -webkit-box-shadow, -webkit-transform;
+  -webkit-transition-timing-function: unset;
+  transition-timing-function: unset;
+}
+
+/* usa-banner flag icon */
+.usa-banner__button[aria-expanded=true]::after {
+  -webkit-mask: url(/static/vendor/uswds/3.1.0/img/usa-icons/expand_less.svg) no-repeat center/contain;
+}
+
+.usa-banner__button[aria-expanded=false]::after {
+  -webkit-mask: url(/static/vendor/uswds/3.1.0/img/usa-icons/expand_more.svg) no-repeat center/contain;
+}
+
+/* Background fill */
+.bg-custom {
+  background-color: #f1f1f1;
+}
+
+/* table */
+table td {
+  background-color: unset !important;
+}
+
+/* sidebar-cards */
+.card.pane {
+  border-color: #5b616b;
+  border-width: 1px 1px 4px 1px;
+  border-radius: 0;
+}
+
+.card.pane > .card-header {
+  border-color: #5b616b;
+  background-color: #5b616b;
+  border-radius: 0;
+}
+
+/* always above toast container */
+.toast-container {
+  top: 140px;
+  z-index: 10000;
+}
+
+/* caret on dropdown menu */
+a.dropdown-toggle:not([href])::after {
+  display: inline-block !important;
+}
+
+/* navigation tabs react-router-dom */
+.nav-item {
+  margin-bottom: 0;
+}
+
+/* bootstrap popover header */
+.popover-header {
+  margin-top: 0;
+}
+
+/* desktop analysis list */
+.analysis-list td {
+  border-left: 0px;
+  border-right: 0px;
+  border-color: #dddddd
+}
+.analysis-list th {
+  border: 0px;
+  background-color: white;
+}
+
+/* Expand width of footer column since there is only one column */
+.bmds-desktop,.footer__column{
+  width: 100%;
+}
+
+/* reduce font size */
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.7rem;
+}
+h2 {
+  font-size: 1.5rem;
+}

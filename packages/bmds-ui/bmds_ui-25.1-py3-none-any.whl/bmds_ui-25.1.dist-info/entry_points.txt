@@ -1,0 +1,8 @@
+[console_scripts]
+bmds=bmds_ui.desktop.cli:main
+bmds-desktop=bmds_ui.desktop.cli:main
+bmds_desktop=bmds_ui.desktop.cli:main
+bmdsdesktop=bmds_ui.desktop.cli:main
+manage=bmds_ui:manage
+manage.py=bmds_ui:manage
+

@@ -1,0 +1,15 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block userlinks %}
+    {% if site_url %}
+        <a href="{{ site_url }}">View site</a> /
+    {% endif %}
+    <a href="{% url 'analytics' %}">Analytics</a> /
+    <a href="{% url 'swagger' %}">API</a> /
+    <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+        {% csrf_token %}
+        <button type="submit">Log out</button>
+    </form>
+    {% include "admin/color_theme_toggle.html" %}
+{% endblock %}

@@ -1,0 +1,92 @@
+{% load cache %}
+{% load static %}
+{% load render_bundle from webpack_loader %}
+
+<!DOCTYPE html>
+<html class="js" lang="en">
+<head>
+  {% cache 3600 header %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    {% if SKIN == 0 %}
+      <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
+    {% elif SKIN == 1 %}
+      <link rel="icon" href="https://www.epa.gov/themes/epa_theme/images/favicon.ico" type="image/x-icon" />
+    {% endif %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/4.6.2/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap-icons/1.10.3/bootstrap-icons.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/site.css' %}">
+
+    {% if SKIN == 1 %}
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/uswds/3.1.0/css/styles.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/epa/core/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/epa/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/epa/bmdsonline.css' %}" />
+    <script type="text/javascript" src="{% static 'vendor/uswds/3.1.0/js/uswds-init.min.js' %}"></script>
+    {% endif %}
+    {% if GTM_ID %}
+      <!-- Google Tag Manager -->
+      <script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != "dataLayer" ? "&l=" + l : ""; j.async = true; j.src = "//www.googletagmanager.com/gtm.js?id=" + i + dl; f.parentNode.insertBefore(j, f); })(window, document, "script", "dataLayer", "{{GTM_ID}}");</script>
+      <!-- End Google Tag Manager -->
+    {% endif %}
+  {% endcache header %}
+
+  <title>{% block title %}BMDS {% if IS_DESKTOP %}Desktop{% else %}Online{% endif %}{% endblock title %}</title>
+  {% block extra-head %}
+  {% endblock extra-head %}
+
+  {% if user.is_superuser or SERVER_ROLE != 'production' %}
+    {% include "./includes/environment_banner.html" %}
+  {% endif %}
+</head>
+<body class="html">
+
+{% if GTM_ID %}
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id={{GTM_ID}}" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager -->
+{% endif %}
+
+{% if SKIN == 0 %}
+  {% include "includes/base/header.html" %}
+{% elif SKIN == 1 %}
+  {% include "includes/epa/header.html" %}
+{% endif %}
+<section class="main-content clearfix" id="main-content">
+  <div class="container-fluid pt-2" style="min-height: 90vh !important;">
+
+  {% if messages %}
+    {% for message in messages %}
+      <div {% if message.tags %} class="{{ message.tags }} {% endif %}">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message|safe }}
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  {% block content %}
+  {% endblock content %}
+  </div>
+</section>
+{% cache 3600 footer desktop_versions.db_path %}
+  {% if SKIN == 0 %}
+    {% include "./includes/base/footer.html" %}
+  {% elif SKIN == 1 %}
+    {% include "./includes/epa/footer.html" %}
+  {% endif %}
+
+  {% if SKIN == 1 %}
+  <script type="text/javascript" src="{% static 'vendor/uswds/3.1.0/js/uswds.min.js' %}"></script>
+  {% endif %}
+  <script src="{% static 'vendor/jquery/3.6.1/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/4.6.2/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/htmx/htmx.min.js' %}"></script>
+{% endcache footer %}
+{% render_bundle 'main' %}
+{% block extra-js %}
+{% endblock extra-js %}
+</body>
+</html>

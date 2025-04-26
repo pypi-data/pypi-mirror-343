@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% load bs4 %}
+
+{% block content %}
+<div class="alert alert-danger mt-3" role="alert">
+    <p><strong>{% icon "exclamation-triangle-fill mr-1" %}Error 404</strong></p>
+    <p>Page not found.</p>
+</div>
+{% endblock content %}

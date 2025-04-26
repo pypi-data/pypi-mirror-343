@@ -1,0 +1,92 @@
+Metadata-Version: 2.4
+Name: bmds_ui
+Version: 25.1
+Summary: U.S. EPA Dose Response Modeling Software User Interface
+Keywords: dose response,toxicology,risk assessment
+Author: BMDS Development Team
+Author-email: Andy Shapiro <shapiro.andy@epa.gov>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering
+License-File: LICENSE
+Requires-Dist: pybmds==25.1
+Requires-Dist: Django~=5.1.2
+Requires-Dist: django-anymail~=12.0
+Requires-Dist: django-redis~=5.4.0
+Requires-Dist: django-webpack-loader~=3.1.1
+Requires-Dist: djangorestframework~=3.15.2
+Requires-Dist: uritemplate~=4.1.1
+Requires-Dist: django-reversion~=5.1.0
+Requires-Dist: PyYAML~=6.0.2
+Requires-Dist: celery~=5.4.0
+Requires-Dist: billiard~=4.2.1
+Requires-Dist: kombu~=5.4.2
+Requires-Dist: plotly~=6.0.0
+Requires-Dist: redis~=5.2.1
+Requires-Dist: packaging~=24.2
+Requires-Dist: textual==2.1.2
+Requires-Dist: whitenoise~=6.9.0
+Requires-Dist: flit~=3.11.0 ; extra == "dev"
+Requires-Dist: poethepoet~=0.33.0 ; extra == "dev"
+Requires-Dist: django-debug-toolbar~=5.0.1 ; extra == "dev"
+Requires-Dist: django_extensions~=3.2.3 ; extra == "dev"
+Requires-Dist: django-browser-reload~=1.18.0 ; extra == "dev"
+Requires-Dist: pytest~=8.3.3 ; extra == "dev"
+Requires-Dist: pytest-django~=4.10.0 ; extra == "dev"
+Requires-Dist: vcrpy~=7.0.0 ; extra == "dev"
+Requires-Dist: pytest-recording~=0.13.2 ; extra == "dev"
+Requires-Dist: pytest-asyncio~=0.25.3 ; extra == "dev"
+Requires-Dist: coverage~=7.6.4 ; extra == "dev"
+Requires-Dist: playwright~=1.50.0 ; extra == "dev"
+Requires-Dist: pytest-playwright~=0.7.0 ; extra == "dev"
+Requires-Dist: ruff~=0.9.10 ; extra == "dev"
+Requires-Dist: psycopg2-binary~=2.9.10 ; extra == "pg"
+Requires-Dist: gunicorn~=23.0.0 ; extra == "prod"
+Requires-Dist: sentry-sdk~=2.22.0 ; extra == "prod"
+Project-URL: Changes, https://github.com/USEPA/bmds-ui/blob/main/HISTORY.md
+Project-URL: Download, https://pypi.org/project/bmds-ui/
+Project-URL: Issue Tracker, https://github.com/USEPA/bmds-ui/issues
+Project-URL: Source, https://github.com/USEPA/bmds-ui
+Provides-Extra: dev
+Provides-Extra: pg
+Provides-Extra: prod
+
+# BMDS UI
+
+BMDS UI is a user interface for running [pybmds](https://pypi.org/project/pybmds/), a Python package for dose-response modeling using the US EPA's Benchmark Dose Modeling Software ([BMDS](https://www.epa.gov/bmds)).  The user interface is a web application, but has two different deployment options:
+
+* It can be deployed locally as a desktop application, which we call **BMDS Desktop**
+* It can deployed as a web application, such as [BMDS Online](https://bmdsonline.epa.gov)
+
+**BMDS Desktop application home screen:**
+![](./docs/img/bmds-desktop.jpg)
+
+**An example of the the user interface for model results:**
+![](./docs/img/bmds-output.jpg)
+
+## BMDS Online vs. BMDS Desktop
+
+BMDS Desktop is designed to run locally on your desktop computer in fully offline mode; it does not interact with any resources on the internet after initial installation. BMDS Online can be deployed online publicly or internally at a company or organization. Key differences between the software are described below:
+
+**Item**|**Desktop**|**Online**
+:-----:|:-----:|:-----:
+Permission|BMDS Desktop runs on your computer in fully offline mode.|No login is required for the online application. An administrative account can be used to view the admin page
+Analysis Visibility|The Desktop home page all analyses in a database|You must have the URL to an analysis in order to view
+Analysis Deletion|Analyses have no deletion date|Analyses are automatically deleted on N days from current date, where N is a configurable parameter
+Analysis organization|Analyses can be starred and labelled, and you can search on stars and labels|Analyses have no filtering available
+Database technology|Uses a sqlite database file (single file)|Uses a PostgreSQL database (better for concurrency)
+
+### BMDS Desktop Startup Screen
+
+The BMDS Desktop has a startup screen where you can select which database file you'd like to use in your application. You can have multiple databases on your computer, one per project for example:
+![](./docs/img/desktop-startup.jpg)
+
+## Disclaimer
+
+The United States Environmental Protection Agency (EPA) GitHub project code is provided on an "as is" basis and the user assumes responsibility for its use.  EPA has relinquished control of the information and no longer has responsibility to protect the integrity, confidentiality, or availability of the information.  Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by EPA.  The EPA seal and logo shall not be used in any manner to imply endorsement of any commercial product or activity by EPA or the United States Government.
+
