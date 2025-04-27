@@ -1,0 +1,62 @@
+"""
+ET0 file generator for AquaCrop (.ETO files)
+"""
+
+import os
+from typing import List
+
+def generate_eto_file(
+    file_path: str,
+    location: str,
+    eto_values: List[float],
+    record_type: int = 1,
+    first_day: int = 1,
+    first_month: int = 1,
+    first_year: int = 2014
+) -> str:
+    """
+    Generate an AquaCrop reference ET file (.ETO)
+    
+    Args:
+        file_path: Path to write the file
+        location: Location description
+        eto_values: List of ET0 values (mm/day)
+        record_type: Record type (1=daily, 2=10-daily, 3=monthly)
+        first_day: First day of record
+        first_month: First month of record
+        first_year: First year of record
+    
+    Returns:
+        The path to the generated file
+    """
+    if record_type not in {1, 2, 3}:
+        raise ValueError("record_type must be 1, 2, or 3")
+    if first_day not in {1, 11, 21} and record_type == 2:
+        raise ValueError("first_day must be 1, 11, or 21 for 10-day records")
+    if first_day not in {1} and record_type == 3:
+        raise ValueError("first_day must be 1 for monthly records")
+    if len(eto_values) == 0:
+        raise ValueError("eto_values must not be empty")
+    
+    lines = [
+        f"{location}",
+        f"     {record_type}  : Daily records (1=daily, 2=10-daily and 3=monthly data)",
+        f"     {first_day}  : First day of record (1, 11 or 21 for 10-day or 1 for months)",
+        f"     {first_month}  : First month of record",
+        f"  {first_year}  : First year of record (1901 if not linked to a specific year)",
+        "",
+        "  Average ETo (mm/day)",
+        "======================="
+    ]
+    
+    for eto in eto_values:
+        lines.append(f"{eto:.1f}")
+    
+    content = "\n".join(lines)
+    
+    if file_path:
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        with open(file_path, 'w') as f:
+            f.write(content)
+    
+    return file_path
