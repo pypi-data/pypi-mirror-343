@@ -1,0 +1,8 @@
+numpy<2.0
+mlcroissant
+networkx
+tqdm
+
+[test]
+pytest
+pytest-coverage
