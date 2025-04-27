@@ -1,0 +1,9 @@
+pageql/__init__.py,sha256=Nv2MiWTjuUNNbG2tHL_h8RrvgYokBq985rNQ8qrB0kg,352
+pageql/cli.py,sha256=pirL12T6nOidgf402Ia30kUMqSszZCOqPD0U-wN3dvI,1552
+pageql/pageql.py,sha256=4hSNJyCt2X9MrxXr3xatbD1GEBQ8iB4MvVnTD1BDwuQ,24605
+pageql/pageqlapp.py,sha256=vCND7wFTDuVHx9WMkcLOBRpLL_hfSFuXVFu7VKpgZr4,16550
+pageql-0.1.2.dist-info/METADATA,sha256=6ljd8GYEgznrR551gaz8SRqQJZFCFCa_1F1dOPhaAjY,23143
+pageql-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pageql-0.1.2.dist-info/entry_points.txt,sha256=Elg9YduioUQ5UmAdWBaOQK4SwuiMrsk_1d7pQ1EpA-E,43
+pageql-0.1.2.dist-info/licenses/LICENSE,sha256=_L1nT9yHgwemj3it5bKEsm5N0EOTcTTaKAQDMxsDp0k,1067
+pageql-0.1.2.dist-info/RECORD,,
