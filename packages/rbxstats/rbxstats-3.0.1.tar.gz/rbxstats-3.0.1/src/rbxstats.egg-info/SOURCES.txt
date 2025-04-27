@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/rbxstats.egg-info/PKG-INFO
+src/rbxstats.egg-info/SOURCES.txt
+src/rbxstats.egg-info/dependency_links.txt
+src/rbxstats.egg-info/requires.txt
+src/rbxstats.egg-info/top_level.txt
