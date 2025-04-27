@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: pydmr
+Version: 0.0.0
+Summary: A python interface for the dmr data format
+Author-email: Steven Sourbron <s.sourbron@sheffield.ac.uk>
+License: Apache-2.0
+Project-URL: Homepage, https://openmiblab.github.io//
+Project-URL: Source Code, https://github.com/openmiblab/pydmr
+Keywords: python,medical imaging
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: numpy
+Dynamic: license-file
