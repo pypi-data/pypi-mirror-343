@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: mcp-article-fetch
+Version: 0.1.7
+Summary: MCP server for extracting article content from web pages
+Author-email: Your Name <your.email@example.com>
+License: MIT
+Keywords: mcp,web scraping,article extraction
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: bs4>=0.0.2
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: requests>=2.32.3

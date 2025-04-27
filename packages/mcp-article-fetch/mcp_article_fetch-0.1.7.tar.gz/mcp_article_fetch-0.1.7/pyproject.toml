@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-article-fetch"
+version = "0.1.7"
+description = "MCP server for extracting article content from web pages"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "bs4>=0.0.2",
+    "mcp[cli]>=1.6.0",
+    "requests>=2.32.3",
+]
+keywords = ["mcp", "web scraping", "article extraction"]
+
+[project.scripts]
+mcp-article-fetch = "mcp_article_fetch.server:main"  # 入口点
+
+[tool.uv.workspace]
+members = ["mcp_article_fetch.server:main"]
