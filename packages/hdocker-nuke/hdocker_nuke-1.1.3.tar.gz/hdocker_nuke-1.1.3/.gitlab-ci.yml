@@ -1,0 +1,14 @@
+variables:
+  INTERNAL: "false"
+  GITHUB_MIRROR_URL: "/hamolicious/docker-nuke.git"
+
+include:
+  - project: "gitlab/default-pipelines"
+    file: "/gitlab-ci/PyPi.gitlab-ci.yml"
+  - project: "gitlab/default-pipelines"
+    file: "/gitlab-ci/mirror.gitlab-ci.yml"
+
+mirror_to_github:
+  needs:
+    - publish
+  when: on_success

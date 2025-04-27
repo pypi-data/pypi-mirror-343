@@ -1,0 +1,34 @@
+[project]
+name = "hdocker-nuke"
+version = "1.1.3"
+authors = [{ name = "hamolicious", email = "hamolicious@hamolicious.net" }]
+description = "Quickly `kill`, then `rm` a container"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "certifi==2024.8.30",
+    "charset-normalizer==3.3.2",
+    "docker==7.1.0",
+    "idna==3.10",
+    "requests==2.32.3",
+    "urllib3==2.2.3",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/hamolicious/docker-nuke"
+Issues = "https://github.com/hamolicious/docker-nuke/issues"
+
+[project.scripts]
+docker-nuke = "src.docker_nuke.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/"]
