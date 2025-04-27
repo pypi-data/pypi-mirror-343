@@ -1,0 +1,11 @@
+trytond_company<7.3,>=7.2
+trytond_product<7.3,>=7.2
+trytond_stock<7.3,>=7.2
+trytond<7.3,>=7.2
+
+[test]
+proteus<7.3,>=7.2
+trytond_account_invoice_stock<7.3,>=7.2
+trytond_product_cost_fifo<7.3,>=7.2
+trytond_product_cost_history<7.3,>=7.2
+trytond_account_stock_continental<7.3,>=7.2
