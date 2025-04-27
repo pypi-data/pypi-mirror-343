@@ -1,0 +1,5 @@
+[gui_scripts]
+pyside-builder = hatch_pyside.gui.app:main
+
+[hatch]
+pyside = hatch_pyside.plugin.hooks
