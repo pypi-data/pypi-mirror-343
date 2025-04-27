@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+blackboxml/__init__.py
+blackboxml/autopilot.py
+blackboxml/visualiser.py
+blackboxml.egg-info/PKG-INFO
+blackboxml.egg-info/SOURCES.txt
+blackboxml.egg-info/dependency_links.txt
+blackboxml.egg-info/requires.txt
+blackboxml.egg-info/top_level.txt
