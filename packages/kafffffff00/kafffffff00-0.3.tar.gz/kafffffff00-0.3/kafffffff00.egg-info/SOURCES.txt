@@ -1,0 +1,9 @@
+setup.py
+kafffffff00/chat.py
+kafffffff00/init.py
+kafffffff00.egg-info/PKG-INFO
+kafffffff00.egg-info/SOURCES.txt
+kafffffff00.egg-info/dependency_links.txt
+kafffffff00.egg-info/not-zip-safe
+kafffffff00.egg-info/requires.txt
+kafffffff00.egg-info/top_level.txt
