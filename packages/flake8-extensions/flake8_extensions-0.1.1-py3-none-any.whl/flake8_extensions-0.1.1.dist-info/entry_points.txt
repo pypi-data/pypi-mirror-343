@@ -1,0 +1,2 @@
+[flake8.extension]
+IA = flaekextens.plugin:AbsoluteImportChecker
