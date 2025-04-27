@@ -1,0 +1,1 @@
+"""tests subpackage for permamodel"""
