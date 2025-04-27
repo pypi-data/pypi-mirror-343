@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/lessgame/__init__.py
+src/lessgame/functions.py
+src/lessgame/game_utils.py
+src/lessgame/new_game_gen.py
+src/lessgame/rand.py
+src/lessgame.egg-info/PKG-INFO
+src/lessgame.egg-info/SOURCES.txt
+src/lessgame.egg-info/dependency_links.txt
+src/lessgame.egg-info/top_level.txt

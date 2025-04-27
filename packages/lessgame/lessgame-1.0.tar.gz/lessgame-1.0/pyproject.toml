@@ -1,0 +1,26 @@
+
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lessgame"
+version = "1.0"
+description = "Game logic for Less"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+  { name="Mankifg", email="mankifg@gmail.com" }
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Mankifg/LessLogic"
+Issues = "https://github.com/Mankifg/LessLogic/issues"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
