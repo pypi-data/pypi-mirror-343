@@ -1,0 +1,8 @@
+{% extends 'admin/model/modals/edit.html' %}
+{% import 'bukuserver/lib.html' as buku with context %}
+
+{% block tail %}
+  {{ super() }}
+  {{ buku.script('bookmark.js') }}
+  {{ buku.focus('.modal-body') }}
+{% endblock %}

@@ -1,0 +1,31 @@
+/* preventing layout overflow in tables */
+table tr td:not(:first-child) {
+    overflow-wrap: anywhere;
+}
+
+/* wider modals for wide data */
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: min(1000px, 80%);
+    }
+}
+
+.link {
+    display: block;
+}
+
+.tag-list {
+    display: flex;
+    gap: 1px;
+    flex-wrap: wrap;
+}
+.tag-list, .link .netloc {
+    font-size: larger;
+}
+.tag-list a, .link .netloc, .select2-search-choice > *, .select2-result-label {
+    white-space: pre;
+}
+
+.description {
+    white-space: pre-wrap;
+}
