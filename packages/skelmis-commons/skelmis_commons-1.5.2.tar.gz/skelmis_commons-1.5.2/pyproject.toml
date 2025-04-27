@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "skelmis-commons"
+version = "1.5.2"
+description = "A bunch of Python code I reuse in many projects and wanted to centralise."
+authors = ["skelmis <skelmis.craft@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "commons"}]
+
+[project]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Issue tracker" = "https://github.com/Skelmis/Python-Commons/issues"
+Documentation = "https://python-commons.readthedocs.io/en/latest/"
+Homepage = "https://github.com/Skelmis/Python-Commons"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+pytest-asyncio = "^0.24.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+asyncio_mode = 'auto'
