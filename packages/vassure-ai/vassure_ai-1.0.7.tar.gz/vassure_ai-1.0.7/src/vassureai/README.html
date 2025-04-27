@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h2 id="%22%22%22">&quot;&quot;&quot;</h2>
+<h2 id="author-sukumar-kutagulladesignation-test-automation-architect">Author: Sukumar Kutagulla
+Designation: Test Automation Architect</h2>
+<p>&quot;&quot;&quot;</p>
+<h1 id="vassureai-framework">VAssureAI Framework</h1>
+<p>An AI-powered test automation framework that combines Pytest with LLM for intelligent test execution and self-healing capabilities.</p>
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li>🤖 AI-Powered Test Generation from PDF specifications</li>
+<li>🔄 Self-healing test execution with retry mechanisms</li>
+<li>📝 Comprehensive test reporting (HTML, PDF)</li>
+<li>📸 Automated screenshot and video capture</li>
+<li>📊 Performance metrics and analysis</li>
+<li>🚀 Parallel test execution support</li>
+<li>🎯 Custom action system for robust test steps</li>
+</ul>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Python 3.11+</li>
+<li>Virtual Environment</li>
+<li>Required Environment Variables (add to .env file):<pre class="hljs"><code><div>BASE_URL=https://your-app-url.com
+USERNAME=your-username
+PASSWORD=your-password
+LLM_API_KEY=your-api-key
+</div></code></pre>
+</li>
+</ul>
+<h3 id="installation">Installation</h3>
+<ol>
+<li>Clone the repository</li>
+<li>Create and activate virtual environment:<pre class="hljs"><code><div>python -m venv venv
+.\venv\Scripts\activate  <span class="hljs-comment"># Windows</span>
+</div></code></pre>
+</li>
+<li>Install dependencies:<pre class="hljs"><code><div>pip install -r requirements.txt
+</div></code></pre>
+</li>
+</ol>
+<h3 id="using-the-framework-easy-way">Using the Framework (Easy Way)</h3>
+<p>The easiest way to use the framework is through the <code>start_framework.bat</code> file:</p>
+<ol>
+<li>
+<p><strong>Start the Framework</strong>:</p>
+<ul>
+<li>Double-click <code>start_framework.bat</code></li>
+<li>Or run it from command prompt: <code>.\start_framework.bat</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Choose Your Action</strong>:
+The batch file will show a menu with two options:</p>
+<ul>
+<li><code>1</code> - Create/Update Tests from PDF</li>
+<li><code>2</code> - Execute Existing Tests</li>
+</ul>
+</li>
+<li>
+<p><strong>For Creating/Updating Tests (Option 1)</strong>:</p>
+<ul>
+<li>Place your test case PDF files in the <code>input_pdfs/</code> folder</li>
+<li>Choose whether to run tests after generation</li>
+<li>If running tests, select execution mode:
+<ul>
+<li>Sequential (Default): Runs tests one by one</li>
+<li>Parallel: Runs multiple tests simultaneously</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>For Executing Tests (Option 2)</strong>:</p>
+<ul>
+<li>Select execution mode (Sequential/Parallel)</li>
+<li>For parallel execution, specify number of workers</li>
+<li>The framework will execute all tests and generate reports</li>
+</ul>
+</li>
+<li>
+<p><strong>View Results</strong>:</p>
+<ul>
+<li>HTML reports: Open <code>reports/report.html</code></li>
+<li>Screenshots: Check <code>screenshots/</code> folder</li>
+<li>Video recordings: Available in <code>videos/</code> folder</li>
+<li>Logs: Check <code>logs/</code> folder for detailed execution logs</li>
+</ul>
+</li>
+</ol>
+<h3 id="advanced-usage-command-line">Advanced Usage (Command Line)</h3>
+<ol>
+<li>
+<p>Start the framework:</p>
+<pre class="hljs"><code><div>python start_framework.py
+</div></code></pre>
+</li>
+<li>
+<p>Run specific test:</p>
+<pre class="hljs"><code><div>pytest tests/test_name.py -v --asyncio-mode=auto
+</div></code></pre>
+</li>
+<li>
+<p>Run all tests:</p>
+<pre class="hljs"><code><div>pytest -v --asyncio-mode=auto
+</div></code></pre>
+</li>
+</ol>
+<h2 id="framework-structure">Framework Structure</h2>
+<pre class="hljs"><code><div>vassureai/
+├── actions/                 # Custom test actions
+│   ├── __init__.py
+│   └── custom_actions.py    # Custom test implementations
+├── input_pdfs/             # Test case PDF specifications
+│   ├── create_deviation.pdf # Sample test case
+│   └── sample_test_cases.pdf # Example test cases
+├── logs/                   # Test execution logs
+│   └── test_run_*.log      # Timestamped log files
+├── metrics/                # Performance metrics data
+├── reports/               # Test execution reports
+│   ├── assets/           # Report static assets
+│   └── pdf/             # PDF format reports
+├── screenshots/           # Test execution screenshots
+│   └── step_*_*.png      # Step-wise screenshots
+├── tests/                # Test implementations
+│   ├── __init__.py
+│   ├── login_test.py     # Login functionality test
+│   └── test_create_deviation.py # Deviation creation test
+├── userguide/            # Framework documentation
+│   ├── userguide.md     # Detailed user guide
+│   ├── userguide.html   # HTML formatted guide
+│   ├── userguide.pdf    # PDF version of guide
+│   ├── userguide.png    # Guide diagrams/images
+│   └── userguide.jpeg   # Guide screenshots
+├── utils/                # Framework utilities
+│   ├── __init__.py
+│   ├── base_test.py      # Base test class
+│   ├── config.py         # Configuration management
+│   ├── conftest.py       # Pytest configuration
+│   ├── controller_setup.py # Browser setup
+│   ├── logger.py         # Logging configuration
+│   ├── metrics_reporter.py # Test metrics collection
+│   ├── monitoring.py     # Test monitoring
+│   ├── pdfgenerator.py   # Report generation
+│   ├── test_generator.py # Test script generator
+│   ├── templates/        # Template files
+│   │   └── test_template.py # Test script template
+│   └── utilities.py      # Common utilities
+├── videos/               # Test execution recordings
+├── .env                 # Environment configuration
+├── .gitignore           # Git ignore rules
+├── create_pdf.py        # PDF creation utility
+├── pytest.ini          # Pytest configuration
+├── requirements.txt    # Project dependencies
+├── start_framework.bat # Windows startup script
+└── start_framework.py  # Framework startup script
+</div></code></pre>
+<h2 id="creating-tests">Creating Tests</h2>
+<ol>
+<li>
+<p><strong>From PDF Specifications</strong>:</p>
+<ul>
+<li>Create a PDF file with your test case</li>
+<li>Include test title, description, and numbered steps</li>
+<li>Place the PDF in <code>input_pdfs/</code> directory</li>
+<li>Use Option 1 in <code>start_framework.bat</code> to generate test script</li>
+</ul>
+</li>
+<li>
+<p><strong>Manual Creation</strong>:</p>
+<ul>
+<li>Create new test file in <code>tests/</code> directory</li>
+<li>Inherit from <code>BaseTest</code> class</li>
+<li>Implement test steps using <code>common_utilities</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="test-execution-modes">Test Execution Modes</h2>
+<h3 id="sequential-mode">Sequential Mode</h3>
+<ul>
+<li>Tests run one after another</li>
+<li>Good for debugging and detailed analysis</li>
+<li>Default mode for test execution</li>
+</ul>
+<h3 id="parallel-mode">Parallel Mode</h3>
+<ul>
+<li>Multiple tests run simultaneously</li>
+<li>Faster execution for large test suites</li>
+<li>Configure number of parallel workers</li>
+<li>Use when tests are independent</li>
+</ul>
+<h2 id="reports-and-artifacts">Reports and Artifacts</h2>
+<h3 id="test-reports">Test Reports</h3>
+<ul>
+<li>HTML reports with detailed execution status</li>
+<li>Pass/Fail statistics</li>
+<li>Step-by-step execution details</li>
+<li>Screenshots embedded in reports</li>
+</ul>
+<h3 id="visual-evidence">Visual Evidence</h3>
+<ul>
+<li>Screenshots captured at each step</li>
+<li>Video recordings of test execution</li>
+<li>Helps in debugging and analysis</li>
+</ul>
+<h3 id="execution-logs">Execution Logs</h3>
+<ul>
+<li>Detailed logs with timestamps</li>
+<li>Error messages and stack traces</li>
+<li>Performance metrics</li>
+</ul>
+<h2 id="risks-and-dependencies">Risks and Dependencies</h2>
+<h3 id="critical-dependencies">Critical Dependencies</h3>
+<ol>
+<li>
+<p><strong>LLM Integration</strong>:</p>
+<ul>
+<li>Current dependency on specific LLM</li>
+<li>Requires valid API key and stable API service</li>
+<li>API version compatibility requirements</li>
+<li>Risk of API changes or deprecation</li>
+</ul>
+</li>
+<li>
+<p><strong>Browser Dependencies</strong>:</p>
+<ul>
+<li>Relies on specific browser versions for automation</li>
+<li>Chrome/Firefox WebDriver compatibility</li>
+<li>Risk of browser updates breaking automation</li>
+</ul>
+</li>
+<li>
+<p><strong>Python Environment</strong>:</p>
+<ul>
+<li>Python 3.11+ requirement</li>
+<li>Key library dependencies:
+<ul>
+<li>Pytest and pytest-asyncio for test execution</li>
+<li>Reportlab for PDF generation</li>
+<li>Langchain for LLM integration</li>
+<li>Selenium/Playwright for browser automation</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="potential-risks">Potential Risks</h3>
+<ol>
+<li>
+<p><strong>AI/LLM Related</strong>:</p>
+<ul>
+<li>Model response variations affecting test stability</li>
+<li>API rate limits and costs</li>
+<li>Model version changes impacting behavior</li>
+<li>Need for periodic retraining or updates</li>
+</ul>
+</li>
+<li>
+<p><strong>Test Stability</strong>:</p>
+<ul>
+<li>Self-healing mechanisms may mask underlying issues</li>
+<li>Network dependencies for external services</li>
+<li>Timing-sensitive test steps</li>
+<li>Browser rendering inconsistencies</li>
+</ul>
+</li>
+<li>
+<p><strong>Security Considerations</strong>:</p>
+<ul>
+<li>API key management</li>
+<li>Test data security</li>
+<li>Credential handling in environment variables</li>
+<li>PDF content security</li>
+</ul>
+</li>
+<li>
+<p><strong>Maintenance Requirements</strong>:</p>
+<ul>
+<li>Regular updates for browser drivers</li>
+<li>PDF test case format compatibility</li>
+<li>Framework component version synchronization</li>
+<li>Performance monitoring and optimization</li>
+</ul>
+</li>
+</ol>
+<h3 id="risk-mitigation-strategies">Risk Mitigation Strategies</h3>
+<ol>
+<li>
+<p><strong>Version Control</strong>:</p>
+<ul>
+<li>Lock dependency versions in requirements.txt</li>
+<li>Regular compatibility testing</li>
+<li>Documented update procedures</li>
+</ul>
+</li>
+<li>
+<p><strong>Monitoring and Alerts</strong>:</p>
+<ul>
+<li>Performance metrics tracking</li>
+<li>Error rate monitoring</li>
+<li>Resource usage alerts</li>
+<li>API usage tracking</li>
+</ul>
+</li>
+<li>
+<p><strong>Backup Procedures</strong>:</p>
+<ul>
+<li>Regular backup of test artifacts</li>
+<li>Version control for test cases</li>
+<li>Alternative execution paths</li>
+<li>Fallback mechanisms for critical features</li>
+</ul>
+</li>
+<li>
+<p><strong>Best Practices</strong>:</p>
+<ul>
+<li>Regular security audits</li>
+<li>Performance benchmarking</li>
+<li>Code review processes</li>
+<li>Documentation updates</li>
+</ul>
+</li>
+</ol>
+<h2 id="documentation">Documentation</h2>
+<p>For detailed documentation, see <a href="userguide/userguide.md">User Guide</a>.</p>
+<h2 id="support">Support</h2>
+<p>For issues and feature requests, please contact the framework maintainers.</p>
+<h2 id="license">License</h2>
+<p>Copyright (c) 2025. All Rights Reserved.</p>
+
+</body>
+</html>

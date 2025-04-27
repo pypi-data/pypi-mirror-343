@@ -1,0 +1,40 @@
+"""
+-----------------------
+Author: Sukumar Kutagulla (Read-only)
+Designation: Test Automation Architect (Read-only)
+-----------------------
+"""
+
+# Core Dependencies
+browser-use>=0.1.41
+pytest>=8.3.5
+pytest-asyncio>=0.26.0
+pytest-html>=4.1.1
+pytest-metadata>=3.1.1
+pytest-timeout>=2.3.1
+pytest-xdist>=3.6.1
+python-dotenv>=1.0.0
+
+# AI and Language Model
+langchain>=0.1.0
+langchain-google-genai>=0.0.10
+pydantic>=2.10.0
+
+# Monitoring and Metrics
+psutil>=5.9.0
+plotly>=5.18.0
+
+# Reporting
+reportlab>=4.0.0
+pillow>=10.0.0
+
+# Development Tools
+black>=24.1.0
+flake8>=7.0.0
+mypy>=1.8.0
+pytest-cov>=4.1.0
+
+# PDF Processing and Test Generation
+PyPDF2>=3.0.0
+watchdog>=3.0.0
+Jinja2>=3.1.0
