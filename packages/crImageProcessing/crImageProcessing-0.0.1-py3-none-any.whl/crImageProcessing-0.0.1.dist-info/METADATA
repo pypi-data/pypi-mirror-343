@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: crImageProcessing
+Version: 0.0.1
+Summary: Image Processing Package using scikit-image
+Home-page: https://github.com/tyssondocarmo/image-processing-package.git
+Author: tyssondocarmo
+Author-email: tyssoncr@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scikit-image
+
+# crImageProcessing
+
+Description. 
+The package package_name is used to:
+	Processing:
+		- Histogram matching
+		- Structural similarity
+		- Resize image
+	Utils:
+		- Read image
+		- Save image
+		- Plot image
+		- Plot result
+		- Plot histogram
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install crImageProcessing
+
+```bash
+pip install crImageProcessing
+```
+
+## Usage
+
+```python
+from crImageProcessing.module1_name import file1_name
+file1_name.my_function()
+```
+
+## Author
+tysson_cr
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
