@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: http-scanner
+Version: 0.1.5
+Summary: A modular, plugin-based HTTP scanning framework
+Home-page: https://github.com/dotcomrow/http-scanner
+Author: dotcomrow
+Author-email: your-email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: PyYAML
+Requires-Dist: httpx
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# http-scanner
+
+A modular, plugin-based scanning framework designed to fetch and process HTTP-accessible targets (websites, APIs, etc.).  
+Built for extensibility, supporting multiple input types, processors, and output destinations.
+
+## Quick Start
+
+```bash
+pip install -e .
+http-scanner --input http_input --processor idea_extractor --output console_output --config config.yaml
+```
