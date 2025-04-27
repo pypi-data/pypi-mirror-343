@@ -1,0 +1,8 @@
+README.md
+setup.py
+alchemyrpcs/__init__.py
+alchemyrpcs/alchemyrpcs.py
+alchemyrpcs.egg-info/PKG-INFO
+alchemyrpcs.egg-info/SOURCES.txt
+alchemyrpcs.egg-info/dependency_links.txt
+alchemyrpcs.egg-info/top_level.txt
