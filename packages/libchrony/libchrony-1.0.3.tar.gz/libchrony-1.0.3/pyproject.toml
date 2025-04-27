@@ -1,0 +1,27 @@
+[project]
+name = "libchrony"
+version = "1.0.03"
+authors = [
+  { name="Rob Gill", email="rrobgill@protonmail.com" },
+]
+description="A Python library for monitoring the chrony time synchronization daemon"
+long-description="A Python library for monitoring the chrony time synchronization daemon"
+readme="README.md"
+requires-python=">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+licence="LGPL"
+licence-files=["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://gitlab.com/rrobgill/libchrony"
+Issues = "https://gitlab.com/rrobgill/libchrony/issues"
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/libchrony"]
