@@ -1,0 +1,16 @@
+setup.py
+fastpybuilder.egg-info/PKG-INFO
+fastpybuilder.egg-info/SOURCES.txt
+fastpybuilder.egg-info/dependency_links.txt
+fastpybuilder.egg-info/top_level.txt
+src/__init__.py
+src/fastpybuilder/AppGenerator.py
+src/fastpybuilder/AuxFunctions.py
+src/fastpybuilder/ControllersGenerator.py
+src/fastpybuilder/DBConnect.py
+src/fastpybuilder/Ejecutar.py
+src/fastpybuilder/ModelsGenerator.py
+src/fastpybuilder/RepositoryAnnotation.py
+src/fastpybuilder/RepositoryGenerator.py
+src/fastpybuilder/ServicesGenerator.py
+src/fastpybuilder/__init__.py
