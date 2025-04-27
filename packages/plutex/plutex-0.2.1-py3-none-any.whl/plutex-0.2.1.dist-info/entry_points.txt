@@ -1,0 +1,2 @@
+[console_scripts]
+plutex = plutex.cli:main
