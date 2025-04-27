@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/fastpybuilder/DBConnect.py
+src/fastpybuilder/RepositoryAnnotation.py
+src/fastpybuilder/__init__.py
+src/fastpybuilder.egg-info/PKG-INFO
+src/fastpybuilder.egg-info/SOURCES.txt
+src/fastpybuilder.egg-info/dependency_links.txt
+src/fastpybuilder.egg-info/top_level.txt
