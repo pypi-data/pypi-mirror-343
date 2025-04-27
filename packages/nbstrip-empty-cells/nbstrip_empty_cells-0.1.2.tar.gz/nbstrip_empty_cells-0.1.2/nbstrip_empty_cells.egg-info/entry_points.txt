@@ -1,0 +1,2 @@
+[console_scripts]
+nbstrip-empty-cells = remove_empty_cells.cli:main
