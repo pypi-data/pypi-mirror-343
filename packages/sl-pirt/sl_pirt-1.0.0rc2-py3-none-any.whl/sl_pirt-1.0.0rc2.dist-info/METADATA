@@ -1,0 +1,156 @@
+Metadata-Version: 2.4
+Name: sl-pirt
+Version: 1.0.0rc2
+Summary: Modified pirt implementation refactored to work with Sun (NeuroAI) lab's data processing pipeline.
+Project-URL: Homepage, https://github.com/almarklein/pirt
+Project-URL: Documentation, https://pirt.readthedocs.io/
+Project-URL: Repository, https://github.com/Sun-Lab-NBB/pirt
+Author: Almar Klein, Kushaan Gupta, Ivan Kondratyev
+Maintainer-email: Ivan Kondratyev <ik278@cornell.edu>
+License: Pirt licensing terms
+        --------------------
+        
+        Stentseg is licensed under the terms of the (new) BSD license:
+        
+        Copyright (c) 2014, Almar Klein
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        * Redistributions of source code must retain the above copyright
+          notice, this list of conditions and the following disclaimer.
+        * Redistributions in binary form must reproduce the above copyright
+          notice, this list of conditions and the following disclaimer in the
+          documentation and/or other materials provided with the distribution.
+        * Neither the name of the Stentseg Development Team nor the names of its
+          contributors may be used to endorse or promote products
+          derived from this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+        IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+        TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+        PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER
+        OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+        EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+        PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+        PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+        LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+        NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+        SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+License-File: LICENSE
+Keywords: pirt,sunlab
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.11
+Requires-Dist: numba<1,>=0.57
+Requires-Dist: numpy<3,>=2
+Requires-Dist: scipy<2,>=1.9
+Requires-Dist: visvis<2,>=1
+Provides-Extra: conda
+Requires-Dist: grayskull<3,>=2; extra == 'conda'
+Requires-Dist: hatchling<2,>=1; extra == 'conda'
+Requires-Dist: mypy<2,>=1; extra == 'conda'
+Requires-Dist: ruff<1,>=0; extra == 'conda'
+Requires-Dist: scipy-stubs<2,>=1; extra == 'conda'
+Requires-Dist: twine<7,>=6; extra == 'conda'
+Provides-Extra: condarun
+Requires-Dist: numba<1,>=0.57; extra == 'condarun'
+Requires-Dist: numpy<3,>=2; extra == 'condarun'
+Provides-Extra: dev
+Requires-Dist: ataraxis-automation<5,>=4; extra == 'dev'
+Requires-Dist: build<2,>=1; extra == 'dev'
+Requires-Dist: grayskull<3,>=2; extra == 'dev'
+Requires-Dist: hatchling<2,>=1; extra == 'dev'
+Requires-Dist: mypy<2,>=1; extra == 'dev'
+Requires-Dist: ruff<1,>=0; extra == 'dev'
+Requires-Dist: scipy-stubs<2,>=1; extra == 'dev'
+Requires-Dist: tox-uv<2,>=1; extra == 'dev'
+Requires-Dist: tox<5,>=4; extra == 'dev'
+Requires-Dist: twine<7,>=6; extra == 'dev'
+Requires-Dist: uv<1,>=0; extra == 'dev'
+Provides-Extra: noconda
+Requires-Dist: ataraxis-automation<5,>=4; extra == 'noconda'
+Requires-Dist: build<2,>=1; extra == 'noconda'
+Requires-Dist: tox-uv<2,>=1; extra == 'noconda'
+Requires-Dist: tox<5,>=4; extra == 'noconda'
+Requires-Dist: uv<1,>=0; extra == 'noconda'
+Description-Content-Type: text/markdown
+
+PIRT - Python Image Registration Toolkit.
+
+Introduction
+------------
+
+Pirt is the "Python image registration toolkit". It is a library for
+(elastic, i.e. non-regid) image registration of 2D and 3D images with
+support for groupwise registration. It has support to constrain the
+deformations to be "diffeomorphic", i.e. without folding or shearing, and
+thus invertable.
+
+Pirt is written in pure Python and uses Numba for speed. It depends on
+Numpy, Scipy, Numba. It has an optional dependency on Visvis for visualization,
+and on pyelastix for the Elastix registration algorithm.
+
+Pirt implements its own interpolation functions, which, incidentally,
+are faster than the corresponding functions in scipy and scikit-image
+(after Numba's JIT warmup).
+
+Pirt is hosted on [Github](https://github.com/almarklein/pirt)
+and has [docs on rtd](http://pirt.readthedocs.io/).
+
+Overview
+--------
+
+Image registration itself requires several image processing techniques
+and data types, which are also included in this package:
+
+  * pirt.gaussfun - function for Gaussian smoothing and
+    derivatives, image pyramid class
+  * pirt.interp - interpolation of 1D, 2D and 3D data (nearest, linear,
+    and various spline interpolants)
+  * pirt.splinegrid - defines a B-spline grid class (for data up to
+    three dimensions) and a class to describe a deformation grid
+    (consisting of a B-spline grid for each dimension)
+  * pirt.deform - defines classes to represent and compose deformations
+  * pirt.reg - the actual registration algorithms
+
+
+Dependencies and installation
+-----------------------------
+
+Pirt dependencies:
+
+  * numpy
+  * scipy
+  * numba
+  * visvis (optional)
+
+To install:
+
+  * `pip install pirt`
+  * or install from the hg repo
+
+
+Status and licensing
+--------------------
+
+Pirt should be considered alpha/beta status. The API may change. The
+core parts are pretty well tested though!
+
+Pirt is BSD licensed, see LICENSE.txt for more information.
+
+
+History
+-------
+
+Pirt was developed during my PhD. It more or less scratched my itch and
+was not well tested. It was written in Cython. In 2017 the code has been
+refactored to move to Numba, and many tests were added.
