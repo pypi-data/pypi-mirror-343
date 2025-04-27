@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: rbxstats
+Version: 3.0.2
+Summary: A comprehensive client for the RbxStats API
+Home-page: https://github.com/Rbxstats/Rbxstats_Pypi
+Author: Rbxstats
+Author-email: rbxstatsxyz@gmail.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Requires-Dist: aiohttp>=3.7.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
