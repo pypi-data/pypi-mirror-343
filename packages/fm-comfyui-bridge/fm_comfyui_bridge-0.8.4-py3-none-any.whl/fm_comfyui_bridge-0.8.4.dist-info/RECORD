@@ -1,0 +1,16 @@
+fm_comfyui_bridge/__init__.py,sha256=tJV4ezz4zrvuUtbTabX970VuSwZrBrx534onCAfw39g,68
+fm_comfyui_bridge/bridge.py,sha256=1DrKsqUco5poG3mxOiN8wIH1xqeTQpHXroLo74t_VkY,12682
+fm_comfyui_bridge/comfy_api.py,sha256=otXR0w_cS3QeTIGQobJRefmpD0MZX7GJMx7vMwUSM7M,175
+fm_comfyui_bridge/config.py,sha256=e5d20YFbuQYHpgT9-ROldHj-Ng8g922EFWU88rjMmc0,1128
+fm_comfyui_bridge/lora_yaml.py,sha256=o1IO5w2tyMKjS0kYSxFJjrQNnf05prjp9T79l_x_T-4,2886
+fm_comfyui_bridge/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fm_comfyui_bridge/Workflow/SDXL_HighReso.json,sha256=ePFsaAC_yKXbRWjT9O4wVPqK2gkT8WfQXskSSQtgsVo,23529
+fm_comfyui_bridge/Workflow/SDXL_HighReso_API.json,sha256=eJ3GWNRqPHA7I0tk3L1bJbQWO5kaU-433O4P82_KRlc,5582
+fm_comfyui_bridge/Workflow/SDXL_HighReso_I2I.json,sha256=_B9Oixexrn2fk36f-rkgBNf8AYsBxzKVj5mCkOoe7qs,24210
+fm_comfyui_bridge/Workflow/SDXL_HighReso_I2I_API.json,sha256=1-6ticj3XTKRQRVQB_rMGijJIYAklN6EqJeIaubwHIA,5868
+fm_comfyui_bridge/Workflow/SDXL_LoRA_Base.json,sha256=IicEM9LrZGzrrp4uq5KxcloO2NiU8_7PLnFddBj44QE,11508
+fm_comfyui_bridge/Workflow/SDXL_LoRA_Base_API.json,sha256=MzwxQA5q2w0CBtkHVgIHhD-lhMZhHWWaCfFaD8pT7-0,3027
+fm_comfyui_bridge-0.8.4.dist-info/METADATA,sha256=R31Yx-MAfxP18zfR1Uk3GakB5ngjEDT2B2rv_KRVa2E,8823
+fm_comfyui_bridge-0.8.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fm_comfyui_bridge-0.8.4.dist-info/licenses/LICENSE,sha256=lmQnZPDyiHU1ANNppt4pQh6d9gzWaxsdX1EFm9OC8i0,1084
+fm_comfyui_bridge-0.8.4.dist-info/RECORD,,
