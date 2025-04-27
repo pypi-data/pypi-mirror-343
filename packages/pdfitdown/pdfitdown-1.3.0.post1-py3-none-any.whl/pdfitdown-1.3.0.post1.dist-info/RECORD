@@ -1,0 +1,10 @@
+pdfitdown/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdfitdown/pdfconversion.py,sha256=Expd3CZW0KsUHSFd2-3-edZEU9RQhT-gWWlhKYBZmDs,7436
+pdfitdown/pdfitdown_cli.py,sha256=btjMN8RCcrekJYXcbUNzp23IX9_UL8Sdh8Wkh_altzI,3320
+pdfitdown/pdfitdown_ui.py,sha256=lFjAGSm8xLFzYIk_Yc-ut0CLzQF3aaSCkE6vzK7GOOM,1350
+pdfitdown-1.3.0.post1.dist-info/licenses/LICENSE,sha256=Y9dzy-RL719DOTR6PkcDPnpEOq0o3_LveaR4vx0bAj4,1101
+pdfitdown-1.3.0.post1.dist-info/METADATA,sha256=MufCm7s-EFF3QrbPpk_d2m7l5n7535F7ngyHVijv56Y,5674
+pdfitdown-1.3.0.post1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+pdfitdown-1.3.0.post1.dist-info/entry_points.txt,sha256=3i_84dHe5P-uXN4KfdIPbX80UZzpT0ues3vJpIVwdwk,102
+pdfitdown-1.3.0.post1.dist-info/top_level.txt,sha256=ex-Js-1tMyGnROEh9KndLI85CKdQVohxMd6v3ikqN-s,10
+pdfitdown-1.3.0.post1.dist-info/RECORD,,
