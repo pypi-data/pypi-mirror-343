@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: vhelper
+Version: 0.0.2
+License-File: LICENSE
+Requires-Dist: nlpertools
+Provides-Extra: none
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
