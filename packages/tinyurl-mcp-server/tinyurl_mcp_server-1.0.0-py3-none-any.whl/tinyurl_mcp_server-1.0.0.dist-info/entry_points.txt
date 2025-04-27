@@ -1,0 +1,2 @@
+[console_scripts]
+tinyurl-mcp-server = tinyurl_mcp_server:main
