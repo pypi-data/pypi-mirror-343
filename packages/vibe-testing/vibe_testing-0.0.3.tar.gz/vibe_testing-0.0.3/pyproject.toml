@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vibe-testing"
+version = "0.0.3"
+authors = [
+  { name="Operative-Sh", email="erik@operative.sh" },
+]
+description = "Operative WebEvalAgent"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+
+[project.urls]
+Homepage = "https://operative.sh"
+Issues = "https://github.com/Operative-Sh/web-eval-agent/issues" 
