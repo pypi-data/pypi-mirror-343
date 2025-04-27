@@ -1,0 +1,2 @@
+[console_scripts]
+lndgrpcclient_cli = lndgrpc.cli:cli
