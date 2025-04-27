@@ -1,0 +1,9 @@
+idna>=3.3
+
+[dev]
+mypy
+pre-commit
+pytest-cov
+pytest-socket
+pytest
+ruff
