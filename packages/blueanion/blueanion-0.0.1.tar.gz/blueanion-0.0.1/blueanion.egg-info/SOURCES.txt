@@ -1,0 +1,5 @@
+setup.py
+blueanion.egg-info/PKG-INFO
+blueanion.egg-info/SOURCES.txt
+blueanion.egg-info/dependency_links.txt
+blueanion.egg-info/top_level.txt
