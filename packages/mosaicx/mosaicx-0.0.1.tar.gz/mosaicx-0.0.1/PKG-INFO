@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: mosaicx
+Version: 0.0.1
+Summary: MOSAICX - Modular Object Storage Architecture for Imaging Collections by DIGIT-X
+Author-email: Lalith Kumar Shiyam Sundar <lalith.shiyam@med.uni-muenchen.de>
+License: GPLv3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# mosaicx
+
+MOSAICX - Modular Object Storage Architecture for Imaging Collections by DIGIT-X.
+
+A lightweight, scalable system for managing, querying, and streaming large imaging datasets on-premises.

@@ -1,0 +1,12 @@
+[project]
+name = "mosaicx"
+version = "0.0.1"
+description = "MOSAICX - Modular Object Storage Architecture for Imaging Collections by DIGIT-X"
+authors = [{ name="Lalith Kumar Shiyam Sundar", email="lalith.shiyam@med.uni-muenchen.de" }]
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "GPLv3"}
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
