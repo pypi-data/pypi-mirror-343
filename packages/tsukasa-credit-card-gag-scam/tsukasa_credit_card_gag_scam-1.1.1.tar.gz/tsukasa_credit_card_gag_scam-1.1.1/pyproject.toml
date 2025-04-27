@@ -1,0 +1,81 @@
+[build-system]
+requires = ["hatchling", "nuitka",]
+build-backend = "hatchling.build"
+
+[tool.nuitka]  # NOTE: Does not work yet, waiting for support
+assume-yes-for-downloads = true
+enable-plugin = ["tk-inter",]
+include-data-dir = [
+    { source = "src/tccgs/data", destination = "data" },
+]
+onefile = true
+output-dir = "build"
+show-scons = true
+standalone = true
+windows-company-name = "Team DeltaV"
+windows-console-mode = "attach"
+windows-file-description = "A joke program based on a popular credit card scam meme"
+windows-product-name = "Totally Not Malware"
+
+[project]
+name = "tsukasa-credit-card-gag-scam"
+version = "1.1.1"
+description = "A joke program based on a popular credit card scam meme"
+requires-python = ">=3.11.0"
+dependencies = ["Pillow>=11.2.1",]
+authors = [
+    { name = "Bleeplo", email = "bleeplo@users.noreply.github.com" },
+]
+maintainers = [
+    { name = "Lari Liuhamo", email = "lari.liuhamo+github@gmail.com" },
+]
+license = "MIT"
+readme = "README.md"
+
+[project.scripts]
+tccgs = "tccgs.script:main"
+
+[project.urls]
+"Original source code" = "https://github.com/Bleeplo/Tsukasa-credit-card-gag-scam"
+"Original Windows executable" = "https://drive.google.com/file/d/1gVKI089Y7Ub7MrqNmRwsvOGZYS3msnIu/view?usp=sharing"
+"Updated source code" = "https://github.com/Diapolo10/Tsukasa-credit-card-gag-scam"
+"Updated executables" = "https://github.com/Diapolo10/Tsukasa-credit-card-gag-scam/releases"
+"Documentation" = "https://github.com/Diapolo10/iplib3/tree/main/docs"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "ruff>=0.11.7",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tccgs"]
+
+[tool.ruff]
+lint.select = ["ALL"]
+lint.ignore = [
+    "COM812",  # Missing trailing comma (disabled due to formatter conflict)
+    "D203",    # One blank line before class docstring
+    "D212",    # Multi-line summary first line
+    "ISC001",  # Single-line implicit string concatenation (disabled due to formatter conflict)
+    "PLR0913", # Too many arguments
+]
+line-length = 120
+show-fixes = true
+src = ["src",]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.per-file-ignores]
+# https://beta.ruff.rs/docs/rules/
+"__init__.py" = ["F401", "F403", "F405", "PGH003",]
+
+[tool.ruff.lint.pylint]
+max-args = 15
+max-branches = 20
+max-returns = 10
+max-statements = 80
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
