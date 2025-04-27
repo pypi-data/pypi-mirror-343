@@ -1,0 +1,107 @@
+Metadata-Version: 2.4
+Name: flika
+Version: 0.3.3
+Summary: An interactive image processing program for biologists written in Python.
+Author-email: "Kyle Ellefsen, Brett Settle" <kyleellefsen@gmail.com>
+License: MIT
+Project-URL: Documentation, http://flika-org.github.io/contents.html
+Project-URL: Source, https://github.com/flika-org/flika
+Project-URL: Tracker, https://github.com/flika-org/flika/issues
+Project-URL: Homepage, http://flika-org.github.io
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=0.14
+Requires-Dist: matplotlib>=1.4
+Requires-Dist: pyqtgraph>=0.9
+Requires-Dist: PySide6
+Requires-Dist: qtpy>=1.1
+Requires-Dist: setuptools>=1.0
+Requires-Dist: scikit-image>0.13.0
+Requires-Dist: scikit-learn
+Requires-Dist: ipython>=1.0
+Requires-Dist: ipykernel
+Requires-Dist: qtconsole
+Requires-Dist: pyopengl
+Requires-Dist: requests
+Requires-Dist: nd2reader
+Requires-Dist: markdown
+Requires-Dist: jaxtyping
+Requires-Dist: colorama
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=2.12.0; extra == "dev"
+Requires-Dist: twine>=3.4.0; extra == "dev"
+Requires-Dist: build>=0.7.0; extra == "dev"
+Requires-Dist: wheel>=0.36.0; extra == "dev"
+Requires-Dist: sphinx>=4.0.0; extra == "dev"
+Requires-Dist: sphinxcontrib-napoleon>=0.7; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: scipy-stubs; extra == "dev"
+Dynamic: license-file
+
+# flika
+
+![flika screencapture](flika/docs/_static/img/flika_screencapture.gif)
+
+**flika** is an interactive image processing program for biologists written in Python.
+
+## Website
+[flika-org.github.io](http://flika-org.github.io/)
+
+## Documentation
+[flika-org.github.io/contents.html](http://flika-org.github.io/contents.html)
+
+## Install
+[flika-org.github.io/getting-started.html#installation](http://flika-org.github.io/getting-started.html#installation)
+
+## Development
+
+This is how Kyle installs Flika for development on a mac.
+
+```fish
+brew install python@3.13
+python3.13 -m venv ~/venvs/flika; source ~/venvs/flika/bin/activate.fish; python -m pip install --upgrade pip;
+cd ~/git
+git clone https://github.com/flika-org/flika.git
+cd ~/git/flika
+python -m pip install -e .
+ipython
+In [1]: import flika
+In [2]: flika.start_flika()
+```
+
+For tests:
+```fish
+pip install -e .[dev]
+pytest flika --cov=flika
+```
+
+Cleanup :
+```fish
+deactivate
+rm -r ~/venvs/flika
+```
+
+
+## Contributors
+
+- [Kyle Ellefsen](https://github.com/KyleEllefsen)
+- [Brett Settle](https://github.com/BrettJSettle)
+- [George Dickinson](https://github.com/gddickinson)
+- [Kevin Tarhan](https://github.com/KevinTarhan)
+
+
+## Development
+
+- Ruff is used for linting/formatting
+- VSCode/Cursor is the usually IDE
+- Python 3.13 is the (current) development version
+- PySide6 is used for the GUI
