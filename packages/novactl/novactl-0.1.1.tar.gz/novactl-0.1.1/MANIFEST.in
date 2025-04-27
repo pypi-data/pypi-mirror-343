@@ -1,0 +1,19 @@
+# Include non-code files needed for distribution
+include src/novactl/config_schema.json
+include README.md
+include LICENSE
+
+# Include tests if desired in sdist (optional)
+# recursive-include tests *.py
+
+# Exclude common unwanted files
+prune .github
+prune .pytest_cache
+prune .mypy_cache
+prune .vscode
+prune .idx
+
+# Exclude compiled files
+global-exclude *.py[co]
+global-exclude __pycache__
+global-exclude *.so

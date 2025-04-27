@@ -1,0 +1,90 @@
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "novactl"
+version = "0.1.1"
+authors = [{ name = "Harsha Krishnareddy", email = "c0mpiler@ins8s.dev" }]
+description = "Boilerplate CLI with Keycloak/OAuth2 Device Flow Authentication using Typer and Rich."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT License" } # Added license field
+keywords = [ # Added keywords for discoverability
+    "cli",
+    "typer",
+    "rich",
+    "keycloak",
+    "oauth2",
+    "oidc",
+    "authentication",
+    "boilerplate",
+    "template",
+    "python",
+    "keyring",
+    "device flow",
+    "oauth",
+    "command line",
+    "security",
+    "developer tools",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",                               # Or 5 - Production/Stable if ready
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: User Interfaces",
+    "Topic :: Security",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+dependencies = [
+    "typer[all]>=0.9.0",
+    "rich>=13.0.0",
+    "requests>=2.28.0",
+    # "python-dotenv>=1.0.0", # Keep? Only needed if .env is used alongside config
+    # "pyjwt[crypto]>=2.6.0",
+    "python-jose[cryptography]>=3.3.0", # Specify cryptography extra for JOSE
+    "keyring>=23.0.0",
+    "PyYAML>=6.0",
+    "jsonschema>=4.0.0",
+    "urllib3>=1.26.0",                  # Explicitly add, often a sub-dependency but good practice
+]
+
+[project.scripts]
+novactl = "novactl.main:app" # Corrected: Points to the new module path
+
+[project.urls]
+"Homepage" = "https://github.com/c0mpiler/novactl"
+"Repository" = "https://github.com/c0mpiler/novactl"
+"Bug Tracker" = "https://github.com/c0mpiler/novactl/issues"
+
+# Add optional dependencies for testing and development
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "requests-mock>=1.9.0",
+    "pyfakefs>=5.0.0",
+    "cryptography",         # Needed for test key generation
+    # Add any other test-specific deps here
+]
+dev = [
+    "novactl[test]",
+    "black",
+    "flake8",
+    "mypy",
+    "isort",
+    "types-PyYAML",     # Add type hints for dependencies
+    "types-requests",
+    "types-jsonschema",
+    "pre-commit",       # Added pre-commit
+    "deptry",           # Added deptry
+]
