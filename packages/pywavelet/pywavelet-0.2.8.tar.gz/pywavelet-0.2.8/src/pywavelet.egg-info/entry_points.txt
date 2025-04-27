@@ -1,0 +1,2 @@
+[console_scripts]
+pywavelet_timer = pywavelet.utils.timing_cli.cli:cli_collect_runtime
