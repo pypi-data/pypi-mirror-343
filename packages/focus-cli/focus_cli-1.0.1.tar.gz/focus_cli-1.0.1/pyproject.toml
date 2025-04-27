@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "focus-cli"
+version = "1.0.1"
+description = "A powerful CLI tool for developers to boost productivity"
+readme = "README.md"
+authors = [
+    {name = "PyGen Labs", email = "pygen.co@gmail.com"}
+]
+license = {file = "LICENSE"}
+requires-python = ">=3.7"
