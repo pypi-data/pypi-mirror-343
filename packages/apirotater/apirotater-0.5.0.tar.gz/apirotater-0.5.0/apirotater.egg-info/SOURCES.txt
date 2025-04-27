@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+apirotater/__init__.py
+apirotater/core.py
+apirotater.egg-info/PKG-INFO
+apirotater.egg-info/SOURCES.txt
+apirotater.egg-info/dependency_links.txt
+apirotater.egg-info/requires.txt
+apirotater.egg-info/top_level.txt
+tests/__init__.py
+tests/test_apirotater.py
