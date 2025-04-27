@@ -1,0 +1,2 @@
+[console_scripts]
+12306-mcp = mcp_12306:main
