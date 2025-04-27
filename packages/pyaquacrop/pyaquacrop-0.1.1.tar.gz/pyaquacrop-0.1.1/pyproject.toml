@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyaquacrop"
+version = "0.1.1"
+description = "Python wrapper for the AquaCrop crop growth model"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Francisco Puig", email = "g32pupef@uco.es"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: GIS",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "pytest==8.3.3",
+    "pandas==2.2.3",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/pacs27/pyaquacrop"
+"Bug Tracker" = "https://github.com/pacs27/pyaquacrop/issues"
+
+[tool.setuptools]
+# Use find_packages to include all packages and subpackages
+packages = ["aquacrop"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"*" = ["*.txt", "*.dat", "*.csv"]
