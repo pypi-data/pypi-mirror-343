@@ -1,0 +1,19 @@
+[project]
+name = "yta-multimedia-constants"
+version = "0.0.1"
+description = ""
+authors = [
+    {name = "danialcala94",email = "danielalcalavalera@gmail.com"}
+]
+readme = "README.md"
+requires-python = "==3.9"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "yta_multimedia_constants", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

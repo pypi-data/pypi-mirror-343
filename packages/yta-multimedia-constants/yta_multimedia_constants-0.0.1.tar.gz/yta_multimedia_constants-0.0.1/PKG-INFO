@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: yta-multimedia-constants
+Version: 0.0.1
+Summary: 
+Author: danialcala94
+Author-email: danielalcalavalera@gmail.com
+Requires-Python: ==3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+# Youtube Autonomous Multimedia Constants Add-on
+
+The way to handle video generation constants in one place only.
+
+These constants will be used within the 'yta_multimedia' library and add-ons.
