@@ -1,0 +1,10 @@
+mercadopagovp/__init__.py,sha256=p9Zh-SoLKJ3X4GxvIxoFmsGA2R4TpNmGnkhM6cHDWxg,183
+mercadopagovp/create_pix_payment.py,sha256=dZB-5FBS5baoOAKn2AMA76PkmtH480FeTeJkWuM8gvw,5729
+mercadopagovp/load_sdk.py,sha256=RXibhUSJewbQdEqPF0YJmBrvhRQ60L8K09RscaDT2X4,1205
+mercadopagovp/pix_payment.py,sha256=EYK1HEAO-Rj2UpLVQe7Ki0PJrBlNcU8izS_T3uHGxSU,1882
+mercadopagovp/verify_pix_payment.py,sha256=qBksDFszsAgmR_MYmnIHwtNLNosu0rzFqW8B6mey3Fo,2711
+mercadopagovp-0.4.5.1.dist-info/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+mercadopagovp-0.4.5.1.dist-info/METADATA,sha256=6cEDITv5ERkOQnjknf8SHgKMEZ_ubltYG-QuMwAlPPQ,3349
+mercadopagovp-0.4.5.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+mercadopagovp-0.4.5.1.dist-info/top_level.txt,sha256=k7VI3_n_i7X_329-wyfe5lgEAiLWzKd5i6ha8oAnL8s,14
+mercadopagovp-0.4.5.1.dist-info/RECORD,,
