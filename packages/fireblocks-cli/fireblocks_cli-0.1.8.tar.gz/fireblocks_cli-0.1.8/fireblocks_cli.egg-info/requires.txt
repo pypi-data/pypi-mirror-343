@@ -1,0 +1,18 @@
+typer[all]>0.15.0
+toml>0.10.0
+tomlkit<0.14.0,>=0.13.2
+fireblocks-sdk<3.0.0,>=2.16.1
+
+[dev]
+mypy>=1.15.0
+black<26.0.0,>=25.1.0
+pyinstaller>=6.13.0
+black>=25.1.0
+pre-commit>=4.2.0
+build>=1.2.2.post1
+twine>=6.1.0
+pytest>=8.3.5
+types-toml>=0.10.8.20240310
+
+[dev:python_version >= "3.9" and python_version < "4.0"]
+reuse>=5.0.2
