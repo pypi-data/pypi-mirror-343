@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: algoinfinite
+Version: 0.1.1
+Summary: A collection of algorithms and data structures in Python.
+Author: Madan Mohan Behera
+Author-email: madanmohan14072002@gmail.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: summary
