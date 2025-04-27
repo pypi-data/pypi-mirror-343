@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+remote_local/__init__.py
+remote_local/middleware.py
+remote_local/temporal.py
+remote_local.egg-info/PKG-INFO
+remote_local.egg-info/SOURCES.txt
+remote_local.egg-info/dependency_links.txt
+remote_local.egg-info/requires.txt
+remote_local.egg-info/top_level.txt
