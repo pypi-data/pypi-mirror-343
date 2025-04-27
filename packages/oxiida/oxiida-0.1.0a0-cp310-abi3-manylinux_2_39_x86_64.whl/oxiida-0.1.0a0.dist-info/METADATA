@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: oxiida
+Version: 0.1.0a0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Dist: pytest ~=8.3 ; extra == 'tests'
+Provides-Extra: tests
+Home-Page: https://github.com/unkcpz/oxiida
+Author: Jusong Yu <jusong.d.yu@gmail.com>
+Author-email: Jusong Yu <jusong.d.yu@gmail.com>
+Requires-Python: >=3.10
