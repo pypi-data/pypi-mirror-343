@@ -1,0 +1,2 @@
+[console_scripts]
+polyconv = polyconv.cli.main:main
