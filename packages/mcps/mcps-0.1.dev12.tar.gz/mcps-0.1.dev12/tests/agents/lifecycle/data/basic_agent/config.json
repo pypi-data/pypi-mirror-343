@@ -1,0 +1,20 @@
+{
+  "agent_id": "basic-agent-001",
+  "name": "Basic Test Agent",
+  "description": "A simple test agent for lifecycle management",
+  "version": "0.1.0",
+  "capabilities": ["text-processing", "query-response"],
+  "required_tools": [],
+  "model_type": "custom",
+  "created_at": "2023-01-01T00:00:00Z",
+  "updated_at": "2023-01-01T00:00:00Z",
+  "owner": "mcps-test",
+  "tags": ["test", "basic"],
+  "config": {
+    "entry_point": "main.py",
+    "prompt_file": "prompt.txt",
+    "max_tokens": 100,
+    "timeout": 30
+  },
+  "dependencies": []
+}

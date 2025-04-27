@@ -1,0 +1,20 @@
+{
+  "agent_id": "websocket-agent-001",
+  "name": "WebSocket Test Agent",
+  "description": "A test agent with WebSocket support for lifecycle management",
+  "version": "0.1.0",
+  "capabilities": ["text-processing", "query-response", "websocket-communication"],
+  "required_tools": [],
+  "model_type": "custom",
+  "created_at": "2023-01-01T00:00:00Z",
+  "updated_at": "2023-01-01T00:00:00Z",
+  "owner": "mcps-test",
+  "tags": ["test", "websocket"],
+  "config": {
+    "entry_point": "main.py",
+    "communication_protocol": "websocket",
+    "port": 8765,
+    "timeout": 30
+  },
+  "dependencies": ["websockets", "asyncio"]
+}

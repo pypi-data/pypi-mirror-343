@@ -1,0 +1,13 @@
+sentence-transformers>=2.2.0
+jsonschema>=4.17.0
+cryptography>=3.4.0
+requests>=2.25.0
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+setuptools
+pytest
+pytest-cov
+numpy
