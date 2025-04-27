@@ -1,0 +1,190 @@
+# FasterMCP
+
+FasterMCP是一个简单直观的Python库，用于构建MCP（Model Context Protocol）服务器和客户端。它提供了标准化的方式来为LLMs（Large Language Models）提供上下文和工具。
+
+## 特性
+
+- 简单直观的API
+- 异步支持
+- 标准化的工具和资源管理
+- 灵活的上下文处理
+- 基于FastAPI的高性能服务器
+
+## 安装
+
+```bash
+pip install fastermcp
+```
+
+## 快速开始
+
+### 创建MCP服务器
+
+```python
+from fastermcp import MCPServer, Tool
+
+# 创建服务器实例
+server = MCPServer()
+
+# 使用装饰器定义工具
+@server.protocol.tool(name="calculator", description="A simple calculator")
+async def calculator(operation: str, x: float, y: float):
+    if operation == "+":
+        return x + y
+    elif operation == "-":
+        return x - y
+    elif operation == "*":
+        return x * y
+    elif operation == "/":
+        return x / y
+    raise ValueError("Invalid operation")
+
+# 运行服务器
+server.run()
+```
+
+### 使用MCP客户端
+
+```python
+import asyncio
+from fastermcp import MCPClient, Resource
+
+async def main():
+    async with MCPClient("http://localhost:8000") as client:
+        # 注册资源
+        resource = Resource(
+            id="math_context",
+            type="text",
+            content="This is a math problem solving context",
+            metadata={"domain": "mathematics"}
+        )
+        await client.register_resource(resource)
+        
+        # 创建上下文
+        context = await client.create_context(
+            prompt="Calculate 2 + 2",
+            tool_names=["calculator"],
+            resource_ids=["math_context"]
+        )
+        
+        # 执行工具
+        result = await client.execute_tool(
+            "calculator",
+            {"operation": "+", "x": 2, "y": 2}
+        )
+        print(result)  # 输出: 4
+
+asyncio.run(main())
+```
+
+## API参考
+
+### MCPServer
+
+服务器类，用于处理MCP请求。
+
+- `__init__()`: 初始化服务器实例
+- `run(host: str = "0.0.0.0", port: int = 8000)`: 启动服务器
+
+### MCPClient
+
+客户端类，用于与MCP服务器交互。
+
+- `__init__(server_url: str)`: 初始化客户端实例
+- `register_tool(tool: Tool)`: 注册新工具
+- `register_resource(resource: Resource)`: 注册新资源
+- `create_context(prompt: str, tool_names: Optional[List[str]], resource_ids: Optional[List[str]])`: 创建新上下文
+- `execute_tool(name: str, parameters: Dict[str, Any])`: 执行工具
+
+### Tool
+
+工具类，代表LLM可以使用的工具。
+
+- `name`: 工具名称
+- `description`: 工具描述
+- `parameters`: 工具参数定义
+- `required_params`: 必需参数列表
+
+### Resource
+
+资源类，代表LLM可以访问的资源。
+
+- `id`: 资源ID
+- `type`: 资源类型
+- `content`: 资源内容
+- `metadata`: 资源元数据
+
+### Context
+
+上下文类，代表LLM交互的上下文。
+
+- `prompt`: 提示文本
+- `tools`: 可用工具列表
+- `resources`: 可用资源列表
+- `metadata`: 上下文元数据
+
+## 开发指南
+
+### 工具开发
+
+1. 使用装饰器创建工具：
+```python
+@server.protocol.tool(name="my_tool", description="Tool description")
+def my_tool(param1: str, param2: int) -> Any:
+    # 工具实现
+    pass
+```
+
+2. 手动创建工具：
+```python
+tool = Tool(
+    name="my_tool",
+    description="Tool description",
+    parameters={
+        "param1": {"type": "string"},
+        "param2": {"type": "integer"}
+    },
+    required_params=["param1", "param2"]
+)
+```
+
+### 资源管理
+
+```python
+# 创建文本资源
+text_resource = Resource(
+    id="text_data",
+    type="text",
+    content="Some text content",
+    metadata={"source": "user"}
+)
+
+# 创建JSON资源
+json_resource = Resource(
+    id="json_data",
+    type="json",
+    content={"key": "value"},
+    metadata={"version": "1.0"}
+)
+```
+
+## 测试
+
+运行测试套件：
+
+```bash
+pip install fastermcp[dev]
+pytest
+```
+
+## 贡献
+
+1. Fork 项目
+2. 创建特性分支 (`git checkout -b feature/amazing-feature`)
+3. 提交更改 (`git commit -m 'Add some amazing feature'`)
+4. 推送到分支 (`git push origin feature/amazing-feature`)
+5. 开启Pull Request
+
+## 许可证
+
+MIT License
