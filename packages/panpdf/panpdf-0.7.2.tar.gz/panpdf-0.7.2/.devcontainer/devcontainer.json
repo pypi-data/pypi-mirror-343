@@ -1,0 +1,33 @@
+{
+  "image": "texlive/texlive",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": false,
+      "username": "panpdf"
+    },
+    "ghcr.io/devcontainers-contrib/features/starship:1": {},
+    "ghcr.io/devcontainers-extra/features/pandoc:1": {},
+    "./features/zotero": {},
+    "./features/poppler": {}
+  },
+  "remoteUser": "panpdf",
+  "containerEnv": {
+    "ZOTERO_LIBRARY_ID": "${localEnv:ZOTERO_LIBRARY_ID}",
+    "ZOTERO_API_KEY": "${localEnv:ZOTERO_API_KEY}"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "charliermarsh.ruff",
+        "fill-labs.dependi",
+        "markis.code-coverage",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "tamasfe.even-better-toml"
+      ]
+    }
+  },
+  "postCreateCommand": ".devcontainer/postCreate.sh"
+}

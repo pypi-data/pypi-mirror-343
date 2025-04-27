@@ -1,0 +1,115 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "panpdf"
+version = "0.7.2"
+description = "Transform Jupyter Notebooks and Markdown into publication-quality PDF documents with high-fidelity visualizations."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "daizutabi", email = "daizutabi@gmail.com" }]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Education",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Documentation",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Software Development :: Documentation",
+  "Topic :: Text Processing :: Markup",
+  "Operating System :: OS Independent",
+  "License :: OSI Approved :: MIT License",
+]
+requires-python = ">=3.10"
+keywords = [
+  "jupyter",
+  "notebook",
+  "pdf",
+  "pandoc",
+  "markdown",
+  "latex",
+  "pgf",
+  "publication",
+  "academic",
+  "visualization",
+  "scientific",
+  "research",
+  "document",
+]
+dependencies = [
+  "aiohttp>=3",
+  "nbstore>=0.4.1",
+  "panflute >= 2.3.1",
+  "pyyaml>=6",
+  "pyzotero>=1.6",
+  "rich>=13",
+  "typer>=0.15",
+]
+
+[project.urls]
+Documentation = "https://daizutabi.github.io/panpdf"
+Source = "https://github.com/daizutabi/panpdf"
+Issues = "https://github.com/daizutabi/panpdf/issues"
+
+[project.scripts]
+panpdf = "panpdf.main:app"
+
+[dependency-groups]
+dev = [
+  "cairosvg>=2.7",
+  "hvplot>=0.11",
+  "ipykernel>=6",
+  "matplotlib>=3.10",
+  "numpy>=2.2",
+  "pandas>=2.2",
+  "polars>=1.22",
+  "pyarrow>=19",
+  "pytest-clarity>=1",
+  "pytest-cov>=6",
+  "pytest-randomly>=3.16",
+  "pytest-xdist>=3.6",
+  "ruff>=0.11",
+  "seaborn>=0.13",
+]
+docs = ["mkdocs-material"]
+
+[tool.pytest.ini_options]
+addopts = ["--cov-report=lcov:lcov.info", "--cov=panpdf"]
+
+[tool.coverage.report]
+exclude_lines = ["if TYPE_CHECKING:", "raise NotImplementedError"]
+skip_covered = true
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["ALL"]
+unfixable = ["F401"]
+ignore = ["ARG002", "D", "PGH003"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+  "ANN",
+  "ARG",
+  "ERA",
+  "NPY",
+  "PD",
+  "PLR",
+  "PT",
+  "PTH",
+  "RUF",
+  "S",
+  "T",
+]
+"filter.py" = ["ANN"]
+"formatters.py" = ["ANN", "ARG", "SLF"]
+
+[tool.pyright]
+include = ["src", "tests"]
