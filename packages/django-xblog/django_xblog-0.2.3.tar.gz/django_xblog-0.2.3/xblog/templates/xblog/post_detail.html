@@ -1,0 +1,24 @@
+{% extends "xblog/post_archive.html" %}
+<!-- post_detail.html -->
+{% block extratitle %} {{ object.title }}{% endblock %}
+{% block blogheaders %}<meta name="description" value="{{ site.name }}: {{ object.title }}">{% endblock %}
+{% block extranav %}<li><a href="{% url "xblog:year-archive" year=object.pub_date|date:"Y" %}">{{ object.pub_date.year}}</a></li>
+<li><a href="{% url "xblog:month-archive" year=object.pub_date|date:"Y" month=object.pub_date|date:"b" %}">{{ object.pub_date|date:"F"}}</a></li>
+<li><a href="{% url "xblog:day-archive"  year=object.pub_date|date:"Y" month=object.pub_date|date:"b" day=object.pub_date.day %}">{{ object.pub_date.day}}</a></li>
+<li>{{ object.title }}</li>
+{% endblock %}
+{% block maincontent %}
+<!-- {{ object.post_format }} -->
+{% if object.post_format == 'video' %}
+<!-- a video! -->
+{% include "includes/video_template.txt" %}
+{% elif object.post_format == 'status' %}
+{% include "includes/status_template.txt" %}
+{% else %}
+<!-- it's a post!  -->
+{% include "includes/post_template.txt" %}
+{% include "includes/post_stats.txt" %}
+{% endif %}
+<!-- includes -->
+{% include "includes/disqus_comments.txt" %}
+{% endblock %}

@@ -1,0 +1,10 @@
+django
+html2text
+BeautifulSoup4
+django-markdown-deux
+Pillow
+pytz
+textstat
+pygments
+django-xmlrpc-dx
+six

@@ -1,0 +1,31 @@
+{% extends "xblog/blog_base.html" %}
+{% block extratitle %}{{pagetitle}}{% endblock %}
+{% block navigation %}
+<li>Blog</li>
+{% endblock %}
+{% block maincontent %}
+	<!-- begin main blog overview -->
+    <h1>Hi o/</h1>
+	{% for object in object_list %}
+    {{ object.pub_date|date "j F, Y" }}
+    {% include "includes/post_template.txt" %}
+	{% endfor %}
+	<!-- end main blog overview -->
+    {% block pager %}
+    <!-- file: post_archive.html -->
+      <nav>
+        <ul class="pager">
+        {% if page_obj.has_previous %}
+          <li>
+              <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+          </li>
+        {% endif %}
+        {% if page_obj.has_next %}
+          <li>
+              <a href="?page={{ page_obj.next_page_number }}">Next</a>
+          </li>
+        {% endif %}
+        </ul>
+      </nav>
+    {% endblock %}
+{% endblock %}
