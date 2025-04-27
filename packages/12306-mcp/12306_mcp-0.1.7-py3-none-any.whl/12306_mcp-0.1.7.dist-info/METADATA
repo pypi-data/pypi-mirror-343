@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: 12306-mcp
+Version: 0.1.7
+Summary: Add your description here
+Requires-Python: >=3.11
+Requires-Dist: aiohttp>=3.11.18
+Requires-Dist: mcp>=1.0.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: tzdata>=2024.2
+Description-Content-Type: text/markdown
+
+### 脚本
+
+构建脚本
+```shell
+uv sync
+
+uv build
+
+yv publish -t <pypi-token>
+```
+
+```shell
+mcpo --port 8000 -- uv tool run 12306-mcp
+ OR
+mcpo --port 8000 -- uvx 12306-mcp
+```
