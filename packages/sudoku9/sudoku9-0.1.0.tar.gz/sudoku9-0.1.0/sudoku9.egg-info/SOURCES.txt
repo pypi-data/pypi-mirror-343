@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+sudoku9/__init__.py
+sudoku9/cli.py
+sudoku9/generator.py
+sudoku9/gui.py
+sudoku9/solver.py
+sudoku9/utils.py
+sudoku9.egg-info/PKG-INFO
+sudoku9.egg-info/SOURCES.txt
+sudoku9.egg-info/dependency_links.txt
+sudoku9.egg-info/entry_points.txt
+sudoku9.egg-info/requires.txt
+sudoku9.egg-info/top_level.txt
