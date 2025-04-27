@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+smart_git_commit/__init__.py
+smart_git_commit/smart_git_commit.py
+smart_git_commit.egg-info/PKG-INFO
+smart_git_commit.egg-info/SOURCES.txt
+smart_git_commit.egg-info/dependency_links.txt
+smart_git_commit.egg-info/entry_points.txt
+smart_git_commit.egg-info/requires.txt
+smart_git_commit.egg-info/top_level.txt
+tests/test_smart_git_commit.py

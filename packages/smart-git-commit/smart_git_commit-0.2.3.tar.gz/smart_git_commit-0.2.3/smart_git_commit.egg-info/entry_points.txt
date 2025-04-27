@@ -1,0 +1,2 @@
+[console_scripts]
+smart-git-commit = smart_git_commit.smart_git_commit:main
