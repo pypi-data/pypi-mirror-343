@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: http-scanner
+Version: 0.1.11
+Summary: A modular, plugin-based HTTP scanning framework.
+Author-email: dotcomrow <administrator@suncoast.systems>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/dotcomrow/http-scanner
+Project-URL: Source, https://github.com/dotcomrow/http-scanner
+Project-URL: Tracker, https://github.com/dotcomrow/http-scanner/issues
+Keywords: scanner,http,plugins,ai,automation
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: PyYAML
+Requires-Dist: httpx
+Dynamic: license-file
+
+# http-scanner
+
+A modular, plugin-based scanning framework designed to fetch and process HTTP-accessible targets (websites, APIs, etc.).  
+Built for extensibility, supporting multiple input types, processors, and output destinations.
+
+## Quick Start
+
+```bash
+pip install -e .
+http-scanner --input http_input --processor idea_extractor --output console_output --config config.yaml
+```
