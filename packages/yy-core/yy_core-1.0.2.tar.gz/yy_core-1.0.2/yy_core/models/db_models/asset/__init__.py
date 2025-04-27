@@ -1,0 +1,1 @@
+__all__=["asset_log_model","asset_only_model"]
