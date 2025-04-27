@@ -1,0 +1,9 @@
+setup.py
+my_math_utils/__init__.py
+my_math_utils/math_utils.py
+my_math_utils.egg-info/PKG-INFO
+my_math_utils.egg-info/SOURCES.txt
+my_math_utils.egg-info/dependency_links.txt
+my_math_utils.egg-info/top_level.txt
+tx_math/__init__.py
+tx_math/math_utils.py
