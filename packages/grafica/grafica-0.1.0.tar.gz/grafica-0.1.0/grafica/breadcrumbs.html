@@ -1,0 +1,16 @@
+<div role="navigation" aria-label="{{ _('Page navigation') }}">
+  <ol class="breadcrumb">
+    {%- block breadcrumbs %}
+    <li>
+      <a href="{{ pathto(root_doc)|e }}"
+         class="icon icon-home" aria-label="Home"></a>
+    </li>
+
+    {%- for doc in parents %}
+    <li><a href="{{ doc.link|e }}">{{ doc.title }}</li>
+    {%- endfor %}
+
+    <li class="active">{{ title }}</li>
+    {%- endblock %}
+  </ol>
+</div>

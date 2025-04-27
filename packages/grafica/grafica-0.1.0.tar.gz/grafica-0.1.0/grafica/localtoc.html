@@ -1,0 +1,9 @@
+{# Sphinx sidebar template: local table of contents #}
+{%- if display_toc %}
+<div class="gobmx-docs-sidenav">
+  <div class="docs-nav-logo red">
+    <small>{{ _('Table of Contents') }}</small>
+  </div>
+  {{ toc }}
+</div>
+{%- endif %}

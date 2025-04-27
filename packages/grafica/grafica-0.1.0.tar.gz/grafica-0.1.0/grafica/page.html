@@ -1,0 +1,31 @@
+{%- extends "layout.html" %}
+{% block body %}
+<div class="row">
+  <div class="col-sm-8 top-buffer">
+    {% include "breadcrumbs.html" %}
+
+    {{ body }}
+
+    {%- if prev or next %}
+    <ul class="pagination top-buffer">
+      {%- if prev %}
+        <li><a href="{{ prev.link|e }}">&laquo; {{ prev.title }}</a></li>
+      {%- endif %}
+      {%- if next %}
+        <li><a href="{{ next.link|e }}">{{ next.title }} &raquo;</a></li>
+      {%- endif %}
+    </ul>
+    {%- endif %}
+
+    <hr>
+
+    <div class="print bottom-buffer">
+      <span class="icon-printing"></span>
+      <a onclick="window.print(); return false" href="">
+          Imprime la página completa
+      </a>
+    </div>
+  </div>
+  <div class="col-sm-4">{%- include "localtoc.html" %}</div>
+</div>
+{% endblock %}

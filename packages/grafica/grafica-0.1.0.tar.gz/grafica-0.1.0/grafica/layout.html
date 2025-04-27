@@ -1,0 +1,156 @@
+{# Master layout template based on basic theme. #}
+{%- block doctype -%}
+<!DOCTYPE html>
+{%- endblock %}
+
+{%- if not embedded and docstitle %}
+  {%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
+{%- else %}
+  {%- set titlesuffix = "" %}
+{%- endif %}
+
+{%- set lang_attr = 'en' if language == None else (language | replace('_', '-')) %}
+
+{%- macro script() %}
+  {%- for js in script_files %}
+    {{ js_tag(js) }}
+  {%- endfor %}
+  <script src="{{ pathto('_static/js/css.js', 1) }}"></script>
+{%- endmacro %}
+
+{%- macro css() %}
+  {%- for css_file in css_files %}
+    {%- if css_file|attr("filename") %}
+    {{ css_tag(css_file) }}
+    {%- else %}
+    <link rel="stylesheet" type="text/css"
+          href="{{ pathto(css_file, 1)|escape }}" />
+    {%- endif %}
+  {%- endfor %}
+{%- endmacro %}
+
+<html lang="{{ lang_attr }}" data-content_root="{{ content_root }}">
+  <head>
+    <meta charset="{{ encoding }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    {{- metatags }}
+
+    <!-- Generated with Sphinx {{ sphinx_version }} and gob.mx -->
+    <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+    <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css"
+          rel="stylesheet">
+
+    {%- block css %}
+    {{- css() }}
+    {%- endblock %}
+
+  {%- if not embedded %}
+
+    {%- block scripts %}
+    {{- script() }}
+    {%- endblock %}
+
+    {%- if pageurl %}
+    <link rel="canonical" href="{{ pageurl|e }}" />
+    {%- endif %}
+
+    {%- if use_opensearch %}
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
+          href="{{ pathto('_static/opensearch.xml', 1) }}" />
+    {%- endif %}
+
+    {%- if favicon_url %}
+    <link rel="icon" href="{{ favicon_url|e }}"/>
+    {%- endif %}
+
+  {%- endif %}
+
+  {%- block linktags %}
+    {%- if hasdoc('genindex') %}
+    <link rel="index" title="{{ _('Index') }}" href="{{ pathto('genindex') }}" />
+    {%- endif %}
+
+    {%-if hasdoc('search') %}
+    <link rel="search" title="{{ _('Search') }}" href="{{ pathto('search') }}" />
+    {%- endif %}
+
+    {%- if hasdoc('copyright') %}
+    <link rel="copyright" title="{{ _('Copyright') }}" href="{{ pathto('copyright') }}" />
+    {%- endif %}
+
+    {%- if next %}
+    <link rel="next" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}" />
+    {%- endif %}
+
+    {%- if prev %}
+    <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}" />
+    {%- endif %}
+
+  {%- endblock %}
+
+  {%- block extrahead %} {% endblock %}
+  </head>
+  <body>
+    {%- block header %}
+    <header>
+		  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			  <div class="container">
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarMainCollapse">
+              <span class="sr-only">Interruptor de Navegaci&oacute;n</span>
+  			      <span class="icon-bar"></span>
+	  		      <span class="icon-bar"></span>
+		  	      <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="{{ pathto(root_doc)|e }}">
+            {%- if logo_url %}
+              <img src="{{ logo_url|e }}" width="128" height="48" alt="{{ logo_alt|e }}">
+            {% else %}
+              {{ project }}
+            {%- endif %}
+			      </a>
+			    </div>
+  			  <div class="collapse navbar-collapse" id="navbarMainCollapse">
+	  		    <ul class="nav navbar-nav navbar-right">
+                {%- if theme_github_user %}
+                <li>
+                  <a href="https://github.com/{{ theme_github_user }}/{{ theme_github_repo }}">
+                    <img alt="{{ theme_repository_site }}"
+                         src="{{ pathto('_static/icons/github.svg', resource=True)|e }}">
+                  </a>
+                </li>
+                {%- endif %}
+                {%- if hasdoc('search') %}
+                <li>
+                  <a href="{{ pathto('search') }}">
+                    <span class="sr-only">Búsqueda</span>
+                    <i class="icon-search"></i>
+                  </a>
+                </li>
+                {% endif %}
+			        </ul>
+			      </div>
+			    </div>
+		    </nav>
+	  </header>
+    {% endblock %}
+
+    <main class="page">
+      <div class="container">
+        {% block body %}
+          {{ body }}
+        {% endblock %}
+      </div>
+    </main>
+
+    {%- block footer %}
+    {%- include "footer.html" %}
+    {%- endblock %}
+  </body>
+</html>

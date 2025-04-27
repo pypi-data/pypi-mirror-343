@@ -1,0 +1,21 @@
+[theme]
+inherit = "basic"
+stylesheets = ["css/theme.css"]
+sidebars = [
+    "localtoc.html"
+]
+pygments_style = { default = "default" }
+
+[options]
+author_url = "#"
+
+description = ""
+github_repo = ""
+github_user = ""
+
+# Sociales
+youtube_user = ""
+instagram_user = ""
+twitter_user = ""
+
+extra_nav_links = {}

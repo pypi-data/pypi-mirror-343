@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grafica"
+dynamic = ["version"]
+authors = [
+  { name="Jacob Sánchez", email="jacobszpz@protonmail.com" },
+]
+description = "Un tema de Sphinx basado en gob.mx"
+readme = "README.md"
+dependencies = ["sphinx", "pygments"]
+
+classifiers = [
+  "Framework :: Sphinx",
+  "Framework :: Sphinx :: Theme",
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Web Environment",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+  "Topic :: Documentation",
+  "Topic :: Software Development :: Documentation",
+]
+
+[project.urls]
+"Repository" = "https://github.com/sanjacob/grafica"
+
+[project.entry-points]
+"sphinx.html_themes" = { grafica = "grafica" }
+
+[tool.setuptools_scm]

@@ -1,0 +1,57 @@
+Metadata-Version: 2.4
+Name: grafica
+Version: 0.1.0
+Summary: Un tema de Sphinx basado en gob.mx
+Author-email: Jacob Sánchez <jacobszpz@protonmail.com>
+Project-URL: Repository, https://github.com/sanjacob/grafica
+Classifier: Framework :: Sphinx
+Classifier: Framework :: Sphinx :: Theme
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development :: Documentation
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sphinx
+Requires-Dist: pygments
+Dynamic: license-file
+
+## Grafica
+
+Un tema para [Sphinx][sphinx] adaptado del diseño de https://www.gob.mx.
+
+En particular, se utilizó la [guía de estilo][guia] como referencia.
+
+
+## Configuración
+
+- `description`: Descripción corta del proyecto que
+               se muestra al pie de página.
+- `github_repo`: Nombre del repositorio de GitHub al que se enlaza.
+- `github_user`: Usuario de GitHub en el que existe el repositorio.
+- `twitter_user`: Handle de twitter al que se enlaza
+                  en el pie de página.
+- `instagram_user`: Handle de instagram al que se enlaza
+                    en el pie de página.
+- `youtube_user`: Handle de youtube al que se enlaza
+                  en el pie de página.
+- `extra_nav_links`: Diccionario con nombres y URLs de
+                     enlaces a mostrar en el pie de página.
+
+
+## Licencia
+
+Este tema se proporciona bajo la licencia BSD de 3 cláusulas (3-Clause BSD).
+
+El diseño de https://www.gob.mx/ es propiedad intelectual de sus autores.
+
+[sphinx]: https://www.sphinx-doc.org/
+[guia]: https://framework-gb.cdn.gob.mx/

@@ -1,0 +1,110 @@
+<footer class="main-footer">
+  <div class="list-info">
+    <div class="container">
+      <div class="row">
+
+        <!-- Logo / Project Name -->
+        <div class="col-sm-3">
+          {%- if logo_url %}
+          <img src="{{ logo_url|e }}" alt="{{ logo_alt|e }}"
+               class="logo_footer" style="max-width: 90%;">
+          {% else %}
+          {{ project }}<hr>{{ copyright }}
+          {%- endif %}
+        </div>
+
+        <!-- Links -->
+        <div class="col-sm-3">
+          {%- if theme_extra_nav_links %}
+          <h5>{{ _('Enlaces') }}</h5>
+          <ul>
+            {% for name, target in theme_extra_nav_links.items() %}
+            <li>
+              <a href="{{ target }}" target="_blank" rel="noopener">
+                {{ name|e }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+
+        <!-- Links 2 -->
+        <div class="col-sm-3">
+          <h5>{{ _('¿Qué es') }} {{ project }}?</h5>
+          <p>{{ theme_description }}
+          <ul>
+            <li><a href="{{ pathto('genindex')|e }}">{{ _('General Index') }}</a></li>
+            {%- if hasdoc('search') %}
+            <li><a href="{{ pathto('search')|e }}">{{ _('Search') }}</a></li>
+            {% endif %}
+            {%- if hasdoc('changelog') %}
+            <li><a href="{{ pathto('changelog')|e }}">{{ _('Changelog') }}</a></li>
+            {% endif %}
+            {%- if hasdoc('sitemap') %}
+            <li><a href="{{ pathto('sitemap')|e }}">{{ _('Sitemap') }}</a></li>
+            {% endif %}
+          </ul>
+        </div>
+
+        <!-- Sociales -->
+        <div class="col-sm-3">
+          {%- if show_copyright %}
+          <h5><a href="{{ theme_author_url }}">©{{ copyright }}</a></h5>
+          {%- endif %}
+
+          <h5>{{ _('Síguenos en') }}</h5>
+
+          <ul class="list-inline">
+            {%- if theme_github_user and theme_github_repo %}
+            <li>
+              <a href="https://github.com/{{ theme_github_user }}/{{ theme_github_repo }}"
+                 target="_blank" rel="noopener" class="sendEst share-info footer">
+                 <img alt="GitHub" src="{{ pathto('_static/icons/github.svg', resource=True)|e }}">
+              </a>
+            </li>
+            {% endif %}
+
+            {%- if theme_twitter_user %}
+            <li style="margin-left: 5px; margin-right: 5px;">
+              <a href="https://twitter.com/{{ theme_twitter_user }}"
+                 target="_blank" rel="noopener" class="sendEst share-info footer">
+                <img alt="Twitter" src="{{ pathto('_static/icons/twitter.png', resource=True)|e }}">
+              </a>
+            </li>
+            {% endif %}
+
+            {%- if theme_instagram_user %}
+            <li style="margin-left: 5px; margin-right: 5px;">
+              <a href="https://www.instagram.com/{{ theme_instagram_user }}"
+                 target="_blank" rel="noopener" class="sendEst share-info footer">
+                <img alt="Instagram" src="{{ pathto('_static/icons/instagram.png', resource=True)|e }}">
+              </a>
+            </li>
+            {% endif %}
+
+            {%- if theme_youtube_user %}
+            <li style="margin-left: 5px; margin-right: 5px;">
+              <a href="https://www.youtube.com/{{ theme_youtube_user }}"
+                 target="_blank" rel="noopener" class="sendEst share-info footer">
+                <img alt="YouTube" src="{{ pathto('_static/icons/youtube.png', resource=True)|e }}">
+              </a>
+            </li>
+            {% endif %}
+          </ul>
+
+          {% if show_sphinx %}
+          <small>
+            {% trans sphinx_version=sphinx_version|e %}Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
+          </small>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fondo -->
+  <div class="container-fluid footer-pleca">
+    <div class="row"><div class="col"><br><br></div></div>
+  </div>
+</footer>
