@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: rbutils
+Version: 2.3.1
+Summary: python 常用的工具
+Home-page: https://github.com/Adenialzz/SongUtils
+Author: robin
+Author-email: robin.seu@foxmail.com
+License: MIT Licence
+Keywords: pip
+Platform: any
+
+Junjie's private utils.
