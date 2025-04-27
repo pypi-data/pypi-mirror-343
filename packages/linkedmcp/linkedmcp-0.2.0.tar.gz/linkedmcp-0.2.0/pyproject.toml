@@ -1,0 +1,35 @@
+# pyproject.toml 
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linkedmcp"
+version = "0.2.0"
+description = "MCP server to get help with Linkedin content using LLM"
+readme = "README.md"
+authors = [
+    {name = "harsh_buddhdev", email = "harshbuddhdev147@gmail.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "build>=1.2.2.post1",
+    "fpdf>=1.7.2",
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.2.0",
+    "requests",
+    "twine>=6.1.0",
+]
+requires-python = ">=3.10"
+
+[project.scripts]
+linkedmcp = "linkedmcp.server:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
