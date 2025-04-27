@@ -1,0 +1,8 @@
+setup.py
+bloxfetch/__init__.py
+bloxfetch/main.py
+bloxfetch.egg-info/PKG-INFO
+bloxfetch.egg-info/SOURCES.txt
+bloxfetch.egg-info/dependency_links.txt
+bloxfetch.egg-info/requires.txt
+bloxfetch.egg-info/top_level.txt
