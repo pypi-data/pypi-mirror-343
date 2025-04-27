@@ -1,0 +1,39 @@
+Generate a Git commit message following the Conventional Commits specification (v1.0.0) based *strictly* on the actions shown in the provided Git Diff.
+Focus ONLY on summarizing WHAT was added, removed, or changed in the diff lines.
+Note: Sensitive data might be replaced with placeholders (e.g., IP-1, example-2.com).
+
+--- Project Context ---
+{repo_context}
+-----------------------
+
+{file_context}
+
+GIT DIFF:
+{processed_diff}
+
+--- Instructions ---
+1.  **Format:** Adhere strictly to the Conventional Commits format:
+    `<type>[optional scope]: <description>
+
+    [optional body]
+
+    [optional footer(s)]`
+2.  **Type Selection Guidance:**
+    *   `feat`: Adding a new resource, feature, or capability.
+    *   `fix`: Correcting a bug or error in existing code/configuration.
+    *   `chore`: Maintenance, configuration changes, tuning, updates (e.g., adjusting intervals, adding resources for management).
+    *   `refactor`: Restructuring code/config without changing external behavior.
+    *   `docs`, `style`, `test`, `perf`, `ci`, `build`, `revert`: As appropriate.
+    *   **Choose `chore` or `feat` over `fix` for configuration adjustments or additions unless correcting a clear error.**
+3.  **Scope (Optional):** Infer a relevant scope (e.g., `infrastructure`, `staging`, `kustomization`) if appropriate from file paths or content.
+4.  **Description:** Write a concise summary (max 50 chars) describing the *primary action* taken in the diff (e.g., "Increase staging interval", "Add infra-namespace Kustomization"). Use imperative mood. Do not end with a period.
+5.  **Body (Optional):** Briefly explain WHAT was changed based *only* on the diff lines. Avoid justifications or repeating validation points. Separate from the description with a blank line.
+6.  **Footer (Optional):** Use for breaking changes or referencing issues.
+7.  **Output:** Generate ONLY the raw commit message text, without any additional explanations, comments, or markdown formatting like ```.
+
+--- Example ---
+chore(infrastructure): adjust staging reconciliation intervals
+
+Increase interval for infra-configs Kustomization to 2h.
+Increase retryInterval to 2m.
+Add Kustomization for infra-namespace.

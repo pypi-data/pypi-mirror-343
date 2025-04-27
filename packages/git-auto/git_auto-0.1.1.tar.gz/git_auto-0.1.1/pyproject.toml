@@ -1,0 +1,87 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "git-auto" # Renamed
+version = "0.1.1" # Increment version for rename/release
+authors = [
+  { name="Your Name", email="you@example.com" }, # TODO: Update with actual author info
+]
+description = "AI-powered Git commit helper using Google Gemini"
+readme = "README.md" # Assumes you might create a README later
+requires-python = ">=3.8"
+license = {text = "MIT"} # Example: Add license explicitly
+keywords = ["git", "commit", "ai", "gemini", "developer tools", "cli", "automation"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License", # TODO: Choose appropriate license
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Topic :: Text Processing :: Linguistic",
+]
+dependencies = [
+    "click>=8.0",
+    "google-generativeai>=0.4", # Check for the latest appropriate version
+    "python-dotenv>=0.20",
+    "PyYAML>=6.0", # Add PyYAML for basic YAML parsing
+    "pydantic>=2.0", # Add Pydantic
+    "Jinja2>=3.0", # Add Jinja2
+    "rich>=13.0", # Add rich
+    "toml>=0.10", # Add toml for pyproject.toml parsing
+]
+
+[project.optional-dependencies]
+linter = ["yamllint>=1.26"] # Add yamllint for advanced YAML linting
+dev = [
+    "pytest>=7.0", # Add pytest for testing
+    "pytest-mock", # Useful for mocking external calls
+    "ruff>=0.1", # Add ruff
+    "mypy>=1.0", # Add mypy
+]
+
+[project.scripts]
+git-auto = "git_auto.src.cli:cli" # Renamed script and package path
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/git-auto" # TODO: Update URL
+"Bug Tracker" = "https://github.com/yourusername/git-auto/issues" # TODO: Update URL
+
+[tool.ruff]
+line-length = 88 # Example: Match black's default
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"] # Enable standard flake8 rules + isort
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.mypy]
+python_version = "3.8" # Specify the minimum supported Python version
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true # Start with ignoring missing stubs for third-party libs
+disallow_untyped_defs = true # Encourage typing all function definitions
+# Add other strictness options as desired later
+# exclude = ['build/', 'venv/'] # Exclude directories if needed (often handled by default)
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q" # Example options: report all except passed, quiet
+testpaths = [
+    "tests", # Specify where tests are located
+]
+norecursedirs = [ # Directories to ignore during collection
+    "dist",
+    "build",
+    ".*", # Ignore hidden directories like .git, .venv, .pytest_cache
+    "backup", # Ignore the backup directory
+]
+
+[tool.setuptools.package-data]
+"git_auto.prompt_presets" = ["*.txt"] # Updated package path
+"git_auto.templates" = ["*.txt"] # Updated package path

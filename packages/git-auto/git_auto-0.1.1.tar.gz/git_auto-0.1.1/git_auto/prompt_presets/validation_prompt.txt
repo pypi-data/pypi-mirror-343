@@ -1,0 +1,47 @@
+**CRITICAL INSTRUCTION: Analyze ONLY the lines changed in the Git Diff below.**
+Do NOT report issues found on unchanged lines, even if they are in the same file as a change.
+**DO NOT compare values in changed lines to values in unchanged lines or other files.**
+Focus exclusively on lines prefixed with '+' or '-' and their immediate context.
+
+Analyze the following code changes for quality, security, and adherence to best practices, considering the overall project structure and purpose described below.
+Note: Sensitive data might be replaced with placeholders (e.g., IP-1, example-2.com).
+
+--- Project Context ---
+{repo_context}
+-----------------------
+
+{file_context}
+
+GIT DIFF:
+{processed_diff}
+
+--- Instructions ---
+1.  Identify potential bugs, security vulnerabilities, or significant deviations from common best practices **within the changed lines only**.
+2.  Be CONCISE. Use single-line descriptions for each observation/issue.
+3.  **Assign Severity Levels Consistently (based *only* on changed lines):**
+    *   **CRITICAL:** Changed lines likely to cause immediate system failure, data loss, or major security breaches. Examples: Syntax errors preventing deployment, exposed plaintext secrets, deleting vital infrastructure, incorrect root permissions, major logic flaws.
+    *   **HIGH:** Changed lines likely to cause significant problems, service disruptions, or security risks if not addressed soon (e.g., resource exhaustion risks, misconfigurations causing instability, risky permission changes, potential DoS vectors).
+    *   **MEDIUM:** Changed lines introducing deviations from common best practices, potential future maintainability concerns, or minor functional changes with potential side effects (e.g., using deprecated fields, non-standard configurations, adjustments impacting performance/resource usage without immediate risk).
+    *   **LOW:** Changed lines introducing minor issues, style inconsistencies, suggestions for slight improvements, or lack of comments explaining non-obvious changes.
+    *   **(Removed PRACTICAL category)**
+4.  If no CRITICAL or HIGH issues are found **in the changed lines**, state "VALIDATION: PASSED" or "VALIDATION: PASSED WITH WARNINGS" (if MEDIUM/LOW issues exist). Provide a 1-sentence summary of the change.
+
+--- Output Format ---
+VALIDATION: [PASSED|PASSED WITH WARNINGS|NEEDS REVISION]
+
+CRITICAL ISSUES:
+- [Concise issue description related *only* to changed lines] - [File name]
+
+HIGH ISSUES:
+- [Concise issue description related *only* to changed lines] - [File name]
+
+MEDIUM ISSUES:
+- [Concise observation/issue related *only* to changed lines] - [File name]
+
+LOW ISSUES:
+- [Concise observation/issue related *only* to changed lines] - [File name]
+
+SUMMARY:
+[1-2 sentence summary of the changes and main concerns (Critical/High), if any]
+
+(Use "None" if a category has no issues)
