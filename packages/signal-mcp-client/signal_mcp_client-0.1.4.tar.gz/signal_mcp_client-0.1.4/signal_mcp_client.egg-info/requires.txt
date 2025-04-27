@@ -1,0 +1,7 @@
+mcp>=1.3.0
+python-dotenv>=1.0.1
+websockets
+requests
+litellm
+ruff
+fal-client
