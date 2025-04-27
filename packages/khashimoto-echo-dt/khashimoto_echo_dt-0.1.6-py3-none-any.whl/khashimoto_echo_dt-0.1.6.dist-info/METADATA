@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: khashimoto-echo-dt
+Version: 0.1.6
+Summary: This is a sample repository for building pip module with github actions.
+Author-email: K hashimoto <keishi04hrikzira@gmail.com>
+Requires-Python: >=3.13
+Requires-Dist: typer>=0.15.2
