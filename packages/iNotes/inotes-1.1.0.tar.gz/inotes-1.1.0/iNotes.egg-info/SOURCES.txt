@@ -1,0 +1,10 @@
+README.md
+setup.py
+iNotes/__init__.py
+iNotes/main.py
+iNotes.egg-info/PKG-INFO
+iNotes.egg-info/SOURCES.txt
+iNotes.egg-info/dependency_links.txt
+iNotes.egg-info/entry_points.txt
+iNotes.egg-info/requires.txt
+iNotes.egg-info/top_level.txt
