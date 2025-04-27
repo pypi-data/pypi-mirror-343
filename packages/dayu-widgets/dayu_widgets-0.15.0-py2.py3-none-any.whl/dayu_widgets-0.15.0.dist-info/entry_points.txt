@@ -1,0 +1,3 @@
+[console_scripts]
+dayu_widgets=dayu_widgets.__main__:main
+
