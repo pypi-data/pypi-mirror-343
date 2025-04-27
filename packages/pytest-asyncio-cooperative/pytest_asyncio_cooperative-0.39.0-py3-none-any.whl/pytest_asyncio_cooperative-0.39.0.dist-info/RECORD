@@ -1,0 +1,9 @@
+pytest_asyncio_cooperative/__init__.py,sha256=CzCpbnUsxuhZe1Kybb21x4xmewmbMob6hefUa43MC7E,194
+pytest_asyncio_cooperative/assertion.py,sha256=3rL-f4hW1Eg_izrs4oaekY-RtW8dDPq2s9hG5kLMrl4,764
+pytest_asyncio_cooperative/fixtures.py,sha256=Gc0G_FRwmHwDyyfCsaBZKr3cEL568mG3YTyBKb3m4U4,12643
+pytest_asyncio_cooperative/plugin.py,sha256=XyqxflxPRWDUgamDXls7jL8y__RYmpbRCwyBzNMjvNM,12282
+pytest_asyncio_cooperative-0.39.0.dist-info/LICENSE,sha256=qJqr0NEN9S3-JLWjhJmcKiAcRvbYouXy0OSGQ4HnU4E,1514
+pytest_asyncio_cooperative-0.39.0.dist-info/METADATA,sha256=dOr2Bvj7mA-_grQv8MfVEpnT7dEHoG9c4TuZnVFaDjs,627
+pytest_asyncio_cooperative-0.39.0.dist-info/WHEEL,sha256=RaoafKOydTQ7I_I3JTrPCg6kUmTgtm4BornzOqyEfJ8,88
+pytest_asyncio_cooperative-0.39.0.dist-info/entry_points.txt,sha256=lBY9FPCVwSYB5tXc6H4TWxUugBXdFxH6D2PnB2qkmFE,66
+pytest_asyncio_cooperative-0.39.0.dist-info/RECORD,,
