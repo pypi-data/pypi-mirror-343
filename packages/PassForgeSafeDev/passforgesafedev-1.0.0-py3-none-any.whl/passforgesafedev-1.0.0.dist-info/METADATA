@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: PassForgeSafeDev
+Version: 1.0.0
+Summary: Ein sicheres Passwort-Management-Tool mit tkinter-GUI.
+Author-email: SafecraftRuleDev <dein.email@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/SafecraftRuleDev/PassForgeSafeDev
+Project-URL: Documentation, https://github.com/SafecraftRuleDev/PassForgeSafeDev#readme
+Project-URL: Issues, https://github.com/SafecraftRuleDev/PassForgeSafeDev/issues
+Project-URL: Source, https://github.com/SafecraftRuleDev/PassForgeSafeDev
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# PassForge
