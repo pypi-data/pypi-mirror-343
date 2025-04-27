@@ -1,0 +1,38 @@
+[tool.black]
+preview = true
+
+[tool.isort]
+profile = "black"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "simple-talking_anime-avatar"
+version = "0.0.4"
+authors = [
+  { name="Adam Ivansky", email="adam.ivansky@gmail.com" },
+]
+description = """
+Generate 
+"""
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  'opencv-python >= 4.0.0.21',
+  'numpy < 2.0.0, >=1.20.0 ',
+  'whisper-timestamped >= 1.15.8',
+  'whisper >= 1.1.10',
+  'librosa >= 0.10.0',
+  'moviepy >= 2.0.0'
+]
+
+[project.urls]
+"Homepage" = "https://github.com/snow884/simple_talking_anime_avatar"
+"Bug Tracker" = "https://github.com/snow884/simple_talking_anime_avatar/issues"
