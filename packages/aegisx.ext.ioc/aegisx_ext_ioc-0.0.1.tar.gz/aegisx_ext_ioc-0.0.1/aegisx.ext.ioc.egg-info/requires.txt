@@ -1,0 +1,9 @@
+dependency_injector
+
+[develop]
+pytest
+pytest_asyncio
+coverage
+
+[fastapi]
+fastapi

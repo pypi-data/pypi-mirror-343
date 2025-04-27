@@ -1,0 +1,12 @@
+MANIFEST.in
+VERSION
+setup.py
+aegisx.ext.ioc.egg-info/PKG-INFO
+aegisx.ext.ioc.egg-info/SOURCES.txt
+aegisx.ext.ioc.egg-info/dependency_links.txt
+aegisx.ext.ioc.egg-info/requires.txt
+aegisx.ext.ioc.egg-info/top_level.txt
+aegisx/ext/ioc/__init__.py
+aegisx/ext/ioc/fastapi.py
+aegisx/ext/ioc/package.json
+aegisx/ext/ioc/containers/__init__.py

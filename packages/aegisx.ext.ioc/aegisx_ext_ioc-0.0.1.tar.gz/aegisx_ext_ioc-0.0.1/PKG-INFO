@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: aegisx.ext.ioc
+Version: 0.0.1
+Summary: Dependency injection framework for use with AegisX
+Home-page: https://github.com/tensorshield/python-aegisx
+Author: Immortal Izzy
+Author-email: immortal.izzy@tensorshield.ai
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Communications
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: dependency_injector
+Provides-Extra: develop
+Requires-Dist: pytest; extra == "develop"
+Requires-Dist: pytest_asyncio; extra == "develop"
+Requires-Dist: coverage; extra == "develop"
+Provides-Extra: fastapi
+Requires-Dist: fastapi; extra == "fastapi"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
