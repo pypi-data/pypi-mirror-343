@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: fastpybuilder
+Version: 0.1.32
+Summary: python package to create backends faster, using PostgreSql and Flask, develop by Lenin Ospina Lamprea. Medellin University. En la version 0.1.32 se hizo correccion de varios errores que impedian la ejecucion del programa y generaban un ciclo infinito.
+Author: Lenin Ospina Lamprea
+Author-email: o.lamprea99@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+Proyecto creado con python para la construccion rapida de backends
+con flask y postgres.
+
+Mencion honorifica a quien corresponda, por la creacion de Flask, SqlAlchemy y Psycopg2 que son los modulos
+principales en los que se apolla este proyecto para generar un backend de 4 capas basado en la informacion que 
+pueda sustraer de una base de datos ya existente.
