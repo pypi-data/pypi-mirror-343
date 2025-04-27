@@ -1,0 +1,15 @@
+sqlmodelgen/__init__.py,sha256=SCye9cHpBiuVtHCXApNh5JAEVYWkzuJC4oq7NLIf3GQ,231
+sqlmodelgen/sqlmodelgen.py,sha256=Yjx8jvwzpDU5Wfk4qO19wKwFuwJPy6qyQVF0TM8YvcA,989
+sqlmodelgen/codegen/classes.py,sha256=4cIwXgIakXCdXfTnYVFdICcPsJrWoiPFoVO_7QEnVhM,2356
+sqlmodelgen/codegen/codegen.py,sha256=pcYJnf7_BeCiZ9tgwP3x8dLoQB_gWp_a6J70HQ5Ux-k,5700
+sqlmodelgen/codegen/convert_data_type.py,sha256=RJtaIN2yJxt6PV6HWfZdVWcPB_O22wtHJHrcQBtArlY,974
+sqlmodelgen/ir/ir.py,sha256=zUdcMN9PweF_K18gAFZ3PJVpD83i_2BZWQD_DF8gnZ0,887
+sqlmodelgen/ir/parse/ir_parse.py,sha256=FFcoJRDqojOgV3PJnB_dhz77frV3J4zFf0xeMrc5vTU,2994
+sqlmodelgen/ir/parse/org_parse.py,sha256=WbxzmkN6QwTGSNkdjwUxsjfcnJM6ZSGtHZpsC4Zybcc,3182
+sqlmodelgen/ir/postgres/postgres_collect.py,sha256=iVke0FypZlwPffFV2aNWnio-CcVsHrp-VMrymjFnkvI,4375
+sqlmodelgen/ir/sqlite/sqlite_parse.py,sha256=FZzkidGK_JADQQ3N_94N4hppIktodR2SQEEIq4f7M-o,1583
+sqlmodelgen/utils/dependency_checker.py,sha256=DYK7NVGczj78CcTpe9F0DHb9sF0ldz3KhKUGkW60PjI,127
+sqlmodelgen-0.0.11.dist-info/METADATA,sha256=AKOXTJSjLsICyhBuhAs5EY6o9CfyRpS038tbX79UZsA,3133
+sqlmodelgen-0.0.11.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sqlmodelgen-0.0.11.dist-info/licenses/LICENSE,sha256=SQcuaeMStbRZZLflqQH-ACYSCArfJ8tn5SLWXWf5fBQ,1062
+sqlmodelgen-0.0.11.dist-info/RECORD,,
