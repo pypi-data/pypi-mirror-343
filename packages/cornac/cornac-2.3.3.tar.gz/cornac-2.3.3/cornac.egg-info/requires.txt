@@ -1,0 +1,11 @@
+numpy>2.0.0
+scipy
+tqdm
+powerlaw
+
+[tests]
+pytest
+pytest-pep8
+pytest-xdist
+pytest-cov
+Flask
