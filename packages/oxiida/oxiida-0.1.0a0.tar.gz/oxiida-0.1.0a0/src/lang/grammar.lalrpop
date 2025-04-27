@@ -1,0 +1,515 @@
+use crate::lang::ast;
+use crate::lang::lex::{TokenKind, LexicalError};
+use lalrpop_util::ErrorRecovery;
+
+grammar<'err>(errors: &'err mut Vec<ErrorRecovery<usize, TokenKind, LexicalError>>);
+
+extern {
+    type Location = usize;
+    type Error = LexicalError;
+
+    enum TokenKind {
+        "(" => TokenKind::LeftParen,
+        ")" => TokenKind::RightParen,
+        "{" => TokenKind::LeftBrace,
+        "}" => TokenKind::RightBrace,
+        "[" => TokenKind::LeftBraket,
+        "]" => TokenKind::RightBraket,
+        "," => TokenKind::Comma,
+        "." => TokenKind::Dot,
+        "-" => TokenKind::Minus,
+        "+" => TokenKind::Plus,
+        "^" => TokenKind::Caret,
+        ";" => TokenKind::Semicolon,
+        "*" => TokenKind::Star,
+        "=" => TokenKind::Equal,
+        "==" => TokenKind::EqualEqual,
+        "!" => TokenKind::Bang,
+        "!=" => TokenKind::BangEqual,
+        "<" => TokenKind::Less,
+        "<=" => TokenKind::LessEqual,
+        ">" => TokenKind::Greater,
+        ">=" => TokenKind::GreaterEqual,
+        "/" => TokenKind::Slash,
+        "|" => TokenKind::Pipe,
+        "string" => TokenKind::String(<String>),
+        "literal" => TokenKind::Literal(<String>),
+        "number" => TokenKind::Number(<f64>),
+        "identifier" => TokenKind::Identifier(<String>),
+        "shell" => TokenKind::Shell,
+        "shellpipe" => TokenKind::ShellPipe,
+        "and" => TokenKind::And,
+        "in" => TokenKind::In,
+        "class" => TokenKind::Class,
+        "else" => TokenKind::Else,
+        "false" => TokenKind::False,
+        "for" => TokenKind::For,
+        "def" => TokenKind::Def,
+        "seq" => TokenKind::Seq,
+        "para" => TokenKind::Para,
+        "if" => TokenKind::If,
+        "nil" => TokenKind::Nil,
+        "or" => TokenKind::Or,
+        "return" => TokenKind::Return,
+        "super" => TokenKind::Super,
+        "this" => TokenKind::This,
+        "true" => TokenKind::True,
+        "var" => TokenKind::Var,
+        "while" => TokenKind::While,
+        "print" => TokenKind::Print,
+        "require" => TokenKind::Require,
+        "error" => TokenKind::Error,
+    }
+}
+
+pub Statements: Vec<ast::Stmt> = {
+    <stmts:(<Stmt>)*> => {
+        stmts
+    },
+}
+
+Stmt: ast::Stmt = {
+    StmtLayer1,
+
+    "if" "(" <expr:Expression> ")" <ifsec:StmtNoShortIf> "else" <elsesec:Stmt> => {
+        ast::Stmt::IfStmt {
+            condition: expr,
+            ifsec: Box::new(ifsec),
+            elsesec: Some(Box::new(elsesec)),
+        }
+    },
+
+    "if" "(" <expr:Expression> ")" <ifsec:Stmt> => {
+        ast::Stmt::IfStmt {
+            condition: expr,
+            ifsec: Box::new(ifsec),
+            elsesec: None,
+        }
+    },
+
+    "while" "(" <expr:Expression> ")" <body:Stmt> => {
+        ast::Stmt::WhileStmt {
+            condition: expr,
+            body: Box::new(body),
+        }
+    },
+
+    "for" <x:Expression> "in" <xs:Array> <body:Stmt> => {
+        ast::Stmt::ForStmt {
+            x,
+            xs,
+            body: Box::new(body),
+        }
+    },
+}
+
+// solution for ambiguity of dangling else
+//
+// see:
+// - https://www.cs.cornell.edu/andru/javaspec/19.doc.html
+// - discussion: https://github.com/lalrpop/lalrpop/issues/386
+StmtNoShortIf: ast::Stmt = {
+    StmtLayer1,
+
+    "if" "(" <expr:Expression> ")" <ifsec:StmtNoShortIf> "else" <elsesec:StmtNoShortIf> => {
+        ast::Stmt::IfStmt {
+            condition: expr,
+            ifsec: Box::new(ifsec),
+            elsesec: Some(Box::new(elsesec)),
+        }
+    },
+
+    "while" "(" <expr:Expression> ")" <body:StmtNoShortIf> => {
+        ast::Stmt::WhileStmt {
+            condition: expr,
+            body: Box::new(body),
+        }
+    },
+
+    "for" <x:Expression> "in" <xs:Array> <body:StmtNoShortIf> => {
+        ast::Stmt::ForStmt {
+            x,
+            xs,
+            body: Box::new(body),
+        }
+    },
+}
+
+StmtLayer1: ast::Stmt = {
+    <ExprStmtWithoutDelimiter> ";",
+
+    "print" <expr:Expression> ";"  => {
+        ast::Stmt::PrintStmt(expr)    
+    },
+
+    "seq" "{" <head:(<Stmt>)*> "}" => {
+        ast::Stmt::SeqBlock(head)
+    },
+
+    // syntax sugar of seq { stmts }
+    "{" <head:(<Stmt>)*> "}" => {
+        ast::Stmt::SeqBlock(head)
+    },
+
+    "para" "{" <head:(<Stmt>)*> "}" => {
+        ast::Stmt::ParaBlock(head)
+    },
+
+    "require" <mut xs:(<"identifier"> ",")*> <last: ("identifier")?> ";" => {
+        if let Some(last) = last {
+            xs.push(last)
+        }
+        ast::Stmt::RequireStmt(xs) 
+    }
+}
+
+ExprStmtWithoutDelimiter: ast::Stmt = {
+    <expr:Expression> => {
+        ast::Stmt::ExprStmt(expr)    
+    },
+}
+
+Expression: ast::Expression = {
+    <lval:Shell> <location:@L> "=" <end_location:@R> <rval:Expression> => {
+        ast::Expression::AssignExpr {
+            lval: Box::new(lval),
+            rval: Box::new(rval),
+        }
+    },
+
+    <Array>,
+    <Shell>,
+    <PipeShell>,
+}
+
+Array: ast::Expression = {
+    "[" <mut head: (<Shell> ",")*> <last: (<Shell>)?> "]" => {
+        if let Some(last) = last {
+            head.push(last)
+        }
+        ast::Expression::Array(head)
+    },
+}
+
+PipeShell: ast::Expression = {
+    "shellpipe" "{" <expr: PipeShellExpr> "}" => {
+        expr
+    } 
+}
+
+PipeShellExpr: ast::Expression = {
+    <lexpr:PipeShellExpr> "|" <cmd: (<String>)> <args: (<String>)*> => {
+        let lexpr = ast::Expression::Attribute {
+            val: Box::new(lexpr),
+            attr: "stdout".to_string(),
+        };
+        ast::Expression::ShellExpr {
+            cmd: Box::new(cmd),
+            cmd_args: args,
+            stdin: Some(Box::new(lexpr)),
+        }
+    },
+
+    <PipeShellStdoutUnit>,
+}
+
+// helper for PipeShell and should not used by other expression
+PipeShellStdoutUnit: ast::Expression = {
+    <cmd: (<String>)> <args: (<String>)*> => {
+        ast::Expression::ShellExpr {
+            cmd: Box::new(cmd),
+            cmd_args: args,
+            stdin: None,
+        }
+    },
+}
+
+Shell: ast::Expression = {
+    // need an expression that resolved to string strict to which can only deduct from <Term>
+    "shell" "{" <cmd: (<Term>)> "," "[" <mut head: (<Term> ",")*> <last: (<Term>)?> "]" "," <stdin: (<Shell>)> "}" => {
+        if let Some(last) = last {
+            head.push(last)
+        }
+        ast::Expression::ShellExpr {
+            cmd: Box::new(cmd),
+            cmd_args: head,
+            stdin: Some(Box::new(stdin)),
+        }
+    },
+
+    "shell" "{" <cmd: (<Term>)> "," "[" <mut head: (<Term> ",")*> <last: (<Term>)?> "]" "}" => {
+        if let Some(last) = last {
+            head.push(last)
+        }
+        ast::Expression::ShellExpr {
+            cmd: Box::new(cmd),
+            cmd_args: head,
+            stdin: None,
+        }
+    },
+
+    "shell" "{" <cmd: (<Term>)> "}" => {
+        ast::Expression::ShellExpr {
+            cmd: Box::new(cmd),
+            cmd_args: vec![],
+            stdin: None,
+        }
+    },
+
+    <Logic>,
+}
+
+Logic: ast::Expression = {
+
+    <lexpr:Logic> <location:@L> "and" <end_location:@R> <rexpr:Equality> => {
+        ast::Expression::LogicOpExpr {
+            lexpr: Box::new(lexpr),
+            op: ast::Operator {
+                op: ast::Op::And,
+                range: location..=end_location,
+            },
+            rexpr: Box::new(rexpr),
+        }
+    },
+
+    <lexpr:Logic> <location:@L> "or" <end_location:@R> <rexpr:Equality> => {
+        ast::Expression::LogicOpExpr {
+            lexpr: Box::new(lexpr),
+            op: ast::Operator {
+                op: ast::Op::Or,
+                range: location..=end_location,
+            },
+            rexpr: Box::new(rexpr),
+        }
+    },
+
+    <Equality>,
+}
+
+Equality: ast::Expression = {
+    <lexpr:Equality> <location:@L> "==" <end_location:@R> <rexpr:Compare> => {
+        ast::Expression::BinaryOpExpr {
+            lexpr: Box::new(lexpr),
+            op: ast::Operator {
+                op: ast::Op::EqualEqual,
+                range: location..=end_location,
+            },
+            rexpr: Box::new(rexpr),
+        }
+    },
+    <lexpr:Equality> <location:@L> "!=" <end_location:@R> <rexpr:Compare> => {
+        ast::Expression::BinaryOpExpr {
+            lexpr: Box::new(lexpr),
+            op: ast::Operator {
+                op: ast::Op::NotEqual,
+                range: location..=end_location,
+            },
+            rexpr: Box::new(rexpr),
+        }
+    },
+
+    <Compare>,
+}
+
+Compare: ast::Expression = {
+    <lexpr:Compare> <location:@L> ">" <end_location:@R> <rexpr:Term> => {
+        ast::Expression::BinaryOpExpr {
+            lexpr: Box::new(lexpr),
+            op: ast::Operator {
+                op: ast::Op::Greater,
+                range: location..=end_location,
+            },
+            rexpr: Box::new(rexpr),
+        }
+    },
+    <lexpr:Compare> <location:@L> ">=" <end_location:@R> <rexpr:Term> => {
+        ast::Expression::BinaryOpExpr {
+            lexpr: Box::new(lexpr),
+            op: ast::Operator {
+                op: ast::Op::GreaterEqual,
+                range: location..=end_location,
+            },
+            rexpr: Box::new(rexpr),
+        }
+    },
+    <lexpr:Compare> <location:@L> "<" <end_location:@R> <rexpr:Term> => {
+        ast::Expression::BinaryOpExpr {
+            lexpr: Box::new(lexpr),
+            op: ast::Operator {
+                op: ast::Op::Less,
+                range: location..=end_location,
+            },
+            rexpr: Box::new(rexpr),
+        }
+    },
+    <lexpr:Compare> <location:@L> "<=" <end_location:@R> <rexpr:Term> => {
+        ast::Expression::BinaryOpExpr {
+            lexpr: Box::new(lexpr),
+            op: ast::Operator {
+                op: ast::Op::LessEqual,
+                range: location..=end_location,
+            },
+            rexpr: Box::new(rexpr),
+        }
+    },
+
+    <Term>,
+}
+
+Term: ast::Expression = {
+    <lexpr:Term> <location:@L> "+" <end_location:@R> <rexpr:Factor> => {
+        ast::Expression::BinaryOpExpr {
+            lexpr: Box::new(lexpr),
+            op: ast::Operator {
+                op: ast::Op::Plus,
+                range: location..=end_location,
+            },
+            rexpr: Box::new(rexpr),
+        }
+    },
+    <lexpr:Term> <location:@L> "-" <end_location:@R> <rexpr:Factor> => {
+        ast::Expression::BinaryOpExpr {
+            lexpr: Box::new(lexpr),
+            op: ast::Operator {
+                op: ast::Op::Minus,
+                range: location..=end_location,
+            },
+            rexpr: Box::new(rexpr),
+        }
+    },
+
+    <Factor>,
+}
+
+Factor: ast::Expression = {
+    <lexpr:Factor> <location:@L> "*" <end_location:@R> <rexpr:Power> => {
+        ast::Expression::BinaryOpExpr {
+            lexpr: Box::new(lexpr),
+            op: ast::Operator {
+                op: ast::Op::Mul,
+                range: location..=end_location,
+            },
+            rexpr: Box::new(rexpr),
+        }
+    },
+    <lexpr:Factor> <location:@L> "/" <end_location:@R> <rexpr:Power> => {
+        ast::Expression::BinaryOpExpr {
+            lexpr: Box::new(lexpr),
+            op: ast::Operator {
+                op: ast::Op::Div,
+                range: location..=end_location,
+            },
+            rexpr: Box::new(rexpr),
+        }
+    },
+
+    <Power>,
+}
+
+Power: ast::Expression = {
+    <lexpr:Power> <location:@L> "^" <end_location:@R> <rexpr:Unary> => {
+        ast::Expression::BinaryOpExpr {
+            lexpr: Box::new(lexpr),
+            op: ast::Operator {
+                op: ast::Op::Pow,
+                range: location..=end_location,
+            },
+            rexpr: Box::new(rexpr),
+        }
+    },
+
+    <Unary>,
+}
+
+Unary: ast::Expression = {
+    <location:@L> "+" <end_location:@R> <rexpr:Unary> => {
+        ast::Expression::UnaryOpExpr {
+            op: ast::Operator {
+                op: ast::Op::Plus,
+                range: location..=end_location,
+            },
+            rexpr: Box::new(rexpr),
+        }
+    },
+
+    <location:@L> "-" <end_location:@R> <rexpr:Unary> => {
+        ast::Expression::UnaryOpExpr {
+            op: ast::Operator {
+                op: ast::Op::Minus,
+                range: location..=end_location,
+            },
+            rexpr: Box::new(rexpr),
+        }
+    },
+
+    <location:@L> "!" <end_location:@R> <rexpr:Unary> => {
+        ast::Expression::UnaryOpExpr {
+            op: ast::Operator {
+                op: ast::Op::Bang,
+                range: location..=end_location,
+            },
+            rexpr: Box::new(rexpr),
+        }
+    },
+
+    <Attr>,
+}
+
+Attr: ast::Expression = {
+    <val:Attr> <location:@L> "." <end_location:@R> <attr:"identifier"> => {
+        ast::Expression::Attribute {
+            val: Box::new(val),
+            attr: attr,
+        }
+    },
+
+    <FnCall>,
+}
+
+FnCall: ast::Expression = {
+    <location:@L> <expr: FnCall> "(" <mut head: (<Expression> ",")*> <last: (<Expression>)?> ")" <end_location:@R> => {
+        if let Some(last) = last {
+            head.push(last)        
+        } 
+        ast::Expression::FnCallExpr {
+            callee: Box::new(expr),
+            args: head,
+            range: location..=end_location,
+        }
+    },
+
+    <Primary>,
+}
+
+Primary: ast::Expression = {
+    <location:@L> "true" <end_location:@R> => {
+        ast::Expression::Terminator { val: ast::Value::Boolean(true), uuid: None, range: location..=end_location }
+    },
+    <location:@L> "false" <end_location:@R> => {
+        ast::Expression::Terminator { val: ast::Value::Boolean(false), uuid: None, range: location..=end_location }
+    },
+    <location:@L> "nil" <end_location:@R> => {
+        ast::Expression::Terminator { val: ast::Value::Nil, uuid: None, range: location..=end_location }
+    },
+    <location:@L> <n:"number"> <end_location:@R> => {
+        ast::Expression::Terminator { val: ast::Value::Number(n), uuid: None, range: location..=end_location }
+    },
+    <location:@L> <name:"identifier"> <end_location:@R>=> {
+        ast::Expression::Identifier(name, location..=end_location)
+    },
+    "(" <expr:Expression> ")" => {
+        ast::Expression::Group(Box::new(expr))
+    },
+    ! => { 
+        errors.push(<>); 
+        ast::Expression::Error
+    },
+
+    <String>,
+}
+
+String: ast::Expression = {
+    <location:@L> <s:"string"> <end_location:@R> => {
+        ast::Expression::Terminator { val: ast::Value::String(s), uuid: None, range: location..=end_location }
+    },
+}

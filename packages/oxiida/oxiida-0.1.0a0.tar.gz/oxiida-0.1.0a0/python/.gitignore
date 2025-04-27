@@ -1,0 +1,8 @@
+/target
+*.csv
+
+Cargo.lock
+uv.lock
+
+*.pyc
+*.so

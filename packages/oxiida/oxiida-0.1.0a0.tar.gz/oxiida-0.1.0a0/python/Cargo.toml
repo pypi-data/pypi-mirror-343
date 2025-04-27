@@ -1,0 +1,23 @@
+[package]
+name = "pyoxiida"
+version = "0.1.0-alpha.0"
+edition = "2021"
+authors = ["Jusong Yu <jusong.d.yu@gmail.com>"]
+rust-version = "1.80.0"
+homepage = "https://github.com/unkcpz/oxiida"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+anyhow = "1.0.98"
+oxiida = { path = ".." }
+pyo3 = { version = "0.24.2", features = ["abi3", "abi3-py310", "auto-initialize", "py-clone"] }
+serde = { version = "1.0.219", features = ["serde_derive"] }
+serde-pyobject = "0.6.1"
+serde_json = "1.0.140"
+tokio = { version = "1.43.0", features = ["rt-multi-thread", "sync", "io-util", "process", "macros", "test-util"] }
+
+[package.metadata.maturin]
+python-source = "oxiida"
+
