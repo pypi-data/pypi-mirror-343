@@ -1,0 +1,10 @@
+rbxstats/__init__.py,sha256=_3Y95rYD7CfnCTNKqQOWt5ycLszRxiHWY12IqkuxUrI,189
+rbxstats/client.py,sha256=vZRsmPWvdSi4jJCs22y8-MaY8hd5hutNdWiTYcNqnts,34242
+rbxstats/exceptions.py,sha256=AGCmWRYUOOQGROxwmkyFFyxjIjvaw0FSAa4gMmc1g-I,2037
+rbxstats/models.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+rbxstats/utils.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+rbxstats-3.0.8.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rbxstats-3.0.8.dist-info/METADATA,sha256=xeSAt-FWSiA_zUXg0hArFCUR6t9YM9dZQVjenYkCEEE,11575
+rbxstats-3.0.8.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+rbxstats-3.0.8.dist-info/top_level.txt,sha256=W8gXsDTYbp3I7yLQz6PcqArXtbGIIQ7u9xSolUB491s,9
+rbxstats-3.0.8.dist-info/RECORD,,
