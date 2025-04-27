@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: skelmis-commons
+Version: 1.5.2
+Summary: A bunch of Python code I reuse in many projects and wanted to centralise.
+License: MIT
+Author: skelmis
+Author-email: skelmis.craft@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# Python-Commons
+A bunch of Python code I reuse in many projects and wanted to centralise
+
