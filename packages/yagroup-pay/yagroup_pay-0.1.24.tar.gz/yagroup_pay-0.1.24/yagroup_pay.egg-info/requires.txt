@@ -1,0 +1,2 @@
+nexium-api==0.5.2
+nexium-database
