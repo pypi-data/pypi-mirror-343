@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+profitspace/__init__.py
+profitspace/dataset.py
+profitspace/space.py
+profitspace/utils.py
+trade_profit_space.egg-info/PKG-INFO
+trade_profit_space.egg-info/SOURCES.txt
+trade_profit_space.egg-info/dependency_links.txt
+trade_profit_space.egg-info/requires.txt
+trade_profit_space.egg-info/top_level.txt
