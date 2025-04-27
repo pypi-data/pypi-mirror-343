@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "build", "twine"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "http-scanner"
+version = "0.1.7"
+description = "A modular, plugin-based HTTP scanning framework."
+authors = [
+    { name="dotcomrow", email="administrator@suncoast.systems" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "requests",
+    "beautifulsoup4",
+    "PyYAML",
+    "httpx"
+]
+keywords = ["scanner", "http", "plugins", "ai", "automation"]
+
+[project.urls]
+Homepage = "https://github.com/dotcomrow/http-scanner"
+Source = "https://github.com/dotcomrow/http-scanner"
+Tracker = "https://github.com/dotcomrow/http-scanner/issues"
