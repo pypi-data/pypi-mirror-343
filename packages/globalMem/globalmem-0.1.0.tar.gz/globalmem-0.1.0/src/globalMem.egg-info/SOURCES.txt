@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/globalMem/__init__.py
+src/globalMem/_version.py
+src/globalMem/auto_init.py
+src/globalMem/global_context.py
+src/globalMem/tools.py
+src/globalMem.egg-info/PKG-INFO
+src/globalMem.egg-info/SOURCES.txt
+src/globalMem.egg-info/dependency_links.txt
+src/globalMem.egg-info/entry_points.txt
+src/globalMem.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+[console_scripts]
+globalmem = globalMem.tools:init

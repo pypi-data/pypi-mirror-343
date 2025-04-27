@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "globalMem"
+version = "0.1.0"
+description = "Gestion d'objets globaux accessibles sans import"
+authors = [
+    {name = "Guillaume Lefebvre", email = "guillaume@ldmail.fr"}
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = {attr = "globalMem._version.__version__"}
+
+[project.scripts]
+globalmem = "globalMem.tools:init"

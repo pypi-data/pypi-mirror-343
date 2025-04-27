@@ -1,0 +1,114 @@
+📚 README.md
+markdown
+Copier
+Modifier
+# globalMem
+
+> Gestion automatique d'éléments globaux injectés dans `builtins`, accessibles sans import dans vos projets Python.
+
+---
+
+## 📦 Installation
+
+Ajoutez `globalMem` comme dépendance dans votre projet :
+
+```bash
+pip install globalMem
+```
+ou, dans pyproject.toml :
+
+```toml
+[project]
+dependencies = [
+    "globalMem"
+]
+```
+
+## 🚀 Utilisation rapide
+1. Définir une fonction ou variable globale
+Dans votre projet (exemple A), utilisez @Global pour rendre une fonction ou une variable accessible partout sans import :
+
+```python
+from globalMem import Global, register_global_module
+
+@Global
+def testA():
+    """Fonction globale A."""
+    pass
+
+# Enregistre ce module pour l'initialisation automatique
+register_global_module(__name__)
+```
+2. Initialiser automatiquement tous les globals
+Dans votre projet principal (exemple B), au tout début de votre main.py :
+
+```python
+from globalMem import auto_initialize_globals
+
+# Initialise tous les modules enregistrés
+auto_initialize_globals()
+
+# Maintenant vous pouvez utiliser directement testA() sans import !
+```
+## ⚙️ Fonctionnement Automatique sous VSCode
+Chaque fois que vous enregistrez un fichier .py :
+
+Le fichier global_builtins.pyi est mis à jour automatiquement.
+
+Autocomplétion VSCode mise à jour immédiatement.
+
+Pas besoin de lancer manuellement la commande make pyi.
+
+✅ Fluide pour le développement
+✅ Pas d'import manuel
+✅ Compatible multi-projets
+
+## 🛠️ Setup Environnement de Développement
+Créer un environnement virtuel :
+
+```bash
+make setup
+```
+
+Générer les stubs .pyi au début :
+
+```bash
+make pyi
+```
+
+Compiler le package pour PyPI :
+
+```bash
+make build
+```
+
+Publier sur PyPI :
+
+```bash
+make publish
+```
+
+Incrémenter la version :
+
+```bash
+make bump-patch
+make bump-minor
+make bump-major
+```
+
+## 📄 Important pour VSCode
+Installez l'extension gratuite :
+
+Trigger Task on Save (éditeur : Gruntfuggly)
+
+Cela permet à VSCode de lancer la mise à jour automatique des .pyi à chaque sauvegarde.
+
+## 🧹 Nettoyer le projet
+Supprimer build/, dist/, *.egg-info/, et __pycache__ :
+
+```bash
+make clean
+```
+
+## 📝 Licence
+MIT - Guillaume Lefebvre
