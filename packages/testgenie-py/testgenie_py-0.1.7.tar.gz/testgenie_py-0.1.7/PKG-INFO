@@ -1,0 +1,26 @@
+Metadata-Version: 2.3
+Name: testgenie-py
+Version: 0.1.7
+Summary: 
+Author: cjseitz
+Author-email: charlesjseitz@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: ConfigArgParse (==1.7)
+Requires-Dist: astor (==0.8.1)
+Requires-Dist: atheris (==2.3.0)
+Requires-Dist: coverage (==7.6.4)
+Requires-Dist: docker (>=7.1.0,<8.0.0)
+Requires-Dist: klara (==0.6.3)
+Requires-Dist: pygraphviz (>=1.14,<2.0)
+Requires-Dist: pytest (>=8.3.5,<9.0.0)
+Requires-Dist: staticfg (>=0.9.5,<0.10.0)
+Requires-Dist: typed-ast (==1.5.5)
+Requires-Dist: z3-solver (==4.13.3.0)
+Description-Content-Type: text/markdown
+
+
