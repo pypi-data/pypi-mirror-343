@@ -1,0 +1,12 @@
+LICENSE
+README.md
+jh_copy_clipboard.py
+jh_gen_prompt.py
+pyproject.toml
+requirements.txt
+jh_prompt_gen.egg-info/PKG-INFO
+jh_prompt_gen.egg-info/SOURCES.txt
+jh_prompt_gen.egg-info/dependency_links.txt
+jh_prompt_gen.egg-info/entry_points.txt
+jh_prompt_gen.egg-info/requires.txt
+jh_prompt_gen.egg-info/top_level.txt

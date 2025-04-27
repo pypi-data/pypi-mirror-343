@@ -1,0 +1,120 @@
+Metadata-Version: 2.4
+Name: jh-prompt-gen
+Version: 0.1.0
+Summary: A CLI tool to capture code and automatically generate ChatGPT prompts for your projects.
+Author: Dev-CorliJoni
+License-Expression: MIT
+Keywords: prompt,cli,code,chatgpt,automation
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Code Generators
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyperclip
+Dynamic: license-file
+
+# 📦 Prompt Generator Toolkit
+
+A small toolkit to collect code from local directories and automatically generate ChatGPT prompts.
+
+---
+
+## 📋 Contents
+
+- **copy-jh-clipboard.py**  
+  Copies files or entire directories (recursive) to the clipboard or stdout, with banner headers and indentation.
+
+- **gen-jh-prompt.py**  
+  Reads the clipboard output and builds a ChatGPT prompt based on templates defined in `.jhpromptconfig`.
+
+---
+
+## 🛠️ Installation
+
+1. Ensure you have Python 3.7 or higher.
+2. Install dependency:
+   ```bash
+   pip install pyperclip
+   ```
+3. Make scripts executable:
+   ```bash
+   chmod +x copy-jh-clipboard.py gen-jh-prompt.py
+   ```
+
+---
+
+## Example `.jhclipignore`
+
+```gitignore
+.jh*
+.DS_Store
+.git/
+frontend/node_modules/
+frontend/dist/
+frontend/package-lock.json
+frontend/public/rootCA.pem
+```
+
+### How `.jhclipignore` works
+
+- Follows Git’s ignore semantics (glob patterns).  
+- Lines without a trailing slash match files anywhere (`.DS_Store` matches any file named `.DS_Store`).  
+- Patterns ending with `/` only match directories and their contents (`.git/` excludes the `.git` folder).  
+- Wildcards (`*`) match zero or more characters (`.jh*` matches `.jhclipignore`, `.jhpromptconfig`, etc.).
+
+---
+
+## Example `.jhpromptconfig`
+
+```ini
+persona="You are a React developer."
+project="My Project"
+
+sophisticated_prompt="""
+{persona}. Optimize my {project}. Please make it even better using advanced patterns.
+
+My code:
+{code}
+
+New Feature: {feature}
+"""
+
+default_prompt_pattern="""
+{persona}. Optimize my {project}.
+
+My code:
+{code}
+
+New Feature: {feature}
+"""
+```
+
+### How `.jhpromptconfig` works
+
+- **Single-line entries**: `KEY=value` sets simple variables (e.g. `persona`, `project`).  
+- **Multi-line templates**: `KEY="""..."""` allows you to define named prompt templates containing `{placeholders}`.  
+- **Default template**: the `default_prompt_pattern` key is used when you don’t specify a template name.  
+- **Named templates**: any other key (e.g. `sophisticated_prompt`) can be selected via the `--pattern` option in `gen-jh-prompt.py`.  
+- **Placeholders**: `{code}` inserts captured code, `{feature}` inserts your feature description, and you can add any custom placeholders and override them with `-f KEY=VALUE`.
+
+
+---
+
+## 🚀 Usage Examples
+
+# 1. Copy code using default ignore rules
+copy-jh-clipboard.py ./src
+
+# 2. Copy code with custom ignore patterns and explicit ignore file
+copy-jh-clipboard.py ./src -i '*.pyc' -i 'node_modules/' -I .jhclipignore
+
+# 3. Generate a prompt using the default template
+gen-jh-prompt.py ./src "Add authentication"
+
+# 4. Generate a prompt using a named template from .jhpromptconfig
+gen-jh-prompt.py ./src "Add authentication" -p sophisticated_prompt

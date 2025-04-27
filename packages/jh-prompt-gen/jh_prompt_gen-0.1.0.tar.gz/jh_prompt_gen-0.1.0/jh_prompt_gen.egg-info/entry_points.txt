@@ -1,0 +1,3 @@
+[console_scripts]
+jh-copy-clipboard = jh_copy_clipboard:main
+jh-gen-prompt = jh_gen_prompt:main
