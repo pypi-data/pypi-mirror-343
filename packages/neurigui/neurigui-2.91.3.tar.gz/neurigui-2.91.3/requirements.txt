@@ -1,0 +1,12 @@
+setuptools
+customtkinter
+numpy
+oauthlib
+Pillow
+PyGithub
+PyQt5
+pyqtgraph
+pyserial
+requests
+scipy
+pylsl

@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "neurigui"
+version = "2.91.3"
+authors = [
+  { name="David Marcel BAUM" },
+  { email="david.marcel.baum@gmail.com" },
+]
+maintainers = [
+  { name="SoftcodingForYou" },
+  { email="david.marcel.baum@gmail.com" },
+]
+description = "NeuriGUI is a modular, cross-platform and FOSS app for exploring electrophysiological signals in real-time"
+keywords = ["eeg", "visualization", "digital signal processing", "DSP", "neuroscience", "electrophysiology", "real-time"]
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+license = {file = "LICENSE"}
+dependencies = [
+  "setuptools",
+  "customtkinter==5.2.0",
+  "numpy",
+  "oauthlib",
+  "Pillow",
+  "PyGithub",
+  "PyQt5",
+  "pyqtgraph",
+  "pyserial",
+  "requests",
+  "scipy",
+  "pylsl",
+]
+
+[project.urls]
+Homepage = "https://github.com/SoftcodingForYou/NeuriGUI"
+"Bug Tracker" = "https://github.com/SoftcodingForYou/NeuriGUI/issues"
+Issues = "https://github.com/SoftcodingForYou/NeuriGUI/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["neuri"]
