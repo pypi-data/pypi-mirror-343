@@ -1,0 +1,15 @@
+spinOps/__init__.py,sha256=VrZSWKdzoZJH0PueDmXtNj2UzEmb5KY0tTu8m-xjjwk,2417
+spinOps/_spinOps.cp312-win_amd64.pyd,sha256=R0owDgYiUOxoSVo_GT7AZ5c3EEwzeUex8oeIvv0Frkc,235520
+spinOps/spinOps.c,sha256=9wxqcsDttqloIH4NK2SvCZnUo5Q-tNeJbetYTxVq67k,857465
+spinOps/spinOps.pxd,sha256=ZiYIYMJzX5kTD2gpjUy9OhVEM9MS1oJ4Q8TCZVKr6BQ,2132
+spinOps/spinOps.pyx,sha256=BLjhGEf-J5YOGiX2rU1k5tB_X_2ku8Z_k7E31Ndi9Kw,31196
+spinOps/c_code/complex_compat.h,sha256=QGom1MLo2df8KwKAGUZD7Zk-VkySmp9r46158tGIKfo,3253
+spinOps/c_code/spatial.c,sha256=U6QBIVDSTPtPZj0js0_FVz3d1diCgAStsg1NhnJURDA,6176
+spinOps/c_code/spatial.h,sha256=H40ogkb8wQboQiBWqNMJTgKgHgd1jTVF32doiI-6fnU,4935
+spinOps/c_code/spin.c,sha256=jGT2OWBCYPo2-lxuQLPKKVUbbE_eD3izt7EZFj3YNKQ,14357
+spinOps/c_code/spin.h,sha256=ZN7XXeKs-2Z_BJDDRHH0x_ZWEVZwvRZihbQgAxZoa4g,22637
+spinops-0.1.0.dist-info/licenses/LICENSE,sha256=bsazeBJ7-pN_5HhhjofHg8gnCbs9hcB9M9fmrzL1CRI,1098
+spinops-0.1.0.dist-info/METADATA,sha256=xFkpybmWsooF_Ppa2qj4rDU_fRXfmFF4lC9-0d4r4gQ,3987
+spinops-0.1.0.dist-info/WHEEL,sha256=Jt89WmAJV88pNRHMaNesrLxovMec0KaUDI5oSN8rrpM,101
+spinops-0.1.0.dist-info/top_level.txt,sha256=dcI-j4S61tghH21rqG9nPWxBOPv3H-UbF2-P6KDGWGw,8
+spinops-0.1.0.dist-info/RECORD,,
