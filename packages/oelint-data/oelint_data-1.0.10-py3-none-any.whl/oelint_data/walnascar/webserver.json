@@ -1,0 +1,16 @@
+{
+  "functions": {
+    "known": []
+  },
+  "variables": {
+    "known": [
+      "CVE_STATUS_EXTENDED",
+      "LIBS"
+    ],
+    "renamed": {}
+  },
+  "replacements": {
+    "distros": [],
+    "machines": []
+  }
+}
