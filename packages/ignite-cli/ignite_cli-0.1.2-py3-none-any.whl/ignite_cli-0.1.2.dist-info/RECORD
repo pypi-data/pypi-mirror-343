@@ -1,0 +1,17 @@
+ignite/__init__.py,sha256=qauXLvCFKekgb2_TiatgwfwQdshT-iBFnXEUdD2NpDs,162
+ignite/cli.py,sha256=mTrQSsr9smd47QHP-IhjvB_AikpQsL3luKYq4EqXjSw,3696
+ignite/client.py,sha256=KH1Ir91_3KxYogZZY2kygbn_CbL9pjSpP9RirUoF5jk,2867
+ignite/auth/__init__.py,sha256=AK_CTeDx-ix-LogmGjHhO3_AxG3AV1O36u8b7ztaZ3o,6688
+ignite/commands/__init__.py,sha256=hd5U95A3H694SA3iI6xOZUQf6A4P97q5lMBvyUz-l24,201
+ignite/commands/create.py,sha256=xSXQGzm9zfqLqyG-avnJ73FD5jwrSSjgA4ZH3oQxVos,6168
+ignite/commands/delete.py,sha256=yrMCvR4UB-yUX4sMYIrDYDvfDz454yTL130XYS1JfLQ,1522
+ignite/commands/get.py,sha256=HPNTf16wmrUlLmFLT2TFIgZcd0SmmbRNQyOnEkLuHSs,5980
+ignite/commands/validate.py,sha256=ZWBmSr0VzCUqvwBfiqzPcN6XNzpzpcFUpT917lddq6c,1043
+ignite/models/__init__.py,sha256=R4_a-71ksRpl7cilxHx3HFh3UQUEx9_v0g8iMm9wHLE,53
+ignite/utils/__init__.py,sha256=lel4Z9m2g-_dQwMvp79RO4gjCfry1z2dlGV0QML9YOw,45
+ignite/utils/output.py,sha256=IL8QAY2BpiPkeZ-zYhNAby4-PGptrwIC85nad_BWxKo,4546
+ignite_cli-0.1.2.dist-info/METADATA,sha256=rZRRl4re_RCpOdc87j43uIDoDfTF_AP_yfHioqioakY,2288
+ignite_cli-0.1.2.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+ignite_cli-0.1.2.dist-info/entry_points.txt,sha256=SGhY2WyaTDAfDCYLOBsfJLBj_MR4wQrV4ivcz_d-6JQ,42
+ignite_cli-0.1.2.dist-info/top_level.txt,sha256=P2CnXR6kxvOX7ZMdd-9kVUTwLNz98t0sdjKeyvFBkR4,7
+ignite_cli-0.1.2.dist-info/RECORD,,
