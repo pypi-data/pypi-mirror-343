@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: writecoder
+Version: 0.1.1
+Summary: Add your description here
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: llmada>=0.1.8
+
+# work 11
+编写一个核心的内容为
+编写文件和读写文件py
+
+写代码 

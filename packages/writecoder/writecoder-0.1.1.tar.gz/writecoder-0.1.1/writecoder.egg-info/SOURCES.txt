@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+writecoder/prompt.py
+writecoder/work.py
+writecoder/writecoder.py
+writecoder.egg-info/PKG-INFO
+writecoder.egg-info/SOURCES.txt
+writecoder.egg-info/dependency_links.txt
+writecoder.egg-info/requires.txt
+writecoder.egg-info/top_level.txt
