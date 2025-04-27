@@ -1,0 +1,4 @@
+[console_scripts]
+main=hello_proj:main
+manage=django.core.management:execute_from_command_line
+

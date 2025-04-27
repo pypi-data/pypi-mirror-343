@@ -1,0 +1,14 @@
+hello_proj/__init__.py,sha256=m9F8mhgBfb6RPc752NLyGW5ik_gTPMORZa-KO82mbFM,39
+hello_proj/hello.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+hello_proj/web/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hello_proj/web/hello_project/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hello_proj/web/hello_project/asgi.py,sha256=DU1xgxTjSeMc1vFC6ULykvGBJOKGnSa5VxPbBoWlTwU,403
+hello_proj/web/hello_project/settings.py,sha256=dp3HzsQu6jHCL1MAtO2I961OsjDIPg69_ak0fsbazBs,3180
+hello_proj/web/hello_project/urls.py,sha256=Gm-N-SqybvzQIEuwu43lEvpS6E97l26okn6EFqUiPyA,769
+hello_proj/web/hello_project/wsgi.py,sha256=yT601h7_a4xlG8AXJF13P4E_ebWRfZWoWTL9IoQDYso,403
+hello_proj/web/manage.py,sha256=Bd2ebi4zshEYyxZhZ8ANKF8nX3eelk4dEDmfn-Mh6W4,669
+hello_proj-0.1.2.post4.dist-info/LICENSE.txt,sha256=UsAOYsh_zUIV2fvK5vwUtQQe435M4mFelprLRIPZ1I4,1072
+hello_proj-0.1.2.post4.dist-info/METADATA,sha256=sGvbZbj32XGGGmZ7YXB7J_W7BFZB_xEQ-UzWEq2js38,551
+hello_proj-0.1.2.post4.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+hello_proj-0.1.2.post4.dist-info/entry_points.txt,sha256=a0p9oO-1BxRtPoh-Wyg9VsoUP3LJ7_rC0-qfEzC3pnA,96
+hello_proj-0.1.2.post4.dist-info/RECORD,,
