@@ -1,0 +1,76 @@
+[build-system]
+requires = ["hatchling", "pyside6 == 6.8.*"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hatch-pyside"
+dynamic = ["version"]
+description = 'A hatch plugin to build Pyside6 elements'
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "s-ball", email = "s-ball@laposte.net" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Framework :: Hatch",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+dependencies = ["pyside6 == 6.8.*", "tomli;python_version<'3.11'"]
+
+[project.urls]
+Documentation = "https://github.com/s-ball/hatch-pyside#readme"
+Issues = "https://github.com/s-ball/hatch-pyside/issues"
+Source = "https://github.com/s-ball/hatch-pyside"
+
+[project.entry-points.hatch]
+pyside = "hatch_pyside.plugin.hooks"
+
+[tool.hatch.version]
+path = "src/hatch_pyside/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/hatch_pyside tests}"
+
+[tool.coverage.run]
+source_pkgs = ["hatch_pyside", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/hatch_pyside/__about__.py",
+]
+
+[tool.coverage.paths]
+hatch_pyside = ["src/hatch_pyside"]
+tests = ["tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+
+[tool.hatch.build.targets.wheel]
+artifacts = ["ui*.py"]
+
+[[tool.hatch.envs.hatch-test.matrix]]
+python = ["3.13", "3.12", "3.11", "3.10", "3.9"]
+
+[project.gui-scripts]
+pyside-builder = "hatch_pyside.gui.app:main"
+
+[tool.hatch.build.targets.wheel.hooks.custom]
+path = "src/custom_build.py"

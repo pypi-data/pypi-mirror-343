@@ -1,0 +1,10 @@
+[build-system]
+requires = ["hatchling", "hatch-pyside == 0.5.1", "build"]
+build-backend = "hatchling.build"
+
+[project]
+name="foo"
+version = "0.1.0"
+
+[tool.hatch.build.targets.wheel.hooks.pyside]
+folders = ["src/foo"]
