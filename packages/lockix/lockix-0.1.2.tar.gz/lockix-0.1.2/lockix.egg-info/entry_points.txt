@@ -1,0 +1,2 @@
+[console_scripts]
+lockix = lockix.cli:main

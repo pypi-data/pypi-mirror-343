@@ -1,0 +1,12 @@
+README.md
+setup.py
+lockix/__init__.py
+lockix/cli.py
+lockix/config.py
+lockix/core.py
+lockix.egg-info/PKG-INFO
+lockix.egg-info/SOURCES.txt
+lockix.egg-info/dependency_links.txt
+lockix.egg-info/entry_points.txt
+lockix.egg-info/requires.txt
+lockix.egg-info/top_level.txt
