@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: reframe-cli
+Version: 1.0.0
+Summary: ReFrame-CLI A great tool to boost your productivity in video and image manipulation tasks. Ideal for preparing image datasets for training machine learning models, including generative AI and diffusion models.
+Home-page: https://github.com/ForgeL4bs/ReFrame
+Author: Gour4v
+Author-email: chatgai.note@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: opencv-python
+Requires-Dist: pillow
+Requires-Dist: imageio
+Requires-Dist: pillow-heif
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
