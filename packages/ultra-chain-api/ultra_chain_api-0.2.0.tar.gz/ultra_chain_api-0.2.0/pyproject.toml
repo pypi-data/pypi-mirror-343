@@ -1,0 +1,56 @@
+[project]
+name = "ultra-chain-api"
+version = "0.2.0"
+description = "UltraChainAPI Python Client"
+authors = [{name="Hugo Chapon", email="chapon.hugo95@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.11.3",
+    "requests>=2.32.3",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "pylance>=0.25.2",
+    "pyright>=1.1.399",
+    "pytest>=8.3.5",
+    "ruff>=0.11.6",
+]
+
+
+[tool.ruff]
+line-length = 120
+lint.extend-ignore = ["E203"]
+
+[tool.mypy]
+plugins = ["pydantic.mypy", "sqlmypy"]
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+no_namespace_packages = true
+ignore_missing_imports = true
+check_untyped_defs = true
+
+[tool.pyright]
+root = ["ultra_chain_api"]
+include = ["ultra_chain_api"]
+venvPath = "."
+venv = ".venv"
+typeCheckingMode = "standard"
+
+
+[dev.tool.pylance]
+# Pylance-specific settings
+typeCheckingMode = "strict"
+reportMissingImports = "error"
+reportMissingTypeStubs = "error"
+reportOptionalSubscript = "error"
+reportOptionalMemberAccess = "error"
+reportOptionalCall = "error"
+reportGeneralTypeIssues = "error"
+reportPossibleIncompatibleOverride = "error"
