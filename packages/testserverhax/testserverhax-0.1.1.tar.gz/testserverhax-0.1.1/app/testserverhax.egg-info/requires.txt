@@ -1,0 +1,11 @@
+uv
+mcp
+mcp-use
+mcp[cli]
+langchain-ollama
+langchain-openai
+langchain-anthropic
+
+[dev]
+pytest
+twine

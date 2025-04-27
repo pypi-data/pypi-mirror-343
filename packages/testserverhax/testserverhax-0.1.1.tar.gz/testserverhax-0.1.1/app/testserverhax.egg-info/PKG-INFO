@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: testserverhax
+Version: 0.1.1
+Summary: MCP test server with pip package
+Author: HA
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: uv
+Requires-Dist: mcp
+Requires-Dist: mcp-use
+Requires-Dist: mcp[cli]
+Requires-Dist: langchain-ollama
+Requires-Dist: langchain-openai
+Requires-Dist: langchain-anthropic
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+```shell
+python -m venv .venv 
+.venv\Scripts\activate
+python -m pip install --upgrade pip 
+pip install -r requirements.txt
+uv init . # use current dir or `uv init <new_project_dir>`
+uv add "mcp[cli]" # or use `pip install "mcp[cli]"`
+uv run mcp install test_mcp_server.py
+```
+
+
+[MCP](https://www.youtube.com/watch?v=-8k9lGpGQ6g )
+
+
+[MCP-PLAYWRIGHT](https://www.youtube.com/watch?v=4SyYaDTR_Uc)
