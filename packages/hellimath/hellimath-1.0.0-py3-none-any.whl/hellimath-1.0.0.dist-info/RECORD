@@ -1,0 +1,13 @@
+hellimath/__init__.py,sha256=XHv5FG4wZQXWGAxrEWW2ujcwrs5cCAR48AO2HHdDrSM,443
+hellimath/algebra.py,sha256=txWXgmym8suLvMmDDYt0XL2yG9CVlCjuJwaLp4niqpM,540
+hellimath/calculus.py,sha256=GW7jTRy4FrSI4WQLjodU4jyOTTxdz-dtUm1VcU7TUiA,371
+hellimath/geometry.py,sha256=sB9NJhKUB3eRO374CKby6snkxmro-IwN9eIBGS2alGg,233
+hellimath/linear_algebra.py,sha256=3MqTjIJMoQn3WO989P6SN84OS8sEDfK18d2Ggtwmmpo,238
+hellimath/number_theory.py,sha256=NV1tIY-PP4ODcU8jEeEy1b5iEG-LA4F3RSRBiDgslSk,452
+hellimath/statistics.py,sha256=AlrvQVPYMQbgyZBZD3Ofi4y6EbqBJwzknB3C6tYzY3c,335
+hellimath/trigonometry.py,sha256=1eJQKHFcP_Wjt4hWo1DZlzhCtRsueM5QW6TBRIJ6Poc,373
+hellimath-1.0.0.dist-info/licenses/LICENSE.mit,sha256=cXU5EHsppuauc6sSwR_T7aq4d7KDiT8LRkR53P3TbOE,771
+hellimath-1.0.0.dist-info/METADATA,sha256=mZVlTzkU5zN2VDmiA0Ncc3YckF7lUg1_-jO6LaL5piU,1259
+hellimath-1.0.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+hellimath-1.0.0.dist-info/top_level.txt,sha256=J4uIfaLTlYIggFY138RBw-5QFuI0bEVaxKG5NdF3H3A,10
+hellimath-1.0.0.dist-info/RECORD,,
