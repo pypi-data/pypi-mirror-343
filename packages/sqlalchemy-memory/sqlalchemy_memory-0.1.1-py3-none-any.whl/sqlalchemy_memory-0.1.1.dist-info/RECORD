@@ -1,0 +1,17 @@
+sqlalchemy_memory/__init__.py,sha256=eBOLZWwkF4vld6K0gkZgfjqrf5NfsNs1OF3pNNvwzow,172
+sqlalchemy_memory/util.py,sha256=Rk3eTGWdID_jPYhsZBoqxlnpbPA5xGIS1zPwdrxfp18,170
+sqlalchemy_memory/asyncio/__init__.py,sha256=zMydXyT9SNZrPIbmJjIFwbhWOFgO_opGWReIesoCRCA,80
+sqlalchemy_memory/asyncio/dialect.py,sha256=aAR1m1gvNqsMZysd_SfzwEm4zYtWOpCHe36ekDt4Z8A,287
+sqlalchemy_memory/asyncio/session.py,sha256=fa1pxdKKHcSGgaqQVLyNEKUARnzocrqPZge4b21iEmg,97
+sqlalchemy_memory/base/__init__.py,sha256=O5t91d6V7YD-Tu6FXlxZpP1QiLLZ2WOIRaqScUtCGeA,70
+sqlalchemy_memory/base/connection.py,sha256=YSO7Nkdw4myJO3Fl2PHcdcbanqpE26TXr9WaFCo05DU,265
+sqlalchemy_memory/base/dialect.py,sha256=n397Imwa4x1cu2mrQODXuIEoodSWJwIMMXP5ByfcVks,1605
+sqlalchemy_memory/base/query.py,sha256=EXhQqfUg5TfhlHOU8e83xiwSs63ljsHqC2MiByCU-2k,6279
+sqlalchemy_memory/base/session.py,sha256=XHpQ1YM590aNhAbnDwz8PmpDKCe1RZfNSjFFwxnB-sE,6560
+sqlalchemy_memory/base/store.py,sha256=hfwlOr24RdrcaieY6FsW0cVg-HubpmhfJDkmo5U6erQ,4452
+sqlalchemy_memory-0.1.1.dist-info/licenses/LICENSE,sha256=QZomXSNSdfkc_4cl8V0SS9f8XdKmebvtXyL4a7wrBow,1072
+sqlalchemy_memory-0.1.1.dist-info/METADATA,sha256=vSXVsiYHN38Y1E3tF6YMR-8wsEUaLPwK1DDGUtipWtE,5650
+sqlalchemy_memory-0.1.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+sqlalchemy_memory-0.1.1.dist-info/entry_points.txt,sha256=-2zu81zavCdfAvOsan-JWfQwsgKiu-e9aEVoL6sNl68,130
+sqlalchemy_memory-0.1.1.dist-info/top_level.txt,sha256=8Qzyeybcom2SxRZs2HNhz6DTgB_Fd-ZYSkMVxkdJV4k,18
+sqlalchemy_memory-0.1.1.dist-info/RECORD,,
