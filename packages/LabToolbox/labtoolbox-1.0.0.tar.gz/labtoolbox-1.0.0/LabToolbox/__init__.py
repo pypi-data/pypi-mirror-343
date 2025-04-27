@@ -1,0 +1,22 @@
+# Import principali
+import numpy as np
+import math
+import matplotlib.pyplot as plt
+import statsmodels.api as sm
+
+# Moduli specifici di scipy
+from scipy import stats
+from scipy.stats import norm, chi2, multivariate_normal
+from scipy.optimize import curve_fit
+from scipy.interpolate import UnivariateSpline
+
+# Librerie esterne
+from uncertainty_class import uncert_prop
+
+# LabToolbox/__init__.py
+
+# Specifica cosa viene esportato automaticamente
+__all__ = [
+    'np', 'math', 'plt', 'sm', 'stats', 'norm', 'chi2', 'multivariate_normal',
+    'curve_fit', 'UnivariateSpline', 'uncert_prop'
+]
