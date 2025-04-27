@@ -1,0 +1,11 @@
+MSG_Nbody/MSG_Nbody.py,sha256=9k1LczSXAVONh9JxsV4teOQTqT0bqsQbCmmKQnUQEjs,7268
+MSG_Nbody/__init__.py,sha256=nxppX8KCE-DNpUnQ3picmIGwMGpwpvnA9UESZK0sMWg,147
+MSG_Nbody/acceleration_potential.py,sha256=nrVfN7cD1yJ0okUqBtA226N5rXNvtlIIE8kwO1FlwzI,5649
+MSG_Nbody/analysis.py,sha256=bl-qVlUBRQF_xTCLYmanTLn3dlIjmxd5DokXrz6qJyQ,82336
+MSG_Nbody/input_output.py,sha256=Jnq59WxTzh9IBHufKWIq23_JfBdRSsiP-LKAsZSO7SI,7982
+MSG_Nbody/simulation_setup.py,sha256=ZDb9NQoz3DFG3N5nkeCble_yWjXCImBw2m5_mbEJkhc,14742
+msg_nbody-0.2.4.dist-info/LICENSE,sha256=-cd6zWV3ski35ldYQOI6BEkhgc01hg7xv86F4uItNos,1077
+msg_nbody-0.2.4.dist-info/METADATA,sha256=9TRzc8ojW0_Wh4rRE7Pl4ShsPomy4__kYSIWN2yY1Mg,2126
+msg_nbody-0.2.4.dist-info/WHEEL,sha256=beeZ86-EfXScwlR_HKu4SllMC9wUEj_8Z_4FJ3egI2w,91
+msg_nbody-0.2.4.dist-info/top_level.txt,sha256=CCuU_nWeMZISfIZSvb8X0DBs26MsucbMaNxWVuqlMLg,10
+msg_nbody-0.2.4.dist-info/RECORD,,
