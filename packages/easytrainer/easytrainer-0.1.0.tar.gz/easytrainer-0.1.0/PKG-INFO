@@ -1,0 +1,32 @@
+Metadata-Version: 2.3
+Name: easytrainer
+Version: 0.1.0
+Summary: A package to facilitate your model training
+License: MIT
+Author: leoMainard
+Author-email: leomainard63@gmail.com
+Requires-Python: >=3.9,<3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: scikit-learn (>=1.6.1,<2.0.0)
+Requires-Dist: spacy (>=3.8.4,<4.0.0)
+Project-URL: Repository, https://github.com/leoMainard/easyTrainer
+Description-Content-Type: text/markdown
+
+# easyTrainer
+
+Prépare tes données simplement avant l'entrainement de ton modèle.
+
+
+## Installation
+```
+pip install easyTrainer
+```
+
+## Démonstration
+Voir `demo/`
