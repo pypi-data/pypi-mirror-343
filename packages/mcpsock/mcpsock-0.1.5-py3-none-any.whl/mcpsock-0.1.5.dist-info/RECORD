@@ -1,0 +1,8 @@
+mcpsock/__init__.py,sha256=qMvFJAsERCUItCIZwW_VCLRj4ZWl65Ft8OSNsXWpNbs,203
+mcpsock/client.py,sha256=0-6m4es0EaBRVlAq-Wo254_JF8JZSDeQ47jZfQH97m8,10966
+mcpsock/server.py,sha256=TKbuBBgry_qXdkcpoZGLMWQbSicbfZpcFplThaU_XnA,27339
+mcpsock-0.1.5.dist-info/licenses/LICENSE,sha256=WNHhf_5RCaeuKWyq_K39vmp9F28LxKsB4SpomwSZ2L0,11357
+mcpsock-0.1.5.dist-info/METADATA,sha256=7QjY5YFL3TUgFvHjxF9pCioLpE_7zNEAvf5W1JW_JVY,5465
+mcpsock-0.1.5.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+mcpsock-0.1.5.dist-info/top_level.txt,sha256=_Kwj8ey792AZKfB0b3OfN-eWZP0Iyk5f1LPR2qCA7GU,8
+mcpsock-0.1.5.dist-info/RECORD,,

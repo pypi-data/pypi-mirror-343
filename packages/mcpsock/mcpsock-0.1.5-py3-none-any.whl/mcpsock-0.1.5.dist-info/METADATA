@@ -1,0 +1,195 @@
+Metadata-Version: 2.4
+Name: mcpsock
+Version: 0.1.5
+Summary: WebSocket client and server implementation for FastMCP framework
+Author-email: Andy Miller <andythedishwasher@gmail.com>
+License-Expression: Apache-2.0
+Project-URL: Homepage, https://github.com/thecodekitchen/mcpsock
+Project-URL: Bug Tracker, https://github.com/thecodekitchen/mcpsock/issues
+Project-URL: Documentation, https://github.com/thecodekitchen/mcpsock#readme
+Keywords: websocket,fastmcp,client,server,api
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: annotated-types>=0.7.0
+Requires-Dist: anyio>=4.9.0
+Requires-Dist: certifi>=2025.1.31
+Requires-Dist: click>=8.1.8
+Requires-Dist: coverage>=7.8.0
+Requires-Dist: exceptiongroup>=1.2.2
+Requires-Dist: fastapi>=0.115.12
+Requires-Dist: fastmcp>=2.2.3
+Requires-Dist: h11>=0.16.0
+Requires-Dist: httpcore>=1.0.9
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: httpx-sse>=0.4.0
+Requires-Dist: idna>=3.10
+Requires-Dist: iniconfig>=2.1.0
+Requires-Dist: markdown-it-py>=3.0.0
+Requires-Dist: mcp>=1.6.0
+Requires-Dist: mdurl>=0.1.2
+Requires-Dist: openapi-pydantic>=0.5.1
+Requires-Dist: packaging>=25.0
+Requires-Dist: pluggy>=1.5.0
+Requires-Dist: pydantic>=2.11.3
+Requires-Dist: pydantic-core>=2.33.1
+Requires-Dist: pydantic-settings>=2.9.1
+Requires-Dist: pygments>=2.19.1
+Requires-Dist: pytest>=8.3.5
+Requires-Dist: pytest-asyncio>=0.26.0
+Requires-Dist: pytest-cov>=6.1.1
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: rich>=14.0.0
+Requires-Dist: shellingham>=1.5.4
+Requires-Dist: sniffio>=1.3.1
+Requires-Dist: sse-starlette>=2.3.3
+Requires-Dist: starlette>=0.46.2
+Requires-Dist: typer>=0.15.2
+Requires-Dist: typing-extensions>=4.13.2
+Requires-Dist: typing-inspection>=0.4.0
+Requires-Dist: uvicorn>=0.34.2
+Requires-Dist: websockets>=15.0.1
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.18.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: isort>=5.10.0; extra == "dev"
+Requires-Dist: mypy>=0.950; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest>=7.0.0; extra == "test"
+Requires-Dist: pytest-asyncio>=0.18.0; extra == "test"
+Requires-Dist: pytest-cov>=3.0.0; extra == "test"
+Dynamic: license-file
+
+# MCPSock
+
+MCPSock is a Python library that provides WebSocket client and server implementations for the FastMCP framework. It offers a clean, easy-to-use API for building WebSocket-based applications that communicate using the FastMCP framework.
+
+## Features
+
+- **WebSocketClient**: A standalone client for connecting to FastMCP WebSocket servers
+- **WebSocketServer**: A decorator-based router for handling FastMCP WebSocket communications
+- Support for tools, resources, and prompts
+- Easy integration with FastAPI applications
+- Async/await support
+
+## Installation
+with pip
+
+```bash
+pip install mcpsock
+```
+or with uv (recommended)
+```bash
+uv add mcpsock
+```
+
+## Quick Start
+
+### Client Example
+
+```python
+import asyncio
+from mcpsock import WebSocketClient
+
+async def main():
+    # Connect to a FastMCP WebSocket server
+    async with WebSocketClient("ws://localhost:8000/ws") as client:
+        # List available tools
+        tools = await client.list_tools()
+        print(f"Available tools: {tools}")
+
+        # Call a tool
+        result = await client.call_tool("example/tool", {"param": "value"})
+        print(f"Tool result: {result}")
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+### Server Example
+
+```python
+from fastapi import FastAPI
+from mcpsock import WebSocketServer
+import uvicorn
+
+# Create a FastAPI app
+app = FastAPI()
+
+# Create a WebSocketServer
+router = WebSocketServer()
+
+# Register a tool handler
+@router.tool("example/tool")
+async def example_tool(message, websocket):
+    params = message.get("params", {})
+    return {"result": f"Processed: {params}"}
+
+# Register a resource handler
+@router.resource("example/resource")
+async def example_resource(message, websocket):
+    return {"data": "This is example resource data"}
+
+# Attach the router to the app
+router.attach_to_app(app, "/ws")
+
+# Run the server
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+```
+
+
+### WebSocketClient
+
+The `WebSocketClient` class provides methods for connecting to a FastMCP WebSocket server and interacting with it.
+
+```python
+client = WebSocketClient("ws://localhost:8000/ws")
+await client.connect()
+```
+
+### WebSocketServer
+
+The `WebSocketServer` class provides a decorator-based API for registering handlers for FastMCP messages.
+
+```python
+router = WebSocketServer()
+
+@router.tool("example/tool")
+async def example_tool(message, websocket):
+    # Handle tool call
+    return {"result": "success"}
+```
+
+## Development
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/thecodekitchen/mcpsock.git
+cd mcpsock
+
+# Install development dependencies
+pip install -e ".[dev]"
+```
+
+### Running Tests
+
+```bash
+pytest
+```
+
+## License
+
+This project is licensed under the Apache 2.0 License - see the LICENSE file for details.
