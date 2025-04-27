@@ -1,0 +1,2 @@
+[console_scripts]
+pydantic-settings-helper = pydantic_settings_helper:main
