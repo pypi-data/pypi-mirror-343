@@ -1,0 +1,20 @@
+- changes:
+    added:
+    - Initial version of package.
+  date: 2024-11-30 00:00:00
+  version: 0.1.0
+- bump: patch
+  changes:
+    fixed:
+    - Dependency for `pkg_resources`.
+  date: 2025-02-21 14:02:22
+- bump: patch
+  changes:
+    fixed:
+    - Gracefully handle data download 429s.
+  date: 2025-04-26 16:21:55
+- bump: patch
+  changes:
+    fixed:
+    - Gracefully handle HuggingFace 429s.
+  date: 2025-04-26 16:25:19
