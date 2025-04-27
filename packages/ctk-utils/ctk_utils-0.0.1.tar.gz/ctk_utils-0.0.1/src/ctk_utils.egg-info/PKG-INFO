@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: ctk-utils
+Version: 0.0.1
+Summary: 7 Segment Displays for Customtkinter
+Author-email: NumbersTada <tadaktatak61@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: customtkinter
+
+This is a simple module to add 7 segment displays to Customtkinter.

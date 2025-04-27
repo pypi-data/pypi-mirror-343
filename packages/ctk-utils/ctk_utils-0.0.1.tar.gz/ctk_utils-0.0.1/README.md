@@ -1,0 +1,1 @@
+This is a simple module to add 7 segment displays to Customtkinter.

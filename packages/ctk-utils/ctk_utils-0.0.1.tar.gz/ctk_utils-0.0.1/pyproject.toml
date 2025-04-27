@@ -1,0 +1,20 @@
+[project]
+name = "ctk-utils"
+version = "0.0.1"
+authors = [
+  { name="NumbersTada", email="tadaktatak61@gmail.com" },
+]
+description = "7 Segment Displays for Customtkinter"
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = [
+    "customtkinter"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
