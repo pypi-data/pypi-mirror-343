@@ -1,0 +1,12 @@
+mqt/syrec/pysyrec.cp310-win_amd64.pyd,sha256=6vPQJS7iSnqFo39GdE1bIvu0L00eh7tdviVaQpiqkVc,841216
+mqt/syrec/syrec_editor.py,sha256=2j2Diczko7QnaZA2arLJkchuEQkjOhyapY6vwTD021s,24570
+mqt/syrec/_version.py,sha256=NxyqdkKJE-uVOZnunx_KvepwwDAr9JasUDlpamndBMs,532
+mqt/syrec/_version.pyi,sha256=NRxzqx_-YD6DsAcy2DQ6DmBXMlWGo-9_2sZjXv80-xM,395
+mqt/syrec/__init__.py,sha256=zEBlo-9UOQzrqvbv_2qT8M1N9TnR0AGngR3Es33xzCc,1294
+mqt_syrec-1.2.1.dist-info/DELVEWHEEL,sha256=ygJpXr0rmGU184sxGrZleIGa8jb529bKOeerHXqPnTg,526
+mqt_syrec-1.2.1.dist-info/entry_points.txt,sha256=hZuBFgyZ-hDPnpF1WHzMNC5YDNmPD1xob72cmoQI-gM,62
+mqt_syrec-1.2.1.dist-info/METADATA,sha256=niQhnercIzO1hvWCce4HMqcV9zqCxyL4MwaaJL2Ym5U,7556
+mqt_syrec-1.2.1.dist-info/RECORD,,
+mqt_syrec-1.2.1.dist-info/WHEEL,sha256=Z5M11CPhkhUCn14horIIG3GeSgJ2uFqbheGfNFzSz8s,106
+mqt_syrec-1.2.1.dist-info/licenses/LICENSE.md,sha256=T2LcLM4fquxU4Fe7TUQ81wRy0o97DrNkLIfSJpujQqA,1174
+mqt_syrec.libs/msvcp140-e6f47d0bd5b2a40718c3e4afddb0e451.dll,sha256=cDrXxV8uCWYH7Gp3qLX1LVNdvnH93wIel8vLvCP3SSo,576128
