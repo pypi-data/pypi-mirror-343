@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+geofence/__init__.py
+geofence/core.py
+geofence.egg-info/PKG-INFO
+geofence.egg-info/SOURCES.txt
+geofence.egg-info/dependency_links.txt
+geofence.egg-info/top_level.txt
