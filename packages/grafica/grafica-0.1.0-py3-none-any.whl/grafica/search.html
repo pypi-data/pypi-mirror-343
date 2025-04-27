@@ -1,0 +1,67 @@
+{# Template for the search page #}
+{%- extends "layout.html" %}
+{% set title = _('Search') %}
+{%- block scripts %}
+  {{ super() }}
+  <script src="{{ pathto('_static/searchtools.js', 1) }}"></script>
+  <script src="{{ pathto('_static/language_data.js', 1) }}"></script>
+{%- endblock %}
+{% block extrahead %}
+  <script src="{{ pathto('searchindex.js', 1) }}" defer="defer"></script>
+  <meta name="robots" content="noindex" />
+  {{ super() }}
+{% endblock %}
+{% block body %}
+<div class="row busqueda-inner top-buffer">
+  <div class="col-sm-4">
+    {% include "breadcrumbs.html" %}
+
+    <search id="searchbox" role="search" style="display: none">
+      <h3 style="font-family: 'Montserrat'">Búsqueda de documentación.</h3>
+      <form id="cse-search-box-form-id" class="search-form search"
+            action="{{ pathto('search') }}" method="get">
+        <div class="form-group-icon">
+          <div style="width: 80%">
+          <input type="text" name="q" aria-labelledby="searchlabel"
+                 autocomplete="off"
+                 id="cse-search-input-box-id" class="form-control">
+          </div>
+          <div style="width: 15%">
+          <button class="blue-right btn execQuery" id="buttonExecuteQuery">
+            <i class="icon-caret-right"></i>
+          </button>
+          </div>
+        </div>
+      </form>
+    </search>
+
+    <script>document.getElementById('searchbox').style.display = "block"</script>
+  </div>
+  <div class="col-sm-7 col-sm-offset-1 results">
+    <div class="small-bottom-buffer">
+      <p id="infoDependencia" style="font-family: 'Montserrat'">
+        Tu búsqueda se llevará a cabo en toda la documentación.
+      </p>
+      <hr class="no-top">
+    </div>
+
+    <noscript>
+      <div id="fallback" class="admonition warning alert alert-warning">
+        <p class="last">
+          {% trans trimmed %}Please activate JavaScript to enable the search
+        functionality.{% endtrans %}
+        </p>
+      </div>
+    </noscript>
+
+    <div id="result-tabs">
+      {% block searchresults %}
+      <ul class="nav nav-tabs"></ul>
+      <div class="tab-content">
+        <div id="search-results"></div>
+      </div>
+      {% endblock %}
+    </div>
+  </div>
+</div>
+{% endblock %}

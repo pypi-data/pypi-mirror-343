@@ -1,0 +1,72 @@
+main {
+	min-height: 60lvh;
+}
+
+p.centered {
+	text-align: center;
+}
+
+p.admonition-title {
+	font-weight: bold;
+}
+
+h1 > a.headerlink, h2 > a.headerlink,
+h3 > a.headerlink, h4 > a.headerlink {
+	visibility: hidden;
+	color: #611232;
+	font-size: 0.5em;
+	margin: 1rem;
+}
+
+h1:hover > .headerlink, h2:hover > .headerlink,
+h3:hover > .headerlink, h4:hover > .headerlink {
+	visibility: visible;
+}
+
+.gobmx-docs-sidenav {
+	margin-top: 64px;
+	max-width: 260px;
+	text-align: right;
+	border: 1px solid #eeeeee;
+}
+
+.docs-nav-logo {
+	padding: 20px 0;
+	text-align: center;
+}
+
+.gobmx-docs-sidenav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.gobmx-docs-sidenav > ul > li > ul ul {
+	font-size: 1.5rem;
+}
+
+.gobmx-docs-sidenav > ul > li {
+	border-top: 1px solid #eeeeee;
+}
+
+.gobmx-docs-sidenav > ul a {
+	color: #263131;
+	display: block;
+	padding: 18px 30px;
+	position: relative;
+	text-decoration: none;
+}
+
+.gobmx-docs-sidenav > ul a:hover {
+	background: #f6f6f6;
+	text-decoration: none;
+}
+
+@media print {
+	.pagination,
+	.print,
+	.gobmx-docs-sidenav,
+	footer {
+		display: none;
+	}
+}
