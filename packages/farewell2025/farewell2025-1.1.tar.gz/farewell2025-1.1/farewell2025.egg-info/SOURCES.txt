@@ -1,0 +1,9 @@
+MANIFEST.in
+setup.py
+farewell2025.egg-info/PKG-INFO
+farewell2025.egg-info/SOURCES.txt
+farewell2025.egg-info/dependency_links.txt
+farewell2025.egg-info/top_level.txt
+farewell_package/__init__.py
+farewell_package/farewell.mp3
+farewell_package/farewell.png
