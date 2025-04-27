@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: passwordmanager-santhosh
+Version: 0.2.0
+Summary: A simple CLI Password Manager
+Author: Santhosh Andavar
+Author-email: your_email@example.com
+Requires-Python: >=3.6
+Requires-Dist: colorama
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

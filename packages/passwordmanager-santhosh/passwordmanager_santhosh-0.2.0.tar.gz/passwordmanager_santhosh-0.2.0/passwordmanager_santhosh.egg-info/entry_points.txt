@@ -1,0 +1,2 @@
+[console_scripts]
+passwordmanager = passwordmanager.cli:main

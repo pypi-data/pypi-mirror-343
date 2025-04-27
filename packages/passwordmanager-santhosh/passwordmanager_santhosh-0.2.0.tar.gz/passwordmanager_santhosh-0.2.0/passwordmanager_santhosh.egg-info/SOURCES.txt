@@ -1,0 +1,14 @@
+README.md
+setup.py
+passwordmanager/__init__.py
+passwordmanager/cli.py
+passwordmanager/password_ops.py
+passwordmanager/security.py
+passwordmanager/utils.py
+passwordmanager/storage/__init__.py
+passwordmanager_santhosh.egg-info/PKG-INFO
+passwordmanager_santhosh.egg-info/SOURCES.txt
+passwordmanager_santhosh.egg-info/dependency_links.txt
+passwordmanager_santhosh.egg-info/entry_points.txt
+passwordmanager_santhosh.egg-info/requires.txt
+passwordmanager_santhosh.egg-info/top_level.txt
