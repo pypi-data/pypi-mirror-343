@@ -1,0 +1,3 @@
+[console_scripts]
+cstoolbox = cstoolbox.main:main
+cstoolbox-server = cstoolbox.main:main
