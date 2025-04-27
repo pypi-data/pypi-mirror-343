@@ -1,0 +1,8 @@
+algorithm-x
+numpy
+pandas
+python-dateutil
+pytz
+scipy
+six
+tzdata
