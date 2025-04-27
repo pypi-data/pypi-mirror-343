@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agentfactory-mcp-server"
+version = "0.1.0"
+description = "Agent Factory MCP Server"
+authors = [{ name = "ACME Inc." }]
+requires-python = ">=3.12"
+license = { text = "MIT" }
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic>=2,<3",
+    "sqlite-utils",
+    "httpx>=0.28.1",
+    "pytest-asyncio>=0.26.0",
+    "sqlalchemy>=2.0.40",
+    "sqlmodel>=0.0.24",
+    "docker>=7.0.0",
+    "pydantic-ai>=0.1.3",
+    "testcontainers>=4.10.0",
+    "mcp[cli]",
+]
+
+[tool.uv]
+dev-dependencies = ["pytest>=8.3.3"]
+
+[project.scripts]
+agentfactory-mcp-server = "agentfactory_mcp_server.server:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "httpx",
+    "black",
+    "isort",
+    "flake8",
+    "mypy",
+    "pre-commit",
+    "testcontainers>=3.7.1",
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

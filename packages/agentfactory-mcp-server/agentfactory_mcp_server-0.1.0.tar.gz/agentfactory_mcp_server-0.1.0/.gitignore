@@ -1,0 +1,6 @@
+.pytest_cache
+.ropeproject
+.venv
+data.db
+**/__pycache__
+.idea

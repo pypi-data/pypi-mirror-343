@@ -1,0 +1,29 @@
+{
+    "models": [
+        { "id": "anthropic:claude-3-7-sonnet-latest" },
+        { "id": "google-gla:gemini-2.5-flash-preview-04-17" },
+        { "id": "gpt-4.1" }
+    ],
+    "tools": {
+        "execution_env_server": {
+            "command": "deno",
+            "args": [
+                "run",
+                "-N",
+                "-R=node_modules",
+                "-W=node_modules",
+                "--node-modules-dir=auto",
+                "jsr:@pydantic/mcp-run-python",
+                "stdio"
+            ]
+        },
+        "browser_server": {
+            "command": "npx",
+            "args": ["@playwright/mcp@latest"]
+        },
+        "sequential-thinking": {
+            "command": "npx",
+            "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+        }
+    }
+}

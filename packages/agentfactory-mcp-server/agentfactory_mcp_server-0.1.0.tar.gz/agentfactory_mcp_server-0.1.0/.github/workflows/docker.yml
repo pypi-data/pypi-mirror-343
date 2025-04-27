@@ -1,0 +1,79 @@
+name: Docker Build & Push
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+    branches: [main]
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      
+      - name: Login to GitHub Container Registry
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: |
+            ghcr.io/${{ github.repository }}/agent-runtime
+          tags: |
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+            type=ref,event=branch
+            type=ref,event=pr
+            type=sha,format=long
+            latest
+      
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      
+      - name: Image smoke test
+        run: |
+          # Pull the image we just built
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            docker pull ghcr.io/${{ github.repository }}/agent-runtime:sha-${{ github.sha }}
+            IMAGE=ghcr.io/${{ github.repository }}/agent-runtime:sha-${{ github.sha }}
+          else
+            # For PRs we use the locally built image
+            docker build -t agent-runtime-test .
+            IMAGE=agent-runtime-test
+          fi
+          
+          # Run a simple test to ensure the image runs properly
+          docker run --rm \
+            -e MODEL_ID=test-model \
+            -e TOOL_TEST_CMD=echo \
+            -e "TOOL_TEST_ARGS=[\"Hello, World!\"]" \
+            $IMAGE
+          
+          # Verify that required tools are installed
+          docker run --rm $IMAGE deno --version
+          docker run --rm $IMAGE node --version
+          docker run --rm $IMAGE npm --version
+          
+          echo "Smoke test passed!"

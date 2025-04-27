@@ -1,0 +1,65 @@
+# Git
+.git/
+.gitignore
+.github/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Virtual environments
+venv/
+ENV/
+env/
+.env
+.venv/
+.python-version
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# SQLite databases
+*.db
+*.sqlite3
+
+# Custom ignores specific to this project
+data/
+logs/
+tmp/
+
+# Docs and non-essential files
+docs/
+*.md
+LICENSE
+prompts.md
+roadmap.md
+
+# Allow specific files that need to be copied to the container
+!runtime_entry.py

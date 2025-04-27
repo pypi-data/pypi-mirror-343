@@ -1,0 +1,8 @@
+run-cli-in-fish:
+    uv sync
+    uv run --with mcp[cli] mcp run ./server.py
+
+run-cli:
+    uv sync
+    source .venv/bin/activate
+    uv run --with mcp[cli] mcp run ./server.py
