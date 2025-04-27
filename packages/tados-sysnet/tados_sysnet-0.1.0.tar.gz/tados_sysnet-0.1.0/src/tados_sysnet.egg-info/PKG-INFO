@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: tados-sysnet
+Version: 0.1.0
+Summary: Táďos Sysnet API - Send files to other systems using Sysnet
+Author-email: NumbersTada <tadaktatak61@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+Send files to other systems using Sysnet.
+
+Example:
+```py
+import tados_sysnet as sn
+
+username, password = "Kočička", "*******"
+
+systemID = sn.login(username, password)
+if not systemID:
+    print("Invalid credentials!")
+    exit(1)
+
+for file in sn.getQueue(username, password):
+    print(file)
+```
