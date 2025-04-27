@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+mcp_query/__init__.py
+mcp_query/mcp_query.py
+mcp_query.egg-info/PKG-INFO
+mcp_query.egg-info/SOURCES.txt
+mcp_query.egg-info/dependency_links.txt
+mcp_query.egg-info/entry_points.txt
+mcp_query.egg-info/top_level.txt
