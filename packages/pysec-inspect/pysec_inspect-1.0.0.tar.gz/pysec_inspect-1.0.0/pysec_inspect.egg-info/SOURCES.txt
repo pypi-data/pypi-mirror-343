@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+pysec_inspect/__init__.py
+pysec_inspect/__main__.py
+pysec_inspect/config.py
+pysec_inspect.egg-info/PKG-INFO
+pysec_inspect.egg-info/SOURCES.txt
+pysec_inspect.egg-info/dependency_links.txt
+pysec_inspect.egg-info/entry_points.txt
+pysec_inspect.egg-info/requires.txt
+pysec_inspect.egg-info/top_level.txt
+tests/test_config.py
+tests/test_security_analyzer.py
