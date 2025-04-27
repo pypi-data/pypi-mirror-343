@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "orgtreepubsub"
+version = "0.1.0"
+description = ""
+authors = ["Iain Samuel McLean Elder <iain@isme.es>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+boto3 = "*"
+blinker = "*"
+boto3-stubs-lite = {extras = ["organizations"], version = "*"}
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+dump_org = "dump_org:main"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.1.2"
+moto = "^3.1.12"
+mypy = "^0.960"
+pytest-mock = "^3.7.0"
+tabulate = "^0.8.9"
+ipython = "^8.4.0"
+pyright = "^1.1.372"
+
+[tool.pyright]
+typeCheckingMode = "strict"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
