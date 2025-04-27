@@ -1,0 +1,7 @@
+pandas
+python-dotenv
+openai>=1.45.0
+tiktoken
+fuzzysearch
+tenacity
+pydantic
