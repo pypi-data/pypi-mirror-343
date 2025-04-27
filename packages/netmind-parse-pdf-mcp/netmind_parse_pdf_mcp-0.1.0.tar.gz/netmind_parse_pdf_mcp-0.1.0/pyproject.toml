@@ -1,0 +1,24 @@
+[project]
+name = "netmind-parse-pdf-mcp"
+version = "0.1.0"
+description = "A Model Context Protocol (MCP) server that parses PDF files from a given URL into structured formats."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp>=1.6.0",
+]
+license = "MIT"
+
+
+[project.scripts]
+parse-pdf-mcp = "parse_pdf_mcp:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/parse_pdf_mcp"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.version]
+path = "src/parse_pdf_mcp/__init__.py"

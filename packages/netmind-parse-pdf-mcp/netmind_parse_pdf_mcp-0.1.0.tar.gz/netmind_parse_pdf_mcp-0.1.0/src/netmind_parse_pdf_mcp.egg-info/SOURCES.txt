@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/netmind-parse-pdf-mcp/__init__.py
+src/netmind-parse-pdf-mcp/server.py
+src/netmind_parse_pdf_mcp.egg-info/PKG-INFO
+src/netmind_parse_pdf_mcp.egg-info/SOURCES.txt
+src/netmind_parse_pdf_mcp.egg-info/dependency_links.txt
+src/netmind_parse_pdf_mcp.egg-info/entry_points.txt
+src/netmind_parse_pdf_mcp.egg-info/requires.txt
+src/netmind_parse_pdf_mcp.egg-info/top_level.txt
+tests/test.py
