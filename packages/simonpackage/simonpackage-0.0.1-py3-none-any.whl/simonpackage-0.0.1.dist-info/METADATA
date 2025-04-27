@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: simonpackage
+Version: 0.0.1
+Project-URL: Documentation, https://github.com/parahouyi/simonpackage#readme
+Project-URL: Issues, https://github.com/parahouyi/simonpackage/issues
+Project-URL: Source, https://github.com/parahouyi/simonpackage
+Author-email: parahouyi <simonzhang84@163.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Requires-Dist: apscheduler
+Requires-Dist: asyncio
+Requires-Dist: beautifulsoup4
+Requires-Dist: ddddocr
+Requires-Dist: dill
+Requires-Dist: drissionpage
+Requires-Dist: kivy
+Requires-Dist: kivymd
+Requires-Dist: lxml
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pyperclip
+Requires-Dist: python-docx
+Requires-Dist: pyttsx3
+Requires-Dist: requests
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: selenium
+Requires-Dist: tqdm
+Requires-Dist: xlrd
+Requires-Dist: xlwt
+Description-Content-Type: text/markdown
+
+# simonPackage
+
+[![PyPI - Version](https://img.shields.io/pypi/v/simonpackage.svg)](https://pypi.org/project/simonpackage)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/simonpackage.svg)](https://pypi.org/project/simonpackage)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install simonpackage
+```
+
+## License
+
+`simonpackage` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
