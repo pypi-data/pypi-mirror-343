@@ -1,0 +1,4 @@
+nbitk>=0.5.3
+biopython
+requests
+PyYAML
