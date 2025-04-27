@@ -1,0 +1,11 @@
+sing_box_config-0.1.3.dist-info/METADATA,sha256=lyC9OH7uV2zSCVwKqVnzOJaesKVx3hGewTskslBYb-U,5841
+sing_box_config-0.1.3.dist-info/WHEEL,sha256=tSfRZzRHthuv7vxpI4aehrdN9scLjk-dCJkPLzkHxGg,90
+sing_box_config-0.1.3.dist-info/entry_points.txt,sha256=lL17cwBh2cTUw2vMqgvegl0mOXWCz5uJf_ecTFFt1FQ,77
+sing_box_config-0.1.3.dist-info/licenses/LICENSE,sha256=2oYWDV0w6EAC9vNXV0Sqg_vi3RPulq1XIkoDAnrpZPk,1062
+sing_box_config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sing_box_config/cmd.py,sha256=wrhUBVQEqAFAf1OWIdJ2erztn0ajxsjrJWSh4sqemb8,1249
+sing_box_config/export.py,sha256=iamHRJStEemV7pMhz3vz-AGrBGMW3WOpedfthnEONoI,2526
+sing_box_config/logging.py,sha256=ZTx2UPirmCvyjVu_wm2jwa2ZfG0d4n_E_WN5RNy_Mq4,2980
+sing_box_config/parser/shadowsocks.py,sha256=xz-22vdM2l5F9jL3KUGgPkGKiT3gGkoMep7x5IMMEZE,2653
+sing_box_config/utils.py,sha256=4C-Mt-F5v20eF1sThGcAPfYyTkHqj6RagzUntVZxpxY,512
+sing_box_config-0.1.3.dist-info/RECORD,,
