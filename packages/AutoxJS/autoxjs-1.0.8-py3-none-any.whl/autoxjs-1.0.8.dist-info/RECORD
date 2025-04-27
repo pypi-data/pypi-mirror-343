@@ -1,0 +1,14 @@
+autojs/__init__.py,sha256=jByCvlLWcgCau36lFHhzjdAQOSiDXyC2_eTU-E-a-s8,176
+autojs/__main__.py,sha256=4NAUg-SRk_V2tcncm6YKP0QuB4S7WcGGMRgsClJxXWs,162
+autojs/core.py,sha256=f3Y7LC_ASYN_az0VArMmnk7hxLEDPvaqbpsLw_pYAVo,4741
+autojs/examples.py,sha256=Pxm_yynL5R037rbvpCsrn13wwvU3J6lJ84QcX5kW26w,14397
+autojs/file_runner.js,sha256=hMnjunsMLFB58kBxEsrFaTyyBggcffc6uowxzCWohf0,310
+autojs/locator_caller.js,sha256=NxrWF43UCmod1KSlu8aJLjB98ib5JcEb3xV9AHiIo5E,1926
+autojs/recorder_caller.js,sha256=Pmr2cWVtwPjSpMHFo-JtQgLtrB1r0KKGn-gTL9H_m3M,2062
+autojs/sensor_caller.js,sha256=m2Hijj9EStg50sk6l7k68MBfUjELPnG9-bAwqALORZg,2306
+autojs/string_runner.js,sha256=tgeJEnL50G1oLs2qmM-K86YGKeQVmsi4W3dtLuHBiLI,301
+autoxjs-1.0.8.dist-info/METADATA,sha256=U4bQZfVcL6TxS6BEqKeKwb9DdT0AiecVQJuhNvwWSBU,558
+autoxjs-1.0.8.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+autoxjs-1.0.8.dist-info/top_level.txt,sha256=gnVMyU2DALe_ne8kt5lVzSlyfGWxYD686JK4wauElGE,7
+autoxjs-1.0.8.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+autoxjs-1.0.8.dist-info/RECORD,,
