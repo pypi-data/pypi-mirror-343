@@ -1,0 +1,20 @@
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fuckreplitdb"
+version = "1.9.2"
+authors = [
+  { name="theroyalwhale", email="admin@dyntech.cc" },
+]
+description = "For the devs who wrote apps a bit too big with Replit DB."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
