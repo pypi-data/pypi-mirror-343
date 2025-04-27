@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: btooth
+Version: 0.0.1
+Summary: Bluetooth handler
+Author: Blue Whale
+Author-email: <mail@bluewhale.com>
+Keywords: python,bluetooth
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: summary
