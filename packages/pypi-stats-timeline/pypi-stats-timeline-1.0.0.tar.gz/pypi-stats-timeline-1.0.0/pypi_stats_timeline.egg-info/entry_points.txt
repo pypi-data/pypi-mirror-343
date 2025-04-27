@@ -1,0 +1,2 @@
+[console_scripts]
+pypi-stats-timeline = pypi_stats_timeline.main:main
