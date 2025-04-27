@@ -1,0 +1,28 @@
+[project]
+name = "yta-multimedia-manim"
+version = "0.0.1"
+description = ""
+authors = [
+    {name = "danialcala94",email = "danielalcalavalera@gmail.com"}
+]
+readme = "README.md"
+requires-python = "==3.9"
+dependencies = [
+    "yta_general_utils (>=0.0.250,<1.0.0)",
+    # TODO: Remove 'yta_multimedia' dependency, please
+    "yta_multimedia (>=0.1.136,<1.0.0)",
+    "manim (>=0.0.19,<1.0.0)",
+    # TODO: Remove 'pillow' if possible, it is being used only for opening images
+    "pillow (>=9.5.0,<10.0.0)",
+    "opencv-python (>=4.11.0.86,<5.0.0.0)",
+    # TODO: Remove 'moviepy' if possible, it is being used for simple operations
+    "moviepy (>=2.0.0,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "yta_multimedia_manim", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
