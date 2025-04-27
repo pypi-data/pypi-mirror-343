@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: deepspeed_vacc
+Version: 0.16.3
+Summary: An adaptor for align toolkits patch on VACC GPU with version info: 49e91ea.d20250427
+License: Apache-2.0 License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Requires-Dist: torch>=2.1.0
+Requires-Dist: deepspeed==0.16.3
+Requires-Dist: torch_vacc>=1.2.1
+Dynamic: classifier
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

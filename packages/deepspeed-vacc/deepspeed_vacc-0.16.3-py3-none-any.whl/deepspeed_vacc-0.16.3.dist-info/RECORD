@@ -1,0 +1,11 @@
+deepspeed_vacc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deepspeed_vacc/adaptor.py,sha256=IGFEZ3p3LeyejZd0x7Aai9r4NDgcjGrq4TfjgsWO9JU,1898
+deepspeed_vacc/utils.py,sha256=AofGsCt9_hmpeyPVa_SAxjKIxMwIs20DzvRx7wVbBWc,6462
+deepspeed_vacc/deepspeed/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deepspeed_vacc/deepspeed/accelerator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deepspeed_vacc/deepspeed/accelerator/real_accelerator.py,sha256=lPkJ_EiRtvMAKg1yxfcgqiX1qunGCN5xEPbKDHOGx9s,2228
+deepspeed_vacc/deepspeed/accelerator/vacc_accelerator.py,sha256=kEe45eSV4tB_0IMxa5kkPkPiX3zRstF5CAb56muBIpU,11022
+deepspeed_vacc-0.16.3.dist-info/METADATA,sha256=a5hC3siw6aePhxRVE4WU2B-lGZn8aZuIw84IkiglRWc,646
+deepspeed_vacc-0.16.3.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+deepspeed_vacc-0.16.3.dist-info/top_level.txt,sha256=8S5OhDbXnPAqlI0MNYC3_RjH0uGLVCzy7MwFEL7TIgA,15
+deepspeed_vacc-0.16.3.dist-info/RECORD,,
