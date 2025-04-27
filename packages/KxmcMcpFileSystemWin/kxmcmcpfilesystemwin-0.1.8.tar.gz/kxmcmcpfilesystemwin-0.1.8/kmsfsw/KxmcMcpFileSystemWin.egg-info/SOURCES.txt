@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+kmsfsw/KxmcMcpFileSystemWin.egg-info/PKG-INFO
+kmsfsw/KxmcMcpFileSystemWin.egg-info/SOURCES.txt
+kmsfsw/KxmcMcpFileSystemWin.egg-info/dependency_links.txt
+kmsfsw/KxmcMcpFileSystemWin.egg-info/entry_points.txt
+kmsfsw/KxmcMcpFileSystemWin.egg-info/requires.txt
+kmsfsw/KxmcMcpFileSystemWin.egg-info/top_level.txt

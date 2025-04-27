@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: KxmcMcpFileSystemWin
+Version: 0.1.8
+Summary: 测试
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: mcp>=1.6.0
+Requires-Dist: setuptools>=79.0.1
+
+kxmc使用这个做mcp服务开发的测试

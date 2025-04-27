@@ -1,0 +1,2 @@
+mcp>=1.6.0
+setuptools>=79.0.1

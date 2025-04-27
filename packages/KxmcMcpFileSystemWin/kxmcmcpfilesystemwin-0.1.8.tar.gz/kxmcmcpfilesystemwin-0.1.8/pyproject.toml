@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "KxmcMcpFileSystemWin"
+version = "0.1.8"
+description = "测试"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp>=1.6.0",
+    "setuptools>=79.0.1",
+]
+
+# ...
+[tool.setuptools.packages.find]
+where = ["kmsfsw"]
+include = ["KxmcMcpFileSystemWin"]
+
+[project.scripts]
+KxmcMcpFileSystemWin = "kmsfsw.main:main"
