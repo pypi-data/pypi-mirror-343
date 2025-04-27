@@ -1,0 +1,10 @@
+winding/__init__.py,sha256=pl2Wt9WifiaC6ycucxZtltmxGkqgXXOW7fQbS7Y54wM,183
+winding/ast.py,sha256=-MkSweiabHeuFgE-x8QC9ccI94xEut-Q2MUSbGXDu4I,931
+winding/grammar.py,sha256=Cq0CJGL4ixfvjjA1CtZU8IKSKsaQ_tqUsAXnJn0uXns,676
+winding/parser.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+winding/transformer.py,sha256=lA59NteApGUuLX_xZXpCizgRTmUpTGNRAirqgCfAGb0,2162
+winding-0.2.0.dist-info/METADATA,sha256=ENosfO-wVgP1OW7ceJ7nUxIt_ATA0uFoc_UA3TDSO5E,3616
+winding-0.2.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+winding-0.2.0.dist-info/entry_points.txt,sha256=CVhV7GnLVT5NtnOj9LHbFqc139u-9YCCq5pP6-DmClQ,55
+winding-0.2.0.dist-info/top_level.txt,sha256=IZDpLiys8yDpViowbtuUgEcVpRoZvlbzTNHMw-tNTbg,8
+winding-0.2.0.dist-info/RECORD,,
