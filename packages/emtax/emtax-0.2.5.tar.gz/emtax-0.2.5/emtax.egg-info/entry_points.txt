@@ -1,0 +1,2 @@
+[console_scripts]
+emtax = emtax.cli:main
