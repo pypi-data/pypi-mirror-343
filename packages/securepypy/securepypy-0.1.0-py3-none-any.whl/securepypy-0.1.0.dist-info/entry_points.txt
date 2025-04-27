@@ -1,0 +1,3 @@
+[console_scripts]
+securepip = securepip.cli:main
+
