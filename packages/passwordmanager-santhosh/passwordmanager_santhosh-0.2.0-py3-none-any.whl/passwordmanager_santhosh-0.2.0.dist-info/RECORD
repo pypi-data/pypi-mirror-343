@@ -1,0 +1,11 @@
+passwordmanager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+passwordmanager/cli.py,sha256=qj5UiUUHkIXueRIT0Nide3b642tZ2tlUvMhHCIJNeSI,954
+passwordmanager/password_ops.py,sha256=HVzRvlNPf3-fcXnmJ0e4nm3emLhnvbM2M6y_Gf3QN0Y,1755
+passwordmanager/security.py,sha256=uIjFvqrve6mh_uKg458Bw3tG8wP7mZlk2ZzkUsdhrv4,1216
+passwordmanager/utils.py,sha256=r6CT7JT7YfU-ED8sKqY_vinEWrtQS6TJQEYs3Mk7flk,297
+passwordmanager/storage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+passwordmanager_santhosh-0.2.0.dist-info/METADATA,sha256=tN7jO7zMtdz5qNIRaTxmAVm1vt8BRjTmay1GRUBEnHk,319
+passwordmanager_santhosh-0.2.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+passwordmanager_santhosh-0.2.0.dist-info/entry_points.txt,sha256=8GaWQF889zXW6aSNCpPayULJz-5Dgc6UtJb94LUngCE,61
+passwordmanager_santhosh-0.2.0.dist-info/top_level.txt,sha256=vXMaVo6pKdwuYeJ9jWAUgpL3zX8FY-gXxiojJKefgjc,16
+passwordmanager_santhosh-0.2.0.dist-info/RECORD,,
