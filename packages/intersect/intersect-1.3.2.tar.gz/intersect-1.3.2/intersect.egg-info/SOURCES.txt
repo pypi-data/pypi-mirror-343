@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+intersect/__init__.py
+intersect/intersect.py
+intersect.egg-info/PKG-INFO
+intersect.egg-info/SOURCES.txt
+intersect.egg-info/dependency_links.txt
+intersect.egg-info/requires.txt
+intersect.egg-info/top_level.txt
+tests/test_intersection.py
