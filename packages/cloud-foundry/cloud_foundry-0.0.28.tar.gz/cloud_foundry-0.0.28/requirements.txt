@@ -1,0 +1,13 @@
+build
+twine
+pytest
+pulumi
+pulumi-aws
+pulumi-automation
+
+pytest
+requests
+
+pre-commit
+flake8
+black
