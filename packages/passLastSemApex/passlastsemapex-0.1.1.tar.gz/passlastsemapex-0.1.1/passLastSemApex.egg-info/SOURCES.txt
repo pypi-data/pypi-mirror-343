@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+passLastSemApex/__init__.py
+passLastSemApex/ass1.txt
+passLastSemApex/ass2.txt
+passLastSemApex.egg-info/PKG-INFO
+passLastSemApex.egg-info/SOURCES.txt
+passLastSemApex.egg-info/dependency_links.txt
+passLastSemApex.egg-info/top_level.txt
