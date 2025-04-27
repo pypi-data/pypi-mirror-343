@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: vibe-testing
+Version: 0.0.2
+Summary: Operative WebEvalAgent
+Project-URL: Homepage, https://operative.sh
+Project-URL: Issues, https://github.com/Operative-Sh/web-eval-agent/issues
+Author-email: Operative-Sh <erik@operative.sh>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# vibe-testing
+
+This is a placeholder package to claim the name `vibe-testing` on PyPI. 
