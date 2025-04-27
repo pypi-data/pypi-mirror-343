@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=75.8", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pywin32supervisor"
+version = "0.0.1"
+description = "Python win32 service similar to supervisor for Unix-based systems."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Artillence", email = "greg.karz@artillence.com" }]
+license = { file = "LICENSE" }
+urls = { Homepage = "https://github.com/Artillence/pywin32supervisor" }
+
+dependencies = [
+    "pywin32==308",
+    "psutil==7.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff==0.9.7",        # Matches the version in .pre-commit-config.yaml
+    "pre-commit>=4.0.1",  # Ensure compatibility with modern setups
+    "pytest>=7.0.0",      # Added for running tests
+    "pytest-cov>=4.0.0"   # Added for code coverage
+]
+
+[tool.setuptools]
+packages = { find = {} }
+include-package-data = true
+
+[project.scripts]
+pywin32supervisor = "pywin32supervisor.supervisor:main"

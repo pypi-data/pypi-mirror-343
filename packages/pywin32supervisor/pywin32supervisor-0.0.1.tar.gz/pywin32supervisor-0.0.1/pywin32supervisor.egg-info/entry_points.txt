@@ -1,0 +1,2 @@
+[console_scripts]
+pywin32supervisor = pywin32supervisor.supervisor:main

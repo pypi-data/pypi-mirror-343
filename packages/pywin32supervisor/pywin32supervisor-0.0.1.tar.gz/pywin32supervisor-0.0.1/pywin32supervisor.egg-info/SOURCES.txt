@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+pywin32supervisor/__init__.py
+pywin32supervisor/supervisor.py
+pywin32supervisor.egg-info/PKG-INFO
+pywin32supervisor.egg-info/SOURCES.txt
+pywin32supervisor.egg-info/dependency_links.txt
+pywin32supervisor.egg-info/entry_points.txt
+pywin32supervisor.egg-info/requires.txt
+pywin32supervisor.egg-info/top_level.txt
+tests/__init__.py
+tests/test_program.py
+tests/test_service.py
+tests/test_utils.py
+tests/test_xmlrpc.py
