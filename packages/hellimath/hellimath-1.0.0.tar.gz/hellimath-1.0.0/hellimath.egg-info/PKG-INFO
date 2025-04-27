@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: hellimath
+Version: 1.0.0
+Summary: A powerful mathematical library for Python
+Author: steam
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.mit
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: sympy
+Requires-Dist: statistics
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# HelliMath 📐🔢
+
+HelliMath is a Python library designed for **advanced mathematical calculations**.
+
+## 🌟 Features
+- **Algebra:** Quadratic solutions, Fibonacci, factorial
+- **Calculus:** Derivatives, integrals
+- **Trigonometry:** Sine, cosine, tangent calculations
+- **Geometry:** Circle and triangle computations
+- **Linear Algebra:** Matrix operations, dot product
+- **Number Theory:** Prime checking, GCD, LCM
+- **Statistics:** Mean, median, standard deviation
+
+## 🚀 Installation
+Install via:
+```sh
+pip install hellimath

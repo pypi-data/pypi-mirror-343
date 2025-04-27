@@ -1,0 +1,16 @@
+LICENSE.mit
+README.md
+setup.py
+hellimath/__init__.py
+hellimath/algebra.py
+hellimath/calculus.py
+hellimath/geometry.py
+hellimath/linear_algebra.py
+hellimath/number_theory.py
+hellimath/statistics.py
+hellimath/trigonometry.py
+hellimath.egg-info/PKG-INFO
+hellimath.egg-info/SOURCES.txt
+hellimath.egg-info/dependency_links.txt
+hellimath.egg-info/requires.txt
+hellimath.egg-info/top_level.txt
