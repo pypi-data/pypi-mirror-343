@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: lescolors
+Version: 1.0.2
+Summary: Color Manipulation and Analysis Utilities
+Home-page: https://github.com/Anish177/lescolors
+Author: Anish Panda
+Author-email: anip1776@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: colorthief
+
+# lesColors
+
+lesColors is a lightweight Python package that provides utilities for manipulating and analyzing colors. It includes functions for calculating adjacent, analogous, and complementary colors, converting RGB values to hexadecimal format, and extracting the dominant colors from an image via a URL.
+
+### NOTE: Major code change, previous functions remain but accessibility changed, please go through the examples.
+
+## Installation
+
+You can install LesColors via pip:
+
+```bash
+pip install lescolors
+```
+
+or
+
+```bash
+pip3 install lescolors
+```
+
+## Functions:
+
+- `Color` class:
+    Provides methods for manipulating and analyzing color properties, including adjacent colors, analogous colors, complementary colors, and format conversions.
+
+- `Color.adjacent_colors(self, d: float = DEG30) -> list[Color]`:
+    Calculates and returns the adjacent colors on the color wheel for the color object. The color is adjusted by the given degree difference `d` (default 30 degrees).
+
+- `Color.analogous_colors(self) -> list[Color]`:
+    Computes and returns the analogous colors for the color object, which are adjacent colors on the color wheel.
+
+- `Color.complementary(self) -> Color`:
+    Computes and returns the complementary color for the color object. The complementary color is found by adding 180 degrees to the hue of the color in HSV space.
+
+- `Color.to_hex(self) -> str`:
+    Converts the color object to its hexadecimal (Hex) string format.
+
+- `Color.from_image(image_url: str, quality: int = 1) -> Color`:
+    Creates a `Color` object based on the dominant color found in an image located at the given URL.
+
+- `Color.palette_from_image(image_url: str, num_colors: int = 5, quality: int = 1) -> list[Color]`:
+    Extracts and returns a palette of the most dominant RGB colors from an image located at a given URL. The number of colors is determined by the `num_colors` parameter.
+
+## Usage:
+This module can be used to explore color relationships, generate color schemes, and analyze colors from images.  
+It is particularly useful for tasks related to dynamic theming, web development, and visual content creation.
+
+## Dependencies:
+- `colorsys`: A standard Python module for converting between color systems.
+- `requests`: A Python library for making HTTP requests.
+- `colorthief`: A library for grabbing the dominant color or a representative color palette from an image.
+
+## Examples:
+- Creating a `Color` object and finding analogous colors:
+    ```python
+    red = Color([255, 0, 0])
+    print(red.to_analogous())
+    ```
+
+- Getting the complementary color of a color:
+    ```python
+    red = Color([255, 0, 0])
+    print(red.to_complementary())
+    ```
+
+- Converting a color to Hex format:
+    ```python
+    red = Color([255, 0, 0])
+    print(red.to_hex())
+    ```
+
+- Creating a color object from an image's dominant color:
+    ```python
+    dominant = Color.from_image('https://i.stack.imgur.com/JM4F2.png')
+    print(dominant)
+    ```
+
+- Getting a palette of dominant colors from an image:
+    ```python
+    palette = Color.palette_from_image('https://i.stack.imgur.com/JM4F2.png')
+    print(palette)
+    ```
+
+Have suggestions or issues? Let me know!
