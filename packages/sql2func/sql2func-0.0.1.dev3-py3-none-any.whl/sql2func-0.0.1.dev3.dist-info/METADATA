@@ -1,0 +1,120 @@
+Metadata-Version: 2.4
+Name: sql2func
+Version: 0.0.1.dev3
+Summary: Run SQL as a function.
+Project-URL: Homepage, https://github.com/deadblue/sql2func
+Author-email: Tomo Kunagisa <root@dead.blue>
+License: MIT License
+        
+        Copyright (c) 2024 Tomo Kunagisa
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Database
+Requires-Python: >=3.10
+Requires-Dist: jinja2<4,>=3.0.0
+Provides-Extra: pydantic
+Requires-Dist: pydantic<3,>=2.0.0; extra == 'pydantic'
+Description-Content-Type: text/markdown
+
+# sql2func
+
+Run SQL as a function!
+
+## Example
+
+```python
+from dataclasses import dataclass
+from typing import List
+
+import mariadb
+from sql2func import SqlContext, select
+from sql2func.dbapi2 import Connection
+
+
+@dataclass
+class Foobar:
+    """
+    Foobar data class
+    """
+    fb_id: int
+    foo: str
+    bar: str
+
+
+@select(statement='''
+SELECT fb_id, foo, bar
+FROM tbl_foobar
+WHERE foo = {{ foo }}
+''')
+def select_foobars(foo: str) -> List[Foobar]:
+    pass
+
+
+@update(statement='''
+UPDATE tbl_foobar
+SET bar = {{ bar }}
+WHERE fb_id = {{ fb_id }}
+''')
+def update_foobar(fb_id: int, bar: str) -> int:
+    pass
+
+
+def connect_to_db() -> Connection:
+    return mariadb.connect(
+        host='localhost',
+        user='db_user',
+        password='db_password',
+        database='db_name'
+    )
+
+
+def _main():
+    with SqlContext(connector=connect_to_db):
+        # All SQLs in this context will be run via one DB connection.
+        # Run select.
+        for result in select_foobars(foo='foo'):
+            print(result)
+        # Run update.
+        update_foobar(fb_id=1, bar='blabla')
+    # DB connection will be closed after SqlContext exited.
+
+
+if __name__ == '__main__':
+    _main()
+```
+
+
+## Install
+
+```bash
+# Install release version
+pip install sql2funcs
+
+# Install develop version
+pip install git+https://github.com/deadblue/sql2func.git@develop
+```
