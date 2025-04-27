@@ -1,0 +1,2 @@
+[console_scripts]
+safie-mediafile = safie_mediafile._cli:main
