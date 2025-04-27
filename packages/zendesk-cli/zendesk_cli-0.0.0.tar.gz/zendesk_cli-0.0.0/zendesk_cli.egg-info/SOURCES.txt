@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+zendesk_cli.egg-info/PKG-INFO
+zendesk_cli.egg-info/SOURCES.txt
+zendesk_cli.egg-info/dependency_links.txt
+zendesk_cli.egg-info/top_level.txt

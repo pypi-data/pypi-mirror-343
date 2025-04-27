@@ -1,0 +1,7 @@
+[project]
+name = "zendesk-cli"
+version = "0.0.0"
+description = "Coming soon"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
