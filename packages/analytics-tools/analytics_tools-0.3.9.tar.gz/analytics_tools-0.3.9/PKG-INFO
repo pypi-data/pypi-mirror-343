@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: analytics_tools
+Version: 0.3.9
+Summary: A package to help data analysts at cotidian tasks, mainly EDA and ETL tasks
+Author: Arnaldo Joao Bastos Junior
+Author-email: arnaldo.jbj@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# analytics_tools
+
+A package to help data analysts at cotidian tasks, mainly EDA and ETL tasks. Example of functions: WoE, IV, heatmap, histogram, feature importances, bivariate analysis, etc...
+
+## Installation
+
+```bash
+pip install analytics_tools
