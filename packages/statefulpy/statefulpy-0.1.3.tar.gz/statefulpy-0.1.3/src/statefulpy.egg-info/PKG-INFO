@@ -1,0 +1,199 @@
+Metadata-Version: 2.4
+Name: statefulpy
+Version: 0.1.3
+Summary: Transparent persistent state management for Python functions
+Author: StatefulPy Team
+Author-email: StatefulPy Team <info@statefulpy.org>
+License: MIT
+Project-URL: Homepage, https://github.com/statefulpy/statefulpy
+Project-URL: Documentation, https://statefulpy.readthedocs.io/
+Project-URL: Bug Tracker, https://github.com/statefulpy/statefulpy/issues
+Project-URL: Source Code, https://github.com/statefulpy/statefulpy
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: portalocker>=2.0.0
+Provides-Extra: redis
+Requires-Dist: redis>=4.0.0; extra == "redis"
+Provides-Extra: test
+Requires-Dist: pytest>=7.0.0; extra == "test"
+Requires-Dist: pytest-cov>=4.0.0; extra == "test"
+Requires-Dist: redis>=4.0.0; extra == "test"
+Provides-Extra: dev
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: build>=0.10.0; extra == "dev"
+Requires-Dist: twine>=4.0.0; extra == "dev"
+Requires-Dist: redis>=4.0.0; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=6.0.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.0.0; extra == "docs"
+Dynamic: license-file
+
+# StatefulPy
+
+**StatefulPy** provides transparent, persistent state management for regular Python functions.  
+**MIGHT NOT BE FULLY FUNCTIONAL YET, STILL BEING WORKED ON**
+
+---
+
+## Features
+
+- **Simple Decorator API**: Add persistent state to any function with a decorator.
+- **Multiple Backends**: Store state in SQLite (embedded) or Redis (distributed).
+- **Automatic State Management**: State is automatically loaded, saved, and synchronized.
+- **Concurrency Safe**: Locks ensure state consistency across threads and processes.
+- **Flexible Serialization**: Supports Pickle, JSON, and custom serializers.
+- **CLI Tools**: Manage, migrate, and monitor your function state easily.
+
+---
+
+## Installation
+
+```bash
+pip install statefulpy
+```
+
+For Redis support:
+
+```bash
+pip install statefulpy[redis]
+```
+
+---
+
+## Security Warning ⚠️
+
+The default serializer used by StatefulPy is **Pickle** for performance reasons.
+
+However, **Pickle is insecure** if processing untrusted input.
+
+For public-facing or untrusted data applications, **use the JSON serializer** instead:
+
+```python
+@stateful(backend="sqlite", db_path="state.db", serializer="json")
+def my_function():
+    # Your function code...
+```
+
+---
+
+## Quickstart Example
+
+```python
+from statefulpy import stateful
+
+@stateful(backend="sqlite", db_path="counter.db")
+def counter():
+    # Initialize state if needed
+    if "count" not in counter.state:
+        counter.state["count"] = 0
+    
+    # Update state
+    counter.state["count"] += 1
+    
+    return counter.state["count"]
+
+# The counter value persists across runs
+print(counter())  # 1 (first run)
+print(counter())  # 2
+# Restart your program...
+print(counter())  # 3 (value loaded from storage)
+```
+
+---
+
+## Backend Options
+
+### SQLite (Default)
+
+```python
+@stateful(backend="sqlite", db_path="state.db", serializer="pickle")
+def my_function():
+    # Your function code...
+```
+
+### Redis
+
+```python
+@stateful(backend="redis", redis_url="redis://localhost:6379/0")
+def my_function():
+    # Your function code...
+```
+
+---
+
+## Global Configuration
+
+```python
+from statefulpy import set_backend
+
+# Set default backend for all @stateful functions
+set_backend("redis", redis_url="redis://localhost:6379/0")
+```
+
+---
+
+## Serialization Formats
+
+StatefulPy supports multiple serialization formats depending on your needs:
+
+- **Using JSON serializer (Recommended for security):**
+
+  ```python
+  @stateful(backend="sqlite", db_path="state.db", serializer="json")
+  def my_function():
+      # Your function code...
+  ```
+
+- **Using Pickle serializer (Faster, but only for trusted data):**
+
+  ⚠️ **Warning:** Only use Pickle when you fully trust your data sources.
+
+  ```python
+  @stateful(backend="sqlite", db_path="state.db", serializer="pickle")
+  def my_function():
+      # Your function code...
+  ```
+
+---
+
+## Command-Line Interface (CLI)
+
+StatefulPy includes CLI utilities for managing backends:
+
+- **Initialize storage:**
+
+  ```bash
+  statefulpy init --backend sqlite --path state.db
+  ```
+
+- **Migrate between backends:**
+
+  ```bash
+  statefulpy migrate --from sqlite --to redis --from-path state.db --to-path redis://localhost:6379/0
+  ```
+
+- **Check backend health:**
+
+  ```bash
+  statefulpy healthcheck --backend redis --path redis://localhost:6379/0
+  ```
+
+---
+
+## License
+
+This project is licensed under the MIT License.  
+See the [LICENSE](LICENSE) file for full details.
