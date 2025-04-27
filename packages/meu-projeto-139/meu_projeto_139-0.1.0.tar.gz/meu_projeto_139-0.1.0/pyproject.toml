@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "meu-projeto-139"
+version = "0.1.0"
+description = "Uma breve descrição do seu projeto."
+authors = ["Wagner Santos <rengaw.luiz@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+# Adicione suas dependências aqui, por exemplo:
+# requests = "^2.25.1"
+[tool.poetry.dev-dependencies]
+# Adicione dependências de desenvolvimento aqui, por exemplo:
+# pytest = "^6.2.5"
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
