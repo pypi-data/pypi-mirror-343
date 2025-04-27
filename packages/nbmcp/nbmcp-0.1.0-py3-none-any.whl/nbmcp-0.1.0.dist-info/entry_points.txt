@@ -1,0 +1,3 @@
+[console_scripts]
+nbmcp=nbmcp.cli:main
+

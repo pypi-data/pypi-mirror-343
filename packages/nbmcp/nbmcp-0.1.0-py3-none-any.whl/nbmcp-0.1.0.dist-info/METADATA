@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: nbmcp
+Version: 0.1.0
+Summary: notebook mcp server
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: mcp (>=1.5.0,<2.0.0)
+Requires-Dist: minlog (==0.6.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: sh (>=2.2.2,<3.0.0)
+Requires-Dist: typer (>=0.15.2,<0.16.0)
+Description-Content-Type: text/markdown
+
+# notebook_mcp
+
+mcp server for your personal notes
+
