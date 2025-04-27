@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: burakMatematik
+Version: 0.1
+Summary: Bu kütüphane Ödev için hazirlanmiştir
+Author: Burak Kocak
+Author-email: burakkck42@gmail.com
+License: MIT
+Keywords: burak,matematik
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
+
+# brkMatematik
+
+# Bu kÃ¼tÃ¼phane Ã–dev iÃ§in hazÄ±rlanmÄ±ÅŸtÄ±r
+
+## KullanÄ±m
+
+'''
+>>> from burakMatematik import topla
+>>>
+>>> x=topla(1,2)
+>>> print(x)
+burak
+>>>
+'''

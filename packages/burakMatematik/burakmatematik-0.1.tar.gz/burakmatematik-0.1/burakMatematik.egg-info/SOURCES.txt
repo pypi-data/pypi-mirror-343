@@ -1,0 +1,8 @@
+LICENSE
+README.md
+brkMatematik.py
+setup.py
+burakMatematik.egg-info/PKG-INFO
+burakMatematik.egg-info/SOURCES.txt
+burakMatematik.egg-info/dependency_links.txt
+burakMatematik.egg-info/top_level.txt
