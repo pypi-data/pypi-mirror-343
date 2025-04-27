@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: context-manager
+Version: 0.1.0
+Summary: 
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: build (>=1.2.2.post1,<2.0.0)
+Requires-Dist: readme-renderer (>=44.0,<45.0)
+Requires-Dist: twine (>=6.1.0,<7.0.0)
+Description-Content-Type: text/markdown
+
+# Chroma Context Manager
+
+A Python package for managing context in Chroma applications.
+
+## Installation
+
+```bash
+pip install context_manager
+```
+
+## Usage
+
+```python
+from context_manager import ContextManager
+
+# Example usage
+```
+
+## License
+
+MIT
+
