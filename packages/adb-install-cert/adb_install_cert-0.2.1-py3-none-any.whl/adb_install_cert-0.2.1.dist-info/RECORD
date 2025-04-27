@@ -1,0 +1,8 @@
+adb_install_cert/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+adb_install_cert/__main__.py,sha256=FWtZt_CjCeENnVAi0Y1fzfga5PF62myiCxjFXeGKWDY,8340
+adb_install_cert/utils.py,sha256=8bIhL09sN7csW0zMSyvdhSFORbqdTA-yl4YJSqL5r5c,3973
+adb_install_cert-0.2.1.dist-info/LICENSE,sha256=QFVVTY8-U-1gZzgaiwbZkbPaNMnDRt95abP7TkUzBWo,1054
+adb_install_cert-0.2.1.dist-info/METADATA,sha256=Yk5v4_64ICZuX5Bg_hixk6tJNIkEK-WKYf68i7hiULs,2583
+adb_install_cert-0.2.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+adb_install_cert-0.2.1.dist-info/entry_points.txt,sha256=laJ82tHxgsGD2mMbHmavh4Je4cRtM3iXh923ErYcI_o,79
+adb_install_cert-0.2.1.dist-info/RECORD,,
