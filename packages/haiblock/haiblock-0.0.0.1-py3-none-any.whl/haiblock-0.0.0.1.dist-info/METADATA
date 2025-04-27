@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: haiblock
+Version: 0.0.0.1
+Summary: Haiblock
+Author-email: HaiBlock Admin <code@haiblock.com>
+License-Expression: MIT
+Project-URL: Homepage, https://haiblock.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+HaiBlock specialized AI :  [www.haiblock.com](https://www.haiblock.com)
