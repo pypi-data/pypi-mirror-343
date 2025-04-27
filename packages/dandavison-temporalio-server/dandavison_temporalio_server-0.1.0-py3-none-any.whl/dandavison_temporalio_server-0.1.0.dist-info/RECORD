@@ -1,0 +1,7 @@
+temporalio_server/__init__.py,sha256=lL-TrxlbCdsz6A95QZuZ75nKxYkliu_7tOMFPmpL4jg,10606
+temporalio_server/main.py,sha256=Z4CdHW8EXthTp27R2YRw4IXwSCuZlM-FyhTTKnGE2lI,2549
+temporalio_server/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dandavison_temporalio_server-0.1.0.dist-info/METADATA,sha256=n0yTTxerSEcE8LvDdHzrT1bhmBL7jk5gtobpKd2wubg,4482
+dandavison_temporalio_server-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dandavison_temporalio_server-0.1.0.dist-info/entry_points.txt,sha256=zWYL5MzeygJOuIYf1p8FbB655ShtmGSQb8SS_19_s2E,63
+dandavison_temporalio_server-0.1.0.dist-info/RECORD,,
