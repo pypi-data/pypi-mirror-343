@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+IS_LIB.egg-info/PKG-INFO
+IS_LIB.egg-info/SOURCES.txt
+IS_LIB.egg-info/dependency_links.txt
+IS_LIB.egg-info/requires.txt
+IS_LIB.egg-info/top_level.txt
+moja_biblioteka/__init__.py
+moja_biblioteka/moduł1.py
+tests/test_moduł1.py
