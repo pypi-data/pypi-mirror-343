@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/tados/__init__.py
+src/tados.egg-info/PKG-INFO
+src/tados.egg-info/SOURCES.txt
+src/tados.egg-info/dependency_links.txt
+src/tados.egg-info/requires.txt
+src/tados.egg-info/top_level.txt
