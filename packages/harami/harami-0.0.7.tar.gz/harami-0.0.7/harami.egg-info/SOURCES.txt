@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+harami/__init__.py
+harami/events.py
+harami/observables.py
+harami.egg-info/PKG-INFO
+harami.egg-info/SOURCES.txt
+harami.egg-info/dependency_links.txt
+harami.egg-info/top_level.txt
