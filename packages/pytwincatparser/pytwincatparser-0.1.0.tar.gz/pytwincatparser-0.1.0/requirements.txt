@@ -1,0 +1,2 @@
+lxml>=5.3.0
+xsdata[lxml]>=24.12
