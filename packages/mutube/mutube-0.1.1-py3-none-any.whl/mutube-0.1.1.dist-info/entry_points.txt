@@ -1,0 +1,2 @@
+[console_scripts]
+mutube = mutube.cli:main
