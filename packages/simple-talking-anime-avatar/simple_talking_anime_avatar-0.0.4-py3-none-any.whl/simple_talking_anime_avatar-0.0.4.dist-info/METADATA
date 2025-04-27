@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: simple-talking_anime-avatar
+Version: 0.0.4
+Summary: Generate 
+Project-URL: Homepage, https://github.com/snow884/simple_talking_anime_avatar
+Project-URL: Bug Tracker, https://github.com/snow884/simple_talking_anime_avatar/issues
+Author-email: Adam Ivansky <adam.ivansky@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: librosa>=0.10.0
+Requires-Dist: moviepy>=2.0.0
+Requires-Dist: numpy<2.0.0,>=1.20.0
+Requires-Dist: opencv-python>=4.0.0.21
+Requires-Dist: whisper-timestamped>=1.15.8
+Requires-Dist: whisper>=1.1.10
+Description-Content-Type: text/markdown
+
+# simple_talking_anime_avatar
+Simple python package to generate talking anime avatar video.
+
+![alt text](https://github.com/snow884/simple_talking_anime_avatar/raw/master/simple_talking_anime_avatar/speaking_avatar_example.gif "Logo Title Text 1")
+
+## T
