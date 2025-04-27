@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/polyconv/__init__.py
+src/polyconv/__main__.py
+src/polyconv/cli/__init__.py
+src/polyconv/cli/main.py
+src/polyconv/test_data/__init__.py
+src/polyconv/test_data/test_data.py
+src/polygon_convert.egg-info/PKG-INFO
+src/polygon_convert.egg-info/SOURCES.txt
+src/polygon_convert.egg-info/dependency_links.txt
+src/polygon_convert.egg-info/entry_points.txt
+src/polygon_convert.egg-info/top_level.txt
