@@ -1,0 +1,62 @@
+# pyproject.toml (修正案)
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# パッケージ名: PyPI上で利用可能か最終確認してください
+# https://pypi.org/ で "lynxkit-markdown" を検索
+name = "lynxkit-markdown"
+
+# バージョン: 初めて公開するので 0.1.0 とします
+version = "0.1.0"
+
+# 作者情報 (提供された情報に基づき設定)
+authors = [
+  { name="koinunopochi", email="koinunopochi@gmail.com" },
+]
+
+# パッケージの短い説明
+description = "URLからWebページを取得し、markitdownライブラリを使ってMarkdown形式に変換するシンプルなツール"
+
+# READMEファイル名を指定
+readme = "README.md"
+
+# 対応するPythonのバージョン
+requires-python = ">=3.8"
+
+# ライセンスをMITと指定
+license = { text="MIT" }
+
+# PyPIでの検索用キーワード (任意)
+keywords = ["markdown", "html", "converter", "url", "web", "lynxkit", "markitdown"]
+
+# PyPIでの分類タグ (このままでOK)
+classifiers = [
+    "Development Status :: 3 - Alpha", # 開発初期段階
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13", # Python 3.13対応
+    "Topic :: Text Processing :: Markup :: Markdown",
+    "Topic :: Internet :: WWW/HTTP",
+    "Operating System :: OS Independent",
+]
+
+# === 依存関係 ===
+# このパッケージが直接必要とするライブラリのみを記述します
+dependencies = [
+    "requests>=2.25.0",    # URL取得用
+    "markitdown>=0.1.1", # Markdown変換用 (バージョン指定は>=が良いかも)
+]
+# 提供されたリストにあった他の多くのライブラリは、ここでは不要です。
+
+# プロジェクトの関連URL (提供された情報に基づき設定)
+[project.urls]
+Homepage = "https://github.com/koinunopochi/LynxKit-Markdown"
+Repository = "https://github.com/koinunopochi/LynxKit-Markdown"
