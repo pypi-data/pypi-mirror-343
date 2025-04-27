@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: ca-ua-image_processing
+Version: 0.0.1
+Summary: Image processing package using skimage
+Home-page: https://github.com/Ca-ua/image-processing-package
+Author: Caua
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# image_processing
+
+Description. 
+The package image_processing is used to:
+	Processing:
+		- Histrogram matching
+		- Strucutural similarity
+		- Resize images
+	Utils:
+		- Read image
+		- Save image
+		- Plot image
+		- Plot result
+		- Plot histrogram
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
+
+```bash
+pip install image_processing
+```
+
+
+
+## Author
+Caua Lira
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
