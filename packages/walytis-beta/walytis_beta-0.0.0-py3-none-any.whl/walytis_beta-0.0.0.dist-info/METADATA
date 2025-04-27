@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: walytis_beta
+Version: 0.0.0
+Summary: A lightweight, flexible, non-linear blockchain.
+Author: emendir
+Project-URL: Homepage, https://ipfs.io/ipns/k2k4r8nismm5mmgrox2fci816xvj4l4cudnuc55gkfoealjuiaexbsup/Sites/BrenthyAndWalytis/
+Project-URL: Github, https://github.com/emendir/BrenthyAndWalytis
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
