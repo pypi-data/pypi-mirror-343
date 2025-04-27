@@ -1,0 +1,2 @@
+[console_scripts]
+argkit_feed = argkit.static:modify_pattern_feed
