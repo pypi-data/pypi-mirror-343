@@ -1,0 +1,2 @@
+[flake8.extension]
+F8 = flaekextens.main:ASTParser
