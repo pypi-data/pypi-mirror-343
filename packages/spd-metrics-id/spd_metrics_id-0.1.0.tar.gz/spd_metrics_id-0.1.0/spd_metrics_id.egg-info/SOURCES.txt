@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.py
+spd_metrics_id/__init__.py
+spd_metrics_id/cli.py
+spd_metrics_id/distance.py
+spd_metrics_id/id_rate.py
+spd_metrics_id/io.py
+spd_metrics_id.egg-info/PKG-INFO
+spd_metrics_id.egg-info/SOURCES.txt
+spd_metrics_id.egg-info/dependency_links.txt
+spd_metrics_id.egg-info/entry_points.txt
+spd_metrics_id.egg-info/requires.txt
+spd_metrics_id.egg-info/top_level.txt
+tests/test_id_rate.py
+tests/test_metrics.py
