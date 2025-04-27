@@ -1,0 +1,4 @@
+include aquacrop/templates/data/*.Tnx
+include aquacrop/templates/data/*.ETo
+include aquacrop/templates/data/*.PLU
+include aquacrop/templates/data/*.CO2
