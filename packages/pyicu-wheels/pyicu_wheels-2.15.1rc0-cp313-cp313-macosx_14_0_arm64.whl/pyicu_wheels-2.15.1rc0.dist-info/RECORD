@@ -1,0 +1,10 @@
+pyicu_wheels-2.15.1rc0.dist-info/RECORD,,
+pyicu_wheels-2.15.1rc0.dist-info/WHEEL,sha256=DfvsD3mH-L7igQX_VcclQmlrx0voAFox1G7GlboOTkw,105
+pyicu_wheels-2.15.1rc0.dist-info/METADATA,sha256=IAyXvshHHCaIGbO89xL30anHTkS2k4RH0T0bzYYSE_M,1777
+pyicu_wheels-2.15.1rc0.dist-info/licenses/LICENSE.txt,sha256=B05uMshqTA74s-0ltyHKI6yoPfJ3zYgQbvcXfDVGFf8,10280
+icu/_icu_.cpython-313-darwin.so,sha256=y8RDFZeTgUJESKHmi6-e3aljdjMv6Ng_JEwLpjY7DqY,1681344
+icu/__init__.py,sha256=NWwSqUo-rXGl7BpS8x80YmVw8kh1pfhjqRiwMsPZPc8,1589
+icu/__about__.py,sha256=IYT6BVAoCSybkwNoUWQpRFo00r8A0Zciw7ie2vVvNf8,139
+icu/.dylibs/libicudata.77.1.dylib,sha256=MFrFfIOIUHv77ia_dBdnFcFD92vnlBIbdkKJqJdLqrw,32167248
+icu/.dylibs/libicuuc.77.1.dylib,sha256=0wyilhhj3bSXIcimZ0VbONIStUDdrFPULfJX-dPczWg,1841072
+icu/.dylibs/libicui18n.77.1.dylib,sha256=kQD3pMtCXTdUlyZqQs1LP7XtA0zdFkK-tj9lfzRtCbU,3174032
