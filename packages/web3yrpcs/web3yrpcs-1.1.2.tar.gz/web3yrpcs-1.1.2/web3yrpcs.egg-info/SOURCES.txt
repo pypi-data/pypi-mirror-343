@@ -1,0 +1,8 @@
+README.md
+setup.py
+web3rpcs/__init__.py
+web3rpcs/web3rpcs.py
+web3yrpcs.egg-info/PKG-INFO
+web3yrpcs.egg-info/SOURCES.txt
+web3yrpcs.egg-info/dependency_links.txt
+web3yrpcs.egg-info/top_level.txt
