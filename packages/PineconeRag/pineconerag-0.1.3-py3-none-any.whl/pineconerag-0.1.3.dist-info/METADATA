@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: PineconeRag
+Version: 0.1.3
+Summary: A utility package for Pinecone RAG operations
+Home-page: https://github.com/KevinFreistroffer/Pinecone_RAG_retriever
+Author: Kevin Freistroffer
+Author-email: kevin.freistroffer@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pinecone-client >=5.0.1
+Requires-Dist: sentence-transformers >=2.2.2
+Requires-Dist: python-dotenv >=1.0.0
+
+# Pinecone RAG
+
+A Python package for working with Pinecone in RAG (Retrieval-Augmented Generation) applications.
+
+## Installation
+
+```bash
+pip install pinecone-rag
+```
+
+## Usage
+
+```python
+from PineconeRag import PineconeRAG
+
+# Initialize the RAG client
+rag = PineconeRAG(
+    api_key="your-api-key",  # or set PINECONE_API_KEY env var
+    index_name="rag-768"     # optional, defaults to "rag-768"
+)
+
+# Define a callback function (optional)
+def process_match(match):
+    print(f"Found match with score: {match['score']}")
+    print(f"Text: {match['metadata']['original_text']}")
+
+# Query Pinecone
+results = rag.query(
+    namespace="your-namespace",
+    text="your query text",
+    top_k=3,
+    include_metadata=True,  # optional, defaults to True
+    callback=process_match,  # optional callback
+    debug=True  # optional debug mode
+)
+```
+
+## Publishing to PyPI
+
+```bash
+python3 -m pip install --upgrade build
+python3 -m build
+python3 -m twine upload --repository pypi dist/*
+```
