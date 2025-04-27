@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Nova Controller CLI Configuration",
+  "description": "Configuration settings for the novactl application.",
+  "type": "object",
+  "properties": {
+    "keycloak_server_url": {
+      "description": "Base URL of the Keycloak server (e.g., https://keycloak.example.com).",
+      "type": "string",
+      "format": "uri"
+    },
+    "keycloak_realm": {
+      "description": "The Keycloak realm to authenticate against.",
+      "type": "string",
+      "minLength": 1
+    },
+    "keycloak_client_id": {
+      "description": "The Keycloak Client ID registered for novactl.",
+      "type": "string",
+      "minLength": 1
+    },
+    "keyring_service_name": {
+      "description": "The service name used for storing tokens in the system keyring.",
+      "type": "string",
+      "default": "novactl",
+      "minLength": 1
+    },
+    "additional_scopes": {
+      "description": "Space-separated list of additional OAuth scopes to request.",
+      "type": "string",
+      "default": "openid email profile offline_access"
+    },
+    "token_leeway_seconds": {
+      "description": "Leeway in seconds for token expiration validation to account for clock skew.",
+      "type": "integer",
+      "minimum": 0,
+      "default": 60
+    },
+    "ssl_verify": {
+      "description": "Verify SSL/TLS certificates for HTTPS requests. Can be true, false, or a path to a CA bundle.",
+      "type": ["boolean", "string"],
+      "default": true
+    },
+    "log_level": {
+      "description": "Set the application log level for file logging.",
+      "type": "string",
+      "enum": ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
+      "default": "WARNING"
+    },
+    "console_log_level": {
+       "description": "Set the application log level for console output.",
+       "type": "string",
+       "enum": ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
+       "default": "INFO"
+    }
+  },
+  "required": [
+    "keycloak_server_url",
+    "keycloak_realm",
+    "keycloak_client_id"
+  ],
+  "additionalProperties": false
+}
