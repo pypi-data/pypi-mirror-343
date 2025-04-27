@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: achilles-optimizer
+Version: 0.1.0
+Summary: Claude-Powered Python Performance Optimizer
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: anthropic>=0.50.0
+Requires-Dist: build>=1.2.2.post1
+Requires-Dist: dotenv>=0.9.9
+Requires-Dist: pybind11>=2.13.6
+Requires-Dist: rich>=14.0.0
+Requires-Dist: setuptools>=79.0.1
+Requires-Dist: twine>=6.1.0
+
+### Achilles: LLM-powered Python performance optimizer
+
+
+## How to use Achilles
+
+Install Achilles using the following command:
+
+""" ACHILLES INSTALL COMMAND SHOULD BE PUT HERE """
+
+Once Achilles is installed, you can optimize a python executable using the following command:
+
+""" achilles optimize your_python_file.py --your_python_args """
+
+If you've already ran Achilles once, you can benchmark it against the non-optimized python code with the following command:
+
+""" achilles benchmark your_python_file.py --your_python_args """
+
+To run a python executable using achillles, just type the following command:
+
+""" achilles run your_python_file.py --your_python_args """
