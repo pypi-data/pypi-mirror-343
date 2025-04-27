@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+folder_tree_lister/__init__.py
+folder_tree_lister/tree_listing.py
+folder_tree_lister.egg-info/PKG-INFO
+folder_tree_lister.egg-info/SOURCES.txt
+folder_tree_lister.egg-info/dependency_links.txt
+folder_tree_lister.egg-info/top_level.txt
