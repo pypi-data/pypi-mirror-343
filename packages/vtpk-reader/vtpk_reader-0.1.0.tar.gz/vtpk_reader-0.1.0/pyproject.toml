@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "vtpk-reader"
+version = "0.1.0"
+description = "Reading ESRI Vector Tile Package (vtpk) files."
+license = "MIT"
+authors = [
+    "Kirill Shklovsky <kirill.shklovsky@gmail.com>",
+]
+repository = "https://github.com/kshklovsky/vtpk-reader"
+readme = "README.md"
+exclude = [
+    "**/tests/**",
+]
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+include = [
+    "README.md",
+]
+packages = [
+    { include = "vtpk_reader" }
+]
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+shapely = "^2.0.0"
+pyproj = "^3.4.1"
+mapbox-vector-tile = "^2.1.0"
+
+[tool.poetry.group.test.dependencies]
+tox = "^4.0.16"
+coverage = { version = "^7.0.0", extras = ["toml"] }
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
+[tool.ruff]
+line-length = 120
+target-version = "py38"
+show-fixes = true
+extend-include = ["*.ipynb"]
+
+# Coverage
+[tool.coverage.run]
+
+[[tool.mypy.overrides]]
+module = ["mapbox_vector_tile.*"]
+follow_untyped_imports = true
