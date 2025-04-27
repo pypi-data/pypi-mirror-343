@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: gblurs
+Version: 8
+Summary: All Gaussian Blurs
+Author: Enric Meinhardt-Llopis
+Author-email: enric.meinhardt@fastmail.com
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: summary
