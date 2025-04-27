@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+bin/infoauth
+infoauth/__init__.py
+infoauth.egg-info/PKG-INFO
+infoauth.egg-info/SOURCES.txt
+infoauth.egg-info/dependency_links.txt
+infoauth.egg-info/top_level.txt
+tests/test_base.py
+tests/test_infra.py
