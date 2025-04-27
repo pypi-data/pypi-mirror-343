@@ -1,0 +1,42 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Coverate
+.coverage
+coverage.xml
+
+# Tox 
+.tox
+
+# Mac OS
+.DS_Store
+
+# Environment variables
+.env
+
+# tfevents
+*.tfevents*
+
+# CSV
+*.csv
+
+# Images
+*.png
+
+# Checkpoints
+checkpoints/
+*.zip
+
+# Numpy
+*.npy
+
+# Experiments
+experiments/
