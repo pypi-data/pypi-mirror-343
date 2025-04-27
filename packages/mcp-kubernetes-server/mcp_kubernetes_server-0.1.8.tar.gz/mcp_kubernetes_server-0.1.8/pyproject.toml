@@ -1,0 +1,13 @@
+[project]
+name = "mcp-kubernetes-server"
+version = "0.1.8"
+description = "MCP server to manage Kubernetes clusters via kubectl"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastmcp>=2.2.3",
+    "kubernetes>=32.0.1",
+]
+
+[project.scripts]
+mcp-kubernetes-server = "mcp_kubernetes_server:main"
