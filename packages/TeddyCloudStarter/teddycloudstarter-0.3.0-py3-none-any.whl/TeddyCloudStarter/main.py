@@ -1,0 +1,97 @@
+#!/usr/bin/env python3
+"""
+TeddyCloudStarter - The wizard for setting up TeddyCloud with Docker.
+"""
+import os
+import sys
+import subprocess
+from pathlib import Path
+
+# Ensure required packages are installed
+try:
+    from rich.console import Console
+    from rich.panel import Panel
+    import questionary
+    import jinja2
+except ImportError:
+    print("Required packages not found. Installing them...")
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "rich", "questionary", "jinja2"])
+    from rich.console import Console
+    from rich.panel import Panel
+    import questionary
+    import jinja2
+
+# Import our modules
+from .main_wizard import TeddyCloudWizard
+from .version_handler import check_for_updates
+from .wizard.ui_helpers import console
+from .config_manager import DEFAULT_CONFIG_PATH
+from .utils import get_project_path, ensure_project_directories
+
+# Determine if running as installed package or directly from source
+try:
+    # When running as an installed package
+    package_path = os.path.dirname(__file__)
+    is_installed_package = True
+except NameError:
+    # When running directly from source
+    package_path = os.path.dirname(os.path.abspath(__file__))
+    is_installed_package = False
+
+# Set up paths for resources
+if is_installed_package:
+    # When installed as a package, locales are included as package data
+    LOCALES_DIR = Path(package_path) / "locales"
+else:
+    # When running from source directory
+    LOCALES_DIR = Path("locales")
+
+def main():
+    """Main entry point for the TeddyCloud Setup Wizard."""
+    # Check for updates first
+    check_for_updates()
+    
+    # Create the wizard instance with the correct locales directory
+    wizard = TeddyCloudWizard(LOCALES_DIR)
+
+    # Check if config exists
+    config_exists = os.path.exists(DEFAULT_CONFIG_PATH)
+    
+    if config_exists:
+        # Check if language is set and not empty
+        if not wizard.config_manager.config.get("language"):
+            wizard.select_language()
+        else:
+            # Set the language from config without showing selection
+            wizard.translator.set_language(wizard.config_manager.config["language"])
+    else:
+        # If no config, select language
+        wizard.select_language()
+    
+    wizard.show_welcome()
+    wizard.show_develmsg()
+    # Project path selection - always show this page if path is not set
+    if not wizard.config_manager.config.get("environment", {}).get("path"):
+        wizard.select_project_path()
+    
+    # Get the project path from config and ensure directories exist
+    project_path = get_project_path(wizard.config_manager)
+    ensure_project_directories(project_path)
+    
+    if config_exists:
+        # If config exists, show pre-wizard menu in a loop until user exits
+        show_menu = True
+        while show_menu:
+            result = wizard.show_pre_wizard()
+            # If the result is False, it means the user chose to exit
+            if result == False:
+                show_menu = False
+    else:
+        # If no config, run the wizard
+        wizard.run_wizard()
+    
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
