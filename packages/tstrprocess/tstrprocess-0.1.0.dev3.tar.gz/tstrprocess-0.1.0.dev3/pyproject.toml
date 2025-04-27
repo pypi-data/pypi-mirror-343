@@ -1,0 +1,29 @@
+[project]
+name = "tstrprocess"
+version = "0.1.0.dev3"
+description = "t-string based subprocess invocation"
+authors = [
+    { name = "Alyssa Coghlan", email = "ncoghlan@gmail.com" },
+    { name = "Nick Humrich", email = "nick@humrich.us" },
+]
+dependencies = [
+    "plumbum>=1.9.0",
+]
+requires-python = ">=3.13"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Homepage = "https://github.com/ncoghlan/tstrprocess"
+Issues = "https://github.com/ncoghlan/tstrprocess/issues"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true

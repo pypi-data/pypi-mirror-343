@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: tstrprocess
+Version: 0.1.0.dev3
+Summary: t-string based subprocess invocation
+Author-Email: Alyssa Coghlan <ncoghlan@gmail.com>, Nick Humrich <nick@humrich.us>
+License: MIT
+Project-URL: Homepage, https://github.com/ncoghlan/tstrprocess
+Project-URL: Issues, https://github.com/ncoghlan/tstrprocess/issues
+Requires-Python: >=3.13
+Requires-Dist: plumbum>=1.9.0
+Description-Content-Type: text/markdown
+
+# tstrprocess
+
+Experimental library exploring potential interfaces for using Python 3.14's
+t-strings to provide more ergonomic subprocess invocation in Python using
+shell-style pipelines and IO redirection, but without the security concerns
+around mixing user provided input with full system shell invocation.
+
+See [PEP 787](https://peps.python.org/pep-0787/) for additional background.
+
+Note: this initial release just reserves the project name on PyPI. As
+[PEP 750](https://peps.python.org/pep-0750/) was accepted after the final
+Python 3.14 alpha release, releases with actual code will require
+Python 3.14.0b1 or later.
