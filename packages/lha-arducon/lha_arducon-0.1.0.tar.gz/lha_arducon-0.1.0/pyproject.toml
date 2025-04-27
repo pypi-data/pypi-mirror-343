@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lha_arducon"
+version = "0.1.0"
+description = "Arduino 시리얼 통신을 쉽게 제어하는 Python 라이브러리"
+authors = [
+  { name = "Lee Hyuna", email = "lha110@naver.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }  
+requires-python = ">=3.7"
+dependencies = [
+    "pyserial>=3.5"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
