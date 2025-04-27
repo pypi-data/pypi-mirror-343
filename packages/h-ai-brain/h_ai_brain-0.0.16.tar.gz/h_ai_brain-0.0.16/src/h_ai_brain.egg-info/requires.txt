@@ -1,0 +1,4 @@
+h_message_bus~=0.0.21
+
+[dev]
+pytest
