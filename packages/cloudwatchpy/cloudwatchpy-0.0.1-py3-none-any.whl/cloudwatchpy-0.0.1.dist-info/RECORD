@@ -1,0 +1,14 @@
+cloudwatchpy/__init__.py,sha256=ugyuFliEqtAwQmH4sTlc16YXKYbFWDmfyk87fErB8-8,21
+cloudwatchpy/batcher.py,sha256=4N_dox8JDV5rjybay3I0aXY6rnOMrGQ5TqVzRaPj4a4,842
+cloudwatchpy/client.py,sha256=pH8TWK2l-58qhXr5ABLj3gBnz9SuE6KNefpECgyVGsM,2976
+cloudwatchpy/compressor.py,sha256=AFDkHkiAzj1FceaY8LgRiTFkef4UGP8ECOfdjlNFm4g,607
+cloudwatchpy/config.py,sha256=1jrj6u0HYBQuKbzO7c5yqQN7BJzxpRzgZ3A-8IKtICw,936
+cloudwatchpy/exceptions.py,sha256=ZzNtds86_EDHd0qoL2GBQ31tqfsmQxHm7jqDEDW5cGs,1123
+cloudwatchpy/fallback_logger.py,sha256=cw6xGC-47yRa2YtngTy70YuMjyf8g9Y1DXO2keD93vk,1215
+cloudwatchpy/logger.py,sha256=aXNUVvj40Tj5yhyiXF-3_o3Elb-D7pM6OvaoA6Ym3Vw,1758
+cloudwatchpy/middleware.py,sha256=C5rxN9uDRJYNfuy5Tm_elUo81hf6yzUT6CpL447kmto,1008
+cloudwatchpy/models.py,sha256=LlEa3RTdQMAZNl6UBxl1WkoGabNCrtjOflyAM6Jbs2M,518
+cloudwatchpy/utils.py,sha256=wo1u-U1qrB5_mz0yL7eTaoglar35HyJqRWSvaCH2rkc,1542
+cloudwatchpy-0.0.1.dist-info/METADATA,sha256=YI1AugskPjFjUbtu1ZODyBJZ-W6fFDvrHJI0pVG8dyA,3034
+cloudwatchpy-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+cloudwatchpy-0.0.1.dist-info/RECORD,,
