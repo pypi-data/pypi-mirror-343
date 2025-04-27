@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+NoteClient.egg-info/PKG-INFO
+NoteClient.egg-info/SOURCES.txt
+NoteClient.egg-info/dependency_links.txt
+NoteClient.egg-info/requires.txt
+NoteClient.egg-info/top_level.txt
+note_client/__init__.py
+note_client/note_client.py
