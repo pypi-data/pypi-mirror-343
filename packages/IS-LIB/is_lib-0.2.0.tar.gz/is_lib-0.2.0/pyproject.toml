@@ -1,0 +1,12 @@
+[project]
+name = "IS_LIB"
+version = "0.2.0"
+description = "IsLib - for Inspiroy Systems "
+authors = [{ name = "Szogun", email = "0yaeshogun0@gmail.com" }]
+license = "MIT"
+dependencies = ["flask"]
+
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: IS_LIB
+Version: 0.2.0
+Summary: IsLib - for Inspiroy Systems 
+Author-email: Szogun <0yaeshogun0@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Requires-Dist: flask
+Dynamic: license-file
