@@ -1,0 +1,15 @@
+openai>=1.0.0
+click>=8.0.0
+rich>=10.0.0
+pydantic>=2.0.0
+pyperclip>=1.8.0
+
+[dev]
+pytest>=7.0.0
+pytest-cov>=4.0.0
+flake8>=6.0.0
+tox>=4.0.0
+twine>=4.0.0
+wheel>=0.40.0
+build>=0.10.0
+watchdog
