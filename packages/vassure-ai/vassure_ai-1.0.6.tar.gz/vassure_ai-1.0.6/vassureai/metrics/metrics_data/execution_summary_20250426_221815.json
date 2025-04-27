@@ -1,0 +1,33 @@
+{
+  "timestamp": "20250426_221815",
+  "total_tests": 2,
+  "passed_tests": 2,
+  "failed_tests": 0,
+  "total_duration": 35.91353099999999,
+  "average_duration": 17.956765499999996,
+  "success_rate": 100.0,
+  "system_metrics": {
+    "cpu_usage_percent": 1.0,
+    "memory_usage_percent": 78.2,
+    "memory_available_mb": 1715.83203125,
+    "disk_usage_percent": 10.1,
+    "disk_free_gb": 837.7865104675293
+  },
+  "tests": {
+    "test_execution": [],
+    "create_deviation": [
+      {
+        "duration": 17.603462999999998,
+        "status": "COMPLETED",
+        "success_rate": 100.0
+      }
+    ],
+    "sample_testcase": [
+      {
+        "duration": 18.310067999999998,
+        "status": "COMPLETED",
+        "success_rate": 100.0
+      }
+    ]
+  }
+}
