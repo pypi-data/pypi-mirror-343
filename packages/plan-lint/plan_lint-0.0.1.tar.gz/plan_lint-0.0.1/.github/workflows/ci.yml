@@ -1,0 +1,80 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, staging ]
+  pull_request:
+    branches: [ main, staging ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Setup uv
+      uses: astral-sh/setup-uv@v5
+      with:
+        enable-cache: true
+    
+    - name: Install dependencies
+      run: |
+        uv pip install --system -e ".[dev]"
+        uv pip install --system types-jsonschema types-PyYAML --break-system-packages
+    
+    - name: Lint with ruff
+      run: |
+        ruff check .
+    
+    - name: Type check with mypy
+      run: |
+        mypy src
+    
+    - name: Test with pytest
+      run: |
+        pytest tests/ --cov=src/plan_lint --cov-report=xml
+    
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./coverage.xml
+        fail_ci_if_error: false
+
+  lint-test-plans:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Setup uv
+      uses: astral-sh/setup-uv@v5
+      with:
+        enable-cache: true
+    
+    - name: Install dependencies
+      run: |
+        uv pip install --system -e .
+    
+    - name: Test example plans with linter
+      run: |
+        python -m plan_lint src/plan_lint/examples/price_drop.json --policy src/plan_lint/examples/policy.yaml
+      continue-on-error: true
+    
+    - name: Verify linter behavior
+      run: |
+        # Run the linter and capture the exit code
+        python -m plan_lint src/plan_lint/examples/price_drop.json --policy src/plan_lint/examples/policy.yaml --format json > linter_output.json || echo "Linter found issues as expected"
+        
+        # Check that the output contains the expected errors
+        cat linter_output.json | grep -q "TOOL_DENY" && cat linter_output.json | grep -q "RAW_SECRET" && echo "✅ Linter correctly identified policy violations"
