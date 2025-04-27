@@ -1,0 +1,28 @@
+
+[:python_version == "3.6"]
+typing-extensions<4.2.0,>=3.10
+
+[:python_version >= "3.7" and python_version <= "3.9"]
+typing-extensions>=3.10
+
+[test]
+pytest>=7.0.0
+pluggy>=0.13.1
+
+[test:python_version <= "3.11"]
+six>=1.14.0
+
+[test:python_version <= "3.7"]
+virtualenv<20.16.3,>=20.2.1
+
+[test:python_version == "3.6"]
+packaging>=21.3
+
+[test:python_version >= "3.12"]
+six>=1.16.0
+
+[test:python_version >= "3.7"]
+packaging>=22.0
+
+[test:python_version >= "3.8"]
+virtualenv>=20.26.6
