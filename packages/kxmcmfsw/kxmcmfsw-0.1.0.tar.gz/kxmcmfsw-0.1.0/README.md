@@ -1,0 +1,25 @@
+创建项目
+
+几个常用的选项如下：
+
+uv init --app  创建一个普通的app， 这个也是默认的选项，这种就是最基础的项目，这类型的项目不能直接打包，由于pyproject.toml 中没有配置build system
+
+uv init --package  创建一个“包”， 这类型的项目可以被打包发布，pyproject.toml 中会自动配置 build system，并且可以发布为工具(tool)，使用 uv tool run （或者 uvx ）来直接运行(本节重点介绍此种方式创建的包)
+
+uv init --lib  创建一个"库"， 这种和package 的区别在于没有project.scripts, 不能当工具来使用
+
+上一节使用 uv init xxxx 来初始化一个普通的项目，普通的项目没有打包编译选项。
+
+
+# windows
+py -m build
+# unlix/macOS
+python3 -m build
+
+
+uv run twine upload dist/*  
+
+MCP测试：npx @modelcontextprotocol/inspector uvx KxmcMcpFileSystemWin
+
+
+setup.py参考：https://github.com/cs01/pycowsay
