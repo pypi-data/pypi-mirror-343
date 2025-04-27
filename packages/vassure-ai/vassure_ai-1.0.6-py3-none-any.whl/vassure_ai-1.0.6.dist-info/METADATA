@@ -1,0 +1,715 @@
+Metadata-Version: 2.4
+Name: vassure-ai
+Version: 1.0.6
+Summary: VAssureAI Test Automation Framework
+Home-page: https://github.com/yourusername/vassure-ai
+Author: Sukumar Kutagulla
+Author-email: automationsukumar@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Testing :: Acceptance
+Classifier: Topic :: Software Development :: Testing :: BDD
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: browser-use>=0.1.41
+Requires-Dist: pytest>=8.3.5
+Requires-Dist: pytest-asyncio>=0.26.0
+Requires-Dist: pytest-html>=4.1.1
+Requires-Dist: pytest-metadata>=3.1.1
+Requires-Dist: pytest-timeout>=2.3.1
+Requires-Dist: pytest-xdist>=3.6.1
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: langchain>=0.1.0
+Requires-Dist: langchain-google-genai>=0.0.10
+Requires-Dist: pydantic>=2.10.0
+Requires-Dist: psutil>=5.9.0
+Requires-Dist: plotly>=5.18.0
+Requires-Dist: reportlab>=4.0.0
+Requires-Dist: pillow>=10.0.0
+Requires-Dist: PyPDF2>=3.0.0
+Requires-Dist: watchdog>=3.0.0
+Requires-Dist: Jinja2>=3.1.0
+Requires-Dist: click>=8.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+"""
+-----------------------
+Author: Sukumar Kutagulla (Read-only)
+Designation: Test Automation Architect (Read-only)
+Copyright (c) 2025. All Rights Reserved.
+-----------------------
+"""
+
+# VAssureAI Framework
+
+An AI-powered test automation framework that converts natural language test specifications from PDF documents into executable tests with minimal coding requirements.
+
+## Table of Contents
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [Architecture](#architecture)
+- [Installation](#installation)
+- [Required Credentials](#required-credentials)
+- [Project Structure](#project-structure)
+- [Usage Guide](#usage-guide)
+- [Test Creation Methods](#test-creation-methods)
+- [Advanced Configuration](#advanced-configuration)
+- [API Reference](#api-reference)
+- [Development](#development)
+- [Troubleshooting](#troubleshooting)
+
+## Overview
+
+VAssureAI combines the power of large language models with Playwright-based browser automation to create a robust testing solution that requires minimal coding. The framework automatically processes test specifications in PDF format and generates executable test scripts. A built-in AI engine interprets natural language test steps and executes them against web applications with high reliability.
+
+## Key Features
+
+- **PDF to Test Conversion**: Automatically generate Python test scripts from PDF specifications
+- **AI-Powered Test Execution**: Leverages Google's Gemini models to interpret and execute test steps intelligently
+- **Self-Healing Tests**: Adapts to minor UI changes and handles dynamic elements effectively
+- **Comprehensive Reporting**: Detailed HTML and PDF reports with screenshots, videos, and performance metrics
+- **Project Isolation**: All generated artifacts are saved in the user's project directory
+- **Simplified CLI**: Easy-to-use command line interface for all framework operations
+- **Interactive Mode**: Menu-driven interface for generating and executing tests
+- **Visual Validation**: Captures screenshots at critical steps for visual verification
+- **Retry Mechanisms**: Sophisticated retry logic for handling flaky tests and network issues
+- **Parallel Execution**: Support for running tests in parallel with pytest-xdist
+- **Configurable Environment**: Extensive configuration options via .env files and CLI
+
+## Architecture
+
+VAssureAI follows a modular architecture with these key components:
+
+### 1. Test Generation Module
+- **PDFTestProcessor**: Extracts test specifications from PDF documents
+- **ScriptGenerator**: Transforms extracted specifications into executable Python tests
+- **TemplateEngine**: Uses Jinja2 templates to generate standardized test scripts
+
+### 2. Browser Automation Core
+- **BaseTest**: Core class that all tests inherit from
+- **Browser Agent**: AI-powered browser interaction built on top of browser-use
+- **Controller**: Custom controller for precise browser manipulation
+- **Visual Engine**: Handles screenshot capture and comparison
+
+### 3. Reporting Engine
+- **TestReport**: Generates comprehensive PDF test reports
+- **HTML Reporter**: Creates interactive HTML test results
+- **Metrics Reporter**: Collects and analyzes test performance data
+- **Monitoring**: Real-time test execution monitoring
+
+### 4. CLI Interface
+- **Command Processor**: Handles command-line arguments and operations
+- **Project Initializer**: Sets up project directory structure and config files
+- **PDF Watcher**: Monitors for new/changed PDF specifications
+- **Interactive Mode**: Menu-driven interface similar to the batch file
+
+## Installation
+
+### Prerequisites
+- Python 3.11 or newer
+- Chrome, Firefox, or Edge browser
+- 8GB+ RAM recommended
+- Internet connection for AI model access
+- Google Cloud account with API access for Gemini model
+
+### Standard Installation
+```bash
+# Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install the package
+pip install vassure-ai
+```
+
+### Development Installation
+```bash
+# Clone repository
+git clone https://github.com/yourusername/vassure-ai.git
+cd vassure-ai
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install in development mode
+pip install -e .
+
+# Install development dependencies
+pip install -r requirements-dev.txt
+```
+
+## Required Credentials
+
+### Google Cloud API Setup for AI Features
+
+VAssureAI uses Google's Gemini models for AI-powered test execution. To use these features, you need to:
+
+1. **Create a Google Cloud Project**:
+   - Visit the [Google Cloud Console](https://console.cloud.google.com/)
+   - Create a new project or select an existing one
+   - Enable the Gemini API (formerly Vertex AI API)
+
+2. **Create API Credentials**:
+   - In the Google Cloud Console, navigate to "APIs & Services" > "Credentials"
+   - Create an API Key for Gemini API
+   - Or create a Service Account for more secure authentication
+
+3. **Configure Authentication**:
+
+   **Option 1: Using API Key (Recommended for new users)**
+   - Add your API key to the `.env` file:
+     ```env
+     LLM_API_KEY=your-api-key-here
+     ```
+
+   **Option 2: Using Application Default Credentials**
+   - Install Google Cloud CLI: [Installation Guide](https://cloud.google.com/sdk/docs/install)
+   - Log in and set up default credentials:
+     ```bash
+     gcloud auth application-default login
+     ```
+   - This creates credentials in your user account that VAssureAI can automatically use
+
+   **Option 3: Using Service Account Key**
+   - In Google Cloud Console, create a service account and download the JSON key file
+   - Set the environment variable to point to your key file:
+     ```bash
+     # On Windows
+     set GOOGLE_APPLICATION_CREDENTIALS=path\to\your\service-account-key.json
+     
+     # On macOS/Linux
+     export GOOGLE_APPLICATION_CREDENTIALS=path/to/your/service-account-key.json
+     ```
+
+4. **Test Your Credentials**:
+   ```bash
+   # This command should work after setting up credentials
+   vassure test-credentials
+   ```
+
+### Protected Content Handling
+
+VAssureAI includes features to protect sensitive content in your test specifications and reports:
+
+1. **Content Protection in PDFs**:
+   - Sensitive data in PDFs is automatically detected and masked in generated test scripts
+   - Use the `@protect` annotation in PDFs to explicitly protect content
+
+2. **Credential Handling**:
+   - Store sensitive credentials in environment variables or .env files
+   - Never hard-code credentials in test scripts or PDFs
+   - Use the framework's built-in credential management:
+     ```python
+     from vassureai.utils.security import SecureStore
+     
+     # Store a secure credential
+     SecureStore.set("db_password", "secret123")
+     
+     # Use a credential in tests
+     password = SecureStore.get("db_password")
+     ```
+
+3. **Report Security**:
+   - Enable content protection in reports:
+     ```env
+     REPORT_PROTECT_SENSITIVE=true
+     ```
+
+## Project Structure
+
+### Framework Structure
+```
+vassureai/
+├── __init__.py           # Package initialization
+├── cli.py               # Command line interface
+├── init_project.py      # Project initialization utilities
+├── actions/             # Custom browser actions
+│   └── custom_actions.py
+├── metrics/             # Performance metrics collection
+│   ├── monitoring.py
+│   └── metrics_reporter.py
+├── templates/           # Jinja2 templates for code generation
+│   └── test_template.py
+├── tests/               # Framework's internal tests
+│   └── __init__.py
+└── utils/               # Core utilities
+    ├── __init__.py
+    ├── base_test.py     # Base test class
+    ├── config.py        # Configuration handling
+    ├── controller_setup.py  # Browser controller setup
+    ├── file_protection.py   # File protection utilities
+    ├── logger.py        # Logging utilities
+    ├── pdfgenerator.py  # PDF report generation
+    ├── test_generator.py    # Test script generation
+    └── utilities.py     # Misc utilities
+```
+
+### Project Structure After Initialization
+```
+user-project/
+├── input_pdfs/           # Place PDF test specifications here
+├── tests/                # Generated test scripts
+├── reports/              # Test execution reports
+│   ├── html/             # HTML reports
+│   └── pdf/              # PDF reports
+├── screenshots/          # Test execution screenshots
+├── videos/               # Browser recording videos
+├── logs/                 # Test execution logs
+├── metrics/              # Test performance metrics
+│   └── metrics_data/     # Raw metrics data
+├── .env                  # Environment configuration
+├── conftest.py           # Test configuration
+├── pytest.ini            # Pytest configuration
+└── README.md             # Project documentation
+```
+
+## Usage Guide
+
+### Initializing a Project
+```bash
+# Create a new project in a new directory
+vassure init my-test-project
+cd my-test-project
+
+# Initialize in current directory
+vassure init
+```
+
+### Configuring Your Environment
+Create a `.env` file in your project root with these settings:
+```env
+# Browser Configuration
+BROWSER_TYPE=chromium  # chromium, firefox, webkit
+BROWSER_HEADLESS=false
+BROWSER_RECORD_VIDEO=true
+BROWSER_SLOW_MO=0
+BROWSER_TIMEOUT=30000
+BROWSER_VIEWPORT_WIDTH=1280
+BROWSER_VIEWPORT_HEIGHT=720
+
+# AI Model Configuration
+LLM_MODEL=gemini-2.0-flash-exp
+LLM_API_KEY=your-api-key-here
+LLM_MAX_TOKENS=4096
+LLM_TEMPERATURE=0.2
+
+# Test Settings
+RETRY_MAX_RETRIES=2
+RETRY_DELAY=5
+RETRY_ON_NETWORK=true
+RETRY_ON_ELEMENT_NOT_FOUND=true
+
+# Visual Settings
+VISUAL_HIGHLIGHT=true
+VISUAL_SCREENSHOT_ON_STEP=false
+VISUAL_SCREENSHOT_ON_ERROR=true
+VISUAL_COMPARISON_THRESHOLD=0.95
+```
+
+### CLI Commands Reference
+
+```bash
+# Initialize a new project
+vassure init [project_name]
+
+# Watch for new PDFs and generate tests
+vassure watch-pdfs [input_path]
+
+# Process a single PDF file
+vassure process-pdf path/to/file.pdf
+
+# Run tests
+vassure run [options]
+  Options:
+    --test-dir, -t       Specify test directory (default: tests)
+    --html-report, -r    Generate HTML report
+    --parallel, -n       Run tests in parallel (specify number)
+    
+# Start interactive mode
+vassure interactive
+  Provides a menu-driven interface for:
+  - Creating/updating tests from PDFs
+  - Executing existing tests
+  - Configuring test execution options
+    
+# Display version
+vassure version
+```
+
+### Using the Interactive Mode
+
+The interactive mode provides a menu-driven interface similar to the batch file:
+
+1. Run `vassure interactive` in your terminal
+2. Select an action:
+   - Create/Update Tests from PDF
+   - Execute Existing Tests
+3. Follow the prompts to configure your test execution settings
+4. Review and confirm your settings
+
+This mode is especially helpful for new users or when you prefer a guided experience rather than remembering CLI commands.
+
+### Using the Batch File (For Framework Development)
+
+For framework development or when working directly with the framework source code, you can use the included batch file:
+
+1. Open a command prompt in the framework's main directory
+2. Run `start_framework.bat`
+3. Follow the menu prompts
+
+The batch file automatically sets up the environment and launches the interactive mode.
+
+## Test Creation Methods
+
+### Method 1: Using PDF Specifications
+
+1. Create a PDF with test specifications:
+```
+Test Case: Login Test
+Description: Verify user can login successfully
+
+Steps:
+1. Navigate to "https://example.com/login"
+2. Enter "username" in username field
+3. Enter "password" in password field
+4. Click login button
+5. Verify text "Welcome" is visible on the page
+```
+
+2. Place the PDF in the `input_pdfs` directory
+
+3. Generate tests:
+```bash
+vassure watch-pdfs
+```
+
+Or use the interactive mode:
+```bash
+vassure interactive
+# Then select option 1: Create/Update Tests from PDF
+```
+
+### Method 2: Manual Test Creation
+
+Create a Python test file in the `tests` directory:
+
+```python
+"""
+-----------------------
+Author: Sukumar Kutagulla (Read-only)
+Designation: Test Automation Architect (Read-only)
+Copyright (c) 2025. All Rights Reserved.
+-----------------------
+
+Login Test Module
+Tests the login functionality of the application
+"""
+
+import pytest
+from vassureai.utils.base_test import BaseTest
+from vassureai.utils.logger import logger
+from vassureai.utils.config import Config
+
+@pytest.mark.requires_browser
+class TestLogin(BaseTest):
+    """Test login functionality"""
+
+    @pytest.fixture(autouse=True)
+    def setup_test(self, setup_base):
+        """Setup test instance"""
+        self.test_name = "login_test"
+        self.retry_attempts = Config.retry.max_retries
+        return self
+
+    def get_all_test_steps(self):
+        """Get all test steps for this test case"""
+        return [
+            '1. Navigate to "https://example.com/login"',
+            '2. Enter "username" in username field',
+            '3. Enter "password" in password field',
+            '4. Click login button',
+            '5. Verify text "Welcome" is visible on the page'
+        ]
+
+    @pytest.mark.asyncio
+    async def test_login(self):
+        """Execute the test case"""
+        logger.info(f"Starting {self.test_name} execution")
+        test_steps = self.get_all_test_steps()
+
+        for attempt in range(self.retry_attempts + 1):
+            try:
+                result = await self._execute_test(test_steps, f"{self.test_name} Results")
+                if result:
+                    logger.info(f"{self.test_name} completed successfully")
+                    return result
+                else:
+                    logger.warning(f"{self.test_name} attempt {attempt + 1} failed")
+            except Exception as e:
+                logger.error(f"{self.test_name} attempt {attempt + 1} failed with error: {str(e)}")
+                if attempt == self.retry_attempts:
+                    raise
+
+        return None
+```
+
+
+## Advanced Configuration
+
+### Pytest Configuration
+The framework uses pytest under the hood. You can configure pytest behavior by modifying `pytest.ini`:
+
+```ini
+[pytest]
+python_files = test_*.py
+python_classes = Test*
+python_functions = test_*
+
+markers =
+    auto_generated: mark test as auto-generated from PDF
+    requires_browser: mark test as needing a browser instance
+    network_sensitive: mark test as sensitive to network conditions
+    load_test: mark test for load testing with parameters
+
+asyncio_mode = auto
+asyncio_default_fixture_loop_scope = function
+```
+
+### Browser Configuration
+The framework supports multiple browser types through Playwright:
+
+```env
+# Browser type
+BROWSER_TYPE=chromium  # Options: chromium, firefox, webkit
+
+# Browser mode
+BROWSER_HEADLESS=false  # Run without UI when true
+
+# Recording
+BROWSER_RECORD_VIDEO=true  # Record test execution as video
+```
+
+### AI Model Configuration
+Configure the LLM model used for test execution:
+
+```env
+LLM_MODEL=gemini-2.0-flash-exp  # Google Gemini model
+LLM_API_KEY=your-api-key-here   # Your API key
+LLM_MAX_TOKENS=4096             # Maximum tokens per request
+LLM_TEMPERATURE=0.2             # Temperature for response generation
+```
+
+### Retry Configuration
+Configure the retry behavior for unstable tests:
+
+```env
+RETRY_MAX_RETRIES=2              # Maximum number of retry attempts
+RETRY_DELAY=5                    # Seconds to wait between retries
+RETRY_ON_NETWORK=true            # Retry on network errors
+RETRY_ON_ELEMENT_NOT_FOUND=true  # Retry when elements aren't found
+```
+
+### Visual Configuration
+Configure visual testing options:
+
+```env
+VISUAL_HIGHLIGHT=true            # Highlight elements during interaction
+VISUAL_SCREENSHOT_ON_STEP=false  # Take screenshot after each step
+VISUAL_SCREENSHOT_ON_ERROR=true  # Take screenshot on error
+VISUAL_COMPARISON_THRESHOLD=0.95 # Threshold for visual comparison
+```
+
+## API Reference
+
+### BaseTest Class
+All test classes inherit from `BaseTest`, which provides the core functionality:
+
+```python
+class BaseTest:
+    """Base class for VAssureAI test implementations"""
+    
+    # Core Methods
+    async def setup_agent(self, test_steps):
+        """Initialize and configure the browser agent"""
+        
+    async def _execute_test(self, test_steps, title):
+        """Execute a test with given steps and generate a report"""
+        
+    async def cleanup(self):
+        """Clean up browser and resources after test"""
+        
+    # Helper Methods
+    def get_memory_usage(self):
+        """Get current memory usage in MB"""
+```
+
+### Test Generator
+The `ScriptGenerator` class handles PDF processing and test script generation:
+
+```python
+class ScriptGenerator:
+    """Generates test scripts from PDF test specifications"""
+    
+    def process_pdf(self, pdf_path):
+        """Process a PDF file and generate test scripts"""
+        
+    def process_existing_pdfs(self):
+        """Process all existing PDF files in the input directory"""
+```
+
+### Report Generator
+The `TestReport` class handles PDF report generation:
+
+```python
+class TestReport:
+    """Generates PDF test reports"""
+    
+    def add_title(self, title):
+        """Add report title"""
+        
+    def add_step(self, step_name, status, timestamp, screenshot_path=None, error_details=None, video_path=None):
+        """Add a test step to the report"""
+        
+    def generate(self):
+        """Generate the consolidated PDF report"""
+```
+
+## Development
+
+### Custom Actions
+You can extend the framework with custom browser actions:
+
+```python
+# In actions/custom_actions.py
+async def select_date_from_calendar(controller, date_string):
+    """Select a date from a calendar widget"""
+    date_obj = datetime.strptime(date_string, "%Y-%m-%d")
+    month_year = date_obj.strftime("%B %Y")
+    day = date_obj.strftime("%-d")  # Day without leading zero
+    
+    # Click calendar trigger
+    await controller.click_element("button.calendar-trigger")
+    
+    # Navigate to month/year
+    current = await controller.get_text(".calendar-header")
+    while current != month_year:
+        # Click next/prev month buttons as needed
+        if datetime.strptime(current, "%B %Y") < date_obj:
+            await controller.click_element("button.next-month")
+        else:
+            await controller.click_element("button.prev-month")
+        current = await controller.get_text(".calendar-header")
+    
+    # Click the day
+    await controller.click_element(f".calendar-day[data-day='{day}']")
+```
+
+### Framework Integration
+Register custom actions with the framework:
+
+```python
+# In controller_setup.py
+from vassureai.actions.custom_actions import select_date_from_calendar
+
+def register_controller(agent):
+    """Register custom controller with additional actions"""
+    controller = StandardController(agent)
+    
+    # Register custom actions
+    controller.register_action("select_date", select_date_from_calendar)
+    
+    return controller
+```
+
+### Testing Framework Components
+Run tests for the framework itself:
+
+```bash
+# Run unit tests
+python -m pytest vassureai/tests/unit/
+
+# Run integration tests
+python -m pytest vassureai/tests/integration/
+```
+
+### Extending Report Templates
+Customize PDF reports by modifying report templates:
+
+```python
+# In utils/pdfgenerator.py
+def customize_report_style(self):
+    """Customize report styles"""
+    self.styles.add(ParagraphStyle(
+        name='CustomTitle',
+        parent=self.styles['Heading1'],
+        fontSize=24,
+        spaceAfter=30,
+        textColor=colors.HexColor('#2c3e50')
+    ))
+    # Add more custom styles as needed
+```
+
+## Troubleshooting
+
+### Common Issues
+
+#### Installation Issues
+- **Issue**: `pip install vassure-ai` fails
+- **Solution**: Ensure you're using Python 3.11+ and pip is updated
+
+#### Test Generation Issues
+- **Issue**: Tests not generated from PDF
+- **Solution**: Verify PDF format and structure match expected format
+
+#### Browser Issues
+- **Issue**: Browser doesn't start
+- **Solution**: Check browser installation and ensure proper Playwright dependencies
+
+#### AI Model Issues
+- **Issue**: AI model fails to interpret steps
+- **Solution**: Verify API key and internet connection; try more explicit step descriptions
+
+#### Performance Issues
+- **Issue**: Tests run slowly
+- **Solution**: Use headless browser mode and/or run tests in parallel
+
+### Debug Options
+
+- **Enable debug logging**:
+  ```env
+  LOG_LEVEL=DEBUG
+  ```
+
+- **View browser details during execution**:
+  ```env
+  BROWSER_HEADLESS=false
+  BROWSER_SLOW_MO=500  # Slow down execution by 500ms per step
+  ```
+
+- **Test PDF processing manually**:
+  ```bash
+  vassure process-pdf path/to/test.pdf --verbose
+  ```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+
+- [Browser-use](https://github.com/m-elkhou/browser-use) - AI browser automation library
+- [Pytest](https://pytest.org/) - Testing framework
+- [ReportLab](https://www.reportlab.com/opensource/) - PDF report generation
+- [Playwright](https://playwright.dev/) - Browser automation
+- [Google Gemini](https://deepmind.google/technologies/gemini/) - AI model

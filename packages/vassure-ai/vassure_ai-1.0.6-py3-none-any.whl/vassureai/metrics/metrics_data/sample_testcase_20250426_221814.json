@@ -1,0 +1,15 @@
+{
+  "test_name": "sample_testcase",
+  "timestamp": "20250426_221814",
+  "duration": 141.851716,
+  "status": "COMPLETED",
+  "success_rate": 94.73684210526315,
+  "system_metrics": {
+    "cpu_usage_percent": 1.8,
+    "memory_usage_percent": 78.2,
+    "memory_available_mb": 1714.2578125,
+    "disk_usage_percent": 10.1,
+    "disk_free_gb": 837.7865104675293
+  },
+  "steps": []
+}
