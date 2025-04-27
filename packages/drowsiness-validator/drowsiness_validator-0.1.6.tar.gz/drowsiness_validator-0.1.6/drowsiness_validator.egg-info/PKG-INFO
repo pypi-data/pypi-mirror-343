@@ -1,0 +1,182 @@
+Metadata-Version: 2.4
+Name: drowsiness_validator
+Version: 0.1.6
+Summary: Drowsiness detection using facial landmarks or CNN.
+Home-page: https://github.com/sharjeelbaig
+Author: Sharjeel Baig
+Author-email: dr.sharjeel.6@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: opencv-python
+Requires-Dist: dlib
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: ollama
+Requires-Dist: tensorflow
+Requires-Dist: pillow
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Drowsiness Validator
+
+A Python package for detecting drowsiness using facial landmarks or a Convolutional Neural Network (CNN).
+
+## Installation
+
+Install the package using pip:
+
+```bash
+pip install drowsiness-validator
+```
+
+## Usage
+
+Here's a basic example of how to use the package:
+
+```python
+from drowsiness_validator import detect_drowsiness
+
+# Example with image path
+test_img_path = 'path/to/your/image.jpg'
+result = detect_drowsiness(image_path=test_img_path, method='cnn')
+print(result)
+# Example output: {'prediction': 1, 'status': 'Drowsy', 'method': 'cnn'}
+
+# Example with base64 image
+import base64
+with open(test_img_path, 'rb') as f:
+    img_b64 = base64.b64encode(f.read()).decode('utf-8')
+result = detect_drowsiness(image_base64=img_b64, method='cnn')
+print(result)
+# Example output: {'prediction': 1, 'status': 'Drowsy', 'method': 'cnn'}
+```
+
+## Flask Route Example
+
+Here is an example of a Flask route to check drowsiness from a base64 image:
+
+```python
+from flask import Flask, request, jsonify
+from drowsiness_validator import detect_drowsiness
+
+app = Flask(__name__)
+
+@app.route('/check-drowsiness', methods=['POST'])
+def check_drowsiness():
+    data = request.json
+    if 'image_base64' not in data:
+        return jsonify({'error': 'image_base64 is required'}), 400
+
+    image_base64 = data['image_base64']
+    result = detect_drowsiness(image_base64=image_base64, method='cnn')
+    return jsonify(result)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+## Documentation
+
+### detect_drowsiness
+
+Detects drowsiness from an image using either CNN or facial aspect ratios (via Random Forest).
+
+**Args:**
+
+- `image_path` (str, optional): Path to the input image file. Defaults to None.
+- `image_base64` (str, optional): Base64 encoded string of the input image. Defaults to None.
+- `method` (str, optional): Method for detection ('cnn' or 'aspect_ratio'). Defaults to 'cnn'.
+- `force_train_cnn` (bool, optional): Whether to force retraining of the CNN model. Defaults to False.
+- `train_dir` (str, optional): Path to the training data directory (needed if force_train_cnn=True).
+- `test_dir` (str, optional): Path to the test data directory (needed if force_train_cnn=True).
+
+**Returns:**
+
+- `dict`: A dictionary containing the prediction result and method used.
+
+**Example Response:**
+
+```json
+{
+  "prediction": 1,
+  "status": "Drowsy",
+  "method": "cnn"
+}
+```
+
+### calculate_ARs
+
+Calculates aspect ratios from an image.
+
+**Args:**
+
+- `image_path` (str, optional): Path to the input image file. Defaults to None.
+- `image_data` (numpy array, optional): Image data. Defaults to None.
+
+**Returns:**
+
+- `dict`: A dictionary containing calculated aspect ratios or an error message.
+
+  Example:
+
+  ```
+  {
+    "EAR": 0.289,  # Eye Aspect Ratio
+    "MAR": 0.625,  # Mouth Aspect Ratio
+    "MOE": 2.162,  # Mouth over Eye Ratio
+    "HPR": 1.342,  # Head Pose Ratio
+    "BAR": 12.456  # Brow Aspect Ratio
+  }
+  ```
+
+### calculate_all_ARs
+
+Calculates all aspect ratios from either an image path or image data (numpy array).
+
+**Args:**
+
+- `image_path` (str, optional): Path to the input image file. Defaults to None.
+- `image_data` (numpy array, optional): Image data. Defaults to None.
+
+**Returns:**
+
+- `dict`: A dictionary containing calculated aspect ratios.
+
+### predict_drowsiness_with_cnn
+
+Predicts drowsiness using the trained CNN model from image data or path.
+
+**Args:**
+
+- `image_data` (numpy array, optional): Image data as numpy array. Defaults to None.
+- `image_path` (str, optional): Path to the input image file. Defaults to None.
+- `force_train` (bool, optional): Whether to force retraining of the CNN model. Defaults to False.
+- `train_dir` (str, optional): Path to the training data directory (needed if force_train=True).
+- `test_dir` (str, optional): Path to the test data directory (needed if force_train=True).
+
+**Returns:**
+
+- `tuple`: (prediction, confidence) where prediction is 0 (Active) or 1 (Drowsy), and confidence is a float between 0 and 1.
+
+## Author
+
+Sharjeel Baig
+
+- Portfolio: [https://sharjeelbaig.github.io](https://sharjeelbaig.github.io)
+- GitHub: [https://github.com/sharjeelbaig](https://github.com/sharjeelbaig)
+
+## License
+
+This project is licensed under the MIT License.
