@@ -1,0 +1,8 @@
+setup.py
+barbarianking.egg-info/PKG-INFO
+barbarianking.egg-info/SOURCES.txt
+barbarianking.egg-info/dependency_links.txt
+barbarianking.egg-info/entry_points.txt
+barbarianking.egg-info/top_level.txt
+my_package/__init__.py
+my_package/mycode.py
