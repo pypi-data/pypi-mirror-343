@@ -1,0 +1,17 @@
+git_auto/__init__.py,sha256=ryfDB-xaz6_95HRpRMH5vcrGyJdxapa5374e9oYUAaM,62
+git_auto/prompt_presets/commit_prompt.txt,sha256=1izerulVQMr3_FFxcD2KS4vAWvf-dQpdxgQF0s0p00s,2224
+git_auto/prompt_presets/validation_prompt.txt,sha256=nIgD-MY2rGqVs4LzGiOiRNTzhfHfznqM2IR5B9Crs3Y,2900
+git_auto/src/__init__.py,sha256=HmKqsxitErx0d5euaG0dzardEW_z-y1ubHXEPrvADM8,257
+git_auto/src/ai_interface.py,sha256=7zSq7XBRz9hqTj5eXxQhnzlCdjVkl4PmR8ZgEL1QuE8,19532
+git_auto/src/cli.py,sha256=8vpm79_jA7_q5CaTP_VC4u2VgRjg-gGYHjpUhO_VVNw,35956
+git_auto/src/config.py,sha256=3Q6wWxugykjVxi8A-lQtqKHtMO4w8vMQmeaK-4ggzcM,20185
+git_auto/src/git_utils.py,sha256=Rn0wevueVHUsZS-Y8n04sVS-OHfaWa6oEVKEoauhp8M,4910
+git_auto/src/sanitizer.py,sha256=orrHnDtPnT8KqwvWc-ae0T1LUCikrsXzYxTiGTjUaOc,20640
+git_auto/src/validation.py,sha256=xy3EDEbVBBc2p5UlMOV81-f-IvtZI6DiSnru9m1YwL4,24416
+git_auto/templates/minimal_output.txt,sha256=KP74ZswyLfxgHpeJHe8lWjQXXlFPJMrHyLLBSxHX4dA,329
+git_auto/templates/standard_output.txt,sha256=D-sCRCS3TOmUP0t3WEcocZh9ZummJmBZBPyuK9Rtg1Y,1031
+git_auto-0.1.1.dist-info/METADATA,sha256=h8RE9FGQof0-2oOmIjm7mC1675ea5kUE03n42eZbNHs,18051
+git_auto-0.1.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+git_auto-0.1.1.dist-info/entry_points.txt,sha256=3n2gBe99GcXAzpuby_obxCGXqSsu6DoUX0lmLMhKGTA,50
+git_auto-0.1.1.dist-info/top_level.txt,sha256=CqlgJoLR2HC0silNV4L6yqtAXbiNZNokI6Vz8V_ZWQs,9
+git_auto-0.1.1.dist-info/RECORD,,
