@@ -1,0 +1,52 @@
+Metadata-Version: 2.4
+Name: hvcc_teensy
+Version: 0.1.2
+Summary: hvcc for Teensy
+Author-email: Thomas Grill <gr@grrrr.org>
+License-Expression: GPL-3.0-or-later
+Project-URL: Homepage, https://github.com/grrrr/hvcc_teensy
+Project-URL: Issues, https://github.com/grrrr/hvcc_teensy/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: hvcc
+
+# Generator for Teensy audio libraries
+
+## Installation
+
+Needs [hvcc](https://github.com/Wasted-Audio/hvcc) for compilation.
+
+```
+python3 -m venv venv
+. venv/bin/activate
+pip install hvcc_teensy
+```
+
+## Generation
+
+The following translates the Puredata patch `_main.pd` into C++ files in a folder `$DST`.
+The object ("context") will also be called `$NAME`:
+
+```
+hvcc _main.pd -n $NAME -o $DST -G hvcc_teensy
+```
+
+## Usage
+
+The contents of the subfolder `$DST/teensy` represent library code usable in the Arduino environment.
+There are (potential) standard locations for these libraries:
+
+- MacOS/Linux: `$HOME/Arduino/libraries/`
+- Windows: `My Documents\Arduino\libraries`
+
+In the generated library folder will be a header file `$NAME.h` to be included in the Arduino program.
+
+The produced code depends on the [Teensy core library](https://github.com/PaulStoffregen/cores).
+If `OPENAUDIO=1` is `#define`d before including the `$NAME.h` header file, the code will depend on [OpenAudio_ArduinoLibrary](https://github.com/chipaudette/OpenAudio_ArduinoLibrary) for float_32 audio processing extensions.
+
+In the example Makefiles (e.g., sine_out), this is taken care of by respective json metadata fed to the teensy generator.
