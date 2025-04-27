@@ -1,0 +1,54 @@
+# -*- coding: utf-8 -*-
+"""
+@Author: yy
+@Date: 2021-08-02 14:03:12
+@LastEditTime: 2024-09-11 17:13:23
+@LastEditors: yy
+@Description: 
+"""
+from yy_core.models.enum import PageCountMode
+from yy_core.handlers.frame_base import *
+from yy_core.models.price_base_model import *
+
+
+class PriceGearListHandler(ClientBaseHandler):
+    """
+    :description: 获取价格档位列表
+    """
+    def get_async(self):
+        """
+        :description: 获取价格档位列表
+        :param app_id：应用标识
+        :param act_id：活动标识
+        :param page_index：页索引
+        :param page_size：页大小
+        :param page_count_mode：分页模式(0-none 1-total 2-next)
+        :param business_type：业务类型
+        :return: list
+        :last_editors: yy
+        """
+        app_id = self.get_app_id()
+        act_id = self.get_act_id()
+        page_size = self.get_param_int("page_size", 20)
+        page_index = self.get_param_int("page_index", 0)
+        page_count_mode = self.get_param_int("page_count_mode", 1)
+        business_type = self.get_param_int("business_type", -1)
+        invoke_result_data = self.business_process_executing()
+        if invoke_result_data.success == False:
+            return self.response_json_success({"data": []})
+        if not invoke_result_data.data:
+            invoke_result_data.data = {}
+        order_by = invoke_result_data.data["order_by"] if invoke_result_data.data.__contains__("order_by") else "sort_index desc"
+        page_count_mode = CoreHelper.get_enum_key(PageCountMode, page_count_mode)
+        page_list = PriceBaseModel(context=self).get_price_gear_list(app_id, act_id, page_size, page_index, order_by, page_count_mode=page_count_mode, business_type=business_type)
+        if page_count_mode == "total":
+            total = page_list[1]
+            page_list = self.business_process_executed(page_list[0], ref_params={})
+            return_info = PageInfo(page_index, page_size, total, page_list)
+        elif page_count_mode == "next":
+            is_next = page_list[1]
+            page_list = self.business_process_executed(page_list[0], ref_params={})
+            return_info = WaterPageInfo(page_list, is_next)
+        else:
+            return_info = self.business_process_executed(page_list, ref_params={})
+        return self.response_json_success(return_info)
