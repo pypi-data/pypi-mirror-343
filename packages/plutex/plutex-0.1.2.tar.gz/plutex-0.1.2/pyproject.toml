@@ -1,0 +1,63 @@
+[project]
+name = "plutex"
+version = "0.1.2"
+description = "plutex: An AI-powered trading system using multiple agents"
+authors = [{ name = "Shane Holloman", email = "shaneholloman@gmail.com" }]
+requires-python = "~=3.11"
+readme = "README.md"
+dependencies = [
+  "langchain==0.3.0",
+  "langchain-anthropic==0.3.5",
+  "langchain-groq==0.2.3",
+  "langchain-openai>=0.3.5,<0.4",
+  "langchain-deepseek>=0.1.2,<0.2",
+  "langgraph==0.2.56",
+  "pandas>=2.1.0,<3",
+  "numpy>=1.24.0,<2",
+  "python-dotenv",
+  "matplotlib>=3.9.2,<4",
+  "tabulate>=0.9.0,<0.10",
+  "colorama>=0.4.6,<0.5",
+  "questionary>=2.1.0,<3",
+  "rich>=13.9.4,<14",
+  "langchain-google-genai>=2.0.11,<3"
+]
+
+[project.scripts]
+plutex = "src.main:main"
+
+[dependency-groups]
+dev = [
+  "pytest",
+  "ruff",
+  "mypy",
+  "pandas-stubs",
+  "types-colorama",
+  "types-defusedxml",
+  "types-python-dateutil",
+  "types-requests",
+  "types-tabulate"
+]
+
+[tool.hatch.build.targets.sdist]
+include = ["./src"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.black]
+line-length = 420
+target-version = ['py311']
+include = '\.pyi?$'
+
+[tool.mypy]
+mypy_path = "src"
+# Help mypy find types for installed packages
+follow_imports = "normal"
+# Add packages known to have type hints but potentially missed
+# packages = ["langchain_core"] # Alternative if follow_imports isn't enough
+# ignore_missing_imports = True # Use as last resort
