@@ -1,0 +1,2 @@
+[console_scripts]
+pysec_inspect = pysec_inspect.interfaces.cli.commands:main

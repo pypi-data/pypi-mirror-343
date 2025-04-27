@@ -1,0 +1,160 @@
+# PySecInspect
+
+![PySecInspect - Python Security Inspector](assets/banner.png)
+
+PySecInspect - это инструмент для комплексного аудита безопасности, производительности и качества Python-приложений с функцией генерации рекомендаций с помощью нейросетей.
+
+## Особенности
+
+- **Анализ безопасности кода**: 
+  - Обнаружение небезопасных функций (eval, exec, os.system)
+  - Выявление SQL-инъекций и уязвимостей
+  - Обнаружение паролей в открытом виде
+  - Выявление XSS-уязвимостей в веб-приложениях
+  - Проверка на использование слабых алгоритмов хеширования
+
+- **Анализ производительности**: 
+  - Выявление неэффективных паттернов циклов
+  - Обнаружение повторных вычислений в циклах
+  - Анализ проблем с запросами к базам данных
+  - Выявление неэффективных операций со списками и словарями
+
+- **Анализ качества кода**: 
+  - Проверка соответствия стилю PEP 8
+  - Анализ наличия документации
+  - Обнаружение неиспользуемых импортов
+  - Оценка сложности кода
+  - Проверка соглашений по именованию
+
+- **ИИ-рекомендации**: 
+  - Генерация конкретных рекомендаций по исправлению проблем с помощью нейросетей
+  - Генерация рекомендаций только для критических уязвимостей безопасности и производительности
+  - Интеллектуальное кэширование рекомендаций для экономии API-запросов
+  - Поддержка моделей OpenAI (GPT-4) и Anthropic (Claude)
+
+- **Различные форматы отчетов**: текстовый, JSON, XML и HTML
+
+- **Поддержка цветного форматирования вывода отчетов** (по умолчанию)
+
+## Установка
+
+```bash
+# Базовая установка
+pip install pysec-inspect
+
+# Установка с поддержкой ИИ-рекомендаций
+pip install pysec-inspect[ai]
+```
+
+> **Примечание**: При установке через `pip install pysec-inspect` пакет устанавливается без зависимостей для генерации ИИ-рекомендаций (openai, anthropic). Для полной функциональности используйте `pip install pysec-inspect[ai]`.
+
+> **Важно**: ИИ-рекомендации генерируются только для критических уязвимостей безопасности и производительности, чтобы оптимизировать время выполнения и уменьшить количество API-запросов.
+
+### Из исходного кода
+
+```bash
+git clone https://github.com/ursaloper/pysec_inspect.git
+cd pysec_inspect
+pip install -e .
+
+# С поддержкой ИИ-рекомендаций
+pip install -e ".[ai]"
+```
+
+## Использование
+
+### Базовые команды
+
+```bash
+# Базовый анализ проекта
+pysec_inspect /path/to/project
+
+# Анализ конкретного файла
+pysec_inspect /path/to/file.py
+
+# Анализ только безопасности
+pysec_inspect --security /path/to/project
+
+# Анализ только производительности
+pysec_inspect --performance /path/to/project
+
+# Анализ только качества кода
+pysec_inspect --quality /path/to/project
+
+# Экспорт отчета в JSON
+pysec_inspect --format json --output report.json /path/to/project
+
+# Отключение цветного вывода
+pysec_inspect --no-color /path/to/project
+```
+
+### Настройка AI-рекомендаций
+
+Для использования функции генерации рекомендаций нейросетями необходимо установить API-ключи:
+
+1. Создайте файл `~/.pysec_inspect/ai_config.json` со следующим содержимым:
+
+```json
+{
+    "openai": {
+        "api_key": "YOUR_OPENAI_API_KEY"
+    },
+    "anthropic": {
+        "api_key": "YOUR_ANTHROPIC_API_KEY"
+    }
+}
+```
+
+2. Либо укажите API-ключ при запуске:
+
+```bash
+pysec_inspect --api-key YOUR_API_KEY --ai-model gpt-4o-mini /path/to/project
+```
+
+3. Либо установите переменные окружения:
+
+```bash
+export OPENAI_API_KEY=YOUR_OPENAI_API_KEY
+pysec_inspect --enable-ai /path/to/project
+```
+
+### Дополнительные параметры
+
+```bash
+# Уровень детализации
+pysec_inspect --verbose /path/to/project
+
+# Игнорирование определенных правил
+pysec_inspect --ignore SEC001,PERF002 /path/to/project
+
+# Настройка уровня критичности
+pysec_inspect --severity critical /path/to/project
+
+# Использование конфигурационного файла
+pysec_inspect --config .pysec_inspect.yml /path/to/project
+
+# Выбор модели LLM для рекомендаций
+pysec_inspect --ai-model gpt-4o-mini /path/to/project
+
+# Отключение AI-рекомендаций
+pysec_inspect --disable-ai /path/to/project
+
+# Отключение цветного вывода
+pysec_inspect --no-color /path/to/project
+```
+
+## Настройка
+
+PySecInspect можно настроить с помощью файла конфигурации. По умолчанию он ищет `.pysec_inspect.yml` в текущей директории или вы можете указать путь:
+
+```bash
+pysec_inspect /path/to/project --config my_config.yml
+```
+
+## Лицензия
+
+Этот проект распространяется под лицензией MIT. См. файл [LICENSE](LICENSE) для получения подробной информации.
+
+## Автор
+
+[@ursaloper](https://github.com/ursaloper)
