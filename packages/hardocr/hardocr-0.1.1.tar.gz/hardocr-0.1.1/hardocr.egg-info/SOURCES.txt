@@ -1,0 +1,15 @@
+LICENSE.md
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+hardocr.egg-info/PKG-INFO
+hardocr.egg-info/SOURCES.txt
+hardocr.egg-info/dependency_links.txt
+hardocr.egg-info/requires.txt
+hardocr.egg-info/top_level.txt
+modules/feature_extraction.py
+modules/prediction.py
+modules/sequence_modeling.py
+modules/transformation.py
