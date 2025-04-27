@@ -1,0 +1,12 @@
+LICENCE.md
+README.md
+setup.py
+opcuaAutomation/__init__.py
+opcuaAutomation/client_OPC_UA.py
+opcuaAutomation/resultsObjects.py
+opcuaAutomation/uaDataType.py
+opcuaAutomation.egg-info/PKG-INFO
+opcuaAutomation.egg-info/SOURCES.txt
+opcuaAutomation.egg-info/dependency_links.txt
+opcuaAutomation.egg-info/requires.txt
+opcuaAutomation.egg-info/top_level.txt

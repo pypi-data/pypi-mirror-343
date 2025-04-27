@@ -1,0 +1,53 @@
+Metadata-Version: 2.4
+Name: opcuaAutomation
+Version: 1.0.0
+Summary: An OPC UA client for automation engineers
+Home-page: https://github.com/Raph-67/Py_Client_OPCUA_for_Automation.git
+Author: Raphaël Hecker
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENCE.md
+Requires-Dist: opcua==0.98.13
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: pytz==2025.2
+Requires-Dist: lxml==5.3.2
+Requires-Dist: numpy==2.2.4
+Requires-Dist: matplotlib==3.10.1
+Requires-Dist: pillow==11.2.1
+Requires-Dist: six==1.17.0
+Requires-Dist: packaging==24.2
+Requires-Dist: kiwisolver==1.4.8
+Requires-Dist: cycler==0.12.1
+Requires-Dist: fonttools==4.57.0
+Requires-Dist: contourpy==1.3.1
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Client_OPCUA_for_Automation
+ An high-level OPCUA client designed for automation engineers
+The aim of this library is to allow non-IT profiles to request opcua servers.
+More typically in a machine context with an industrial PLC.
+
+## UA data types supported in reading
+All the data types supported by the native python opcua lib
+
+## UA data types supported in writing
+Boolean
+Int16
+Float
+String
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Raph-67/Py_Client_OPCUA_for_Automation.git
