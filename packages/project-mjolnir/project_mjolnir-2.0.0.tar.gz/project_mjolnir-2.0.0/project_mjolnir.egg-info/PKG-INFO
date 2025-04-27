@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: project-mjolnir
+Version: 2.0.0
+Summary: Modular D&D 3.5e Parser and Database Builder
+Author: DaveTmire85
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-docx>=0.8.11
+Dynamic: license-file
+Dynamic: requires-python
+
+# Project Mjölnir
+
+Project Mjölnir is a modular, cross-platform parser and database builder for D&D 3.5e sourcebooks and indexes.
+
+It automatically ingests `.docx` indexes for:
+- Deities
+- Feats
+- Spells
+- Mundane Items
+- Magic Items
+- Races
+- Classes (Base + Prestige)
+- Monsters (NPCs included)
+- Templates
+
+Parsed data is inserted into a clean SQLite database according to a relational schema.
+
+Mjolnir includes:
+- Modular parser system (one parser per entity type)
+- Smart file type detection
+- Text cleaning utilities
+- Full logging and troubleshooting output
+- Open structure for future VTT support and PC/NPC generators
+
+**Mjolnir is designed to forge your D&D 3.5 source material into true power.**
+
+## Usage
+
+```bash
+python mjolnir.py path_to_folder_or_file
+```
+
+Files are detected, parsed, and loaded into the database automatically.
+
+.docx format required.
