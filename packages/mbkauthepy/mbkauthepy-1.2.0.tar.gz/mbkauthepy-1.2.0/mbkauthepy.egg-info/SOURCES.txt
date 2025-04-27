@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+mbkauthepy.egg-info/PKG-INFO
+mbkauthepy.egg-info/SOURCES.txt
+mbkauthepy.egg-info/dependency_links.txt
+mbkauthepy.egg-info/requires.txt
+mbkauthepy.egg-info/top_level.txt
