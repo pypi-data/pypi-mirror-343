@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: vassure_ai
+Version: 1.0.8
+Requires-Dist: pytest>=7.4.3
+Requires-Dist: pytest-asyncio>=0.21.1
+Requires-Dist: pytest-html>=4.1.1
+Requires-Dist: langchain>=0.0.352
+Requires-Dist: langchain-google-genai>=0.0.6
+Requires-Dist: pypdf2>=3.0.1
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: jinja2>=3.1.2
+Requires-Dist: pydantic>=2.5.2
+Dynamic: requires-dist
