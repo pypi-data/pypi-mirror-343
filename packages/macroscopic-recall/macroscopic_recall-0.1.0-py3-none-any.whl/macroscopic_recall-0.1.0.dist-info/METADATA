@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: macroscopic-recall
+Version: 0.1.0
+Summary: 宏观召回系统组件
+Author: yanpei.fan
+Author-email: yanpei.fan@centurygame.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: openai (~=1.73.0)
+
+这是一个宏观召回组件，提供了csv，json转为特定制式markdown文档，及使用官方api进行召回的操作。

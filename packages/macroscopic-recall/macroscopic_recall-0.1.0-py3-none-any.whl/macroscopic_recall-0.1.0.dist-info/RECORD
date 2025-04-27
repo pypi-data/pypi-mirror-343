@@ -1,0 +1,8 @@
+recall/__init__.py,sha256=Nx-EHrUeSaCxJeH_mh_zqtbbB9fqIFp1VbBsgu-JOPA,212
+recall/recall_base.py,sha256=tkPuR19mISEv27mo7MdU6jv_NABh082NVb263vWnkB0,2661
+recall/recall_custom.py,sha256=bkcmj3hZ0_D_p2CUvUGbT51nL7ka6H93MPOzyXPhjjo,764
+recall/recall_official.py,sha256=DDDa70xLMqtTf_QqA7HgJxvimSZDACZl6fwB-OQeH_s,1521
+macroscopic_recall-0.1.0.dist-info/METADATA,sha256=XeksU84IMFjd16E7Qne3P07rg7mEO6xZzSbT-oLcmk0,529
+macroscopic_recall-0.1.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+macroscopic_recall-0.1.0.dist-info/top_level.txt,sha256=REbPxLkxL1quicUx08ayPQvqFNwInZCLD9hGV6EFxdQ,7
+macroscopic_recall-0.1.0.dist-info/RECORD,,
