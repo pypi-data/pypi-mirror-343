@@ -1,0 +1,2 @@
+[console_scripts]
+seo-sentinel = seose:main

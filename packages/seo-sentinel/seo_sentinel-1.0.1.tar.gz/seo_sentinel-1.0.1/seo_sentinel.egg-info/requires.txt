@@ -1,0 +1,4 @@
+beautifulsoup4>=4.12
+requests>=2.31
+tqdm>=4.65
+jinja2>=3.1
