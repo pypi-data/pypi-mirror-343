@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pytoshop-whl
+Version: 0.1.4
+Summary: Add your description here
+Requires-Python: >=3.10
+Requires-Dist: numpy>=1.11
+Requires-Dist: six>=1.17.0
+Description-Content-Type: text/markdown
+
+## build
+
+```shell
+uv sync --only-dev
+uv run cibuildwheel --output-dir wheelhouse --only cp310-win_amd64
+uv run cibuildwheel --output-dir wheelhouse --only cp310-manylinux_x86_64
+```
