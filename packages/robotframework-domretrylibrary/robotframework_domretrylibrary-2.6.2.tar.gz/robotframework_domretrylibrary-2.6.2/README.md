@@ -1,0 +1,259 @@
+# Robot Framework DomRetryLibrary
+
+A Robot Framework library with AI-powered fallback for locator variables, enhancing test reliability by using OpenAI to dynamically generate element locators when primary locators fail.
+
+## Installation
+
+Install the library using pip:
+
+```bash
+pip install robotframework-domretrylibrary
+```
+
+## Usage
+
+Import the library in your Robot Framework test file:
+
+```robotframework
+*** Settings ***
+Library           SeleniumLibrary
+Library           DomRetryLibrary    # Just use the direct class name
+```
+
+Define your locators and AI fallback descriptions:
+
+```robotframework
+*** Variables ***
+${USERNAME_FIELD}      css=#non_existent_username_id
+${AI_USERNAME_FIELD}   the username input field with placeholder 'Username'
+```
+
+Use the AI fallback in your tests:
+
+```robotframework
+*** Test Cases ***
+Login Test
+    Open Browser    https://example.com    chrome
+    AI Fallback Locator    Input Text    USERNAME_FIELD    myusername
+    Close Browser
+```
+
+## New in Version 2.6.2: Enhanced Browser Compatibility
+
+Version 2.6.2 significantly improves compatibility across browsers, with special focus on Microsoft Edge:
+
+```robotframework
+*** Test Cases ***
+Cross-Browser Test
+    Open Browser    https://example.com    edge
+    Wait And Click Element    ${SUBMIT_BUTTON}    # Now works reliably in Edge
+```
+
+Key improvements include:
+
+1. **Fixed JavaScript Compatibility Issues**
+   - Resolved "Private field must be declared in an enclosing class" errors in Edge
+   - Added progressive fallback mechanisms for input and click operations
+
+2. **Robust Element Interaction**
+   - Better scrolling behavior to ensure elements are visible
+   - Multiple fallback strategies when standard methods fail
+   - Browser-specific optimizations for Edge, Chrome, Firefox, and Safari
+
+3. **Direct CSS Selector Approach**
+   - Added last-resort direct DOM manipulation for problematic browser scenarios
+   - Improved handling of elements in shadow DOM or iframes
+
+These enhancements make the library more reliable across different browsers and testing environments.
+
+## New in Version 2.6.1: Improved Support for Custom Keywords
+
+Version 2.6.1 adds better support for custom keywords that use direct CSS/XPath locators:
+
+```robotframework
+*** Keywords ***
+Wait And Input Text
+    [Arguments]    ${locator}    ${text}
+    ${status}    ${error}=    Run Keyword And Ignore Error    Input Text    ${locator}    ${text}
+    Run Keyword If    '${status}' == 'FAIL'    AI Fallback Locator    Input Text    ${locator}    ${text}
+```
+
+Now when a custom keyword passes a direct CSS locator to `AI Fallback Locator`, the library will:
+
+1. Automatically search for variables that match this locator value
+2. Find and use the corresponding AI description variable
+3. Apply the AI-powered locator generation without requiring ai_description parameter
+
+This works even when you're using CSS selectors directly in a run-time constructed keyword chain:
+
+```robotframework
+*** Test Cases ***
+Dynamic Locator Test
+    # This works even if the CSS selector is passed directly
+    Wait And Input Text    css=#non_existent_username_id    myusername
+```
+
+## New in Version 2.3.0: Direct AI Descriptions
+
+You can now provide the AI description directly without needing to define an AI_ variable:
+
+```robotframework
+AI Fallback Locator    Input Text    css=#username    myusername    ai_description=the username input field
+```
+
+This approach is especially useful when you:
+- Want to use a dynamic description
+- Need to use locators without defining variable pairs
+- Prefer inline descriptions for better readability
+- Need to quickly test different descriptions
+
+## New in Version 2.4.0: Backward Compatibility for Existing Test Patterns
+
+Version 2.4.0 adds intelligent backward compatibility for existing test patterns. It's now more forgiving and will:
+
+1. **Handle empty locators** by inferring from context
+2. **Find any matching AI_ variable** if none is explicitly specified
+3. **Continue execution** rather than failing when no description is found
+
+This means your existing test structure will still work:
+
+```robotframework
+*** Keywords ***
+Wait And Input Text
+    [Arguments]    ${locator}    ${text}
+    ${status}    ${error}=    Run Keyword And Ignore Error    Input Text    ${locator}    ${text}
+    Run Keyword If    '${status}' == 'FAIL'    AI Fallback Locator    Input Text    ${locator}    ${text}
+```
+
+And empty locator variables will be handled gracefully:
+
+```robotframework
+*** Variables ***
+${SUBMIT_BUTTON}    # Empty locator
+${AI_SUBMIT_BUTTON}    the login button
+
+*** Test Cases ***
+Login Test
+    AI Fallback Locator    Click Element    ${SUBMIT_BUTTON}    # Works with empty locator
+```
+
+## New in Version 2.5.0: Enhanced AI Processor with Smart Locator Generation
+
+Version 2.5.0 introduces significant improvements to the AI processor component, delivering more precise and reliable locator generation:
+
+1. **Multi-Strategy Locator Generation**
+   - Uses three distinct AI strategies to find the best locator
+   - Falls back gracefully if one approach fails
+   - Provides more reliable element identification
+
+2. **Smart Caching System**
+   - Remembers successful locator transformations between runs
+   - Recognizes similar locator patterns for faster resolution
+   - Continually improves over time as more tests run
+
+3. **Original Locator Context**
+   - Intelligently leverages the original locator as context
+   - Avoids being misled by misleading element names
+   - Creates more precise alternative locators
+
+4. **Enhanced Element Classification**
+   - Automatically classifies elements by type (button, input, checkbox, etc.)
+   - Tailors locator strategies to specific element types
+   - Improves accuracy for different UI components
+
+5. **Intelligent HTML Processing**
+   - Focuses on relevant page sections (forms, main content)
+   - Removes noise elements for better analysis
+   - Prioritizes interactive elements
+
+6. **Element Interaction Improvements**
+   - Automatically scrolls elements into view
+   - Falls back to JavaScript execution when needed
+   - Handles elements in shadow DOM and iframes better
+
+To enable the transformation cache feature, provide a path for the cache file:
+
+```robotframework
+*** Settings ***
+Library    DomRetryLibrary    
+...    transformation_cache_file=my_transforms.json
+```
+
+## New in Version 2.6.0: Improved Fallback Descriptions
+
+Version 2.6.0 enhances the AI fallback mechanism with a smarter approach to finding and using descriptions:
+
+1. **Smart AI Variable Selection**
+   - Automatically selects the most appropriate AI description variable when multiple are available
+   - Improves test resilience by finding relevant descriptions without explicit mapping
+
+2. **Enhanced Fallback Chain**
+   - Better cascading logic for finding descriptions from various sources
+   - Gracefully handles edge cases for more reliable test execution
+
+3. **Optimized Performance**
+   - More efficient variable lookup and description selection
+   - Reduced overhead for tests with multiple fallback operations
+
+```robotframework
+*** Variables ***
+${LOGIN_BUTTON}    css=#non-existent-button
+# The library will automatically find and use appropriate AI_ variables
+${AI_SOME_FIELD}   the login button with text "Sign In" 
+
+*** Test Cases ***
+Login Test
+    AI Fallback Locator    Click Element    LOGIN_BUTTON
+    # The library will automatically use ${AI_SOME_FIELD} if no specific ${AI_LOGIN_BUTTON} is defined
+```
+
+## API Key Setup
+
+Store your OpenAI API key in a .env file in your project directory:
+
+```
+OPENAI_API_KEY=your_api_key_here
+```
+
+Or provide it when initializing the library:
+
+```robotframework
+*** Settings ***
+Library    DomRetryLibrary    api_key=${OPENAI_API_KEY}
+```
+
+## How It Works
+
+1. The library first attempts to use your primary locator
+2. If the primary locator fails, it uses OpenAI to generate a new locator based on your description
+3. The AI-generated locator is used as a fallback
+4. Successful fallbacks are logged for future reference
+
+## Library Parameters
+
+When importing the library, you can set several parameters:
+
+```robotframework
+Library    DomRetryLibrary    
+...    api_key=${OPENAI_API_KEY}    
+...    model=gpt-4o    
+...    locator_storage_file=my_locators.json
+...    transformation_cache_file=my_transforms.json
+```
+
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| api_key | None | OpenAI API key (falls back to environment variable) |
+| model | gpt-4o | OpenAI model to use |
+| locator_storage_file | locator_comparison.json | File to store successful AI locators |
+| transformation_cache_file | ~/.dom_retry_transformation_cache.json | File to store transformation cache data |
+
+## Keywords
+
+The library provides the following keywords:
+
+- `AI Fallback Locator` - Add AI fallback to any locator-based keyword
+
+## License
+
+MIT 
