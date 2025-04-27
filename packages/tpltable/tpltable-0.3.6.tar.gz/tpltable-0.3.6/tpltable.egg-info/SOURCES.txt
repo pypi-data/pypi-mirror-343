@@ -1,0 +1,15 @@
+setup.py
+tpltable/__init__.py
+tpltable/basic.py
+tpltable/core.py
+tpltable/earray.py
+tpltable/excel.py
+tpltable/main.py
+tpltable/style.py
+tpltable/style_demo.py
+tpltable/table.py
+tpltable.egg-info/PKG-INFO
+tpltable.egg-info/SOURCES.txt
+tpltable.egg-info/dependency_links.txt
+tpltable.egg-info/requires.txt
+tpltable.egg-info/top_level.txt
