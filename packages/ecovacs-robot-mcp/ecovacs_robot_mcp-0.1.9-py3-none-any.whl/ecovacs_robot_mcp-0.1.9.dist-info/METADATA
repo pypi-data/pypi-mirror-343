@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: ecovacs-robot-mcp
+Version: 0.1.9
+Summary: Ecovacs MCP Server
+Home-page: https://github.com/ecovacs-ai/ecovacs-mcp
+Author: Ecovacs
+Author-email: haiyuan.lu@ecovacs.com
+Requires-Python: >=3.8.0
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: httpx
+Requires-Dist: pydantic
+Requires-Dist: mcp
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+
+### Quick Start
+
+
+pip install ecovacs-robot-mcp
+
+
+python3 -m ecovacs_robot_mcp
