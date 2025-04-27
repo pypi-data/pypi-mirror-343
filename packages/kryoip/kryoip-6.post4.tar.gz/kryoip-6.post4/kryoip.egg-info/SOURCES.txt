@@ -1,0 +1,8 @@
+README.md
+setup.py
+kryoip/__init__.py
+kryoip.egg-info/PKG-INFO
+kryoip.egg-info/SOURCES.txt
+kryoip.egg-info/dependency_links.txt
+kryoip.egg-info/top_level.txt
+tests/test_kryoip.py
