@@ -1,0 +1,11 @@
+[project]
+name = "ecovacs-robot-mcp"
+version = "0.1.6"
+description = "科沃斯扫地机器人控制服务，基于python mcp"
+readme = "README.rst"
+requires-python = ">=3.13"
+dependencies = [
+    "httpx",
+    "pydantic",
+    "mcp",
+]
