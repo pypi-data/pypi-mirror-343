@@ -1,0 +1,21 @@
+{
+  "functions": {
+    "known": [
+      "gnome_do_split_help"
+    ]
+  },
+  "variables": {
+    "known": [
+      "CLUTTERBASEBUILDCLASS",
+      "CVE_STATUS_EXTENDED",
+      "IMAGE_LINGUAS_COMPLEMENTARY",
+      "REALNAME",
+      "VERMINOR"
+    ],
+    "renamed": {}
+  },
+  "replacements": {
+    "distros": [],
+    "machines": []
+  }
+}

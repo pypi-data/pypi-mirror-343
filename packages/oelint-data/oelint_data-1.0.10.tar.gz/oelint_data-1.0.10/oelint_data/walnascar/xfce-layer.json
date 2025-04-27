@@ -1,0 +1,16 @@
+{
+  "functions": {
+    "known": []
+  },
+  "variables": {
+    "known": [
+      "AUTOTOOLS_COPYACLOCAL",
+      "CVE_STATUS_EXTENDED"
+    ],
+    "renamed": {}
+  },
+  "replacements": {
+    "distros": [],
+    "machines": []
+  }
+}
