@@ -1,0 +1,12 @@
+zipnn_core.cpython-312-darwin.so,sha256=XpMaHmsyx4hpvHd6G4kz946h6S3YDJ8mMDZvDAokB_s,118576
+zipnn/__init__.py,sha256=QKAraR5rjoIsVWMDbAlqgt_4VqkR8idpmW32kvo2uv0,54
+zipnn/util_header.py,sha256=XP7yIwmuvrJKfa4CVo1U8xyGU_1YPbvigmDzaJ9UFHE,1623
+zipnn/util_patch.py,sha256=EqQLEXBcrNJQTfblRtAsLhUzI1-CnnLmXDzh8eVPFS0,1046
+zipnn/util_safetensors.py,sha256=TvpD7SA24dcrUIYgpw1PtVukf64Uy-Q-X6Eo2eRbAmc,1483
+zipnn/util_torch.py,sha256=VEfZt3KNHK8SFO-QeCSBsjP099BYbmLFTpbiw48u1Xk,8300
+zipnn/zipnn.py,sha256=nEKZ5mqganXLh0HPT91U1OENqji5vOOVdTVVJG1-2IQ,67368
+zipnn-0.5.3.dist-info/LICENSE.txt,sha256=W7SO6tO8xWE_rk2KWakkjpo4KPLC2M93LFQ_LS0a7ow,1130
+zipnn-0.5.3.dist-info/METADATA,sha256=jP6FILqXpGqYikExDayv8mYls2wyucx0To6rTkMh18k,16713
+zipnn-0.5.3.dist-info/WHEEL,sha256=2sod9lJcooCG0O0wP3mx7zixgGU7YkSn7sjt4jJHT9A,109
+zipnn-0.5.3.dist-info/top_level.txt,sha256=OAZVmDHvFxgl3iVnS0rLyNkhvHpiPJD-Btm6hdB88a4,17
+zipnn-0.5.3.dist-info/RECORD,,
