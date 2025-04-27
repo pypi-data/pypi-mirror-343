@@ -1,0 +1,12 @@
+README.md
+setup.py
+algoinfinite/__init__.py
+algoinfinite/main.py
+algoinfinite.egg-info/PKG-INFO
+algoinfinite.egg-info/SOURCES.txt
+algoinfinite.egg-info/dependency_links.txt
+algoinfinite.egg-info/entry_points.txt
+algoinfinite.egg-info/top_level.txt
+algoinfinite/data_structures/__init__.py
+algoinfinite/data_structures/linked_list.py
+algoinfinite/data_structures/stack.py
