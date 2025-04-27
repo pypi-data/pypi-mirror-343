@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+cdpkit/__init__.py
+cdpkit/common.py
+cdpkits.egg-info/PKG-INFO
+cdpkits.egg-info/SOURCES.txt
+cdpkits.egg-info/dependency_links.txt
+cdpkits.egg-info/requires.txt
+cdpkits.egg-info/top_level.txt
