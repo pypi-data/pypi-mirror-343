@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/article-fetch/server.py
+src/article_fetch.egg-info/PKG-INFO
+src/article_fetch.egg-info/SOURCES.txt
+src/article_fetch.egg-info/dependency_links.txt
+src/article_fetch.egg-info/requires.txt
+src/article_fetch.egg-info/top_level.txt
