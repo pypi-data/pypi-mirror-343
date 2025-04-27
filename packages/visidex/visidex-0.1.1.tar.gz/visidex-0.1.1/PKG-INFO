@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: visidex
+Version: 0.1.1
+Summary: Keypoint detection and visual retrieval library for image identification.
+Author: Wagner Santos
+Author-email: wlsantos@cmb.gov.br
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: e2cnn (>=0.2.3,<0.3.0)
+Requires-Dist: kornia (>=0.8.0,<0.9.0)
+Requires-Dist: torch (>=2.1.0,<3.0.0)
+Requires-Dist: tqdm (>=4.67.1,<5.0.0)
+Description-Content-Type: text/markdown
+
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
