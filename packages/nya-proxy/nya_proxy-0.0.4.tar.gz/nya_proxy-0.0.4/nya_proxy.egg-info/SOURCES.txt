@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+nya_proxy/__init__.py
+nya_proxy.egg-info/PKG-INFO
+nya_proxy.egg-info/SOURCES.txt
+nya_proxy.egg-info/dependency_links.txt
+nya_proxy.egg-info/entry_points.txt
+nya_proxy.egg-info/requires.txt
+nya_proxy.egg-info/top_level.txt
