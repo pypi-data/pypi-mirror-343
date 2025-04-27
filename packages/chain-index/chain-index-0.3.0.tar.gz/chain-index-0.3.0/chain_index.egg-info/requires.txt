@@ -1,0 +1,7 @@
+pydantic>=1.8.0
+typing-extensions>=3.7.4
+eth_abi>=4.0.0
+eth_utils>=2.0.0
+
+[dev]
+pytest
