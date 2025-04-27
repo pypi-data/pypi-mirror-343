@@ -1,0 +1,12 @@
+runce/__init__.py,sha256=fAVsctTCvDWukIkUvjoOlac1dFBhfvVfINhEIVSnGnw,206
+runce/__main__.py,sha256=MSmt_5Xg84uHqzTN38JwgseJK8rsJn_11A8WD99VtEo,61
+runce/cli.py,sha256=ZLS5KmcMNE5SCF6dkiY057MOsWcwjzgiv2dSlgDDbzA,12515
+runce/config.py,sha256=NdrfpSRtaZLi1wC1s3pC7QUoUlfE8E75XgXETuQzmSo,476
+runce/main.py,sha256=xYClHsuY9whvQB3IcD37eIpQlDpggaOXxwXbIyk84c0,6626
+runce/utils.py,sha256=T0UBiPakNpggk3HM-GTnkEE8zpSweooNwDpdqzf-kDg,866
+runce-0.1.5.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+runce-0.1.5.dist-info/METADATA,sha256=HZLqkRqRvNKqzYw7-A8OjAKt5lZEueirQCkaajVmjpM,2825
+runce-0.1.5.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+runce-0.1.5.dist-info/entry_points.txt,sha256=xkHembkbrIXycKEoa-re9RjnEdkmxxCuw5ghBSZPJG0,41
+runce-0.1.5.dist-info/top_level.txt,sha256=MBdXeVV5tWm9JOX8n45Ed-QbCK_h92b_TVDlfZYqYO4,6
+runce-0.1.5.dist-info/RECORD,,
