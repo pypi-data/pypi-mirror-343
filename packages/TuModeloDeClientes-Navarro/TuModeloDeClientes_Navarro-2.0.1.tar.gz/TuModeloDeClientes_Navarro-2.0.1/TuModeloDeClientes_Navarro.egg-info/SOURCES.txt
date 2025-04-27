@@ -1,0 +1,12 @@
+README.md
+setup.py
+TuModeloDeClientes_Navarro/__init__.py
+TuModeloDeClientes_Navarro/main.py
+TuModeloDeClientes_Navarro.egg-info/PKG-INFO
+TuModeloDeClientes_Navarro.egg-info/SOURCES.txt
+TuModeloDeClientes_Navarro.egg-info/dependency_links.txt
+TuModeloDeClientes_Navarro.egg-info/entry_points.txt
+TuModeloDeClientes_Navarro.egg-info/top_level.txt
+TuModeloDeClientes_Navarro/paquete1/__init__.py
+TuModeloDeClientes_Navarro/paquete1/modulo1.py
+TuModeloDeClientes_Navarro/paquete1/modulo2.py
