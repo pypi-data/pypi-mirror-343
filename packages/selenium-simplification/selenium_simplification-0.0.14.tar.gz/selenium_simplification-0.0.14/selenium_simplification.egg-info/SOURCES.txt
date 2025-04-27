@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+selenium_simplification/__init__.py
+selenium_simplification.egg-info/PKG-INFO
+selenium_simplification.egg-info/SOURCES.txt
+selenium_simplification.egg-info/dependency_links.txt
+selenium_simplification.egg-info/requires.txt
+selenium_simplification.egg-info/top_level.txt
+selenium_simplification/Chrome/SeleniumChrome.py
+selenium_simplification/Firefox/SeleniumFirefox.py
+selenium_simplification/UndetectedChrome/UndetectedSeleniumChrome.py
