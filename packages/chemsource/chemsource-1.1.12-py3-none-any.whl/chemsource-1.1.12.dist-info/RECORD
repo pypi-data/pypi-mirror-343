@@ -1,0 +1,11 @@
+chemsource/__init__.py,sha256=yul6hKfaXI3cz4umHjTbEDyC3vD7IqWXn0MstnZeuJQ,58
+chemsource/chemsource.py,sha256=w3IscN9bT7LwJhziHSb0hHxejZtTC-o8xYVMb7AVjgY,3025
+chemsource/classifier.py,sha256=7qDBzi9LifC8qrHF1oVR4rKyLAN7lJ1jdw_lzfkZD14,2956
+chemsource/config.py,sha256=R8EEGDmvXJXHHuLUJ8rwmw_rCdRaojSpfef7WnGrF98,4755
+chemsource/exceptions.py,sha256=9qXmiH5cZjAbb8ZzN5xYsERZNsss1Ub9Fb23XcA9p7Q,823
+chemsource/retriever.py,sha256=9NVAlNlJlj4R_YqEgFQryMkT8N1-3W4R3osx2h2uCps,4219
+chemsource-1.1.12.dist-info/licenses/LICENSE,sha256=AAtU5Wv9UYD5WXRv419c_wAdHeW7mN6iAE-26aYNOtE,1072
+chemsource-1.1.12.dist-info/METADATA,sha256=KbDX7AgUReLn5ofk00fUhfZUPuKMeTbDcZxTGgl2-pQ,15179
+chemsource-1.1.12.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+chemsource-1.1.12.dist-info/top_level.txt,sha256=5ZJQtg9uBCXLUPOOswv2F-04Ub11x-4b_P5d28KD2mI,11
+chemsource-1.1.12.dist-info/RECORD,,
