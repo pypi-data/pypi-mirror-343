@@ -1,0 +1,9 @@
+pillow
+coremltools
+torch
+numpy
+pydantic
+
+[dev]
+pytest
+build
