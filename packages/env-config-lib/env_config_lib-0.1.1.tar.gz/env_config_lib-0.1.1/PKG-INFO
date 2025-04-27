@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: env-config-lib
+Version: 0.1.1
+Summary: Удобная работа с переменными окружения через схему
+Author-email: Timur <freyzan2006@gmail.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: python-dotenv
+
+# env-config-lib
+
+Удобная работа с переменными окружения через валидацию по схеме.
+
+## Установка
+
+1. python -m venv .venv
+2. Активация вертуального окружения 
+3. pip install env_config_lib
+
+---
+
+## Пример использования
+
+```python
+from env_config_lib import EnvConfig
+
+env = EnvConfig(schema={"TEST": str})
+print(env.get("TEST"))
+
+```
+

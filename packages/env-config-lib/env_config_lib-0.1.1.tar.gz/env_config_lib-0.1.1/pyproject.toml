@@ -1,0 +1,15 @@
+[project]
+name = "env-config-lib"   # название твоего пакета на PyPI
+version = "0.1.1"
+description = "Удобная работа с переменными окружения через схему"
+authors = [{name = "Timur", email = "freyzan2006@gmail.com"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "python-dotenv",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
