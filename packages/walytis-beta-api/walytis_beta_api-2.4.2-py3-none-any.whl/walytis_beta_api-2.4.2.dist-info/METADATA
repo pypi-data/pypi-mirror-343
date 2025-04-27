@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: walytis_beta_api
+Version: 2.4.2
+Summary: A library for interacting with Walytis_Beta: a lightweight, flexible, non-linear blockchain.
+Home-page: https://ipfs.io/ipns/k2k4r8nismm5mmgrox2fci816xvj4l4cudnuc55gkfoealjuiaexbsup/Sites/BrenthyAndWalytis/
+Author: emendir
+Project-URL: IPNS, https://ipfs.io/ipns/k2k4r8nismm5mmgrox2fci816xvj4l4cudnuc55gkfoealjuiaexbsup/Sites/BrenthyAndWalytis/
+Project-URL: Github, https://github.com/emendir/BrenthyAndWalytis
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: appdirs >=1.4.3
+Requires-Dist: ipfs-node
+Requires-Dist: pyzmq >=25.1.1
+Requires-Dist: brenthy-tools-beta
+
+# Walytis
+Here lives the source code for Walytis, a flexible, lightweight non-linear blockchain.
+
+This project is built to be run by [Brenthy](/Documentation/Brenthy/Meaning/IntroductionToBrenthy.md), a framework for developing and deploying new kinds of blockchains.
+They both depend on each other, so they share the same repository. 
+
+## Learn About Walytis
+
+Most significant docs:
+- [Introduction to Walytis](/Documentation/Walytis/Meaning/IntroductionToWalytis.md)
+- [Understanding Nonlinear Blockchain](/Documentation/Walytis/Meaning/UnderstandingNonlinearBlockchain.md)
+- [Walytis Blockchain-Architecture Security](/Documentation/Walytis/Technical/WalytisBlockchainSecurity.md)
+
+Overview of all docs: [/Documentation/DocsOverview.md](/Documentation/DocsOverview.md)
