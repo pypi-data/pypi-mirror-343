@@ -1,0 +1,5 @@
+[console_scripts]
+extracted_results_to_table = meshtal_analysis.meshtal_analysis:extracted_results_to_table
+meshtal_analysis = meshtal_analysis.meshtal_analysis:main
+meshtal_operator = meshtal_analysis.meshtal_operator:main
+
