@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: mock-book-hotel
+Version: 0.1.5
+Summary: Add your description here
+Author-email: yanxingyang <yanxingyang@gmail.com>
+Requires-Python: >=3.11
+Requires-Dist: mcp>=1.6.0
+Description-Content-Type: text/markdown
+
+## 介绍
+
+这是uvx 调用mcp 的例子。
+
+## 使用方法
+
+## MCP 配置
+
+### uvx
+  
+```json
+
+{
+
+  "mcpServers": {
+
+    "mock-book-hotel": {
+
+      "command": "uvx",
+
+      "args": [
+
+        "mock-book-hotel",
+        "-transport=stdio"
+      ]
+
+    }
+
+  }
+
+}
