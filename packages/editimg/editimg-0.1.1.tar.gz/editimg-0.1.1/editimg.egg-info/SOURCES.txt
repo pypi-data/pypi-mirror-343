@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+editimg/__init__.py
+editimg/imagekit.py
+editimg/pngtools.py
+editimg.egg-info/PKG-INFO
+editimg.egg-info/SOURCES.txt
+editimg.egg-info/dependency_links.txt
+editimg.egg-info/top_level.txt
+tests/test1.py
+tests/test2.py
+tests/test3.py
