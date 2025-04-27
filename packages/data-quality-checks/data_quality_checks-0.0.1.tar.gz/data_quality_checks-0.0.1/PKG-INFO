@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: data_quality_checks
+Version: 0.0.1
+Summary: a data qulity check packgage version 1
+Author: pranav patil
+Author-email: pranavpatil72494@gmail.com
+Requires-Python: >=3.6
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
