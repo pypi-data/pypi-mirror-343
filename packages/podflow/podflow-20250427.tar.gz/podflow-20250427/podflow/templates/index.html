@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podflow</title>
+  <link rel="stylesheet" href="/templates/css/index.css" />
+</head>
+<body>
+  <!-- 菜单栏 -->
+  <nav id="menu">
+    <h3>菜单栏</h3>
+    <ul>
+      <li data-page="pageMessage">Podflow 运行情况</li>
+      <li data-page="pageChannel">获取媒体频道 ID</li>
+    </ul>
+  </nav>
+  <!-- 菜单切换按钮 -->
+  <button id="toggleMenu">❮</button>
+  <!-- 主体区域 -->
+  <main id="main">
+    <!-- 获取 Channel-ID 页面 -->
+    <section id="pageChannel" style="display: none;">
+      <h2>获取媒体频道 ID</h2>
+      <form id="inputForm" method="post" action="getid">
+        <label for="inputOutput">请输入：</label><br>
+        <textarea class="common-area" name="inputOutput" id="inputOutput"></textarea><br>
+        <div class="button-container">
+          <button type="button" id="pasteBtn">📋 粘贴</button>
+          <button type="submit">✅ 提交</button>
+          <button type="button" id="copyBtn">📄 拷贝</button>
+          <button type="button" id="clearBtn">🗑️ 清空</button>
+        </div>
+        <p class="hint">📌 如果粘贴按钮无效，请长按输入框手动粘贴。</p>
+      </form>
+    </section>
+    <!-- 消息滚动显示页面 -->
+    <section id="pageMessage">
+      <h2>Podflow 运行情况</h2>
+      <form>
+        <label>主进度条：</label><br>
+        <div class="pb-bar" id="mainProgressBar">
+          <div class="pb-progress pb-animated" id="mainProgress"></div>
+          <div class="pb-status-text" id="progressStatus">准备中</div>
+          <div class="pb-percentage-text" id="progressPercentage">0.00%</div>
+        </div>
+        <label id="downloadLabel"></label><br>
+        <div class="common-area" id="messageDownload"></div>
+        <label>构建服务：</label><br>
+        <div class="common-area" id="messageArea"></div>
+        <label>收发服务：</label><br>
+        <div class="common-area" id="messageHttp"></div>
+      </form>
+    </section>
+  </main>
+  <script src="/templates/js/qrcode.min.js"></script>
+  <script src="/templates/js/index.js"></script>
+</body>
+</html>
