@@ -1,0 +1,38 @@
+children:
+- children:
+  - children: []
+    filename: null
+    id: 2
+    name: filter/smooth_labels
+    type: label
+    x: 855.8993786786447
+    y: 309.1496121103532
+  filename: null
+  id: 1
+  name: label/watershed
+  type: label
+  x: 553.1905865071749
+  y: 370.36245635373575
+filename: membranes.png
+id: 0
+name: original
+type: intensity
+view_settings:
+  scale: 1.4429350611702862
+x: 353.0752631258431
+y: 303.0260350131947
+title_: "Level 6: Cells and membranes"
+function_filters:
+- watershed
+- erode_labels
+- outlines
+- connected_components
+- otsu
+- voronoi-otsu
+- dilate_labels
+- erode_labels
+- dilate
+- erode
+- mode
+- smooth_labels
+
