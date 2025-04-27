@@ -1,0 +1,111 @@
+Metadata-Version: 2.4
+Name: qgbot
+Version: 1.1.0
+Summary: Modular Quant-Grade Intelligent Ethereum Volatility-Aware Grid Trading Bot
+Home-page: https://github.com/LoQiseaking69/qgbot
+Author: LoQiseaking69
+Author-email: LoQiseaking69 <REEL0112359.13@proton.me>
+License: BSD-3-Clause
+Project-URL: Homepage, https://github.com/LoQiseaking69/qgbot
+Project-URL: Repository, https://github.com/LoQiseaking69/qgbot
+Keywords: ethereum,grid trading,quantitative trading,decentralized finance,crypto trading bot,uniswap,ethereum bot,python trading bot,crypto bot,quant bot
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.20
+Requires-Dist: ecdsa>=0.18
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# Quant-GridBot
+
+**Modular Quant-Grade Intelligent Volatility-Aware ETH-to-Token Grid Trading Bot**
+
+---
+![img](https://github.com/LoQiseaking69/qgbot/blob/main/Qgbot.PNG)
+___
+
+## Features
+- Real Ethereum RPC Trading (No Web3.py dependency)
+- Adaptive Dynamic Grid Trading Strategy
+- Volatility-Weighted Grid Level Adjustment (tightens/widens based on live volatility)
+- Intelligent Token Selection Based on Real-Time Volatility Scoring
+- Real Ethereum Transaction Signing (ECDSA/RLP Encoding)
+- Real SQLite Trade Logging (Persistent Local Database)
+- Fully Modular Code Architecture (Core, Grid, Rebalance, Executor, Wallet, Scorer, DB, Utils)
+- CLI Launchable via `quantgridbot`
+- Supports Simulation Mode (Dry Run) and Live Trading Mode
+- Graceful Shutdown and Signal Handling
+- BSD 3-Clause Licensed (Open Source)
+
+---
+
+## Installation
+
+Clone the repository and install locally:
+
+```bash
+git clone https://github.com/LoQiseaking69/qgbot.git
+cd qgbot
+pip install .
+```
+
+---
+
+## Configuration
+
+Before running, create a `config.json` file at the project root.
+
+**Required fields include:**
+- `rpc_url`: Your Ethereum RPC endpoint (Infura, Alchemy, custom node)
+- `wallet_address`: Your Ethereum wallet address
+- `private_key`: Private key for signing transactions (**keep secret**)
+- `simulate`: `true` for dry-run, `false` for real transactions
+- `trade_volume`: Amount of ETH per trade
+- `grid_lower_pct`, `grid_upper_pct`: Grid boundaries relative to ETH price
+- `grid_size`: Number of grid levels
+- `target_tokens`: List of ERC20 token contract addresses
+- `slippage_pct`, `trade_cooldown`, `refresh_interval`: Trade controls
+
+An example template `config.example.json` is provided.
+
+---
+
+## Usage
+
+After configuring:
+
+```bash
+quantgridbot
+```
+
+The bot will start monitoring live ETH prices, dynamically adjusting the grid, selecting the best tokens, and executing trades based on grid levels.
+
+---
+
+## Project Structure
+
+- `src/qgbot/core.py` — System controller (launches GridBot and RebalanceBot)
+- `src/qgbot/grid.py` — Grid trading logic and execution
+- `src/qgbot/rebalance.py` — Portfolio balance monitoring
+- `src/qgbot/executor.py` — Trade building, signing, and Uniswap execution
+- `src/qgbot/wallet.py` — Live ETH balance fetching and valuation
+- `src/qgbot/scorer.py` — Token volatility scoring and best selection
+- `src/qgbot/utils.py` — Ethereum RPC communication and RLP helpers
+- `src/qgbot/db.py` — Thread-safe TradeDatabase (SQLite logger)
+## License
+___
+
+BSD 3-Clause License.  
+See the [LICENSE](LICENSE) file for full license text.
