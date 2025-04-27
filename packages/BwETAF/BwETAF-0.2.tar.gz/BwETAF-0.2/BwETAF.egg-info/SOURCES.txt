@@ -1,0 +1,14 @@
+setup.py
+BwETAF/__init__.py
+BwETAF/_errors.py
+BwETAF/_utils.py
+BwETAF/common_imports.py
+BwETAF/debug.py
+BwETAF/independent.py
+BwETAF/layers.py
+BwETAF/model.py
+BwETAF.egg-info/PKG-INFO
+BwETAF.egg-info/SOURCES.txt
+BwETAF.egg-info/dependency_links.txt
+BwETAF.egg-info/requires.txt
+BwETAF.egg-info/top_level.txt

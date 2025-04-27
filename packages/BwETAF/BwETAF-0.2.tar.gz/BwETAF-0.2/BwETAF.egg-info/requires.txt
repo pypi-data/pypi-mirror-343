@@ -1,0 +1,6 @@
+flax
+jax
+huggingface_hub
+optax
+numpy
+tiktoken
