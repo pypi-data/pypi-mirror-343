@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>userguide.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h2 id="%22%22%22">&quot;&quot;&quot;</h2>
+<h2 id="author-sukumar-kutagulladesignation-test-automation-architect">Author: Sukumar Kutagulla
+Designation: Test Automation Architect</h2>
+<p>&quot;&quot;&quot;</p>
+<h1 id="vassureai-framework-user-guide">VAssureAI Framework User Guide</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#quick-start-guide">Quick Start Guide</a></li>
+<li><a href="#framework-overview">Framework Overview</a></li>
+<li><a href="#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+<h2 id="quick-start-guide">Quick Start Guide</h2>
+<h3 id="what-is-vassureai">What is VAssureAI?</h3>
+<p>VAssureAI is an automated testing tool that helps you test your applications without writing code. You simply write your test steps in a PDF document with plain english, and the framework automatically converts them into working tests.</p>
+<h3 id="how-to-use-vassureai-in-5-simple-steps">How to Use VAssureAI in 5 Simple Steps</h3>
+<h4 id="step-1-initial-setup-one-time-only">Step 1: Initial Setup (One-time only)</h4>
+<ol>
+<li>
+<p><strong>Download and Install Required Software</strong></p>
+<ul>
+<li>Ask your IT team to install:
+<ul>
+<li>Python 3.11 or newer</li>
+<li>Google Chrome or Firefox browser</li>
+</ul>
+</li>
+<li>Request the following information from your system administrator:
+<ul>
+<li>Application URL (BASE_URL)</li>
+<li>Your username (USERNAME)</li>
+<li>Your password (PASSWORD)</li>
+<li>LLM (LLM_API_KEY)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Have IT Set Up the Environment</strong></p>
+<ul>
+<li>Ask your IT team to:
+<ul>
+<li>Clone the VAssureAI repository</li>
+<li>Set up the virtual environment</li>
+<li>Install required packages</li>
+<li>Create the <code>.env</code> file with your credentials</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="step-2-write-your-test-cases">Step 2: Write Your Test Cases</h4>
+<ol>
+<li>
+<p><strong>Create a New PDF Document</strong></p>
+<ul>
+<li>Use any PDF editor (Microsoft Word/Google Docs + Save as PDF)</li>
+<li>Follow this simple format:<pre class="hljs"><code><div>Test Case: [Your Test Name]
+Description: [What the test does]
+
+Steps:
+1. [First action to take]
+2. [Second action to take]
+3. [What to verify]
+...
+</div></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Example Test Case</strong>:</p>
+<pre class="hljs"><code><div>Test Case: Login to Application
+Description: Verify user can login successfully
+
+Steps:
+1. Navigate to login page
+2. Enter username in the username field
+3. Click continue button
+4. Enter password in password field
+5. Click login button
+6. Verify dashboard is displayed
+</div></code></pre>
+</li>
+</ol>
+<h4 id="step-3-run-your-tests">Step 3: Run Your Tests</h4>
+<ol>
+<li>
+<p><strong>Start the Framework</strong></p>
+<ul>
+<li>Double-click the <code>start_framework.bat</code> file</li>
+<li>Or ask IT to create a desktop shortcut for you</li>
+</ul>
+</li>
+<li>
+<p><strong>Add Your Test Cases</strong></p>
+<ul>
+<li>Copy your PDF file into the <code>input_pdfs</code> folder</li>
+<li>The framework will automatically detect and process it</li>
+</ul>
+</li>
+<li>
+<p><strong>View Your Tests</strong></p>
+<ul>
+<li>Look in the <code>tests</code> folder</li>
+<li>You'll see your test case converted to a test script</li>
+</ul>
+</li>
+</ol>
+<h4 id="step-4-monitor-test-execution">Step 4: Monitor Test Execution</h4>
+<ol>
+<li>
+<p><strong>Watch Progress</strong></p>
+<ul>
+<li>Tests run automatically</li>
+<li>You'll see browser windows opening/closing</li>
+<li>Progress is shown in the terminal window</li>
+</ul>
+</li>
+<li>
+<p><strong>View Results in Real-time</strong></p>
+<ul>
+<li>Screenshots are saved in <code>screenshots</code> folder</li>
+<li>Videos are recorded in <code>videos</code> folder</li>
+<li>Logs are written to <code>logs</code> folder</li>
+</ul>
+</li>
+</ol>
+<h4 id="step-5-review-test-results">Step 5: Review Test Results</h4>
+<ol>
+<li>
+<p><strong>Open Test Reports</strong></p>
+<ul>
+<li>Go to <code>reports</code> folder</li>
+<li>Open the HTML report in your browser</li>
+<li>PDF reports are in <code>reports/pdf</code> folder</li>
+</ul>
+</li>
+<li>
+<p><strong>What to Look For</strong></p>
+<ul>
+<li>Green ✅ means test passed</li>
+<li>Red ❌ means test failed</li>
+<li>Screenshots show what happened</li>
+<li>Error messages explain any failures</li>
+</ul>
+</li>
+</ol>
+<h3 id="common-tasks">Common Tasks</h3>
+<h4 id="creating-a-new-test">Creating a New Test</h4>
+<ol>
+<li>Open your favorite document editor</li>
+<li>Write your test steps as a numbered list</li>
+<li>Save as PDF in <code>input_pdfs</code> folder</li>
+<li>Framework automatically creates the test</li>
+</ol>
+<h4 id="viewing-test-results">Viewing Test Results</h4>
+<ol>
+<li>Look for the newest files in:
+<ul>
+<li><code>reports/report.html</code> for overall results</li>
+<li><code>screenshots</code> folder for step-by-step images</li>
+<li><code>videos</code> folder for full test recordings</li>
+</ul>
+</li>
+</ol>
+<h4 id="troubleshooting-failed-tests">Troubleshooting Failed Tests</h4>
+<ol>
+<li>Open the HTML report</li>
+<li>Look for red ❌ marks</li>
+<li>Check the error message</li>
+<li>View the screenshot at that step</li>
+<li>Review the video recording</li>
+</ol>
+<h3 id="best-practices-for-writing-tests">Best Practices for Writing Tests</h3>
+<ol>
+<li>
+<p><strong>Keep Steps Simple</strong></p>
+<ul>
+<li>One action per step</li>
+<li>Be specific about what to click/type</li>
+<li>Include verification points</li>
+</ul>
+</li>
+<li>
+<p><strong>Name Things Clearly</strong></p>
+<ul>
+<li>Use descriptive test names</li>
+<li>Mention the feature being tested</li>
+<li>Include expected results</li>
+</ul>
+</li>
+<li>
+<p><strong>Include Verification Steps</strong></p>
+<ul>
+<li>Add &quot;Verify&quot; steps to check results</li>
+<li>Look for specific text or elements</li>
+<li>Check for success messages</li>
+</ul>
+</li>
+</ol>
+<h3 id="getting-help">Getting Help</h3>
+<ol>
+<li>
+<p><strong>Common Issues</strong></p>
+<ul>
+<li>Check the Troubleshooting section below</li>
+<li>Review example test cases in <code>sample_test_cases.pdf</code></li>
+<li>Look at test execution videos</li>
+</ul>
+</li>
+<li>
+<p><strong>Support Options</strong></p>
+<ul>
+<li>Ask your IT team</li>
+<li>Check framework documentation</li>
+<li>Contact system administrators</li>
+</ul>
+</li>
+</ol>
+<h3 id="troubleshooting-guide">Troubleshooting Guide</h3>
+<h4 id="test-not-running">Test Not Running?</h4>
+<p>✓ Check if framework is started (terminal window should be open)<br>
+✓ Verify PDF is in correct folder (input_pdfs)<br>
+✓ Make sure PDF follows correct format<br>
+✓ Ask IT to check environment setup</p>
+<h4 id="test-failed">Test Failed?</h4>
+<p>✓ Check screenshots in reports<br>
+✓ Review error message in logs<br>
+✓ Verify test steps are correct<br>
+✓ Ensure application is accessible</p>
+<h4 id="cant-find-results">Can't Find Results?</h4>
+<p>✓ Look in reports folder<br>
+✓ Check file timestamps<br>
+✓ Ask IT to verify permissions<br>
+✓ Ensure enough disk space</p>
+<h2 id="framework-overview">Framework Overview</h2>
+<p>VAssureAI is an innovative test automation framework that combines traditional testing practices with artificial intelligence. It's designed to make test automation accessible to both beginners and experienced testers.</p>
+<h3 id="why-vassureai">Why VAssureAI?</h3>
+<ul>
+<li><strong>AI-Powered Testing</strong>: Utilizes LLM for intelligent test execution</li>
+<li><strong>PDF to Test Conversion</strong>: Automatically converts test specifications from PDF to executable tests</li>
+<li><strong>Self-Healing</strong>: Automatically handles minor UI changes and retries failed steps</li>
+<li><strong>Comprehensive Reporting</strong>: Detailed reports with screenshots and videos</li>
+<li><strong>Easy to Learn</strong>: Simple syntax and common utilities for frequent operations</li>
+</ul>
+<h3 id="system-requirements">System Requirements</h3>
+<ol>
+<li>
+<p><strong>Hardware Requirements</strong>:</p>
+<ul>
+<li>Minimum 8GB RAM (16GB recommended)</li>
+<li>50GB free disk space</li>
+<li>Stable internet connection</li>
+</ul>
+</li>
+<li>
+<p><strong>Software Requirements</strong>:</p>
+<ul>
+<li>Python 3.11 or higher</li>
+<li>Git (for version control)</li>
+<li>Modern web browser (Chrome/Firefox)</li>
+</ul>
+</li>
+</ol>
+<h3 id="installation-steps">Installation Steps</h3>
+<ol>
+<li>
+<p><strong>Python Setup</strong>:</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># Check Python version</span>
+python --version  <span class="hljs-comment"># Should be 3.11+</span>
+
+<span class="hljs-comment"># Create virtual environment</span>
+python -m venv venv
+
+<span class="hljs-comment"># Activate virtual environment</span>
+.\venv\Scripts\activate  <span class="hljs-comment"># Windows</span>
+<span class="hljs-built_in">source</span> venv/bin/activate <span class="hljs-comment"># Linux/Mac</span>
+</div></code></pre>
+</li>
+<li>
+<p><strong>Install Dependencies</strong>:</p>
+<pre class="hljs"><code><div>pip install -r requirements.txt
+</div></code></pre>
+</li>
+<li>
+<p><strong>Environment Configuration</strong>:
+Create a <code>.env</code> file in the root directory:</p>
+<pre class="hljs"><code><div>BASE_URL=https://login.veevavault.com/auth/login
+USERNAME=your_username
+PASSWORD=your_password
+LLM_API_KEY=your_llm_api_key
+</div></code></pre>
+</li>
+</ol>
+<h3 id="first-time-setup-verification">First-Time Setup Verification</h3>
+<ol>
+<li>
+<p>Start the framework:</p>
+<pre class="hljs"><code><div>python start_framework.py
+</div></code></pre>
+</li>
+<li>
+<p>Run the sample test:</p>
+<pre class="hljs"><code><div>pytest tests/test_create_deviation.py -v --asyncio-mode=auto
+</div></code></pre>
+</li>
+</ol>
+<h2 id="detailed-documentation">Detailed Documentation</h2>
+<h3 id="writing-tests">Writing Tests</h3>
+<h4 id="method-1-using-pdf-specifications">Method 1: Using PDF Specifications</h4>
+<ol>
+<li>
+<p><strong>Create Test Specification PDF</strong>:</p>
+<ul>
+<li>Use clear, structured format</li>
+<li>Include test case title</li>
+<li>List steps sequentially
+Example:</li>
+</ul>
+<pre class="hljs"><code><div>Test Case: Login to Application
+1. Navigate to login page
+2. Enter username
+3. Click continue
+4. Enter password
+5. Click login
+6. Verify success
+</div></code></pre>
+</li>
+<li>
+<p><strong>Generate Test Script</strong>:</p>
+<ul>
+<li>Place PDF in <code>input_pdfs/</code> directory</li>
+<li>Framework automatically generates test script</li>
+<li>Find generated script in <code>tests/</code> directory</li>
+</ul>
+</li>
+</ol>
+<h4 id="method-2-manual-test-creation">Method 2: Manual Test Creation</h4>
+<ol>
+<li>
+<p><strong>Create Test File</strong>:</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> pytest
+<span class="hljs-keyword">from</span> utils.base_test <span class="hljs-keyword">import</span> BaseTest
+<span class="hljs-keyword">from</span> utils.utilities <span class="hljs-keyword">import</span> common_utilities
+
+<span class="hljs-meta">@pytest.mark.requires_browser</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTest</span><span class="hljs-params">(BaseTest)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_all_test_steps</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> [
+            <span class="hljs-string">'Navigate to login page'</span>,
+            <span class="hljs-string">'Enter username "test@example.com"'</span>,
+            <span class="hljs-string">'Click continue button'</span>
+        ]
+
+<span class="hljs-meta">    @pytest.mark.asyncio</span>
+    <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_execution</span><span class="hljs-params">(self)</span>:</span>
+        test_steps = self.get_all_test_steps()
+        <span class="hljs-keyword">await</span> self._execute_test(test_steps, <span class="hljs-string">"My Test Results"</span>)
+</div></code></pre>
+</li>
+<li>
+<p><strong>Using Common Utilities</strong>:</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_all_test_steps</span><span class="hljs-params">(self)</span>:</span>
+    <span class="hljs-keyword">return</span> (
+        common_utilities.get_login_steps() +
+        [
+            <span class="hljs-string">'Click settings button'</span>,
+            <span class="hljs-string">'Verify settings page loaded'</span>
+        ]
+    )
+</div></code></pre>
+</li>
+</ol>
+<h3 id="best-practices">Best Practices</h3>
+<ol>
+<li>
+<p><strong>Test Structure</strong>:</p>
+<ul>
+<li>One test case per file</li>
+<li>Clear, descriptive test names</li>
+<li>Proper documentation</li>
+<li>Modular step definitions</li>
+</ul>
+</li>
+<li>
+<p><strong>Validation Points</strong>:</p>
+<ul>
+<li>Add verification steps</li>
+<li>Include screenshots at key points</li>
+<li>Verify success conditions</li>
+</ul>
+</li>
+</ol>
+<h3 id="running-tests">Running Tests</h3>
+<h4 id="basic-test-execution">Basic Test Execution</h4>
+<ol>
+<li>
+<p><strong>Single Test</strong>:</p>
+<pre class="hljs"><code><div>pytest tests/my_test.py -v
+</div></code></pre>
+</li>
+<li>
+<p><strong>All Tests</strong>:</p>
+<pre class="hljs"><code><div>pytest
+</div></code></pre>
+</li>
+<li>
+<p><strong>Test Categories</strong>:</p>
+<pre class="hljs"><code><div>pytest -m <span class="hljs-string">"requires_browser"</span>  <span class="hljs-comment"># Run browser tests</span>
+pytest -m <span class="hljs-string">"network_sensitive"</span> <span class="hljs-comment"># Run network tests</span>
+</div></code></pre>
+</li>
+</ol>
+<h4 id="advanced-execution-options">Advanced Execution Options</h4>
+<ol>
+<li>
+<p><strong>Parallel Execution</strong>:</p>
+<pre class="hljs"><code><div>pytest -n auto  <span class="hljs-comment"># Use all CPU cores</span>
+pytest -n 4     <span class="hljs-comment"># Use 4 workers</span>
+</div></code></pre>
+</li>
+<li>
+<p><strong>Report Generation</strong>:</p>
+<pre class="hljs"><code><div>pytest --html=reports/report.html
+</div></code></pre>
+</li>
+<li>
+<p><strong>Custom Options</strong>:</p>
+<pre class="hljs"><code><div>pytest --capture=no  <span class="hljs-comment"># Show print statements</span>
+pytest -v --tb=short <span class="hljs-comment"># Short traceback</span>
+</div></code></pre>
+</li>
+</ol>
+<h3 id="reports-and-analysis">Reports and Analysis</h3>
+<h4 id="types-of-reports">Types of Reports</h4>
+<ol>
+<li>
+<p><strong>HTML Reports</strong> (reports/report.html):</p>
+<ul>
+<li>Test summary</li>
+<li>Step-by-step execution</li>
+<li>Screenshots</li>
+<li>Pass/Fail status</li>
+</ul>
+</li>
+<li>
+<p><strong>PDF Reports</strong> (reports/pdf/):</p>
+<ul>
+<li>Detailed execution log</li>
+<li>Performance metrics</li>
+<li>Visual evidence</li>
+<li>Error analysis</li>
+</ul>
+</li>
+<li>
+<p><strong>Test Artifacts</strong>:</p>
+<ul>
+<li>Screenshots (screenshots/)</li>
+<li>Videos (videos/)</li>
+<li>Logs (logs/)</li>
+</ul>
+</li>
+</ol>
+<h4 id="analyzing-results">Analyzing Results</h4>
+<ol>
+<li>
+<p><strong>Real-time Monitoring</strong>:</p>
+<ul>
+<li>Console output</li>
+<li>Log files</li>
+<li>Screenshots</li>
+</ul>
+</li>
+<li>
+<p><strong>Post-execution Analysis</strong>:</p>
+<ul>
+<li>HTML report review</li>
+<li>Performance metrics</li>
+<li>Error patterns</li>
+</ul>
+</li>
+</ol>
+<h4 id="performance-metrics">Performance Metrics</h4>
+<ol>
+<li>
+<p><strong>Test Execution Time</strong>:</p>
+<ul>
+<li>Overall duration</li>
+<li>Step-wise timing</li>
+<li>Network delays</li>
+</ul>
+</li>
+<li>
+<p><strong>Resource Usage</strong>:</p>
+<ul>
+<li>CPU utilization</li>
+<li>Memory consumption</li>
+<li>Network bandwidth</li>
+</ul>
+</li>
+</ol>
+<h3 id="advanced-features">Advanced Features</h3>
+<h4 id="custom-actions">Custom Actions</h4>
+<ol>
+<li>
+<p><strong>Browser Actions</strong>:</p>
+<pre class="hljs"><code><div><span class="hljs-string">'Click element "button.submit"'</span>
+<span class="hljs-string">'Type text "Hello" in "#input-field"'</span>
+<span class="hljs-string">'Select "Option 1" from dropdown'</span>
+</div></code></pre>
+</li>
+<li>
+<p><strong>Validation Actions</strong>:</p>
+<pre class="hljs"><code><div><span class="hljs-string">'Verify text "Welcome" is visible'</span>
+<span class="hljs-string">'Verify element "#dashboard" exists'</span>
+<span class="hljs-string">'Verify page title contains "Home"'</span>
+</div></code></pre>
+</li>
+</ol>
+<h4 id="retry-mechanisms">Retry Mechanisms</h4>
+<ol>
+<li>
+<p><strong>Configuration</strong>:</p>
+<pre class="hljs"><code><div>retry_config = {
+    <span class="hljs-string">"max_retries"</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-string">"retry_delay"</span>: <span class="hljs-number">5</span>,
+    <span class="hljs-string">"retry_on_network_error"</span>: <span class="hljs-literal">True</span>
+}
+</div></code></pre>
+</li>
+<li>
+<p><strong>Custom Retry Logic</strong>:</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_with_retry</span><span class="hljs-params">(self)</span>:</span>
+    <span class="hljs-keyword">for</span> attempt <span class="hljs-keyword">in</span> range(self.retry_attempts):
+        <span class="hljs-keyword">try</span>:
+            result = <span class="hljs-keyword">await</span> self._execute_test(...)
+            <span class="hljs-keyword">if</span> result:
+                <span class="hljs-keyword">return</span> result
+        <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+            logger.warning(<span class="hljs-string">f"Attempt <span class="hljs-subst">{attempt + <span class="hljs-number">1</span>}</span> failed"</span>)
+</div></code></pre>
+</li>
+</ol>
+<h3 id="troubleshooting-guide">Troubleshooting Guide</h3>
+<h4 id="common-issues">Common Issues</h4>
+<ol>
+<li>
+<p><strong>Test Generation Issues</strong>:</p>
+<ul>
+<li>Verify PDF format</li>
+<li>Check file permissions</li>
+<li>Review PDF content structure</li>
+</ul>
+</li>
+<li>
+<p><strong>Execution Errors</strong>:</p>
+<ul>
+<li>Check environment variables</li>
+<li>Verify network connectivity</li>
+<li>Review browser compatibility</li>
+</ul>
+</li>
+<li>
+<p><strong>Report Generation Issues</strong>:</p>
+<ul>
+<li>Check disk space</li>
+<li>Verify write permissions</li>
+<li>Review file paths</li>
+</ul>
+</li>
+</ol>
+<h4 id="debug-tools">Debug Tools</h4>
+<ol>
+<li>
+<p><strong>Logging</strong>:</p>
+<ul>
+<li>Check logs/test_run_*.log</li>
+<li>Enable debug logging</li>
+<li>Review console output</li>
+</ul>
+</li>
+<li>
+<p><strong>Visual Debugging</strong>:</p>
+<ul>
+<li>Review screenshots</li>
+<li>Check video recordings</li>
+<li>Compare with baseline</li>
+</ul>
+</li>
+</ol>
+<h3 id="support-contacts">Support Contacts</h3>
+<ul>
+<li>Technical Support: [Contact Information]</li>
+<li>Documentation: [Link to Documentation]</li>
+<li>Community Forum: [Link to Forum]</li>
+</ul>
+<h2 id="framework-structure">Framework Structure</h2>
+<pre class="hljs"><code><div>vassureai/
+├── actions/                 # Custom test actions
+│   ├── __init__.py
+│   └── custom_actions.py    # Custom test implementations
+├── input_pdfs/             # Test case PDF specifications
+│   ├── create_deviation.pdf # Sample test case
+│   └── sample_test_cases.pdf # Example test cases
+├── logs/                   # Test execution logs
+│   └── test_run_*.log      # Timestamped log files
+├── metrics/                # Performance metrics data
+├── reports/               # Test execution reports
+│   ├── assets/           # Report static assets
+│   └── pdf/             # PDF format reports
+├── screenshots/           # Test execution screenshots
+│   └── step_*_*.png      # Step-wise screenshots
+├── tests/                # Test implementations
+│   ├── __init__.py
+│   ├── login_test.py     # Login functionality test
+│   └── test_create_deviation.py # Deviation creation test
+├── userguide/            # Framework documentation
+│   ├── userguide.md     # Detailed user guide
+│   ├── userguide.html   # HTML formatted guide
+│   ├── userguide.pdf    # PDF version of guide
+│   ├── userguide.png    # Guide diagrams/images
+│   └── userguide.jpeg   # Guide screenshots
+├── utils/                # Framework utilities
+│   ├── __init__.py
+│   ├── base_test.py      # Base test class
+│   ├── config.py         # Configuration management
+│   ├── conftest.py       # Pytest configuration
+│   ├── controller_setup.py # Browser setup
+│   ├── create_sample_pdf.py # Sample PDF generator
+│   ├── logger.py         # Logging configuration
+│   ├── metrics_reporter.py # Test metrics collection
+│   ├── monitoring.py     # Test monitoring
+│   ├── pdfgenerator.py   # Report generation
+│   ├── test_generator.py # Test script generator
+│   ├── templates/        # Template files
+│   │   └── test_template.py # Test script template
+│   └── utilities.py      # Common utilities
+├── videos/               # Test execution recordings
+├── .env                 # Environment configuration
+├── .gitignore           # Git ignore rules
+├── create_pdf.py        # PDF creation utility
+├── pytest.ini          # Pytest configuration
+├── requirements.txt    # Project dependencies
+├── start_framework.bat # Windows startup script
+└── start_framework.py  # Framework startup script
+</div></code></pre>
+<h2 id="framework-control-flow">Framework Control Flow</h2>
+<h3 id="test-generation-flow">Test Generation Flow</h3>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[PDF Test Spec] -->|Place in input_pdfs/| B[PDF Watcher]
+    B -->|Detect New PDF| C[Test Generator]
+    C -->|Parse Steps| D[Create Script]
+    D -->|Save to tests/| E[Test File]
+    E -->|pytest| F[Test Execution]
+</div></code></pre>
+<ol>
+<li>
+<p><strong>PDF Processing Pipeline</strong></p>
+<pre class="hljs"><code><div><span class="hljs-comment"># PDFTestProcessor (utils/utilities.py)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">extract_test_cases</span><span class="hljs-params">(pdf_path)</span>:</span>
+    <span class="hljs-comment"># Extract text from PDF</span>
+    <span class="hljs-comment"># Split into test blocks</span>
+    <span class="hljs-comment"># Convert to structured format</span>
+    <span class="hljs-comment"># Return test cases</span>
+</div></code></pre>
+</li>
+<li>
+<p><strong>Test Script Generation</strong></p>
+<pre class="hljs"><code><div><span class="hljs-comment"># TestScriptGenerator (utils/test_generator.py)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">generate_test_file</span><span class="hljs-params">(test_case)</span>:</span>
+    <span class="hljs-comment"># Load template</span>
+    <span class="hljs-comment"># Render with test case data</span>
+    <span class="hljs-comment"># Save as Python test file</span>
+</div></code></pre>
+</li>
+</ol>
+<h3 id="test-execution-flow">Test Execution Flow</h3>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Test Script] -->|pytest| B[BaseTest Setup]
+    B -->|Initialize| C[Test Environment]
+    C -->|Configure| D[Browser Agent]
+    D -->|Execute| E[Test Steps]
+    E -->|Monitor| F[Step Results]
+    F -->|Generate| G[Reports]
+    G -->|Archive| H[Evidence]
+</div></code></pre>
+<ol>
+<li>
+<p><strong>Setup Phase</strong></p>
+<ul>
+<li>Environment Initialization<pre class="hljs"><code><div><span class="hljs-meta">@pytest.fixture(autouse=True)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setup_test</span><span class="hljs-params">(self, setup_base)</span>:</span>
+    self.test_name = <span class="hljs-string">"test_name"</span>
+    self.retry_attempts = Config.retry.max_retries
+    <span class="hljs-keyword">return</span> self
+</div></code></pre>
+</li>
+<li>Browser Configuration<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setup_agent</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># Configure browser options</span>
+    <span class="hljs-comment"># Initialize test agent</span>
+    <span class="hljs-comment"># Setup monitoring</span>
+</div></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Execution Phase</strong></p>
+<ul>
+<li>Step Execution Loop<pre class="hljs"><code><div><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">execute_test</span><span class="hljs-params">(test_steps)</span>:</span>
+    <span class="hljs-keyword">for</span> step <span class="hljs-keyword">in</span> test_steps:
+        <span class="hljs-comment"># Execute step</span>
+        <span class="hljs-comment"># Capture screenshot</span>
+        <span class="hljs-comment"># Verify result</span>
+        <span class="hljs-comment"># Handle retry if needed</span>
+</div></code></pre>
+</li>
+<li>Real-time Monitoring<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">monitor_step</span><span class="hljs-params">(step)</span>:</span>
+    <span class="hljs-comment"># Track timing</span>
+    <span class="hljs-comment"># Capture metrics</span>
+    <span class="hljs-comment"># Log progress</span>
+</div></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Evidence Collection</strong></p>
+<ul>
+<li>Screenshots<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">save_screenshot</span><span class="hljs-params">(step)</span>:</span>
+    <span class="hljs-comment"># Capture screen</span>
+    <span class="hljs-comment"># Save with timestamp</span>
+    <span class="hljs-comment"># Link to report</span>
+</div></code></pre>
+</li>
+<li>Video Recording<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">record_video</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># Start recording</span>
+    <span class="hljs-comment"># Capture test execution</span>
+    <span class="hljs-comment"># Save on completion</span>
+</div></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Results Processing</strong></p>
+<ul>
+<li>Report Generation<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">generate_report</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># Compile results</span>
+    <span class="hljs-comment"># Create HTML/PDF</span>
+    <span class="hljs-comment"># Include evidence</span>
+</div></code></pre>
+</li>
+<li>Metrics Collection<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">collect_metrics</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># Performance data</span>
+    <span class="hljs-comment"># Success rates</span>
+    <span class="hljs-comment"># Resource usage</span>
+</div></code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="data-flow-architecture">Data Flow Architecture</h3>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR
+    A[Test Data] -->|Input| B[Test Engine]
+    B -->|Process| C[Execution]
+    C -->|Generate| D[Results]
+    D -->|Archive| E[Reports]
+</div></code></pre>
+<ol>
+<li>
+<p><strong>Input Processing</strong></p>
+<ul>
+<li>Test Steps: Structured format for actions</li>
+<li>Configuration: Environment settings</li>
+<li>Test Data: Dynamic inputs</li>
+</ul>
+</li>
+<li>
+<p><strong>Execution Pipeline</strong></p>
+<ul>
+<li>Step Processing: Action execution</li>
+<li>Validation: Result verification</li>
+<li>Recovery: Error handling &amp; retries</li>
+</ul>
+</li>
+<li>
+<p><strong>Output Generation</strong></p>
+<ul>
+<li>Evidence Collection</li>
+<li>Report Compilation</li>
+<li>Metrics Aggregation</li>
+</ul>
+</li>
+</ol>
+<h3 id="file-dependencies">File Dependencies</h3>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[test_file.py] -->|Inherits| B[base_test.py]
+    B -->|Uses| C[utilities.py]
+    C -->|Configures| D[config.py]
+    D -->|Logs via| E[logger.py]
+    E -->|Monitors with| F[monitoring.py]
+</div></code></pre>
+<ol>
+<li>
+<p><strong>Core Components</strong></p>
+<ul>
+<li>base_test.py: Base test functionality</li>
+<li>utilities.py: Common test operations</li>
+<li>config.py: Framework configuration</li>
+</ul>
+</li>
+<li>
+<p><strong>Support Systems</strong></p>
+<ul>
+<li>logger.py: Logging and tracing</li>
+<li>monitoring.py: Test monitoring</li>
+<li>pdfgenerator.py: Report generation</li>
+</ul>
+</li>
+</ol>
+
+</body>
+</html>
