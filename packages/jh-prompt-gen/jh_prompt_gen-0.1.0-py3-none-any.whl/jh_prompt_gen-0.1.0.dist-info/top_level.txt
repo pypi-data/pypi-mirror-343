@@ -1,0 +1,2 @@
+jh_copy_clipboard
+jh_gen_prompt
