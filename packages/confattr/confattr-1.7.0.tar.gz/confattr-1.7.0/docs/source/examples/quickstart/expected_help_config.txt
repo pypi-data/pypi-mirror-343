@@ -1,0 +1,154 @@
+The first existing file of the following paths is loaded:
+- ~/.config/test-app/config
+
+This can be influenced with the following environment variables:
+- XDG_CONFIG_HOME
+- XDG_CONFIG_DIRS
+- TEST_APP_CONFIG_PATH
+- TEST_APP_CONFIG_DIRECTORY
+- TEST_APP_CONFIG_NAME
+
+You can also use environment variables to change the values of the
+settings listed under `set` command. The corresponding environment
+variable name is the name of the setting in all upper case letters
+with dots, hypens and spaces replaced by underscores and prefixed with
+"TEST_APP_".
+
+Lines in the config file which start with a `"` or `#` are ignored.
+
+The config file may contain the following commands:
+
+set
+===
+usage: set [--raw] key1=val1 [key2=val2 ...]
+       set [--raw] key [=] val
+
+Change the value of a setting.
+
+In the first form set takes an arbitrary number of arguments, each
+argument sets one setting. This has the advantage that several
+settings can be changed at once. That is useful if you want to bind a
+set command to a key and process that command with
+ConfigFile.parse_line() if the key is pressed.
+
+In the second form set takes two arguments, the key and the value.
+Optionally a single equals character may be added in between as third
+argument. This has the advantage that key and value are separated by
+one or more spaces which can improve the readability of a config file.
+
+You can use the value of another setting with %other.key% or an
+environment variable with ${ENV_VAR}. If you want to insert a literal
+percent character use two of them: %%. You can disable expansion of
+settings and environment variables with the --raw flag.
+
+data types:
+
+  command with alternatives:
+    One or more commands separated by ||. The first command where
+    the program is installed is executed. The other commands are
+    ignored.
+
+    If the command name starts with a '$' it is interpreted as an
+    environment variable containing the name of the program to be
+    executed. This is useful to make use of environment variables
+    like EDITOR. If the environment variable is not set the
+    program is considered to not be installed and the next command
+    is tried instead.
+
+    The command is executed without a shell so redirection or
+    wildcard expansion is not possible. Setting environment
+    variables and piping like in a POSIX shell, however, are
+    implemented in python and should work platform independently.
+    If you need a shell write the command to a file, insert an
+    appropriate shebang line, make the file executable and set
+    this value to the file.
+
+  optional existing directory:
+    The path to an existing directory or an empty str to use a
+    default path.
+
+  str:
+    A text. If it contains spaces it must be wrapped in single or
+    double quotes.
+
+settings:
+
+  editor:
+    a command with alternatives
+
+    The editor to be used when opening the config file.
+
+  greeting:
+    a str
+
+    This setting is defined in the example and is not a standard
+    setting defined by quickstart.
+
+  include.extensions:
+    a comma separated list of str
+
+    File extensions to be suggested for auto completion of the
+    include command. An empty list means all files with any
+    extensions are suggested. The extensions should include the
+    leading full stop. The check is case insensitive.
+
+  include.home:
+    an optional existing directory
+
+    The directory where the include command looks for relative
+    paths. An empty string is the default, the directory where the
+    config file is located.
+
+  notification-level.config-file:
+    one of info, error
+
+  notification-level.user-interface:
+    one of info, error
+
+include
+=======
+usage: include path
+
+Load another config file.
+
+This is useful if a config file is getting so big that you want to
+split it up or if you want to have different config files for
+different use cases which all include the same standard config file to
+avoid redundancy or if you want to bind several commands to one key
+which executes one command with ConfigFile.parse_line().
+
+positional arguments:
+  path  The config file to load. Slashes are replaced with the
+        directory separator appropriate for the current operating
+        system. If the path contains a space it must be wrapped in
+        single or double quotes.
+
+echo
+====
+usage: echo [-l {info,error}] [-r] msg [msg ...]
+
+Display a message.
+
+Settings and environment variables are expanded like in the value of a
+set command.
+
+positional arguments:
+  msg                   The message to display
+
+options:
+  -l, --level {info,error}
+                        The notification level may influence the
+                        formatting but messages printed with echo are
+                        always displayed regardless of the
+                        notification level.
+  -r, --raw             Do not expand settings and environment
+                        variables.
+
+help
+====
+usage: help [cmd]
+
+Display help.
+
+positional arguments:
+  cmd  The command for which you want help

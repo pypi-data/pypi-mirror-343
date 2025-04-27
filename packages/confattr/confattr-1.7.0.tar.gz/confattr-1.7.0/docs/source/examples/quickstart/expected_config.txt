@@ -1,0 +1,67 @@
+# Data types
+# ----------
+# command with alternatives:
+#   One or more commands separated by ||. The first command where the
+#   program is installed is executed. The other commands are ignored.
+
+#   If the command name starts with a '$' it is interpreted as an
+#   environment variable containing the name of the program to be
+#   executed. This is useful to make use of environment variables like
+#   EDITOR. If the environment variable is not set the program is
+#   considered to not be installed and the next command is tried
+#   instead.
+
+#   The command is executed without a shell so redirection or wildcard
+#   expansion is not possible. Setting environment variables and
+#   piping like in a POSIX shell, however, are implemented in python
+#   and should work platform independently. If you need a shell write
+#   the command to a file, insert an appropriate shebang line, make
+#   the file executable and set this value to the file.
+
+# optional existing directory:
+#   The path to an existing directory or an empty str to use a default
+#   path.
+
+# str:
+#   A text. If it contains spaces it must be wrapped in single or
+#   double quotes.
+
+# editor
+# ------
+# a command with alternatives
+# The editor to be used when opening the config file.
+set editor = "'$EDITOR' fn||rifle fn||vim fn||nano fn||vi fn"
+
+# greeting
+# --------
+# a str
+# This setting is defined in the example and is not a standard setting
+# defined by quickstart.
+set greeting = 'hello world'
+
+# include.extensions
+# ------------------
+# a comma separated list of str
+# File extensions to be suggested for auto completion of the include
+# command. An empty list means all files with any extensions are
+# suggested. The extensions should include the leading full stop. The
+# check is case insensitive.
+set include.extensions = ''
+
+# include.home
+# ------------
+# an optional existing directory
+# The directory where the include command looks for relative paths. An
+# empty string is the default, the directory where the config file is
+# located.
+set include.home = ''
+
+# notification-level.config-file
+# ------------------------------
+# one of info, error
+set notification-level.config-file = error
+
+# notification-level.user-interface
+# ---------------------------------
+# one of info, error
+set notification-level.user-interface = info

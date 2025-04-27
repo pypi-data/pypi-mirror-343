@@ -1,0 +1,16 @@
+usage: test-app [-h] [-H] [-v] [-e] [-E] [-c CONFIG] [greeting]
+
+Print a greeting.
+
+positional arguments:
+  greeting              how you want to be greeted
+
+options:
+  -h, --help            show this help message and exit
+  -H, --help-config     show the config help and exit
+  -v, --version         show the version and exit
+  -e, --edit-config     edit the config file and exit
+  -E, --update-and-edit-config
+                        rewrite the config file, open it for editing
+                        and exit
+  -c, --config CONFIG   use this config file instead of the default

@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>confattr.quickstart module &mdash; confattr v1.7.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx_paramlinks.css?v=dd72e65a" />
+      <link rel="stylesheet" type="text/css" href="_static/no-ligatures-in-code.css?v=2fad7038" />
+      <link rel="stylesheet" type="text/css" href="_static/tab-size.css?v=001e92f2" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f8b929d9"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="confattr.state module" href="confattr.state.html" />
+    <link rel="prev" title="confattr.formatters module" href="confattr.formatters.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            confattr
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction and examples</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="confattr.html">confattr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="confattr.config.html">confattr.config module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="confattr.configfile.html">confattr.configfile module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="confattr.formatters.html">confattr.formatters module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">confattr.quickstart module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#confattr.quickstart.ConfigManager"><code class="docutils literal notranslate"><span class="pre">ConfigManager</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.add_config_help_argument"><code class="docutils literal notranslate"><span class="pre">ConfigManager.add_config_help_argument()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.add_config_related_arguments"><code class="docutils literal notranslate"><span class="pre">ConfigManager.add_config_related_arguments()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.add_version_argument"><code class="docutils literal notranslate"><span class="pre">ConfigManager.add_version_argument()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.create_argument_parser"><code class="docutils literal notranslate"><span class="pre">ConfigManager.create_argument_parser()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.create_empty_argument_parser"><code class="docutils literal notranslate"><span class="pre">ConfigManager.create_empty_argument_parser()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.edit_config"><code class="docutils literal notranslate"><span class="pre">ConfigManager.edit_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.edit_config_and_exit"><code class="docutils literal notranslate"><span class="pre">ConfigManager.edit_config_and_exit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.editor"><code class="docutils literal notranslate"><span class="pre">ConfigManager.editor</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.get_save_path"><code class="docutils literal notranslate"><span class="pre">ConfigManager.get_save_path()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.load"><code class="docutils literal notranslate"><span class="pre">ConfigManager.load()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.notification_level_config"><code class="docutils literal notranslate"><span class="pre">ConfigManager.notification_level_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.notification_level_ui"><code class="docutils literal notranslate"><span class="pre">ConfigManager.notification_level_ui</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.parse_line"><code class="docutils literal notranslate"><span class="pre">ConfigManager.parse_line()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.print_config_help"><code class="docutils literal notranslate"><span class="pre">ConfigManager.print_config_help()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.print_config_help_and_exit"><code class="docutils literal notranslate"><span class="pre">ConfigManager.print_config_help_and_exit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.print_errors_without_ui"><code class="docutils literal notranslate"><span class="pre">ConfigManager.print_errors_without_ui()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.print_version"><code class="docutils literal notranslate"><span class="pre">ConfigManager.print_version()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.print_version_and_exit"><code class="docutils literal notranslate"><span class="pre">ConfigManager.print_version_and_exit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.save"><code class="docutils literal notranslate"><span class="pre">ConfigManager.save()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.select_config_file"><code class="docutils literal notranslate"><span class="pre">ConfigManager.select_config_file()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.set_ui_callback"><code class="docutils literal notranslate"><span class="pre">ConfigManager.set_ui_callback()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.ui_notifier"><code class="docutils literal notranslate"><span class="pre">ConfigManager.ui_notifier</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#confattr.quickstart.ConfigManager.update_config_and_exit"><code class="docutils literal notranslate"><span class="pre">ConfigManager.update_config_and_exit()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="confattr.state.html">confattr.state module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="confattr.subprocess_pipe.html">confattr.subprocess_pipe module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="confattr.types.html">confattr.types module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="confattr.utils.html">confattr.utils module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">confattr</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">confattr.quickstart module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/confattr.quickstart.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-confattr.quickstart">
+<span id="confattr-quickstart-module"></span><h1>confattr.quickstart module<a class="headerlink" href="#module-confattr.quickstart" title="Link to this heading"></a></h1>
+<p>Importing this module defines several settings which are useful in many applications and provides the <a class="reference internal" href="#confattr.quickstart.ConfigManager" title="confattr.quickstart.ConfigManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigManager</span></code></a> class.
+This allows for an easy configuration setup in exchange for flexibility.
+If you want more flexibility you can either subclass <a class="reference internal" href="#confattr.quickstart.ConfigManager" title="confattr.quickstart.ConfigManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigManager</span></code></a> and override specific methods or you do not import this module at all and use <a class="reference internal" href="confattr.configfile.html#confattr.configfile.ConfigFile" title="confattr.configfile.ConfigFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigFile</span></code></a> and <a class="reference internal" href="confattr.config.html#confattr.config.Config" title="confattr.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">Config</span></code></a> directly.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">confattr.quickstart.</span></span><span class="sig-name descname"><span class="pre">ConfigManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">appname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">changelog_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_python_version_in_version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_additional_modules_in_version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/types.html#types.ModuleType" title="(in Python v3.13)"><span class="pre">ModuleType</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#confattr.quickstart.ConfigManager" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Defines two <a class="reference internal" href="confattr.configfile.html#confattr.configfile.ConfigFile" title="confattr.configfile.ConfigFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigFile</span></code></a> instances with separately configurable notification levels for <a class="reference internal" href="#confattr.quickstart.ConfigManager.load" title="confattr.quickstart.ConfigManager.load"><code class="xref py py-meth docutils literal notranslate"><span class="pre">load()</span></code></a> and <a class="reference internal" href="#confattr.quickstart.ConfigManager.parse_line" title="confattr.quickstart.ConfigManager.parse_line"><code class="xref py py-meth docutils literal notranslate"><span class="pre">parse_line()</span></code></a>.
+This object also provides <a class="reference internal" href="#confattr.quickstart.ConfigManager.create_argument_parser" title="confattr.quickstart.ConfigManager.create_argument_parser"><code class="xref py py-meth docutils literal notranslate"><span class="pre">create_argument_parser()</span></code></a> to create an <a class="reference external" href="https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">argparse.ArgumentParser</span></code></a> with commonly needed arguments.
+Note that all <a class="reference internal" href="confattr.config.html#confattr.config.Config" title="confattr.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">Config</span></code></a> instances must be created before instantiating this class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="confattr.quickstart.ConfigManager.params.appname"></span><strong>appname</strong><a class="paramlink headerlink reference internal" href="#confattr.quickstart.ConfigManager.params.appname">¶</a> – The name of the app, used to initialize <a class="reference internal" href="confattr.configfile.html#confattr.configfile.ConfigFile" title="confattr.configfile.ConfigFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigFile</span></code></a> and when printing the version number</p></li>
+<li><p><span class="target" id="confattr.quickstart.ConfigManager.params.version"></span><strong>version</strong><a class="paramlink headerlink reference internal" href="#confattr.quickstart.ConfigManager.params.version">¶</a> – The version of the app, used when printing the version number</p></li>
+<li><p><span class="target" id="confattr.quickstart.ConfigManager.params.doc"></span><strong>doc</strong><a class="paramlink headerlink reference internal" href="#confattr.quickstart.ConfigManager.params.doc">¶</a> – The package doc string, used as description when creating an <a class="reference external" href="https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ArgumentParser</span></code></a></p></li>
+<li><p><span class="target" id="confattr.quickstart.ConfigManager.params.changelog_url"></span><strong>changelog_url</strong><a class="paramlink headerlink reference internal" href="#confattr.quickstart.ConfigManager.params.changelog_url">¶</a> – The URL to the change log, used when printing the version number</p></li>
+<li><p><span class="target" id="confattr.quickstart.ConfigManager.params.show_additional_modules_in_version"></span><strong>show_additional_modules_in_version</strong><a class="paramlink headerlink reference internal" href="#confattr.quickstart.ConfigManager.params.show_additional_modules_in_version">¶</a> – A sequence of libraries which should be included when printing the version number</p></li>
+<li><p><span class="target" id="confattr.quickstart.ConfigManager.params.show_python_version_in_version"></span><strong>show_python_version_in_version</strong><a class="paramlink headerlink reference internal" href="#confattr.quickstart.ConfigManager.params.show_python_version_in_version">¶</a> – If true: include the Python version number when printing the version number</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.add_config_help_argument">
+<span class="sig-name descname"><span class="pre">add_config_help_argument</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser" title="(in Python v3.13)"><span class="pre">ArgumentParser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser" title="(in Python v3.13)"><span class="pre">ArgumentParser</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.add_config_help_argument" title="Link to this definition"></a></dt>
+<dd><p>Add a <code class="docutils literal notranslate"><span class="pre">--help-config</span></code> argument to an <a class="reference external" href="https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">argparse.ArgumentParser</span></code></a>.</p>
+<p>This is not part of <a class="reference internal" href="#confattr.quickstart.ConfigManager.add_config_related_arguments" title="confattr.quickstart.ConfigManager.add_config_related_arguments"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_config_related_arguments()</span></code></a> so that this argument can be insterted between <code class="docutils literal notranslate"><span class="pre">--help</span></code> and <code class="docutils literal notranslate"><span class="pre">--version</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The same object that has been passed in</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.add_config_related_arguments">
+<span class="sig-name descname"><span class="pre">add_config_related_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser" title="(in Python v3.13)"><span class="pre">ArgumentParser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser" title="(in Python v3.13)"><span class="pre">ArgumentParser</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.add_config_related_arguments" title="Link to this definition"></a></dt>
+<dd><p>Add arguments related to the config file to an <a class="reference external" href="https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">argparse.ArgumentParser</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The same object that has been passed in</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.add_version_argument">
+<span class="sig-name descname"><span class="pre">add_version_argument</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser" title="(in Python v3.13)"><span class="pre">ArgumentParser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser" title="(in Python v3.13)"><span class="pre">ArgumentParser</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.add_version_argument" title="Link to this definition"></a></dt>
+<dd><p>Add an argument to print the version and exit to an <a class="reference external" href="https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">argparse.ArgumentParser</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The same object that has been passed in</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.create_argument_parser">
+<span class="sig-name descname"><span class="pre">create_argument_parser</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser" title="(in Python v3.13)"><span class="pre">ArgumentParser</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.create_argument_parser" title="Link to this definition"></a></dt>
+<dd><p>Create an <a class="reference external" href="https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">argparse.ArgumentParser</span></code></a> with arguments to display the version, edit the config file and choose a config file
+by calling <a class="reference internal" href="#confattr.quickstart.ConfigManager.create_empty_argument_parser" title="confattr.quickstart.ConfigManager.create_empty_argument_parser"><code class="xref py py-meth docutils literal notranslate"><span class="pre">create_empty_argument_parser()</span></code></a>, <a class="reference internal" href="#confattr.quickstart.ConfigManager.add_config_help_argument" title="confattr.quickstart.ConfigManager.add_config_help_argument"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_config_help_argument()</span></code></a>, <a class="reference internal" href="#confattr.quickstart.ConfigManager.add_version_argument" title="confattr.quickstart.ConfigManager.add_version_argument"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_version_argument()</span></code></a> and <a class="reference internal" href="#confattr.quickstart.ConfigManager.add_config_related_arguments" title="confattr.quickstart.ConfigManager.add_config_related_arguments"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_config_related_arguments()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.create_empty_argument_parser">
+<span class="sig-name descname"><span class="pre">create_empty_argument_parser</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser" title="(in Python v3.13)"><span class="pre">ArgumentParser</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.create_empty_argument_parser" title="Link to this definition"></a></dt>
+<dd><p>Create an <a class="reference external" href="https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">argparse.ArgumentParser</span></code></a> with the <a class="reference internal" href="#confattr.quickstart.ConfigManager.params.doc" title="confattr.quickstart.ConfigManager"><code class="xref py py-paramref docutils literal notranslate"><span class="pre">doc</span></code></a> passed to the constructor as description and <a class="reference internal" href="confattr.utils.html#confattr.utils.HelpFormatter" title="confattr.utils.HelpFormatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">HelpFormatter</span></code></a> as formatter_class but without custom arguments.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.edit_config">
+<span class="sig-name descname"><span class="pre">edit_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="confattr.types.html#confattr.types.SubprocessCommand" title="confattr.types.SubprocessCommand"><span class="pre">SubprocessCommand</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.ContextManager" title="(in Python v3.13)"><span class="pre">ContextManager</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="confattr.types.html#confattr.types.SubprocessCommand" title="confattr.types.SubprocessCommand"><span class="pre">SubprocessCommand</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.edit_config" title="Link to this definition"></a></dt>
+<dd><p>Open the config file in a text editor.</p>
+<p>If the config file does not exist it is created first.
+The text editor can be configured with <a class="reference internal" href="#confattr.quickstart.ConfigManager.editor" title="confattr.quickstart.ConfigManager.editor"><code class="xref py py-attr docutils literal notranslate"><span class="pre">editor</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="confattr.quickstart.ConfigManager.edit_config.params.context"></span><strong>context</strong><a class="paramlink headerlink reference internal" href="#confattr.quickstart.ConfigManager.edit_config.params.context">¶</a> – Returns a context manager which can be used to stop and start an urwid screen.
+It takes the command to be executed as argument so that it can log the command
+and it returns the command to be executed so that it can modify the command,
+e.g. processing and intercepting some environment variables.</p></li>
+<li><p><span class="target" id="confattr.quickstart.ConfigManager.edit_config.params.update"></span><strong>update</strong><a class="paramlink headerlink reference internal" href="#confattr.quickstart.ConfigManager.edit_config.params.update">¶</a> – Load and rewrite the config file if it is already existing.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.edit_config_and_exit">
+<span class="sig-name descname"><span class="pre">edit_config_and_exit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.edit_config_and_exit" title="Link to this definition"></a></dt>
+<dd><p>edit the config file and exit</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.editor">
+<span class="sig-name descname"><span class="pre">editor</span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.editor" title="Link to this definition"></a></dt>
+<dd><p>A setting allowing the user to specify how to open text files, e.g. the config file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.get_save_path">
+<span class="sig-name descname"><span class="pre">get_save_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.get_save_path" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The first existing and writable file returned by <a class="reference internal" href="confattr.configfile.html#confattr.configfile.ConfigFile.iter_config_paths" title="confattr.configfile.ConfigFile.iter_config_paths"><code class="xref py py-meth docutils literal notranslate"><span class="pre">iter_config_paths()</span></code></a> or the first path if none of the files are existing and writable.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.load" title="Link to this definition"></a></dt>
+<dd><p>Load settings from config file and environment variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>true if no errors have occurred, false if one or more errors have occurred</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.notification_level_config">
+<span class="sig-name descname"><span class="pre">notification_level_config</span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.notification_level_config" title="Link to this definition"></a></dt>
+<dd><p>A setting allowing the user to specify which messages they want to see when loading a config file with <a class="reference internal" href="#confattr.quickstart.ConfigManager.load" title="confattr.quickstart.ConfigManager.load"><code class="xref py py-meth docutils literal notranslate"><span class="pre">load()</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.notification_level_ui">
+<span class="sig-name descname"><span class="pre">notification_level_ui</span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.notification_level_ui" title="Link to this definition"></a></dt>
+<dd><p>A setting allowing the user to specify which messages they want to see when parsing a line with <a class="reference internal" href="#confattr.quickstart.ConfigManager.parse_line" title="confattr.quickstart.ConfigManager.parse_line"><code class="xref py py-meth docutils literal notranslate"><span class="pre">parse_line()</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.parse_line">
+<span class="sig-name descname"><span class="pre">parse_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ln</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.parse_line" title="Link to this definition"></a></dt>
+<dd><p>Parse a line from the user interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>true if no errors have occurred, false if one or more errors have occurred</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.print_config_help">
+<span class="sig-name descname"><span class="pre">print_config_help</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.print_config_help" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.print_config_help_and_exit">
+<span class="sig-name descname"><span class="pre">print_config_help_and_exit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.print_config_help_and_exit" title="Link to this definition"></a></dt>
+<dd><p>show the config help and exit</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.print_errors_without_ui">
+<span class="sig-name descname"><span class="pre">print_errors_without_ui</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.print_errors_without_ui" title="Link to this definition"></a></dt>
+<dd><p>Call <a class="reference internal" href="#confattr.quickstart.ConfigManager.set_ui_callback" title="confattr.quickstart.ConfigManager.set_ui_callback"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_ui_callback()</span></code></a> with <a class="reference external" href="https://docs.python.org/3/library/functions.html#print" title="(in Python v3.13)"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a> so that all messages are printed to the terminal.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.print_version">
+<span class="sig-name descname"><span class="pre">print_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.print_version" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.print_version_and_exit">
+<span class="sig-name descname"><span class="pre">print_version_and_exit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.print_version_and_exit" title="Link to this definition"></a></dt>
+<dd><p>show the version and exit</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">if_not_existing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.save" title="Link to this definition"></a></dt>
+<dd><p>Save the current values of all settings to the file returned by <a class="reference internal" href="confattr.configfile.html#confattr.configfile.ConfigFile.get_save_path" title="confattr.configfile.ConfigFile.get_save_path"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_save_path()</span></code></a>.
+Directories are created as necessary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="target" id="confattr.quickstart.ConfigManager.save.params.if_not_existing"></span><strong>if_not_existing</strong><a class="paramlink headerlink reference internal" href="#confattr.quickstart.ConfigManager.save.params.if_not_existing">¶</a> – Do not overwrite the file if it is already existing.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The path to the file which has been written</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.select_config_file">
+<span class="sig-name descname"><span class="pre">select_config_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.select_config_file" title="Link to this definition"></a></dt>
+<dd><p>use this config file instead of the default</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.set_ui_callback">
+<span class="sig-name descname"><span class="pre">set_ui_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.13)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="confattr.configfile.html#confattr.configfile.Message" title="confattr.configfile.Message"><span class="pre">Message</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.set_ui_callback" title="Link to this definition"></a></dt>
+<dd><p>Register a user interface notification callback function to all <a class="reference internal" href="confattr.configfile.html#confattr.configfile.ConfigFile" title="confattr.configfile.ConfigFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigFile</span></code></a> instances created by this object.</p>
+<p>See <a class="reference internal" href="confattr.configfile.html#confattr.configfile.ConfigFile.set_ui_callback" title="confattr.configfile.ConfigFile.set_ui_callback"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ConfigFile.set_ui_callback()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.ui_notifier">
+<span class="sig-name descname"><span class="pre">ui_notifier</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="confattr.configfile.html#confattr.configfile.UiNotifier" title="confattr.configfile.UiNotifier"><span class="pre">UiNotifier</span></a></em><a class="headerlink" href="#confattr.quickstart.ConfigManager.ui_notifier" title="Link to this definition"></a></dt>
+<dd><p>Can be used to print messages to the user interface, uses <a class="reference internal" href="#confattr.quickstart.ConfigManager.notification_level_ui" title="confattr.quickstart.ConfigManager.notification_level_ui"><code class="xref py py-attr docutils literal notranslate"><span class="pre">notification_level_ui</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="confattr.quickstart.ConfigManager.update_config_and_exit">
+<span class="sig-name descname"><span class="pre">update_config_and_exit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#confattr.quickstart.ConfigManager.update_config_and_exit" title="Link to this definition"></a></dt>
+<dd><p>rewrite the config file, open it for editing and exit</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="confattr.formatters.html" class="btn btn-neutral float-left" title="confattr.formatters module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="confattr.state.html" class="btn btn-neutral float-right" title="confattr.state module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, erzo.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
