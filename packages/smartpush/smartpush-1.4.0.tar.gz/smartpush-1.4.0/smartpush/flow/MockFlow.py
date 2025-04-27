@@ -1,0 +1,153 @@
+import json
+import random
+import time
+import requests
+from smartpush.utils import ListDictUtils
+
+
+def get_current_flow(host_domain, cookies, flow_id):
+    # 提取flow所有节点数据
+    _url = host_domain + "/flow/getFlowDetail"
+    headers = {
+        "cookie": cookies
+    }
+    params = {
+        "flowId": flow_id,
+        "active": True,
+        "includeActivityDetail": True
+    }
+    result = json.loads(requests.request(method="get", url=_url, headers=headers, params=params).text)
+    # 按节点id存储
+    node_counts = []
+
+    def process_node(node):
+        node_counts.append({node["id"]: {"completedCount": node["data"]["completedCount"],
+                                         "skippedCount": node["data"]["skippedCount"],
+                                         "openUserCount": node["data"]["openUserCount"],
+                                         "clickUserCount": node["data"]["clickUserCount"],
+                                         "waitingCount": node["data"]["waitingCount"]
+                                         }
+                            }
+                           )
+        # 处理split节点
+        if "split" in node["data"].keys():
+            for branch_node in node['data']['split']['branches']["false"]:
+                process_node(branch_node)
+            for branch_node in node['data']['split']['branches']["true"]:
+                process_node(branch_node)
+        # 处理abTesting节点
+        elif "abTesting" in node["data"].keys():
+            for branch_node in node['data']['abTesting']['branches']["a"]:
+                process_node(branch_node)
+            for branch_node in node['data']['abTesting']['branches']["b"]:
+                process_node(branch_node)
+
+    # 处理所有顶层节点
+    for node in result['resultData']['nodes']:
+        process_node(node)
+    return node_counts, result["resultData"]["version"]
+
+
+def update_flow(host_domain, cookies, **kwargs):
+    """
+    # 更新flow
+    update_flow_params: 必填，saveFlow接口所有参数，dict格式
+    version: 非必填，flow版本号
+    """
+    _url = host_domain + "/flow/saveFlow"
+    headers = {
+        "cookie": cookies,
+        "Content-Type": "application/json"
+    }
+    kwargs["update_flow_params"]["version"] = kwargs.get("version", kwargs["update_flow_params"]["version"])
+    kwargs["update_flow_params"]["id"] = kwargs.get("flow_id", kwargs["update_flow_params"]["id"])
+    params = kwargs["update_flow_params"]
+    result = requests.request(method="post", url=_url, headers=headers, json=params).text
+
+
+def start_flow(host_domain, cookies, flow_id, version):
+    # 开启flow
+    _url = host_domain + "/flow/publishFlow"
+    headers = {
+        "cookie": cookies,
+        "Content-Type": "application/json"
+    }
+    params = {
+        "flowId": flow_id,
+        "version": str(version)
+    }
+    result = requests.request(method="post", url=_url, headers=headers, json=params).text
+
+
+def mock_pulsar(mock_domain, pulsar, limit=1):
+    """
+    # post请求
+    # times：为触发次数，默认1次即可
+    """
+    _url = mock_domain + "/flow/testEventMulti"
+    headers = {
+        "Content-Type": "application/json"
+    }
+    # 生成随机message_id
+    prefix = 179
+    pulsar["messageId"] = f"{prefix}{random.randint(10 ** 15, 10 ** 16 - 1)}"
+    params = {
+        "times": limit,
+        "mq": pulsar
+    }
+    result = requests.request(method="post", url=_url, headers=headers, json=params).text
+    return json.loads(result)
+
+
+def check_flow(host_domain, cookies, mock_domain="", **kwargs):
+    """
+    完整触发流程
+    params
+    mock_domain:必填，触发接口域名
+    host_domain:必填，spflow接口域名
+    cookies:必填，sp登录态
+    flow_id:必填
+    pulsar:必填，模拟的触发数据
+    old_flow_counts: 默认为all，需拆分步骤时填写，枚举：all、one、two；
+        one:获取旧节点数据和触发；
+        two：获取触发后数据和断言节点数据
+
+    limit:非必填，默认为1 - mock_pulsar函数用于控制模拟触发的次数
+    sleep_time: 非必填, 默认60s, 等待时间，用于触发后等待各节点计数后获取新数据
+    update_flow_params: 非必填，dict格式，需更新flow时传参，参数结构为sp的saveFlow接口内容
+    num:非必填，默认为1 - compare_lists函数用于断言方法做差值计算
+    all_key: 非必填，bool，默认false，输入true时，检查指标节点常用5个字段
+    check_key: 非必填, 默认只有completedCount, list格式，传入需检查节点的指标key，如：completedCount、skippedCount、openRate等
+    """
+    # todo: 还差邮件校验部分，后续补充
+    is_split_steps = kwargs.get("split_steps", "all")
+    # 步骤1 - 所需字段：split_steps、host_domain、cookies、flow_id、pulsar
+    if is_split_steps == "one" or is_split_steps == "all":
+        # 触发前提取flow数据，后续做对比
+        old_flow_counts, old_versions = get_current_flow(host_domain=host_domain, cookies=cookies,
+                                                         flow_id=kwargs["flow_id"])
+        kwargs["old_flow_counts"] = old_flow_counts
+        # 更新flow
+        if kwargs.get("update_flow_params", False):
+            update_flow(host_domain=host_domain, cookies=cookies, update_flow_params=kwargs.get("update_flow_params"),
+                        version=old_versions, flow_id=kwargs["flow_id"])
+        # 启动flow
+        start_flow(host_domain=host_domain, cookies=cookies, flow_id=kwargs["flow_id"], version=old_versions)
+        # 触发flow
+        mock_pulsar(mock_domain=mock_domain, pulsar=kwargs["pulsar"], limit=kwargs.get("limit", 1))
+        if is_split_steps == "one":
+            return old_flow_counts, old_versions
+
+    # 步骤2
+    if is_split_steps == "two" or is_split_steps == "all":
+        if is_split_steps == "all":
+            time.sleep(kwargs.get("sleep_time", 60))
+        # 触发后提取flow数据，做断言
+        new_flow_counts, new_versions = get_current_flow(host_domain=host_domain, cookies=cookies,
+                                                         flow_id=kwargs["flow_id"])
+        # 断言
+        result = ListDictUtils.compare_lists(temp1=kwargs.get("old_flow_counts"),
+                                             temp2=new_flow_counts, num=kwargs.get("num", 1),
+                                             check_key=kwargs.get("check_key", ["completedCount"]),
+                                             all_key=kwargs.get("all_key", False))
+        return [True, "断言成功"] if len(result) == 0 else [False, result]
