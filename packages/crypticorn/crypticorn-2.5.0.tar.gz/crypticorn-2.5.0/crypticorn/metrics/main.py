@@ -1,0 +1,103 @@
+from __future__ import annotations
+from crypticorn.metrics import (
+    ApiClient,
+    Configuration,
+    ExchangesApi,
+    HealthCheckApi,
+    IndicatorsApi,
+    LogsApi,
+    MarketcapApi,
+    MarketsApi,
+    TokensApi,
+    MarketType,
+)
+from crypticorn.common import optional_import
+from pydantic import StrictStr, StrictInt, Field
+from typing_extensions import Annotated
+from typing import Optional
+
+
+class MetricsClient:
+    """
+    A client for interacting with the Crypticorn Metrics API.
+    """
+
+    def __init__(
+        self,
+        config: Configuration,
+    ):
+        self.config = config
+        self.base_client = ApiClient(configuration=self.config)
+        # Instantiate all the endpoint clients
+        self.status = HealthCheckApi(self.base_client)
+        self.indicators = IndicatorsApi(self.base_client)
+        self.logs = LogsApi(self.base_client)
+        self.marketcap = MarketcapApiWrapper(self.base_client)
+        self.markets = MarketsApi(self.base_client)
+        self.tokens = TokensApiWrapper(self.base_client)
+        self.exchanges = ExchangesApi(self.base_client)
+
+
+class MarketcapApiWrapper(MarketcapApi):
+    """
+    A wrapper for the MarketcapApi class.
+    """
+
+    async def get_marketcap_symbols_fmt(self, *args, **kwargs) -> pd.DataFrame:  # type: ignore
+        """
+        Get the marketcap symbols in a pandas dataframe
+        """
+        pd = optional_import("pandas", "extra")
+        response = await self.get_marketcap_symbols_without_preload_content(*args, **kwargs)
+        response.raise_for_status()
+        json_response = await response.json()
+        df = pd.DataFrame(json_response["data"])
+        df.rename(columns={df.columns[0]: "timestamp"}, inplace=True)
+        return df
+
+
+class TokensApiWrapper(TokensApi):
+    """
+    A wrapper for the TokensApi class.
+    """
+
+    async def get_stable_and_wrapped_tokens_fmt(self, *args, **kwargs) -> pd.DataFrame:  # type: ignore
+        """
+        Get the tokens in a pandas dataframe
+        """
+        pd = optional_import("pandas", "extra")
+        response = await self.get_stable_and_wrapped_tokens_without_preload_content(*args, **kwargs)
+        response.raise_for_status()
+        json_data = await response.json()
+        return pd.DataFrame(json_data)
+
+class ExchangesApiWrapper(ExchangesApi):
+    """
+    A wrapper for the ExchangesApi class.
+    """
+
+    async def get_exchanges_fmt(self, *args, **kwargs) -> pd.DataFrame:  # type: ignore
+        """
+        Get the exchanges in a pandas dataframe
+        """
+        pd = optional_import("pandas", "extra")
+        response = await self.get_available_exchanges_without_preload_content(*args, **kwargs)
+        response.raise_for_status()
+        json_data = await response.json()
+        processed_results = []
+        for row in json_data:
+            data = {'timestamp': row['timestamp']}
+            data.update(row['exchanges'])
+            processed_results.append(data)
+        
+        # Create DataFrame and sort columns
+        df = pd.DataFrame(processed_results)
+        cols = ['timestamp'] + sorted([col for col in df.columns if col != 'timestamp'])
+        df = df[cols]
+        
+        # Convert timestamp to unix timestamp
+        df['timestamp'] = pd.to_datetime(df['timestamp']).astype("int64") // 10 ** 9
+        
+        # Convert exchange availability to boolean integers (0/1)
+        df = df.astype({'timestamp': 'int64', **{col: 'int8' for col in df.columns if col != 'timestamp'}})
+        return df
