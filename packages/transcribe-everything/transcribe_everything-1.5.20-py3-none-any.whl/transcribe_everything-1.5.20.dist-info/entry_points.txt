@@ -1,0 +1,3 @@
+[console_scripts]
+transcribe-everything = transcribe_everything.cli:main
+transcribe-everything-init = transcribe_everything.cli_init:main
