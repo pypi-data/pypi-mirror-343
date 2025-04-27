@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "crds-generator"
+version = "0.0.5"
+description = ""
+authors = ["Kim Minjong <make.dirty.code@gmail.com>"]
+readme = "README.md"
+packages = [
+  {include = "crds_generator", from="src"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pydantic = "^2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
