@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: linkedmcp
+Version: 0.2.0
+Summary: MCP server to get help with Linkedin content using LLM
+Author-email: harsh_buddhdev <harshbuddhdev147@gmail.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: build>=1.2.2.post1
+Requires-Dist: fpdf>=1.7.2
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.2.0
+Requires-Dist: requests
+Requires-Dist: twine>=6.1.0
+Dynamic: license-file
+
+# linkedmcp
