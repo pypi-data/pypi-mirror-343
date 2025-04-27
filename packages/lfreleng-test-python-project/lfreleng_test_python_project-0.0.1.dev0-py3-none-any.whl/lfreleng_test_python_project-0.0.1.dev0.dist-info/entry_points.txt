@@ -1,0 +1,5 @@
+[console_scripts]
+lfreleng-test-python-project = lfreleng_test_python_project.cli:run
+
+[gui_scripts]
+
