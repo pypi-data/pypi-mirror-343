@@ -1,0 +1,5 @@
+build>=1.2.2.post1
+fpdf>=1.7.2
+httpx>=0.28.1
+mcp[cli]>=1.2.0
+requests

@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-web-extractor = linkedmcp.server:main
