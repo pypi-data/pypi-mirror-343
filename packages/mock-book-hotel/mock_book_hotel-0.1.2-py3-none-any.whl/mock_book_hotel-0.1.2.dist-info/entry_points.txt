@@ -1,0 +1,2 @@
+[console_scripts]
+mock-book-hotel = mock_book_hotel:main
