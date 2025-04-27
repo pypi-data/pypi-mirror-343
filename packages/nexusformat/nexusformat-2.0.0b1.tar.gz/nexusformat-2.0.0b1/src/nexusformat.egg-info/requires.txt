@@ -1,0 +1,14 @@
+numpy
+scipy
+h5py
+hdf5plugin
+packaging
+colored
+pygments
+python-dateutil
+
+[:python_version <= "3.9"]
+importlib_resources
+
+[testing]
+pytest
