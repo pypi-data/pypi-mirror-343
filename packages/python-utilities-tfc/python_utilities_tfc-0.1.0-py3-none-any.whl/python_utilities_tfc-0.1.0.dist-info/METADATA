@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: python-utilities-tfc
+Version: 0.1.0
+Summary: Utilities for working with Terraform Cloud
+Author: Umar Khan
+Author-email: umar.khan@thecloudmania.com
+Requires-Python: >=3.11
+Requires-Dist: requests
+
