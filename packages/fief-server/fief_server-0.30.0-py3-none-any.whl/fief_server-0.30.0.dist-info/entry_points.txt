@@ -1,0 +1,2 @@
+[console_scripts]
+fief = fief.cli.__main__:app
