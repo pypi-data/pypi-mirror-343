@@ -1,0 +1,2 @@
+[console_scripts]
+http-scanner = core.main:main
