@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: AutoxJS
+Version: 1.0.8
+Summary: Launch Auto.js and Autox.js scripts with Python in Termux.
+Home-page: https://github.com/CannotLoadName/AutoxJS
+Download-URL: https://github.com/CannotLoadName/AutoxJS/releases
+Author: Enbuging
+Author-email: electricfan@yeah.net
+License: MIT
+Keywords: Auto.js,Autox.js,Termux,Android,automation
+Platform: Android
+Platform: Linux
+Dynamic: author
+Dynamic: author-email
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: platform
+Dynamic: summary
