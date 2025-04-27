@@ -1,0 +1,15 @@
+LICENSE
+pyproject.toml
+ppinit/__init__.py
+ppinit/__main__.py
+ppinit.egg-info/PKG-INFO
+ppinit.egg-info/SOURCES.txt
+ppinit.egg-info/dependency_links.txt
+ppinit.egg-info/entry_points.txt
+ppinit.egg-info/top_level.txt
+ppinit/assets/gitignore_content.txt
+ppinit/assets/main_file_content.txt
+ppinit/assets/licenses/AGPL-3.0.txt
+ppinit/assets/licenses/Apache-2.0.txt
+ppinit/assets/licenses/GPL-3.0.txt
+ppinit/assets/licenses/MIT.txt

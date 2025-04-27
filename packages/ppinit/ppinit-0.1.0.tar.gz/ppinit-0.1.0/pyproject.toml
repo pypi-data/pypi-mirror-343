@@ -1,0 +1,35 @@
+[project]
+name = "ppinit"
+version = "0.1.0"
+description = "A Python project initializer."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+authors = [
+    {name="Ritesh Karmakar", email="riteshkarmakar7407@gmail.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "GPL-3.0"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/riteshkarmakar/ppinit"
+
+[project.scripts]
+ppinit = "ppinit.__main__:main"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"ppinit" = [
+    "assets/*.txt",
+    "assets/licenses/*"
+]
