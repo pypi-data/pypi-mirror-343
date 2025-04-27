@@ -1,0 +1,57 @@
+Metadata-Version: 2.4
+Name: tongban_report
+Version: 0.2.1
+Summary: A short description of your package
+Home-page: https://github.com/yourusername/your-package
+Author: roger813
+Author-email: roger813@163.com
+License: MIT AND (Apache-2.0 OR BSD-2-Clause)
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-docx
+Requires-Dist: matplotlib
+Requires-Dist: openpyxl
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+### tongban_report
+
+### 通办信息报告生成工具
+
+### 安装
+```commandline
+pip install tongban_report
+
+pip install --upgrade tongban_report
+```
+
+### 使用
+```commandline
+tongban_report [-h] -d DATA [-f FUNC] [-s SAFE]
+options:
+  -h, --help       show this help message and exit
+  -d, --data DATA  数据来源Excel文件的路径(必填)
+  -f, --func FUNC  功能测试报告模板
+  -s, --safe SAFE  安全测试报告模板
+```
+
+- [x] 给定参数[-f]会生成功能测试报告;
+- [x] 给定参数[-s]会生成安全测试报告;
+- [x] 同时给定, 将同时生成两份报告;
+
+示例：
+> D:\test>tongban_report -d=d:\test\2.xlsx -f=d:\test\functional_input.docx -s=d:\test\safety_input.docx
+
+### 结束
