@@ -1,0 +1,8 @@
+setup.py
+kxmc_mcp_file_system_win.egg-info/PKG-INFO
+kxmc_mcp_file_system_win.egg-info/SOURCES.txt
+kxmc_mcp_file_system_win.egg-info/dependency_links.txt
+kxmc_mcp_file_system_win.egg-info/top_level.txt
+kxmc_mcp_server_file_system_win/__init__.py
+kxmc_mcp_server_file_system_win/__main__.py
+kxmc_mcp_server_file_system_win/main.py
