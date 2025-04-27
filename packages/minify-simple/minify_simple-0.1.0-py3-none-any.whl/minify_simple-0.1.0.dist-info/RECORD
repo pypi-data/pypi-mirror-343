@@ -1,0 +1,9 @@
+minify_simple/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+minify_simple/cli.py,sha256=_HEK3RQadwSA7S73ETKKF4Qwn4Vorul5JpFFo_ZzK_E,2327
+minify_simple/exceptions.py,sha256=UOyPo6ByilqMQMq2GkUap0C8KE_AyB2TaVcmELBUG8I,41
+minify_simple/minify.py,sha256=qon2Z-tx8wYIJi9zNbFdT3CI2u4RAYam2VmIe9fRfL0,2734
+minify_simple-0.1.0.dist-info/METADATA,sha256=Yl_mEFBvp280wqUYMY2G0-M1mFNoMGV3ku5pOhCeKuc,3247
+minify_simple-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+minify_simple-0.1.0.dist-info/entry_points.txt,sha256=egsttOVCjFpPKJcSoPdEiKTbShWKg5apuRYs90qpXYs,54
+minify_simple-0.1.0.dist-info/licenses/LICENSE,sha256=CQr2XiPl0yRkc04zQuCSmpbcgU0ZyiCmNAujIIHlSRo,1077
+minify_simple-0.1.0.dist-info/RECORD,,
