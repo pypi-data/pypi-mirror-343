@@ -1,0 +1,22 @@
+.venv/
+.env
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+.pytest_cache/
+logs/
+
+*.log
+
+# releases
+*.tar.gz
+*.zip
+*.whl
+*.egg-info/
+dist/
+build/
+*.egg
