@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+CodersanSamplePipProj/__init__.py
+CodersanSamplePipProj/example.py
+CodersanSamplePipProj.egg-info/PKG-INFO
+CodersanSamplePipProj.egg-info/SOURCES.txt
+CodersanSamplePipProj.egg-info/dependency_links.txt
+CodersanSamplePipProj.egg-info/requires.txt
+CodersanSamplePipProj.egg-info/top_level.txt
