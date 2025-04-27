@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: pip-aide
+Version: 1.0.2
+Summary: AI-powered pip install helper
+Author: 不做了睡大觉
+Author-email: 不做了睡大觉 <stakeswky@gmail.com>
+Project-URL: Homepage, https://github.com/stakeswky/pip-aide
+Project-URL: Documentation, https://github.com/stakeswky/pip-aide#readme
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python

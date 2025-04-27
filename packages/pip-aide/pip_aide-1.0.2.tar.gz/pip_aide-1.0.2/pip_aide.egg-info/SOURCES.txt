@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pip_aide/__init__.py
+pip_aide/cli.py
+pip_aide.egg-info/PKG-INFO
+pip_aide.egg-info/SOURCES.txt
+pip_aide.egg-info/dependency_links.txt
+pip_aide.egg-info/entry_points.txt
+pip_aide.egg-info/requires.txt
+pip_aide.egg-info/top_level.txt
