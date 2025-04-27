@@ -1,0 +1,17 @@
+numpy
+pandas
+matplotlib
+seaborn
+scipy
+scikit-learn
+cclib
+ipywidgets
+openpyxl
+plotly
+tqdm
+
+[docs]
+sphinx
+sphinx_rtd_theme
+myst-parser
+numpydoc
