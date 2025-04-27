@@ -1,0 +1,14 @@
+fasttask_manager/__init__.py,sha256=iNQjDvmAgl5g0EihQQFT-VmOEFJAvZ5xHLTB2-eUjjI,29
+fasttask_manager/create_project.py,sha256=vg3xxwxBcc4PagqHkVj_-Himei2hgCJL0OQAqtsQNaU,1068
+fasttask_manager/manager.py,sha256=kxPdZLG2T3e_a6z9o3-zUdNEBwSqoAc2DVcG2oIcbdY,4054
+fasttask_manager/project/Dockerfile,sha256=ilF9ey6nhDTfVEbe0eh8bnRZYWKZTwh8CGlR19h9CQI,213
+fasttask_manager/project/docker-compose.yml,sha256=LjOQ8TgEiCoUaIeYhIxpC_GByesZO0grnzXruUH4sSs,992
+fasttask_manager/project/req.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fasttask_manager/project/tasks/get_hypotenuse.py,sha256=O6Ex07yLEuJzsLywuVBTz9LADIdeF4hpPBwFrZStcM8,618
+fasttask_manager/project/tasks/packages/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fasttask_manager/project/tasks/packages/tools.py,sha256=U7udJMeDtPIFdEUe4giiLh1-hOTEQnzg7lhUEOOgwKI,129
+fasttask_manager-0.2.4.dist-info/licenses/LICENSE,sha256=Qv2ilebwoUtMJnRsZwRy729xS5JZQzLauJ0tQzkAkTA,1088
+fasttask_manager-0.2.4.dist-info/METADATA,sha256=9do8O9y4a7esrn6_iaDlTao3q2i0HcJFZ32Xx4kpVuk,1206
+fasttask_manager-0.2.4.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+fasttask_manager-0.2.4.dist-info/top_level.txt,sha256=pTXhlmzuBDPvkJ-u2YjLVC6Zyws1EglgsA26PryFZqs,17
+fasttask_manager-0.2.4.dist-info/RECORD,,
