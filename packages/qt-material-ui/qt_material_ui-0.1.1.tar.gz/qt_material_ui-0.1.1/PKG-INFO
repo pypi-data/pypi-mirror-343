@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: qt-material-ui
+Version: 0.1.1
+Summary: Material 3 component library for Qt Widgets
+Project-URL: Repository, https://github.com/herobank110/qt-material-ui
+Author-email: David Kanekanian <dkanekanian1@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: components,material,qt,ui,widgets
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.10
+Provides-Extra: dev
+Description-Content-Type: text/markdown
+
+# qt-material-ui
+Material 3 component library for Qt Widgets
