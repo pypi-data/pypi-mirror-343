@@ -1,0 +1,10 @@
+globalMem/__init__.py,sha256=tsex6P-1JQYjRggEODTWpYTRp5H5sgfdnJccRKsWwQk,267
+globalMem/_version.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+globalMem/auto_init.py,sha256=-kwRnmKVvyVGuq0r2WdDz0neU4qBI6s2TYUo8zdSxGg,424
+globalMem/global_context.py,sha256=71poMOtPUCC6ubQM2SjNz5HraiUgAbxVi7KVoBMfDsU,1114
+globalMem/tools.py,sha256=yGzsCksa3oDJfBhWCl2oUZF_od4SVFxkfalo8Bc-2gg,1247
+globalmem-0.1.0.dist-info/METADATA,sha256=tDPbXYBleYnqa7ToRVeRBLflaV9SyTmX6S2SMV0uPIk,2418
+globalmem-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+globalmem-0.1.0.dist-info/entry_points.txt,sha256=kI-MxPfM0TCx-d_vb4xgdqMVockb9jeELEicN-xw-K4,51
+globalmem-0.1.0.dist-info/top_level.txt,sha256=CKzyJVWSeN7Uiure2oehL6l0njYnCEIH332ldjr8kVc,10
+globalmem-0.1.0.dist-info/RECORD,,
