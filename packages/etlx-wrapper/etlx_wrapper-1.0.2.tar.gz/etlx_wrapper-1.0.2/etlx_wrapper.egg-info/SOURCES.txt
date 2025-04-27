@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+etlx_wrapper/__init__.py
+etlx_wrapper.egg-info/PKG-INFO
+etlx_wrapper.egg-info/SOURCES.txt
+etlx_wrapper.egg-info/dependency_links.txt
+etlx_wrapper.egg-info/top_level.txt
