@@ -1,0 +1,49 @@
+Metadata-Version: 2.3
+Name: query-builder-sql-alchemy
+Version: 0.1.1
+Summary: A flexible SQL query builder for SQLAlchemy ORM models.
+License: MIT
+Author: sourabh sharma
+Author-email: sourabhsharma.dev@gmail.com
+Requires-Python: >=3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: SQLAlchemy (>=1.4)
+Project-URL: Repository, https://github.com/sourabhsharma-dev/query-builder-sql-alchemy
+Description-Content-Type: text/markdown
+
+# query-builder-sql-alchemy
+
+A flexible SQL query builder for SQLAlchemy ORM models.
+
+## Installation
+
+```bash
+pip install query-builder-sql-alchemy
+```
+
+## Usage
+
+```python
+from QueryBuilderSqlAlchemy import QueryBuilder, Condition, ConditionGroup, Operator
+
+# Example usage
+# qb = QueryBuilder()
+# ...
+```
+
+## Features
+- Build SQL queries for SQLAlchemy ORM models
+- Support for WHERE, ORDER BY, LIMIT, OFFSET, JOIN, and more
+
+## License
+MIT License
+
