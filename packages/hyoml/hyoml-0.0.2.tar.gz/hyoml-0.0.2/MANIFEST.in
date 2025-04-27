@@ -1,0 +1,19 @@
+# Include important project files
+include README.md
+include LICENSE
+include setup.py
+include pyproject.toml
+
+# Include examples folder (only python and data files)
+recursive-include python/examples *.py *.json *.yml *.hyoml
+
+# Include docs (for users who want to browse offline)
+recursive-include docs *.md *.hyoml
+
+# Include any additional data files you need
+recursive-include python/data *.json *.yml *.hyoml
+
+# Exclude unwanted files
+global-exclude *.pyc
+global-exclude __pycache__/
+global-exclude *.pyo

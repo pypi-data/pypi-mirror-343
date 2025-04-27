@@ -1,0 +1,23 @@
+[project]
+name = "hyoml"
+version = "0.0.2"
+description = "Hyoml - Intelligent Relaxed Data Parser and Formatter"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Ahmed Daif", email = "prog.ahmeddaif@gmail.com" }
+]
+requires-python = ">=3.8"
+dependencies = [
+    "beautifulsoup4>=4.12.2",
+    "rdflib>=6.3.2",
+    "requests>=2.31.0"
+]
+keywords = ["hyoml", "relaxed-json", "yaml", "parser", "formatter", "data-processing"]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["python"]
