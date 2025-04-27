@@ -1,0 +1,7 @@
+fastapi
+starlette
+sqlmodel
+orjson
+uvicorn
+aiohttp
+pydantic==2.10

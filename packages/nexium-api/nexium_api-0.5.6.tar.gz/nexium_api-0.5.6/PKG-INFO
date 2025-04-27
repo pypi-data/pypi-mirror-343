@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: nexium_api
+Version: 0.5.6
+Summary: Standardized, simplified API development
+Home-page: https://github.com/nexium-dev/nexium_api
+Author: Nexium
+Author-email: info@nexium.me
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: starlette
+Requires-Dist: sqlmodel
+Requires-Dist: orjson
+Requires-Dist: uvicorn
+Requires-Dist: aiohttp
+Requires-Dist: pydantic==2.10
+
+# ♡ Nexium API
+
+Nexium API is a Python module built on top of FastAPI, designed to standardize and simplify the development of APIs. It provides a streamlined approach to create robust API services with features like error handling, authentication, and client generation straight out of the box.
+
+Feel free to explore and expand the capabilities of the module to suit your specific needs. Good luck! ♡
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+Copyright © 2025 Yegor Yakubovich
