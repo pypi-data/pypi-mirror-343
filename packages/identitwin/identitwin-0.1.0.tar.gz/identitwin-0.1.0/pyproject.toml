@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "identitwin"
+version = "0.1.0"
+description = "IdentiTwin a system for structural monitoring."
+authors = ["Ing. Angel Navarro-Mora M.Sc <ahnavarro@itcr.ac.cr>", "Alvaro Perez-Mora <alvaroenrique2001@estudiantec.cr>"] # Updated author info
+readme = "README.md" # Assuming you have a README.md
+
+[tool.poetry.dependencies]
+python = "^3.8" # Specify compatible Python versions
+sphinx = "*"
+sphinx-autodoc-typehints = "*"
+sphinx-rtd-theme = "*"
+numpy = "*"
+matplotlib = "*"
+colorama = "*"
+psutil = "*"
+# Add other dependencies as needed
+
+# Optional dependencies defined as extras
+gpiozero = { version = "*", optional = true }
+adafruit-circuitpython-ads1x15 = { version = "*", optional = true }
+adafruit-blinka = { version = "*", optional = true } # Required by Adafruit libraries on Linux
+mpu6050-raspberrypi = { version = "*", optional = true }
+
+
+[tool.poetry.extras]
+performance = ["psutil"]
+hardware = ["gpiozero", "adafruit-circuitpython-ads1x15", "adafruit-blinka", "mpu6050-raspberrypi"]
+all = ["psutil", "gpiozero", "adafruit-circuitpython-ads1x15", "adafruit-blinka", "mpu6050-raspberrypi"]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# Add other sections as needed, e.g., [tool.poetry.dev-dependencies] for testing tools
