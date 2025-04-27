@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+devbuddy/__init__.py
+devbuddy/animations.py
+devbuddy/cli.py
+devbuddy/formatter.py
+devbuddy/scaffolder.py
+devbuddy/plugins/__init__.py
+z0roday_devbuddy.egg-info/PKG-INFO
+z0roday_devbuddy.egg-info/SOURCES.txt
+z0roday_devbuddy.egg-info/dependency_links.txt
+z0roday_devbuddy.egg-info/entry_points.txt
+z0roday_devbuddy.egg-info/requires.txt
+z0roday_devbuddy.egg-info/top_level.txt
