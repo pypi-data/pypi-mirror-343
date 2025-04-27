@@ -1,0 +1,9 @@
+libonvif/__init__.py,sha256=sgkoeK5m7Ljsqrf4ToweVLxU3t7Z1llXnJL8UXHroi8,594
+libonvif/libonvif.cpython-310-x86_64-linux-gnu.so,sha256=ULSSEeNzI-3e2pa9cpWcXRhYHJlTpvbngVlEX9jD9J0,1021312
+libonvif/libstdc++.so.6,sha256=oXMJ-5VqFpGe9Rrh2QTUns03orMOaNNDsiNTz0bSFlc,1952928
+libonvif/libxml2.so.16,sha256=vYUWDiSfLnp4qab_r26d4_D9BRW1Bc0_FUqNDbvQAm4,5898200
+libonvif-3.2.6.dist-info/METADATA,sha256=hnQhyf_7OL85GxL7xrwelg4ihVJGdzxXP1qkcaZkQHA,2779
+libonvif-3.2.6.dist-info/WHEEL,sha256=OrmF1JLDlsuWqWMOpsBr9pbOyJwzsL7nE2EjVeYpUyQ,113
+libonvif-3.2.6.dist-info/top_level.txt,sha256=pf0figrDNi5Rdxv3hFdJtMFBoK_L2tx3QTde9_mxMrA,9
+libonvif-3.2.6.dist-info/RECORD,,
+libonvif-3.2.6.dist-info/licenses/LICENSE,sha256=kqdZ7A_r3kdQghc2u95kKjuDXAYE_IG-5i-eQo-GmB8,27028
