@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wstan"
+version = "0.5.1"
+description = "Tunneling TCP/UDP in WebSocket"
+readme = "README.md"
+authors = [
+    { name = "krrr", email = "guogaishiwo@gmail.com" }
+]
+dependencies = ["cryptography", "sanic"]
+requires-python = ">=3.10"
+keywords = ["proxy", "tunnel", "websocket"]
+license = "MIT"
+classifiers =[
+    "Topic :: Internet :: Proxy Servers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only"
+]
+urls = { homepage = "https://github.com/krrr/wstan" }
+
+[project.optional-dependencies]
+faster_event_loop = ["uvloop"]
+
+[project.scripts]
+wstan = "wstan:main_entry"
+
+
+[tool.setuptools.package-data]
+wstan = ["static/*"]

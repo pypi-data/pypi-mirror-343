@@ -1,0 +1,5 @@
+cryptography
+sanic
+
+[faster_event_loop]
+uvloop
