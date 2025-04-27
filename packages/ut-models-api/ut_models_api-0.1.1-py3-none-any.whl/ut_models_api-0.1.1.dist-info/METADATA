@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: ut-models-api
+Version: 0.1.1
+Summary: Untappd API returned structures
+Author-email: Wardy <wardy3+gitlab@gmail.com>
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.13
+Requires-Dist: pydantic>=2.11.3
