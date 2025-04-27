@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+paddle_ocr_easy/__init__.py
+paddle_ocr_easy/ocr.py
+paddle_ocr_easy.egg-info/PKG-INFO
+paddle_ocr_easy.egg-info/SOURCES.txt
+paddle_ocr_easy.egg-info/dependency_links.txt
+paddle_ocr_easy.egg-info/requires.txt
+paddle_ocr_easy.egg-info/top_level.txt
