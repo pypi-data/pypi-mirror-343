@@ -1,0 +1,118 @@
+Metadata-Version: 2.4
+Name: dispatchy
+Version: 0.0.1
+Summary: A Python library for handling webhooks with ease.
+Home-page: https://www.valkdevices.com
+Author: PDX
+Author-email: valkdevice@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.20.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Dispatchy: Simplified Webhooks for Discord and Telegram
+
+## Description
+
+Dispatchy is a Python library designed to simplify sending messages via Discord and Telegram webhooks. It provides an intuitive and consistent interface for interacting with these services, handling tasks such as:
+
+* Constructing message payloads
+* Sending requests to the webhook URLs
+* Handling errors and retries
+
+The library aims to make it easy to send simple text messages, as well as more complex messages with embeds, files, and other features.
+
+## Features
+
+### General
+
+* **Simplified API:** Easy-to-use classes and methods for sending webhook messages.
+* **Error Handling:** Includes custom exception classes for Discord and Telegram API errors, along with logging.
+* **Retries with Backoff:** Automatic retries with exponential backoff for handling temporary network issues.
+
+### Discord
+
+* Sending text messages
+* Setting username and avatar
+* Sending text-to-speech messages
+* Sending embeds (with full property support)
+* File uploading
+* Thread management
+* Setting message flags
+* Controlling allowed mentions
+* Sending message components (buttons, select menus)
+
+### Telegram
+
+* Sending text messages
+* Setting parse mode (HTML, Markdown, MarkdownV2)
+* Sending various media types (photos, audio, documents)
+* Using reply keyboards and inline keyboards
+
+## Installation
+
+```bash
+pip install requests  # Dispatchy depends on the requests library
+pip install dispatchy
+UsageDiscordfrom dispatchy import DiscordWebhook
+import logging
+
+logging.basicConfig(level=logging.INFO)
+
+webhook_url = "your_discord_webhook_url"  # Replace with your Discord webhook URL
+
+try:
+    webhook = DiscordWebhook(url=webhook_url)
+    webhook.set_content("Hello from Dispatchy!")
+
+    # Example Embed
+    embed = {
+        "title": "My Embed Title",
+        "description": "This is the embed description.",
+        "color": 3447003,  # Blue
+        "author": {"name": "Author Name", "url": "[https://example.com](https://example.com)"},
+        "fields": [
+            {"name": "Field 1 Name", "value": "Field 1 Value", "inline": True},
+            {"name": "Field 2 Name", "value": "Field 2 Value", "inline": True},
+        ],
+        "footer": {"text": "Embed Footer Text"},
+    }
+    webhook.add_embed(embed)
+
+    # Example of adding a file
+    # webhook.add_file("path/to/your/file.txt")
+
+    response = webhook.send()
+    print(f"Message sent! Status code: {response.status_code}")
+
+except Exception as e:
+    logging.error(f"An error occurred: {e}")
+Telegramfrom dispatchy import TelegramWebhook
+import logging
+
+logging.basicConfig(level=logging.INFO)
+
+bot_token = "your_telegram_bot_token"  # Replace with your Telegram bot token
+chat_id = "your_telegram_chat_id"  # Replace with the chat ID
+
+try:
+    webhook = TelegramWebhook(token=bot_token)
+    webhook.set_chat_id(chat_id)
+    webhook.set_text("Hello from Dispatchy!")
+    webhook.set_parse_mode("MarkdownV2")  # Optional: "HTML", "Markdown", "MarkdownV2"
+
+    response = webhook.send()
+    print(f"Message sent! Status code: {response.status_code}")
+
+except Exception as e:

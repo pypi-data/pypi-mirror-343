@@ -1,0 +1,9 @@
+README.md
+setup.py
+Dispatchy/__init__.py
+dispatchy.egg-info/PKG-INFO
+dispatchy.egg-info/SOURCES.txt
+dispatchy.egg-info/dependency_links.txt
+dispatchy.egg-info/requires.txt
+dispatchy.egg-info/top_level.txt
+tests/test_Dispatchy.py
