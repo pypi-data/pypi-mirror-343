@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: pythonvCard4
+Version: 0.1.0
+Summary: RFC 6350-compliant vCard 4.0 parser & generator
+Author-email: Sharfuddin Shawon <sharf@shawon.me>
+License: MIT License
+        
+        Copyright (c) 2025 Your Name
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        
+Project-URL: Homepage, https://shawon.me
+Project-URL: Repository, https://github.com/sharf-shawon/python-vcard-v4.git
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file

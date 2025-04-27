@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+pyproject.toml
+pythonvCard4/init.py
+pythonvCard4/pythonvCard4.py
+pythonvCard4.egg-info/PKG-INFO
+pythonvCard4.egg-info/SOURCES.txt
+pythonvCard4.egg-info/dependency_links.txt
+pythonvCard4.egg-info/top_level.txt
+tests/test_vcard.py
