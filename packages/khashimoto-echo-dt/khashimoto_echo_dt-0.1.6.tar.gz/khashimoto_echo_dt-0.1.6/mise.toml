@@ -1,0 +1,25 @@
+[tools]
+python = "3.13"
+uv = "0.5.26"
+pre-commit = "4.2.0"
+
+[env]
+mise.file = ".env"
+
+[tasks.msg]
+run = "git config commit.template .gitmessage"
+
+[tasks.run]
+run = "uv run python -m src.khashimoto_echo_dt"
+
+[tasks.format]
+run = ["uvx isort .", "uvx ruff check --fix .", "uvx ruff format ."]
+
+[tasks.type-check]
+run = "uv run mypy ."
+
+[tasks.build]
+run = ["if [ -d dist ]; then rm dist/* -rf; fi", "uv build"]
+
+[tasks.publish]
+run = "uv publish"

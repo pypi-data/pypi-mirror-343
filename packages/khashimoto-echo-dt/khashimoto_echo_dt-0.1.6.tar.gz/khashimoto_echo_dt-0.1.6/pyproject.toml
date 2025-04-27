@@ -1,0 +1,18 @@
+[project]
+name = "khashimoto-echo-dt"
+version = "0.1.6"
+description = "This is a sample repository for building pip module with github actions."
+readme = "README.md"
+authors = [{ name = "K hashimoto", email = "keishi04hrikzira@gmail.com" }]
+requires-python = ">=3.13"
+dependencies = ["typer>=0.15.2"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = ["mypy>=1.15.0"]
+
+[project.scripts]
+khashimoto_echo_dt = "khashimoto_echo_dt.__main__:main"

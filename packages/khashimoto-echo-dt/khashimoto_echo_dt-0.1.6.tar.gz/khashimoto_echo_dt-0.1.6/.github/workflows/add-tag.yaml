@@ -1,0 +1,78 @@
+name: add-tag
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - ready_for-review
+      - reaview_requested
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  add-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # pyproject.toml の `version` を確認
+      - name: Get version
+        run: |
+          ver_line="$(grep version pyproject.toml --max-count 1 | sed -E 's/^.+=\s\"(.+)\"$/\1/')"
+          echo "VER=${ver_line}" >> $GITHUB_ENV
+      # `version` がブランチ名と同一であるかを確認
+      - name: Compare version with branch name
+        run: |
+          echo "VER=${VER}, GITHUB_REF=${{ github.head_ref }}"
+          test "v${VER}" = "${{ github.head_ref }}"
+
+      # `version` が既存のタグよりも新しいことを確認する
+      - name: Check newer than existing tags
+        run: |
+          git fetch --tags
+          latest=$(git tag | sort --reverse | head -n 1)
+          echo "latest=${latest}"
+          test -z $latest || test "${VER}" gt "${latest#v}"
+      # メールアドレスなどを設定しておかないと タグが push できない
+      - name: Configure git
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "gha@example.com"
+      # `version` と同一のタグを付与する
+      - name: Add tag
+        run: |
+          git tag -a "${{ github.head_ref }}" -m "Release ${{ github.head_ref }}"
+          git push origin "${{ github.head_ref }}"
+      # mise をインストール & 有効化
+      - name: Install mise
+        run: |
+          curl https://mise.run | sh
+          echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
+          source ~/.bashrc
+      - name: Trust mise
+        run: mise trust
+      - name: Install by using mise
+        run: |
+          mise install
+      # 依存関係をインストール
+      - name: Uv add dependencies
+        run: |
+          eval "$(~/.local/bin/mise activate bash)"
+          uv sync --no-dev
+      # ビルド
+      - name: Build
+        run: |
+          eval "$(~/.local/bin/mise activate bash)"
+          mise run build
+      # Pypi にアップロード
+      - name: Upload to Pypi
+        run: |
+          eval "$(~/.local/bin/mise activate bash)"
+          mise run publish
+        env:
+          UV_PUBLISH_USERNAME: ${{ secrets.UV_PUBLISH_USERNAME }}
+          UV_PUBLISH_PASSWORD: ${{ secrets.UV_PUBLISH_PASSWORD }}
