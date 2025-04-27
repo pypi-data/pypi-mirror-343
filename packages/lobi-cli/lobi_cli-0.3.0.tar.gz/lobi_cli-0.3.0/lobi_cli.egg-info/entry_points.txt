@@ -1,0 +1,3 @@
+[console_scripts]
+lobi = lobi.cli:main
+lobi-bootstrap = lobi.bootstrap:bootstrap_lobienv

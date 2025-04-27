@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+lobi/__init__.py
+lobi/bootstrap.py
+lobi/cli.py
+lobi/lobi.py
+lobi/memory.py
+lobi/tools.py
+lobi_cli.egg-info/PKG-INFO
+lobi_cli.egg-info/SOURCES.txt
+lobi_cli.egg-info/dependency_links.txt
+lobi_cli.egg-info/entry_points.txt
+lobi_cli.egg-info/requires.txt
+lobi_cli.egg-info/top_level.txt
