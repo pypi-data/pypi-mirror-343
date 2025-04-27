@@ -1,0 +1,7 @@
+# https://github.com/wilsonzlin/minify-html
+minify-html==0.16.4
+# https://github.com/Textualize/rich
+rich==14.0.0
+# DEVELOPMENT
+# https://pypi.org/project/web-pdb
+web-pdb
