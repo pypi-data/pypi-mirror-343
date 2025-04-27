@@ -1,0 +1,13 @@
+SuperLang/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SuperLang/data.py,sha256=n-oQx5CvSpapsHmAWidgcJ7UF6WT4GEezOjfS2RVhic,285
+SuperLang/error.py,sha256=1-dz_qb9bTXFDlhfulsBWpZCs9cZQAcZvDLYbVmmmps,679
+SuperLang/interpreter.py,sha256=rK552p2MYA6CPM7v9ejiQtiCMPqOQdkqnQ1tFHhtfJQ,3015
+SuperLang/lexer.py,sha256=5bGkGR01J4-1iOMfh5bfkIrqMQZDpgRXreVy1J2sT3o,2704
+SuperLang/parse.py,sha256=SHiOkyHG4TANp-kDEXWtH7kQ8MiFlxYh08jsX2xJn-E,3636
+SuperLang/runner.py,sha256=J74GloivS6q3V12MN8QlVXYlPtsyShIcXP9m0B-qbZw,595
+SuperLang/tokens.py,sha256=J2RykkDRNX0luEDbbdj1xwoVlSF0_3nbsOicEc68KUM,1019
+shadowlang-0.1.0.dist-info/METADATA,sha256=gxR7v9HvWMznISy2ntjMfinsYA7wKzFnyNtHePZOSzs,670
+shadowlang-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+shadowlang-0.1.0.dist-info/entry_points.txt,sha256=TxPPky6f0r7zT9MfLuFsVbYp4EJOvc4aCJdck_heKYw,50
+shadowlang-0.1.0.dist-info/top_level.txt,sha256=DTVGuZd0VS4ciuaPGpdAwtMpWJQwaSWK1mBLum-zQtE,10
+shadowlang-0.1.0.dist-info/RECORD,,
