@@ -1,0 +1,15 @@
+httpx>=0.23.0
+colour>=0.1
+pytz>=2021
+
+[dev]
+Sphinx==5.0.1
+sphinx-autodoc-typehints
+sphinx-book-theme
+sphinxcontrib-trio
+mypy
+types-pytz==2021.1.0
+pytest
+check-manifest
+twine
+wheel>=0.36.2
