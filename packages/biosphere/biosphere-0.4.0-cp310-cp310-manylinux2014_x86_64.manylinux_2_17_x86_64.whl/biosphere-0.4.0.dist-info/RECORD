@@ -1,0 +1,5 @@
+biosphere/__init__.py,sha256=aw99lrYJSiqAAvH098s39E3BFVAzDyPvOxcXSMSrDX8,94
+biosphere/biosphere.cpython-310-x86_64-linux-gnu.so,sha256=nB4X4Qt_25qbAD30yHL6TYeeIF8Mq72WFLOhtfvmxVU,1080888
+biosphere-0.4.0.dist-info/METADATA,sha256=d2pbzk7-xy23zRklOyHvUxt96hoAnwW6REqguUfbuTc,1469
+biosphere-0.4.0.dist-info/WHEEL,sha256=Us7hsF7meKHrNNkUw8bUZkeX4br4duph3mm4xXQSODg,208
+biosphere-0.4.0.dist-info/RECORD,,
