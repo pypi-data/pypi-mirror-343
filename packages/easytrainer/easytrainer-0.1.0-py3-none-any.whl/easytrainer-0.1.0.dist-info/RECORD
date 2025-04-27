@@ -1,0 +1,13 @@
+easyTrainer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+easyTrainer/config/enums.py,sha256=qRoYvsbsYShN2IkvO8hPauGZNtwYrl7tVj-vVSZsa1Q,91
+easyTrainer/data/base_preparator.py,sha256=QrkrhgVs7u6RsYz2uHmulajQ7SvfC-yRgnx8HoHeyHk,606
+easyTrainer/data/text.py,sha256=AGjkZpIrFKlWC10h2u5q10mZr3TjguTXanwLohnLG_o,19161
+easyTrainer/data/utils.py,sha256=pcWWWO3vC0RWH-QF_1ZM3g3xZTWXC_pjutnaLx_tu2c,653
+easyTrainer/models/base_model.py,sha256=pq9ignpFS-0XTMW6Yx67FFXcoG1Qib-dJYIes7cwx4I,738
+easyTrainer/models/classifier.py,sha256=SuhO-yQPveuqDmImR7M2zARpM2kxUNprBDo_dhbQjoo,5890
+easyTrainer/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+easyTrainer/resources/stopwords-fr.txt,sha256=od1ULHCqrm0Is0bi-xXohhB9TYtYD0s9vJax0vQu4PI,4566
+easytrainer-0.1.0.dist-info/LICENSE.txt,sha256=Sd43FINPlngsYVg8LRUtcX8TcFXrpGbzHvRs5_Aunjs,1088
+easytrainer-0.1.0.dist-info/METADATA,sha256=hr5VNn8q2T0wPNOcWumcOkLffasjVhRSlOEEkOXOxQk,905
+easytrainer-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+easytrainer-0.1.0.dist-info/RECORD,,
