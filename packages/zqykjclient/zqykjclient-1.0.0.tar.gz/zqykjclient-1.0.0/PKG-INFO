@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: zqykjclient
+Version: 1.0.0
+Summary: lbsys
+Home-page: https://github.com/yourusername/mypackage
+Author: cxx
+Author-email: cuixiaoxiao@zqykj.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.0.0
+
+### 从这里开始主要服务于内部统一标签计算平台使用
+
+##### 依赖工具打包命令
+ python .\setup.py sdist bdist_wheel
