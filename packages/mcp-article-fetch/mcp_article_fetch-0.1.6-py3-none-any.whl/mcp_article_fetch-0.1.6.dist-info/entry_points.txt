@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-article-fetch = mcp_article_fetch.server:main
