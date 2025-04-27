@@ -1,0 +1,2 @@
+[console_scripts]
+a-feed = argkit.static:feed
