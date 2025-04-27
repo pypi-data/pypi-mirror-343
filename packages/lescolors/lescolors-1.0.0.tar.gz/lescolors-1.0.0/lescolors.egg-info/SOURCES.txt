@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+lescolors/__init__.py
+lescolors/colors.py
+lescolors.egg-info/PKG-INFO
+lescolors.egg-info/SOURCES.txt
+lescolors.egg-info/dependency_links.txt
+lescolors.egg-info/requires.txt
+lescolors.egg-info/top_level.txt
