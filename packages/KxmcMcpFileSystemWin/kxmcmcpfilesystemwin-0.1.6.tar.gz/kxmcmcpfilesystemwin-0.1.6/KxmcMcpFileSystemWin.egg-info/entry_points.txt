@@ -1,0 +1,2 @@
+[console_scripts]
+KxmcMcpFileSystemWin = kxmc_mcp_server_file_system_win.main:main

@@ -1,0 +1,10 @@
+README.md
+setup.py
+KxmcMcpFileSystemWin.egg-info/PKG-INFO
+KxmcMcpFileSystemWin.egg-info/SOURCES.txt
+KxmcMcpFileSystemWin.egg-info/dependency_links.txt
+KxmcMcpFileSystemWin.egg-info/entry_points.txt
+KxmcMcpFileSystemWin.egg-info/top_level.txt
+kxmc_mcp_server_file_system_win/__init__.py
+kxmc_mcp_server_file_system_win/__main__.py
+kxmc_mcp_server_file_system_win/main.py
