@@ -1,0 +1,6 @@
+typer
+
+[develop]
+pytest
+pytest_asyncio
+coverage
