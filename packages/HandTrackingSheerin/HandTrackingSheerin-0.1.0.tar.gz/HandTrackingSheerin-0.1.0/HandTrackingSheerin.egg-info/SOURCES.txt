@@ -1,0 +1,11 @@
+License.txt
+README.md
+pyproject.toml
+setup.py
+HandTrackingSheerin/__init__.py
+HandTrackingSheerin/hand_tracking_module.py
+HandTrackingSheerin.egg-info/PKG-INFO
+HandTrackingSheerin.egg-info/SOURCES.txt
+HandTrackingSheerin.egg-info/dependency_links.txt
+HandTrackingSheerin.egg-info/requires.txt
+HandTrackingSheerin.egg-info/top_level.txt

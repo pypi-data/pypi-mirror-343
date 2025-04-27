@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: HandTrackingSheerin
+Version: 0.1.0
+Summary: Simple Hand Tracking Module using OpenCV and MediaPipe
+Home-page: https://github.com/SheerinIbrahim/PythonPackages/tree/b08585c8a453c12566efb51cae02412d45175f7c/handtrackingmodule
+Author: Sheerin
+Author-email: sheerinsultana96@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: License.txt
+
+# handtrackingmodule
+
+A simple, easy-to-use Python package for real-time hand tracking using OpenCV and MediaPipe.
+
+## Features
+
+- Detects one or more hands in a camera frame  
+- Draws landmark points and skeleton connections  
+- Configurable detection & tracking confidence  
+- Zero-dependency beyond `opencv-python` and `mediapipe`
+
+
