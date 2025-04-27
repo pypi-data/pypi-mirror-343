@@ -1,0 +1,2 @@
+[console_scripts]
+TuModeloDeClientes_Navarro = TuModeloDeClientes_Navarro.main:main
