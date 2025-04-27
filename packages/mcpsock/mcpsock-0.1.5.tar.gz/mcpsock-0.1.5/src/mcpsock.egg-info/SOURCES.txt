@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/mcpsock/__init__.py
+src/mcpsock/client.py
+src/mcpsock/server.py
+src/mcpsock.egg-info/PKG-INFO
+src/mcpsock.egg-info/SOURCES.txt
+src/mcpsock.egg-info/dependency_links.txt
+src/mcpsock.egg-info/requires.txt
+src/mcpsock.egg-info/top_level.txt
+tests/test_client.py
+tests/test_connection_tracking.py
+tests/test_init.py
+tests/test_server.py
+tests/test_traceback_coverage.py
