@@ -1,0 +1,6 @@
+README.md
+pyproject.toml
+atomo_orbita.egg-info/PKG-INFO
+atomo_orbita.egg-info/SOURCES.txt
+atomo_orbita.egg-info/dependency_links.txt
+atomo_orbita.egg-info/top_level.txt
