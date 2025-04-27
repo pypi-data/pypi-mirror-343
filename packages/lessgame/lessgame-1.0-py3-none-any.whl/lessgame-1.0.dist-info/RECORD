@@ -1,0 +1,10 @@
+lessgame/__init__.py,sha256=oKaLfoXvgYI0BdRJAANjlRRixaYz42x6ig9R4cyxwpw,88
+lessgame/functions.py,sha256=hqian-dH7CVp1YECv94NebUII-n7eJSaOx6fyEd61-U,10248
+lessgame/game_utils.py,sha256=O72MES5eA_FhfQF3q-t9DQGrTe6cRaa28X10FLST3_Y,1182
+lessgame/new_game_gen.py,sha256=nRdAmrspxl5N2ewRac5PdUKTG_L6QauFzjaiOGUIxHc,2074
+lessgame/rand.py,sha256=KTf-nvFb6LfOY--N7FUS-LmpLROAw3M_DHjKJzxRrgU,971
+lessgame-1.0.dist-info/licenses/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+lessgame-1.0.dist-info/METADATA,sha256=DXDafiLSNBxhMPsaJ9EhABPQlngGdH_Crac_D_qFfFY,509
+lessgame-1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+lessgame-1.0.dist-info/top_level.txt,sha256=LoOZTO0O8PUv5b2gPkp4u1SVaonWm5lFsfl414GYUB4,9
+lessgame-1.0.dist-info/RECORD,,
