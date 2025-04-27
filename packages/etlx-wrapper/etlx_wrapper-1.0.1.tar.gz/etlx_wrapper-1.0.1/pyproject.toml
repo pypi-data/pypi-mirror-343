@@ -1,0 +1,23 @@
+[project]
+name = "etlx_wrapper"
+version = "1.0.1"
+description = "Python wrapper for ETLX CLI to run ETL workflows from Python"
+authors = [
+    { name="realdatadriven", email="real.datadriven@gmail.com" }
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["ETL", "duckdb", "cli", "data-pipeline", "wrapper"]
+
+[project.urls]
+Homepage = "https://github.com/realdatadriven/etlx"
+Repository = "https://github.com/realdatadriven/etlx"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["etlx_wrapper"]
+include-package-data = true
