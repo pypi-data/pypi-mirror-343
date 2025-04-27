@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/client/__init__.py
+src/client/brain.py
+src/common/__init__.py
+src/common/secret.py
+src/futurx_brain_mcp.egg-info/PKG-INFO
+src/futurx_brain_mcp.egg-info/SOURCES.txt
+src/futurx_brain_mcp.egg-info/dependency_links.txt
+src/futurx_brain_mcp.egg-info/requires.txt
+src/futurx_brain_mcp.egg-info/top_level.txt
