@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+y6nuker.egg-info/PKG-INFO
+y6nuker.egg-info/SOURCES.txt
+y6nuker.egg-info/dependency_links.txt
+y6nuker.egg-info/requires.txt
+y6nuker.egg-info/top_level.txt
