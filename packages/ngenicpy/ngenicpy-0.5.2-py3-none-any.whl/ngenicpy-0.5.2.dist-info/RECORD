@@ -1,0 +1,16 @@
+ngenicpy/__init__.py,sha256=jnAq4BQG_tDz19ba3g5Wi49jO81Y81eS4EB574vidxc,151
+ngenicpy/const.py,sha256=gutDrmdRn4PkSkhZ6La64iPN8SjWcq9yZ1vWfq-3fjQ,647
+ngenicpy/exceptions.py,sha256=KbD98fMdzTryEVD4TGB4IoVgRYCCD2iwxOFUeRcuKMY,393
+ngenicpy/ngenic.py,sha256=mUO9PURICXPy7rlwFiStOVkP8VBjwVV7J865O04R2fw,4373
+ngenicpy/models/__init__.py,sha256=YKNNh1XoHcafhoohNSHqb2_BZ8XUsApfv-HbcqVYzbg,235
+ngenicpy/models/base.py,sha256=QXCcRm1I40XAoHZtbK44k11_b4c61G79q6zfrX0WCGw,13222
+ngenicpy/models/measurement.py,sha256=P3KJ_F9-2_v4TPurkrXdcH8Ho8ljQ6MMJ1grm8rt5SU,1681
+ngenicpy/models/node.py,sha256=Iu_6jQHTGp2V_V5IEuAHg3cVqH3y8c3ewTs4LVETLSg,10793
+ngenicpy/models/node_status.py,sha256=kTEUj-d5R-BqpfR6-1YtrEJEufeRulirxhJb9tPeW6o,1134
+ngenicpy/models/room.py,sha256=j3NA77XQVmn1Tzj7hXnvwUqxAXdLAAN5H2sOU4u6vhc,1002
+ngenicpy/models/setpoint_schedule.py,sha256=OmaXKgItq6V6VfYfUlpRwZo-tF9HyC9ms7JBEYAFbb0,4488
+ngenicpy/models/tune.py,sha256=rwnx1KsFtb_BvBKPOd_OfnNuFjSDZQ7abU-vB4hm2-A,7693
+ngenicpy-0.5.2.dist-info/METADATA,sha256=8lGO9vRXQ2a9r2wRAzyXqseDwL_nIC5JJaCCbUgG7sw,3564
+ngenicpy-0.5.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ngenicpy-0.5.2.dist-info/licenses/LICENSE,sha256=H6kRZHFCtbr3bvyVoIDNqtk2c1VXNSutcaA0n7KwZiA,1068
+ngenicpy-0.5.2.dist-info/RECORD,,
