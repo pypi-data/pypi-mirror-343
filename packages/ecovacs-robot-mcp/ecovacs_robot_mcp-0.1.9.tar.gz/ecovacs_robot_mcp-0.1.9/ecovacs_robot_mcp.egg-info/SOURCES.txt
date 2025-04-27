@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+ecovacs_robot_mcp.py
+pyproject.toml
+setup.py
+ecovacs_robot_mcp.egg-info/PKG-INFO
+ecovacs_robot_mcp.egg-info/SOURCES.txt
+ecovacs_robot_mcp.egg-info/dependency_links.txt
+ecovacs_robot_mcp.egg-info/requires.txt
+ecovacs_robot_mcp.egg-info/top_level.txt
