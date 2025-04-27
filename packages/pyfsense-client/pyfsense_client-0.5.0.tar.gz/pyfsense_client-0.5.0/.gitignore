@@ -1,0 +1,21 @@
+**/__pycache__/*
+venv/
+.vscode/
+.DS_Store
+config.py
+*.egg-info/
+dist/
+build/
+site/
+poetry.lock
+
+# PyCharm
+.idea/
+scripts/fix_email.sh
+
+# Private env file
+.env
+
+# Crev files
+.crev-config.yaml
+crev-project.txt
