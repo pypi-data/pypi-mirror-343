@@ -1,0 +1,149 @@
+Metadata-Version: 2.3
+Name: nyaaup
+Version: 5.5.0
+Summary: Auto uploader to Nyaa
+Author: varyg
+Requires-Python: >=3.10,<3.14
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: dev
+Requires-Dist: aiofiles (>=24.1.0,<25.0.0)
+Requires-Dist: click (>=8.1.3,<9.0.0)
+Requires-Dist: cloup (>=3.0.5,<4.0.0)
+Requires-Dist: httpx (>=0.26.0,<0.27.0)
+Requires-Dist: humanize (>=4.4.0,<5.0.0)
+Requires-Dist: isort (>=5.9.2,<6.0.0) ; extra == "dev"
+Requires-Dist: langcodes (>=3.3.0,<4.0.0)
+Requires-Dist: language-data (>=1.1,<2.0)
+Requires-Dist: mal-api (>=0.5.2,<0.6.0)
+Requires-Dist: platformdirs (>=2.5.2,<3.0.0)
+Requires-Dist: pymal (>=0.6,<0.7)
+Requires-Dist: pymediainfo (>=5.1.0,<6.0.0)
+Requires-Dist: pyoxipng (>=8.0.0,<9.0.0)
+Requires-Dist: rich (>=12.6.0,<13.0.0)
+Requires-Dist: ruamel-yaml (>=0.17.21,<0.18.0)
+Requires-Dist: ruff (>=0.1.14,<0.2.0) ; extra == "dev"
+Requires-Dist: tls-client2 (>=1.0.3,<2.0.0)
+Requires-Dist: torf (>=4.0.4,<5.0.0)
+Requires-Dist: typing-extensions (>=4.11.0,<5.0.0)
+Requires-Dist: wand (>=0.6.10,<0.7.0)
+Project-URL: Homepage, https://github.com/varyg1001/nyaaup
+Description-Content-Type: text/markdown
+
+# Nyaaup
+
+Nyaaup is an auto uploader to [Nyaa sites](https://github.com/nyaadevs/nyaa), mainly for videos.
+
+## Requirements
+
+- [Python](https://python.org/) 3.10 to 3.13
+- [Poetry](https://python-poetry.org/) 2.0.0 or newer (to install Python package dependencies)
+
+### Dependencies
+
+- [FFmpeg](https://ffmpeg.org/) for image generating.
+- [ImageMagick](https://imagemagick.org/script/download.php) for pyoxipng
+
+### Installation
+
+#### pypi
+
+```shell
+pip install nyaaup
+```
+
+#### source
+
+1. `git clone https://github.com/varyg1001/nyaaup`
+2. `cd nyaaup`
+3. `poetry config virtualenvs.in-project true` (optional, but recommended)
+4. `poetry install` or `python install.py`
+5. `nyaaup -h`
+
+### Commands
+
+- up
+- auth
+
+### Examples usage
+
+```shell
+nyaaup auth -c user:pass
+```
+
+```shell
+nyaaup -p 5 -c 1 -a -m https://myanimelist.net/anime/50652/ /path/example.mkv
+```
+
+```shell
+nyaaup up -sm -c 1 /path/example_folder
+```
+
+### Usage
+
+#### up
+
+```
+Usage: nyaaup up [OPTIONS] [PATH]...
+
+   Upload torrents to Nyaa
+
+Upload Tags:
+   -u, --uncensored              Use Uncensored tag in title.
+   -ms, --multi-subs             Use Multi-Subs tag in title.
+   -da, --dual-audio             Use Dual-Audio tag in title.
+   -ma, --multi-audios           Use Multi-Audios tag in title.
+   -a, --auto / -na, --no-auto   Auto detect Multi-Subs, Multi-Audios or Dual-Audio. (default: True)
+
+Upload Settings:
+   -an, --anonymous      Set upload as anonymous.
+   -hi, --hidden         Set upload as hidden.
+   -co, --complete       Set upload as complete batch.
+   -re, --remake         Set upload as remake.
+   -s, --skip-upload     Skip torrent upload.
+   -c, --category TEXT   Select a category.
+   -w, --watch-dir DIR   Path of the watch directory.
+
+Content Information:
+   -e, --edit-code TEXT      Set edit code for Mediainfo on Rentry.co
+   -i, --info TEXT           Set information.
+   -n, --note TEXT           Put a note in to the description.
+   -ad, --advert TEXT        Put advert in to the description.
+   -m, --myanimelist URL     MyAnimeList link to use.
+   -t, --telegram            Post to telegram.
+   -sm, --skip-myanimelist   Skip MyAnimeList.
+
+Media Settings:
+   -p, --pictures-number EXTENSION         Number of pictures to use (default: 3).
+   -pe, --picture-extension NUM            Extension of the pictures.
+   -M, --no-mediainfo                      Do not attach Mediainfo to the torrent.
+   -o, --overwrite / -no, --no-overwrite   Create torrent file even if exists. (default: True)
+
+Other options:
+   -ch, --category-help   Print available categories.
+   -h, --help             Show this message and exit.
+```
+
+#### auth
+
+```
+Usage: nyaaup auth [OPTIONS]
+
+   Authenticate and configure settings
+
+Config File:
+   -c, --credential USER:PASS   Add or replace credential.
+   -a, --announces NAME         Add new announces url to config.
+   --proxy NAME                 Add or replace proxy to use for uploading to nyaa site.
+   -d, --domain NAME            Add or replace domain name for nyaa site.
+   -p, --provider NAME          Provider name for config.
+
+Other options:
+   -co, --cookie path   Cookies file from nyaa. (Cookies must be in the standard Netscape cookies file format)
+   -h, --help           Show this message and exit.
+
+```
+
