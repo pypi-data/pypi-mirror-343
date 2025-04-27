@@ -1,0 +1,15 @@
+transforms84/distances.pyi,sha256=9zHjFBhx9XyLIq5jiyrPNRqerKRU7QYvvAt2i8WqzC8,2601
+transforms84/systems.py,sha256=YPATDwzlarlAeLyBIT1edfPigfj7nNQiKyut416wMTg,1658
+transforms84/helpers.cpython-311-darwin.so,sha256=SS99YxWnCZoP2JQWXYBoOPkz4JHOUqyXqgYGQVHOgWw,53152
+transforms84/definitions.py,sha256=AXHdWgm1cMJVVxXqpDOb_djAw_quXxaGZjUSO4iy-pw,338
+transforms84/helpers.pyi,sha256=vh71NiE1xYoF7rvWm7dFWMq_x0Z15Om0Z9lDDgP54TU,2973
+transforms84/__init__.py,sha256=Mlm4Gvmb_6yQxwUbv2Ksc-BJFXLPg9H1Vt2iV7wXrA4,22
+transforms84/transforms.pyi,sha256=kpbbLt5YhnPs2Km2zSOho4GsYkr6_wzE-zZfOaWq5Fw,35163
+transforms84/transforms.cpython-311-darwin.so,sha256=rHsHrhpGpjYuxaRz1cbI1SW9QvyF3cdhLLl0vS5Zq3Y,177480
+transforms84/distances.cpython-311-darwin.so,sha256=hi_AIVWBujaPzusm-56i9NLePqI8vgomcVLFi93YTLo,36104
+transforms84/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+transforms84-1.2.1.dist-info/RECORD,,
+transforms84-1.2.1.dist-info/WHEEL,sha256=0b0d7U54I3cc6AY5UEiRHF10AEy-n3SKMXX_Vu8x5Ws,110
+transforms84-1.2.1.dist-info/top_level.txt,sha256=mxRdltwPgCTwa4oTSH0BVoSkAkpDN6nX_JlThimOORQ,13
+transforms84-1.2.1.dist-info/METADATA,sha256=Q1BTjflxzn4lA31tbwXsZgSNbCHquyxdlK3QpL0FIGw,10901
+transforms84-1.2.1.dist-info/licenses/LICENSE.txt,sha256=waWfLz5ks1VVbYAdQQ1haClpGfTeewjXOX5ZWaMdL1w,1525
