@@ -1,0 +1,10 @@
+six
+
+[httpretty]
+httpretty==1.1.4
+
+[requests-mock]
+requests-mock
+
+[responses]
+responses>=0.4.0
