@@ -1,0 +1,14 @@
+[project]
+name = "markdownify-mcp-server"
+version = "0.1.13"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "markitdown[all,pdf,xlsx]>=0.1.1",
+    "mcp[cli]>=1.6.0",
+]
+
+
+[project.scripts]
+markdownify-mcp-server = "markdownify_mcp.server:main"
