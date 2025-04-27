@@ -1,0 +1,28 @@
+[build-system]
+requires = [
+    "setuptools>=61.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "infradrone"
+version = "0.1.1"
+description = "Infrastructure deployment automation toolkit"
+readme = "README.md"
+authors = [
+  { name = "Anton Pavlenko", email = "apavlenko@hmcorp.uk" }
+]
+license = "MIT"
+requires-python = ">=3.8"
+dependencies = [
+  "paramiko>=3.5.1",
+  "curses-menu>=0.9.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/HMCorp-Fund/infradrone"
+Tracker = "https://github.com/HMCorp-Fund/infradrone/issues"
+
+[tool.setuptools]
+packages = ["infradrone", "infradrone.menus"]
