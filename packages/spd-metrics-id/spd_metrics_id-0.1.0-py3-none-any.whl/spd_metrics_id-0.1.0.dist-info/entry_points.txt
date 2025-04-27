@@ -1,0 +1,2 @@
+[console_scripts]
+spd-id = spd_metrics_id.cli:main
