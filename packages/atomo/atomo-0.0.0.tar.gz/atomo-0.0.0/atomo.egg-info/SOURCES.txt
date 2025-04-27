@@ -1,0 +1,6 @@
+README.md
+pyproject.toml
+atomo.egg-info/PKG-INFO
+atomo.egg-info/SOURCES.txt
+atomo.egg-info/dependency_links.txt
+atomo.egg-info/top_level.txt
