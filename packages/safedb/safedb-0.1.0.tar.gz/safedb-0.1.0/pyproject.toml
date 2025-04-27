@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "safedb"
+version = "0.1.0"
+description = "SafeDB is a simple and secure database framework for Python."
+authors = ["BossBoss2011 <bogdanelsandu@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
