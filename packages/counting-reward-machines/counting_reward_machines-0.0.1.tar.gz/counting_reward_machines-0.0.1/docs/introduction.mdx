@@ -1,0 +1,42 @@
+---
+title: 'Introduction'
+description: 'Learn about Counting Reward Machines and their applications'
+---
+
+# Counting Reward Machines
+Counting Reward Machines (CRMs) are a powerful formalism for specifying reward functions in reinforcement learning tasks. They extend reward machines by replacing finite-state machines with counter automata, producing a more expressive (Turing-complete) framework for reward specification in RL. This increased expressiveness allows CRMs to define any task that can be represented as a well-defined algorithm, while also yielding more compact representations than standard reward machines.
+
+## What are CRMs?
+
+CRMs combine:
+- **Finite State Machines**: To track progress through sequences
+- **Counting Mechanisms (Counter Variables)**: To act as an extended automaton memory 
+- **Reward Functions**: To provide learning signal to RL agents 
+
+This makes them ideal for tasks where rewards depend on:
+- Completing sequences of actions in order
+- Achieving goals multiple times
+- Meeting complex temporal specifications
+
+## Key Features
+
+- **Pure Python Implementation**: Built using standard Python libraries
+- **Flexible Integration**: Easy to integrate with existing RL environments
+- **Example Environments**: Includes example environments to get started
+- **Cross-Product Construction**: Automated construction of cross-product MDPs
+
+## Getting Started
+
+1. [Installation Guide](/installation)
+2. [Quick Start Tutorial](/quickstart)
+
+## Core Concepts
+
+- [Labelling Functions](/core-concepts/labelling-functions)
+- [Automata](/core-concepts/automata)
+- [Cross-Product MDPs](/core-concepts/cross-products)
+- [Agents](/core-concepts/agents)
+
+## Worked Examples
+
+See our [Letter World Example](/worked-examples/letter-env/ground-environment) for a complete walkthrough of using CRMs in practice. 
