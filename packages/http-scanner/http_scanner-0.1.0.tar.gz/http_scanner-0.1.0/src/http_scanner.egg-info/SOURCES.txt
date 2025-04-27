@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/core/__init__.py
+src/core/main.py
+src/core/runner.py
+src/http_scanner.egg-info/PKG-INFO
+src/http_scanner.egg-info/SOURCES.txt
+src/http_scanner.egg-info/dependency_links.txt
+src/http_scanner.egg-info/requires.txt
+src/http_scanner.egg-info/top_level.txt
+tests/test_input_http.py
+tests/test_output_console.py
+tests/test_processor_idea.py
