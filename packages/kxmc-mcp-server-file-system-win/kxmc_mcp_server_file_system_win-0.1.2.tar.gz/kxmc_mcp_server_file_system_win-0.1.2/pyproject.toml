@@ -1,0 +1,9 @@
+[project]
+name = "kxmc_mcp_server_file_system_win"
+version = "0.1.2"
+description = "操作本地文件或目录（Windows）"
+requires-python = ">=3.13"
+dependencies = [
+    "colorlog>=6.9.0",
+    "mcp>=1.6.0",
+]

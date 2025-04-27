@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: kxmc_mcp_server_file_system_win
+Version: 0.1.2
+Summary: 操作本地文件或目录（Windows）
+Home-page: 
+Author: kxmc
+Author-email: rekxmc@163.com
+Requires-Python: >=3.13
+Requires-Dist: colorlog>=6.9.0
+Requires-Dist: mcp>=1.6.0
+Dynamic: author
+Dynamic: author-email
