@@ -1,0 +1,7 @@
+regex
+
+[dev]
+pytest
+black
+isort
+mypy

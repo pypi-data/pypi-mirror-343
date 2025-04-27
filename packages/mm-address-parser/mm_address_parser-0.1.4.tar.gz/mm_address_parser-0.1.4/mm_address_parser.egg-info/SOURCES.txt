@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+mm_address_parser/__init__.py
+mm_address_parser/parser.py
+mm_address_parser/parser_utils.py
+mm_address_parser.egg-info/PKG-INFO
+mm_address_parser.egg-info/SOURCES.txt
+mm_address_parser.egg-info/dependency_links.txt
+mm_address_parser.egg-info/requires.txt
+mm_address_parser.egg-info/top_level.txt
+tests/test_address_parser.py
