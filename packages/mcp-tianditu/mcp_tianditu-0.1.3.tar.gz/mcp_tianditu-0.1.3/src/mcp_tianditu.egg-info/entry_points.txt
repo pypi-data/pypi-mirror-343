@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-tianditu = mcp_tianditu:main
