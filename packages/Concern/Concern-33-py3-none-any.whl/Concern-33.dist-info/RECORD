@@ -1,0 +1,17 @@
+concern/Concern.arid,sha256=9DUu9li5vaCdPS4nCSLxOFFYctJ-dg59ZZp1Av7E95Y,2685
+concern/Concern.py,sha256=IQM-eWztZZXhSYUgiJ9xEQag1CH_sE6-Sbeunbcukb4,2091
+concern/__init__.py,sha256=1_vY7Ca5T1DZjDljR2SUF-O1UiDXai9YaEGw-fIG3hQ,701
+concern/getblock.py,sha256=H9h0zLhrElZd87C5spGSC7nCFa6lzO-8m4eEyPpS0VY,2801
+concern/util.py,sha256=08YHRYjCg9ULAjmyGAq1_bxyCURJGesLimTBoIlct1o,1387
+concern/templates/__init__.py,sha256=1_vY7Ca5T1DZjDljR2SUF-O1UiDXai9YaEGw-fIG3hQ,701
+concern/templates/loop.py.aridt,sha256=0Zg87YA4AQgvI-JpqgZ1zTfiy7Extxy5p_iuFbT4iHE,1391
+concern/templates/quit.py.aridt,sha256=TG-eZXYYnUot2ZkjcRLIUTwLxP8KHQihazVj4-eolDk,1301
+concern/templates/screenrc.aridt,sha256=TIQsOFl6W3qITKe8baMyMSmnAmcZTQ8UkHxtPmD_t_A,229
+concern/templates/sendblock.py.aridt,sha256=msnF3VPdRciSXdvP96TvYbhK-kKFZW8iZcok0nCNm-4,1820
+concern/templates/session.vim.aridt,sha256=_bXROopFnIRwLRS4a6Fc1qBagYGlt38db1jGp1nZhTY,773
+Concern-33.dist-info/COPYING,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+Concern-33.dist-info/METADATA,sha256=778yw33QNSHISIY3Mw8m_Chd4JEWLLvbxjNpkzZiBiM,2720
+Concern-33.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+Concern-33.dist-info/entry_points.txt,sha256=WsqSr9dw92zaqQi3tlHyUQhUr0Z2nFj5Q8FVDhTZiio,49
+Concern-33.dist-info/top_level.txt,sha256=1rXkZQcLwn9oHAR4mUpBS36VpFAdq3GPTrUsUpIVvSA,8
+Concern-33.dist-info/RECORD,,
