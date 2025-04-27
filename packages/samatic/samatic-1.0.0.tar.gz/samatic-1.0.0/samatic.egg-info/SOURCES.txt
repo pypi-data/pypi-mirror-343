@@ -1,0 +1,8 @@
+README.md
+setup.py
+samatic/__init__.py
+samatic/mood.py
+samatic.egg-info/PKG-INFO
+samatic.egg-info/SOURCES.txt
+samatic.egg-info/dependency_links.txt
+samatic.egg-info/top_level.txt
