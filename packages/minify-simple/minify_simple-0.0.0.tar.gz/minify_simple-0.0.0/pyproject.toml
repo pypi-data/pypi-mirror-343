@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "minify-simple"
+version = "0.0.0"
+authors = [{ name = "Alexis Torres Valdes", email = "alexisdevsol@gmail.com" }]
+description = "Minify web file: js, css, html"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["minify-html == 0.16.4", "rich == 14.0.0"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Environment :: Web Environment",
+    "Topic :: Text Editors :: Integrated Development Environments (IDE)",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.scripts]
+minify-cli = "minify_simple.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/alexisdevsol89/minify_simple"
