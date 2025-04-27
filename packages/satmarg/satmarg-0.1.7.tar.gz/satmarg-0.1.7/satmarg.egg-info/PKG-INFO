@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: satmarg
+Version: 0.1.7
+Summary: Predict satellite overpasses based on TLE and user location
+Author-email: Upendra Oli <upendra.oli59@gmail.com>
+License-Expression: MIT
+Requires-Dist: skyfield
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: requests
