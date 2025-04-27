@@ -1,0 +1,12 @@
+dockmate/__init__.py,sha256=OJk1MeI-Y6ILa2H5pIWUXeWz-VvgDRFxAyW1rxAOvEI,202
+dockmate/click.py,sha256=w_PGBrif4GdfYjweSVCfv5OV-qgAQcQ4u_3AakqaEVE,1977
+dockmate/config.py,sha256=lEUtJlJalu3gcn_lMr-CCOJhdtWHuZBn8ZYTkQHzt8w,1416
+dockmate/constants.py,sha256=W7XtHSpTeVTi7SEfwzaBu5urT7bHQianHhtQY25I8f8,251
+dockmate/kernel.py,sha256=epY77V6TxMUALtoaYGd_-HWfhBrgR38Hjo3UgXkImWU,8207
+dockmate/assets/banner-logo.jpg,sha256=RmovMmTSlxWyRr7j0Jiw6cKsHmiKRDEo1EsFreIYcYc,48165
+dockmate/assets/config.yaml,sha256=FKN_RVUDHgGO2Agnm7ia96mWGBSavwwYxQbCXNx2QTg,1257
+dockmate-0.1.14.dist-info/METADATA,sha256=pGwgyGYb8f1w1_dLI3-bN7MbsuwHhizWMqheWu5G4PY,7064
+dockmate-0.1.14.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dockmate-0.1.14.dist-info/entry_points.txt,sha256=7_8hCIqKXYFoPMOVIwIauUnVT25ggMtwg1ELA3ceRVU,43
+dockmate-0.1.14.dist-info/licenses/LICENSE,sha256=hzatDUY2y22rrj6X6ZwI9cDAi4xFHx1Imymg1jvr8HQ,1076
+dockmate-0.1.14.dist-info/RECORD,,
