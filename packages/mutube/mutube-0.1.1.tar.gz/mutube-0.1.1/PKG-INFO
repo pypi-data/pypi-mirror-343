@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: mutube
+Version: 0.1.1
+Summary: Open source 1of10/Viewstats alternative. Find out if a youtube video is a relative outlier.
+Project-URL: Homepage, https://github.com/mutube-org/cli
+Project-URL: Repository, https://github.com/mutube-org/cli
+Project-URL: Issues, https://github.com/mutube-org/cli/issues
+Requires-Python: >=3.13
+Requires-Dist: build>=1.2.2.post1
+Requires-Dist: click>=8.1.7
+Requires-Dist: google-api-python-client>=2.168.0
+Requires-Dist: google-auth-oauthlib>=1.2.2
+Requires-Dist: rich>=14.0.0
+Requires-Dist: twine>=6.1.0
+Requires-Dist: xmltodict>=0.14.2
+Description-Content-Type: text/markdown
+
+# µ-tube
+
+## Background
+
+I've worked with [LukeJ](https://www.youtube.com/lukejtv) for a while now and we are attempting to make the best videos we can. There are several popular youtube analytic tools out there ([Viewstats](https://www.viewstats.com) and [1of10](https://1of10.com) to name a couple) but these tools are often expensive and closed source. A lot of the functionality behind these popular tools really isn't that complicated so this is an attempt to bring some of this functionality to people who are trying to make good content and can't afford these alternatives. As I write this, mutube's functionality is pretty basic but the hope is that I'll expand its capabilities as I continue to make videos.
+
+## Setup & Basic Usage 
+
+## Running Locally
