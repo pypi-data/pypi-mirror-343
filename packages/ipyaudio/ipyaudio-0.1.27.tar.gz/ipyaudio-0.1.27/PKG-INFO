@@ -1,0 +1,128 @@
+Metadata-Version: 2.4
+Name: ipyaudio
+Version: 0.1.27
+Summary: A Jupyter Widget for Web Audio Playing and Recording.
+Project-URL: Homepage, https://github.com/pengzhendong/ipyaudio
+Author-email: Zhendong Peng <pzd17@tsinghua.org.cn>
+License: Copyright (c) 2025 Zhendong Peng
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE.txt
+Keywords: IPython,Jupyter,Widgets
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Requires-Dist: audiolab>=0.2.7
+Requires-Dist: ipydatawidgets>=4.3.5
+Requires-Dist: ipywidgets>=8.0.0
+Provides-Extra: docs
+Requires-Dist: jupyter-sphinx; extra == 'docs'
+Requires-Dist: nbsphinx; extra == 'docs'
+Requires-Dist: nbsphinx-link; extra == 'docs'
+Requires-Dist: pypandoc; extra == 'docs'
+Requires-Dist: pytest-check-links; extra == 'docs'
+Requires-Dist: recommonmark; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme; extra == 'docs'
+Requires-Dist: sphinx>=1.5; extra == 'docs'
+Provides-Extra: examples
+Provides-Extra: test
+Requires-Dist: nbval; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Requires-Dist: pytest>=6.0; extra == 'test'
+Description-Content-Type: text/markdown
+
+<div align="center">
+
+# ipyaudio
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pengzhendong/ipyaudio/HEAD?urlpath=%2Fdoc%2Ftree%2Fexamples%2Fintroduction.ipynb)
+[![NPM](https://img.shields.io/npm/v/ipyaudio.svg)](https://www.npmjs.com/package/ipyaudio)
+[![PyPI](https://img.shields.io/pypi/v/ipyaudio.svg)](https://pypi.org/project/ipyaudio)
+[![Release](https://img.shields.io/github/release/pengzhendong/ipyaudio.svg)](https://github.com/pengzhendong/ipyaudio/releases)
+[![PyPI Downloads](https://static.pepy.tech/badge/ipyaudio)](https://pepy.tech/projects/ipyaudio)
+[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![Build Status](https://travis-ci.org/pengzhendong/ipyaudio.svg?branch=master)](https://travis-ci.org/pengzhendong/ipyaudio)
+[![codecov](https://codecov.io/gh/pengzhendong/ipyaudio/branch/master/graph/badge.svg)](https://codecov.io/gh/pengzhendong/ipyaudio)
+[![Stars](https://img.shields.io/github/stars/pengzhendong/ipyaudio)](https://github.com/pengzhendong/ipyaudio)
+
+A Jupyter Widget for Web Audio Playing and Recording.
+
+</div>
+
+<br/>
+
+## Installation
+
+```bash
+$ pip install ipyaudio
+```
+
+## Usage
+
+```python
+>>> !wget https://modelscope.cn/datasets/pengzhendong/filesamples/resolve/master/audio/aac/sample1.aac -O sample1.aac
+>>> audio_url = "https://modelscope.cn/datasets/pengzhendong/filesamples/resolve/master/audio/aac/sample1.aac"
+>>> audio_path = "sample1.aac"
+```
+
+### Player
+
+- Play an audio from url
+
+![](images/player/url.png)
+
+- Play a local audio
+
+![](images/player/local.png)
+
+- Play a numpy ndarray
+
+![](images/player/numpy.png)
+
+- Play an audio stream
+
+![](images/player/stream.png)
+
+### Recorder
+
+- Record an audio with callback function
+
+![](images/recorder/callback.png)
+
+- Record an audio to file
+
+![](images/recorder/save.png)
