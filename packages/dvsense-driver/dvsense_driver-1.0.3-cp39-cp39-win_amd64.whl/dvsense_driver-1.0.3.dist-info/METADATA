@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: dvsense_driver
+Version: 1.0.3
+Author: Ziteng Wang
+Author-email: ziteng.wang@dvsense.com, xuanbin.wang@dvsense.com
+Requires-Python: >=3.7
+Requires-Dist: numpy>=1.20.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: requires-python
