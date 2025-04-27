@@ -1,0 +1,8 @@
+py4jasper/__init__.py,sha256=pJaOEvCBElhIPvrKFMYbG_R0plubSF2msO4QN_fotV0,92
+py4jasper/main.py,sha256=P3cN1BFRQW1PqpTAgOrb7Rvu44d5HEhCEuANxGHQsSY,1737
+tests/__init__.py,sha256=T5AX_NrUksqH8TNbEb6OYbmESOxHOLqOXrZnUHPzN-8,124
+tests/test_generate_report.py,sha256=bDi2A1PAZmjEROKgYtOnP7rABbbGNxqapyEnRe5gfCQ,657
+py4jasper-1.0.0.0.dist-info/METADATA,sha256=4kPaz5KYxLvT8lUz_U3k8fJyN39-bkbVmVPwFgGzzwQ,1389
+py4jasper-1.0.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+py4jasper-1.0.0.0.dist-info/top_level.txt,sha256=aolnOC1D3_veLooZxGKW4-m1ftqzX8bWgZUBkctN9Q8,16
+py4jasper-1.0.0.0.dist-info/RECORD,,
