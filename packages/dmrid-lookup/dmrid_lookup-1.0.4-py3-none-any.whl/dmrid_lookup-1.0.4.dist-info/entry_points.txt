@@ -1,0 +1,2 @@
+[console_scripts]
+dmrid_lookup = dmrid_lookup:main
