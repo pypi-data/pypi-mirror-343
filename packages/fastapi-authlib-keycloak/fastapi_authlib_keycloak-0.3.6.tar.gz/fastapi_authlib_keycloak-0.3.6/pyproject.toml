@@ -1,0 +1,120 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fastapi-authlib-keycloak"
+version = "0.3.6"
+authors = [{ name = "Harsha Krishnareddy", email = "c0mpiler@ins8s.dev" }]
+description = "Robust Keycloak integration for FastAPI using JWT/Introspection validation, RBAC, metrics, diagnostics and more."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: FastAPI",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP :: Session",
+    "Topic :: Security",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+# Add relevant keywords for PyPI discovery
+keywords = [
+    "fastapi",
+    "keycloak",
+    "authentication",
+    "authorization",
+    "oauth2",
+    "oidc",
+    "jwt",
+    "security",
+    "middleware",
+    "rbac",
+    "sso",
+    "auth",
+    "authlib",
+    "keycloak-authlib",
+    "keycloak-authlib-fastapi",
+    "keycloak-fastapi",
+    "fastapi-keycloak",
+    "fastapi-keycloak-authlib",
+    "authlib-fastapi",
+    "authlib-fastapi-keycloak",
+]
+dependencies = [
+    "fastapi >=0.95.0",
+    "httpx[http2] >=0.24.0",    # Added [http2] extra
+    "pydantic >=1.10.0,<3.0.0",
+    "PyJWT[crypto] >=2.6.0",
+    "cachetools >=5.0.0",
+    "certifi >=2023.7.22",
+]
+
+[project.urls]
+"Homepage" = "http://github.com/c0mpiler/fastapi-authlib-keycloak/"
+"Bug Tracker" = "http://github.com/c0mpiler/fastapi-authlib-keycloak/issues"
+"Repository" = "http://github.com/c0mpiler/fastapi-authlib-keycloak/"
+
+[project.optional-dependencies]
+test = [
+    "pytest >=7.0.0",
+    "pytest-asyncio >=0.20.0",
+    "pytest-cov >=4.0.0",
+    "respx >=0.20.0",
+    "freezegun >=1.2.0",
+]
+dev = [
+    "fastapi-authlib-keycloak[test]",
+    "ruff",
+    "mypy",
+    "pre-commit",
+    "build",
+    "twine",
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+asyncio_mode = "auto"
+addopts = "-ra -q --cov=fastapi_authlib_keycloak --cov-report=term-missing"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["fastapi_authlib_keycloak"]
+branch = true
+
+[tool.coverage.report]
+# fail_under = 85
+show_missing = true
+skip_covered = true
+# Simplified exclude_lines to debug TOML parsing
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+    "def __repr__",
+    "pass",                      # Add pass for protocol stubs etc.
+]
+
+[tool.mypy]
+python_version = "3.8"
+warnings_as_errors = true
+disallow_untyped_defs = true
+disallow_any_unimported = false
+no_implicit_optional = true
+check_untyped_defs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+exclude = ['venv', '.venv', 'build', 'dist']
+
+[[tool.mypy.overrides]]
+module = ["cachetools.*", "respx.*", "freezegun.*"]
+ignore_missing_imports = true
