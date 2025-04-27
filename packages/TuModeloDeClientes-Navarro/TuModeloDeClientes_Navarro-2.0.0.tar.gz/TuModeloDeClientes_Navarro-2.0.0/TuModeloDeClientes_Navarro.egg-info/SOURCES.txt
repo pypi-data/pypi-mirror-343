@@ -1,0 +1,11 @@
+README.md
+setup.py
+TuModeloDeClientes_Navarro.egg-info/PKG-INFO
+TuModeloDeClientes_Navarro.egg-info/SOURCES.txt
+TuModeloDeClientes_Navarro.egg-info/dependency_links.txt
+TuModeloDeClientes_Navarro.egg-info/entry_points.txt
+TuModeloDeClientes_Navarro.egg-info/top_level.txt
+carpetatest/__init__.py
+paquete1/__init__.py
+paquete1/modulo1.py
+paquete1/modulo2.py
