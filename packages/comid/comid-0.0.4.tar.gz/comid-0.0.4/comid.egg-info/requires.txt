@@ -1,0 +1,9 @@
+redditcleaner
+contractions
+nltk
+spacy
+tqdm
+pandas
+praw>=7.7
+numpy
+convokit>=3.1.0
