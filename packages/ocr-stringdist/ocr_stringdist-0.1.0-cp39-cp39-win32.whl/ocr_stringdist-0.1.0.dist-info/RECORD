@@ -1,0 +1,10 @@
+ocr_stringdist-0.1.0.dist-info/METADATA,sha256=O6qY72O8qG2qHJlqdvSkK-_ka_dt6xhQHI5Z3qOIz5Q,3457
+ocr_stringdist-0.1.0.dist-info/WHEEL,sha256=0Nk1AmIV1z6U4gJsrIxrgrzvCxDT7puUGM_j24me7T0,90
+ocr_stringdist-0.1.0.dist-info/licenses/LICENSE,sha256=3cNRiJag5vI0KMMDNf0oiaY4vg43rLxRszbMJs1GBoU,1092
+ocr_stringdist/default_ocr_distances.py,sha256=vlhzQCCcE-D1xor5RvMW0oaMuL_HP_5Y7SO4ESkdb4w,1075
+ocr_stringdist/levenshtein.py,sha256=IQLNcTMVdRqo6hWEYErA5qhlzvQNjwFuXPV24yQoeP0,5745
+ocr_stringdist/matching.py,sha256=KEzYBBEHZhfLA9eD3MxDaehKiD9lUb0RQq74u5qWpVw,3376
+ocr_stringdist/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ocr_stringdist/__init__.py,sha256=MkIgLBJKXQRGfRoEdbrKBxwlRJKV85w-_jBdYDeH__0,342
+ocr_stringdist/_rust_stringdist.cp39-win32.pyd,sha256=8zh9Mysur1uSTjfBjmhN0TYuM-oROB3nu2fUv92OGX0,338432
+ocr_stringdist-0.1.0.dist-info/RECORD,,
