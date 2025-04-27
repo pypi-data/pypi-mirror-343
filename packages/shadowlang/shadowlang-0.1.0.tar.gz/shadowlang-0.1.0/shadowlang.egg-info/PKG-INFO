@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: shadowlang
+Version: 0.1.0
+Summary: ShadowLang: A simple programming language
+Author: Aditya Jain
+Author-email: adityaj0714@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-python
+Dynamic: summary
+
+# ShadowLang
+
+ShadowLang is a simple programming language that's easy to learn and fun to use.
+
+## Installation
+
+```bash
+pip install shadowlang

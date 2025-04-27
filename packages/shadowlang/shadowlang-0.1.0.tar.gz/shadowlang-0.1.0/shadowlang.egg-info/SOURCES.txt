@@ -1,0 +1,15 @@
+README.md
+setup.py
+SuperLang/__init__.py
+SuperLang/data.py
+SuperLang/error.py
+SuperLang/interpreter.py
+SuperLang/lexer.py
+SuperLang/parse.py
+SuperLang/runner.py
+SuperLang/tokens.py
+shadowlang.egg-info/PKG-INFO
+shadowlang.egg-info/SOURCES.txt
+shadowlang.egg-info/dependency_links.txt
+shadowlang.egg-info/entry_points.txt
+shadowlang.egg-info/top_level.txt
