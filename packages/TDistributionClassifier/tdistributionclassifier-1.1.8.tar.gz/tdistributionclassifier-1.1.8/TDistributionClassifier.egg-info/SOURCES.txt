@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+TDistributionClassifier/TDistributionClassifier.py
+TDistributionClassifier/__init__.py
+TDistributionClassifier.egg-info/PKG-INFO
+TDistributionClassifier.egg-info/SOURCES.txt
+TDistributionClassifier.egg-info/dependency_links.txt
+TDistributionClassifier.egg-info/requires.txt
+TDistributionClassifier.egg-info/top_level.txt
