@@ -1,0 +1,2 @@
+[console_scripts]
+hunyuan-image-mcp = hunyuan_image_mcp.main:run_mcp
