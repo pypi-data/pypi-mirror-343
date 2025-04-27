@@ -1,0 +1,9 @@
+download_files_by_map/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+download_files_by_map/cli.py,sha256=U2VcF4gQQqg0RU3zRpGFXHWCe0p2mL2JRXO7_LoCNAs,119
+download_files_by_map/download_files_by_map.py,sha256=bVs1ITvlwdyzTuNOUx0kLDqODrgIt8FSykV3GP-_qWg,1754
+download_files_by_map/util.py,sha256=azDUmYIx-6t_q5pV_NwO3Yxmk4tiw1HtU1vC365DZms,363
+download_files_by_map-0.2.0.dist-info/LICENSE,sha256=AOdG9K9C03otrAbOnh2P_Urw9y0Sc0zs6Qb0Nj-zscs,1066
+download_files_by_map-0.2.0.dist-info/METADATA,sha256=l0yi5S-Zvbp-MjsD6ujJGNPR693WfVaW0gtXl0dsZ74,8182
+download_files_by_map-0.2.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+download_files_by_map-0.2.0.dist-info/entry_points.txt,sha256=YfYFTy9cOEatMR1JzzCaTLv4DNytNxDvBMaBiCPUYiA,71
+download_files_by_map-0.2.0.dist-info/RECORD,,
