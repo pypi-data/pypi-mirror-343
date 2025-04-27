@@ -1,0 +1,3 @@
+include fastpybuilder/*.bat
+include fastpybuilder/*.sh
+include fastpybuilder/*.py
