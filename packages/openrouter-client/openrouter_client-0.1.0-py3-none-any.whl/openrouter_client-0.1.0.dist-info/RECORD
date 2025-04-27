@@ -1,0 +1,14 @@
+openrouter/__init__.py,sha256=zvsWjtw27mkWBYrE_3NjTDVvBpxNdYdDRbVmoizly8w,277
+openrouter/client.py,sha256=yQkbyz4R9iXlu4gyPRHNJpbJWGZykvbrxp4HksCoXAs,6536
+openrouter/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openrouter/core/config.py,sha256=ko2rUdwswEpexJ_iGr-lDgPk1Cs_h1rSFiUf8DSg6RM,1157
+openrouter/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openrouter/models/helpers.py,sha256=BRNNqKrwxRgyxg_cRdRNjYhpgHVpIjnUlLPyPL1_TDM,8544
+openrouter/models/request.py,sha256=wEX4m6-BZ-FRdzYv380PCZyjObDsQTElLwxzjdmLPys,5230
+openrouter/models/response.py,sha256=p_jdyj784kG3HbLtfH6DStr39O5t1Cct7lBAj3dUYY8,2709
+openrouter_client-0.1.0.dist-info/AUTHORS,sha256=ztpHy5gR_j91DC0pigzpqi_-hRgMeCr5nQVljTBYN4k,58
+openrouter_client-0.1.0.dist-info/LICENSE,sha256=2Nba4km1meXU4IuftKOvmREIZJbcGPZoxIdjGLSFPd0,1075
+openrouter_client-0.1.0.dist-info/METADATA,sha256=tFRAHL-kuLW-HOiZOcyiENz6Wz416OPGjjCaraoX5jw,6502
+openrouter_client-0.1.0.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+openrouter_client-0.1.0.dist-info/top_level.txt,sha256=0jnlCcRirGeYZLm5ZbWQRUonIp4tTPl_9mq-ds_1SEo,11
+openrouter_client-0.1.0.dist-info/RECORD,,
