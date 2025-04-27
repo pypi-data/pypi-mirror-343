@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+nevora/__init__.py
+nevora/converter.py
+nevora/utils.py
+nevora.egg-info/PKG-INFO
+nevora.egg-info/SOURCES.txt
+nevora.egg-info/dependency_links.txt
+nevora.egg-info/requires.txt
+nevora.egg-info/top_level.txt
