@@ -1,0 +1,5 @@
+config
+dist
+smart_agent
+tests
+venv
