@@ -1,0 +1,11 @@
+match_series_batch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+match_series_batch/config.py,sha256=41mcw2FXDcSqoiGMnExQsbue6B4b6zcJKSV0eerC97E,367
+match_series_batch/main.py,sha256=Hj-gGoYiLBgu6IxF4vGRZ97HwHpV3eyqDoPT2xU2bho,2591
+match_series_batch/processing.py,sha256=Fq8cv4CnNGbS9Md4J44YgnQWVb8rlC6SmGh5NHQ89jA,4384
+match_series_batch/utils.py,sha256=fGvSx3nlUBbatXCfuD3QAVXMZUeBhUyBcfODe3b0b7Y,517
+match_series_batch-1.1.1.dist-info/LICENSE,sha256=Ue9lYr-YaDlDATLJO9-gd6dXB7s2pPDO8SxgTp2reEw,1062
+match_series_batch-1.1.1.dist-info/METADATA,sha256=nE-8fFlKXcMt8pWGKchtOb9n1b1CfJ7jWsHbEi885IE,4970
+match_series_batch-1.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+match_series_batch-1.1.1.dist-info/entry_points.txt,sha256=7azSftFzT2fFBiLaDPcwPFrUOIQQNF5rQHsStKP8Eeg,68
+match_series_batch-1.1.1.dist-info/top_level.txt,sha256=LzvGTfkJWYYlGoO9yZz-ynKonJe5EUTAjeRfYFbTdno,19
+match_series_batch-1.1.1.dist-info/RECORD,,
