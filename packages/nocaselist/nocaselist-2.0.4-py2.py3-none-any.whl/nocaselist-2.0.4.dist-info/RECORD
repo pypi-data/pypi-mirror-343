@@ -1,0 +1,12 @@
+nocaselist/__init__.py,sha256=aq5PUP-ikkdrSW7xzHn7Ynq6-_PASDc455do-3S-4O8,226
+nocaselist/_nocaselist.py,sha256=Tx5JTQduHUkAeZMI7GHHlEJDP9RSYSBwX5rpGofrVgU,21739
+nocaselist/_version.py,sha256=5hOUs_vI8RS3twUIYxn5pAEpKFxFBwiE26ymlfqpbFs,361
+nocaselist/_version_scm.py,sha256=sF2r8yxZzhPIV-mqLeVKJLSUY_SarJUyH7UPNvgU6Xc,575
+nocaselist/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nocaselist-2.0.4.dist-info/licenses/AUTHORS.md,sha256=S35xvpU3iyrMj2T1rf0FVNfD6If6NgeEtKx8QqRPjhM,182
+nocaselist-2.0.4.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+nocaselist-2.0.4.dist-info/METADATA,sha256=yF2DatFOUndor9SEWhUPPRhX3W-31EAO7KcU7C4Wtzk,5148
+nocaselist-2.0.4.dist-info/WHEEL,sha256=AeO2BvogYWm3eGaHCvhzmUYt8ia7KfURiHzO_1atlys,109
+nocaselist-2.0.4.dist-info/top_level.txt,sha256=FtgCItSHPwy5L8davc1LD60yIMYairHlhs0UbjjgfG8,11
+nocaselist-2.0.4.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+nocaselist-2.0.4.dist-info/RECORD,,
