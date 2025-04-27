@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: pyastbuilder
+Version: 0.0.2.14682189839
+Summary: Utility for generating AST classes from a yaml description
+Home-page: https://github.com/mballance/pyastbuilder
+Author: Matthew Ballance
+Author-email: matt.ballance@gmail.com
+License: Apache 2.0
+Keywords: Parsing
+License-File: LICENSE
+Requires-Dist: pyyaml
+Requires-Dist: toposort
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+
+  Utility for generating AST classes from a yaml description
+  
