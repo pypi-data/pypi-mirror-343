@@ -1,0 +1,2 @@
+[console_scripts]
+ahfu = ai_hedge_fund.__main__:main
