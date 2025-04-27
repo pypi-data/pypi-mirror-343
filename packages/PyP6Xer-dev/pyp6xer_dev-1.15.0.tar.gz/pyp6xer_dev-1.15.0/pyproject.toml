@@ -1,0 +1,68 @@
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PyP6Xer-dev"
+version = "1.15.0" # Normalized version, follows PEP 440
+description = "An actively maintained fork of PyP6Xer: A Python parser for Primavera XER files."
+readme = "README.md"
+authors = [
+    { name = "Hassan", email = "hassan.emam@hotmail.com" },
+    { name = "Osama Ata", email = "me@osamata.com" },
+]
+license = { text = "GPL-3.0-or-later" } # More modern and correct format
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.8"
+dependencies = []
+
+[project.urls]
+"Homepage" = "https://github.com/osama-ata/PyP6Xer-dev"
+"Documentation" = "https://github.com/osama-ata/PyP6Xer-dev"
+"Source" = "https://github.com/osama-ata/PyP6Xer-dev"
+"Issues" = "https://github.com/osama-ata/PyP6Xer-dev/issues"
+
+[project.scripts]
+xer-explorer = "xerparser.tools.explorer:main"
+
+[tool.setuptools]
+packages = [
+    "xerparser",
+    "xerparser.dcma14",
+    "xerparser.model",
+    "xerparser.model.classes",
+    "xerparser.tools",
+]
+
+[tool.pylint]
+max-line-length = 160
+disable = [
+    "R0902", # too-many-instance-attributes
+    "R0903", # too-few-public-methods
+    "R0904", # too-many-public-methods
+    "R0912", # too-many-branches
+    "R0913", # too-many-arguments
+    "R0914", # too-many-locals
+    "R0915", # too-many-statements
+    "C0103", # invalid-name - will fix gradually
+    "C0114", # missing-module-docstring
+    "C0115", # missing-class-docstring
+    "C0116", # missing-function-docstring
+    "C0301", # line-too-long
+    "W0612", # unused-variable
+    "W0613", # unused-argument
+]
+
+good-names = ["id", "df", "dt", "i", "j", "k", "x", "y", "z", "_"]

@@ -1,0 +1,2 @@
+[console_scripts]
+xer-explorer = xerparser.tools.explorer:main
