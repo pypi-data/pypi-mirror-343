@@ -1,0 +1,57 @@
+{
+  "description": "A no-nonsene framework to build event-driven applications.",
+  "author": "Immortal Izzy",
+  "author_email": "immortal.izzy@tensorshield.ai",
+  "url": "https://github.com/tensorshield/python-aorta",
+  "licenses": "Proprietary",
+  "install_requires": [
+    "libcanonical>=0.1.4",
+    "pydantic>=2.0.0",
+    "fastapi>=0.115.0"
+  ],
+  "extras_require": {
+    "all": [
+      "aegisx.ext.google>0.1.0",
+      "google-api-core",
+      "google-cloud-pubsub"
+    ],
+    "develop": [
+      "coverage",
+      "pytest",
+      "pytest_asyncio"
+    ],
+    "google": [
+      "aegisx.ext.google>=0.1.0",
+      "google-api-core",
+      "google-cloud-pubsub"
+    ]
+  },
+  "classifiers": [
+     "Development Status :: 4 - Beta",
+     "Environment :: Console",
+     "Environment :: Web Environment",
+     "Framework :: Django",
+     "Framework :: Django CMS",
+     "Framework :: Flask",
+     "Intended Audience :: Developers",
+     "Intended Audience :: Financial and Insurance Industry",
+     "Intended Audience :: Healthcare Industry",
+     "License :: Other/Proprietary License",
+     "Operating System :: POSIX",
+     "Operating System :: POSIX :: Linux",
+     "Programming Language :: Python :: 3.11",
+     "Programming Language :: Python :: 3.12",
+     "Programming Language :: Python :: 3.13",
+     "Programming Language :: Python :: 3 :: Only",
+     "Topic :: Internet",
+     "Topic :: Internet :: WWW/HTTP :: Session",
+     "Topic :: Office/Business",
+     "Topic :: Security",
+     "Topic :: Security :: Cryptography",
+     "Topic :: Software Development :: Libraries",
+     "Topic :: Software Development :: User Interfaces",
+     "Topic :: System :: Systems Administration :: Authentication/Directory",
+     "Topic :: System :: Systems Administration :: Authentication/Directory :: LDAP",
+     "Topic :: System :: Systems Administration :: Authentication/Directory :: NIS"
+  ]
+}
