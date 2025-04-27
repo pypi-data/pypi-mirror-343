@@ -1,0 +1,12 @@
+colab_dc333/README.md,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+colab_dc333/__init__.py,sha256=SZRcZ-eT-vXZkBENglQ3wET29lSNCrgS2yiOyJqSi4k,35
+colab_dc333/fix.sh,sha256=pUIFIY3ZHUXD4MsDAdilUSRxnxGLxEA-AFUHG1uvq8c,498
+colab_dc333/google.py,sha256=NgR2lakebxjNP7y2kIRnKP7ZUvlTjySIK9U57hgRjeQ,116
+colab_dc333/nsys.sh,sha256=NrqPIxm3ASy8yZ1jP7cZlGzpaltjruc2UYcfxKAQhsk,491
+colab_dc333/nvidia.py,sha256=LA-i15gniR0wIBHwf5zJsmz_Z_rwF7t9RrzisnuInbs,3224
+colab_dc333/run.py,sha256=TEKtryOf6tgeyKD7K6yD3c8411aD2FJHwRTxWJKxoN4,670
+colab_dc333/train.py,sha256=4OdMBFZ2GSsa-UYpnPFZ04FHwcmSkN-ZpfvxMpMfQyc,1698
+colab_dc333-0.0.3.dist-info/METADATA,sha256=xbkwXmXTwWtuKQjtJLrbEpZjGrU9Rt3FctO0TdaZc5U,756
+colab_dc333-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+colab_dc333-0.0.3.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+colab_dc333-0.0.3.dist-info/RECORD,,
