@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: mcp-server-database
+Version: 0.1.4
+Summary: 将自然语言转化为sql语句
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: mcp>=1.6.0
+Requires-Dist: openai>=1.76.0
+Requires-Dist: oracledb>=3.1.0
+Requires-Dist: psycopg2-binary>=2.9.10
+Requires-Dist: pymssql>=2.3.4
+Requires-Dist: pymysql>=1.1.1
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: sqlalchemy>=2.0.40
+
+#### 简介
+> 将用户的问题转化为SQL语句，然后执行SQL语句，返回结果。
+ 
+#### 使用
+```json
+{
+    "mcpServers": {
+        "nltosql_agent": {
+            "command": "uvx",
+            "args": ["mcp-server-database"],
+            "env": {
+                "model": "模型名称",
+                "api_key": "模型api_key",
+                "base_url": "模型调用地址",
+                "database": "数据库类型",
+                "host": "数据库地址",
+                "port": "数据库端口",
+                "user": "数据库用户名",
+                "password": "数据库密码",
+                "dbname": "数据库名称"
+            }
+        }
+    }
+}
+```

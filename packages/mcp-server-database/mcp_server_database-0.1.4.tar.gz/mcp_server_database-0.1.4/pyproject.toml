@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-server-database"
+version = "0.1.4"
+description = "将自然语言转化为sql语句"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp>=1.6.0",
+    "openai>=1.76.0",
+    "oracledb>=3.1.0",
+    "psycopg2-binary>=2.9.10",
+    "pymssql>=2.3.4",
+    "pymysql>=1.1.1",
+    "python-dotenv>=1.1.0",
+    "sqlalchemy>=2.0.40",
+]
+
+[project.scripts]
+mcp-server-database = "mcp_server_database:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mcp_server_database*"]  # 添加通配符确保包含所有子模块
