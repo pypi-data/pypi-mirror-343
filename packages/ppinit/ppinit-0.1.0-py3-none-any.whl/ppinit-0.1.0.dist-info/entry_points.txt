@@ -1,0 +1,2 @@
+[console_scripts]
+ppinit = ppinit.__main__:main

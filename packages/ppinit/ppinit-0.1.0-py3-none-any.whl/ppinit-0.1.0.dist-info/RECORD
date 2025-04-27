@@ -1,0 +1,14 @@
+ppinit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ppinit/__main__.py,sha256=zNqz0WTBxtnUqjgAu0VR81GQ67ftGOGXwRSJPvHunKc,5904
+ppinit/assets/gitignore_content.txt,sha256=LQMxtCGQ4f77urPLUMALRavFGBtl1drx8rqs3msy3NM,3615
+ppinit/assets/main_file_content.txt,sha256=0alSwhPUMkDG8Sb7AvqqMvm1f0jvTV4r-ugOG9TNwl8,92
+ppinit/assets/licenses/AGPL-3.0.txt,sha256=E_tIpsMacuDitpZQsc6-iVT3tzRJhISS3P0islvZGvo,35182
+ppinit/assets/licenses/Apache-2.0.txt,sha256=WtjCEwlcVzkh1ziO35P2qfVEkLjr87Flro7xlHz3CEY,11556
+ppinit/assets/licenses/GPL-3.0.txt,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+ppinit/assets/licenses/MIT.txt,sha256=ICtoYbTY8cgnvCgTbAKXZVFp0cq08HMwveuMj8JYgoI,1133
+ppinit-0.1.0.dist-info/licenses/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+ppinit-0.1.0.dist-info/METADATA,sha256=IKwYNFya0Igd-OgIfbknYIMp1wxgg1vvzHMCwfh_-S0,458
+ppinit-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+ppinit-0.1.0.dist-info/entry_points.txt,sha256=qQ2OIH2O2q4mTWkMEpXnPY0hs-bgktXBwRcMraF_qlw,48
+ppinit-0.1.0.dist-info/top_level.txt,sha256=-v0HO25mDa6gXe-ZvSiAzA2ZYSDarjIGR4lAdwLQXT8,7
+ppinit-0.1.0.dist-info/RECORD,,
