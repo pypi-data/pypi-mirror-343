@@ -1,0 +1,17 @@
+main.py
+pyproject.toml
+src/main.cpp
+src/pyregister.hpp
+src/__pycache__/pyregister.cpython-313.pyc
+src/pyregister2/__init__.py
+src/pyregister2/pyregister.py
+src/pyregister2.egg-info/PKG-INFO
+src/pyregister2.egg-info/SOURCES.txt
+src/pyregister2.egg-info/dependency_links.txt
+src/pyregister2.egg-info/top_level.txt
+src/pyregister2/bin/32/libpyregister.a
+src/pyregister2/bin/32/libpyregister.so
+src/pyregister2/bin/32/pyregister.dll
+src/pyregister2/bin/64/libpyregister.a
+src/pyregister2/bin/64/libpyregister.so
+src/pyregister2/bin/64/pyregister.dll
