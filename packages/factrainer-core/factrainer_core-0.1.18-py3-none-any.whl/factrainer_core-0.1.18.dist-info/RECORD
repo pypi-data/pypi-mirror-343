@@ -1,0 +1,12 @@
+factrainer/core/__init__.py,sha256=N-iFuyQeYC8X3rwSyD_hNl6sz8ylKFSEgdDnh-wIRz8,284
+factrainer/core/model_container.py,sha256=E8SOHUHgOOKA6DhaokL03BlGuFJmSMJequcPjSjIlsk,1192
+factrainer/core/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+factrainer/core/single.py,sha256=zvqpAJq69J5NfK_3730PDzUHBkFl2zx-hAX7JJG0r1A,1478
+factrainer/core/cv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+factrainer/core/cv/config.py,sha256=hIzYMweyKIFkZ3_Uyss5gEs9xpSFEZUN38Qc2zxtFLg,3089
+factrainer/core/cv/dataset.py,sha256=ECoAyGXhyKFRXo0L0N4SBynwB6-6DXDaZCxAYXXj3fw,3582
+factrainer/core/cv/model_container.py,sha256=yzAmOpZXojnIUuCjmYr2cCzrBeymZraIW0DYyT8FSzg,2696
+factrainer/core/cv/raw_model.py,sha256=Cld8cAz3CymiMoXLiF7vBGqMG4D2k3_IJ3sRDBpqNfA,151
+factrainer_core-0.1.18.dist-info/METADATA,sha256=oQDYbgcLSlOgE9e6IJcmbRK5t6of893mQlNw6Em5akQ,494
+factrainer_core-0.1.18.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+factrainer_core-0.1.18.dist-info/RECORD,,
