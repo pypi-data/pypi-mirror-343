@@ -1,0 +1,12 @@
+apache_airflow_dragdrop_plugin/plugin.py,sha256=eTU-B32V8CWTV1B1mK6YIBryj_OgwU6oWaDZJgocIcA,1389
+apache_airflow_dragdrop_plugin/static/assets/index-0977d9bf.css,sha256=CXfZv2RlD7wwwespP_6_Lx08eJYjG40cCgcGe1dT6jg,15716
+apache_airflow_dragdrop_plugin/static/assets/index-134f50d9.js,sha256=ZbwC2-Dz9_PwhujqoyQtnJl0DsNCUv12Nm1duMhK5iw,325355
+apache_airflow_dragdrop_plugin/static/assets/index-a8582e13.css,sha256=qFguE2BvZmR785mamt45Trl3QR-Q6cNqsigir8aOFvw,17414
+apache_airflow_dragdrop_plugin/static/assets/index-faaebae2.js,sha256=PeSxkpkqsK1g15T3tKRR5VTUe11V5KixOtVBxtYElYM,329383
+apache_airflow_dragdrop_plugin/templates/index.html,sha256=zGfomIJDO9S2SrYvjvV-AqUEM4s0CQf8qk3OxHrF_sI,1016
+apache_airflow_dragdrop_plugin-1.1.4.dist-info/LICENSE,sha256=vk-kWYGgKDonln_SNqySVLFoFyTpmWQ42jbQBXAplbU,11546
+apache_airflow_dragdrop_plugin-1.1.4.dist-info/METADATA,sha256=NtE7Ht54OTiEO7UMEIjone1ILw90CpPXuo_aw9SrDuk,4046
+apache_airflow_dragdrop_plugin-1.1.4.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+apache_airflow_dragdrop_plugin-1.1.4.dist-info/entry_points.txt,sha256=OYwlw4CiQ0m1lw5kywqUCn_55lZqB0JZWJri04fOPi8,103
+apache_airflow_dragdrop_plugin-1.1.4.dist-info/top_level.txt,sha256=HbsyxgUhPYaWHxV6CgKsg5iTUhQYMoFWdPI3ZC9wUZY,31
+apache_airflow_dragdrop_plugin-1.1.4.dist-info/RECORD,,
