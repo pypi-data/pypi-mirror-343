@@ -1,0 +1,3 @@
+[console_scripts]
+ulkey-decode = utils.cli:decode_cli
+ulkey-encode = utils.cli:encode_cli
