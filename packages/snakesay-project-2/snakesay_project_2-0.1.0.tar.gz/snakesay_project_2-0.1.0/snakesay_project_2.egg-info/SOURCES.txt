@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+snakesay_project_2/__init__.py
+snakesay_project_2/__main__.py
+snakesay_project_2/main.py
+snakesay_project_2.egg-info/PKG-INFO
+snakesay_project_2.egg-info/SOURCES.txt
+snakesay_project_2.egg-info/dependency_links.txt
+snakesay_project_2.egg-info/entry_points.txt
+snakesay_project_2.egg-info/requires.txt
+snakesay_project_2.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+[console_scripts]
+ssay = snakesay_project_2.main:main

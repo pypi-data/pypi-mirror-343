@@ -1,0 +1,13 @@
+[project]
+name = "snakesay_project_2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas>=2.2.3",
+]
+
+
+[project.scripts]
+ssay = "snakesay_project_2.main:main"
