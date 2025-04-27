@@ -1,0 +1,5 @@
+- Added `abogen-cli` command for better troubleshooting and error handling.
+- Switched from setuptools to hatchling for packaging.
+- Added classifiers to the package metadata.
+- Fixed "No module named 'docopt'" and "setuptools.build_meta" import errors while using .bat installer in Windows, mentioned by @nigelp in https://github.com/denizsafak/abogen/issues/2 
+- Improvements in code and documentation.
