@@ -1,0 +1,3 @@
+[console_scripts]
+dump_org=dump_org:main
+

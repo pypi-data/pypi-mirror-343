@@ -1,0 +1,13 @@
+Metadata-Version: 2.3
+Name: orgtreepubsub
+Version: 0.1.0
+Summary: 
+Author: Iain Samuel McLean Elder
+Author-email: iain@isme.es
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: blinker
+Requires-Dist: boto3
+Requires-Dist: boto3-stubs-lite[organizations]
