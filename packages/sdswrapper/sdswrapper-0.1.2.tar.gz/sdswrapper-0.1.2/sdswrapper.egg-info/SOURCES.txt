@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+sdswrapper.egg-info/PKG-INFO
+sdswrapper.egg-info/SOURCES.txt
+sdswrapper.egg-info/dependency_links.txt
+sdswrapper.egg-info/requires.txt
+sdswrapper.egg-info/top_level.txt
