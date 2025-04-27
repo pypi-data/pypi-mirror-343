@@ -1,0 +1,2 @@
+[console_scripts]
+medicai = src.medicai.cli:cli
