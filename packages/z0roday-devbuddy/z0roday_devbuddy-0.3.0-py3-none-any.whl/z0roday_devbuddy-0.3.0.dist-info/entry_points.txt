@@ -1,0 +1,2 @@
+[console_scripts]
+dbuddy = devbuddy.cli:cli

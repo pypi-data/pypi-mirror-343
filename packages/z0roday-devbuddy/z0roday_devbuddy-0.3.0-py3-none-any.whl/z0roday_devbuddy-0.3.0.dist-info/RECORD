@@ -1,0 +1,12 @@
+devbuddy/__init__.py,sha256=ryjxq9d7W00Fzt4VbUrRhagSKO0wciDNJW2pvlOwpmc,112
+devbuddy/animations.py,sha256=rEbXM-O4Wli_j4NDKdaWvu_hl1NFTCu_YEF-h-mdAPM,4272
+devbuddy/cli.py,sha256=X10SoDaOyetXF0rVtFBlqKxkpdjmQkQcwGyVqUcL-hE,20978
+devbuddy/formatter.py,sha256=cG6moXX4MRQ2Tn_kF1z7_-FF4mx6er69wTL0v5z0J50,2858
+devbuddy/scaffolder.py,sha256=5aSOZ6qGEbWQXb3MZmB27pBAumdNS9vlMsNg8q-che0,22658
+devbuddy/plugins/__init__.py,sha256=XYSBUne1MulLwJbakvngzET-gPbrHROdHeSNKBRdF7U,1519
+z0roday_devbuddy-0.3.0.dist-info/licenses/LICENSE,sha256=G2YMvAJFfKpy1fPOa9HFG20uC-TIyl_eKc91Mv3bho8,1085
+z0roday_devbuddy-0.3.0.dist-info/METADATA,sha256=aRLnr3jWDBSfCLAR2X8S7LDzAjYTeVifC68mQgQsd78,5893
+z0roday_devbuddy-0.3.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+z0roday_devbuddy-0.3.0.dist-info/entry_points.txt,sha256=NLQL7HY3eymS51qqXDT1UI_tWnCWJ6tShtkpXHoSpv4,44
+z0roday_devbuddy-0.3.0.dist-info/top_level.txt,sha256=BGoKRmNj4MqcE-ygR03bJfWIjh83vFaprEXTZm-vivs,9
+z0roday_devbuddy-0.3.0.dist-info/RECORD,,
