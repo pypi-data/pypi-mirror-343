@@ -1,0 +1,10 @@
+fibonacci_api/__about__.py,sha256=mHkMxbbwRfekGKq6AbeENs8r45sbUAWzZmQfaBFaKmQ,125
+fibonacci_api/__init__.py,sha256=GOEjjeP81igi3tPCM77I1TJb6pZE9Z508fVQsKE9j84,103
+fibonacci_api/_block.py,sha256=Ii5OtrBkZySmeADGyHKL3Ns-HPQTNv1djVaqBgb6go8,152
+fibonacci_api/crud.py,sha256=nrPZLSDjyd9wTG-_f91ySsSGRLVO_eHG-XxmL3ovjZM,2029
+fibonacci_api/main.py,sha256=nhJw68MqkjCJmfCgFQU61gYiWWWqMkdyIQ60kf3K8tc,3647
+fibonacci_api/types.py,sha256=gMp5_HOmhjBiK9KvAFnN9rgdg5EFlPKCQd8e67TVwQU,164
+fibonacci_api-0.0.1.dist-info/METADATA,sha256=AGxgGD4qRPovpGp0rQq9Kw-dvgoL-r6QOn9nyaL8x5M,2920
+fibonacci_api-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fibonacci_api-0.0.1.dist-info/licenses/LICENSE.txt,sha256=p_aty89srZ8h2CIk9Cwnzdfl-6GVo4pzaiaYS1CW4ec,1095
+fibonacci_api-0.0.1.dist-info/RECORD,,
