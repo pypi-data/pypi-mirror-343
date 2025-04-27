@@ -1,0 +1,11 @@
+clipy/__init__.py,sha256=T8X0PzPCVfojskwWlTxR33Uh4qNLpL4Nt7GHhcSAc2c,304
+clipy/cli.py,sha256=lHQLk5uMXWNzMlSYh1ySoNGXWHClaS3gProX5-LD7Tg,6571
+clipy/cli_types.py,sha256=5x051fw8njCnum2d7OlTXVLctEAPqs0WXktmEBdg8SQ,1402
+clipy/clipy.py,sha256=yhSiylXKyqoXpuGJWKONZZBesQmr_4FM1fYktmiwgqU,2596
+clipy/decorators.py,sha256=slQBh1oS9WzWFM6A5ZCJY5YwuCaaW207gPEkUtXFYu8,5043
+clipy/deprecated.py,sha256=KJrrKJFMeA7p5W7k6hN9pxWX23kAZ1gwnGcdfE_vrPI,353
+clipyx-0.2.0.dist-info/licenses/LICENSE,sha256=5OjZDXCaxbXXPjfch_GCUm_nv5TpZO96CqbCWFH_RoA,1093
+clipyx-0.2.0.dist-info/METADATA,sha256=r9Vbn4swOmsFMud2G62DZBu-AQLYpQDf7USB8XtVMHI,2883
+clipyx-0.2.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+clipyx-0.2.0.dist-info/top_level.txt,sha256=C89T4w0GfI4IIRSb9p1Bv7tQn1igrTm_y4pzP_OP4-s,6
+clipyx-0.2.0.dist-info/RECORD,,
