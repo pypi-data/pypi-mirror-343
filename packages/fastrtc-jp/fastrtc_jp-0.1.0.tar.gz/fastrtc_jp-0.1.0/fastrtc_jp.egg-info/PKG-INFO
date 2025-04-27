@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: fastrtc_jp
+Version: 0.1.0
+Summary: A module kit for Fast RTC in Japanese
+Author-email: route250 <89811136+route250@users.noreply.github.com>
+License: MIT
+Project-URL: Homepage, https://github.com/route250/fastrtc-jp
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastrtc[vad]>=0.0.23
+Requires-Dist: librosa>=0.11.0
+Requires-Dist: python-dotenv
+Provides-Extra: vosk
+Requires-Dist: vosk==0.3.44; extra == "vosk"
+Provides-Extra: gtts
+Requires-Dist: gTTS>=2.5.4; extra == "gtts"
+Requires-Dist: av>=13.1.0; extra == "gtts"
+Provides-Extra: sr
+Requires-Dist: SpeechRecognition==3.10.0; extra == "sr"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: sounddevice; extra == "dev"
+Dynamic: license-file
+
+# fastrtc-jp
+fastrtc用の日本語TTSとSTT追加キット
