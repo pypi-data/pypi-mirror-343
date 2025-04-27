@@ -1,0 +1,10 @@
+pycont/BranchSwitching.py,sha256=2oONU4YGqSh3Vk9BcGM1wlKZmjAeMeuRZBjEiqpIlIc,3203
+pycont/PseudoArclengthContinuation.py,sha256=kPo9zkykwsyHWheLZ8xqe0_M9Vizq4PMeJXfLnU5NtA,5674
+pycont/TestFunctions.py,sha256=J5QlVSTJgEfAmFwgn_568Ta-3zl2VLePNvYwjkm-BsY,1094
+pycont/__init__.py,sha256=gFZg-mc58l5dV7F8CR5V9soC7cNQQmgk2rdQg-XDwb4,96
+pycont/continuation.py,sha256=6jTP53cdXUrQi0v_nMv5c3fF0bHzrSWIH8AAaRWwYZY,2558
+pycont_lite-0.1.0.dist-info/licenses/LICENSE,sha256=1kRTSzSbizxGhlz6hIiYevMdS0C2gFHULNueMlPN_nc,1077
+pycont_lite-0.1.0.dist-info/METADATA,sha256=iuhyB6PlW_TSuJbiLTqBYFD0gsZbkZ0AWbjzxQ42zow,3932
+pycont_lite-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+pycont_lite-0.1.0.dist-info/top_level.txt,sha256=27yAucn8pfiWyK_3oazGi8IKp9oaU6cFxKEdy2nh2-w,7
+pycont_lite-0.1.0.dist-info/RECORD,,
