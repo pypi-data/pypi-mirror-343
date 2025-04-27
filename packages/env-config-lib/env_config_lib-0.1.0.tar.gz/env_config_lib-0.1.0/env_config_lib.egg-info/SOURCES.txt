@@ -1,0 +1,6 @@
+README.md
+pyproject.toml
+env_config_lib.egg-info/PKG-INFO
+env_config_lib.egg-info/SOURCES.txt
+env_config_lib.egg-info/dependency_links.txt
+env_config_lib.egg-info/top_level.txt
