@@ -1,0 +1,9 @@
+README.md
+setup.py
+NeuralCore.egg-info/PKG-INFO
+NeuralCore.egg-info/SOURCES.txt
+NeuralCore.egg-info/dependency_links.txt
+NeuralCore.egg-info/requires.txt
+NeuralCore.egg-info/top_level.txt
+neuralcore/NeuralCore.py
+neuralcore/__init__.py
