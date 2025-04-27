@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "uncouple"
+version = "0.1.0"
+description = "Configuration parameter handling library"
+authors = ["Sebastian Acuna <sebastian@unholster.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-decouple = "^3.8"
+yarl = "^1.9.4"
+pyyaml = "^6.0.1"
+pydantic = "^2.6.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+ruff = "^0.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
