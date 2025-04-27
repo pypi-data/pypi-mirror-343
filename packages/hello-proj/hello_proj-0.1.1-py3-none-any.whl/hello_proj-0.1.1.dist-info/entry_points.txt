@@ -1,0 +1,5 @@
+[console_scripts]
+main=hello_proj:main
+manage=hello_project.manage:main
+web=gunicornhello_proj.wsgi:application
+
