@@ -1,0 +1,109 @@
+[build-system]
+requires = [
+	"setuptools>=61.2",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ActivityRelay"
+description = "Generic LitePub relay (works with all LitePub consumers and Mastodon)"
+classifiers = [
+	"Development Status :: 4 - Beta",
+	"Environment :: Console",
+	"Framework :: aiohttp",
+	"Framework :: AsyncIO",
+	"License :: OSI Approved :: GNU Affero General Public License v3",
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3.10",
+	"Programming Language :: Python :: 3.11",
+	"Programming Language :: Python :: 3.12",
+	"Programming Language :: Python :: 3.13",
+	"Programming Language :: SQL",
+	"Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+	"Typing :: Typed",
+]
+dependencies = [
+	"activitypub-utils >= 0.3.2, < 0.4",
+	"aiohttp >= 3.9.5",
+	"argon2-cffi == 23.1.0",
+	"barkshark-lib >= 0.2.5.post1, < 0.3.0",
+	"barkshark-sql >= 0.2.0, < 0.3.0",
+	"click == 8.1.2",
+	"docstring-parser == 0.16",
+	"hamlish == 0.4.0",
+	"hiredis == 2.3.2",
+	"idna == 3.4",
+	"markdown == 3.6",
+	"platformdirs == 4.2.2",
+	"pyyaml == 6.0.1",
+	"redis == 5.0.7",
+]
+requires-python = ">=3.10"
+dynamic = [
+	"version",
+]
+
+[project.license]
+file = "LICENSE"
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown; charset=UTF-8"
+
+[project.urls]
+Documentation = "https://git.pleroma.social/pleroma/relay/-/blob/main/docs/index.md"
+Source = "https://git.pleroma.social/pleroma/relay"
+
+[project.scripts]
+activityrelay = "relay.cli:main"
+
+[project.optional-dependencies]
+performance = [
+	"uvloop == 0.21.1",
+]
+dev = [
+	"flake8 == 7.1.1",
+	"mypy == 1.13.0",
+	"pyinstaller == 6.10.0",
+	"typing-extensions == 4.12.2; python_version < '3.11'",
+]
+
+[tool.setuptools]
+zip-safe = false
+include-package-data = true
+license-files = [
+	"LICENSE",
+]
+
+[tool.setuptools.package-data]
+relay = [
+	"py.typed",
+	"data/*",
+	"frontend/*",
+	"frontend/page/*",
+	"frontend/page/admin/*",
+	"frontend/static/*",
+]
+
+[tool.setuptools.dynamic.version]
+attr = "relay.__version__"
+
+[tool.setuptools.packages.find]
+include = ["relay*"]
+
+[tool.mypy]
+show_traceback = true
+install_types = true
+pretty = true
+disallow_untyped_decorators = true
+warn_redundant_casts = true
+warn_unreachable = true
+warn_unused_ignores = true
+ignore_missing_imports = true
+implicit_reexport = true
+strict = true
+follow_imports = "silent"
+
+[[tool.mypy.overrides]]
+module = "relay."
+follow_imports = "error"

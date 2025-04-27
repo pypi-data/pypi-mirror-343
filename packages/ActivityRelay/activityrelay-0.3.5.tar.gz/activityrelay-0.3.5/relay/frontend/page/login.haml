@@ -1,0 +1,17 @@
+-extends "base.haml"
+-set page="Login"
+
+-block content
+	%fieldset.section
+		%legend << Login
+
+		.grid-2col
+			%label(for="username") << Username
+			%input(id="username" name="username" placeholder="Username" value="{{username or ''}}")
+
+			%label(for="password") << Password
+			%input(id="password" name="password" placeholder="Password" type="password")
+
+
+		%input#redir(type="hidden" name="redir" value="{{redir}}")
+		%input.submit(type="button" value="Login")
