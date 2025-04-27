@@ -1,0 +1,8 @@
+libonvif/__init__.py,sha256=sgkoeK5m7Ljsqrf4ToweVLxU3t7Z1llXnJL8UXHroi8,594
+libonvif/libonvif.cpython-310-darwin.so,sha256=6z59bf18D5J0InyzYqO-4lpWHQ-njyCf9J85a88hPB4,968096
+libonvif/libxml2.16.dylib,sha256=U6oiUZV7niOSRvDyPss7ZNEaBxdU5fei2fRB57s0160,1326448
+libonvif-3.2.6.dist-info/licenses/LICENSE,sha256=kqdZ7A_r3kdQghc2u95kKjuDXAYE_IG-5i-eQo-GmB8,27028
+libonvif-3.2.6.dist-info/METADATA,sha256=hnQhyf_7OL85GxL7xrwelg4ihVJGdzxXP1qkcaZkQHA,2779
+libonvif-3.2.6.dist-info/WHEEL,sha256=p7fGaAi9-6-ScA5I5oWitmX-DCxCuhvqDs5obUmAIBQ,114
+libonvif-3.2.6.dist-info/top_level.txt,sha256=pf0figrDNi5Rdxv3hFdJtMFBoK_L2tx3QTde9_mxMrA,9
+libonvif-3.2.6.dist-info/RECORD,,
