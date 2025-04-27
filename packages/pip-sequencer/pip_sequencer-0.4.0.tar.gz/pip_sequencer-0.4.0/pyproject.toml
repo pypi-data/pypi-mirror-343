@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pip-sequencer"
+# IMPORTANT: Ensure this version number is correct and incremented if needed before final upload!
+version = "0.4.0"
+# TODO: Replace with your actual name and email
+authors = [
+  { name="Rachill007", email="rahilmaniar18@gmail.com" },
+]
+description = "Record, replay, and export pip installation/uninstallation sequences." # Short summary
+readme = "README.md" # Specifies the file to use for the long description on PyPI
+# TODO: Make sure you have a LICENSE file (e.g., LICENSE.txt or LICENSE) in the root directory
+# Choose the correct license identifier from https://spdx.org/licenses/ if not MIT
+license = { file = "LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    # How mature is this project? Common values are
+    #   3 - Alpha
+    #   4 - Beta
+    #   5 - Production/Stable
+    "Development Status :: 4 - Beta", # Example: Beta status
+
+    # Indicate who your project is intended for
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: System :: Archiving :: Packaging",
+    "Topic :: Utilities",
+
+    # Pick your license as you wish (should match the LICENSE file and license key)
+    "License :: OSI Approved :: MIT License", # Example: Matches the license key assuming MIT
+
+    # Specify the Python versions you support here.
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12", # Add future versions as you test them
+
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+]
+# Add keywords that users might search for on PyPI
+keywords = ["pip", "virtualenv", "venv", "requirements", "sequence", "order", "install", "uninstall", "dependencies", "reproducible", "environment"]
+# List runtime dependencies - setuptools is needed for pkg_resources
+dependencies = [
+    "setuptools",
+]
+
+# Define the command-line script
+[project.scripts]
+pip-sequencer = "pip_sequencer.cli:main"
