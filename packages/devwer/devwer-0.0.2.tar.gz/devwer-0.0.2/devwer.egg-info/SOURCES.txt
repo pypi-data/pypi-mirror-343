@@ -1,0 +1,11 @@
+README.md
+setup.py
+devwer/__init__.py
+devwer/metrics.py
+devwer/normalizer.py
+devwer.egg-info/PKG-INFO
+devwer.egg-info/SOURCES.txt
+devwer.egg-info/dependency_links.txt
+devwer.egg-info/requires.txt
+devwer.egg-info/top_level.txt
+tests/test_wer.py
