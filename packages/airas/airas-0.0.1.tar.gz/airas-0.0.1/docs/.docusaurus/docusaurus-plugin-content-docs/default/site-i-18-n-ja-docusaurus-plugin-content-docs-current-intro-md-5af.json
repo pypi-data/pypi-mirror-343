@@ -1,0 +1,18 @@
+{
+  "id": "intro",
+  "title": "チュートリアル導入",
+  "description": "Docusaurusについて5分以内で学んでいきましょう。",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/intro.md",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/airas/ja/docs/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/intro.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/airas/ja/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/airas/ja/docs",
+          "mainDocId": "introduction",
+          "docs": [
+            {
+              "id": "component/analytic-subgraph",
+              "path": "/airas/ja/docs/component/analytic-subgraph",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "component/executor",
+              "path": "/airas/ja/docs/component/executor",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "component/experimental-plan-subgraph",
+              "path": "/airas/ja/docs/component/experimental-plan-subgraph",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "component/generator",
+              "path": "/airas/ja/docs/component/generator",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "component/html-uploader",
+              "path": "/airas/ja/docs/component/html-uploader",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "component/latex-subgraph",
+              "path": "/airas/ja/docs/component/latex-subgraph",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "component/readme-subgraph",
+              "path": "/airas/ja/docs/component/readme-subgraph",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "component/research-preparation-subgraph",
+              "path": "/airas/ja/docs/component/research-preparation-subgraph",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "component/retrieve-paper-subgraph",
+              "path": "/airas/ja/docs/component/retrieve-paper-subgraph"
+            },
+            {
+              "id": "component/review-subgraph",
+              "path": "/airas/ja/docs/component/review-subgraph",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "component/writer-subgraph",
+              "path": "/airas/ja/docs/component/writer-subgraph",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "development/local-setup",
+              "path": "/airas/ja/docs/development/local-setup",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "development/MCP",
+              "path": "/airas/ja/docs/development/MCP",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "development/roadmap",
+              "path": "/airas/ja/docs/development/roadmap",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/airas/ja/docs/intro"
+            },
+            {
+              "id": "introduction",
+              "path": "/airas/ja/docs/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "quickstart",
+              "path": "/airas/ja/docs/quickstart",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-basics/congratulations",
+              "path": "/airas/ja/docs/tutorial-basics/congratulations"
+            },
+            {
+              "id": "tutorial-basics/create-a-blog-post",
+              "path": "/airas/ja/docs/tutorial-basics/create-a-blog-post"
+            },
+            {
+              "id": "tutorial-basics/create-a-document",
+              "path": "/airas/ja/docs/tutorial-basics/create-a-document"
+            },
+            {
+              "id": "tutorial-basics/create-a-page",
+              "path": "/airas/ja/docs/tutorial-basics/create-a-page"
+            },
+            {
+              "id": "tutorial-basics/deploy-your-site",
+              "path": "/airas/ja/docs/tutorial-basics/deploy-your-site"
+            },
+            {
+              "id": "tutorial-basics/markdown-features",
+              "path": "/airas/ja/docs/tutorial-basics/markdown-features"
+            },
+            {
+              "id": "tutorial-extras/manage-docs-versions",
+              "path": "/airas/ja/docs/tutorial-extras/manage-docs-versions"
+            },
+            {
+              "id": "tutorial-extras/translate-your-site",
+              "path": "/airas/ja/docs/tutorial-extras/translate-your-site"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/airas/ja/docs/introduction",
+                "label": "introduction"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

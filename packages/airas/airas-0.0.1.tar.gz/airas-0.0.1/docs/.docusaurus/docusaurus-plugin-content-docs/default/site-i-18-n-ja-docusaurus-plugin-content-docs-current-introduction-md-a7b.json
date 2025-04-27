@@ -1,0 +1,23 @@
+{
+  "id": "introduction",
+  "title": "はじめに",
+  "description": "Research Graphは、大規模言語モデル（LLM）を活用した研究支援システムです。論文の読解から実装、実験まで、研究活動全体をサポートします。",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/introduction.md",
+  "sourceDirName": ".",
+  "slug": "/introduction",
+  "permalink": "/airas/ja/docs/introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/introduction.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "introduction",
+    "title": "はじめに"
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "クイックスタート",
+    "permalink": "/airas/ja/docs/quickstart"
+  }
+}

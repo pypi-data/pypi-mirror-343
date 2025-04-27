@@ -1,0 +1,27 @@
+{
+  "id": "component/review-subgraph",
+  "title": "Review Subgraph",
+  "description": "This page explains the details of the Review Subgraph.",
+  "source": "@site/docs/component/review-subgraph.md",
+  "sourceDirName": "component",
+  "slug": "/component/review-subgraph",
+  "permalink": "/airas/docs/component/review-subgraph",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/component/review-subgraph.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "sidebar_position": 10
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Research Preparation Subgraph",
+    "permalink": "/airas/docs/component/research-preparation-subgraph"
+  },
+  "next": {
+    "title": "Writer Subgraph",
+    "permalink": "/airas/docs/component/writer-subgraph"
+  }
+}

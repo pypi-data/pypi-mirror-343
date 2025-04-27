@@ -1,0 +1,15 @@
+{
+  "id": "component/retrieve-paper-subgraph",
+  "title": "Retriever Usage",
+  "description": "To use the Retriever module:",
+  "source": "@site/docs/component/retrieve-paper-subgraph.md",
+  "sourceDirName": "component",
+  "slug": "/component/retrieve-paper-subgraph",
+  "permalink": "/airas/ja/docs/component/retrieve-paper-subgraph",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/component/retrieve-paper-subgraph.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

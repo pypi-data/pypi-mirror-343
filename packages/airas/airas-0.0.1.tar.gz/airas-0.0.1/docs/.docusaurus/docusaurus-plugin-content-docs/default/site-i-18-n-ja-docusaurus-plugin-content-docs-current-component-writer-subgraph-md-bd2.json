@@ -1,0 +1,27 @@
+{
+  "id": "component/writer-subgraph",
+  "title": "Writer サブグラフ",
+  "description": "このページでは Writer サブグラフの詳細について説明します。",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/component/writer-subgraph.md",
+  "sourceDirName": "component",
+  "slug": "/component/writer-subgraph",
+  "permalink": "/airas/ja/docs/component/writer-subgraph",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/component/writer-subgraph.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "sidebar_position": 11
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Review Subgraph",
+    "permalink": "/airas/ja/docs/component/review-subgraph"
+  },
+  "next": {
+    "title": "ローカル環境のセットアップ",
+    "permalink": "/airas/ja/docs/development/local-setup"
+  }
+}

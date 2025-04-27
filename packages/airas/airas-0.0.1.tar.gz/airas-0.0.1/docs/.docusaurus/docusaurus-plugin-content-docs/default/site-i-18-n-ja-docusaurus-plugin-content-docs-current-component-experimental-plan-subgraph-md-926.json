@@ -1,0 +1,27 @@
+{
+  "id": "component/experimental-plan-subgraph",
+  "title": "実験計画サブグラフ（Experimental Plan Subgraph）",
+  "description": "このページでは実験計画サブグラフの詳細について説明します。",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/component/experimental-plan-subgraph.md",
+  "sourceDirName": "component",
+  "slug": "/component/experimental-plan-subgraph",
+  "permalink": "/airas/ja/docs/component/experimental-plan-subgraph",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/component/experimental-plan-subgraph.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "分析サブグラフ（Analytic Subgraph）",
+    "permalink": "/airas/ja/docs/component/analytic-subgraph"
+  },
+  "next": {
+    "title": "LaTeX Subgraph",
+    "permalink": "/airas/ja/docs/component/latex-subgraph"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "development/roadmap",
+  "title": "Roadmap",
+  "description": "- #4e77ee",
+  "source": "@site/docs/development/roadmap.md",
+  "sourceDirName": "development",
+  "slug": "/development/roadmap",
+  "permalink": "/airas/docs/development/roadmap",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/development/roadmap.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "roadmap",
+    "title": "Roadmap"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Local Setup",
+    "permalink": "/airas/docs/development/local-setup"
+  },
+  "next": {
+    "title": "MCP",
+    "permalink": "/airas/docs/development/MCP"
+  }
+}

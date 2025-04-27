@@ -1,0 +1,27 @@
+{
+  "id": "component/review-subgraph",
+  "title": "Review Subgraph",
+  "description": "このページではReview Subgraphの詳細について説明します。",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/component/review-subgraph.md",
+  "sourceDirName": "component",
+  "slug": "/component/review-subgraph",
+  "permalink": "/airas/ja/docs/component/review-subgraph",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/component/review-subgraph.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "sidebar_position": 10
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "研究準備サブグラフ（Research Preparation Subgraph）",
+    "permalink": "/airas/ja/docs/component/research-preparation-subgraph"
+  },
+  "next": {
+    "title": "Writer サブグラフ",
+    "permalink": "/airas/ja/docs/component/writer-subgraph"
+  }
+}

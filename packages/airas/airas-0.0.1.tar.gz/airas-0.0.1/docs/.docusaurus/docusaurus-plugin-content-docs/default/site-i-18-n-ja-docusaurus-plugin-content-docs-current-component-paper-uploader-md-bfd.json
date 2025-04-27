@@ -1,0 +1,29 @@
+{
+  "id": "component/paper-uploader",
+  "title": "Paper uploader",
+  "description": "このページではPaper Uploader Subgraphの詳細について説明します。",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/component/paper-uploader.md",
+  "sourceDirName": "component",
+  "slug": "/component/paper-uploader",
+  "permalink": "/researchgraph/ja/docs/component/paper-uploader",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/researchgraph/tree/main/docs/docs/component/paper-uploader.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "id": "paper-uploader",
+    "title": "Paper uploader",
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "HTML uploader",
+    "permalink": "/researchgraph/ja/docs/component/html-uploader"
+  },
+  "next": {
+    "title": "Analytic Subgraph",
+    "permalink": "/researchgraph/ja/docs/component/analytic-subgraph"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "component/analytic-subgraph",
+  "title": "分析サブグラフ（Analytic Subgraph）",
+  "description": "このページでは分析サブグラフの詳細について説明します。",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/component/analytic-subgraph.md",
+  "sourceDirName": "component",
+  "slug": "/component/analytic-subgraph",
+  "permalink": "/airas/ja/docs/component/analytic-subgraph",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/component/analytic-subgraph.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "HTML uploader",
+    "permalink": "/airas/ja/docs/component/html-uploader"
+  },
+  "next": {
+    "title": "実験計画サブグラフ（Experimental Plan Subgraph）",
+    "permalink": "/airas/ja/docs/component/experimental-plan-subgraph"
+  }
+}

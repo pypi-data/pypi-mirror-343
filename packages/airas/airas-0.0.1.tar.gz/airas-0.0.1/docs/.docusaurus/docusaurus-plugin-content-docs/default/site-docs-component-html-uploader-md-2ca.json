@@ -1,0 +1,29 @@
+{
+  "id": "component/html-uploader",
+  "title": "HTML uploader",
+  "description": "This page explains the details of the HTML Uploader Subgraph.",
+  "source": "@site/docs/component/html-uploader.md",
+  "sourceDirName": "component",
+  "slug": "/component/html-uploader",
+  "permalink": "/airas/docs/component/html-uploader",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/component/html-uploader.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "html-uploader",
+    "title": "HTML uploader",
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Executor",
+    "permalink": "/airas/docs/component/executor"
+  },
+  "next": {
+    "title": "Analytic Subgraph",
+    "permalink": "/airas/docs/component/analytic-subgraph"
+  }
+}

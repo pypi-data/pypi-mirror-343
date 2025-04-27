@@ -1,0 +1,27 @@
+{
+  "id": "component/latex-subgraph",
+  "title": "LaTeX Subgraph",
+  "description": "This page explains the details of the LaTeX Subgraph.",
+  "source": "@site/docs/component/latex-subgraph.md",
+  "sourceDirName": "component",
+  "slug": "/component/latex-subgraph",
+  "permalink": "/airas/docs/component/latex-subgraph",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/component/latex-subgraph.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "sidebar_position": 7
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Experimental Plan Subgraph",
+    "permalink": "/airas/docs/component/experimental-plan-subgraph"
+  },
+  "next": {
+    "title": "README Subgraph",
+    "permalink": "/airas/docs/component/readme-subgraph"
+  }
+}

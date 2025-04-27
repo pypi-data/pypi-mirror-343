@@ -1,0 +1,27 @@
+{
+  "id": "quickstart",
+  "title": "クイックスタート",
+  "description": "Research Graphをすぐに使い始めるための手順を説明します。",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/quickstart.md",
+  "sourceDirName": ".",
+  "slug": "/quickstart",
+  "permalink": "/airas/ja/docs/quickstart",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/quickstart.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "quickstart",
+    "title": "クイックスタート"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "はじめに",
+    "permalink": "/airas/ja/docs/introduction"
+  },
+  "next": {
+    "title": "Generator",
+    "permalink": "/airas/ja/docs/component/generator"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "development/MCP",
+  "title": "MCP",
+  "description": "coming soon",
+  "source": "@site/docs/development/MCP.md",
+  "sourceDirName": "development",
+  "slug": "/development/MCP",
+  "permalink": "/airas/docs/development/MCP",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/development/MCP.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "MCP",
+    "slug": "/development/MCP"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Roadmap",
+    "permalink": "/airas/docs/development/roadmap"
+  }
+}

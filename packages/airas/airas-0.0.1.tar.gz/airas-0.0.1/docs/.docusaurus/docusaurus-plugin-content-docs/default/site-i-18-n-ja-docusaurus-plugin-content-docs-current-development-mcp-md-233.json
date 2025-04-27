@@ -1,0 +1,23 @@
+{
+  "id": "development/MCP",
+  "title": "MCP",
+  "description": "近日公開予定です。",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/development/MCP.md",
+  "sourceDirName": "development",
+  "slug": "/development/MCP",
+  "permalink": "/airas/ja/docs/development/MCP",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/development/MCP.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "MCP",
+    "slug": "/development/MCP"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ロードマップ",
+    "permalink": "/airas/ja/docs/development/roadmap"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "quickstart",
+  "title": "Quickstart",
+  "description": "You can easily try Research Graph using the following notebook:",
+  "source": "@site/docs/quickstart.md",
+  "sourceDirName": ".",
+  "slug": "/quickstart",
+  "permalink": "/airas/docs/quickstart",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/quickstart.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "quickstart",
+    "title": "Quickstart"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/airas/docs/introduction"
+  },
+  "next": {
+    "title": "Generator",
+    "permalink": "/airas/docs/component/generator"
+  }
+}

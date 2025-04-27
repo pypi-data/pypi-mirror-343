@@ -1,0 +1,132 @@
+Metadata-Version: 2.4
+Name: airas
+Version: 0.0.1
+Summary: Add your description here
+Project-URL: Homepage, https://www.autores.one/english
+Project-URL: Issues, https://github.com/auto-res/airas/issues
+Author-email: Toma Tanaka <ulti4929@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: arxiv==2.1.3
+Requires-Dist: google-genai>=1.9.0
+Requires-Dist: jinja2>=3.1.4
+Requires-Dist: langchain-community>=0.2.15
+Requires-Dist: langchain>=0.2.15
+Requires-Dist: langgraph>=0.2.23
+Requires-Dist: openai>=1.35.13
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: pyalex>=0.15.1
+Requires-Dist: pydantic>=2.9.2
+Requires-Dist: pypdf>=4.3.1
+Requires-Dist: pytest-cov>=6.0.0
+Requires-Dist: semanticscholar>=0.8.4
+Requires-Dist: tiktoken>=0.9.0
+Requires-Dist: tomli-w>=1.0.0
+Requires-Dist: tomli>=2.0.1
+Provides-Extra: mcp
+Requires-Dist: asyncio>=3.4.3; extra == 'mcp'
+Requires-Dist: mcp[cli]>=1.6.0; extra == 'mcp'
+Requires-Dist: python-dotenv>=1.0.1; extra == 'mcp'
+Description-Content-Type: text/markdown
+
+<!-- Title Image Placeholder -->
+<p align="center">
+  AIRAS
+</p>
+
+<p align="center">
+  <a href="https://auto-res.github.io/researchgraph/">
+    <img src="https://img.shields.io/badge/Documentation-%F0%9F%93%95-blue" alt="Documentation" />
+  </a>
+  <a href="https://x.com/fuyu_quant">
+    <img src="https://img.shields.io/twitter/follow/fuyu_quant?style=social" alt="Twitter Follow" />
+  </a>
+  <a href="https://github.com/auto-res/researchgraph/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License" />
+  </a>
+</p>
+
+# Quick Start
+
+```
+uv sync [--dev] [--extra mcp]
+```
+
+- `--dev` to install development packages
+- `--extra mcp` to install MCP-related packages
+
+
+## MCP
+
+Client setting in Claude Desktop
+```json
+{
+    "mcpServers": {
+        "researchgraph": {
+            "type": "stdio",
+            "command": "uv",
+            "env": {
+                "UV_ENV_FILE": "/PATH/TO/REPOSITORY/.env"
+            },
+            "args": [
+                "--directory",
+                "/PATH/TO/REPOSITORY",
+                "run",
+                "src/researchgraph/mcp_server/mcp_server.py"
+            ]
+        }
+    }
+}
+```
+or Visual Studio Code
+```json
+  "mcp": {
+    "servers": {
+      "researchgraph": {
+        "type": "stdio",
+        "command": "uv",
+        "env": {
+            "UV_ENV_FILE": "/PATH/TO/REPOSITORY/.env"
+        },
+        "args": [
+            "--directory",
+            "/PATH/TO/REPOSITORY",
+            "run",
+            "src/researchgraph/mcp_server/mcp_server.py"
+        ]
+      }
+    }
+  }
+```
+
+# Roadmap
+
+- [ ] Enhanced automation for end-to-end ML research
+- [ ] Improved integration with external APIs (OpenAI, Devin, Firecrawl, GitHub)
+- [ ] User-friendly web interface
+- [ ] Advanced experiment tracking and visualization
+- [ ] Community plugin system
+
+# Contact
+
+We are exploring best practices for human-AI collaboration in automated AI research. Together, we're investigating how new research workflows—powered by both human insight and AI agents—can accelerate discovery, improve reproducibility, and give organizations a competitive edge in the age of autonomous research.
+
+If you are interested in this topic, please feel free to contact us at <a href="mailto:ulti4929@gmail.com">ulti4929@gmail.com</a>.
+
+# About AutoRes
+
+This OSS is developed as part of the [AutoRes](https://www.autores.one/english) project.
+
+# Citation
+
+If you use AIRAS in your research, please cite as follows:
+
+```
+@software{airas2025,
+  author = {Toma Tanaka},
+  title = {AIRAS},
+  year = {2025},
+  publisher = {GitHub},
+  url = {https://github.com/auto-res/airas}
+}
+```

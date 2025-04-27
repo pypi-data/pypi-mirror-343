@@ -1,0 +1,18 @@
+{
+  "id": "tutorial-basics/congratulations",
+  "title": "おめでとうございます！",
+  "description": "あなたはDocusaurusの基本を学び、初期テンプレートにいくつかの変更を加えました。",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/tutorial-basics/congratulations.md",
+  "sourceDirName": "tutorial-basics",
+  "slug": "/tutorial-basics/congratulations",
+  "permalink": "/airas/ja/docs/tutorial-basics/congratulations",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/tutorial-basics/congratulations.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "component/research-preparation-subgraph",
+  "title": "研究準備サブグラフ（Research Preparation Subgraph）",
+  "description": "このページでは研究準備サブグラフの詳細について説明します。",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/component/research-preparation-subgraph.md",
+  "sourceDirName": "component",
+  "slug": "/component/research-preparation-subgraph",
+  "permalink": "/airas/ja/docs/component/research-preparation-subgraph",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/component/research-preparation-subgraph.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "sidebar_position": 9
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "README Subgraph",
+    "permalink": "/airas/ja/docs/component/readme-subgraph"
+  },
+  "next": {
+    "title": "Review Subgraph",
+    "permalink": "/airas/ja/docs/component/review-subgraph"
+  }
+}

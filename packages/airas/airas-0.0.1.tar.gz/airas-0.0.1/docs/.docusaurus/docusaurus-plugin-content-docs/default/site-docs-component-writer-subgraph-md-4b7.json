@@ -1,0 +1,27 @@
+{
+  "id": "component/writer-subgraph",
+  "title": "Writer Subgraph",
+  "description": "This page explains the details of the Writer Subgraph.",
+  "source": "@site/docs/component/writer-subgraph.md",
+  "sourceDirName": "component",
+  "slug": "/component/writer-subgraph",
+  "permalink": "/airas/docs/component/writer-subgraph",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/component/writer-subgraph.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "sidebar_position": 11
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Review Subgraph",
+    "permalink": "/airas/docs/component/review-subgraph"
+  },
+  "next": {
+    "title": "Local Setup",
+    "permalink": "/airas/docs/development/local-setup"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "tutorial-basics/create-a-blog-post",
+  "title": "ブログ投稿の作成",
+  "description": "Docusaurusは各ブログ投稿ごとにページを作成するだけでなく、ブログインデックスページ、タグシステム、RSSフィードなども作成します。",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/tutorial-basics/create-a-blog-post.md",
+  "sourceDirName": "tutorial-basics",
+  "slug": "/tutorial-basics/create-a-blog-post",
+  "permalink": "/airas/ja/docs/tutorial-basics/create-a-blog-post",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/tutorial-basics/create-a-blog-post.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  }
+}

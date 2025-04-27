@@ -1,0 +1,29 @@
+{
+  "id": "component/paper-uploader",
+  "title": "Paper uploader",
+  "description": "This page explains the details of the Paper Uploader Subgraph.",
+  "source": "@site/docs/component/paper-uploader.md",
+  "sourceDirName": "component",
+  "slug": "/component/paper-uploader",
+  "permalink": "/researchgraph/docs/component/paper-uploader",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/researchgraph/tree/main/docs/docs/component/paper-uploader.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "id": "paper-uploader",
+    "title": "Paper uploader",
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "HTML uploader",
+    "permalink": "/researchgraph/docs/component/html-uploader"
+  },
+  "next": {
+    "title": "Analytic Subgraph",
+    "permalink": "/researchgraph/docs/component/analytic-subgraph"
+  }
+}

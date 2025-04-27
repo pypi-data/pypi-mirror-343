@@ -1,0 +1,27 @@
+{
+  "id": "development/local-setup",
+  "title": "Local Setup",
+  "description": "",
+  "source": "@site/docs/development/local-setup.md",
+  "sourceDirName": "development",
+  "slug": "/development/local-setup",
+  "permalink": "/airas/docs/development/local-setup",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/development/local-setup.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "local-setup",
+    "title": "Local Setup"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Writer Subgraph",
+    "permalink": "/airas/docs/component/writer-subgraph"
+  },
+  "next": {
+    "title": "Roadmap",
+    "permalink": "/airas/docs/development/roadmap"
+  }
+}

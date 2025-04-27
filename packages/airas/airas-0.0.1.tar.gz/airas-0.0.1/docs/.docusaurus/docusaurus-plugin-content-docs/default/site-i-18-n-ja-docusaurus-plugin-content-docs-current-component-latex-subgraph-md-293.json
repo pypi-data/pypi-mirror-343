@@ -1,0 +1,27 @@
+{
+  "id": "component/latex-subgraph",
+  "title": "LaTeX Subgraph",
+  "description": "このページではLaTeX Subgraphの詳細について説明します。",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/component/latex-subgraph.md",
+  "sourceDirName": "component",
+  "slug": "/component/latex-subgraph",
+  "permalink": "/airas/ja/docs/component/latex-subgraph",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/component/latex-subgraph.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "sidebar_position": 7
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "実験計画サブグラフ（Experimental Plan Subgraph）",
+    "permalink": "/airas/ja/docs/component/experimental-plan-subgraph"
+  },
+  "next": {
+    "title": "README Subgraph",
+    "permalink": "/airas/ja/docs/component/readme-subgraph"
+  }
+}

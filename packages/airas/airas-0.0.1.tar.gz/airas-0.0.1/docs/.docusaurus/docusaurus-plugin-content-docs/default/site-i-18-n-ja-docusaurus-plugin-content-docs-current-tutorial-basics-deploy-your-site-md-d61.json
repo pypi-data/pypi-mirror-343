@@ -1,0 +1,18 @@
+{
+  "id": "tutorial-basics/deploy-your-site",
+  "title": "サイトのデプロイ",
+  "description": "Docusaurusは静的サイトジェネレーター（Jamstackとも呼ばれます）です。",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/tutorial-basics/deploy-your-site.md",
+  "sourceDirName": "tutorial-basics",
+  "slug": "/tutorial-basics/deploy-your-site",
+  "permalink": "/airas/ja/docs/tutorial-basics/deploy-your-site",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/tutorial-basics/deploy-your-site.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5
+  }
+}

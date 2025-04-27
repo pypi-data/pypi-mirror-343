@@ -1,0 +1,27 @@
+{
+  "id": "component/readme-subgraph",
+  "title": "README Subgraph",
+  "description": "このページではREADME Subgraphの詳細について説明します。",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/component/readme-subgraph.md",
+  "sourceDirName": "component",
+  "slug": "/component/readme-subgraph",
+  "permalink": "/airas/ja/docs/component/readme-subgraph",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/component/readme-subgraph.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "sidebar_position": 8
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "LaTeX Subgraph",
+    "permalink": "/airas/ja/docs/component/latex-subgraph"
+  },
+  "next": {
+    "title": "研究準備サブグラフ（Research Preparation Subgraph）",
+    "permalink": "/airas/ja/docs/component/research-preparation-subgraph"
+  }
+}

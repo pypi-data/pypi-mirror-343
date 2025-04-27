@@ -1,0 +1,29 @@
+{
+  "id": "component/html-uploader",
+  "title": "HTML uploader",
+  "description": "このページではHTML Uploader Subgraphの詳細について説明します。",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/component/html-uploader.md",
+  "sourceDirName": "component",
+  "slug": "/component/html-uploader",
+  "permalink": "/airas/ja/docs/component/html-uploader",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/component/html-uploader.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "html-uploader",
+    "title": "HTML uploader",
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Executor",
+    "permalink": "/airas/ja/docs/component/executor"
+  },
+  "next": {
+    "title": "分析サブグラフ（Analytic Subgraph）",
+    "permalink": "/airas/ja/docs/component/analytic-subgraph"
+  }
+}

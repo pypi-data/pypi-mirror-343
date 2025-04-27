@@ -1,0 +1,29 @@
+{
+  "id": "component/executor",
+  "title": "Executor",
+  "description": "このページでは Executor サブグラフの詳細について説明します。",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/component/executor.md",
+  "sourceDirName": "component",
+  "slug": "/component/executor",
+  "permalink": "/airas/ja/docs/component/executor",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/component/executor.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "executor",
+    "title": "Executor",
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Generator",
+    "permalink": "/airas/ja/docs/component/generator"
+  },
+  "next": {
+    "title": "HTML uploader",
+    "permalink": "/airas/ja/docs/component/html-uploader"
+  }
+}

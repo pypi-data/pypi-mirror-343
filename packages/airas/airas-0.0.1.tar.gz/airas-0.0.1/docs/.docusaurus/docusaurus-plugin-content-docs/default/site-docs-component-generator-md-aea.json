@@ -1,0 +1,29 @@
+{
+  "id": "component/generator",
+  "title": "Generator",
+  "description": "This page explains the details of the Generator Subgraph.",
+  "source": "@site/docs/component/generator.md",
+  "sourceDirName": "component",
+  "slug": "/component/generator",
+  "permalink": "/airas/docs/component/generator",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/component/generator.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "generator",
+    "title": "Generator",
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Quickstart",
+    "permalink": "/airas/docs/quickstart"
+  },
+  "next": {
+    "title": "Executor",
+    "permalink": "/airas/docs/component/executor"
+  }
+}

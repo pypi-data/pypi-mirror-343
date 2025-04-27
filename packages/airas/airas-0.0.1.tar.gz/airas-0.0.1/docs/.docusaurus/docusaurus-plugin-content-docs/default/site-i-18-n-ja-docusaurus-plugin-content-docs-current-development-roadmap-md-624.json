@@ -1,0 +1,27 @@
+{
+  "id": "development/roadmap",
+  "title": "ロードマップ",
+  "description": "- #4e77ee",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/development/roadmap.md",
+  "sourceDirName": "development",
+  "slug": "/development/roadmap",
+  "permalink": "/airas/ja/docs/development/roadmap",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/development/roadmap.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "roadmap",
+    "title": "ロードマップ"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ローカル環境のセットアップ",
+    "permalink": "/airas/ja/docs/development/local-setup"
+  },
+  "next": {
+    "title": "MCP",
+    "permalink": "/airas/ja/docs/development/MCP"
+  }
+}

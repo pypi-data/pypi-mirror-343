@@ -1,0 +1,27 @@
+{
+  "id": "development/local-setup",
+  "title": "ローカル環境のセットアップ",
+  "description": "Research Graphの開発環境を構築するための手順を説明します。",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/development/local-setup.md",
+  "sourceDirName": "development",
+  "slug": "/development/local-setup",
+  "permalink": "/airas/ja/docs/development/local-setup",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/development/local-setup.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "local-setup",
+    "title": "ローカル環境のセットアップ"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Writer サブグラフ",
+    "permalink": "/airas/ja/docs/component/writer-subgraph"
+  },
+  "next": {
+    "title": "ロードマップ",
+    "permalink": "/airas/ja/docs/development/roadmap"
+  }
+}

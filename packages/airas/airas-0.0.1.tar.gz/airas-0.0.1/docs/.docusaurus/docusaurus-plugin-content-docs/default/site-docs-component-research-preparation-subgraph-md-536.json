@@ -1,0 +1,27 @@
+{
+  "id": "component/research-preparation-subgraph",
+  "title": "Research Preparation Subgraph",
+  "description": "This page explains the details of the Research Preparation Subgraph.",
+  "source": "@site/docs/component/research-preparation-subgraph.md",
+  "sourceDirName": "component",
+  "slug": "/component/research-preparation-subgraph",
+  "permalink": "/airas/docs/component/research-preparation-subgraph",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/component/research-preparation-subgraph.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "sidebar_position": 9
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "README Subgraph",
+    "permalink": "/airas/docs/component/readme-subgraph"
+  },
+  "next": {
+    "title": "Review Subgraph",
+    "permalink": "/airas/docs/component/review-subgraph"
+  }
+}

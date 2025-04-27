@@ -1,0 +1,27 @@
+{
+  "id": "component/analytic-subgraph",
+  "title": "Analytic Subgraph",
+  "description": "This page explains the details of the Analytic Subgraph.",
+  "source": "@site/docs/component/analytic-subgraph.md",
+  "sourceDirName": "component",
+  "slug": "/component/analytic-subgraph",
+  "permalink": "/airas/docs/component/analytic-subgraph",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/component/analytic-subgraph.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "HTML uploader",
+    "permalink": "/airas/docs/component/html-uploader"
+  },
+  "next": {
+    "title": "Experimental Plan Subgraph",
+    "permalink": "/airas/docs/component/experimental-plan-subgraph"
+  }
+}

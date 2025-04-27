@@ -1,0 +1,18 @@
+{
+  "id": "tutorial-basics/create-a-document",
+  "title": "ドキュメントの作成",
+  "description": "ドキュメントは以下を通じて接続されたページのグループです：",
+  "source": "@site/i18n/ja/docusaurus-plugin-content-docs/current/tutorial-basics/create-a-document.md",
+  "sourceDirName": "tutorial-basics",
+  "slug": "/tutorial-basics/create-a-document",
+  "permalink": "/airas/ja/docs/tutorial-basics/create-a-document",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/auto-res/airas/tree/main/docs/docs/tutorial-basics/create-a-document.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  }
+}
