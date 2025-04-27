@@ -1,0 +1,2 @@
+[console_scripts]
+kxmcmfsw = kxmcmfsw:main
