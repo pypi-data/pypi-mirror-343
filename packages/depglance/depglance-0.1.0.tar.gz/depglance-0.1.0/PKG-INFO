@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: depglance
+Version: 0.1.0
+Summary: Visualize dependencies
+Author: Prajeet Singh
+License: MIT
+License-File: LICENSE
+Requires-Dist: pyvis
+Requires-Dist: requests
+Dynamic: license-file
+Dynamic: requires-dist
