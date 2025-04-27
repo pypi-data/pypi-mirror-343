@@ -1,0 +1,6 @@
+hyperspy>=1.6.1
+pymatchseries>=0.1.0
+tqdm
+Pillow
+scikit-image
+scikit-learn

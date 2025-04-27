@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+match_series_batch/__init__.py
+match_series_batch/config.py
+match_series_batch/main.py
+match_series_batch/processing.py
+match_series_batch/utils.py
+match_series_batch.egg-info/PKG-INFO
+match_series_batch.egg-info/SOURCES.txt
+match_series_batch.egg-info/dependency_links.txt
+match_series_batch.egg-info/entry_points.txt
+match_series_batch.egg-info/requires.txt
+match_series_batch.egg-info/top_level.txt
