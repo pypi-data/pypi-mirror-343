@@ -1,0 +1,8 @@
+LICENSE
+pyproject.toml
+setup.cfg
+forest_rag/__init__.py
+forest_rag.egg-info/PKG-INFO
+forest_rag.egg-info/SOURCES.txt
+forest_rag.egg-info/dependency_links.txt
+forest_rag.egg-info/top_level.txt
