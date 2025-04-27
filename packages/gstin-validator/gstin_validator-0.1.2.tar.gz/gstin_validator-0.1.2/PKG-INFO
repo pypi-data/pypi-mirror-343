@@ -1,0 +1,39 @@
+Metadata-Version: 2.3
+Name: gstin-validator
+Version: 0.1.2
+Summary: Validate India GSTIN numbers. Returns True if valid, False otherwise.
+License: MIT
+Author: Mohammed Saleel
+Author-email: mohammed.saleel0099@gmail.com
+Requires-Python: >=3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# GSTIN Validator
+
+A Python package for validating Indian GSTIN numbers
+
+## Installation
+
+```bash
+
+pip install gstin-validator
+
+```
+
+## usage
+
+```bash
+from gstin_validator.core import validate_gstin
+
+is_valid=validate_gstin("GSTI_NUMER")
+print(is_valid) #prints True if valid else false 
+
+```
