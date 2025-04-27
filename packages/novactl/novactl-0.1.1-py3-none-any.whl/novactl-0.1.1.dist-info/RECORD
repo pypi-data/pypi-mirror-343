@@ -1,0 +1,12 @@
+__init__.py,sha256=l9oVhsysZaSjlHfQhUkmlAqK6dvLWG9xZMPg6x3gHGM,86
+novactl/__init__.py,sha256=l9oVhsysZaSjlHfQhUkmlAqK6dvLWG9xZMPg6x3gHGM,86
+novactl/auth.py,sha256=_i0l8S3_fYLoNjfCZ229UPNmvQ78V3-F4eyt3jHAj9w,31529
+novactl/config.py,sha256=Y_Kol8hdF3MJBmTpU98015qPY3IxE4c7M9hphhyTqmc,19552
+novactl/config_schema.json,sha256=TKk4mN_IAxbwUFEdHBaSV4vnJkCv8aoXhmPbeKMcLf0,2061
+novactl/main.py,sha256=TIZzQ0zKt8ZNUMCJqOs8zcOLP7m0ZXmup_NysQ5NfYk,16534
+novactl-0.1.1.dist-info/licenses/LICENSE,sha256=thpmvez229hyWGHKwRqpFMzhLVexD0-T_g-MJ_XP0gY,1097
+novactl-0.1.1.dist-info/METADATA,sha256=R2aTYcGXkYI1vb21jVhx0ZFWSY-As5BiRmQReXLHSf8,10410
+novactl-0.1.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+novactl-0.1.1.dist-info/entry_points.txt,sha256=P549znfTCCaD2jNuiY60LfYV2dYaV4AcL4WX8_Jjm9U,45
+novactl-0.1.1.dist-info/top_level.txt,sha256=eDunLDgYzloPeGAlfzyC-Bz2veM18wkqclezcJ0TeKY,17
+novactl-0.1.1.dist-info/RECORD,,
