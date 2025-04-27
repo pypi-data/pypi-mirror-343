@@ -1,0 +1,10 @@
+simple_task_tracker/__init__.py,sha256=V-NiKyTdzd5WY2b4iSwaM1JcbOEyZ0IH2WQKBnjN2DI,22
+simple_task_tracker/main.py,sha256=7hWN9BckTsbhYIzgGe_-D9WR9SExuyIJQbhRk-suCqA,24289
+simple_task_tracker/db_migrations/v1.sql,sha256=8W78iKW_io75MwNtGK4-ATM6Y-pPlw2ANpfMvPcxDFQ,346
+simple_task_tracker/db_migrations/v2.sql,sha256=nEPvFq_YJ1BRxPdRbK07QVjBZHF7CCFCk67_ILp3aYo,55
+simple_task_tracker-2.5.2.dist-info/LICENSE,sha256=k0QiDA_u7WAwUI4mWTyynVKURaLSu0z9WxEFG8nMFZ0,1072
+simple_task_tracker-2.5.2.dist-info/METADATA,sha256=8fMwnfboJShcfgb2Em1wShlkjAGirWwR1kJF-RDrQiQ,3929
+simple_task_tracker-2.5.2.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+simple_task_tracker-2.5.2.dist-info/entry_points.txt,sha256=-E_MIBbx8vwZJTPxkBlSzcQIjM6VxdyWflZCy16VBEI,53
+simple_task_tracker-2.5.2.dist-info/top_level.txt,sha256=0EKr-kiiCjvLYxNFsqu2GuXOuU15P1sWnn-dayY-m6o,20
+simple_task_tracker-2.5.2.dist-info/RECORD,,
