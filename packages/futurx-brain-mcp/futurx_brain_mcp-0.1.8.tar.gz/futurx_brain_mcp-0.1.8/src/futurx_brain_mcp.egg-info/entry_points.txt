@@ -1,0 +1,2 @@
+[console_scripts]
+futurx-brain-mcp = futurx_brain_mcp:main

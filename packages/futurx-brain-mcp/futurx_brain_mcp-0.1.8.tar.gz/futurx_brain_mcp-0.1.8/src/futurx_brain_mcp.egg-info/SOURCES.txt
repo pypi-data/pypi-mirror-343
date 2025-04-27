@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/futurx-brain-mcp/__main__.py
+src/futurx_brain_mcp/__init__.py
+src/futurx_brain_mcp/__main__.py
+src/futurx_brain_mcp/server.py
+src/futurx_brain_mcp.egg-info/PKG-INFO
+src/futurx_brain_mcp.egg-info/SOURCES.txt
+src/futurx_brain_mcp.egg-info/dependency_links.txt
+src/futurx_brain_mcp.egg-info/entry_points.txt
+src/futurx_brain_mcp.egg-info/requires.txt
+src/futurx_brain_mcp.egg-info/top_level.txt

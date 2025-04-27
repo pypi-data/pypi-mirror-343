@@ -1,0 +1,13 @@
+[project]
+name = "futurx-brain-mcp"
+version = "0.1.8"
+description = "futurx brain mcp server"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "requests>=2.32.3",
+]
+
+[project.scripts]
+futurx-brain-mcp = "futurx_brain_mcp:main"
