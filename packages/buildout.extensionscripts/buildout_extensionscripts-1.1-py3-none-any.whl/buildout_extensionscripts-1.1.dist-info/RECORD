@@ -1,0 +1,8 @@
+buildout.extensionscripts-1.1-py3.9-nspkg.pth,sha256=7c052hUuNC-n6xgxygXYoHQwsrC6ocScUygdFDCyPe0,477
+buildout/extensionscripts/__init__.py,sha256=Bkn9qSw9kWM9WQVeGPtsJVgGS5m2dCPRglyzYqslp2o,1055
+buildout_extensionscripts-1.1.dist-info/METADATA,sha256=snkpDVB4ZubM1yDvhigObIrJLukt2nuB_Sel0M-dJGw,1288
+buildout_extensionscripts-1.1.dist-info/WHEEL,sha256=1tXe9gY0PYatrMPMDd6jXqjfpz_B-Wqm32CPfRC58XU,91
+buildout_extensionscripts-1.1.dist-info/entry_points.txt,sha256=RHh2Mfw6g3sv_ExKy7RGGm_0CbicCmd7JiwyKKLPr4c,70
+buildout_extensionscripts-1.1.dist-info/namespace_packages.txt,sha256=8nQe8sHjE7C16nAiJQJEcpCRXUhnZAQWFaYpXwmPttU,9
+buildout_extensionscripts-1.1.dist-info/top_level.txt,sha256=8nQe8sHjE7C16nAiJQJEcpCRXUhnZAQWFaYpXwmPttU,9
+buildout_extensionscripts-1.1.dist-info/RECORD,,

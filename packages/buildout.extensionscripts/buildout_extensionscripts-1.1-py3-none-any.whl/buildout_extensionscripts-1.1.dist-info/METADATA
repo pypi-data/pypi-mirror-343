@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: buildout.extensionscripts
+Version: 1.1
+Summary: Use simple python scripts as zc.buildout extensions
+License: BSD
+Classifier: Programming Language :: Python
+Classifier: Framework :: Buildout
+Requires-Dist: setuptools
+Dynamic: classifier
+Dynamic: description
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+Introduction
+============
+
+`buildout.extensionscripts` is a convenient way to shoot yourself in the foot
+and provides more than enough rope to hang yourself.
+
+With that out of the way, we can look what it can be used for.
+
+To use `buildout.extensionscripts`, you add it as an extension in a buildout
+like this::
+
+  [buildout]
+  extensions = buildout.extensionscripts
+
+After that you can add one or more lines like the following to the `buildout`
+section::
+
+  extension-scripts =
+      ${buildout:directory}/somescript.py:callable_name
+
+When you do that, you got an easy way to write a buildout extensions without
+the need of an egg. The `callable_name` in `somescript.py` will be called
+with one argument which is the dictionary like buildout config.
+
+Now have fun shooting and or hanging yourself by changing that.
+
+
+Changes
+=======
+
+1.1 - 2025-04-26
+----------------
+
+Support Python 3.12.
+
+
+1.0 - 2009-10-07
+----------------
+
+Initial release.

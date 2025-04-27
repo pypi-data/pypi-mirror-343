@@ -1,0 +1,2 @@
+[zc.buildout.extension]
+default = buildout.extensionscripts:extension
