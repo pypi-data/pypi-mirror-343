@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: m-test-v10
+Version: 0.1.2
+Summary: Default template for PDM package
+Author-Email: lwmacct <lwmacct@icloud.com>
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# m-test-v10
