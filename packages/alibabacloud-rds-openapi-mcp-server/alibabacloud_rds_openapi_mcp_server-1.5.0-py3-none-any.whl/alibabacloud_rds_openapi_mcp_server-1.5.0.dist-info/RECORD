@@ -1,0 +1,10 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alibabacloud_rds_openapi_mcp_server/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alibabacloud_rds_openapi_mcp_server/server.py,sha256=2rToEutL04T8P1KJ2eCVE6yu_gn6b4M_2wZ4HrZz388,35460
+alibabacloud_rds_openapi_mcp_server/utils.py,sha256=UeyrIbAKfbDTDKPBLaKgJgJT25igChFw7ugxYH36tyA,4012
+alibabacloud_rds_openapi_mcp_server-1.5.0.dist-info/licenses/LICENSE,sha256=WNHhf_5RCaeuKWyq_K39vmp9F28LxKsB4SpomwSZ2L0,11357
+alibabacloud_rds_openapi_mcp_server-1.5.0.dist-info/METADATA,sha256=c6hJoj-3EqeeFZkJVxZzm_Rff8Wud5XmW82Y1ZLMb4M,6959
+alibabacloud_rds_openapi_mcp_server-1.5.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+alibabacloud_rds_openapi_mcp_server-1.5.0.dist-info/entry_points.txt,sha256=ZEgwJ-1kAwEYLfHsRMDK8NOvIlm0s-HJZWda-qbOBO4,104
+alibabacloud_rds_openapi_mcp_server-1.5.0.dist-info/top_level.txt,sha256=vcRgZ9_EorlcaUFRsKDZoZZohatu9h0otLzJ8No38q0,45
+alibabacloud_rds_openapi_mcp_server-1.5.0.dist-info/RECORD,,
