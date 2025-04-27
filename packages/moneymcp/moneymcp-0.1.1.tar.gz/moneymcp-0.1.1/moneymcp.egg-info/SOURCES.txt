@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.py
+moneymcp.egg-info/PKG-INFO
+moneymcp.egg-info/SOURCES.txt
+moneymcp.egg-info/dependency_links.txt
+moneymcp.egg-info/entry_points.txt
+moneymcp.egg-info/requires.txt
+moneymcp.egg-info/top_level.txt
+mymcp/__init__.py
+mymcp/__main__.py
+mymcp/cli.py
+mymcp/demo.py
+mymcp/server.py
+mymcp/types.py

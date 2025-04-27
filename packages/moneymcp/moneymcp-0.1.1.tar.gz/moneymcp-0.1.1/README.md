@@ -1,0 +1,730 @@
+# 成人视频网站爬虫与数据库存储系统
+
+这个项目包含用于爬取多个成人视频网站（包括Pornhub和XVideos）的爬虫，以及将数据存储到PostgreSQL数据库的工具。
+
+## 功能特点
+
+- 支持多个成人视频网站（Pornhub、XVideos等）
+- 使用Selenium和BeautifulSoup爬取视频信息
+- 自动提取视频标题、标签、分类、演员、时长等信息
+- 支持代理设置，避免IP被封
+- 自动检查视频是否已存在，避免重复爬取
+- 将数据保存到PostgreSQL数据库
+- 支持批量爬取多个视频
+- 支持全量爬取和增量爬取
+- 支持搜索结果爬取
+- 支持Docker容器化部署
+
+## 安装
+
+### 方法一：直接安装
+
+1. 克隆仓库：
+
+```bash
+git clone https://github.com/yourusername/adult-video-scraper.git
+cd adult-video-scraper
+```
+
+2. 安装依赖：
+
+```bash
+pip install -r requirements.txt
+```
+
+3. 安装Chrome浏览器和ChromeDriver（如果尚未安装）
+
+### 方法二：使用Docker（推荐）
+
+1. 克隆仓库：
+
+```bash
+git clone https://github.com/yourusername/adult-video-scraper.git
+cd adult-video-scraper
+```
+
+2. 构建Docker镜像：
+
+```bash
+docker build -t adult-video-scraper .
+```
+
+3. 运行Docker容器：
+
+```bash
+docker run -it --rm \
+  -v $(pwd)/data:/app/data \
+  -e DB_HOST=your_db_host \
+  -e DB_PORT=your_db_port \
+  -e DB_NAME=your_db_name \
+  -e DB_USER=your_db_user \
+  -e DB_PASSWORD=your_db_password \
+  adult-video-scraper python xvideos_crawler.py full
+```
+
+## 使用方法
+
+### Pornhub爬虫
+
+#### 爬取单个视频
+
+```bash
+python pornhub_crawler.py video "https://cn.pornhub.com/view_video.php?viewkey=YOUR_VIDEO_KEY"
+```
+
+#### 全量爬取
+
+```bash
+python pornhub_crawler.py full
+```
+
+#### 增量爬取
+
+```bash
+python pornhub_crawler.py incremental --days 7
+```
+
+### XVideos爬虫
+
+#### 爬取单个视频
+
+```bash
+python xvideos_crawler.py video "https://www.xvideos.com/video12345/video_title"
+```
+
+#### 全量爬取
+
+```bash
+python xvideos_crawler.py full
+```
+
+#### 增量爬取
+
+```bash
+python xvideos_crawler.py incremental --pages 5
+```
+
+#### 搜索并爬取
+
+```bash
+python xvideos_crawler.py search "your search term" --start-page 1 --end-page 5
+```
+
+#### 批量爬取
+
+```bash
+python xvideos_crawler.py batch urls.txt
+```
+
+### 通用选项
+
+#### 使用代理
+
+```bash
+python xvideos_crawler.py video "https://www.xvideos.com/video12345/video_title" --proxy "http://127.0.0.1:7890"
+```
+
+#### 无头模式（不显示浏览器窗口）
+
+```bash
+python xvideos_crawler.py video "https://www.xvideos.com/video12345/video_title" --headless
+```
+
+### 测试爬虫
+
+我们提供了一个测试脚本，用于测试爬虫功能并将结果保存到JSON文件或数据库：
+
+```bash
+python test_xvideos_scraper.py --url "https://www.xvideos.com/video12345/video_title" --save-to-db
+```
+
+选项：
+- `--url`: 要爬取的视频URL
+- `--proxy`: 代理服务器地址
+- `--output`: 输出文件名
+- `--no-headless`: 不使用无头模式（显示浏览器窗口）
+- `--save-to-db`: 保存到数据库
+
+## Docker部署
+
+### Dockerfile
+
+项目根目录下的`Dockerfile`包含了所有必要的环境配置，包括Python、Chrome、ChromeDriver和所有依赖项：
+
+```dockerfile
+FROM python:3.9-slim
+
+# 设置工作目录
+WORKDIR /app
+
+# 安装Chrome和ChromeDriver的依赖
+RUN apt-get update && apt-get install -y \
+    wget \
+    gnupg \
+    unzip \
+    xvfb \
+    libxi6 \
+    libgconf-2-4 \
+    default-jdk \
+    libglib2.0-0 \
+    libnss3 \
+    libgdk-pixbuf2.0-0 \
+    libgtk-3-0 \
+    libx11-xcb1 \
+    libxss1 \
+    libasound2 \
+    libxtst6 \
+    fonts-liberation \
+    libappindicator3-1 \
+    xdg-utils \
+    --no-install-recommends \
+    && rm -rf /var/lib/apt/lists/*
+
+# 安装Chrome
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+    && echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list \
+    && apt-get update \
+    && apt-get install -y google-chrome-stable \
+    && rm -rf /var/lib/apt/lists/*
+
+# 安装ChromeDriver
+RUN CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d '.' -f 1) \
+    && CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION") \
+    && wget -q "https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip" \
+    && unzip chromedriver_linux64.zip \
+    && mv chromedriver /usr/local/bin/chromedriver \
+    && chmod +x /usr/local/bin/chromedriver \
+    && rm chromedriver_linux64.zip
+
+# 复制项目文件
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# 复制所有项目文件
+COPY . .
+
+# 创建数据目录
+RUN mkdir -p /app/data
+
+# 设置环境变量
+ENV PYTHONUNBUFFERED=1
+ENV DISPLAY=:99
+
+# 设置入口点
+ENTRYPOINT ["python"]
+```
+
+### 构建和运行Docker容器
+
+1. **构建Docker镜像**：
+
+```bash
+docker build -t adult-video-scraper .
+```
+
+2. **运行Docker容器**：
+
+```bash
+# 运行全量爬取
+docker run -it --rm \
+  -v $(pwd)/data:/app/data \
+  -e DB_HOST=your_db_host \
+  -e DB_PORT=your_db_port \
+  -e DB_NAME=your_db_name \
+  -e DB_USER=your_db_user \
+  -e DB_PASSWORD=your_db_password \
+  adult-video-scraper xvideos_crawler.py full --headless
+
+# 运行增量爬取
+docker run -it --rm \
+  -v $(pwd)/data:/app/data \
+  -e DB_HOST=your_db_host \
+  -e DB_PORT=your_db_port \
+  -e DB_NAME=your_db_name \
+  -e DB_USER=your_db_user \
+  -e DB_PASSWORD=your_db_password \
+  adult-video-scraper xvideos_crawler.py incremental --pages 5 --headless
+```
+
+### 使用代理
+
+如果需要使用代理，可以通过环境变量传递：
+
+```bash
+docker run -it --rm \
+  -v $(pwd)/data:/app/data \
+  -e DB_HOST=your_db_host \
+  -e DB_PORT=your_db_port \
+  -e DB_NAME=your_db_name \
+  -e DB_USER=your_db_user \
+  -e DB_PASSWORD=your_db_password \
+  -e HTTP_PROXY=http://your_proxy_host:port \
+  -e HTTPS_PROXY=http://your_proxy_host:port \
+  adult-video-scraper xvideos_crawler.py full --headless
+```
+
+### 在GitHub Actions中使用Docker
+
+在GitHub Actions工作流中，可以使用预构建的Docker镜像来运行爬虫，避免每次都需要安装Chrome和Python环境：
+
+```yaml
+name: Run Video Crawler
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # 每天凌晨2点运行
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/yourusername/adult-video-scraper:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    
+    steps:
+      - name: Run Incremental Crawler
+        env:
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          HTTP_PROXY: ${{ secrets.HTTP_PROXY }}
+          HTTPS_PROXY: ${{ secrets.HTTPS_PROXY }}
+        run: |
+          python xvideos_crawler.py incremental --pages 5 --headless
+          
+      - name: Upload Error Logs
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: error-logs
+          path: /app/crawler.log
+```
+
+### 发布Docker镜像到GitHub Container Registry
+
+1. **登录到GitHub Container Registry**：
+
+```bash
+echo $GITHUB_TOKEN | docker login ghcr.io -u USERNAME --password-stdin
+```
+
+2. **构建并标记镜像**：
+
+```bash
+docker build -t ghcr.io/yourusername/adult-video-scraper:latest .
+```
+
+3. **推送镜像**：
+
+```bash
+docker push ghcr.io/yourusername/adult-video-scraper:latest
+```
+
+### Docker Compose配置
+
+对于更复杂的部署，可以使用Docker Compose：
+
+```yaml
+version: '3'
+
+services:
+  crawler:
+    build: .
+    volumes:
+      - ./data:/app/data
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=videos
+      - DB_USER=postgres
+      - DB_PASSWORD=password
+      - HTTP_PROXY=${HTTP_PROXY}
+      - HTTPS_PROXY=${HTTPS_PROXY}
+    command: xvideos_crawler.py incremental --pages 5 --headless
+    depends_on:
+      - db
+  
+  db:
+    image: postgres:14
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=videos
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
+```
+
+运行Docker Compose：
+
+```bash
+docker-compose up -d
+```
+
+## 全量爬取与增量爬取
+
+### 全量爬取（Full Crawling）
+
+全量爬取是指从头开始爬取网站上的所有视频，通常用于初始数据收集或完整数据更新。
+
+**特点：**
+- 爬取网站上的所有可访问视频
+- 耗时较长，资源消耗大
+- 适合首次建立数据库或需要完整更新时使用
+
+**使用场景：**
+- 首次建立数据库
+- 长时间未更新后的完整刷新
+- 需要获取历史数据时
+
+**Pornhub全量爬取：**
+```bash
+python pornhub_crawler.py full [--max-pages 100] [--headless] [--proxy "http://127.0.0.1:7890"]
+```
+选项：
+- `--max-pages`: 限制爬取的最大页数（默认为无限制）
+- `--headless`: 使用无头模式（不显示浏览器窗口）
+- `--proxy`: 使用代理服务器
+
+**XVideos全量爬取：**
+```bash
+python xvideos_crawler.py full [--max-pages 100] [--headless] [--proxy "http://127.0.0.1:7890"]
+```
+
+**全量爬取工作原理：**
+1. 从网站的视频列表页面开始（如最新视频、热门视频等）
+2. 按页码顺序遍历所有页面
+3. 在每个页面上提取所有视频链接
+4. 对每个视频链接进行爬取，提取详细信息
+5. 检查视频是否已存在于数据库中，如果不存在则保存
+6. 继续处理下一页，直到达到最大页数或没有更多页面
+
+### 增量爬取（Incremental Crawling）
+
+增量爬取是指只爬取网站上的新增视频，通常用于定期更新数据库。
+
+**特点：**
+- 只爬取新发布的视频
+- 速度快，资源消耗小
+- 适合定期运行，保持数据库更新
+
+**使用场景：**
+- 定期更新数据库（如每日、每周运行）
+- 数据库已有大量数据，只需要补充新内容
+- 资源有限，需要高效爬取
+
+**Pornhub增量爬取：**
+```bash
+python pornhub_crawler.py incremental [--days 7] [--headless] [--proxy "http://127.0.0.1:7890"]
+```
+选项：
+- `--days`: 爬取最近几天的视频（默认为7天）
+- `--headless`: 使用无头模式（不显示浏览器窗口）
+- `--proxy`: 使用代理服务器
+
+**XVideos增量爬取：**
+```bash
+python xvideos_crawler.py incremental [--pages 5] [--headless] [--proxy "http://127.0.0.1:7890"]
+```
+选项：
+- `--pages`: 爬取最新的几页视频（默认为5页）
+- `--headless`: 使用无头模式（不显示浏览器窗口）
+- `--proxy`: 使用代理服务器
+
+**增量爬取工作原理：**
+1. 从网站的"最新视频"页面开始
+2. 按时间顺序或页码顺序爬取指定范围内的视频
+3. 对于Pornhub，可以按上传日期筛选最近几天的视频
+4. 对于XVideos，由于没有明确的日期筛选，通常爬取最新的几页视频
+5. 在爬取过程中检查视频是否已存在于数据库中
+6. 当遇到已存在的视频或达到指定的时间/页数限制时停止爬取
+
+### 两种爬取方式的对比
+
+| 特性 | 全量爬取 | 增量爬取 |
+|------|---------|---------|
+| 爬取范围 | 所有可访问视频 | 仅新增视频 |
+| 执行时间 | 长（小时到天） | 短（分钟到小时） |
+| 资源消耗 | 高 | 低 |
+| 运行频率 | 低（月度/季度） | 高（日常/周常） |
+| 适用场景 | 初始数据收集 | 定期数据更新 |
+| 数据完整性 | 高 | 依赖于运行频率 |
+
+### 自动化定期爬取
+
+可以使用cron（Linux/Mac）或计划任务（Windows）设置定期运行增量爬取：
+
+**Linux/Mac（cron）示例：**
+```bash
+# 每天凌晨2点运行增量爬取
+0 2 * * * cd /path/to/project && python xvideos_crawler.py incremental --headless >> /path/to/logs/crawler.log 2>&1
+```
+
+**Windows（计划任务）：**
+1. 创建一个批处理文件（.bat）：
+```batch
+@echo off
+cd /d D:\path\to\project
+python xvideos_crawler.py incremental --headless
+```
+2. 使用Windows任务计划程序设置定期运行此批处理文件
+
+**使用Docker的自动化定期爬取：**
+```bash
+# 创建一个cron任务来运行Docker容器
+0 2 * * * docker run --rm \
+  -v /path/to/data:/app/data \
+  -e DB_HOST=your_db_host \
+  -e DB_PORT=your_db_port \
+  -e DB_NAME=your_db_name \
+  -e DB_USER=your_db_user \
+  -e DB_PASSWORD=your_db_password \
+  adult-video-scraper xvideos_crawler.py incremental --pages 5 --headless >> /path/to/logs/crawler.log 2>&1
+```
+
+## 项目结构
+
+- `pornhub_scraper.py`: Pornhub爬虫实现
+- `pornhub_crawler.py`: Pornhub爬虫命令行工具
+- `xvideos_scraper.py`: XVideos爬虫实现
+- `xvideos_crawler.py`: XVideos爬虫命令行工具
+- `db_utils.py`: 数据库操作工具
+- `test_xvideos_scraper.py`: XVideos爬虫测试工具
+- `requirements.txt`: 项目依赖
+- `Dockerfile`: Docker镜像构建文件
+- `docker-compose.yml`: Docker Compose配置文件
+- `.github/workflows/`: GitHub Actions工作流配置
+
+## 数据库配置
+
+数据库连接信息在`db_utils.py`文件中配置：
+
+```python
+DB_CONNECTION_STRING = "postgresql://username:password@host:port/dbname?sslmode=require"
+```
+
+也可以通过环境变量配置：
+
+```python
+import os
+
+DB_HOST = os.environ.get('DB_HOST', 'localhost')
+DB_PORT = os.environ.get('DB_PORT', '5432')
+DB_NAME = os.environ.get('DB_NAME', 'videos')
+DB_USER = os.environ.get('DB_USER', 'postgres')
+DB_PASSWORD = os.environ.get('DB_PASSWORD', 'password')
+
+DB_CONNECTION_STRING = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}?sslmode=require"
+```
+
+## 数据库表结构
+
+### videos表
+
+该表用于存储从各视频网站爬取的视频信息，支持JSON数据类型。
+
+```sql
+CREATE TABLE videos (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    external_id VARCHAR(255),
+    url TEXT NOT NULL,
+    title TEXT,  -- 原始视频标题
+    title_cn TEXT,
+    title_en TEXT,
+    tags JSONB DEFAULT '[]'::jsonb,
+    tags_cn JSONB DEFAULT '[]'::jsonb,  -- 中文标签
+    tags_en JSONB DEFAULT '[]'::jsonb,  -- 英文标签
+    categories JSONB DEFAULT '[]'::jsonb,
+    categories_cn JSONB DEFAULT '[]'::jsonb,  -- 中文分类
+    categories_en JSONB DEFAULT '[]'::jsonb,  -- 英文分类
+    duration VARCHAR(50),
+    views INTEGER,
+    rating NUMERIC(5,2),
+    upload_date DATE,
+    pornstars JSONB DEFAULT '[]'::jsonb,
+    pornstars_cn JSONB DEFAULT '[]'::jsonb,  -- 中文演员名
+    pornstars_en JSONB DEFAULT '[]'::jsonb,  -- 英文演员名
+    video_urls JSONB DEFAULT '{}'::jsonb,
+    thumbnail_url TEXT,
+    related_videos JSONB DEFAULT '[]'::jsonb,
+    source VARCHAR(50) DEFAULT 'pornhub',
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    raw_data JSONB,
+    
+    -- 索引
+    CONSTRAINT unique_external_id_source UNIQUE (external_id, source)
+);
+
+-- 创建GIN索引以加速JSON查询
+CREATE INDEX idx_videos_tags ON videos USING GIN (tags);
+CREATE INDEX idx_videos_tags_cn ON videos USING GIN (tags_cn);
+CREATE INDEX idx_videos_tags_en ON videos USING GIN (tags_en);
+CREATE INDEX idx_videos_categories ON videos USING GIN (categories);
+CREATE INDEX idx_videos_categories_cn ON videos USING GIN (categories_cn);
+CREATE INDEX idx_videos_categories_en ON videos USING GIN (categories_en);
+CREATE INDEX idx_videos_pornstars ON videos USING GIN (pornstars);
+CREATE INDEX idx_videos_pornstars_cn ON videos USING GIN (pornstars_cn);
+CREATE INDEX idx_videos_pornstars_en ON videos USING GIN (pornstars_en);
+
+-- 创建触发器自动更新updated_at字段
+CREATE OR REPLACE FUNCTION update_modified_column()
+RETURNS TRIGGER AS $$
+BEGIN
+    NEW.updated_at = CURRENT_TIMESTAMP;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER update_videos_modtime
+BEFORE UPDATE ON videos
+FOR EACH ROW
+EXECUTE FUNCTION update_modified_column();
+
+-- 创建全文搜索索引
+CREATE INDEX idx_videos_title_fts ON videos USING GIN (to_tsvector('simple', coalesce(title, '')));
+CREATE INDEX idx_videos_title_cn_fts ON videos USING GIN (to_tsvector('simple', coalesce(title_cn, '')));
+CREATE INDEX idx_videos_title_en_fts ON videos USING GIN (to_tsvector('english', coalesce(title_en, '')));
+
+-- 添加注释
+COMMENT ON TABLE videos IS '视频数据表，存储从各网站爬取的视频信息';
+COMMENT ON COLUMN videos.id IS '主键UUID';
+COMMENT ON COLUMN videos.external_id IS '外部ID，来自源网站的唯一标识符';
+COMMENT ON COLUMN videos.url IS '视频URL';
+COMMENT ON COLUMN videos.title IS '视频原始标题';
+COMMENT ON COLUMN videos.title_cn IS '视频中文标题';
+COMMENT ON COLUMN videos.title_en IS '视频英文标题';
+COMMENT ON COLUMN videos.tags IS '视频标签，JSON数组';
+COMMENT ON COLUMN videos.tags_cn IS '视频中文标签，JSON数组';
+COMMENT ON COLUMN videos.tags_en IS '视频英文标签，JSON数组';
+COMMENT ON COLUMN videos.categories IS '视频分类，JSON数组';
+COMMENT ON COLUMN videos.categories_cn IS '视频中文分类，JSON数组';
+COMMENT ON COLUMN videos.categories_en IS '视频英文分类，JSON数组';
+COMMENT ON COLUMN videos.duration IS '视频时长';
+COMMENT ON COLUMN videos.views IS '观看次数';
+COMMENT ON COLUMN videos.rating IS '评分';
+COMMENT ON COLUMN videos.upload_date IS '上传日期';
+COMMENT ON COLUMN videos.pornstars IS '出演的演员，JSON数组';
+COMMENT ON COLUMN videos.pornstars_cn IS '出演的演员中文名，JSON数组';
+COMMENT ON COLUMN videos.pornstars_en IS '出演的演员英文名，JSON数组';
+COMMENT ON COLUMN videos.video_urls IS '不同质量的视频URL，JSON对象';
+COMMENT ON COLUMN videos.thumbnail_url IS '缩略图URL';
+COMMENT ON COLUMN videos.related_videos IS '相关视频，JSON数组';
+COMMENT ON COLUMN videos.source IS '数据来源';
+COMMENT ON COLUMN videos.created_at IS '记录创建时间';
+COMMENT ON COLUMN videos.updated_at IS '记录更新时间';
+COMMENT ON COLUMN videos.raw_data IS '原始JSON数据';
+```
+
+## 爬虫实现细节
+
+### XVideos爬虫
+
+XVideos爬虫使用Selenium进行浏览器自动化，处理JavaScript渲染的内容。主要功能包括：
+
+1. **视频信息提取**：
+   - 标题、外部ID、缩略图URL
+   - 视频URL（多种质量）
+   - 标签、分类
+   - 时长、上传日期、观看次数、评分
+   - 演员信息
+
+2. **年龄验证处理**：
+   - 自动处理年龄验证页面
+   - 支持多种选择器和XPath模式
+
+3. **错误处理与重试**：
+   - 页面加载超时处理
+   - 指数退避重试机制
+
+4. **数据库集成**：
+   - 检查视频是否已存在
+   - 保存视频信息到数据库
+
+### Pornhub爬虫
+
+Pornhub爬虫同样使用Selenium进行浏览器自动化，主要功能包括：
+
+1. **视频信息提取**：
+   - 标题、外部ID、缩略图URL
+   - 视频URL（多种质量）
+   - 标签、分类
+   - 时长、上传日期、观看次数、评分
+   - 演员信息
+
+2. **Cookie和广告处理**：
+   - 自动处理Cookie同意弹窗
+   - 处理广告和弹窗
+
+3. **错误处理与重试**：
+   - 页面加载超时处理
+   - 指数退避重试机制
+
+## 注意事项
+
+- 请确保遵守网站的使用条款和法律法规
+- 建议使用代理，避免IP被封
+- 爬取频率不宜过高，建议设置适当的延迟
+- 某些网站可能需要VPN才能访问
+- 爬虫可能因网站结构变化而失效，需要定期维护
+
+## 贡献
+
+欢迎提交Pull Request或Issue来改进这个项目。
+
+## 许可证
+
+本项目采用MIT许可证。
+
+## 元数据翻译
+
+这个项目包含一个元数据翻译脚本，用于将视频元数据翻译成中文和英文。该脚本使用项目中现有的数据库连接工具，无需额外的数据库配置。
+
+### 配置
+
+有两种方式配置翻译脚本：
+
+1. 使用 `.env` 文件：
+   - 创建 `.env` 文件
+   - 编辑 `.env` 文件，填入你的LLM API密钥和其他配置
+
+2. 使用配置文件：
+   - 编辑 `config.ini` 文件，填入你的LLM API密钥和其他配置
+   - 配置文件使用key=value格式，示例如下：
+   ```ini
+   [DEFAULT]
+   # LLM配置
+   LLM_API_KEY=your_api_key_here
+   LLM_API_URL=https://api.openai.com/v1/chat/completions
+   LLM_MODEL=gpt-3.5-turbo
+   
+   # 批处理配置
+   BATCH_SIZE=100
+   ```
+   - 运行脚本时使用 `--config` 参数指定配置文件
+
+### 运行
+
+```bash
+# 使用默认配置运行
+python translate_metadata.py
+
+# 指定批处理大小
+python translate_metadata.py --batch-size 50
+
+# 使用指定的配置文件
+python translate_metadata.py --config my_config.ini
+```
+
+### 工作流
+
+该项目配置了一个 GitHub Actions 工作流，每 10 分钟运行一次翻译脚本。工作流配置文件位于 `.github/workflows/translate_metadata.yml`。

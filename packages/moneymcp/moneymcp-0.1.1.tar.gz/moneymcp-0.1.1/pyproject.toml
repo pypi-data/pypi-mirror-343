@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moneymcp"
+version = "0.1.1"
+description = "A financial analysis MCP server that provides tools for comprehensive market data analysis"
+readme = "README.md"
+authors = [
+    {name = "easyllms", email = "contract@easyllms.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "yfinance",
+    "fastmcp",
+    "finnhub-python",
+    "fredapi",
+    "pandas",
+    "pydantic"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/mymcp"
+"Bug Tracker" = "https://github.com/yourusername/mymcp/issues"
+
+[project.scripts]
+mymcp = "mymcp.cli:main"
+
+[tool.setuptools]
+packages = ["mymcp"] 

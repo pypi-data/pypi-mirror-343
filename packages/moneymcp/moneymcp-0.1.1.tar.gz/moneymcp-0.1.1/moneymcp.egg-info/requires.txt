@@ -1,0 +1,6 @@
+yfinance
+fastmcp
+finnhub-python
+fredapi
+pandas
+pydantic
