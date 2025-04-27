@@ -1,0 +1,8 @@
+LICENSE
+README.md
+main.py
+pyproject.toml
+PassForgeSafeDev.egg-info/PKG-INFO
+PassForgeSafeDev.egg-info/SOURCES.txt
+PassForgeSafeDev.egg-info/dependency_links.txt
+PassForgeSafeDev.egg-info/top_level.txt

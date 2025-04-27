@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PassForgeSafeDev"
+version = "1.0.0"
+description = "Ein sicheres Passwort-Management-Tool mit tkinter-GUI."
+authors = [
+  { name="SafecraftRuleDev", email="dein.email@example.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    # KEIN tkinter, secrets oder string eintragen!
+    # Nur externe Libraries hier.
+]
+
+[project.urls]
+Homepage = "https://github.com/SafecraftRuleDev/PassForgeSafeDev"
+Documentation = "https://github.com/SafecraftRuleDev/PassForgeSafeDev#readme"
+Issues = "https://github.com/SafecraftRuleDev/PassForgeSafeDev/issues"
+Source = "https://github.com/SafecraftRuleDev/PassForgeSafeDev"
