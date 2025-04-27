@@ -1,0 +1,14 @@
+binge_friend/shows/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+binge_friend/shows/core/config.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+binge_friend/shows/core/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+binge_friend/shows/core/models/base.py,sha256=182I8BA3_Sw0qZ5uPBozxPAp7qOIVTh966bQo6Hw-Jk,177
+binge_friend/shows/core/models/episode.py,sha256=-eyL_n7ZQBndw44n-hukh3eG6GoQi9NbVevIc_xlS7A,1651
+binge_friend/shows/core/models/genre.py,sha256=zPq2-wYMBaFSvKoEBn07ylcgqujMWObL3ozE-BPw1Rw,632
+binge_friend/shows/core/models/network.py,sha256=eRH37FsdC_u3fAT3m98ivT-fSHPN7bGftzQy-x5owww,957
+binge_friend/shows/core/models/season.py,sha256=cMHdNh06UWLhaVU9vV2QIjCwdUiDCLvNSCc4WhiGRIo,1699
+binge_friend/shows/core/models/show.py,sha256=o9AtaXIpC2XhgrqZpONY_1n6AAtujLX5qSCMOG31Acw,2221
+binge_friend/shows/core/models/show_genre.py,sha256=0R7xeD_0ViLWSe8JlU3AhMMCN0m-pG1aJZZFIzm3ER0,944
+bingefriend_shows_core-0.1.0.dist-info/LICENSE,sha256=rsg70d752iRkwsy-tFRVn0IWJRac8lMzrs1JytC1Z9A,1065
+bingefriend_shows_core-0.1.0.dist-info/METADATA,sha256=PmNmubUUmVHIjgd_0fI5i5rCEO4-1yuZ5JYlu_Swbeo,1581
+bingefriend_shows_core-0.1.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+bingefriend_shows_core-0.1.0.dist-info/RECORD,,
