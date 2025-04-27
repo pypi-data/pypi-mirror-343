@@ -1,0 +1,6 @@
+uvicorn
+
+[develop]
+pytest
+pytest_asyncio
+coverage
