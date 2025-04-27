@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: ul-key
+Version: 1.0.0
+Summary: UL-Key An indispensable assistant in data encryption.
+Home-page: https://example.com/ulkey
+Author: starfal8k
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
