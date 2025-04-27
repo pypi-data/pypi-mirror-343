@@ -1,0 +1,9 @@
+django_referer_breadcrumbs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_referer_breadcrumbs/apps.py,sha256=7nDxz3F_EI4Ik9BAtveeueHJ9CJmrchXdCbukSKbJYc,175
+django_referer_breadcrumbs/middleware.py,sha256=f3J_kjBTbyAFlD-uck4OiYrpihu86TLWA6QUzd4t93s,1601
+django_referer_breadcrumbs/templates/breadcrumbs-items.html,sha256=OJYiLi-I4rM6BCt77ZuwkE9AMZlDpzCZpMflV7wvPXg,1014
+django_referer_breadcrumbs/templates/breadcrumbs.html,sha256=8rrON8ZQv3Ej3hugKxuaG167IuQscAoF3-uHwOKJ3zc,270
+django_referer_breadcrumbs-0.0.2.dist-info/METADATA,sha256=Me-_25qb2RaYuj4bm6FCOzMAtcp1VXkxk8KSZWmtuZM,1892
+django_referer_breadcrumbs-0.0.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+django_referer_breadcrumbs-0.0.2.dist-info/licenses/LICENCE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+django_referer_breadcrumbs-0.0.2.dist-info/RECORD,,
