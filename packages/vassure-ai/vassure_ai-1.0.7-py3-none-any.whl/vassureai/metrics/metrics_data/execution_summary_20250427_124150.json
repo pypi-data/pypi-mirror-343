@@ -1,0 +1,25 @@
+{
+  "timestamp": "20250427_124150",
+  "total_tests": 1,
+  "passed_tests": 1,
+  "failed_tests": 0,
+  "total_duration": 19.436981,
+  "average_duration": 19.436981,
+  "success_rate": 100.0,
+  "system_metrics": {
+    "cpu_usage_percent": 2.7,
+    "memory_usage_percent": 87.7,
+    "memory_available_mb": 970.48828125,
+    "disk_usage_percent": 10.1,
+    "disk_free_gb": 837.7714195251465
+  },
+  "tests": {
+    "test_create_deviation": [
+      {
+        "duration": 19.436981,
+        "status": "COMPLETED",
+        "success_rate": 100.0
+      }
+    ]
+  }
+}
