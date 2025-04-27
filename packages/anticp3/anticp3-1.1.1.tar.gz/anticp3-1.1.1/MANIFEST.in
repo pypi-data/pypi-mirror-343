@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+recursive-include src/anticp3/db *
+recursive-include src/anticp3/model *
+recursive-include src/anticp3/ncbi_blast_2.15 *
+include src/anticp3/example.fasta

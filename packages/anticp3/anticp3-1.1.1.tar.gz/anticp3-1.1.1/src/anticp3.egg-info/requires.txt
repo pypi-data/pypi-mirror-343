@@ -1,0 +1,7 @@
+transformers
+safetensors
+torch
+biopython
+pandas
+tqdm
+colorama

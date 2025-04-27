@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anticp3"
+version = "1.1.1"
+description = "Prediction of Anticancer Proteins using Finetuned ESM2 and BLAST"
+readme = "README.md"
+authors = [
+  { name = "G.P.S Raghava", email = "raghava@iiitd.ac.in" }
+]
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+dependencies = [
+    "transformers",
+    "safetensors",
+    "torch",
+    "biopython",
+    "pandas",
+    "tqdm",
+    "colorama"
+]
+
+[project.scripts]
+anticp3 = "anticp3.anticp3:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
