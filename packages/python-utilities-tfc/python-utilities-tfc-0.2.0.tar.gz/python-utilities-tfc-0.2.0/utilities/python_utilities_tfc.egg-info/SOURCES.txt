@@ -1,0 +1,7 @@
+README.md
+setup.py
+utilities/python_utilities_tfc.egg-info/PKG-INFO
+utilities/python_utilities_tfc.egg-info/SOURCES.txt
+utilities/python_utilities_tfc.egg-info/dependency_links.txt
+utilities/python_utilities_tfc.egg-info/requires.txt
+utilities/python_utilities_tfc.egg-info/top_level.txt
