@@ -1,0 +1,11 @@
+buffalo/__init__.py,sha256=T6Mv_dMiychvhFn5rM_-ziyAG21-c2JSkuxAy5vZL6g,2005
+buffalo/buffalo.py,sha256=317OdkMGKjkPCi3BVozrLGwYkSLbN45x5xCzd9rzGZw,11667
+buffalo/exceptions.py,sha256=smpOxdSSXpOtgzq3lIdFoBqp7IQdACylFx6FRtoLuWc,1176
+buffalo/project.py,sha256=e0GDmgkG_HnCeTPz2LwRkgj0s5H2wJLCib3oKXTz7H8,11949
+buffalo/utils.py,sha256=NtpgLDW6m5HYTL_mzgy9BFU96i4WTD31lSQwaxtwSKY,2991
+buffalo/work.py,sha256=cZLdHqPmlq7N6KQpdiKfwrpJKISBhlIlQ5ubXudM0lU,2394
+buffalo/templates/wf_template.yml,sha256=vZWvbH4xqeoLPqIxwatBlzy1_VYck86Yj1d1gaVyrow,638
+buffalo_workflow-0.1.1.dist-info/METADATA,sha256=id41_4K0pspq8gktwkyv3FRgsFf5qM-ekePo2EDtjzM,1793
+buffalo_workflow-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+buffalo_workflow-0.1.1.dist-info/licenses/LICENSE,sha256=rr4LWRpButCUewVUFoe9IK1KxBJBOi6R452AbDzuisk,1081
+buffalo_workflow-0.1.1.dist-info/RECORD,,
