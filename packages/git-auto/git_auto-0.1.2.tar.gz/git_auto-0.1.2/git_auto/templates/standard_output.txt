@@ -1,0 +1,24 @@
+======================================================================
+                     CODE VALIDATION REPORT
+======================================================================
+{{ validation_status_colored }}
+{# Render the issues table directly using Jinja2 loops if issues exist #}
+{% if issues %}
+--- Validation Issues ---
+{{ '{:<10}'.format('Severity') }} | {{ '{:<60}'.format('Description') }}
+{{ '-' * 73 }}
+{% for severity in severity_order %}
+{%   if severity in issues %}
+{%     for issue_desc in issues[severity] %}
+{{ '{:<10}'.format(severity) }} | {{ '{:<60}'.format(issue_desc if issue_desc|length <= 60 else issue_desc[:57] + '...') }}
+{%     endfor %}
+{%   endif %}
+{% endfor %}
+{{ '-' * 73 }}
+{% endif %}
+
+======================================================================
+                   PROPOSED COMMIT MESSAGE
+======================================================================
+{{ commit_message }}
+======================================================================
