@@ -1,0 +1,2 @@
+[console_scripts]
+mymcp = mymcp.cli:main

@@ -1,0 +1,11 @@
+mymcp/__init__.py,sha256=fjHx7BoPcJPDT7fOdbGwO_iKa56fciYV2d_0ao7sKq0,290
+mymcp/__main__.py,sha256=p6CsneZ7ikKFwLXeBJ88dOHCNj9R9ZLDUy_qasa2v_M,199
+mymcp/cli.py,sha256=aKproIdR_SuY_rkkcHDFPpgUhntfP7AKqZF8_XVNVgQ,1269
+mymcp/demo.py,sha256=HdqHcY3Bx3At3-7Ro55fn2H_3on-6gRLpR-1O_4lCvg,362
+mymcp/server.py,sha256=W6GQdw8VC_ilnMYodfQB8CueEYqYHvxkif9Gr2FZN9A,52739
+mymcp/types.py,sha256=a-nuQQPs-N2rhSEMJ-UJSRGss447g93UL1Dg8HvsCco,490
+moneymcp-0.1.1.dist-info/METADATA,sha256=a3ByG7v6diJ4aM7IRlGn0k4ssomwEajAlx0C_f54jLk,21584
+moneymcp-0.1.1.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+moneymcp-0.1.1.dist-info/entry_points.txt,sha256=DPe2GWCEXxeXe8ZbblmX8Cfqv3KzO6sicX_kLxsgI5c,41
+moneymcp-0.1.1.dist-info/top_level.txt,sha256=p_DpQ3e5cr6kZaoSeYQjhJXuj6-dd2jh9NRCRdiigU8,6
+moneymcp-0.1.1.dist-info/RECORD,,
