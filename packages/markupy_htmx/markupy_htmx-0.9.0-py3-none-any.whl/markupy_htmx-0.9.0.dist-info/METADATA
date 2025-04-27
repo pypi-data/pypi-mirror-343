@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: markupy_htmx
+Version: 0.9.0
+Summary: An HTMX extension for markupy
+Author-email: witiz <markupy@witiz.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Classifier: Operating System :: OS Independent
+Classifier: Typing :: Typed
+License-File: LICENSE
+Requires-Dist: markupy>=2.1.0
+Project-URL: Issues, https://github.com/witiz/markupy_htmx/issues
+Project-URL: Repository, https://github.com/witiz/markupy_htmx
+
+# markupy_htmx
+HTMX extension for markupy
+
