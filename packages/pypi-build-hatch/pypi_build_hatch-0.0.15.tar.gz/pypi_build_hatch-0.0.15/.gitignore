@@ -1,0 +1,16 @@
+# 本地环境
+**/.local/*
+**/.venv/*
+**/.conda/*
+**/.taskfile/.env
+
+# 临时目录
+**/tmp/**
+**/logs/**
+**/temp/**
+**/cache/**
+**/.DS_Store
+
+# 构建产物
+**/dist/**
+**/build/**
