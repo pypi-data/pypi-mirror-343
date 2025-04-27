@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: KxmcMcpFileSystemWin
+Version: 0.1.7
+Summary: 本地文件和目录操作
+Home-page: 
+Author: kxmc
+Author-email: rekxmc@163.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: summary
