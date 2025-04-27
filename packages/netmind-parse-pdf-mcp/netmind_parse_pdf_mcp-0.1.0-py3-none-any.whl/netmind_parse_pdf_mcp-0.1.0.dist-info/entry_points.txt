@@ -1,0 +1,2 @@
+[console_scripts]
+parse-pdf-mcp = parse_pdf_mcp:main
