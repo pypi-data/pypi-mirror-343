@@ -1,0 +1,2 @@
+[console_scripts]
+vassure = vassure_ai.start_framework:main
