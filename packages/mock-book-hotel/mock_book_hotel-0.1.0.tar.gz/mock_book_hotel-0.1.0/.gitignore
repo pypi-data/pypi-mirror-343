@@ -1,0 +1,12 @@
+node_modules/
+build/
+dist/
+package-lock.json
+*.log
+*.tmp
+.vs
+*.user
+.DS_STORE
+*.env*
+*.exe
+*.exe~
