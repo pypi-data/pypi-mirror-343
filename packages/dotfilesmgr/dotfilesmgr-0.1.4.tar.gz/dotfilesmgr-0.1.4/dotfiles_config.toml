@@ -1,0 +1,10 @@
+[settings]
+dotfiles_dir = "~/dotfiles/dotfiles"  # optional, used as base for relative sources
+
+[kitty]
+source = "./kitty"
+destination = "~/.config/kitty"
+
+[nvim]
+source = "./nvim/init.lua"
+destination = "~/.config/test/nvim/init.lua"
