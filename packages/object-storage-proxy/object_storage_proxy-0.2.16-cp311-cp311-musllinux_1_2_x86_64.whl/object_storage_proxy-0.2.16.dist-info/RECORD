@@ -1,0 +1,9 @@
+object_storage_proxy-0.2.16.dist-info/METADATA,sha256=MiBcTrMWXziMqCHTCw6rtDlX3sJ8sGEo30r2FMKWEm4,14877
+object_storage_proxy-0.2.16.dist-info/WHEEL,sha256=-kBN3RVDl5guKmGr7STEq-XPtEYPLPgpYYDb8tgmlOc,107
+object_storage_proxy-0.2.16.dist-info/licenses/LICENSE,sha256=tndXe7D8H3gi7EPI3frJHaIuAQ3s5_sb95Vk4h5UmTY,1078
+object_storage_proxy.libs/libcrypto-50fe57cc.so.3,sha256=AYZxNbycrjjUaO_86EAqH5Q1-cn9Xo4iEouSz1L9oXQ,4425473
+object_storage_proxy.libs/libgcc_s-fd2fd9f2.so.1,sha256=nXsXlQcQ7Wc_-kj5vdcz6xVByu9_tw0xDIB3uKDaLPE,126617
+object_storage_proxy.libs/libssl-34bcc8c7.so.3,sha256=1AYV_ih_-z5sG6k3vHzpRXE7fXDBjxwVGj9crFHPjms,598905
+object_storage_proxy/__init__.py,sha256=JVsCDxl4_KIGhApSbXzJNSKaO4AmqpJOX86F6WTn1Gg,163
+object_storage_proxy/object_storage_proxy.cpython-311-x86_64-linux-musl.so,sha256=9k3sDrQLrnJX4yi2zACqP_i27RpknYR1j9BPo4nUFmo,13572009
+object_storage_proxy-0.2.16.dist-info/RECORD,,
