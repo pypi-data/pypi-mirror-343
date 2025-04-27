@@ -1,0 +1,7 @@
+numpy
+scipy
+matplotlib
+stringunitconverter
+importlib_metadata
+importlib_resources
+tabulate
