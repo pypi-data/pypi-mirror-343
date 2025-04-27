@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: ignite-cli
+Version: 0.1.1
+Summary: IgniteOps Command-Line Interface
+Author-email: IgniteOps <support@igniteops.io>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: typer[all]>=0.9.0
+Requires-Dist: requests>=2.31.0
+Requires-Dist: rich>=13.0.0
+Requires-Dist: pydantic>=2.0.0
+
+# IgniteOps CLI
+
+A fast, extensible command-line interface to interact with the IgniteOps API, similar to the AWS CLI.
+
+```bash
+# install in editable mode for development
+pip install -e .
+
+# usage
+ignite --help
+```
+
+The CLI auto-generates commands from the public OpenAPI spec (`https://api.igniteops.io/openapi.json`).
