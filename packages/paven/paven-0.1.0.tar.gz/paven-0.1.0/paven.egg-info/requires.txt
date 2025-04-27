@@ -1,0 +1,10 @@
+eval_type_backport
+deprive
+msgspec[toml]
+
+[dev]
+ruff
+mypy
+pytest
+coverage[toml]
+vulture
