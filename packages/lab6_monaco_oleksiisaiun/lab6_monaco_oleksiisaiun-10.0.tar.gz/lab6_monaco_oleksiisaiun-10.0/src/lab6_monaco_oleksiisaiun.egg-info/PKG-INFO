@@ -1,0 +1,84 @@
+Metadata-Version: 2.4
+Name: lab6_monaco_oleksiisaiun
+Version: 10.0
+Summary: The Python application that implements Monaco Racing Report in OOP format
+Author-email: Oleksii Saiun <oleksiisaiun@example.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: black==25.1.0
+Requires-Dist: click==8.1.8
+Requires-Dist: exceptiongroup==1.2.2
+Requires-Dist: flake8==7.1.2
+Requires-Dist: iniconfig==2.1.0
+Requires-Dist: mccabe==0.7.0
+Requires-Dist: mypy-extensions==1.0.0
+Requires-Dist: packaging==24.2
+Requires-Dist: pathspec==0.12.1
+Requires-Dist: platformdirs==4.3.7
+Requires-Dist: pluggy==1.5.0
+Requires-Dist: pycodestyle==2.12.1
+Requires-Dist: pyflakes==3.2.0
+Requires-Dist: pytest==8.3.5
+Requires-Dist: tomli==2.2.1
+Requires-Dist: typing-extensions==4.13.0
+Dynamic: license-file
+
+# Python_Lab_6_OOP_monaco_report
+
+This is a Python application that implements the Monaco Racing Report in an object-oriented (OOP) format.
+
+---
+
+## 1. Installation
+
+Using `uv`:
+
+```bash
+uv pip install oleksiisaiun_lab6_monaco
+```
+
+Using `pip`:
+
+```bash
+pip3 install lab6_monaco_oleksiisaiun
+```
+
+---
+
+## 2. Examples
+
+### 2.1. Run from a Python script:
+
+```python
+from lab6_monaco_oleksiisaiun.race_report import get_monaco_race_records
+
+print(get_monaco_race_records())
+```
+
+### 2.2. Run from CLI:
+
+```bash
+python3 -c "from lab6_monaco_oleksiisaiun.race_report import get_monaco_race_records; print(get_monaco_race_records())"
+```
+
+---
+
+## 3. How to publish the package to PyPI using `uv`
+
+### 3.1. Go to the root folder of this package
+
+```bash
+cd /path/to/your/package
+```
+
+### 3.2. Run the following commands:
+
+```bash
+uv build
+uv publish --token [YOUR_PYPI_TOKEN]
+```
