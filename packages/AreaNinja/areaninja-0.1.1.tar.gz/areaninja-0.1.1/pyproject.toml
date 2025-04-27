@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "AreaNinja"
+version = "0.1.1"
+description = "Library for calculating the area of geometric shapes"
+authors = [{name="Kirill Domitin", email = "domitin@gmail.com"}]
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.7"

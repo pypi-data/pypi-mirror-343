@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+AreaNinja/__init__.py
+AreaNinja/circle.py
+AreaNinja/geometry.py
+AreaNinja/rectangle.py
+AreaNinja/triangle.py
+AreaNinja.egg-info/PKG-INFO
+AreaNinja.egg-info/SOURCES.txt
+AreaNinja.egg-info/dependency_links.txt
+AreaNinja.egg-info/top_level.txt
+tests/tests.py

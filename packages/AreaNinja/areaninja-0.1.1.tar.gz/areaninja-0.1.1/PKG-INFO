@@ -1,0 +1,66 @@
+Metadata-Version: 2.4
+Name: AreaNinja
+Version: 0.1.1
+Summary: Library for calculating the area of geometric shapes
+Author-email: Kirill Domitin <domitin@gmail.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+
+# AreaNinja 
+
+Быстро и точно, как ниндзя, считает площади 
+
+---
+
+## Возможности
+
+- Вычисление площади круга по радиусу.
+- Вычисление площади треугольника по трём сторонам (формула Герона).
+- Вычисление площади прямоугольника.
+- Проверка, является ли треугольник прямоугольным.
+- Лёгкое расширение для других фигур.
+
+---
+
+## Установка
+
+```bash
+pip install AreaNinja
+```
+
+# Быстрый старт
+```python
+from AreaNinja import Circle, Triangle
+
+# Площадь круга
+c = Circle(5)
+print(c.area())  # 78.53981633974483
+
+# Площадь треугольника
+t = Triangle(3, 4, 5)
+print(t.area())  # 6.0
+
+# Проверка на прямоугольность
+print(t.is_right_angled())  # True
+```
+# Требования
+Python 3.7+
+
+Библиотека math (входит в стандартную библиотеку Python)
+
+# Тестирование
+Тесты находятся в папке tests/.
+
+Для запуска всех тестов:
+
+```bash
+
+python -m unittest discover tests
+```
+
+# Лицензия
+Этот проект распространяется под лицензией MIT.
+
+# Автор
+Kirill Domitin — domitin@gmail.com
