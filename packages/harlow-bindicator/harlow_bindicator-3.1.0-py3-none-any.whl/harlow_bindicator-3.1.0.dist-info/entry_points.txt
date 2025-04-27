@@ -1,0 +1,3 @@
+[console_scripts]
+harlow-bindicator=harlow_bindicator.main:fetch_bin_collection
+
