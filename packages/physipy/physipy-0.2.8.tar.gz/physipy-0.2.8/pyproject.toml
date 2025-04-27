@@ -1,0 +1,37 @@
+[tool.vulture]
+exclude = ["*.ipynb*.py"]
+# ignore_decorators = ["@app.route", "@require_*"]
+# ignore_names = ["visit_*", "do_*"]
+# make_whitelist = true
+min_confidence = 80
+# paths = ["myscript.py", "mydir", "whitelist.py"]
+# sort_by_size = true
+# verbose = true
+
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | \.asv
+)/
+'''
+
+[tool.autopep8]
+max_line_length = 120
+ignore = "E501,W6"  # or ["E501", "W6"]
+in-place = true
+recursive = true
+aggressive = 3
+
+[tool.coverage.html]
+directory = ".coverage_html"
