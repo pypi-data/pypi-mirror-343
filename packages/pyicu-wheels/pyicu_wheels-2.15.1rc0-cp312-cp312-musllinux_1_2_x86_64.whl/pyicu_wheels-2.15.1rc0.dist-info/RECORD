@@ -1,0 +1,12 @@
+pyicu_wheels-2.15.1rc0.dist-info/METADATA,sha256=IAyXvshHHCaIGbO89xL30anHTkS2k4RH0T0bzYYSE_M,1777
+pyicu_wheels-2.15.1rc0.dist-info/RECORD,,
+pyicu_wheels-2.15.1rc0.dist-info/WHEEL,sha256=ksPQZJ_3EdKsxLn9hri21BkBGfffuKHMHyu_OsnSo7w,109
+pyicu_wheels-2.15.1rc0.dist-info/licenses/LICENSE.txt,sha256=B05uMshqTA74s-0ltyHKI6yoPfJ3zYgQbvcXfDVGFf8,10280
+pyicu_wheels.libs/libicui18n-466a1021.so.77.1,sha256=KkPMRFFv9iXAGHq4fDB0fZK8iWCQ_CR4Jn24wVTD7f8,6226073
+pyicu_wheels.libs/libstdc++-0d31ccbe.so.6.0.32,sha256=QyUTnI2umnGgPmNJ-6F_BVIAJnq6-70cNoEWpma6EFQ,3494521
+pyicu_wheels.libs/libicudata-170ab194.so.77.1,sha256=OUTI9q_xRs-vZjzW07Hmul99iZeeDY2txOZhcMW-dDg,31908081
+pyicu_wheels.libs/libicuuc-8f650e04.so.77.1,sha256=GnI0B5s7H9NtpVOROsxXcIC9EkPQIXLp6f40yP0DbAM,3097513
+pyicu_wheels.libs/libgcc_s-a0b57c20.so.1,sha256=XPAr2giQZFaQKDEig3i_sQM7zfbaGkuhwmZ9ryvu-Vk,148041
+icu/_icu_.cpython-312-x86_64-linux-musl.so,sha256=OOn2gI0oYkZr9ixip7p2OgcbJwYJ4KLPLmqtiC_rNY8,8529057
+icu/__about__.py,sha256=IYT6BVAoCSybkwNoUWQpRFo00r8A0Zciw7ie2vVvNf8,139
+icu/__init__.py,sha256=NWwSqUo-rXGl7BpS8x80YmVw8kh1pfhjqRiwMsPZPc8,1589
