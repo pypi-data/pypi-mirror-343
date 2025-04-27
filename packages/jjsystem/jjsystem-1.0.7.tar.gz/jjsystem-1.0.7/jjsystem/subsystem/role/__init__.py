@@ -1,0 +1,8 @@
+from jjsystem.common import subsystem
+from jjsystem.subsystem.role \
+    import resource, router, controller, manager
+
+subsystem = subsystem.Subsystem(resource=resource.Role,
+                                router=router.Router,
+                                controller=controller.Controller,
+                                manager=manager.Manager)
