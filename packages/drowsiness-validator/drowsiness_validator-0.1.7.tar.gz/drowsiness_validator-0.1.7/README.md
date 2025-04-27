@@ -1,0 +1,254 @@
+# Drowsiness Validator
+
+A Python package for detecting drowsiness using facial landmarks or a Convolutional Neural Network (CNN).
+
+## Installation
+
+Install the package using pip:
+
+```bash
+pip install drowsiness-validator
+```
+
+## Requirements
+
+The package requires the following dependencies:
+
+- opencv-python
+- dlib
+- numpy
+- scipy
+- pandas
+- scikit-learn
+- tensorflow
+- pillow
+- flask
+
+Matplotlib is an optional dependency, only needed if you want to visualize training history when training a new CNN model.
+
+## Usage
+
+Here's a basic example of how to use the package:
+
+```python
+from drowsiness_validator import detect_drowsiness
+
+# Example with image path
+test_img_path = 'path/to/your/image.jpg'
+result = detect_drowsiness(image_path=test_img_path, method='cnn')
+print(result)
+# Example output: {'prediction': 1, 'status': 'Drowsy', 'method': 'cnn'}
+
+# Example with base64 image
+import base64
+with open(test_img_path, 'rb') as f:
+    img_b64 = base64.b64encode(f.read()).decode('utf-8')
+result = detect_drowsiness(image_base64=img_b64, method='cnn')
+print(result)
+# Example output: {'prediction': 1, 'status': 'Drowsy', 'method': 'cnn'}
+```
+
+## Flask API Server
+
+The package includes a Flask API server that can be used to detect drowsiness from images. To run the server:
+
+```bash
+# From the project root directory
+python app.py
+```
+
+### API Endpoints
+
+#### `/validate-drowsiness` (POST)
+
+Validates if a person in an image is drowsy.
+
+**Request Body:**
+
+```json
+{
+  "image": "base64_encoded_image_string_here",
+  "method": "cnn" // Optional, defaults to "cnn"
+}
+```
+
+OR
+
+```json
+{
+  "image_path": "/path/to/image/on/server.jpg",
+  "method": "cnn" // Optional, defaults to "cnn"
+}
+```
+
+**Response:**
+
+```json
+{
+  "prediction": 1,
+  "status": "Drowsy",
+  "method": "cnn"
+}
+```
+
+#### `/health` (GET)
+
+A simple health check endpoint.
+
+**Response:**
+
+```json
+{
+  "status": "ok"
+}
+```
+
+### Example Flask Route Implementation
+
+Here is how the Flask route is implemented in the included `app.py`:
+
+```python
+from flask import Flask, request, jsonify
+from drowsiness_validator import detect_drowsiness
+
+app = Flask(__name__)
+
+@app.route('/validate-drowsiness', methods=['POST'])
+def validate_drowsiness():
+    """
+    Endpoint to detect drowsiness from an image.
+    """
+    try:
+        # Extract data from request
+        data = request.json
+        if not data:
+            return jsonify({'error': 'No JSON data provided'}), 400
+
+        # Determine which input method is being used
+        image_base64 = data.get('image')
+        image_path = data.get('image_path')
+        method = data.get('method', 'cnn')  # Default to CNN if not specified
+
+        # Validate inputs
+        if not image_base64 and not image_path:
+            return jsonify({'error': 'Either "image" (base64) or "image_path" is required'}), 400
+
+        if image_base64 and image_path:
+            return jsonify({'error': 'Provide either "image" (base64) or "image_path", not both'}), 400
+
+        if method not in ['cnn', 'aspect_ratio']:
+            return jsonify({'error': 'Method must be either "cnn" or "aspect_ratio"'}), 400
+
+        # Process the request
+        if image_base64:
+            result = detect_drowsiness(image_base64=image_base64, method=method)
+        else:
+            result = detect_drowsiness(image_path=image_path, method=method)
+
+        return jsonify(result)
+
+    except Exception as e:
+        return jsonify({'error': f'An unexpected error occurred: {str(e)}'}), 500
+
+@app.route('/health', methods=['GET'])
+def health_check():
+    """Simple health check endpoint"""
+    return jsonify({'status': 'ok'})
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=5000)
+```
+
+## Documentation
+
+### detect_drowsiness
+
+Detects drowsiness from an image using either CNN or facial aspect ratios (via Random Forest).
+
+**Args:**
+
+- `image_path` (str, optional): Path to the input image file. Defaults to None.
+- `image_base64` (str, optional): Base64 encoded string of the input image. Defaults to None.
+- `method` (str, optional): Method for detection ('cnn' or 'aspect_ratio'). Defaults to 'cnn'.
+- `force_train_cnn` (bool, optional): Whether to force retraining of the CNN model. Defaults to False.
+- `train_dir` (str, optional): Path to the training data directory (needed if force_train_cnn=True).
+- `test_dir` (str, optional): Path to the test data directory (needed if force_train_cnn=True).
+
+**Returns:**
+
+- `dict`: A dictionary containing the prediction result and method used.
+
+**Example Response:**
+
+```json
+{
+  "prediction": 1,
+  "status": "Drowsy",
+  "method": "cnn"
+}
+```
+
+### calculate_ARs
+
+Calculates aspect ratios from an image.
+
+**Args:**
+
+- `image_path` (str, optional): Path to the input image file. Defaults to None.
+- `image_data` (numpy array, optional): Image data. Defaults to None.
+
+**Returns:**
+
+- `dict`: A dictionary containing calculated aspect ratios or an error message.
+
+  Example:
+
+  ```
+  {
+    "EAR": 0.289,  # Eye Aspect Ratio
+    "MAR": 0.625,  # Mouth Aspect Ratio
+    "MOE": 2.162,  # Mouth over Eye Ratio
+    "HPR": 1.342,  # Head Pose Ratio
+    "BAR": 12.456  # Brow Aspect Ratio
+  }
+  ```
+
+### calculate_all_ARs
+
+Calculates all aspect ratios from either an image path or image data (numpy array).
+
+**Args:**
+
+- `image_path` (str, optional): Path to the input image file. Defaults to None.
+- `image_data` (numpy array, optional): Image data. Defaults to None.
+
+**Returns:**
+
+- `dict`: A dictionary containing calculated aspect ratios.
+
+### predict_drowsiness_with_cnn
+
+Predicts drowsiness using the trained CNN model from image data or path.
+
+**Args:**
+
+- `image_data` (numpy array, optional): Image data as numpy array. Defaults to None.
+- `image_path` (str, optional): Path to the input image file. Defaults to None.
+- `force_train` (bool, optional): Whether to force retraining of the CNN model. Defaults to False.
+- `train_dir` (str, optional): Path to the training data directory (needed if force_train=True).
+- `test_dir` (str, optional): Path to the test data directory (needed if force_train=True).
+
+**Returns:**
+
+- `tuple`: (prediction, confidence) where prediction is 0 (Active) or 1 (Drowsy), and confidence is a float between 0 and 1.
+
+## Author
+
+Sharjeel Baig
+
+- Portfolio: [https://sharjeelbaig.github.io](https://sharjeelbaig.github.io)
+- GitHub: [https://github.com/sharjeelbaig](https://github.com/sharjeelbaig)
+
+## License
+
+This project is licensed under the MIT License.
