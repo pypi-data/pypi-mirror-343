@@ -1,0 +1,6 @@
+beautifulsoup4
+click
+grequests
+python-Levenshtein
+requests
+thefuzz

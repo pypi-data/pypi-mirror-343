@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/wpn/__init__.py
+src/wpn.egg-info/PKG-INFO
+src/wpn.egg-info/SOURCES.txt
+src/wpn.egg-info/dependency_links.txt
+src/wpn.egg-info/entry_points.txt
+src/wpn.egg-info/requires.txt
+src/wpn.egg-info/top_level.txt
+tests/test_wpn.py
