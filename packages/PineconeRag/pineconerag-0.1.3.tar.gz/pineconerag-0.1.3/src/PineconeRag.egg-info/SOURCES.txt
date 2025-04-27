@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/PineconeRag.egg-info/PKG-INFO
+src/PineconeRag.egg-info/SOURCES.txt
+src/PineconeRag.egg-info/dependency_links.txt
+src/PineconeRag.egg-info/requires.txt
+src/PineconeRag.egg-info/top_level.txt
