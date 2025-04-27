@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: reliability-metrics
+Version: 0.1.3
+Summary: Compute hardware reliability and service metrics easily from shipment and return data.
+Home-page: https://github.com/yourgithub/reliability-metrics
+Author: YOUR NAME
+Author-email: YOUR NAME <your.email@example.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+
+# Reliability Metrics
+
+**Reliability Metrics** is a Python package for calculating hardware/service reliability metrics like Failure Rate, MTTF, MTBF, FIT Rate, and more based on shipment and return data.
+
+## Features
+
+- Failure Rate calculation
+- Cumulative Failure Rate
+- Mean Time To Failure (MTTF) estimation
+- Mean Time Between Failures (MTBF) estimation
+- Shipments per Month
+- FIT Rate (Failures in Time per billion device hours)
+
+## Installation
+
+```bash
+pip install reliability-metrics
