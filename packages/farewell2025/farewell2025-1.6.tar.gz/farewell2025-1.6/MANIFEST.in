@@ -1,0 +1,3 @@
+include farewell_package/*.mp3
+include farewell_package/*.png
+include farewell_package/*.py
