@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+talkytrend/__init__.py
+talkytrend/config.py
+talkytrend/main.py
+talkytrend.egg-info/PKG-INFO
+talkytrend.egg-info/SOURCES.txt
+talkytrend.egg-info/dependency_links.txt
+talkytrend.egg-info/requires.txt
+talkytrend.egg-info/top_level.txt
+tests/test_unit.py
+tests/test_unit_exception.py
