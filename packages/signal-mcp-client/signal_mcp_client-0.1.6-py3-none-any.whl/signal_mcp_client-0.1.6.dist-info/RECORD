@@ -1,0 +1,12 @@
+signal_mcp_client/__init__.py,sha256=acIwdCV7NCVbdlDEOzTllooZLUEEgeIlihJGmShX0WA,165
+signal_mcp_client/_version.py,sha256=ESbJO0YD7TYfOUv_WDIJJgWELGepEWsoyhqVifEcXPA,511
+signal_mcp_client/build_in_tools.py,sha256=8Rx8u1Xdi3TUZ1NNYVKFB_-7DoVko1nd0OMHMEItBj8,8382
+signal_mcp_client/history.py,sha256=QzVzWx0N45PyYHbeeNorKAMDWa5ihhvPq1Hz6nKaKMA,2939
+signal_mcp_client/main.py,sha256=TJYdmIWsndQIKi25OlEPy7SOr5ls8TffrPANZJKKmqc,13394
+signal_mcp_client/mcp_client.py,sha256=a2QU0R1eIcTYUXBaudyZ1AVmGI12IYJ-g59yKfkyeX8,6773
+signal_mcp_client-0.1.6.dist-info/licenses/LICENSE,sha256=pv0Vs4cLZzAN1KJiNsfeVYqQUNQp7GK906kr8cQFZps,1070
+signal_mcp_client-0.1.6.dist-info/METADATA,sha256=b2L46PXbI8L9SZK6NmAF4i896j170Hh4fHURhIGOarw,8304
+signal_mcp_client-0.1.6.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+signal_mcp_client-0.1.6.dist-info/entry_points.txt,sha256=FV8IMUudebUtmJx5mrCQwyJJkqrB7Jd6ml1dk2xK6TQ,66
+signal_mcp_client-0.1.6.dist-info/top_level.txt,sha256=FyfCuonlmc_oEBEXhxlD5tof8dxqKt6F3kkfOt3rq9s,18
+signal_mcp_client-0.1.6.dist-info/RECORD,,
