@@ -1,0 +1,545 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOMOs documentation &mdash; gSOMOs 0.9.5 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="canonical" href="https://gsomos.readthedocs.io/index.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=61b282d3"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="📄 Scientific Documentation" href="SOMOs_SciDoc.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            gSOMOs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SOMOs_SciDoc.html">📄 Scientific Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SOMOs_examples.html">🧮 Main Commands for Using gSOMOs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SOMOs_dependencies.html">📚 Dependencies</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">gSOMOs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">SOMOs documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="somos-documentation">
+<h1>SOMOs documentation<a class="headerlink" href="#somos-documentation" title="Link to this heading"></a></h1>
+<a class="reference internal image-reference" href="_images/pyPCBanner.svg"><img alt="gSOMOs banner" class="align-center" src="_images/pyPCBanner.svg" style="width: 1000px;" />
+</a>
+<br><dl class="py function" id="module-somos.io">
+<dt class="sig sig-object py" id="somos.io.clean_logfile_name">
+<span class="sig-prename descclassname"><span class="pre">somos.io.</span></span><span class="sig-name descname"><span class="pre">clean_logfile_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.io.clean_logfile_name" title="Link to this definition"></a></dt>
+<dd><p>Given a log file name (e.g., ‘myfile.log’ or ‘myfile.log.gz’),
+returns the base calculation name without any ‘.log’ or ‘.log.gz’ extension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>logfile</strong> (<em>str</em><em> or </em><em>Path</em>) – The name of the Gaussian log file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The cleaned calculation name, without the ‘.log’ or ‘.log.gz’ suffix.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="somos.io.extract_gaussian_info">
+<span class="sig-prename descclassname"><span class="pre">somos.io.</span></span><span class="sig-name descname"><span class="pre">extract_gaussian_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logfile_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.io.extract_gaussian_info" title="Link to this definition"></a></dt>
+<dd><p>Extracts molecular orbital and structural information from a Gaussian log file using cclib.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>logfile_path</strong> (<em>str</em>) – Path to the Gaussian .log file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary containing UDFT/DFT type, basis size, molecular orbitals, geometry,
+occupation, HOMO index, spin values, and the AO overlap matrix.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="somos.io.load_mos_from_cclib">
+<span class="sig-prename descclassname"><span class="pre">somos.io.</span></span><span class="sig-name descname"><span class="pre">load_mos_from_cclib</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logfolder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.io.load_mos_from_cclib" title="Link to this definition"></a></dt>
+<dd><p>Loads molecular orbital data from Gaussian output using cclib and organizes them into DataFrames.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logfolder</strong> (<em>str</em><em> or </em><em>Path</em>) – Directory containing the log file.</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – Name of the Gaussian .log file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Alpha and beta DataFrames, coefficient matrices, basis count, overlap matrix, and full info dictionary.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-somos.cosim">
+<dt class="sig sig-object py" id="somos.cosim.analyzeSimilarity">
+<span class="sig-prename descclassname"><span class="pre">somos.cosim.</span></span><span class="sig-name descname"><span class="pre">analyzeSimilarity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logfolder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.cosim.analyzeSimilarity" title="Link to this definition"></a></dt>
+<dd><p>Full analysis pipeline to extract, match, and compare alpha and beta molecular orbitals.
+Displays interactive similarity widgets and saves annotated similarity results to Excel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logfolder</strong> (<em>str</em><em> or </em><em>Path</em>) – Path to the folder containing the Gaussian log file.</p></li>
+<li><p><strong>logfile</strong> (<em>str</em>) – Filename of the Gaussian log file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Alpha/beta DataFrames, coefficient matrices, nbasis, SOMO DataFrame, and overlap matrix.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="somos.cosim.build_full_similarity_table">
+<span class="sig-prename descclassname"><span class="pre">somos.cosim.</span></span><span class="sig-name descname"><span class="pre">build_full_similarity_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lMOs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cMOs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbasis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap_matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lumo_plusAlpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lumo_plusBeta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.cosim.build_full_similarity_table" title="Link to this definition"></a></dt>
+<dd><p>Builds a similarity matrix between selected alpha and beta MOs and returns optimal matches.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lMOs</strong> (<em>tuple</em><em> of </em><em>pd.DataFrame</em>) – Alpha and beta orbital DataFrames.</p></li>
+<li><p><strong>cMOs</strong> (<em>tuple</em><em> of </em><em>np.ndarray</em>) – Coefficient matrices for alpha and beta MOs.</p></li>
+<li><p><strong>nbasis</strong> (<em>int</em>) – Number of basis functions.</p></li>
+<li><p><strong>overlap_matrix</strong> (<em>np.ndarray</em>) – Overlap matrix.</p></li>
+<li><p><strong>lumo_plusAlpha</strong> (<em>int</em>) – Number of virtual alpha orbitals to include beyond LUMO.</p></li>
+<li><p><strong>lumo_plusBeta</strong> (<em>int</em>) – Number of virtual beta orbitals to include beyond LUMO.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame with matches, similarity matrix, and selected alpha indices.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="somos.cosim.cluster_orbitals">
+<span class="sig-prename descclassname"><span class="pre">somos.cosim.</span></span><span class="sig-name descname"><span class="pre">cluster_orbitals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MOs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'alpha'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.cosim.cluster_orbitals" title="Link to this definition"></a></dt>
+<dd><p>Performs hierarchical clustering of molecular orbitals based on cosine similarity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>MOs</strong> (<em>tuple</em><em> of </em><em>np.ndarray</em>) – Tuple containing coefficient matrices for alpha and beta orbitals.</p></li>
+<li><p><strong>spin</strong> (<em>str</em>) – Spin type to cluster (‘alpha’ or ‘beta’).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="somos.cosim.cosine_similarity_with_overlap">
+<span class="sig-prename descclassname"><span class="pre">somos.cosim.</span></span><span class="sig-name descname"><span class="pre">cosine_similarity_with_overlap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ci</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">S</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.cosim.cosine_similarity_with_overlap" title="Link to this definition"></a></dt>
+<dd><p>Computes the cosine similarity between two coefficient vectors using an overlap matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ci</strong> (<em>np.ndarray</em>) – Coefficient vector i.</p></li>
+<li><p><strong>cj</strong> (<em>np.ndarray</em>) – Coefficient vector j.</p></li>
+<li><p><strong>S</strong> (<em>np.ndarray</em>) – Overlap matrix.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Cosine similarity between ci and cj.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="somos.cosim.cross_match_all">
+<span class="sig-prename descclassname"><span class="pre">somos.cosim.</span></span><span class="sig-name descname"><span class="pre">cross_match_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha_mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta_mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbasis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap_matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_virtual_alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.cosim.cross_match_all" title="Link to this definition"></a></dt>
+<dd><p>Matches alpha and beta MOs by maximizing similarity and computes their pairwise similarity and energy difference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>alpha_df</strong> (<em>pd.DataFrame</em>) – DataFrame for alpha orbitals.</p></li>
+<li><p><strong>beta_df</strong> (<em>pd.DataFrame</em>) – DataFrame for beta orbitals.</p></li>
+<li><p><strong>alpha_mat</strong> (<em>np.ndarray</em>) – Alpha orbital coefficients.</p></li>
+<li><p><strong>beta_mat</strong> (<em>np.ndarray</em>) – Beta orbital coefficients.</p></li>
+<li><p><strong>nbasis</strong> (<em>int</em>) – Number of basis functions.</p></li>
+<li><p><strong>overlap_matrix</strong> (<em>np.ndarray</em>) – Overlap matrix.</p></li>
+<li><p><strong>n_virtual_alpha</strong> (<em>int</em>) – Number of virtual alpha orbitals to include.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Table with matching alpha-beta pairs, similarity scores, and energy differences.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="somos.cosim.find_somo_candidates">
+<span class="sig-prename descclassname"><span class="pre">somos.cosim.</span></span><span class="sig-name descname"><span class="pre">find_somo_candidates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha_mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta_mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbasis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap_matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.99</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.cosim.find_somo_candidates" title="Link to this definition"></a></dt>
+<dd><p>Identifies singly occupied molecular orbital (SOMO) candidates by comparing
+similarities between occupied alpha and all beta orbitals.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>alpha_df</strong> (<em>pd.DataFrame</em>) – DataFrame for alpha orbitals.</p></li>
+<li><p><strong>beta_df</strong> (<em>pd.DataFrame</em>) – DataFrame for beta orbitals.</p></li>
+<li><p><strong>alpha_mat</strong> (<em>np.ndarray</em>) – Alpha orbital coefficients.</p></li>
+<li><p><strong>beta_mat</strong> (<em>np.ndarray</em>) – Beta orbital coefficients.</p></li>
+<li><p><strong>nbasis</strong> (<em>int</em>) – Number of basis functions.</p></li>
+<li><p><strong>overlap_matrix</strong> (<em>np.ndarray</em>) – Overlap matrix.</p></li>
+<li><p><strong>spin</strong> (<em>dict</em>) – spin[“S2”]: eigenvalue of the S2 operator (float)
+spin[“S”]: S-value (float)
+spin[“multiplicity”] (float, calculated after 2S+1)</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – Maximum allowed similarity for SOMO detection.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Table listing SOMO-like orbital pairs and their properties.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="somos.cosim.heatmap_MOs">
+<span class="sig-prename descclassname"><span class="pre">somos.cosim.</span></span><span class="sig-name descname"><span class="pre">heatmap_MOs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lMOs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cMOs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbasis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap_matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfolder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./logs'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfilename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'logfile.log'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.cosim.heatmap_MOs" title="Link to this definition"></a></dt>
+<dd><p>Interactive cosine similarity heatmap between alpha and beta MOs around the HOMO-LUMO frontier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lMOs</strong> (<em>tuple</em><em> of </em><em>pd.DataFrame</em>) – Alpha and beta orbital DataFrames.</p></li>
+<li><p><strong>cMOs</strong> (<em>tuple</em><em> of </em><em>np.ndarray</em>) – Coefficient matrices for alpha and beta orbitals.</p></li>
+<li><p><strong>nbasis</strong> (<em>int</em>) – Number of basis functions.</p></li>
+<li><p><strong>overlap_matrix</strong> (<em>np.ndarray</em>) – Overlap matrix.</p></li>
+<li><p><strong>logfolder</strong> (<em>str</em>) – Directory to save the heatmap PNG.</p></li>
+<li><p><strong>logfilename</strong> (<em>str</em>) – Filename used as prefix for saving.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="somos.cosim.interactive_similarity">
+<span class="sig-prename descclassname"><span class="pre">somos.cosim.</span></span><span class="sig-name descname"><span class="pre">interactive_similarity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha_mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta_mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap_matrix</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.cosim.interactive_similarity" title="Link to this definition"></a></dt>
+<dd><p>Interactive widget to compute and display scalar product and cosine similarity between
+selected alpha and beta MOs using the overlap matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>alpha_df</strong> (<em>pd.DataFrame</em>) – DataFrame for alpha orbitals.</p></li>
+<li><p><strong>beta_df</strong> (<em>pd.DataFrame</em>) – DataFrame for beta orbitals.</p></li>
+<li><p><strong>alpha_mat</strong> (<em>np.ndarray</em>) – Coefficient matrix for alpha orbitals.</p></li>
+<li><p><strong>beta_mat</strong> (<em>np.ndarray</em>) – Coefficient matrix for beta orbitals.</p></li>
+<li><p><strong>overlap_matrix</strong> (<em>np.ndarray</em>) – Overlap matrix.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="somos.cosim.save_similarity_per_somo_from_df">
+<span class="sig-prename descclassname"><span class="pre">somos.cosim.</span></span><span class="sig-name descname"><span class="pre">save_similarity_per_somo_from_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_SOMOs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lMOs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cMOs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbasis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap_matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfolder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.cosim.save_similarity_per_somo_from_df" title="Link to this definition"></a></dt>
+<dd><p>Saves one Excel sheet per SOMO candidate listing similarities with all beta MOs,
+sorted by decreasing similarity. Best match is highlighted in yellow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df_SOMOs</strong> (<em>pd.DataFrame</em>) – DataFrame with identified SOMO candidates.</p></li>
+<li><p><strong>lMOs</strong> (<em>tuple</em><em> of </em><em>pd.DataFrame</em>) – Alpha and beta orbital DataFrames.</p></li>
+<li><p><strong>cMOs</strong> (<em>tuple</em><em> of </em><em>np.ndarray</em>) – Alpha and beta coefficient matrices.</p></li>
+<li><p><strong>nbasis</strong> (<em>int</em>) – Number of basis functions.</p></li>
+<li><p><strong>overlap_matrix</strong> (<em>np.ndarray</em>) – Overlap matrix.</p></li>
+<li><p><strong>logfolder</strong> (<em>str</em><em> or </em><em>Path</em>) – Folder containing the log file.</p></li>
+<li><p><strong>logfile</strong> (<em>str</em>) – Name of the log file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="somos.cosim.scalar_product_with_overlap">
+<span class="sig-prename descclassname"><span class="pre">somos.cosim.</span></span><span class="sig-name descname"><span class="pre">scalar_product_with_overlap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ci</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">S</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.cosim.scalar_product_with_overlap" title="Link to this definition"></a></dt>
+<dd><p>Computes the scalar product between two coefficient vectors using an overlap matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ci</strong> (<em>np.ndarray</em>) – Coefficient vector i.</p></li>
+<li><p><strong>cj</strong> (<em>np.ndarray</em>) – Coefficient vector j.</p></li>
+<li><p><strong>S</strong> (<em>np.ndarray</em>) – Overlap matrix.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Scalar product ci^T S cj.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="somos.cosim.tsne">
+<span class="sig-prename descclassname"><span class="pre">somos.cosim.</span></span><span class="sig-name descname"><span class="pre">tsne</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lMOs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cMOs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap_matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfolder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./logs'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfilename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'logfile.log'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.cosim.tsne" title="Link to this definition"></a></dt>
+<dd><p>Performs a t-SNE projection of molecular orbitals (alpha and beta) using a cosine similarity
+metric invariant to phase, and displays an interactive Plotly visualization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lMOs</strong> (<em>tuple</em><em> of </em><em>pd.DataFrame</em>) – DataFrames for alpha and beta molecular orbitals.</p></li>
+<li><p><strong>cMOs</strong> (<em>tuple</em><em> of </em><em>np.ndarray</em>) – Coefficient matrices for alpha and beta orbitals.</p></li>
+<li><p><strong>overlap_matrix</strong> (<em>np.ndarray</em>) – Overlap matrix used for computing cosine similarity.</p></li>
+<li><p><strong>logfolder</strong> (<em>str</em>) – Path to the folder where the plot image will be saved.</p></li>
+<li><p><strong>logfilename</strong> (<em>str</em>) – Name of the Gaussian log file used to prefix saved plots.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-somos.proj">
+<dt class="sig sig-object py" id="somos.proj.diagonalize_alpha_occ_to_beta_occ_and_virt_separately">
+<span class="sig-prename descclassname"><span class="pre">somos.proj.</span></span><span class="sig-name descname"><span class="pre">diagonalize_alpha_occ_to_beta_occ_and_virt_separately</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logfolder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.15</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.proj.diagonalize_alpha_occ_to_beta_occ_and_virt_separately" title="Link to this definition"></a></dt>
+<dd><p>Projects occupied alpha orbitals separately onto beta occupied and beta virtual subspaces,
+diagonalizes the two projection matrices, and analyzes dominant contributions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logfolder</strong> (<em>str</em>) – Folder containing the Gaussian log file.</p></li>
+<li><p><strong>logfile</strong> (<em>str</em>) – Name of the Gaussian log file.</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – Minimum squared coefficient to consider a beta orbital as dominant (default: 0.15).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="somos.proj.parse_beta_contrib_string">
+<span class="sig-prename descclassname"><span class="pre">somos.proj.</span></span><span class="sig-name descname"><span class="pre">parse_beta_contrib_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.proj.parse_beta_contrib_string" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="somos.proj.project_occupied_alpha_onto_beta">
+<span class="sig-prename descclassname"><span class="pre">somos.proj.</span></span><span class="sig-name descname"><span class="pre">project_occupied_alpha_onto_beta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logfolder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold_beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.proj.project_occupied_alpha_onto_beta" title="Link to this definition"></a></dt>
+<dd><p>Projects each occupied alpha orbital onto the full set of beta orbitals (occupied + virtual)
+using the AO overlap matrix. Returns a summary DataFrame including projection norms,
+dominant beta contributions, and diagnostic flags.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logfolder</strong> (<em>str</em>) – Path to the folder containing the Gaussian log file.</p></li>
+<li><p><strong>logfile</strong> (<em>str</em>) – Name of the Gaussian log file.</p></li>
+<li><p><strong>threshold_beta</strong> (<em>float</em><em>, </em><em>optional</em>) – Percentage threshold (default: 15%) above which a beta orbital is considered significant in the projection.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame with one row per occupied alpha orbital and the following columns:
+- ‘Alpha OM’: Index (1-based) of the alpha orbital
+- ‘Occ α’: Occupation of the alpha orbital (usually ‘O’)
+- ‘Energy (Ha)’: Energy of the alpha orbital
+- ‘P² on β_virt’: Squared norm of the projection onto the virtual beta space
+- ‘P² on β_occ’: Squared norm of the projection onto the occupied beta space
+- ‘Dominant β MO’: Index (1-based) of the beta orbital with the largest projection
+- ‘Index4Jmol’: Jmol-compatible index for the dominant beta orbital
+- ‘Occ β’: Occupation of the dominant beta orbital (‘V’ or ‘O’)
+- ‘E (β, Ha)’: Energy of the dominant beta orbital
+- ‘Top 1 (%)’: Percentage of the total projection norm carried by the most contributing beta orbital
+- ‘Top 2 (%)’: Cumulative contribution of the top 2 beta orbitals
+- ‘Top 3 (%)’: Cumulative contribution of the top 3 beta orbitals
+- ‘Spread?’: Flag indicating whether the projection is distributed (“Yes” if &lt;60% dominance)
+- ‘β orbitals &gt;{threshold_beta}%’: List of tuples [OM index (1-based), contribution (%)] for beta orbitals contributing &gt;{threshold_beta value}%
+- ‘SOMO P2v?’: Yes for occupied alpha MOs, if ‘P² on β_virt’ is dominant onto virtual space and small on occupied
+- ‘SOMO dom. β MO?’: Yes for occupied alpha MOs, if the dominant MO is a virtual β MO</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The squared projection of an occupied alpha orbital <span class="math notranslate nohighlight">\(\phi^\alpha_i\)</span> onto the full beta space is computed as:</p>
+<div class="math notranslate nohighlight">
+\[\]</div>
+<p>mathbf{v}_i = phi^alpha_i cdot S cdot (phi^beta)^T</p>
+<p>where <span class="math notranslate nohighlight">\(S\)</span> is the AO overlap matrix, and <span class="math notranslate nohighlight">\(\phi^\beta\)</span> is the matrix of beta MOs. The squared norm <span class="math notranslate nohighlight">\(\|\mathbf{v}_i\|^2\)</span> represents the total overlap.</p>
+<p>Top-N contributions are computed by squaring the individual projections <span class="math notranslate nohighlight">\(v_{ij}\)</span>, sorting them, and evaluating the cumulative contributions from the top 1, 2, or 3 beta orbitals. These are returned as “Top 1 (%)”, “Top 2 (%)”, and “Top 3 (%)”.</p>
+<p>The column “β orbitals &gt;{threshold_beta}%” lists all beta orbitals contributing more than the specified percentage to the squared projection norm, with both their index (1-based) and contribution in percent.</p>
+<p>The flag “SOMO P2v?” is set to “Yes” for occupied alpha MOs if the squared projection on the virtual beta subspace is &gt;= 0.5, and the projection on the occupied beta subspace is strictly below 0.5.</p>
+<p>The flag “SOMO dom. β MO?” is a weaker criterion. It is set to “Yes” for occupied alpha MOs if the dominant MO is a virtual beta MO</p>
+<p>The total number of beta orbitals <span class="math notranslate nohighlight">\(N\)</span>  used in the projection is equal to the total number of molecular orbitals in the beta spin channel. The projection is performed over the complete beta space, regardless of occupation.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="somos.proj.projection_heatmap_from_df">
+<span class="sig-prename descclassname"><span class="pre">somos.proj.</span></span><span class="sig-name descname"><span class="pre">projection_heatmap_from_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbasis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfolder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./logs'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'logfile.log'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.proj.projection_heatmap_from_df" title="Link to this definition"></a></dt>
+<dd><p>Generates an interactive heatmap visualization of the main projections
+between occupied/virtual alpha and beta molecular orbitals (MOs) from a Gaussian log file.</p>
+<p>This tool allows the user to dynamically select how many occupied and virtual MOs
+(both alpha and beta) to display. The heatmap shows the normalized projection
+weights between selected orbitals.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – DataFrame containing the projection contributions from alpha to beta orbitals.
+Must contain at least “Alpha MO” and one “β orbitals &gt;” contribution column.</p></li>
+<li><p><strong>nbasis</strong> (<em>int</em>) – Number of basis functions (corresponds to the number of orbitals per spin).</p></li>
+<li><p><strong>logfolder</strong> (<em>str</em><em>, </em><em>optional</em>) – Folder where the Gaussian log file is located. Default is “./logs”.</p></li>
+<li><p><strong>logfile</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the Gaussian log file to load orbital information from. Default is “logfile.log”.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>The function uses <cite>ipywidgets</cite> to create an interactive interface for tuning
+the number of occupied and virtual orbitals included.</p></li>
+<li><p>Red dashed lines separate occupied and virtual orbitals on the heatmap.</p></li>
+<li><p>Projection contributions are normalized by 100.</p></li>
+<li><p>Requires external functions like <cite>load_mos_from_cclib</cite> and <cite>parse_beta_contrib_string</cite>.</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">-</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">-</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="somos.proj.show_alpha_to_homo">
+<span class="sig-prename descclassname"><span class="pre">somos.proj.</span></span><span class="sig-name descname"><span class="pre">show_alpha_to_homo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_proj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfolder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">highlight_somo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#somos.proj.show_alpha_to_homo" title="Link to this definition"></a></dt>
+<dd><p>Affiche les lignes du DataFrame df_proj correspondant aux orbitales alpha
+allant de l’α 1 jusqu’à la HOMO, avec surlignage facultatif des SOMOs.</p>
+<section id="parametres">
+<h2>Paramètres<a class="headerlink" href="#parametres" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>df_proj<span class="classifier">pd.DataFrame</span></dt><dd><p>DataFrame contenant les résultats de projection alpha → beta.</p>
+</dd>
+<dt>logfolder<span class="classifier">str</span></dt><dd><p>Dossier contenant le fichier log.</p>
+</dd>
+<dt>logfile<span class="classifier">str</span></dt><dd><p>Nom du fichier log.</p>
+</dd>
+<dt>highlight_somo<span class="classifier">bool</span></dt><dd><dl class="simple">
+<dt>Si True, surligne en jaune les lignes avec SOMO P2v? == “Yes”</dt><dd><p>surligne en orange les lignes avec SOMO P2v? == “No”, mais SOMO dom. β MO? == “Yes”</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="retourne">
+<h2>Retourne<a class="headerlink" href="#retourne" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>pd.DataFrame ou Styler</dt><dd><p>Un sous-ensemble stylisé ou brut du DataFrame.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SOMOs_SciDoc.html">📄 Scientific Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SOMOs_examples.html">🧮 Main Commands for Using gSOMOs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SOMOs_examples.html#load-gaussian-log-files">📂 Load Gaussian Log Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SOMOs_examples.html#analyze-cosine-similarity-between-orbitals">📈 Analyze Cosine Similarity Between Orbitals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SOMOs_examples.html#projection-analysis">📊 Projection Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SOMOs_dependencies.html">📚 Dependencies</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="SOMOs_SciDoc.html" class="btn btn-neutral float-right" title="📄 Scientific Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Romuald Poteau.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
