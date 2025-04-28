@@ -1,0 +1,39 @@
+# -*- coding: utf-8 -*-
+
+# built ins
+import asyncio
+
+# installed
+import orjson
+
+async def get_redis_message(message_byte: bytes) -> dict:
+    """ """
+
+    try:
+
+        if message_byte and message_byte["type"] == "message":
+
+            message_byte_data = orjson.loads(message_byte["data"])
+
+            params = message_byte_data["params"]
+
+            return dict(
+                data=params["data"],
+                channel=params["channel"],
+            )
+
+        else:
+
+            return dict(
+                data=[],
+                channel=[],
+            )
+
+    except Exception as error:
+
+        from streaming_helper.utilities import error_handling
+
+        await error_handling.parse_error_message_with_redis(
+            client_redis,
+            error,
+    )
