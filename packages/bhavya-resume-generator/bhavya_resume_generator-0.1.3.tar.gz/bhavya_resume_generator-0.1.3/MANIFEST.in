@@ -1,0 +1,4 @@
+include LICENSE
+include README.md
+recursive-include bhavya_resume_generator *.py
+recursive-include bhavya_resume_generator/examples *.py 
