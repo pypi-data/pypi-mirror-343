@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+iamlistening/__init__.py
+iamlistening/config.py
+iamlistening/main.py
+iamlistening.egg-info/PKG-INFO
+iamlistening.egg-info/SOURCES.txt
+iamlistening.egg-info/dependency_links.txt
+iamlistening.egg-info/requires.txt
+iamlistening.egg-info/top_level.txt
+tests/test_unit.py
+tests/test_unit_exception.py
