@@ -1,0 +1,20 @@
+# python generated files
+__pycache__/
+*.py[oc]
+.coverage
+build/
+dist/
+reports/
+wheels/
+*.egg-info
+
+# venv
+.venv
+
+.DS_Store
+/.*cache/
+/.devcontainer/
+/styles/
+/Taskfile.d/
+/out/*
+/tmp_test/*

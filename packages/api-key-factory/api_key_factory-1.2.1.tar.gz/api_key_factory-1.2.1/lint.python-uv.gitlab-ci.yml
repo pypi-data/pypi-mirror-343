@@ -1,0 +1,40 @@
+---
+variables:
+  LINT_PY_IMAGE_UV: ghcr.io/astral-sh/uv:$LINT_PY_IMAGE_UV_TAG
+  LINT_PY_IMAGE_UV_TAG: python3.13-bookworm-slim
+  LINT_PY_MYPY: "true"
+  LINT_PY_MYPY_ALLOW_FAILURE: "true"
+  LINT_PY_MYPY_IMAGE: $LINT_PY_IMAGE_UV
+  LINT_PY_MYPY_FLAG: "--strict"
+  LINT_PY_MYPY_SRC: "src/ tests/"
+  LINT_PY_RUFF: "true"
+  LINT_PY_RUFF_ALLOW_FAILURE: "true"
+  LINT_PY_RUFF_IMAGE: $LINT_PY_IMAGE_UV
+  LINT_PY_RUFF_SRC: "src/ tests/"
+
+.lint-abstract-uv:
+  before_script:
+    - apt-get update && apt-get install -y --no-install-recommends curl ca-certificates
+    - uv sync --frozen
+
+lint:py-ruff:
+  extends: .lint-abstract-uv
+  image: $LINT_PY_RUFF_IMAGE
+  stage: lint
+  script:
+    - uv run ruff check
+  rules:
+    - if: ($LINT_PY_RUFF_ALLOW_FAILURE == "true") && ($LINT_PY_RUFF == "true")
+      allow_failure: true
+    - if: $LINT_PY_RUFF == "true"
+
+lint:py-mypy:
+  extends: .lint-abstract-uv
+  image: $LINT_PY_MYPY_IMAGE
+  stage: lint
+  script:
+    - uv run mypy "$LINT_PY_MYPY_FLAG" $LINT_PY_MYPY_SRC
+  rules:
+    - if: ($LINT_PY_MYPY_ALLOW_FAILURE == "true") && ($LINT_PY_MYPY == "true")
+      allow_failure: true
+    - if: $LINT_PY_MYPY == "true"
