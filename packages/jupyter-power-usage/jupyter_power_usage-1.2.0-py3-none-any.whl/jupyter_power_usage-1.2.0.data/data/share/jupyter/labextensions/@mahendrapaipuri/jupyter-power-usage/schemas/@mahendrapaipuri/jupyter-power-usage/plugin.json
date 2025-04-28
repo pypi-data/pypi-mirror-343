@@ -1,0 +1,126 @@
+{
+  "jupyter.lab.setting-icon-class": "jp-BuildIcon",
+  "jupyter.lab.setting-icon-label": "Power Usage Monitor",
+  "title": "Power Usage Monitor",
+  "description": "Power Usage Monitor",
+  "jupyter.lab.toolbars": {
+    "TopBar": [
+      {
+        "name": "cpu_power",
+        "rank": 140
+      },
+      {
+        "name": "gpu_power",
+        "rank": 150
+      },
+      {
+        "name": "emissions",
+        "rank": 160
+      }
+    ]
+  },
+  "properties": {
+    "refreshRate": {
+      "title": "Refresh Rate (ms)",
+      "description": "Refresh Rate to sync metrics data",
+      "default": 5000,
+      "type": "number"
+    },
+    "indicatorBarDisabled": {
+      "title": "Disable Indicator Bar",
+      "description": "If set to true indicator bar will not be rendered. Only text values will be shown. Useful when working on low resolution screens with a lot of top bar items.",
+      "default": false,
+      "type": "boolean"
+    },
+    "cpu": {
+      "title": "CPU Power Settings",
+      "description": "Settings for the CPU Power indicator",
+      "default": {
+        "label": "CPU Power: "
+      },
+      "$ref": "#/definitions/cpu"
+    },
+    "gpu": {
+      "title": "GPU Power Settings",
+      "description": "Settings for the GPU Power indicator",
+      "default": {
+        "label": "GPU Power: "
+      },
+      "$ref": "#/definitions/gpu"
+    },
+    "emissions": {
+      "title": "Emissions Estimation Settings",
+      "description": "Settings for the estimating eCO2 emissions",
+      "default": {
+        "countryCode": "FR",
+        "refreshRate": 1800000,
+        "factor": 475,
+        "emapsAccessToken": ""
+      },
+      "$ref": "#/definitions/emissions"
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "cpu": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "description": "Label for the CPU power indicator"
+        }
+      }
+    },
+    "gpu": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "description": "Label for the GPU power indicator"
+        }
+      }
+    },
+    "emissions": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "title": "Source of emission factor",
+          "description": "Emission factor fetched from this source will be used. RTE eCO2 mix source is only available for France.",
+          "oneOf": [
+            {
+              "const": "emaps",
+              "title": "Electricity Maps"
+            },
+            {
+              "const": "rte",
+              "title": "RTE eCO2 mix"
+            }
+          ],
+          "default": "rte",
+          "type": "string"
+        },
+        "emapsAccessToken": {
+          "title": "Electricity Maps Access token",
+          "description": "API Access token for Electricity Maps.",
+          "type": "string"
+        },
+        "countryCode": {
+          "title": "Country code",
+          "description": "ISO code of the country of which emission factor will be used.",
+          "type": "string"
+        },
+        "refreshRate": {
+          "title": "Refresh rate (ms)",
+          "description": "eCO2 emission factor will be updated at this interval. Do not use too small intervals as these APIs are rate limited.",
+          "type": "number"
+        },
+        "factor": {
+          "title": "Emission factor (g/kWh)",
+          "description": "eCO2 emission factor will be used if Emission data for the selected country is not available.",
+          "type": "number"
+        }
+      }
+    }
+  },
+  "type": "object"
+}
