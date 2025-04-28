@@ -1,0 +1,9 @@
+fedivertex/__init__.py,sha256=1RTU3urXaN49mGIB_t7oJZZNVkAXYeP20zj8oJEcbUk,128
+fedivertex/main.py,sha256=ZC2iJ5MuHMcgEXtowB7B8EnLLMxsVGjrVX_TnUlWsZ8,7755
+fedivertex-0.9.5.dist-info/licenses/LICENSE,sha256=oV0iohpZyHRViwhgMwWrukQNpapVHNC3So9Kd-YXp2Q,35152
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_loader.py,sha256=e_8dBm-tcGH16_RbguJziIBKEnEvbsA6lopMDMRy_jU,3901
+fedivertex-0.9.5.dist-info/METADATA,sha256=wpC5U2lqxUb4sgEQS2jimqTFcEDwsTobArc22DeVpF4,2426
+fedivertex-0.9.5.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+fedivertex-0.9.5.dist-info/top_level.txt,sha256=DugSq22DPao6WDlTigr7AMU4wbI6FgjRZyZWtKd81NE,17
+fedivertex-0.9.5.dist-info/RECORD,,
