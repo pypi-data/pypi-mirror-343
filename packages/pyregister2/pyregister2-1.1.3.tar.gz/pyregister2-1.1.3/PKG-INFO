@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: pyregister2
+Version: 1.1.3
+Summary: Low Level wrapper for python
+Author-email: Jhonata Rios Carneiro <jhonatacarneirorios432@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
