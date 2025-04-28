@@ -1,0 +1,11 @@
+common_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+common_client/types.py,sha256=7-_lKe3TpqwLZyROpiRr3aadW-Na0oV3xBieMpDE9b0,8792
+common_client/client/__init__.py,sha256=V8lbSEpOWNM2XjG5ky7NIUM0Q2HZTexzL3I8WqZfo-w,117
+common_client/client/card_resolver.py,sha256=yCDxwNAgAz-6lDWGr8uhj8V0DGs9kSiybPsmhK3vh8Y,671
+common_client/client/client.py,sha256=VLZaBTf1vhbLq_4Wr5Z4o1PMMW2NsCdTTVQDlGJklA8,3346
+common_client/utils/in_memory_cache.py,sha256=NUAdEWLhoM091a6rXzX8jbUQbXzQigYhWgHGWnE5uv8,3381
+common_client/utils/push_notification_auth.py,sha256=mdUFZLPE2NuDIkNjaPoiYuPGltdVoRT_IQ87GQTaUeE,4915
+agent2agent_client-0.0.1.dist-info/METADATA,sha256=nCe0s-rEXPJNTQzkILnN7vIjmffqvrN0xH8tq5Zbx2E,1090
+agent2agent_client-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+agent2agent_client-0.0.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+agent2agent_client-0.0.1.dist-info/RECORD,,
