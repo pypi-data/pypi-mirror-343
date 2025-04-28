@@ -1,0 +1,3 @@
+[console_scripts]
+bella-issues-bot=client.terminal:run_workflow_from_terminal
+
