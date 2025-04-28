@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+rust-option/__init__.py
+rust-option/option.py
+rust_option.egg-info/PKG-INFO
+rust_option.egg-info/SOURCES.txt
+rust_option.egg-info/dependency_links.txt
+rust_option.egg-info/top_level.txt
