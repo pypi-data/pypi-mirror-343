@@ -1,0 +1,27 @@
+[project]
+name = "universal-set-transformers"
+version = "0.1.0"
+authors = [
+  { name="David W. Ludwig II", email="davidludwigii@gmail.com" }
+]
+description = "Universal Set Transformers for scalable set/multiset modeling"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.8"
+dependencies = [
+  "torch>=2.5.1"
+]
+
+# Development dependencies
+[project.optional-dependencies]
+dev = [
+  "torchvision>=0.20.1",
+  "torch_geometric>=2.5.1"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/DLii-Research/universal-set-transformers"
+"Bug Tracker" = "https://github.com/DLii-Research/universal-set-transformers/issues"
+
+[tool.ruff]
+line-length = 100
