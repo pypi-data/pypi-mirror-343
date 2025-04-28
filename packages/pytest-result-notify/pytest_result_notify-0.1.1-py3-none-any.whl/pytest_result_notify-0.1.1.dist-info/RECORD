@@ -1,0 +1,9 @@
+pytest_result_notify-0.1.1.dist-info/METADATA,sha256=y1Fl_BMKKLHZ94Hkm4PKSxZvXoPFh9WLIzlwDwXTk94,1392
+pytest_result_notify-0.1.1.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+pytest_result_notify-0.1.1.dist-info/entry_points.txt,sha256=ichj-hDDXrN4ks8GI9Pwf8sYM-qxC_AyHRAN7TGw7PQ,87
+pytest_result_notify/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_result_notify/components/__init__.py,sha256=GMCan25CQG9sjwmG32pRi-8RV09vZj3v2eQ5mZTCRqI,38
+pytest_result_notify/components/slack_client.py,sha256=FptBAjoxoqO6Q0NQnavnmcTH2Em6lbh94OjtKkDF-N0,2113
+pytest_result_notify/components/utils.py,sha256=lKJLz7Xg22b5lwZi0KmVdCqaVAapC_D1y2OCZmgWzyU,936
+pytest_result_notify/plugin.py,sha256=SSjNGQMby5jbrnCxgOitKR87_67ctFbGVm_l1uh0Hs4,4175
+pytest_result_notify-0.1.1.dist-info/RECORD,,
