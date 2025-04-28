@@ -1,0 +1,11 @@
+datasette>=0.54
+
+[build]
+build
+twine
+
+[test]
+beautifulsoup4
+pytest-asyncio
+pytest
+python-semantic-release

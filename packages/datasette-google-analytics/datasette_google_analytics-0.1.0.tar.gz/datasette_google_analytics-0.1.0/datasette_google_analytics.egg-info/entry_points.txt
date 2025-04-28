@@ -1,0 +1,2 @@
+[datasette]
+google_analytics = datasette_google_analytics

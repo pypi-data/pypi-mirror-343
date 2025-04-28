@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+datasette_google_analytics/__init__.py
+datasette_google_analytics.egg-info/PKG-INFO
+datasette_google_analytics.egg-info/SOURCES.txt
+datasette_google_analytics.egg-info/dependency_links.txt
+datasette_google_analytics.egg-info/entry_points.txt
+datasette_google_analytics.egg-info/requires.txt
+datasette_google_analytics.egg-info/top_level.txt
+tests/test_google_analytics.py
