@@ -1,0 +1,60 @@
+{
+  "current_model": "default",
+  "models": {
+    "default": {
+      "model": "gpt-4o",
+      "temp": 0.6,
+      "max_tokens": 4096,
+      "top_p": 1
+    },
+    "gptmini": {
+      "model": "gpt-4o-mini",
+      "temp": 1,
+      "max_tokens": 4096,
+      "top_p": 1
+    },
+    "metallama": {
+      "model": "Meta-Llama-3.1-70B-Instruct",
+      "temp": 0.8,
+      "max_tokens": 2048,
+      "top_p": 0.1
+    },
+    "mistral": {
+      "model": "Mistral-large-2407",
+      "temp": 0.8,
+      "max_tokens": 2048,
+      "top_p": 0.2
+    },
+    "phi": {
+      "model": "Phi-3.5-MoE-instruct",
+      "temp": 0.8,
+      "max_tokens": 2048,
+      "top_p": 0.5
+    },
+    "nemo": {
+      "model": "Mistral-Nemo",
+      "temp": 0.4,
+      "max_tokens": 2048,
+      "top_p": 0.1
+    },
+    "deepR1": {
+      "model": "DeepSeek-R1",
+      "temp": 0.8,
+      "max_tokens": 2048,
+      "top_p": 0.1
+    },
+    "deepV3": {
+      "model": "DeepSeek-V3",
+      "temp": 0.8,
+      "max_tokens": 2048,
+      "top_p": 0.1
+    },
+    "gemma3": {
+      "model": "gemma3:1b",
+      "temp": 0.9,
+      "max_tokens": 2048,
+      "top_p": 0.9,
+      "api_type": "ollama"
+    }
+  }
+}

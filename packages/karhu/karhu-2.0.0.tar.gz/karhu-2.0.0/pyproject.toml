@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "karhu"
+version = "2.0.0"
+description = "An AI assistant with PDF processing, web browsing, and speech capabilities"
+readme = "README.md"
+authors = [{name = "Abderrahman Gaga", email = "agaga@student.hive.fi"}]
+license = "Unlicense"
+requires-python = ">=3.8"
+keywords = [
+    "ai",
+    "assistant",
+    "chatbot",
+    "pdf",
+    "web",
+    "cli",
+    "speech-to-text",
+    "text-to-speech",
+]
+dependencies = [
+    "openai==1.72.0",
+    "requests==2.32.3",
+    "beautifulsoup4==4.13.3",
+    "html2text==2024.2.26",
+    "fake-useragent==2.1.0",
+    "pdfplumber==0.11.6",
+    "termcolor==3.0.1",
+    "rich==14.0.0",
+    "pyyaml==6.0.2",
+    "prompt_toolkit==3.0.50",
+    "google-cloud-texttospeech==2.25.1",
+    "google-cloud-speech==2.31.1",
+    "pyaudio==0.2.14",
+    "wave==0.0.2",
+    "pynput==1.8.1",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+karhu = "karhu.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = {find = {where = ["src"], include = ["karhu*"]}}
+
+[tool.setuptools.package-data]
+karhu = ["config/*.json", "data/*"]
