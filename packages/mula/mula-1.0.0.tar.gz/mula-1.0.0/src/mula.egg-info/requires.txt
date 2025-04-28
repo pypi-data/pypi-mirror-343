@@ -1,0 +1,10 @@
+mechanicalsoup
+appdirs
+build
+twine
+
+[dev]
+check-manifest
+
+[test]
+coverage
