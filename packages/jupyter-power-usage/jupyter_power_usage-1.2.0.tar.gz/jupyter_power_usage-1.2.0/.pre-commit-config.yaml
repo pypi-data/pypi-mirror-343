@@ -1,0 +1,43 @@
+repos:
+  - repo: https://github.com/asottile/reorder-python-imports
+    rev: v3.12.0
+    hooks:
+      - id: reorder-python-imports
+        language_version: python3
+  - repo: https://github.com/psf/black
+    rev: 24.1.1
+    hooks:
+      - id: black
+  - repo: https://github.com/PyCQA/flake8
+    rev: '7.0.0'
+    hooks:
+      - id: flake8
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v4.0.0-alpha.8
+    hooks:
+      - id: prettier
+        additional_dependencies:
+          - prettier@2.8.4
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v9.0.0-alpha.2
+    hooks:
+      - id: eslint
+        files: \.[jt]sx?$ # *.js, *.jsx, *.ts and *.tsx
+        types: [file]
+        additional_dependencies:
+          - '@typescript-eslint/eslint-plugin@5.55.0'
+          - '@typescript-eslint/parser@5.55.0'
+          - eslint@^8.36.0
+          - eslint-config-prettier@8.7.0
+          - eslint-plugin-prettier@4.2.1
+          - typescript@5.0.4
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: check-json
+      - id: check-yaml
+        exclude: ^helm-chart/nbviewer/templates/
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: requirements-txt-fixer
