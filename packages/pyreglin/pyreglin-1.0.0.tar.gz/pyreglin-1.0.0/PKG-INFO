@@ -1,0 +1,80 @@
+Metadata-Version: 2.4
+Name: pyreglin
+Version: 1.0.0
+Summary: A Python package for generating response variables with linear regression structure.
+Home-page: https://github.com/salvnetto/pyreglin
+Author: Fábio N. Demarqui
+Author-email: fndemarqui@est.ufmg.br
+Maintainer: Salvador Netto, Tomás Bernardes
+Maintainer-email: salvv.netto@gmail.com
+License: MIT
+Project-URL: Source Code, https://github.com/salvnetto/pyreglin
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Database
+Requires-Python: >3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy==2.1.3
+Requires-Dist: pandas==2.2.3
+Requires-Dist: patsy==1.0.1
+Requires-Dist: scipy==1.14.1
+Requires-Dist: statsmodels==0.14.4
+Requires-Dist: matplotlib==3.8.0
+Requires-Dist: plotnine==0.12.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: platform
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# PYTHON REGLIN
+
+A Python package for generating response variables with linear regression structure.
+
+## Installation
+
+```bash
+pip install pyreglin
+```
+
+## Usage
+
+```python
+import pandas as pd
+from pyreglin import rlm
+
+# Create sample data
+data = pd.DataFrame({
+    'x': range(100),
+    'group': ['A', 'B'] * 50
+})
+
+# Generate response variable
+y = rlm(
+    formula='x + group',
+    beta=[1, 2, 3],
+    sigma=1.0,
+    data=data
+)
+```
+
+## Features
+
+- Generate response variables using linear regression structure
+- Support for complex formulas using patsy syntax
+- Support for categorical variables with custom contrasts
