@@ -1,0 +1,6 @@
+common_crud/__init__.py,sha256=yeMds20nwknEjVcsfGu9-9-ufcriIo_-USsCvYMU3rs,84
+common_crud/base_crud.py,sha256=oFNU7jiBEPL_enGj3p0NP0I6UQ6ho9RqT0RYRmYzTpo,10461
+common_crud/exceptions.py,sha256=2TdN5hDOSMpFImoUWhG84d1XpEDX7OAWVJjo1mAyIr8,572
+common_crud-0.1.2.dist-info/METADATA,sha256=g5v2ZpTZo1GGXFGLV0YjyXfCiOQadk-Th0DDy03ao2U,6158
+common_crud-0.1.2.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+common_crud-0.1.2.dist-info/RECORD,,
