@@ -1,0 +1,114 @@
+Metadata-Version: 2.4
+Name: CBCgrpspy
+Version: 0.4
+Summary: Statistical Group Comparison Tool
+Home-page: https://github.com/Jarrily
+Author: Jinhui Liu
+Author-email: ljh18620847741@gmail.com
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Requires-Python: ~=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy==1.26.4
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: openpyxl
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# 📊 Data Analysis Toolkit
+```markdown
+Automated comparative analysis tool for group data, supporting intelligent statistical tests for two/multiple groups with standardized output tables.
+```
+## ⚙️ Installation
+```bash
+pip install CBCgrpspy 
+```
+
+---
+
+## 📖 Parameter Specifications
+
+| Parameter           | Type        | Default   | Description                                                         |
+|---------------------|-------------|-----------|---------------------------------------------------------------------|
+| `df_path`           | `str`       | **Required** | Data file path (.xlsx/.csv supported)                              |
+| `label_series`      | `str`       | "label"   | Target label column name (must specify if no "label" column exists) |
+| `skewvaranalysis`   | `list`      | None      | Manually specified categorical variables                           |
+| `norm_rd`           | `int`       | 2         | Decimal places for normal distributions (Mean ± SD format)         |
+| `sk_rd`             | `int`       | 2         | Decimal places for non-normal distributions (Median (IQR) format)  |
+| `cat_rd`            | `int`       | 0         | Decimal places for categorical variable percentages                |
+| `pnormtest`         | `float`     | 0.05      | Significance threshold for normality tests                         |
+| `phomogeneity`      | `float`     | 0.05      | Significance threshold for homogeneity of variance tests           |
+| `extractp`          | `float`     | 0.05      | Threshold for identifying significant variables                    |
+| `minfactorlevels`   | `int`       | 10        | Maximum categorical levels (variables exceeding this become continuous) |
+| `showstatistic`     | `bool`      | True      | Whether to display statistical values in output                    |
+
+---
+
+## 🚀 Core Features
+
+### 1. Two-Group Comparison (Binary Groups)
+- **Use Cases**: Control vs Treatment, Male vs Female, etc.
+- **Statistical Methods**:
+  - 📌 Continuous variables: Auto-select T-test / Mann-Whitney U test
+  - 📌 Categorical variables: Auto-select Chi-square / Fisher's exact test
+- **Output**:
+  - Standardized comparison table
+  - Flagged significant variables (p < extractp)
+
+### 2. Multi-Group Comparison (≥3 Groups)
+- **Use Cases**: Age stratification, multiple treatment protocols, etc.
+- **Statistical Methods**:
+  - 📌 Continuous variables: ANOVA / Kruskal-Wallis test
+  - 📌 Categorical variables: Chi-square / Monte Carlo Fisher simulation
+- **Output**:
+  - Multi-dimensional group comparison summary
+  - Subgroup difference indicators
+
+---
+
+## 🎯 Quick Start Example
+```python
+from CBCgrpspy import dataAnalysis
+
+dataAnalysis(
+    df_path="analysis.xlsx",
+    label_series="label",
+    norm_rd=2,
+    sk_rd=2,
+    cat_rd=0,
+    pnormtest=0.05,
+    extractp=0.05,
+    phomogeneity=0.05,
+    maxfactorlevels=10,
+    showstatistic=True
+)
+```
+
+---
+
+## 📌 Important Notes
+1. Ensure the first row contains column headers
+2. Convert categorical variables to string type beforehand
+3. Recommended for use with Jupyter Notebook for optimal table rendering
+4. This package has currently only been tested on **Windows 10/11** systems. Compatibility with macOS and Linux systems has not been verified.
+---
+
+## ✉️ Contact
+**Package Maintainer**:  
+Jarrily9527 (Jinhui Liu)  
+📧 Email: [ljh18620847741@gmail.com](mailto:ljh18620847741@gmail.com)
+
+---
+
+> 💡 Pro Tip: Adjust `*_rd` parameters to control decimal precision. Use `showstatistic=False` for simplified outputs.
