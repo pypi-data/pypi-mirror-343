@@ -1,0 +1,14 @@
+pytest_durations/__init__.py,sha256=0LfuCJ2KQwJEIuIRkIDaWTHuzbPQ3uWD5EksICuEo2w,176
+pytest_durations/helpers.py,sha256=Z7OtK9sHFJB6DVkqK3TIoA1hTrwto9sP1ROAz65IQFs,766
+pytest_durations/measure.py,sha256=P1WKRmNdZ6vgcvgQTpm0p-dAnybtvOISg7138goKOhI,958
+pytest_durations/options.py,sha256=3JpQH9vXSr56ZGiDPboPNfk_XK_hZyjAkyug-YrbpYQ,1767
+pytest_durations/plugin.py,sha256=F_i_5JMvxacgazYAYfRimNbIo5uw6yLwtWiP2xO4AO0,6526
+pytest_durations/reporting.py,sha256=sDXgSDSitczVk_ob7xN2ROoGxZKcP6NfapF4m0XgM-Y,3311
+pytest_durations/ticker.py,sha256=nmKXfpsQResIBa9SL-wdspDMA4cSH2srzLd3bZ7RWSw,839
+pytest_durations/types.py,sha256=gDYQWwrV0pUT_0wdNlP8moiC1shjiHVsYMkL1xgKY-I,83
+pytest_durations/xdist.py,sha256=XS9Wmg2OFMxpAd62DzCUJynlig0EPHnSaazwoR3RBQE,1837
+pytest_durations-1.5.0.dist-info/LICENSE,sha256=Oeei1n4_A86z4bBHOSexuy74D-zquzdZ-g7OlLxJNbM,1069
+pytest_durations-1.5.0.dist-info/METADATA,sha256=47rEjBgvbKMGhN0VUAz4bOp3k8PHjCcMCE6M5iKrOTs,6153
+pytest_durations-1.5.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+pytest_durations-1.5.0.dist-info/entry_points.txt,sha256=4WlJWgfCLvwPzQ-pWnn7kZRG5PpDWWoqvhhuz_PTfQU,46
+pytest_durations-1.5.0.dist-info/RECORD,,
