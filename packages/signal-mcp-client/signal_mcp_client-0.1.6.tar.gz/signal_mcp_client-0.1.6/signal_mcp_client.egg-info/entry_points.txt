@@ -1,0 +1,2 @@
+[console_scripts]
+signal-mcp-client = signal_mcp_client.main:main
