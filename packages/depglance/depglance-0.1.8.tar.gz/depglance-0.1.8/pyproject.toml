@@ -1,0 +1,31 @@
+
+[build-system]
+requires = [
+    "setuptools>=61.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "depglance"
+version = "0.1.8"
+description = "Python Dependency Visualizer with Vulnerability Insights"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [
+    { name="Prajeet Singh", email="dev.prajeet2016@gmail.com" }
+]
+license = { text = "MIT" }
+dependencies = [
+    "requests",
+    "pyvis",
+    "toml"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/devprajeet/depglance"
+"Source" = "https://github.com/devprajeet/depglance"
+"Tracker" = "https://github.com/devprajeet/depglance/issues"
+
+[project.scripts]
+"depglance" = "depglance.cli:main"
