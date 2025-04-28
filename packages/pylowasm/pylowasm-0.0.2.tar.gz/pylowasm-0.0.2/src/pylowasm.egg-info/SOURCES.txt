@@ -1,0 +1,17 @@
+main.py
+pyproject.toml
+src/main.cpp
+src/pyregister.hpp
+src/__pycache__/pyregister.cpython-313.pyc
+src/pylowasm/__init__.py
+src/pylowasm/pyregister.py
+src/pylowasm.egg-info/PKG-INFO
+src/pylowasm.egg-info/SOURCES.txt
+src/pylowasm.egg-info/dependency_links.txt
+src/pylowasm.egg-info/top_level.txt
+src/pylowasm/bin/32/libpyregister.a
+src/pylowasm/bin/32/libpyregister.so
+src/pylowasm/bin/32/pyregister.dll
+src/pylowasm/bin/64/libpyregister.a
+src/pylowasm/bin/64/libpyregister64.so
+src/pylowasm/bin/64/pyregister.dll

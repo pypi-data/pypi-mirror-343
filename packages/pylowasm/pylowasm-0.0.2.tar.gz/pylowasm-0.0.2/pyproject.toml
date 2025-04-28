@@ -1,0 +1,24 @@
+[build-system]
+requires = [
+    "wheel",
+    "setuptools-scm[toml]>=8.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pylowasm"
+version = "0.0.2"
+description = "Low Level wrapper for python"
+requires-python = ">=3.11"
+authors = [{name="Jhonata Rios Carneiro", email="jhonatacarneirorios432@gmail.com"}]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["pylowasm*"]
+
+[tool.setuptools.package-data]
+"pylowasm" = ["bin/*", "bin/**/*"]
