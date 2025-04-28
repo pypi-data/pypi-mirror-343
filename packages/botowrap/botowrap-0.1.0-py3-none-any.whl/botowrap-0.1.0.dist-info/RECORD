@@ -1,0 +1,12 @@
+botowrap/__init__.py,sha256=26oNp-2gzitDKEzxPTwafPerquS3MikvDbhRMbm0sJU,510
+botowrap/core.py,sha256=HsTLWuH2pGCNAQrLtRRYhJ2tUSsX2vYg04ygKztNy8k,1187
+botowrap/core.pyi,sha256=tjigUNDVtxy6_K_aylgp5SeD_dzofmsRpVe7XTJrO2w,773
+botowrap/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+botowrap/extensions/__init__.py,sha256=CMiMpyvt5irK1Ao1sAdfZxzY5c3aIujyKJDswArMQxo,70
+botowrap/extensions/dynamodb.py,sha256=M71EtMNqTIk1PAGTBLX5CARonza3TwxE3kTQ021tdq4,8359
+botowrap/extensions/dynamodb.pyi,sha256=qhDvsZb1rDoIlIVLtyDIX6ddCnk4rKn3PWWZYFFAjPo,2560
+botowrap-0.1.0.dist-info/licenses/LICENSE,sha256=vinaU75M41uSQ2AjB8PdwqRLypKgqNheB0pmt6k2Utg,1066
+botowrap-0.1.0.dist-info/METADATA,sha256=xFman64lgQMwLwI77gGzqe0MoYi7aTe2iUxBXTOEGk0,6768
+botowrap-0.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+botowrap-0.1.0.dist-info/top_level.txt,sha256=vn0_g-I8IxxyEp6MBhFj8kENGFNRXP4dpldSIJMDbPo,9
+botowrap-0.1.0.dist-info/RECORD,,
