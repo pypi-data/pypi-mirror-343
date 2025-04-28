@@ -1,0 +1,13 @@
+crdl/__init__.py,sha256=PYTr4MQir3Lz6uegQ15dB-Oum-Egmly4Ffpy2CeWBPI,36
+crdl/api.py,sha256=Exp0wI1m_xWqFPv3BwVmyIN0i5pABZUfIX0J1PMPZRo,28268
+crdl/cli.py,sha256=rTuGW0LrRNFyJimWtcogjt99WqaUfNd0fR6O3UCwO68,25068
+crdl/config.py,sha256=2-4vA_3hiLTiuYiwqAs0RFhq9fZFfmeVNfZVYXql4e8,4732
+crdl/downloader.py,sha256=VM1jfGj7RvtENWRwGEAxywocELIIO5vYvvZKtkZ3LAo,50940
+crdl/drm_utils.py,sha256=e40YrcfoEPY3zPjGpZVPS3lJAwuNDw53BNs8Kib6IC4,15956
+crdl/media_utils.py,sha256=EFOinOJ7aYF555KChG3nEdcz9RuFyiIuYyunVtR1-ug,29426
+crdl/version.py,sha256=CzcXzRPJNqTNVzWp48bKd5k9CaHSjpVkLYKkiQcGpAY,21
+crdl-0.0.6.dist-info/METADATA,sha256=B60X31xbFWZ0f_7QIThmjmFDiKFP8H6iabOHeFteIGc,5365
+crdl-0.0.6.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+crdl-0.0.6.dist-info/entry_points.txt,sha256=Fulx3EdgGGLTljpB-moVl0TQz4dqqNqIkKCFkrit6EY,39
+crdl-0.0.6.dist-info/top_level.txt,sha256=i5RHiVPhPNIsXqqyv5IfcLOsli3fEvVC922_ens2NB8,5
+crdl-0.0.6.dist-info/RECORD,,
