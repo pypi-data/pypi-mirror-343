@@ -1,0 +1,130 @@
+Metadata-Version: 2.4
+Name: vassure_ai
+Version: 1.0.9
+Summary: VAssureAI Test Automation Framework
+Author: Sukumar Kutagulla
+Author-email: sukumar.kutagulla@vassureai.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Testing
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: browser-use==0.1.41
+Requires-Dist: pytest==8.3.5
+Requires-Dist: pytest-asyncio==0.26.0
+Requires-Dist: pytest-html==4.1.1
+Requires-Dist: pytest-metadata==3.1.1
+Requires-Dist: pytest-timeout==2.3.1
+Requires-Dist: pytest-xdist==3.6.1
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: langchain==0.3.22
+Requires-Dist: langchain-google-genai==2.1.2
+Requires-Dist: pydantic==2.10.4
+Requires-Dist: psutil==7.0.0
+Requires-Dist: plotly==5.18.0
+Requires-Dist: reportlab==4.0.0
+Requires-Dist: pillow==10.0.0
+Requires-Dist: black==24.1.0
+Requires-Dist: flake8==7.0.0
+Requires-Dist: mypy==1.8.0
+Requires-Dist: pytest-cov==4.1.0
+Requires-Dist: PyPDF2==3.0.0
+Requires-Dist: watchdog==3.0.0
+Requires-Dist: Jinja2==3.1.0
+Requires-Dist: click==8.1.8
+Requires-Dist: markdown==3.3.0
+Requires-Dist: weasyprint==52.5
+Requires-Dist: imgkit==1.2.2
+Requires-Dist: Pillow==10.0.0
+Requires-Dist: wkhtmltopdf==0.12.6
+Requires-Dist: imgkit==1.2.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+"""
+-----------------------
+Author: Sukumar Kutagulla (Read-only)
+Designation: Test Automation Architect (Read-only)
+-----------------------
+"""
+
+# VAssureAI Framework Developer Guide
+Version: 1.0.9
+
+## Quick Start
+
+1. Install via pip:
+```bash
+pip install vassure-ai
+```
+
+2. Initialize project:
+```bash
+vassure init
+```
+
+3. Place test specification PDFs in `input_pdfs/` directory
+
+4. Run tests:
+```bash
+vassure run
+```
+
+## Basic Project Structure
+```
+project/
+â”œâ”€â”€ input_pdfs/     # Place PDF specifications here
+â”œâ”€â”€ logs/           # Execution logs
+â”œâ”€â”€ reports/        # Test reports
+â”‚   â”œâ”€â”€ html/      # HTML format reports
+â”‚   â””â”€â”€ pdf/       # PDF format reports
+â”œâ”€â”€ screenshots/    # Test screenshots  
+â”œâ”€â”€ videos/        # Test recordings
+â”œâ”€â”€ tests/         # Generated test files
+â”œâ”€â”€ metrics/       # Test performance metrics
+â”‚   â””â”€â”€ metrics_data/ # Raw metrics data
+â”œâ”€â”€ .env          # Environment configuration
+â”œâ”€â”€ conftest.py   # Test configuration
+â”œâ”€â”€ pytest.ini    # Pytest configuration
+â””â”€â”€ README.md     # Project documentation
+```
+
+## Minimum Requirements
+- Python 3.8+
+- Chrome/Chromium browser
+- PDF reader
+
+## Configuration
+Create a `.env` file in your project root with these settings:
+```
+# Browser configuration
+BROWSER_TYPE=chromium  # chromium, firefox, webkit
+BROWSER_HEADLESS=false
+BROWSER_RECORD_VIDEO=true
+BROWSER_TIMEOUT=30000
+
+# AI model configuration
+LLM_API_KEY=your-api-key-here
+LLM_MAX_TOKENS=4096
+
+# Test execution configuration
+RETRY_MAX_RETRIES=2
+RETRY_ON_NETWORK=true
+```
+
+## Documentation
+- See userguide.md for detailed usage instructions
+- See technicalguide.md for technical details
+
+## Support
+For technical support or questions, please contact support@vassureai.com
