@@ -1,0 +1,13 @@
+setup.py
+archerqueen/__init__.py
+archerqueen/experiment5.py
+archerqueen/experiment6.py
+archerqueen/experiment7.py
+archerqueen/experiment8.py
+archerqueen/main.py
+archerqueen.egg-info/PKG-INFO
+archerqueen.egg-info/SOURCES.txt
+archerqueen.egg-info/dependency_links.txt
+archerqueen.egg-info/entry_points.txt
+archerqueen.egg-info/requires.txt
+archerqueen.egg-info/top_level.txt

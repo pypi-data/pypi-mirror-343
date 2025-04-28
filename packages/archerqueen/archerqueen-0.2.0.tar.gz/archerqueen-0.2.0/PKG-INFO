@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: archerqueen
+Version: 0.2.0
+Summary: Advanced data analysis toolkit
+Author: Incineroar
+Requires-Python: >=3.6
