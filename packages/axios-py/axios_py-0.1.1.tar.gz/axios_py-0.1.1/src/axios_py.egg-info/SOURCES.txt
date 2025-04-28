@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/axios/__init__.py
+src/axios/async_client.py
+src/axios/core.py
+src/axios/http_client.py
+src/axios/rate_limiter.py
+src/axios/types.py
+src/axios_py.egg-info/PKG-INFO
+src/axios_py.egg-info/SOURCES.txt
+src/axios_py.egg-info/dependency_links.txt
+src/axios_py.egg-info/requires.txt
+src/axios_py.egg-info/top_level.txt

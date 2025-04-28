@@ -1,0 +1,92 @@
+Metadata-Version: 2.4
+Name: axios-py
+Version: 0.1.0
+Summary: A Python implementation of the Axios HTTP client with custom HTTP client
+Home-page: https://github.com/avijitsen/axios-py
+Author: Avijit Sen
+Author-email: Avijit Sen <avijitsen@example.com>
+Project-URL: Homepage, https://github.com/avijitsen/axios-py
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp>=3.8.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.18.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: ruff>=0.0.200; extra == "dev"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# axios-py
+
+A Python implementation of the Axios HTTP client, inspired by the popular JavaScript library.
+
+## Installation
+
+You can install axios-py using pip:
+
+```bash
+pip install axios-py
+```
+
+For development installation:
+
+```bash
+git clone https://github.com/yourusername/axios-py.git
+cd axios-py
+pip install -e .
+```
+
+## Usage
+
+Basic usage:
+
+```python
+from axios import Axios, AxiosRequestConfig
+
+# Create an Axios instance
+axios = Axios()
+
+# Make a GET request
+response = axios.get("https://api.example.com/data")
+print(response.data)
+
+# Make a POST request with data
+data = {"key": "value"}
+response = axios.post("https://api.example.com/data", data=data)
+print(response.data)
+```
+
+For more examples, see the `examples` directory:
+- `basic_usage.py`: Basic HTTP methods and configurations
+- `advanced_features.py`: Advanced features like timeouts and response handling
+- `response_handling.py`: Response processing examples
+- `complete_example.py`: Complete real-world example
+
+## Features
+
+- Simple and intuitive API
+- Support for all HTTP methods
+- Request configuration
+- Response handling
+- Error handling
+- Type hints for better IDE support
+
+## License
+
+MIT License 
