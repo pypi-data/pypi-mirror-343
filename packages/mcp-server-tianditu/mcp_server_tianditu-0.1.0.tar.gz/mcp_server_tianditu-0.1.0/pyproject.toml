@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-server-tianditu"
+version = "0.1.0"
+authors = [
+    { name="baihe", email="bailaohe@gmail.com" },
+]
+description = "天地图MCP服务"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "httpx"
+]
+
+[tool.setuptools]
+include-package-data = true
+package-dir = {"" = "src"}
+
+[project.scripts]
+mcp-server-tianditu = "mcp_tianditu:main"
