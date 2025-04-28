@@ -1,0 +1,5 @@
+[console_scripts]
+compare_distribution=darum.compare_distribution:main
+dafny_measure=darum.dafny_measure:main
+plot_distribution=darum.plot_distribution:main
+
