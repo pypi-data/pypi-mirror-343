@@ -1,0 +1,47 @@
+[project]
+name = "gnssrtc"
+version = "0.4.0"
+description = "Modern, type-safe, zero-dependency python library for controlling GNSS RTC for the Raspberry Pi"
+authors = [{ name = "michealroberts", email = "michael@observerly.com" }]
+maintainers = [{ name = "Michael Roberts", email = "michael@observerly.com" }]
+keywords = ["gps", "gnss", "real-time-controller", "raspberry-pi"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.13",
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.13"
+dependencies = [
+    "gpiozero>=2.0.1",
+    "ntps>=0.2.0",
+    "pyserial>=3.5",
+    "rich>=14.0.0",
+]
+
+[project.urls]
+Source = "https://github.com/michealroberts/gnssrtc"
+Issues = "https://github.com/michealroberts/gnssrtc/issues"
+PullRequests = "https://github.com/michealroberts/gnssrtc/pulls"
+Discussions = "https://github.com/michealroberts/gnssrtc/discussions"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "pre-commit>=4.1.0",
+    "pytest>=8.3.4",
+    "pytest-asyncio>=0.25.3",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.9.7",
+    "types-pyserial>=3.5.0.20250304",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [".", "src"]
+asyncio_default_fixture_loop_scope = "session"
