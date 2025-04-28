@@ -1,0 +1,2 @@
+[console_scripts]
+filechunker = pyfilechunker.__main__:app

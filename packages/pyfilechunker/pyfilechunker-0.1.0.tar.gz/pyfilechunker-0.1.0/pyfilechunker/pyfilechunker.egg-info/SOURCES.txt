@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+pyfilechunker/FileChunker.py
+pyfilechunker/__init__.py
+pyfilechunker/__main__.py
+pyfilechunker/pyfilechunker.egg-info/PKG-INFO
+pyfilechunker/pyfilechunker.egg-info/SOURCES.txt
+pyfilechunker/pyfilechunker.egg-info/dependency_links.txt
+pyfilechunker/pyfilechunker.egg-info/entry_points.txt
+pyfilechunker/pyfilechunker.egg-info/requires.txt
+pyfilechunker/pyfilechunker.egg-info/top_level.txt
+tests/test_chunker.py
