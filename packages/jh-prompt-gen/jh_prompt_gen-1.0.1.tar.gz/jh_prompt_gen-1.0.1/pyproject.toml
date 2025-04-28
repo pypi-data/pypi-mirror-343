@@ -1,0 +1,45 @@
+[project]
+name = "jh-prompt-gen"
+version = "1.0.1"
+description = "A small toolkit to collect code from local directories and automatically generate ChatGPT prompts."
+readme = "README.md"
+requires-python = ">=3.7"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+  { name = "Dev-CorliJoni" }
+]
+keywords = ["prompt", "cli", "code", "chatgpt", "automation"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Environment :: Console",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Code Generators"
+]
+
+dynamic = ["dependencies"]
+
+[project.urls]
+GitHub     = "https://github.com/Dev-CorliJoni/jh-prompt-gen"
+Instagram  = "https://www.instagram.com/dev.corlijoni/"
+
+[tool.setuptools]
+py-modules = ["jh_copy_clipboard", "jh_gen_prompt"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = "requirements.txt" }
+
+[project.scripts]
+jh-copy-clipboard = "jh_copy_clipboard:main"
+jh-gen-prompt = "jh_gen_prompt:main"
+
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
