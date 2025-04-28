@@ -1,0 +1,9 @@
+setup.py
+yunwu_gpt_service/__init__.py
+yunwu_gpt_service/__main__.py
+yunwu_gpt_service.egg-info/PKG-INFO
+yunwu_gpt_service.egg-info/SOURCES.txt
+yunwu_gpt_service.egg-info/dependency_links.txt
+yunwu_gpt_service.egg-info/entry_points.txt
+yunwu_gpt_service.egg-info/requires.txt
+yunwu_gpt_service.egg-info/top_level.txt

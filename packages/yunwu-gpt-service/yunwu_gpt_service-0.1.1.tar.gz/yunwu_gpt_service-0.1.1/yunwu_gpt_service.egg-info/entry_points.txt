@@ -1,0 +1,2 @@
+[console_scripts]
+yunwu-gpt-service = yunwu_gpt_service.__main__:main
