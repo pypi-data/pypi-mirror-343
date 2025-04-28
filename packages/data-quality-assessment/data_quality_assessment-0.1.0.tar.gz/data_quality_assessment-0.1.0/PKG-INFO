@@ -1,0 +1,183 @@
+Metadata-Version: 2.4
+Name: data-quality-assessment
+Version: 0.1.0
+Summary: A powerful web application for assessing data quality issues
+Home-page: https://github.com/godwinwa/data-quality-app
+Author: Godwin Wa
+Author-email: godwinacheampong89@gmail.com
+Project-URL: Bug Reports, https://github.com/godwinwa/data-quality-app/issues
+Project-URL: Source, https://github.com/godwinwa/data-quality-app
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Flask
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: blinker==1.9.0
+Requires-Dist: cachelib==0.13.0
+Requires-Dist: click==8.1.8
+Requires-Dist: Flask==3.1.0
+Requires-Dist: Flask-Session==0.8.0
+Requires-Dist: gunicorn==23.0.0
+Requires-Dist: itsdangerous==2.2.0
+Requires-Dist: Jinja2==3.1.6
+Requires-Dist: MarkupSafe==3.0.2
+Requires-Dist: msgspec==0.19.0
+Requires-Dist: narwhals==1.34.1
+Requires-Dist: numpy==2.2.4
+Requires-Dist: packaging==24.2
+Requires-Dist: pandas==2.2.3
+Requires-Dist: plotly==6.0.1
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: pytz==2025.2
+Requires-Dist: setuptools==78.1.0
+Requires-Dist: six==1.17.0
+Requires-Dist: tzdata==2025.2
+Requires-Dist: Werkzeug==3.1.3
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Data Quality Assessment Tool
+
+![Data Quality Banner](https://img.shields.io/badge/Data%20Quality-Assessment%20Tool-blue)
+![Python](https://img.shields.io/badge/Python-3.8+-green.svg)
+![Flask](https://img.shields.io/badge/Flask-2.3.3-red.svg)
+![Pandas](https://img.shields.io/badge/Pandas-2.0.3-yellow.svg)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+
+A powerful web application for quickly assessing data quality issues in datasets. This tool automatically identifies missing values, outliers, data type inconsistencies, and duplicate records, helping data professionals save time and improve data reliability.
+
+![Screenshot](images/dqa_ss_1.png)
+![Screenshot](images/dqa_ss_2.png)
+![Screenshot](images/dqa_ss_3.png)
+![Screenshot](images/dqa_ss_4.png)
+
+## 🌟 Features
+
+- **Comprehensive Quality Analysis**
+  - Missing value detection and visualization
+  - Outlier identification using statistical methods
+  - Data type consistency validation
+  - Duplicate record detection
+
+- **Interactive Visualizations**
+  - Visual representation of data quality issues
+  - Dynamic charts showing data distribution
+  - Clear indicators of problematic areas
+
+- **Flexible Input Support**
+  - CSV file support
+  - Excel file compatibility
+  - JSON data processing
+
+- **Detailed Reporting**
+  - Downloadable quality reports
+  - Actionable insights for data cleaning
+  - Summarized quality metrics
+
+## 📋 Installation
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/godwinwa/data-quality-app.git
+cd data-quality-assessment-tool
+
+Create and activate a virtual environment
+
+bashpython -m venv dqa-env
+source dqa-env/bin/activate  # On Windows: dqa-env\Scripts\activate
+
+Install dependencies
+
+bashpip install -r requirements.txt
+
+Run the application
+
+bashpython app.py
+
+Access the tool
+
+Open your browser and go to: http://localhost:5000
+🚀 Usage
+
+Upload your dataset
+
+Click the "Upload" button on the homepage
+Select a CSV, Excel, or JSON file
+Click "Analyze Data"
+
+
+Review the analysis
+
+Examine the summary statistics
+Explore interactive visualizations
+Review detailed quality issues by category
+
+
+Export results
+
+Download the complete quality report
+Use insights to clean and improve your data
+
+
+
+📊 Data Quality Checks
+Missing Values Analysis
+
+- Identifies columns with missing data
+- Calculates the percentage of missing values in each field
+- Highlights fields requiring data completion
+
+Outlier Detection
+
+- Uses statistical methods (IQR or Z-score)
+- Identifies numerical values that significantly deviate from the norm
+- Provides visual representation of outlier distribution
+
+Data Type Consistency
+
+- Validates that data conforms to expected types
+- Identifies potential type mismatches or conversion opportunities
+- Suggests appropriate data type transformations
+
+Duplicate Detection
+
+- Finds exact duplicate records
+- Highlights columns with high duplication rates
+- Calculates duplication percentages across the dataset
+
+🔧 Technical Architecture
+
+Backend: Flask web framework
+Data Processing: Pandas, NumPy
+Visualization: Plotly
+Frontend: Bootstrap, HTML/CSS/JavaScript
+
+🤝 Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+Fork the repository
+Create your feature branch (git checkout -b feature/amazing-feature)
+Commit your changes (git commit -m 'Add some amazing feature')
+Push to the branch (git push origin feature/amazing-feature)
+Open a Pull Request
+
+📜 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+📬 Contact
+Have questions or suggestions? Feel free to reach out!
+
+Made with ❤️ by G

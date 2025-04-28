@@ -1,0 +1,15 @@
+include README.md
+include LICENSE
+include requirements.txt
+recursive-include data_quality_assessment/templates *
+recursive-include data_quality_assessment/static *
+recursive-include data_quality_assessment *.html
+recursive-include data_quality_assessment *.css
+recursive-include data_quality_assessment *.js
+recursive-include data_quality_assessment *.png
+recursive-include data_quality_assessment *.jpg
+recursive-include data_quality_assessment *.ico
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .DS_Store
+global-exclude .git*
