@@ -1,0 +1,16 @@
+build/
+dist/
+*.egg-info
+__pycache__
+gm_notebooks
+create.sh
+.__*
+*_cxx.d
+*_cxx.so
+*_cxx_ACLiC*
+deprecated
+.ipynb_checkpoints
+quickstats/macros/CMSSWCore*/
+quickstats/macros/ATLASSWCore/
+quickstats/resources/workspace_extensions.json
+
