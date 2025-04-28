@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "winiTranslate"
+version = "0.1"
+description = "Un module pour traduire, détecter et afficher les langues supportées par winiTranslate."
+authors = [
+    { name = "soldat205", email = "winhardydev@gmail.com" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+dependencies = [
+    "googletrans==4.0.0rc1"
+]
+requires-python = ">=3.7"

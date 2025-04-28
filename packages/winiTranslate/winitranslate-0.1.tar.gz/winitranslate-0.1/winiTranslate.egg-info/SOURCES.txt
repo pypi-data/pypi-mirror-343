@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+winiTranslate/__init__.py
+winiTranslate/detect.py
+winiTranslate/list.py
+winiTranslate/translate.py
+winiTranslate.egg-info/PKG-INFO
+winiTranslate.egg-info/SOURCES.txt
+winiTranslate.egg-info/dependency_links.txt
+winiTranslate.egg-info/requires.txt
+winiTranslate.egg-info/top_level.txt
