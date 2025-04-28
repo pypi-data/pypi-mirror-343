@@ -1,0 +1,62 @@
+[project]
+name = "gradelib"
+version = "0.2.0" # Updated from 0.1.8 for the new release
+description = "A library for managing github and taiga projects."
+authors = [
+    { name = "Ben Meddeb", email = "bmeddeb@asu.edu" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: Apache Software License", # Or Apache-2.0
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Version Control :: Git",
+]
+
+
+dependencies = [
+    "aiohttp>=3.11.18",
+    "maturin>=1.8.3",
+    "mkdocs>=1.6.1",
+    "mkdocs-awesome-pages-plugin>=2.10.1",
+    "mkdocs-material>=9.6.12",
+    "pip>=25.0.1",
+    "pyclean>=3.1.0",
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "toml>=0.10.2",
+    "nest_asyncio>=1.5.5",  # Added as a core dependency
+]
+
+[project.optional-dependencies]
+web = [
+    "flask>=2.0.0",
+]
+
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project.urls]
+Homepage = "https://bmeddeb.github.io/gradelib/"
+Repository = "https://github.com/bmeddeb/gradelib"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+module-name = "gradelib.gradelib"
+bindings = "pyo3"
+python-source = "python"
+include = ["gradelib/py.typed"]
+
+# If using a src layout for Python code (not just Rust):
+# src-dir = "src"
