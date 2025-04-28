@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+pdap_access_manager/AccessManager.py
+pdap_access_manager/__init__.py
+pdap_access_manager.egg-info/PKG-INFO
+pdap_access_manager.egg-info/SOURCES.txt
+pdap_access_manager.egg-info/dependency_links.txt
+pdap_access_manager.egg-info/requires.txt
+pdap_access_manager.egg-info/top_level.txt
