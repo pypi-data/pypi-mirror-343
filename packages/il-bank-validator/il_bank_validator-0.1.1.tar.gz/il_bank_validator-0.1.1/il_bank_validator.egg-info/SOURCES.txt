@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+il_bank_validator/__init__.py
+il_bank_validator/exceptions.py
+il_bank_validator/validator.py
+il_bank_validator.egg-info/PKG-INFO
+il_bank_validator.egg-info/SOURCES.txt
+il_bank_validator.egg-info/dependency_links.txt
+il_bank_validator.egg-info/top_level.txt
+tests/test_validator.py
