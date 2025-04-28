@@ -1,0 +1,13 @@
+alteza/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alteza/__main__.py,sha256=-l5BNPiCuyft1rqFOjTZXwTmnjbZGEH_-Ld9C4CDPI8,251
+alteza/content.py,sha256=M7RFasBL9YqArMVPkSYFWLVn79sxYYPM1ux_K0okK1Q,11162
+alteza/driver.py,sha256=LvAjpt23TzqoS95MwbVLzYlo9oi7z6kHtjYMsa10iZ4,7286
+alteza/fs.py,sha256=1mOFDCrBs4fTqeS5VkCADExebbbkcyYNaLtzByqd_ng,17392
+alteza/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alteza/version.py,sha256=UCflYyv66GrFOH-y8vig2Us0mz9ojDvFp86VClFODmU,291
+alteza-0.9.7.dist-info/licenses/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+alteza-0.9.7.dist-info/METADATA,sha256=hBWYId57yS7NMobTQsokfKo1pChUj6ApYCArzteV6xw,31051
+alteza-0.9.7.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+alteza-0.9.7.dist-info/entry_points.txt,sha256=M7GnPBSSLX_mIlhUP4pUU8dl4HVsvfxIHIaHATlwvfo,48
+alteza-0.9.7.dist-info/top_level.txt,sha256=XZZSAAi3cE6ztGlkSB9hap2K3Ix5L37-O96KjkMGOTU,7
+alteza-0.9.7.dist-info/RECORD,,
