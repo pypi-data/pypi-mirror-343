@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background:white">
+  <!-- Background landscape -->
+  <rect x="0" y="200" width="400" height="100" fill="#ddd"/>
+  <path d="M50 220 Q 200 180 350 220" stroke="black" fill="none"/>
+  
+  <!-- Human -->
+  <circle cx="120" cy="150" r="20" fill="none" stroke="black"/>
+  <path d="M120 170 l0 30 M120 170 l-15 20 M120 170 l15 20" stroke="black"/>
+  <path d="M120 200 l-40 40 M120 200 l40 40" stroke="black"/>
+  <path d="M80 170 l40 -30 l40 30" stroke="black" fill="none"/> <!-- Sword -->
+  <text x="60" y="130" font-family="Comic Sans MS" font-size="12">"But I have imagination!"</text>
+  
+  <!-- AI Robot -->
+  <rect x="240" cy="160" width="40" height="60" fill="none" stroke="black"/>
+  <circle cx="260" cy="140" r="10" fill="none" stroke="black"/>
+  <rect x="250" y="180" width="20" height="40" fill="none" stroke="black"/>
+  <path d="M230 220 l20 20 M290 220 l-20 20" stroke="black"/> <!-- Legs -->
+  <path d="M220 160 l20 -20 M300 160 l-20 -20" stroke="black"/> <!-- Arms -->
+  <rect x="260" y="120" width="40" height="20" fill="none" stroke="black"/> <!-- Shield -->
+  <text x="280" y="190" font-family="Comic Sans MS" font-size="12">"But I have data!"</text>
+  
+  <!-- Battle effects -->
+  <path d="M200 140 l-10 -20 l20 10 l-10 10" stroke="black" fill="none"/>
+  <path d="M200 160 l10 20 l-20 -10 l10 -10" stroke="black" fill="none"/>
+  
+  <!-- Ground cracks -->
+  <path d="M190 240 l5 -10 M200 235 l-5 15 M210 245 l10 -8" stroke="black"/>
+</svg>
