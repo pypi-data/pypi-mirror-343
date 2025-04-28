@@ -1,0 +1,11 @@
+EVENT_PACKAGE/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+EVENT_PACKAGE/cli.py,sha256=lVVnjnZL3wJyDby3gpv0Wubr_pmBrPvuF58E3XOPRWI,50
+EVENT_PACKAGE/daily_event.py,sha256=nVCT4mdV7oMgD6H0jhnoPOEn2R5SVbM7LNc0i7wl-ns,29520
+EVENT_PACKAGE/debugger_daily.py,sha256=JnKLzQQTWhL3eqdtzn63XaxyX4rFo5TTHk1EWqLwYsE,29270
+EVENT_PACKAGE/hourly_event.py,sha256=enNNIm5J7eZlNKxQlAvstI2KW3877dDdWeXhPWPMAIU,29681
+EVENT_PACKAGE/try_except vs try_finally.py,sha256=o4Av8N2zTh44kHopQRnbWHYpDP4U7UKtsKUjy1Jl6n8,201
+event_package-0.1.7.dist-info/METADATA,sha256=M29-Rytsyeb93uKbO3sBkc2t9yz_QTR6WXaAi6dNu3c,4144
+event_package-0.1.7.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+event_package-0.1.7.dist-info/entry_points.txt,sha256=Wdz8yHa_tLa1r90nE1OEsnovPAgLgfPvaFT7C0vBtEY,58
+event_package-0.1.7.dist-info/top_level.txt,sha256=aRlN1E88Mm7IYKMpG9R4xcgjUDZc7FuhhNBKXdakS_w,14
+event_package-0.1.7.dist-info/RECORD,,
