@@ -1,0 +1,60 @@
+import json
+from .chat_base import handle_user_inputs
+from .history import output_chat_history
+from .interrupt import run_with_interrupt_check
+from .lib import get_abilities
+from .message import  clear_chat_data, CHAT_DATA, INPUT_MESSAGE
+import json
+import tempfile
+import asyncio
+from secondbrain import utils
+
+            
+def chat(bot_setting_file: str):
+    conversation_history = []
+    cwd = None
+    
+    while True:
+        with open(bot_setting_file, encoding="utf-8") as f:
+            bot_setting = json.load(f)
+        abilities = get_abilities(bot_setting)
+        cwd = bot_setting["specifiedWorkingDirectory"]
+        if cwd is None:
+            cwd = tempfile.mkdtemp()
+
+        clear_chat_data()
+        input_text = input()
+        if not input_text.startswith(INPUT_MESSAGE):
+            raise ValueError("Invalid message")
+        message = json.loads(input_text[len(INPUT_MESSAGE) :])
+        user_input = message["content"]
+        params = utils.params
+        
+        assert "interruptFile" in params
+        asyncio.run(
+            run_with_interrupt_check(
+                conversation_history,
+                user_input,
+                cwd,
+                abilities,
+                bot_setting,
+                bot_setting_file,
+                params["interruptFile"],
+            )
+        )
+        output_chat_history(bot_setting_file, conversation_history)
+
+
+def get_chat_response(bot_setting_file: str, user_input: str):
+    with open(bot_setting_file, encoding="utf-8") as f:
+        bot_setting = json.load(f)
+    abilities = get_abilities(bot_setting)
+    cwd = tempfile.mkdtemp()
+    conversation_history = []
+    asyncio.run(
+        handle_user_inputs(
+            conversation_history, user_input, cwd, abilities, bot_setting, bot_setting_file
+        )
+    )
+
+    return CHAT_DATA["info"]
