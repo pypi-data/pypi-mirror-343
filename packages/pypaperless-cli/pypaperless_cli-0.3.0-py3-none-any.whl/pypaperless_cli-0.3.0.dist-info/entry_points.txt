@@ -1,0 +1,3 @@
+[console_scripts]
+pngx=pypaperless_cli.app:launch
+
