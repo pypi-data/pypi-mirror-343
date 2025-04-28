@@ -1,0 +1,7 @@
+# Default settings for password generation, scoring, etc.
+
+DEFAULT_MIN_LENGTH = 8
+DEFAULT_MIN_UPPERCASE = 1
+DEFAULT_MIN_LOWERCASE = 1
+DEFAULT_MIN_DIGITS = 1
+DEFAULT_MIN_SPECIAL = 1
