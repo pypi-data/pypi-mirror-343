@@ -1,0 +1,13 @@
+click>=4.1
+sqlparse>=0.1.19
+psycopg>=3.0.10
+
+[dev]
+pytest>=6.2.4
+coverage
+codecov>=1.5.1
+pre-commit>=1.16.0
+configobj>=5.0.6
+ruff>=0.11.7
+tox>=4.8.0
+pdbpp>=0.10.3
