@@ -1,0 +1,29 @@
+[project]
+name = "automatic-youtube-maker-story"
+version = "0.2"
+home-page = "https://github.com/illiamw/illiamw"
+description = ""
+authors = [
+    {name = "William Ferreira",email = "33575357+illiamw@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "torch (>=2.3,<2.4)",
+    "torchvision (>=0.18,<0.19)",
+    "torchaudio (>=2.3,<2.4)",
+    "gitpython (>=3.1.44,<4.0.0)",
+    "requests (>=2.32.3,<3.0.0)",
+    "pyyaml (>=6.0.2,<7.0.0)",
+    "narration-xtts2 (>=1.0.6,<2.0.0)",
+    "story-chilren-gemma3 (>=0.1.21,<0.2.0)",
+    "story-children-video-maker (>=0.1.2,<0.2.0)"
+]
+
+[tool.poetry]
+packages = [{include = "automatic_youtube_maker_story", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
