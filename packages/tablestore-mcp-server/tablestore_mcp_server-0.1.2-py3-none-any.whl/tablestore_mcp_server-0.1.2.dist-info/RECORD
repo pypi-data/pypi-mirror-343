@@ -1,0 +1,13 @@
+tablestore_mcp_server/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tablestore_mcp_server/main.py,sha256=r1clNTNUoh4McOyVhB6WCTPvWKMPAghgTsUYoY84oMA,570
+tablestore_mcp_server/server.py,sha256=iy2KjTfw3eQl9rql-CSpPca8XqwZtX7As08LAC-fSAU,1884
+tablestore_mcp_server/settings.py,sha256=SN2w_REan_F8SyRba4Z6dAuw7-AhmrjsP9axx1W66AM,2781
+tablestore_mcp_server/tablestore_connector.py,sha256=fsG7uWKQLo_8_IlBHCQ3hatuZT5KJ8I6H5EKiK4Ot-Y,5284
+tablestore_mcp_server/embedding/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tablestore_mcp_server/embedding/provider.py,sha256=AsbusGBCN9rur0owv6sEcpm02Wf-bzEmWdvr62mZ3KQ,890
+tablestore_mcp_server/embedding/type.py,sha256=J9JdUq8SG_YlizmGaayzCGQmiGIhy393UTEAu3z1rLM,93
+tablestore_mcp_server-0.1.2.dist-info/METADATA,sha256=Gm733q3EeeO31dW2n2ep2bdSinCopjzwC0AxJv3cF3U,1291
+tablestore_mcp_server-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tablestore_mcp_server-0.1.2.dist-info/entry_points.txt,sha256=xx0nQzBGYo3r_cTITt_Ddm41pBrCBj_6u5WMCY3-5Uk,74
+tablestore_mcp_server-0.1.2.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+tablestore_mcp_server-0.1.2.dist-info/RECORD,,
