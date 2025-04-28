@@ -1,0 +1,12 @@
+pillow
+coremltools
+torch
+numpy
+pydantic
+onnx
+onnxruntime
+onnxscript
+
+[dev]
+pytest
+build

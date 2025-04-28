@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "runlocal_tools"
+version = "0.0.2"
+authors = [
+  { name="RunLocal", email="founders@runlocal.ai" },
+]
+description = "Tools to make it easy to run models from different frameworks (CoreML, ONNX, TFLite, OpenVINO etc) easily, via a common interface"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pillow",
+    "coremltools",
+    "torch",
+    "numpy",
+    "pydantic",
+    "onnx",
+    "onnxruntime",
+    "onnxscript"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/neuralize-ai/runlocal_tools"
+"Bug Tracker" = "https://github.com/neuralize-ai/runlocal_tools/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]  # Root directory for packages
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "build",
+] 

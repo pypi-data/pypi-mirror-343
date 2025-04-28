@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: runlocal_tools
+Version: 0.0.2
+Summary: Tools to make it easy to run models from different frameworks (CoreML, ONNX, TFLite, OpenVINO etc) easily, via a common interface
+Author-email: RunLocal <founders@runlocal.ai>
+Project-URL: Homepage, https://github.com/neuralize-ai/runlocal_tools
+Project-URL: Bug Tracker, https://github.com/neuralize-ai/runlocal_tools/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pillow
+Requires-Dist: coremltools
+Requires-Dist: torch
+Requires-Dist: numpy
+Requires-Dist: pydantic
+Requires-Dist: onnx
+Requires-Dist: onnxruntime
+Requires-Dist: onnxscript
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Dynamic: license-file
+
+# RunLocal Tools
+
+Tools to make it easy to run models from different frameworks (CoreML, ONNX, TFLite, OpenVINO etc) easily, via a common interface 
