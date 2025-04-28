@@ -1,0 +1,14 @@
+epic_awesome_gamer/__init__.py,sha256=QCagHDHMnYvrNX-il1A1o-o7VcHAm9-pt863saTkcgw,291
+epic_awesome_gamer/collector.py,sha256=j3IB4hrTT-o4xHbg8ntINzhzE1_2IFU88ke6i668HV8,4841
+epic_awesome_gamer/epic_games.py,sha256=LGpxS3e-hRv_Wiq-lTKRyhGF180k2RZTfAvtySq9OJM,10041
+epic_awesome_gamer/types.py,sha256=2hPTU8BqzImaMw5z8JT0L2jc7MzFY69MyLMo61lqWmY,774
+epic_awesome_gamer/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+epic_awesome_gamer/cli/main.py,sha256=Rrgk0hwjI24kM0EV7-4rs5le94kvZT7XL94Q1ninvTI,4837
+epic_awesome_gamer/helper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+epic_awesome_gamer/helper/env_generator.py,sha256=8kKsJbUT-lXn2tMftU3siXii83nrSRI2mNKcf158twI,5429
+epic_awesome_gamer/helper/get_promotions.py,sha256=VoMYYdmu2BOxsopxfyHkgPJXdtevysHzph0tMhKuiGM,2119
+epic_awesome_gamer-0.4.0.dist-info/METADATA,sha256=sxWHZVwbgH9ASbnWoZdneUN-KsMFF9YzKVcY1s6Ep0w,3308
+epic_awesome_gamer-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+epic_awesome_gamer-0.4.0.dist-info/entry_points.txt,sha256=2_v478_za14oJ8v2Id6yUrofGGw6f0_X3g2ZYYTFRrE,58
+epic_awesome_gamer-0.4.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+epic_awesome_gamer-0.4.0.dist-info/RECORD,,
