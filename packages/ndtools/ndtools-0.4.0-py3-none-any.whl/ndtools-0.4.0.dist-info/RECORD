@@ -1,0 +1,11 @@
+ndtools/__init__.py,sha256=fLuZ9EP--QxY94ylkEEqGNBimxyITJdytuRSerE3NHc,447
+ndtools/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ndtools/comparison/__init__.py,sha256=afZq-oDaL-g-Hnpp8oATvqjzmDylK9YXwMJ6ey9ub5c,170
+ndtools/comparison/builtins.py,sha256=uqSxT8y3MrE5B-Ug14MSyJYkKSMorPAHu2KWBHN9_Mw,8614
+ndtools/comparison/comparables.py,sha256=k-o1zFNkqoB5MsZWMlvcMF_lE4ZWxDqwNQHBEnNnuV4,9090
+ndtools/comparison/operators.py,sha256=uHvlPkKsAQZsR9ZT_eq6D7g-mgXx3LOOMjL5E7OfJ0I,5843
+ndtools/comparison/utils.py,sha256=NrNe-7jPPhCYG0UaIrO3gvDB9ak7grhYTArgfE6Le1w,891
+ndtools-0.4.0.dist-info/METADATA,sha256=e7FvcP7qLpKvoYt6_z37jsQp1nHlVHI2j0SyWSg76ms,9144
+ndtools-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ndtools-0.4.0.dist-info/licenses/LICENSE,sha256=DNtAuT5Un8wiE__wjDMfJWemX4iPQe2U8Ocavu5B-SY,1071
+ndtools-0.4.0.dist-info/RECORD,,
