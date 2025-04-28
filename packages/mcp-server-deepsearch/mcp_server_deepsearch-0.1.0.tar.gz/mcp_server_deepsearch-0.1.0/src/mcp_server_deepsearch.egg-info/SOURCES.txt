@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/mcp_server_deepsearch/__init__.py
+src/mcp_server_deepsearch/__main__.py
+src/mcp_server_deepsearch/server.py
+src/mcp_server_deepsearch.egg-info/PKG-INFO
+src/mcp_server_deepsearch.egg-info/SOURCES.txt
+src/mcp_server_deepsearch.egg-info/dependency_links.txt
+src/mcp_server_deepsearch.egg-info/entry_points.txt
+src/mcp_server_deepsearch.egg-info/requires.txt
+src/mcp_server_deepsearch.egg-info/top_level.txt
