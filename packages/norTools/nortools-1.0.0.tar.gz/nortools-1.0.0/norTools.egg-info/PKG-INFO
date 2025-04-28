@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: norTools
+Version: 1.0.0
+Summary: A Python package for Dam, Dictor, and ScreenOpp utilities
+Author: Syed
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: flet
+Dynamic: author
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
