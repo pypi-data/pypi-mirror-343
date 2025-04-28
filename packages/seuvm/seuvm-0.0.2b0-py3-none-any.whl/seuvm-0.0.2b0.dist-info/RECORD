@@ -1,0 +1,15 @@
+seuvm/__init__.py,sha256=mQbO0OP7vQO1iEXe3HcLfGZKKn0xtKHVNrAtzfK7g3I,148
+seuvm/_misc.py,sha256=E36iyaUDktONxK1dTb5G6vA-yIyTEAseKNagjtAaO9I,514
+seuvm/_seuvmv0.py,sha256=HIoPJD6O8Lt-KSMuQLfc453LiAggJZqhe8dzaf62Oyc,2652
+seuvm/_seuvmv1l.py,sha256=XOnb-DVtsT9cJYEPRMKsB7mhOtMzjEEuyMPxAJaV7Ns,2242
+seuvm/_seuvmv1p.py,sha256=4pyHZ1_giBVzzQrrKaQr1axJpWutJV4mRKYJ8lxNfQk,2331
+seuvm/_seuvmv2.py,sha256=BVlHSTaO3C10ubXopz4uoKlo3txrlCb0lT7VBw3-ydo,2763
+seuvm/_coeffs/_seuvmv0_coeffs.nc,sha256=AH16DSRpAF51y51p2rdsBNJMX88CpjwckwjgkX08mvU,120276
+seuvm/_coeffs/_seuvmv1l_coeffs.nc,sha256=a4SrXYCmrnylR3k-zDjh1JwH0HoQV7WvRB2KV4SU71c,18284
+seuvm/_coeffs/_seuvmv1p_coeffs.nc,sha256=qYSCR2Ep_9IZF_gxqgD332FM8VHLO75ldvONGe6U0nE,20927
+seuvm/_coeffs/_seuvmv2l_coeffs.nc,sha256=PLtmXQXrecCyo4raX8to5R6je8yk9JB5fh0jDWLlgqI,68045
+seuvm-0.0.2b0.dist-info/licenses/LICENSE.txt,sha256=BRnsuxnCm7t5MDTmVqSew0WF3wZXylxOCzKiXxAuo8Y,603
+seuvm-0.0.2b0.dist-info/METADATA,sha256=4QR5ceP2bVvn0IWOsC6NYQM6HxplVss3_eNs8yVWyb0,952
+seuvm-0.0.2b0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+seuvm-0.0.2b0.dist-info/top_level.txt,sha256=U1sy5QM15jzSduEruhjRJzPlM8Ku3vficdXk8u7bbOU,6
+seuvm-0.0.2b0.dist-info/RECORD,,
