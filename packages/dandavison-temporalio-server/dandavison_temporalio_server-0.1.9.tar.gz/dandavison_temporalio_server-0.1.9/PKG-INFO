@@ -1,0 +1,97 @@
+Metadata-Version: 2.4
+Name: dandavison-temporalio-server
+Version: 0.1.9
+Summary: Python wrapper for the Temporal development server CLI
+Author-email: Dan Davison <dan.davison@temporal.io>
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: System :: Distributed Computing
+Requires-Python: >=3.9
+Provides-Extra: examples
+Requires-Dist: temporalio>=1.0.0; extra == 'examples'
+Description-Content-Type: text/markdown
+
+# Temporal Server Python Wrapper (Experimental)
+
+_[Experimental AI-generated prototype project; not intended for public use]_
+
+[![PyPI version](https://badge.fury.io/py/dandavison-temporalio-server.svg)](https://badge.fury.io/py/dandavison-temporalio-server)
+
+Installs and runs the Temporal development server (`temporal server start-dev`) via Python packaging (`uv`).
+
+Bundles the official pre-compiled `temporal` CLI binary (currently v1.3.0) for your platform within the `dandavison-temporalio-server` distribution package. The Python code is importable as `temporalio_server`.
+
+## Usage
+
+Provides the `temporal-server` command, wrapping `temporal server start-dev`.
+
+### Command Line
+
+Run without persistent install using `uvx`:
+
+```bash
+# Run with default settings (ports 7233/8233)
+uvx dandavison-temporalio-server temporal-server start-dev
+
+# Run with custom ports
+uvx dandavison-temporalio-server temporal-server start-dev --port 7234 --ui-port 8234
+```
+
+Install persistently into `uv` tool environment:
+
+```bash
+# Install the distribution package
+uv tool install dandavison-temporalio-server
+
+# Run the command (may require shell restart/rehash)
+temporal-server start-dev
+```
+
+### Python (Tests/Scripts)
+
+Provides `temporalio_server.DevServer` async context manager.
+
+Install with `[examples]` extra (includes `temporalio` SDK):
+
+```bash
+# Install into project environment
+uv pip install 'dandavison-temporalio-server[examples]'
+
+# Or add to pyproject.toml for uv add/sync
+# dandavison-temporalio-server = { version = "*", extras = ["examples"] }
+```
+
+Example usage:
+
+```python
+import asyncio
+from temporalio.client import Client
+from temporalio_server import DevServer
+
+async def main():
+    async with DevServer() as server:
+        client = await Client.connect(server.target)
+        print(f"Dev server ready at {server.target}")
+        # ... use client ...
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+See `example.py` for a runnable workflow/activity example.
+
+## Development
+
+*   **Setup:** `uv venv && uv sync --all-extras`
+*   **Build:** `uv build`
+*   **Run Example:** `uv run python example.py`
