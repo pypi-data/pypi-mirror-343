@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+linkedin_games_solver/__init__.py
+linkedin_games_solver/queens_solver.py
+linkedin_games_solver/solver.py
+linkedin_games_solver/tango_solver.py
+linkedin_games_solver/web_scraper.py
+linkedin_games_solver/zip_solver.py
+linkedin_games_solver.egg-info/PKG-INFO
+linkedin_games_solver.egg-info/SOURCES.txt
+linkedin_games_solver.egg-info/dependency_links.txt
+linkedin_games_solver.egg-info/entry_points.txt
+linkedin_games_solver.egg-info/requires.txt
+linkedin_games_solver.egg-info/top_level.txt
