@@ -1,0 +1,2 @@
+[console_scripts]
+aider-mcp-client = aider_mcp_client.client:main
