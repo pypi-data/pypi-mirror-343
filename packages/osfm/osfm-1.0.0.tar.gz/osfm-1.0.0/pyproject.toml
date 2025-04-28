@@ -1,0 +1,21 @@
+[project]
+name = "osfm"
+version = "1.0.0"
+description = "OSFM - Network System Management Made Simple"
+authors = [
+    {name = "Rishikesh Giridhar", email = "rishikesh.giridhar@outlook.com"}
+]
+dependencies = [
+    "PyQt5",
+    "win10toast",
+    "plyer",
+]
+requires-python = ">=3.11"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+script-files = ["osfm/__main__.py"]

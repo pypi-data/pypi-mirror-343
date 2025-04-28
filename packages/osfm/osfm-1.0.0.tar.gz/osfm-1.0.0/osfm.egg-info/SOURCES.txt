@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+osfm/__init__.py
+osfm/__main__.py
+osfm/client.py
+osfm/clientfunc.py
+osfm/server.py
+osfm/utils.py
+osfm.egg-info/PKG-INFO
+osfm.egg-info/SOURCES.txt
+osfm.egg-info/dependency_links.txt
+osfm.egg-info/requires.txt
+osfm.egg-info/top_level.txt
