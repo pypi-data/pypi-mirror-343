@@ -1,0 +1,2 @@
+[console_scripts]
+tablestore-mcp-server = tablestore_mcp_server.main:main
