@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: sonarqube-py
+Version: 0.7.0
+Summary: A python wrapper for the SonarQube web API
+License: MIT
+Keywords: sonarqube
+Author: Pat
+Author-email: itchyknee@gmail.com
+Requires-Python: >=3.11.9,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: PyYAML (>=6.0.1,<7.0.0)
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Project-URL: Repository, https://github.com/yantantether/sonarqube-py
