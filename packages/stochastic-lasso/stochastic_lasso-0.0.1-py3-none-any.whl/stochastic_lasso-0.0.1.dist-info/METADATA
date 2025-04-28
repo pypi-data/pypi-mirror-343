@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: stochastic-lasso
+Version: 0.0.1
+Summary: Stochastic LASSO
+Home-page: https://github.com/datax-lab/StochasticLASSO
+Author: Beomsu Baek
+Author-email: qorqjatn9145@gnu.ac.kr
+Keywords: variable selection,feature selection,lasso,high-dimensional data
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: glmnet
+Requires-Dist: tqdm
+
