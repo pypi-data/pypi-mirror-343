@@ -1,0 +1,15 @@
+quart_schema-0.22.0.dist-info/METADATA,sha256=l03KjmRrnNHFKq4sl8akzsgqRk2k64OXKIaWCC-9ME0,4904
+quart_schema-0.22.0.dist-info/WHEEL,sha256=tSfRZzRHthuv7vxpI4aehrdN9scLjk-dCJkPLzkHxGg,90
+quart_schema-0.22.0.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+quart_schema-0.22.0.dist-info/licenses/LICENSE,sha256=c52H1oR705KKyZ_WfmQPubP3YgddzoiVDSn5464ee9A,1050
+quart_schema/__init__.py,sha256=Zw-X6ZPvobthW-doSWdP5GGxubp_E1YDYQBCp0-ezvI,1762
+quart_schema/conversion.py,sha256=SP0ZDQ_3U3ZZq8xxRmr1bWWk4JaWxtXCBRynwzN0xs8,8958
+quart_schema/documentation.py,sha256=ugv1e8tluXoEbIXcYoGWDkVY6eOmAPeQow2vG7SkJkw,4208
+quart_schema/extension.py,sha256=y92dfgpBx-Y5FE5JblUY03wSaoMs7H6fAyYyYlZRH1w,15503
+quart_schema/mixins.py,sha256=5x4mgoQSmdNOlJRu4KPa8oAxuWbN3IbOzZiM7yxYvV8,3756
+quart_schema/openapi.py,sha256=dQgJxkwd1zgE3mr_M0B6G1JnIwwipW0mTS2B9An-bSE,19910
+quart_schema/py.typed,sha256=sow9soTwP9T_gEAQSVh7Gb8855h04Nwmhs2We-JRgZM,7
+quart_schema/pydantic.py,sha256=lTTjl9kNVuAS2YVjnqNk8-EXbV2z-2b-d96doJik0e4,1036
+quart_schema/typing.py,sha256=6D7fQb68E5Q0d_OaRNVWhw3GlaUL9WakHO-yNudB7ok,2490
+quart_schema/validation.py,sha256=Aq8J8hf8lfG48a337ohX9Dba_95gNJqYAtaBEpih7Ys,10103
+quart_schema-0.22.0.dist-info/RECORD,,
