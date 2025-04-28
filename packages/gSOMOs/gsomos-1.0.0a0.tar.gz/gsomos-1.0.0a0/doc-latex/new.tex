@@ -1,0 +1,76 @@
+\subsection{Diagonalization of \texorpdfstring{$\alpha$}{alpha} occupied orbitals onto \texorpdfstring{$\beta$}{beta} subspaces}
+
+In order to further analyze the nature of singly occupied molecular orbitals (SOMOs) and their relation to the $\beta$ spin manifold, a complementary diagonalization procedure was implemented.
+
+Starting from the set of occupied $\alpha$ orbitals $\phi_{i}^{\alpha}$, two separate projections are constructed:
+
+\begin{itemize}
+    \item Projection onto the occupied $\beta$ orbitals $\phi_{j}^{\beta,\text{occ}}$;
+    \item Projection onto the virtual $\beta$ orbitals $\phi_{j}^{\beta,\text{virt}}$.
+\end{itemize}
+
+Given the atomic orbital overlap matrix $\boldsymbol{S}$, the rectangular projection matrices are defined as:
+\[
+\boldsymbol{A}_{\text{occ}} = \boldsymbol{\Phi}_{i}^{\alpha}\cdot\boldsymbol{S}\cdot(\boldsymbol{\Phi}_{\text{occ}}^{\beta})^{T},
+\quad
+\boldsymbol{A}_{\text{virt}} = \boldsymbol{\Phi}_{i}^{\alpha}\cdot\boldsymbol{S}\cdot(\boldsymbol{\Phi}_{\text{virt}}^{\beta})^{T}.
+\]
+
+From these, the symmetric projection matrices are formed:
+\[
+\boldsymbol{P}_{\text{occ}} = \boldsymbol{A}_{\text{occ}}\boldsymbol{A}_{\text{occ}}^{T},
+\quad
+\boldsymbol{P}_{\text{virt}} = \boldsymbol{A}_{\text{virt}}\boldsymbol{A}_{\text{virt}}^{T}.
+\]
+
+The matrices $\boldsymbol{P}_{\text{occ}}$ and $\boldsymbol{P}_{\text{virt}}$ are diagonalized to obtain their eigenvalues and eigenvectors.
+
+\paragraph{Interpretation.}
+The eigenvalues of $\boldsymbol{P}_{\text{occ}}$ quantify how strongly a linear combination of occupied $\alpha$ orbitals projects onto the occupied $\beta$ space.
+Similarly, the eigenvalues of $\boldsymbol{P}_{\text{virt}}$ measure the projection onto the virtual $\beta$ space.
+
+Eigenvectors with low eigenvalues for $\boldsymbol{P}_{\text{occ}}$ but significant projection onto $\beta$ virtual orbitals are strong candidates for SOMOs.
+
+\paragraph{Implemented routines.}
+Several routines were developed to automate the analysis:
+
+\begin{itemize}
+    \item \texttt{diagonalize\_alpha\_occ\_to\_beta\_occ\_and\_virt\_separately}: 
+    \begin{itemize}
+        \item Projects $\phi_{i}^{\alpha}$ separately onto $\phi_{j}^{\beta,\text{occ}}$ and $\phi_{j}^{\beta,\text{virt}}$;
+        \item Diagonalizes $\boldsymbol{P}_{\text{occ}}$ and $\boldsymbol{P}_{\text{virt}}$;
+        \item Visualizes the eigenvalue spectra.
+    \end{itemize}
+    
+    \item \texttt{identify\_virtual\_contributions\_for\_weakly\_projected\_vectors}:
+    \begin{itemize}
+        \item Detects eigenvectors with small projection onto $\beta$ occupied orbitals (e.g., eigenvalues $< 0.5$);
+        \item Identifies dominant $\beta$ virtual contributions.
+    \end{itemize}
+
+    \item \texttt{identify\_alpha\_contributions\_for\_weakly\_projected\_vectors}:
+    \begin{itemize}
+        \item Analyzes the expansion of weak eigenvectors in terms of original $\phi_{i}^{\alpha}$;
+        \item Lists dominant $\alpha$ orbital components.
+    \end{itemize}
+
+    \item \texttt{summarize\_somo\_candidates}:
+    \begin{itemize}
+        \item Summarizes, for each candidate SOMO eigenvector, the main $\alpha$ contributors and dominant $\beta$ virtual overlaps.
+    \end{itemize}
+
+    \item \texttt{show\_dominant\_alpha\_to\_beta\_overlap}:
+    \begin{itemize}
+        \item Reports, for each occupied $\alpha$ orbital, the most overlapping occupied $\beta$ orbital, based on the squared overlap integral $|\langle \phi_{i}^{\alpha} | \boldsymbol{S} | \phi_{j}^{\beta,\text{occ}} \rangle|^{2}$.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{Summary.}
+This diagonalization-based projection strategy allows:
+
+\begin{itemize}
+    \item The detection of SOMO candidates with negligible coupling to occupied $\beta$ orbitals;
+    \item A detailed inspection of how $\alpha$ occupied orbitals distribute onto the $\beta$ manifold;
+    \item A better understanding of orbital reorganization effects in open-shell systems.
+\end{itemize}
+
