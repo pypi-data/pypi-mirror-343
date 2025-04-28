@@ -1,0 +1,3 @@
+[console_scripts]
+precision_mapping = precision_mapping.main:main
+

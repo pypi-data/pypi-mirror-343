@@ -1,0 +1,11 @@
+precision_mapping/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+precision_mapping/main.py,sha256=hnPuu_2Ul5lMKi_QH6AW6M-EWl9_urjKqeX_LQVQxUk,1882
+precision_mapping/mapping.py,sha256=uSMTWMn92AqCACwM7EZscaGLeOX8KRcJg6U5FgPf-OY,6231
+precision_mapping/data/networks.32k.L.label.gii,sha256=VRAkZCCvuTKlvfgqqzMeDB0FDEoLlbWlObwPmZxoBp8,10494
+precision_mapping/data/networks.32k.R.label.gii,sha256=GrxyN1Non3YBHk8YPOH5OfwjM9NbZePtshOuaqaej_Y,10587
+precision_mapping/data/networks_table.csv,sha256=NXtqsBrYVDmAmUBQhnnkmfMF0Vd5XSBN5hr3tfX5jBI,1238
+precision_mapping-0.1.dist-info/METADATA,sha256=2btUKiaO1eT2cc5Dm1_pcjcmu6mLAVQPk_kTam5WoeQ,250
+precision_mapping-0.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+precision_mapping-0.1.dist-info/entry_points.txt,sha256=qR0vvUtmoKyLakIpYvKcXFsHgaN_2jKLlIXJmQGZQho,67
+precision_mapping-0.1.dist-info/top_level.txt,sha256=Au48HX3_GNsv_CCKEiSDiNljpPRY3BySNLmAO0FFX3Y,18
+precision_mapping-0.1.dist-info/RECORD,,
