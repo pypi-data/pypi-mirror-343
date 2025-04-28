@@ -1,0 +1,58 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# MyPy & other tools
+.mypy_cache/
+.cache/
+.pytest_cache/
+
+# IDE
+.project
+.classpath
+.settings/
+.idea/
+.vscode
+
+# Python build
+build/
+dist/
+iPOPO.egg-info/
+target/
+
+# Module generated during tests
+generated_bundle.py
+
+# Binaries
+*.tar.gz
+*.zip
+
+# Tests and coverage
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+tmp/
+.noseids
+nosetests.xml
+
+# Used during tests
+apache-karaf-*/
+
+# ConfigurationAdmin folder
+conf/
+
+# Profiling
+*.lprof
+
+# Epydoc Help
+api/
+html/
+
+# Sphinx
+_build/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
