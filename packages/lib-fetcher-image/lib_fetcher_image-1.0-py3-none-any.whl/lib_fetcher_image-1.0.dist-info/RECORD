@@ -1,0 +1,6 @@
+lib_fetcher_image/__init__.py,sha256=X77xCi4sJumQNZu5rEVwI4hV19dxDrL7LOs5-xSOgLM,66
+lib_fetcher_image/fetcher.py,sha256=xKtdhZVVwYoyIaUf4w8xi9reOsTZTS5Wgsbek5CVlTw,5799
+lib_fetcher_image-1.0.dist-info/METADATA,sha256=Ly5CqIiac2Jv5XuRT-XsFJTl_-LFS94Qj9vEAgHh3pg,429
+lib_fetcher_image-1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+lib_fetcher_image-1.0.dist-info/top_level.txt,sha256=KRlyLuOs1UVcFUk9bqyHZlZeZ7WmJAWHELtaPlKeUFo,18
+lib_fetcher_image-1.0.dist-info/RECORD,,
