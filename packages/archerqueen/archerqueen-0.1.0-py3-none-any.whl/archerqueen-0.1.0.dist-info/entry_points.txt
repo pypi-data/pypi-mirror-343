@@ -1,0 +1,2 @@
+[console_scripts]
+archerqueen = archerqueen.main:main
