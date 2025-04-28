@@ -1,0 +1,11 @@
+axios/__init__.py,sha256=5znbOeDRAYWehLP_8e822nuHw3-Y8myJYUchuJfpoEk,484
+axios/async_client.py,sha256=Vf6XbbG5dwGTCWbkifoEnKAPFjiY3iOSHGNE4JWdqwQ,3851
+axios/core.py,sha256=B9y8Jqzhvrcg6xnUrwIbninpgepZpwZE_X72EsuFbNc,7914
+axios/fastapi.py,sha256=9KCTCkwsxsl0MAN82v5hRFngyMvb5moLIkZlc4ywLsg,695
+axios/http_client.py,sha256=K-d96bjWdl5xm4msrwuIMx4rIh6OMRP1WizHWGcaDpM,3981
+axios/rate_limiter.py,sha256=umQE3jPXc0rYEUxPxi6RA388Dser8Xv-61wyTOUMtc4,3207
+axios/types.py,sha256=lM2Azt2kI3KHq4OiNxUFLTsZwE0V9SXEzSkvViXejnw,766
+axios_py-0.1.0.dist-info/METADATA,sha256=BtckoEd1Yt3GylUIvGyNAWWMqRSPBJYuJyownVaK6EQ,3197
+axios_py-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+axios_py-0.1.0.dist-info/licenses/LICENSE,sha256=JpzfgubpQ8nmwZdpz_8Y1-QiIHrBta9AKf1mpXVx2Ac,1087
+axios_py-0.1.0.dist-info/RECORD,,
