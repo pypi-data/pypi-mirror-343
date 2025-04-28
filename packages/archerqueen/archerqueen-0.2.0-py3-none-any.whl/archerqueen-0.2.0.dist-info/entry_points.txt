@@ -1,0 +1,6 @@
+[console_scripts]
+archerqueen = archerqueen.main:main
+archerqueen-cluster = archerqueen.experiment8:run
+archerqueen-graph = archerqueen.experiment7:run
+archerqueen-nlp = archerqueen.experiment5:run
+archerqueen-tree = archerqueen.experiment6:run
