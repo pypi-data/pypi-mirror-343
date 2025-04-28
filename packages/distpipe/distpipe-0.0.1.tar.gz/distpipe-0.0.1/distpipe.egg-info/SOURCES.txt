@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+distpipe/__init__.py
+distpipe/distpipe.py
+distpipe/message.py
+distpipe/transport.py
+distpipe.egg-info/PKG-INFO
+distpipe.egg-info/SOURCES.txt
+distpipe.egg-info/dependency_links.txt
+distpipe.egg-info/top_level.txt
