@@ -1,0 +1,12 @@
+multiplex2brightfield/__init__.py,sha256=aAM-5y3bpD3ImEn8A5CpuEt1CJZkr2Wkbg_9z8ye_LE,94
+multiplex2brightfield/configuration_presets.py,sha256=nfWJz1Fmcjf3W1edIEO_Am-60d62KbNXwElyhVleStA,41289
+multiplex2brightfield/converter.py,sha256=LSg9YywV6YDBqMx2Q_q2xbT-IrEqxe7rchq9NFevJxg,35904
+multiplex2brightfield/enhancement.py,sha256=xWJLC6iERyhqzqbFmLlSvwbuj3ItWFoX3wX0LO9X0sY,6567
+multiplex2brightfield/llm_utils.py,sha256=PB7BfFYizKtrwzNzdIY2JeEJRLU2l7jSVj0ZYSQiNZo,11458
+multiplex2brightfield/tiff_utils.py,sha256=9lUUaWF0rk7AyQGdbPtwd8jNuVONLlDNQdDh1O3tEYk,10020
+multiplex2brightfield/utils.py,sha256=ZqZWjgGbZeKUBIF_jvvPd3BYCiiwbqMk9tORHOIKe-E,6605
+multiplex2brightfield-0.1.12.dist-info/LICENSE,sha256=ibttsf7iZrSo1XgtuKNjEYXlP7jMsaUVkURiaGJuAWw,1494
+multiplex2brightfield-0.1.12.dist-info/METADATA,sha256=pLTy2FKZ-cSDmWdAE9_ph093OrLQmlYta4NvvpH4PNA,13026
+multiplex2brightfield-0.1.12.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+multiplex2brightfield-0.1.12.dist-info/top_level.txt,sha256=7McRv_YHLF23tmxU3lVTdPEeIEDotr2vrD1rFLBBeII,22
+multiplex2brightfield-0.1.12.dist-info/RECORD,,
