@@ -1,0 +1,16 @@
+LICENSE.md
+MANIFEST.in
+README.md
+setup.py
+kiwidb/__init__.py
+kiwidb/__main__.py
+kiwidb/client.py
+kiwidb/error.py
+kiwidb/protocol.py
+kiwidb/server.py
+kiwidb.egg-info/PKG-INFO
+kiwidb.egg-info/SOURCES.txt
+kiwidb.egg-info/dependency_links.txt
+kiwidb.egg-info/requires.txt
+kiwidb.egg-info/top_level.txt
+tests/test_client.py
