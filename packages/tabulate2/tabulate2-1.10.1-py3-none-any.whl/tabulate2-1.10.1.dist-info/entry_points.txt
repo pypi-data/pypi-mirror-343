@@ -1,0 +1,2 @@
+[console_scripts]
+tabulate2 = tabulate2:_main
