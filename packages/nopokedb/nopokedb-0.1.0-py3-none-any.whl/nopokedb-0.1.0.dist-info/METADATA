@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: nopokedb
+Version: 0.1.0
+Summary: Disk-backed HNSW vector database with SQLite metadata
+Author-email: Kashif <me@ifkash.dev>
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: hnswlib>=0.7.0
+Dynamic: license-file
+
+# **NoPokeDB**
+
+Disk-based HNSW vector DB with SQLite metadata
+
+## Installation
+
+```shell
+pip install nopokedb
+```
+
+## Usage
+
+```py
+from nopokedb import NoPokeDB
+
+# Initialize (or load existing) store
+db = PersistentVectorDB(dim=128, max_elements=10000, path="./vdb_data")
+
+# Add
+db.add(my_vector, metadata={"name": "foo"})
+
+# Query
+results = db.query(query_vector, k=5)
+for hit in results:
+  print(hit)
+
+# Persist & close
+db.close()
+```
