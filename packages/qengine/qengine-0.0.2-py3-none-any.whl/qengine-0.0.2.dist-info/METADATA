@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: qengine
+Version: 0.0.2
+Summary: PyPi repository to facilitate accessibility into Quantum Applications Prototyping (QAP) and associated R&D
+Project-URL: Homepage, https://github.com/BenLesnik/qengine
+Author: Ben Lesnik
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+
+# Will work on an explanation
