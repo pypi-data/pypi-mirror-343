@@ -1,0 +1,351 @@
+# xsrandom
+
+Расширенная библиотека для генерации случайных значений в Python, предоставляющая больше возможностей, чем стандартный модуль random.
+
+## Установка
+
+```bash
+pip install xsrandom
+```
+
+## Основные модули
+
+### 1. Базовые функции (core)
+
+```python
+import xsrandom
+
+# Инициализация генератора случайных чисел
+xsrandom.seed(12345)               # Фиксированное начальное значение
+xsrandom.seed()                    # Использование текущего времени
+xsrandom.seed_from_entropy()       # Использование дополнительной энтропии
+state = xsrandom.getstate()        # Получение текущего состояния
+xsrandom.setstate(state)           # Установка сохраненного состояния
+
+# Базовые функции
+value = xsrandom.random()          # Случайное число [0.0, 1.0)
+value = xsrandom.randint(1, 10)    # Случайное целое число [1, 10]
+value = xsrandom.uniform(1, 10)    # Случайное число с плавающей точкой [1, 10)
+value = xsrandom.bit_generator(32) # Случайное битовое значение указанной ширины
+value = xsrandom.randrange(1, 10, 2) # Случайный элемент из диапазона range(1, 10, 2)
+
+# Работа с коллекциями
+item = xsrandom.choice(['a', 'b', 'c'])  # Случайный элемент из списка
+items = xsrandom.choices(['a', 'b', 'c'], k=2)  # k элементов с повторами
+items = xsrandom.sample(['a', 'b', 'c'], 2)     # k элементов без повторов
+xsrandom.shuffle(my_list)  # Перемешивание списка на месте
+
+# Дополнительные функции
+value = xsrandom.random_bool(0.7)  # Случайное булево значение с указанной вероятностью True
+value = xsrandom.dice(6, 2)       # Бросок 2 шестигранных кубиков
+coins = xsrandom.flip_coin(5)     # Подбрасывание монеты 5 раз
+bytes_data = xsrandom.randbytes(16)  # 16 случайных байт
+byte_arr = xsrandom.byte_array(16)  # Массив случайных байт
+value = xsrandom.float_precision(1.5, 3.5, 2)  # Случайное число с указанной точностью
+value = xsrandom.range_step(0, 10, 2)  # Случайный элемент из [0, 2, 4, 6, 8]
+char = xsrandom.random_character()  # Случайный символ
+sign = xsrandom.random_sign()  # Случайный знак (+1 или -1)
+value = xsrandom.randbelow(100)  # Случайное число в диапазоне [0, n)
+value = xsrandom.fract()  # Случайная дробная часть [0.0, 1.0)
+value = xsrandom.dual_distribution(0.3, lambda: xsrandom.normal(), lambda: xsrandom.uniform(0, 1))
+value = xsrandom.odd_even(0.5)  # Случайное нечетное или четное число
+value = xsrandom.prime_below(100)  # Случайное простое число меньше указанного значения
+```
+
+### 2. Генерация строк (strings)
+
+```python
+import xsrandom
+
+# Базовая генерация строк
+value = xsrandom.string(10)  # Случайная строка длины 10 (буквы и цифры)
+value = xsrandom.string(10, pattern="letters")  # Только буквы
+value = xsrandom.string(10, pattern="digits")   # Только цифры
+value = xsrandom.string(10, pattern="printable") # Все печатаемые символы
+value = xsrandom.string(10, pattern="lowercase") # Строчные буквы
+value = xsrandom.string(10, pattern="uppercase") # Заглавные буквы
+value = xsrandom.string(10, pattern="hex")      # Шестнадцатеричные символы
+value = xsrandom.string(10, pattern="binary")   # Двоичные символы
+value = xsrandom.string(10, charset="ACGT")     # Пользовательский набор символов
+
+# Специализированные строки
+value = xsrandom.ascii_string(10)  # ASCII строка
+value = xsrandom.ascii_string(10, include_special_chars=True)  # С спецсимволами
+value = xsrandom.hex_string(8)     # Шестнадцатеричная строка
+value = xsrandom.hex_string(8, prefix="0x")  # С префиксом 0x
+value = xsrandom.binary_string(8)  # Двоичная строка
+value = xsrandom.binary_string(16, format_with_spaces=True)  # С пробелами каждые 8 бит
+value = xsrandom.binary_string(8, prefix="0b")  # С префиксом 0b
+
+# Пароли
+value = xsrandom.password(12, strength="weak")    # Слабый пароль
+value = xsrandom.password(12, strength="medium")  # Средний пароль (заглавные, строчные, цифры)
+value = xsrandom.password(12, strength="strong")  # Сильный пароль (с спецсимволами)
+value = xsrandom.password(16, strength="very_strong")  # Очень сильный пароль
+
+# Текстовые данные
+value = xsrandom.username()  # Случайное имя пользователя
+value = xsrandom.word()      # Случайное слово
+value = xsrandom.sentence()  # Случайное предложение
+value = xsrandom.paragraph()  # Случайный абзац
+value = xsrandom.lorem_ipsum(3)  # Lorem ipsum из 3 абзацев
+
+# Интернет-данные
+value = xsrandom.email()           # Случайный email
+value = xsrandom.domain_name()     # Случайное доменное имя
+value = xsrandom.url()             # Случайный URL
+value = xsrandom.url(include_path=True, include_query=True)  # С путем и запросом
+value = xsrandom.html_color()      # Случайный HTML-цвет
+value = xsrandom.random_slug()     # Случайный slug для URL
+
+# Другие строковые функции
+value = xsrandom.regex_string(r"\d{3}-\d{2}-\d{4}")  # Строка по регулярному выражению
+value = xsrandom.random_hashtags(3)  # 3 случайных хэштега
+value = xsrandom.random_emoji()      # Случайный эмодзи
+```
+
+### 3. Статистические распределения (distributions)
+
+```python
+import xsrandom
+
+# Непрерывные распределения
+value = xsrandom.normal()           # Нормальное распределение (мю=0, сигма=1)
+value = xsrandom.normal(10, 2)      # Нормальное с заданными параметрами
+value = xsrandom.lognormal(0, 1)    # Логнормальное распределение
+value = xsrandom.triangular(0, 10, 5)  # Треугольное распределение
+value = xsrandom.beta(2, 5)         # Бета-распределение
+value = xsrandom.gamma(2, 2)        # Гамма-распределение
+value = xsrandom.exponential(1.5)   # Экспоненциальное распределение
+value = xsrandom.weibull(1.5)       # Распределение Вейбулла
+value = xsrandom.pareto(1.5)        # Распределение Парето
+value = xsrandom.vonmises(0, 1)     # Распределение фон Мизеса
+value = xsrandom.cauchy()           # Распределение Коши
+value = xsrandom.laplace()          # Распределение Лапласа
+value = xsrandom.logistic()         # Логистическое распределение
+value = xsrandom.rayleigh()         # Распределение Рэлея
+value = xsrandom.chisquare(5)       # Хи-квадрат распределение
+value = xsrandom.student_t(10)      # Распределение Стьюдента
+value = xsrandom.f(5, 10)           # F-распределение
+
+# Дискретные распределения
+value = xsrandom.poisson(5)         # Распределение Пуассона
+value = xsrandom.binomial(10, 0.5)  # Биномиальное распределение
+value = xsrandom.zipf(2)            # Распределение Зипфа
+value = xsrandom.discrete_uniform(1, 10)  # Дискретное равномерное распределение
+value = xsrandom.geometric(0.3)     # Геометрическое распределение
+value = xsrandom.negative_binomial(5, 0.3)  # Отрицательное биномиальное распределение
+value = xsrandom.hypergeometric(10, 5, 20)  # Гипергеометрическое распределение
+
+# Многомерные распределения
+value = xsrandom.dirichlet([1, 1, 1])  # Распределение Дирихле
+import numpy as np
+mean = np.array([0, 0])
+cov = np.array([[1, 0.5], [0.5, 1]])
+value = xsrandom.multivariate_normal(mean, cov)  # Многомерное нормальное
+
+# Составные распределения
+def my_distribution():
+    return xsrandom.normal(0, 1)
+def another_distribution():
+    return xsrandom.exponential(1)
+value = xsrandom.mixture([my_distribution, another_distribution], [0.7, 0.3])
+
+# Пользовательские распределения
+def my_pdf(x):
+    return 0.5 * x if 0 <= x <= 2 else 0
+value = xsrandom.custom_distribution(my_pdf, 0, 2)  # По функции плотности вероятности
+```
+
+### 4. Даты и время (datetime)
+
+```python
+import xsrandom
+import datetime
+
+# Основные функции
+value = xsrandom.date()  # Случайная дата от 1970-01-01 до сегодня
+value = xsrandom.date("2020-01-01", "2020-12-31")  # В указанном диапазоне
+value = xsrandom.time()  # Случайное время
+value = xsrandom.time("08:00:00", "17:00:00")  # В указанном диапазоне
+value = xsrandom.datetime()  # Случайные дата и время
+value = xsrandom.timestamp()  # Случайная временная метка Unix
+
+# Относительные даты
+value = xsrandom.future_date()  # Случайная дата в будущем
+value = xsrandom.future_date(min_days=10, max_days=30)  # В заданном диапазоне
+value = xsrandom.past_date()    # Случайная дата в прошлом
+value = xsrandom.time_period()  # Случайный временной период в секундах
+value = xsrandom.time_delta()   # Случайный временной интервал
+
+# Компоненты даты и времени
+value = xsrandom.year()          # Случайный год
+value = xsrandom.year(2000, 2020)  # В указанном диапазоне
+value = xsrandom.month()         # Случайный месяц (число)
+value = xsrandom.month_name()    # Случайное название месяца
+value = xsrandom.month_name("ru")  # На русском языке
+value = xsrandom.day_of_month()  # Случайный день месяца
+value = xsrandom.weekday()       # Случайный день недели (число)
+value = xsrandom.day_of_week_name()  # Название дня недели
+value = xsrandom.day_of_week_name("ru")  # На русском языке
+value = xsrandom.hour()          # Случайный час (0-23)
+value = xsrandom.hour(12)        # Случайный час (1-12)
+value = xsrandom.minute()        # Случайная минута
+value = xsrandom.second()        # Случайная секунда
+value = xsrandom.millisecond()   # Случайная миллисекунда
+value = xsrandom.timezone()      # Случайный часовой пояс
+
+# Форматы даты и времени
+value = xsrandom.iso8601()       # Случайная дата в формате ISO8601
+value = xsrandom.iso8601_date()  # Только дата в формате ISO8601
+value = xsrandom.iso8601_time()  # Только время в формате ISO8601
+value = xsrandom.rfc3339()       # Дата в формате RFC3339
+value = xsrandom.unix_time()     # Временная метка Unix
+
+# Бизнес-даты
+value = xsrandom.business_date()  # Случайная рабочая дата (пн-пт)
+value = xsrandom.business_datetime()  # Случайные дата и время в рабочие часы
+holidays = [datetime.date(2023, 1, 1), datetime.date(2023, 12, 25)]
+value = xsrandom.date_between_holidays(holidays)  # Дата между праздниками
+
+# Специальные интервалы
+value = xsrandom.quarter()  # Случайный квартал (1-4)
+value = xsrandom.date_in_quarter()  # Случайная дата в квартале
+value = xsrandom.date_in_quarter(2, 2023)  # Дата во 2-м квартале 2023
+value = xsrandom.week_number()  # Случайный номер недели (1-53)
+value = xsrandom.date_in_week()  # Случайная дата в неделе
+value = xsrandom.date_with_age(18, 65)  # Дата рождения для возраста 18-65 лет
+
+# Строковые представления
+value = xsrandom.duration_string()  # Случайная длительность в формате "ЧЧ:ММ:СС"
+value = xsrandom.cron_expression()  # Случайное CRON-выражение
+```
+
+### 5. Случайные последовательности (sequences)
+
+```python
+import xsrandom
+
+# Перестановки и комбинации
+value = xsrandom.permutation([1, 2, 3, 4, 5])  # Случайная перестановка
+value = xsrandom.permutation([1, 2, 3, 4, 5], 3)  # Перестановка 3 элементов
+value = xsrandom.combination([1, 2, 3, 4, 5], 3)  # Случайное сочетание
+value = xsrandom.random_combination([1, 2, 3, 4, 5], 3, 2)  # 2 случайных сочетания
+
+# Подмножества и последовательности
+value = xsrandom.subset([1, 2, 3, 4, 5])  # Случайное подмножество
+value = xsrandom.subset([1, 2, 3, 4, 5], min_size=2, max_size=4)  # С ограничениями размера
+value = xsrandom.unique_sequence(10)  # Последовательность из 10 уникальных чисел
+value = xsrandom.unique_sequence(5, 10, 20)  # 5 уникальных чисел в диапазоне [10, 20]
+
+# Случайные блуждания и марковские цепи
+value = xsrandom.random_walk()  # Случайное блуждание с 10 шагами в 1D
+value = xsrandom.random_walk(steps=20, dimensions=2)  # 2D блуждание с 20 шагами
+states = ["Солнечно", "Облачно", "Дождь"]
+transitions = [
+    [0.7, 0.3, 0.0],  # Переходы из состояния "Солнечно"
+    [0.4, 0.4, 0.2],  # Переходы из состояния "Облачно"
+    [0.1, 0.5, 0.4]   # Переходы из состояния "Дождь"
+]
+value = xsrandom.markov_sequence(states, transitions, length=7)  # Марковская цепь
+
+# Разбиения
+value = xsrandom.random_partition(100, 5)  # Разбиение числа 100 на 5 частей
+value = xsrandom.random_partition(100, 5, min_value=10)  # С минимальным значением 10
+```
+
+### 6. Криптографические функции
+
+```python
+import xsrandom
+
+# Токены и ключи
+value = xsrandom.token_bytes(16)  # 16 случайных байт
+value = xsrandom.token_hex(16)    # 16 байт в шестнадцатеричном формате
+value = xsrandom.token_urlsafe(16)  # URL-безопасный токен
+
+# Идентификаторы
+value = xsrandom.uuid()           # Случайный UUID
+value = xsrandom.random_hash("sha256")  # Случайный хеш SHA-256
+
+# Безопасные ключи и пароли
+value = xsrandom.secure_key(32)   # Криптографически стойкий ключ
+value = xsrandom.secure_key(16, encoding="hex")  # В шестнадцатеричном формате
+value = xsrandom.secure_key(16, encoding="base64")  # В формате base64
+value = xsrandom.secure_pin(6)    # Случайный PIN-код
+value = xsrandom.secure_password(16)  # Криптографически стойкий пароль
+
+# Сетевые данные
+value = xsrandom.random_ip()      # Случайный IPv4 адрес
+value = xsrandom.random_ipv6()    # Случайный IPv6 адрес
+value = xsrandom.random_mac()     # Случайный MAC-адрес
+```
+
+### 7. Географические данные
+
+```python
+import xsrandom
+
+# Координаты
+value = xsrandom.latitude()        # Случайная широта (-90 до 90)
+value = xsrandom.longitude()       # Случайная долгота (-180 до 180)
+value = xsrandom.coordinates()     # Кортеж (широта, долгота)
+value = xsrandom.point_on_earth()  # Случайная точка на поверхности Земли
+value = xsrandom.point_on_earth((55.7558, 37.6176), 10)  # Точка в радиусе 10 км от Москвы
+
+# Географические атрибуты
+value = xsrandom.altitude()        # Случайная высота над уровнем моря
+value = xsrandom.country_code()    # Случайный код страны
+value = xsrandom.place_type()      # Случайный тип места
+```
+
+## Примеры использования
+
+```python
+import xsrandom
+
+# Установка начального значения для воспроизводимости
+xsrandom.seed(12345)
+
+# Генерация псевдослучайных чисел
+print(f"Случайное число: {xsrandom.random()}")
+print(f"Случайное целое число: {xsrandom.randint(1, 100)}")
+print(f"Случайное число с плавающей точкой: {xsrandom.uniform(1.5, 3.5)}")
+
+# Работа с коллекциями
+fruits = ["яблоко", "апельсин", "банан", "груша", "киви"]
+print(f"Случайный фрукт: {xsrandom.choice(fruits)}")
+print(f"Случайная выборка из 3 фруктов: {xsrandom.sample(fruits, 3)}")
+xsrandom.shuffle(fruits)
+print(f"Перемешанный список фруктов: {fruits}")
+
+# Генерация случайных строк
+print(f"Случайная строка: {xsrandom.string(10)}")
+print(f"Случайный пароль: {xsrandom.password(12, 'strong')}")
+print(f"Случайный email: {xsrandom.email()}")
+print(f"Случайное предложение: {xsrandom.sentence()}")
+
+# Работа с распределениями
+print(f"Нормальное распределение: {xsrandom.normal(10, 2)}")
+print(f"Экспоненциальное распределение: {xsrandom.exponential(1.5)}")
+print(f"Биномиальное распределение: {xsrandom.binomial(10, 0.5)}")
+
+# Генерация случайных дат
+print(f"Случайная дата: {xsrandom.date()}")
+print(f"Случайная дата в будущем: {xsrandom.future_date(min_days=10, max_days=30)}")
+print(f"Случайное время: {xsrandom.time()}")
+print(f"Случайный день недели: {xsrandom.day_of_week_name()}")
+
+# Работа с случайными последовательностями
+print(f"Случайная перестановка: {xsrandom.permutation(range(1, 6))}")
+print(f"Случайное подмножество: {xsrandom.subset([1, 2, 3, 4, 5])}")
+print(f"Случайное блуждание в 2D: {xsrandom.random_walk(steps=5, dimensions=2)}")
+
+# Географические данные
+print(f"Случайные координаты: {xsrandom.coordinates()}")
+print(f"Случайная точка на Земле: {xsrandom.point_on_earth()}")
+```
+
+## Лицензия
+
+MIT 
