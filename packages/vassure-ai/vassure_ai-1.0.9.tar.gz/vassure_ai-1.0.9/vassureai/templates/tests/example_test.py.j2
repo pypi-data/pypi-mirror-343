@@ -1,0 +1,46 @@
+{{ protected_content }}"""
+{{ file_description }}
+"""
+
+import pytest
+import logging
+
+# Import the project-specific adapter
+from utils.base_test_adapter import BaseTestAdapter
+
+logger = logging.getLogger(__name__)
+
+# Inherit from the BaseTestAdapter
+class TestExample(BaseTestAdapter):
+    """Example test class demonstrating VAssureAI usage."""
+
+    @pytest.mark.asyncio
+    async def test_example_navigation(self):
+        """ 
+        Example test: Navigates to a website and performs a simple action.
+        Replace with steps relevant to your application.
+        """
+        logger.info(f"Executing test: {self.test_name}")
+        
+        # Define test steps in natural language
+        test_steps = [
+            "Navigate to https://www.google.com/",
+            "Verify that the Google logo is visible",
+            "Enter 'VAssureAI Test Automation' in the search bar",
+            "Click the 'Google Search' button",
+            "Verify that search results are displayed"
+        ]
+        
+        # Execute the test using the framework's method (inherited via adapter)
+        # The title will be used in the generated report
+        result = await self._execute_test(test_steps, f"{self.test_name} Results")
+        
+        # Assert that the test execution itself completed (didn't crash)
+        # Further assertions on 'result' content might be needed depending on framework capabilities
+        assert result is not None, "Test execution failed to complete."
+        logger.info(f"Test {self.test_name} completed. Result: {result}")
+
+    # Add more test methods as needed
+    # @pytest.mark.asyncio
+    # async def test_another_feature(self):
+    #     pass

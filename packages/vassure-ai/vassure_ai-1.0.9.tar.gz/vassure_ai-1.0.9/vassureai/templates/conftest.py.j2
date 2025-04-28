@@ -1,0 +1,51 @@
+{{ protected_content }}"""
+{{ file_description }}
+"""
+
+import pytest
+import os
+import sys
+import logging
+from datetime import datetime
+
+# --- Load .env file at the top level ---
+try:
+    from dotenv import load_dotenv
+    # Load .env from the root of the project where conftest.py resides
+    dotenv_path = os.path.join(os.path.dirname(__file__), '.env') 
+    if os.path.exists(dotenv_path):
+        load_dotenv(dotenv_path=dotenv_path, override=True) # Use override=True to ensure .env takes precedence
+        print(f"INFO: Environment variables loaded from {dotenv_path}")
+    else:
+        print(f"WARNING: .env file not found at {dotenv_path}. Please create one from .env.example.")
+except ImportError:
+    print("WARNING: python-dotenv not installed. Cannot load .env file.")
+# ----------------------------------------
+
+# Configure logging (using pytest's logging capabilities is often preferred)
+logger = logging.getLogger(__name__)
+
+# --- VAssureAI Framework Integration ---
+# Attempt to import the framework's BaseTest
+# This assumes 'vassure_ai' package is installed in the environment
+try:
+    # Import the adapter which should inherit from the framework's BaseTest
+    from utils.base_test_adapter import BaseTestAdapter
+    logger.info("Successfully imported BaseTestAdapter.")
+except ImportError as e:
+    logger.error(f"CRITICAL: Could not import BaseTestAdapter from utils.base_test_adapter. Ensure VAssureAI is installed and the adapter exists: {e}")
+    # Optionally, exit or raise an error if the framework is essential
+    # sys.exit("Framework components not found. Exiting.") 
+
+# ----------------------------------------
+
+@pytest.fixture(scope="session", autouse=True)
+def setup_session_environment():
+    """Set up test environment at the beginning of the test session."""
+    # Environment variables are loaded at the module level above
+    logger.info("Test session starting. Environment variables loaded.")
+    yield
+    logger.info("Test session finished.")
+
+# You can add other project-specific fixtures here
+

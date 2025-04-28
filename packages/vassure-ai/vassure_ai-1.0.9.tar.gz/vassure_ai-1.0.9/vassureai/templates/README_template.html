@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README_template.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h2 id="%22%22%22">&quot;&quot;&quot;</h2>
+<h2 id="author-sukumar-kutagulla-read-onlydesignation-test-automation-architect-read-only">Author: Sukumar Kutagulla (Read-only)
+Designation: Test Automation Architect (Read-only)</h2>
+<p>&quot;&quot;&quot;</p>
+<h1 id="vassureai-framework-project">VAssureAI Framework Project</h1>
+<h2 id="overview">Overview</h2>
+<p>This project uses the VAssureAI framework for automated web testing. VAssureAI combines the power of AI with robust browser automation to create reliable, maintainable tests with minimal coding effort.</p>
+<h2 id="project-structure">Project Structure</h2>
+<pre class="hljs"><code><div>project_root/
+├── input_pdfs/           # Place your test specification PDFs here
+├── tests/                # Auto-generated and custom test files
+├── reports/              # Test execution reports
+│   ├── html/            # HTML format reports
+│   └── pdf/             # PDF format reports
+├── screenshots/          # Test execution screenshots
+├── videos/               # Browser recording videos
+├── logs/                # Test execution logs
+├── metrics/             # Test performance metrics
+│   └── metrics_data/    # Raw metrics data
+├── .env                 # Environment configuration
+├── conftest.py          # Test configuration
+├── pytest.ini           # Pytest configuration
+└── README.md            # Project documentation
+</div></code></pre>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Python 3.11 or higher</li>
+<li>pip package manager</li>
+<li>Virtual environment (recommended)</li>
+<li>Chrome/Chromium browser</li>
+<li>PDF reader</li>
+</ul>
+<h3 id="installation">Installation</h3>
+<ol>
+<li>Create and activate a virtual environment:</li>
+</ol>
+<pre class="hljs"><code><div>python -m venv venv
+<span class="hljs-built_in">source</span> venv/bin/activate  <span class="hljs-comment"># On Windows: venv\Scripts\activate</span>
+</div></code></pre>
+<ol start="2">
+<li>Install the VAssureAI framework:</li>
+</ol>
+<pre class="hljs"><code><div>pip install vassure-ai
+</div></code></pre>
+<ol start="3">
+<li>Initialize your project structure:</li>
+</ol>
+<pre class="hljs"><code><div>vassure init
+</div></code></pre>
+<h3 id="configuration">Configuration</h3>
+<p>Create a <code>.env</code> file in your project root with these settings:</p>
+<pre class="hljs"><code><div># Browser configuration
+BROWSER_TYPE=chromium  # chromium, firefox, webkit
+BROWSER_HEADLESS=false
+BROWSER_RECORD_VIDEO=true
+BROWSER_TIMEOUT=30000
+
+# AI model configuration
+LLM_API_KEY=your-api-key-here
+LLM_MAX_TOKENS=4096
+
+# Test execution configuration
+RETRY_MAX_RETRIES=2
+RETRY_ON_NETWORK=true
+</div></code></pre>
+<h3 id="using-the-framework">Using the Framework</h3>
+<p>There are several ways to use the framework:</p>
+<h4 id="using-the-interactive-mode-recommended">Using the Interactive Mode (Recommended)</h4>
+<ol>
+<li>Start the interactive CLI mode:</li>
+</ol>
+<pre class="hljs"><code><div>vassure interactive
+</div></code></pre>
+<ol start="2">
+<li>Follow the menu prompts to:
+<ul>
+<li>Create/Update Tests from PDF files</li>
+<li>Execute existing tests</li>
+<li>Configure test execution options</li>
+</ul>
+</li>
+</ol>
+<p>This interactive mode is especially helpful for new users or when you prefer a guided experience rather than remembering CLI commands.</p>
+<h4 id="direct-command-line-usage">Direct Command Line Usage</h4>
+<ol>
+<li>Process PDF files to generate tests:</li>
+</ol>
+<pre class="hljs"><code><div>vassure watch-pdfs
+</div></code></pre>
+<ol start="2">
+<li>Run all tests:</li>
+</ol>
+<pre class="hljs"><code><div>vassure run
+</div></code></pre>
+<ol start="3">
+<li>Run tests with specific options:</li>
+</ol>
+<pre class="hljs"><code><div>vassure run --parallel 3 --html-report
+</div></code></pre>
+<h3 id="creating-tests">Creating Tests</h3>
+<h4 id="from-pdf-specifications">From PDF Specifications</h4>
+<p>VAssureAI can automatically generate test scripts from PDF test specifications:</p>
+<ol>
+<li>Place your test specification PDFs in the <code>input_pdfs</code> folder</li>
+<li>Use the interactive mode or run the PDF watcher to auto-generate tests:</li>
+</ol>
+<pre class="hljs"><code><div>vassure interactive
+<span class="hljs-comment"># Select option 1: Create/Update Tests from PDF</span>
+</div></code></pre>
+<p>or</p>
+<pre class="hljs"><code><div>vassure watch-pdfs
+</div></code></pre>
+<h4 id="writing-custom-tests">Writing Custom Tests</h4>
+<p>You can also write custom tests by extending the BaseTest class:</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> pytest
+<span class="hljs-keyword">from</span> vassureai.utils.base_test <span class="hljs-keyword">import</span> BaseTest
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestMyFeature</span><span class="hljs-params">(BaseTest)</span>:</span>
+    <span class="hljs-string">"""Test custom feature"""</span>
+
+<span class="hljs-meta">    @pytest.fixture(autouse=True)</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setup_test</span><span class="hljs-params">(self, setup_base)</span>:</span>
+        self.test_name = <span class="hljs-string">"test_my_feature"</span>
+        <span class="hljs-keyword">return</span> self
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_all_test_steps</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> [
+            <span class="hljs-string">"1. Navigate to 'https://example.com'"</span>,
+            <span class="hljs-string">"2. Click on the 'Login' button"</span>,
+            <span class="hljs-string">"3. Enter 'username' in the username field"</span>,
+            <span class="hljs-string">"4. Enter 'password' in the password field"</span>,
+            <span class="hljs-string">"5. Click the 'Submit' button"</span>,
+            <span class="hljs-string">"6. Verify that 'Welcome' text is displayed"</span>
+        ]
+
+<span class="hljs-meta">    @pytest.mark.asyncio</span>
+    <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_my_feature</span><span class="hljs-params">(self)</span>:</span>
+        test_steps = self.get_all_test_steps()
+        result = <span class="hljs-keyword">await</span> self._execute_test(test_steps, <span class="hljs-string">"My Feature Test"</span>)
+        <span class="hljs-keyword">assert</span> result <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>
+</div></code></pre>
+<h3 id="running-tests">Running Tests</h3>
+<p>Run tests using the interactive mode:</p>
+<pre class="hljs"><code><div>vassure interactive
+<span class="hljs-comment"># Select option 2: Execute Existing Tests</span>
+</div></code></pre>
+<p>Or run directly using command line:</p>
+<p>Run all tests:</p>
+<pre class="hljs"><code><div>vassure run --html-report
+</div></code></pre>
+<p>Run a specific test:</p>
+<pre class="hljs"><code><div>vassure run --<span class="hljs-built_in">test</span>-dir tests/test_my_feature.py --html-report
+</div></code></pre>
+<p>Run tests in parallel:</p>
+<pre class="hljs"><code><div>vassure run --parallel 4 --html-report
+</div></code></pre>
+<h2 id="key-features">Key Features</h2>
+<h3 id="ai-powered-test-execution">AI-Powered Test Execution</h3>
+<p>VAssureAI uses AI to interpret test steps and interact with the browser intelligently, making tests more resilient to UI changes.</p>
+<h3 id="interactive-mode">Interactive Mode</h3>
+<p>A menu-driven interface that simplifies test creation and execution without remembering command line arguments.</p>
+<h3 id="visual-validation">Visual Validation</h3>
+<p>The framework can capture screenshots at each test step and perform visual validation.</p>
+<h3 id="comprehensive-reporting">Comprehensive Reporting</h3>
+<p>Detailed HTML and PDF reports are generated after test execution, providing insights into test results and performance metrics.</p>
+<h3 id="test-parallelization">Test Parallelization</h3>
+<p>Tests can be run in parallel for faster execution times.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<ol>
+<li>
+<p><strong>Test not finding elements</strong></p>
+<ul>
+<li>Ensure the element selectors are correct</li>
+<li>Try increasing the timeout settings</li>
+</ul>
+</li>
+<li>
+<p><strong>Test execution is slow</strong></p>
+<ul>
+<li>Consider running tests in headless mode</li>
+<li>Use parallel execution with the <code>--parallel</code> option</li>
+</ul>
+</li>
+<li>
+<p><strong>AI model not working correctly</strong></p>
+<ul>
+<li>Check your API key configuration</li>
+<li>Ensure you have internet connectivity</li>
+</ul>
+</li>
+<li>
+<p><strong>Interactive mode not working</strong></p>
+<ul>
+<li>Ensure you have the latest version of the framework</li>
+<li>Check that your Python environment is correctly set up</li>
+</ul>
+</li>
+</ol>
+<h3 id="getting-help">Getting Help</h3>
+<p>For more detailed information, refer to the VAssureAI documentation:
+https://github.com/Spotline-Inc/VAssureAI</p>
+<h2 id="license">License</h2>
+<p>This project is licensed under the MIT License - see the LICENSE file for details.</p>
+
+</body>
+</html>

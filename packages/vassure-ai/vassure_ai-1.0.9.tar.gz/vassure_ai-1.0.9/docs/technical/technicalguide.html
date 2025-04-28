@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>technicalguide.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<pre class="hljs"><code><div><span class="hljs-section">"""
+-----------------------</span>
+Author: Sukumar Kutagulla (Read-only)
+<span class="hljs-section">Designation: Test Automation Architect (Read-only)
+-----------------------</span>
+
+VAssureAI Framework Technical Guide
+Version: 1.0.9
+"""
+
+<span class="hljs-section"># VAssureAI Framework Technical Guide</span>
+
+<span class="hljs-section">## Development Setup</span>
+
+<span class="hljs-section">### Git Hooks Installation</span>
+To ensure all Python and Markdown files maintain the required headers, install the pre-commit hook:
+
+<span class="hljs-code">```bash
+# From your project root
+cp scripts/pre-commit .git/hooks/
+chmod +x .git/hooks/pre-commit
+</span></div></code></pre>
+<h3 id="file-protection">File Protection</h3>
+<p>All Python (.py) and Markdown (.md) files in this project must contain the following header:</p>
+<pre class="hljs"><code><div>&quot;&quot;&quot;
+-----------------------
+Author: Sukumar Kutagulla (Read-only)
+Designation: Test Automation Architect (Read-only)
+-----------------------
+&quot;&quot;&quot;
+</div></code></pre>
+<p>This header is automatically added to:</p>
+<ul>
+<li>All new files created through the framework</li>
+<li>Files generated from PDF processing</li>
+<li>Existing files when running <code>vassure run</code></li>
+</ul>
+<h3 id="project-structure">Project Structure</h3>
+<p>When installing the framework via pip and running <code>vassure init</code>, the following structure is created:</p>
+<pre class="hljs"><code><div>project/
+├── input_pdfs/         # Place PDF files here for processing
+├── logs/              # Test execution logs
+├── reports/           # Generated test reports
+├── screenshots/       # Test screenshots
+├── videos/           # Test execution recordings
+├── tests/            # Test files
+├── pytest.ini        # PyTest configuration
+├── requirements.txt  # Project dependencies
+├── README.md         # Project overview and quick start guide
+├── README.html       # HTML version of project overview
+├── README.pdf        # PDF version of project overview
+├── README.jpeg       # Project overview diagram
+├── technicalguide.md  # Technical documentation
+├── technicalguide.html # HTML version of technical guide
+├── technicalguide.pdf  # PDF version of technical guide
+├── technicalguide.jpeg # Technical architecture diagram
+├── userguide.md      # User documentation
+├── userguide.html    # HTML version of user guide
+├── userguide.pdf     # PDF version of user guide
+└── userguide.jpeg    # User guide workflow diagram
+</div></code></pre>
+<h3 id="development-guidelines">Development Guidelines</h3>
+<ol>
+<li>All new Python and Markdown files must include the mandatory header</li>
+<li>The pre-commit hook will prevent commits of files without proper headers</li>
+<li>When generating new files from PDFs, file descriptions are automatically added below the header</li>
+<li>Use the framework's built-in utilities for file creation to ensure consistency</li>
+</ol>
+<h3 id="framework-components">Framework Components</h3>
+<p>VAssureAI follows a modular architecture with several interconnected components:</p>
+<pre class="hljs"><code><div>VAssureAI/
+├── core.py                 # Core framework initialization
+├── start_framework.py      # Entry point script
+├── conftest.py             # Global pytest configuration
+├── actions/                # Custom test actions
+├── input_pdfs/             # PDF test specifications
+├── tests/                  # Test scripts 
+├── utils/                  # Framework utilities
+│   ├── base_test.py        # Base test class
+│   ├── conftest.py         # Pytest fixtures
+│   ├── config.py           # Configuration manager
+│   ├── logger.py           # Logging system
+│   ├── pdfgenerator.py     # PDF report generator
+│   ├── test_generator.py   # Test script generator
+│   └── utilities.py        # Common utilities
+├── browser_use/            # Browser automation
+│   ├── agent/              # Automation agent
+│   └── controller/         # Browser controller
+├── metrics/                # Performance metrics
+└── templates/              # Code templates
+</div></code></pre>
+<p>The framework uses a layered architecture:</p>
+<ol>
+<li><strong>Presentation Layer</strong>: CLI interface and reporting</li>
+<li><strong>Business Logic Layer</strong>: Test generation and execution</li>
+<li><strong>Integration Layer</strong>: AI and browser automation</li>
+<li><strong>Infrastructure Layer</strong>: Logging, metrics, and utilities</li>
+</ol>
+<h2 id="entry-points">Entry Points</h2>
+<h3 id="startframeworkpy"><code>start_framework.py</code></h3>
+<p>This is the main entry point for the framework. It:</p>
+<ol>
+<li>Sets up the Python path</li>
+<li>Initializes directories</li>
+<li>Starts the PDF watcher if requested</li>
+<li>Provides the main CLI interface</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-comment"># Main entry point in start_framework.py</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># Parse command line arguments</span>
+    <span class="hljs-comment"># Initialize the framework</span>
+    <span class="hljs-comment"># Start watching PDFs or begin test execution</span>
+    <span class="hljs-keyword">pass</span>
+</div></code></pre>
+<h3 id="corepy"><code>core.py</code></h3>
+<p>Contains the core initialization logic:</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">init_framework</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># Create required directories</span>
+    <span class="hljs-comment"># Initialize configuration</span>
+    <span class="hljs-comment"># Setup logging</span>
+    <span class="hljs-keyword">pass</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">start_framework</span><span class="hljs-params">(pdf_dir: str, watch: bool = True)</span>:</span>
+    <span class="hljs-comment"># Initialize framework</span>
+    <span class="hljs-comment"># Start PDF watcher or process specific PDF</span>
+    <span class="hljs-comment"># Handle exceptions</span>
+    <span class="hljs-keyword">pass</span>
+</div></code></pre>
+<h2 id="core-modules">Core Modules</h2>
+<h3 id="conftestpy"><code>conftest.py</code></h3>
+<p>Global pytest configuration for the framework. It:</p>
+<ol>
+<li>Registers custom pytest markers</li>
+<li>Sets up global fixtures</li>
+<li>Configures asyncio settings</li>
+<li>Ensures required directories exist</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pytest_configure</span><span class="hljs-params">(config)</span>:</span>
+    <span class="hljs-comment"># Add custom markers</span>
+    <span class="hljs-comment"># Create required directories</span>
+    <span class="hljs-keyword">pass</span>
+</div></code></pre>
+<h3 id="basetestpy"><code>base_test.py</code></h3>
+<p>The foundation class for all tests in the framework:</p>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BaseTest</span>:</span>
+    <span class="hljs-string">"""Base class for VAssureAI test implementations"""</span>
+    
+<span class="hljs-meta">    @pytest.fixture(autouse=True)</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setup_base</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-comment"># Initialize test environment</span>
+        <span class="hljs-comment"># Setup logging</span>
+        <span class="hljs-comment"># Configure browser</span>
+        <span class="hljs-keyword">pass</span>
+        
+    <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_execute_test</span><span class="hljs-params">(self, test_steps, test_name)</span>:</span>
+        <span class="hljs-comment"># Initialize test agent</span>
+        <span class="hljs-comment"># Execute each step</span>
+        <span class="hljs-comment"># Capture results</span>
+        <span class="hljs-comment"># Generate reports</span>
+        <span class="hljs-keyword">pass</span>
+</div></code></pre>
+<h2 id="test-generation-flow">Test Generation Flow</h2>
+<p>The test generation process follows these steps:</p>
+<ol>
+<li><strong>PDF Detection</strong>: The framework monitors the <code>input_pdfs/</code> directory for new files</li>
+<li><strong>PDF Parsing</strong>: When a new PDF is detected, it extracts test steps and metadata</li>
+<li><strong>Test Script Generation</strong>: Creates a Python test script using the template</li>
+<li><strong>Test Registration</strong>: Registers the new test with pytest</li>
+</ol>
+<p>Key components involved:</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># In test_generator.py</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">start_pdf_watcher</span><span class="hljs-params">(pdf_dir, watch=True)</span>:</span>
+    <span class="hljs-comment"># Set up file watcher or process single file</span>
+    <span class="hljs-comment"># Call parse_pdf_and_create_test for each PDF</span>
+    <span class="hljs-keyword">pass</span>
+    
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">parse_pdf_and_create_test</span><span class="hljs-params">(pdf_path)</span>:</span>
+    <span class="hljs-comment"># Extract test metadata and steps from PDF</span>
+    <span class="hljs-comment"># Format test steps for script</span>
+    <span class="hljs-comment"># Generate test script using template</span>
+    <span class="hljs-keyword">pass</span>
+</div></code></pre>
+<p>The generated test script inherits from <code>BaseTest</code> and contains:</p>
+<ol>
+<li>Test metadata</li>
+<li>Test steps as plain text</li>
+<li>Implementation of test execution method</li>
+</ol>
+<h2 id="test-execution-flow">Test Execution Flow</h2>
+<h3 id="initialization-phase">Initialization Phase</h3>
+<ol>
+<li><strong>pytest startup</strong>: pytest loads conftest.py and registers fixtures</li>
+<li><strong>Test discovery</strong>: pytest finds all test classes and methods</li>
+<li><strong>Fixture setup</strong>: Global fixtures are initialized</li>
+</ol>
+<h3 id="setup-phase">Setup Phase</h3>
+<p>For each test:</p>
+<ol>
+<li><strong>Environment initialization</strong>: <code>setup_base</code> fixture is called</li>
+<li><strong>Test-specific setup</strong>: <code>setup_test</code> method is called</li>
+<li><strong>Browser initialization</strong>: Browser agent is configured</li>
+</ol>
+<h3 id="execution-phase">Execution Phase</h3>
+<ol>
+<li><strong>Test method execution</strong>: The test's main method is called</li>
+<li><strong>Step execution</strong>: Each step is processed by the AI agent</li>
+<li><strong>Browser automation</strong>: Browser actions are performed</li>
+<li><strong>Result verification</strong>: Assertions verify expected outcomes</li>
+</ol>
+<h3 id="teardown-phase">Teardown Phase</h3>
+<ol>
+<li><strong>Browser cleanup</strong>: Browser connections are closed</li>
+<li><strong>Resource cleanup</strong>: Temporary resources are released</li>
+<li><strong>Report generation</strong>: Test reports are created</li>
+</ol>
+<p>Key components:</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># In base_test.py</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_execute_test</span><span class="hljs-params">(self, test_steps, test_name)</span>:</span>
+    <span class="hljs-keyword">try</span>:
+        <span class="hljs-comment"># Initialize AI agent</span>
+        agent = Agent(browser_settings, llm_client)
+        
+        <span class="hljs-comment"># Execute each step</span>
+        <span class="hljs-keyword">for</span> step <span class="hljs-keyword">in</span> test_steps:
+            <span class="hljs-keyword">await</span> self._execute_step(agent, step)
+            
+        <span class="hljs-comment"># Generate final report</span>
+        <span class="hljs-keyword">return</span> self._generate_report()
+    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+        <span class="hljs-comment"># Handle exceptions, retry if configured</span>
+</div></code></pre>
+<h2 id="ai-integration">AI Integration</h2>
+<p>The framework integrates with LLMs for test execution and interpretation:</p>
+<ol>
+<li><strong>Initialization</strong>: LLM client is set up with API keys and configuration</li>
+<li><strong>Step Interpretation</strong>: Test steps are sent to the LLM for parsing</li>
+<li><strong>Action Generation</strong>: LLM determines the appropriate browser actions</li>
+<li><strong>Self-healing</strong>: LLM handles unexpected conditions by generating alternative actions</li>
+</ol>
+<p>Key components:</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># In utilities.py</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize_llm</span><span class="hljs-params">(model_name=None, api_key=None)</span>:</span>
+    <span class="hljs-comment"># Set up LLM client with appropriate configuration</span>
+    <span class="hljs-comment"># Handle API authentication</span>
+    <span class="hljs-comment"># Return configured client</span>
+    <span class="hljs-keyword">pass</span>
+
+<span class="hljs-comment"># In agent/service.py</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Agent</span>:</span>
+    <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">execute_step</span><span class="hljs-params">(self, step_text)</span>:</span>
+        <span class="hljs-comment"># Send step to LLM for interpretation</span>
+        <span class="hljs-comment"># Convert LLM response to browser actions</span>
+        <span class="hljs-comment"># Execute browser actions</span>
+        <span class="hljs-comment"># Verify results</span>
+        <span class="hljs-keyword">pass</span>
+</div></code></pre>
+<h2 id="browser-automation">Browser Automation</h2>
+<p>The framework uses Playwright for browser automation:</p>
+<ol>
+<li><strong>Browser Setup</strong>: Configure browser instance with appropriate settings</li>
+<li><strong>Page Navigation</strong>: Handle navigation events and timeouts</li>
+<li><strong>Element Interaction</strong>: Locate and interact with page elements</li>
+<li><strong>Visual Verification</strong>: Take screenshots and perform visual comparisons</li>
+</ol>
+<p>Key components:</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># In controller_setup.py</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">register_controller</span><span class="hljs-params">(browser_type=None, headless=None)</span>:</span>
+    <span class="hljs-comment"># Create browser context with specified settings</span>
+    <span class="hljs-comment"># Configure viewport, timeout, etc.</span>
+    <span class="hljs-comment"># Return controller instance</span>
+    <span class="hljs-keyword">pass</span>
+
+<span class="hljs-comment"># In agent/service.py</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Agent</span>:</span>
+    <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_perform_browser_action</span><span class="hljs-params">(self, action)</span>:</span>
+        <span class="hljs-comment"># Validate action parameters</span>
+        <span class="hljs-comment"># Execute browser command</span>
+        <span class="hljs-comment"># Handle edge cases</span>
+        <span class="hljs-comment"># Return execution results</span>
+        <span class="hljs-keyword">pass</span>
+</div></code></pre>
+<h2 id="reporting-and-metrics">Reporting and Metrics</h2>
+<p>The framework generates comprehensive reports and metrics:</p>
+<ol>
+<li><strong>Test Reports</strong>: HTML and PDF reports with test results</li>
+<li><strong>Screenshots</strong>: Visual evidence of test steps</li>
+<li><strong>Videos</strong>: Recorded browser sessions</li>
+<li><strong>Logs</strong>: Detailed execution logs</li>
+<li><strong>Metrics</strong>: Performance and reliability metrics</li>
+</ol>
+<p>Key components:</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># In pdfgenerator.py</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestReport</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">generate_report</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-comment"># Collect test results</span>
+        <span class="hljs-comment"># Format test data</span>
+        <span class="hljs-comment"># Generate report with appropriate template</span>
+        <span class="hljs-comment"># Save to reports directory</span>
+        <span class="hljs-keyword">pass</span>
+
+<span class="hljs-comment"># In metrics/metrics_reporter.py</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">collect_metrics</span><span class="hljs-params">(test_name, start_time, end_time, status)</span>:</span>
+    <span class="hljs-comment"># Calculate execution time</span>
+    <span class="hljs-comment"># Record memory usage</span>
+    <span class="hljs-comment"># Measure browser performance</span>
+    <span class="hljs-comment"># Store in metrics database</span>
+    <span class="hljs-keyword">pass</span>
+</div></code></pre>
+<h2 id="configuration-system">Configuration System</h2>
+<p>Configuration is managed through multiple layers:</p>
+<ol>
+<li><strong>Default values</strong>: Hard-coded defaults in <code>config.py</code></li>
+<li><strong>Environment variables</strong>: Configuration through <code>.env</code> file</li>
+<li><strong>Command line</strong>: Override options via CLI arguments</li>
+<li><strong>Test-specific</strong>: Per-test configuration via markers</li>
+</ol>
+<p>Key components:</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># In config.py</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Config</span>:</span>
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">browser</span>:</span>
+        type = os.getenv(<span class="hljs-string">"BROWSER_TYPE"</span>, <span class="hljs-string">"chromium"</span>)
+        headless = to_bool(os.getenv(<span class="hljs-string">"BROWSER_HEADLESS"</span>, <span class="hljs-string">"false"</span>))
+        record_video = to_bool(os.getenv(<span class="hljs-string">"BROWSER_RECORD_VIDEO"</span>, <span class="hljs-string">"true"</span>))
+        
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">llm</span>:</span>
+        model = os.getenv(<span class="hljs-string">"LLM_MODEL"</span>, VASSURE_AI_MODEL)
+        api_key = os.getenv(<span class="hljs-string">"LLM_API_KEY"</span>, <span class="hljs-literal">None</span>)
+        
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">retry</span>:</span>
+        max_retries = int(os.getenv(<span class="hljs-string">"RETRY_MAX_RETRIES"</span>, <span class="hljs-number">2</span>))
+        delay = int(os.getenv(<span class="hljs-string">"RETRY_DELAY"</span>, <span class="hljs-number">5</span>))
+</div></code></pre>
+<h2 id="extension-points">Extension Points</h2>
+<p>The framework provides several extension points:</p>
+<h3 id="custom-actions">Custom Actions</h3>
+<p>Create custom actions by adding methods to <code>actions/custom_actions.py</code>. These are automatically discovered and available to the agent.</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># In custom_actions.py</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">perform_custom_login</span><span class="hljs-params">(agent, username, password)</span>:</span>
+    <span class="hljs-string">"""Custom login action for specific application"""</span>
+    <span class="hljs-comment"># Execute specialized login flow</span>
+    <span class="hljs-keyword">pass</span>
+</div></code></pre>
+<h3 id="test-hooks">Test Hooks</h3>
+<p>Add pre/post test hooks via pytest fixtures in your conftest.py:</p>
+<pre class="hljs"><code><div><span class="hljs-meta">@pytest.fixture(autouse=True)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">custom_setup_teardown</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># Pre-test setup code</span>
+    <span class="hljs-keyword">yield</span>
+    <span class="hljs-comment"># Post-test teardown code</span>
+</div></code></pre>
+<h3 id="browser-extensions">Browser Extensions</h3>
+<p>Extend browser capabilities by registering custom browser handlers:</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># Register custom handler for file downloads</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">register_download_handler</span><span class="hljs-params">(page)</span>:</span>
+    page.on(<span class="hljs-string">"download"</span>, handle_download)
+</div></code></pre>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="debugging-techniques">Debugging Techniques</h3>
+<ol>
+<li><strong>Enable debug logging</strong>: Set <code>LOG_LEVEL=DEBUG</code> in <code>.env</code></li>
+<li><strong>Run with visible browser</strong>: Set <code>BROWSER_HEADLESS=false</code> in <code>.env</code></li>
+<li><strong>Step-by-step execution</strong>: Set <code>BROWSER_SLOW_MO=100</code> for slow-motion execution</li>
+</ol>
+<h3 id="common-issues">Common Issues</h3>
+<ol>
+<li><strong>Browser Failures</strong>: Usually due to timing issues or element selectors
+<ul>
+<li>Solution: Increase timeouts or use more robust selectors</li>
+</ul>
+</li>
+<li><strong>AI Interpretation Issues</strong>: LLM may misinterpret complex test steps
+<ul>
+<li>Solution: Simplify step descriptions or use custom actions</li>
+</ul>
+</li>
+<li><strong>Performance Bottlenecks</strong>: Slow execution in parallel tests
+<ul>
+<li>Solution: Adjust resource allocation or reduce browser instances</li>
+</ul>
+</li>
+</ol>
+<h3 id="diagnostic-tools">Diagnostic Tools</h3>
+<pre class="hljs"><code><div><span class="hljs-comment"># Enable in-depth diagnostics</span>
+<span class="hljs-meta">@pytest.mark.diagnostics</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_with_diagnostics</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># Test will run with extra instrumentation</span>
+    <span class="hljs-keyword">pass</span>
+</div></code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p>This technical guide provides a comprehensive overview of the VAssureAI framework architecture and implementation. By understanding these internal components and their interactions, developers can effectively extend the framework or contribute to its development.</p>
+<p>For API references and detailed class documentation, please refer to the source code documentation comments.</p>
+<h2 id="environment-variables">Environment Variables</h2>
+<p>The framework supports the following environment variables:</p>
+<pre class="hljs"><code><div># Browser Configuration
+VASSURE_BROWSER_TYPE=chromium|firefox|webkit
+VASSURE_BROWSER_HEADLESS=true|false
+VASSURE_BROWSER_SLOWMO=0
+VASSURE_BROWSER_DEVTOOLS=true|false
+
+# AI Configuration
+VASSURE_AI_MODEL=ai_model
+VASSURE_AI_API_KEY=your_api_key
+VASSURE_AI_TEMPERATURE=0.7
+VASSURE_AI_MAX_TOKENS=2048
+
+# Test Configuration
+VASSURE_MAX_RETRIES=3
+VASSURE_RETRY_DELAY=5000
+VASSURE_SCREENSHOT_ON_FAILURE=true
+VASSURE_VIDEO_RECORDING=true
+VASSURE_PARALLEL_TESTS=4
+
+# Logging Configuration
+VASSURE_LOG_LEVEL=DEBUG|INFO|WARNING|ERROR
+VASSURE_LOG_FORMAT=text|json
+VASSURE_LOG_DIR=logs/
+</div></code></pre>
+<h2 id="advanced-features">Advanced Features</h2>
+<h3 id="custom-action-development">Custom Action Development</h3>
+<p>Create custom actions by implementing the IAction interface:</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">from</span> vassureai.interfaces <span class="hljs-keyword">import</span> IAction
+<span class="hljs-keyword">from</span> vassureai.types <span class="hljs-keyword">import</span> ActionResult
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomAction</span><span class="hljs-params">(IAction)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        self.name = <span class="hljs-string">"custom_action"</span>
+        self.description = <span class="hljs-string">"Performs a custom action"</span>
+        
+    <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">execute</span><span class="hljs-params">(self, params: dict)</span> -&gt; ActionResult:</span>
+        <span class="hljs-comment"># Implementation</span>
+        <span class="hljs-keyword">pass</span>
+        
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">validate</span><span class="hljs-params">(self, params: dict)</span> -&gt; bool:</span>
+        <span class="hljs-comment"># Validation logic</span>
+        <span class="hljs-keyword">pass</span>
+</div></code></pre>
+<h3 id="plugin-system">Plugin System</h3>
+<p>Extend framework capabilities through plugins:</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">from</span> vassureai.plugins <span class="hljs-keyword">import</span> VAssurePlugin
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomPlugin</span><span class="hljs-params">(VAssurePlugin)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        super().__init__(<span class="hljs-string">"custom_plugin"</span>, <span class="hljs-string">"1.0.0"</span>)
+        
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-comment"># Plugin initialization</span>
+        <span class="hljs-keyword">pass</span>
+        
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">teardown</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-comment"># Cleanup</span>
+        <span class="hljs-keyword">pass</span>
+</div></code></pre>
+<h3 id="advanced-browser-automation">Advanced Browser Automation</h3>
+<p>Complex browser interactions:</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">handle_dynamic_content</span><span class="hljs-params">(page)</span>:</span>
+    <span class="hljs-comment"># Wait for network idle</span>
+    <span class="hljs-keyword">await</span> page.wait_for_load_state(<span class="hljs-string">"networkidle"</span>)
+    
+    <span class="hljs-comment"># Handle lazy loading</span>
+    <span class="hljs-keyword">await</span> page.evaluate(<span class="hljs-string">"""
+        window.scrollTo(0, document.body.scrollHeight);
+    """</span>)
+    
+    <span class="hljs-comment"># Wait for specific condition</span>
+    <span class="hljs-keyword">await</span> page.wait_for_function(<span class="hljs-string">"""
+        () =&gt; document.querySelectorAll('.item').length &gt; 10
+    """</span>)
+</div></code></pre>
+<h3 id="pdf-processing-pipeline">PDF Processing Pipeline</h3>
+<ol>
+<li><strong>PDF Loading</strong></li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">load_pdf</span><span class="hljs-params">(path: str)</span> -&gt; PDFDocument:</span>
+    <span class="hljs-keyword">with</span> open(path, <span class="hljs-string">'rb'</span>) <span class="hljs-keyword">as</span> file:
+        parser = PDFParser(file)
+        doc = PDFDocument(parser)
+        <span class="hljs-keyword">return</span> doc
+</div></code></pre>
+<ol start="2">
+<li><strong>Text Extraction</strong></li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">extract_text</span><span class="hljs-params">(pdf: PDFDocument)</span> -&gt; str:</span>
+    rsrcmgr = PDFResourceManager()
+    retstr = StringIO()
+    device = TextConverter(rsrcmgr, retstr)
+    interpreter = PDFPageInterpreter(rsrcmgr, device)
+    
+    <span class="hljs-keyword">for</span> page <span class="hljs-keyword">in</span> PDFPage.create_pages(pdf):
+        interpreter.process_page(page)
+        
+    <span class="hljs-keyword">return</span> retstr.getvalue()
+</div></code></pre>
+<ol start="3">
+<li><strong>Test Step Parsing</strong></li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">parse_steps</span><span class="hljs-params">(text: str)</span> -&gt; List[TestStep]:</span>
+    steps = []
+    current_step = <span class="hljs-literal">None</span>
+    
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> text.split(<span class="hljs-string">'\n'</span>):
+        <span class="hljs-keyword">if</span> is_step_header(line):
+            <span class="hljs-keyword">if</span> current_step:
+                steps.append(current_step)
+            current_step = TestStep()
+        <span class="hljs-keyword">elif</span> current_step:
+            current_step.add_line(line)
+            
+    <span class="hljs-keyword">return</span> steps
+</div></code></pre>
+<h3 id="advanced-testing-features">Advanced Testing Features</h3>
+<h4 id="parallel-test-execution">Parallel Test Execution</h4>
+<pre class="hljs"><code><div><span class="hljs-meta">@pytest.mark.parallel</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_parallel</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">"""Tests marked with parallel will run concurrently"""</span>
+    <span class="hljs-keyword">pass</span>
+
+<span class="hljs-comment"># Configuration in pytest.ini</span>
+[pytest]
+markers =
+    parallel: mark test to run <span class="hljs-keyword">in</span> parallel
+    slow: mark test <span class="hljs-keyword">as</span> slow running
+    flaky: mark test <span class="hljs-keyword">as</span> flaky
+</div></code></pre>
+<h4 id="test-retry-logic">Test Retry Logic</h4>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RetryableTest</span><span class="hljs-params">(BaseTest)</span>:</span>
+<span class="hljs-meta">    @retry(max_attempts=3, delay=5)</span>
+    <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">execute_with_retry</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">await</span> self._execute_test()
+        <span class="hljs-keyword">except</span> RetryableException <span class="hljs-keyword">as</span> e:
+            self.logger.warning(<span class="hljs-string">f"Retrying due to: <span class="hljs-subst">{e}</span>"</span>)
+            <span class="hljs-keyword">raise</span>
+</div></code></pre>
+<h4 id="advanced-reporting">Advanced Reporting</h4>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EnhancedReporter</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        self.results = []
+        self.metrics = {}
+        
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add_result</span><span class="hljs-params">(self, test_result: TestResult)</span>:</span>
+        self.results.append(test_result)
+        self._update_metrics(test_result)
+        
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">generate_report</span><span class="hljs-params">(self)</span> -&gt; str:</span>
+        template = self._load_template()
+        <span class="hljs-keyword">return</span> template.render(
+            results=self.results,
+            metrics=self.metrics,
+            summary=self._generate_summary()
+        )
+</div></code></pre>
+<h3 id="self-healing-capabilities">Self-Healing Capabilities</h3>
+<ol>
+<li><strong>Element Location Strategy</strong></li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ElementLocator</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        self.strategies = [
+            CSSStrategy(),
+            XPathStrategy(),
+            TextStrategy(),
+            AIStrategy()
+        ]
+        
+    <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find_element</span><span class="hljs-params">(self, page, selector)</span>:</span>
+        <span class="hljs-keyword">for</span> strategy <span class="hljs-keyword">in</span> self.strategies:
+            <span class="hljs-keyword">try</span>:
+                element = <span class="hljs-keyword">await</span> strategy.find(page, selector)
+                <span class="hljs-keyword">if</span> element:
+                    <span class="hljs-keyword">return</span> element
+            <span class="hljs-keyword">except</span> Exception:
+                <span class="hljs-keyword">continue</span>
+        <span class="hljs-keyword">raise</span> ElementNotFoundError(selector)
+</div></code></pre>
+<ol start="2">
+<li><strong>AI-Based Recovery</strong></li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AIRecovery</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, ai_client)</span>:</span>
+        self.ai_client = ai_client
+        
+    <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">recover_from_failure</span><span class="hljs-params">(self, error, context)</span>:</span>
+        <span class="hljs-comment"># Get alternative actions from AI</span>
+        alternatives = <span class="hljs-keyword">await</span> self.ai_client.get_alternatives(
+            error=error,
+            context=context
+        )
+        
+        <span class="hljs-comment"># Try alternatives</span>
+        <span class="hljs-keyword">for</span> action <span class="hljs-keyword">in</span> alternatives:
+            <span class="hljs-keyword">try</span>:
+                result = <span class="hljs-keyword">await</span> action.execute()
+                <span class="hljs-keyword">if</span> result.success:
+                    <span class="hljs-keyword">return</span> result
+            <span class="hljs-keyword">except</span> Exception:
+                <span class="hljs-keyword">continue</span>
+                
+        <span class="hljs-keyword">raise</span> UnrecoverableError(error)
+</div></code></pre>
+<h3 id="performance-optimization">Performance Optimization</h3>
+<ol>
+<li><strong>Resource Management</strong></li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ResourceManager</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        self.browser_pool = []
+        self.max_browsers = <span class="hljs-number">4</span>
+        
+    <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_browser</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">if</span> len(self.browser_pool) &lt; self.max_browsers:
+            browser = <span class="hljs-keyword">await</span> playwright.chromium.launch()
+            self.browser_pool.append(browser)
+            <span class="hljs-keyword">return</span> browser
+        <span class="hljs-keyword">return</span> self.browser_pool[<span class="hljs-number">0</span>]  <span class="hljs-comment"># Round-robin</span>
+</div></code></pre>
+<ol start="2">
+<li><strong>Memory Management</strong></li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MemoryOptimizer</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">cleanup_resources</span><span class="hljs-params">(self)</span>:</span>
+        gc.collect()
+        self._close_unused_browsers()
+        self._clear_screenshot_cache()
+</div></code></pre>
+<h3 id="security-features">Security Features</h3>
+<ol>
+<li><strong>Credential Management</strong></li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CredentialManager</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        self.keyring = SystemKeyring()
+        
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">store_credentials</span><span class="hljs-params">(self, service, username, password)</span>:</span>
+        encrypted = self._encrypt(password)
+        self.keyring.set_password(service, username, encrypted)
+</div></code></pre>
+<ol start="2">
+<li><strong>Security Headers</strong></li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SecurityMiddleware</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        self.headers = {
+            <span class="hljs-string">'X-Frame-Options'</span>: <span class="hljs-string">'DENY'</span>,
+            <span class="hljs-string">'X-XSS-Protection'</span>: <span class="hljs-string">'1; mode=block'</span>,
+            <span class="hljs-string">'X-Content-Type-Options'</span>: <span class="hljs-string">'nosniff'</span>
+        }
+        
+    <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply_security_headers</span><span class="hljs-params">(self, page)</span>:</span>
+        <span class="hljs-keyword">await</span> page.set_extra_http_headers(self.headers)
+</div></code></pre>
+<h2 id="deployment">Deployment</h2>
+<h3 id="docker-support">Docker Support</h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">FROM</span> python:<span class="hljs-number">3.8</span>-slim
+
+<span class="hljs-comment"># Install browser dependencies</span>
+<span class="hljs-keyword">RUN</span><span class="bash"> apt-get update &amp;&amp; apt-get install -y \
+    chromium \
+    chromium-driver</span>
+
+<span class="hljs-comment"># Install framework</span>
+<span class="hljs-keyword">RUN</span><span class="bash"> pip install vassure-ai</span>
+
+<span class="hljs-comment"># Set environment variables</span>
+<span class="hljs-keyword">ENV</span> VASSURE_BROWSER_TYPE=chromium
+<span class="hljs-keyword">ENV</span> VASSURE_BROWSER_HEADLESS=true
+
+<span class="hljs-comment"># Copy project files</span>
+<span class="hljs-keyword">COPY</span><span class="bash"> . /app</span>
+<span class="hljs-keyword">WORKDIR</span><span class="bash"> /app</span>
+
+<span class="hljs-keyword">CMD</span><span class="bash"> [<span class="hljs-string">"vassure"</span>, <span class="hljs-string">"run"</span>]</span>
+</div></code></pre>
+<h3 id="cicd-integration">CI/CD Integration</h3>
+<p>Example GitHub Actions workflow:</p>
+<pre class="hljs"><code><div><span class="hljs-attr">name:</span> <span class="hljs-string">VAssure</span> <span class="hljs-string">Tests</span>
+<span class="hljs-attr">on:</span> <span class="hljs-string">[push]</span>
+
+<span class="hljs-attr">jobs:</span>
+  <span class="hljs-attr">test:</span>
+    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span>
+    <span class="hljs-attr">steps:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v2</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Set</span> <span class="hljs-string">up</span> <span class="hljs-string">Python</span>
+        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-python@v2</span>
+        <span class="hljs-attr">with:</span>
+          <span class="hljs-attr">python-version:</span> <span class="hljs-string">'3.8'</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Install</span> <span class="hljs-string">dependencies</span>
+        <span class="hljs-attr">run:</span> <span class="hljs-string">|
+          pip install vassure-ai
+</span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Run</span> <span class="hljs-string">tests</span>
+        <span class="hljs-attr">run:</span> <span class="hljs-string">|
+          vassure run
+</span></div></code></pre>
+<h2 id="monitoring-and-metrics">Monitoring and Metrics</h2>
+<h3 id="prometheus-integration">Prometheus Integration</h3>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MetricsCollector</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        self.test_duration = Summary(
+            <span class="hljs-string">'test_duration_seconds'</span>,
+            <span class="hljs-string">'Time spent executing tests'</span>
+        )
+        self.test_results = Counter(
+            <span class="hljs-string">'test_results_total'</span>,
+            <span class="hljs-string">'Test execution results'</span>,
+            [<span class="hljs-string">'result'</span>]
+        )
+</div></code></pre>
+<h3 id="grafana-dashboard">Grafana Dashboard</h3>
+<p>Example dashboard configuration for monitoring test executions:</p>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"dashboard"</span>: {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"VAssure Test Metrics"</span>,
+    <span class="hljs-attr">"panels"</span>: [
+      {
+        <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Test Duration"</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"graph"</span>,
+        <span class="hljs-attr">"datasource"</span>: <span class="hljs-string">"Prometheus"</span>,
+        <span class="hljs-attr">"targets"</span>: [
+          {
+            <span class="hljs-attr">"expr"</span>: <span class="hljs-string">"rate(test_duration_seconds_sum[5m])"</span>
+          }
+        ]
+      }
+    ]
+  }
+}
+</div></code></pre>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="core-classes">Core Classes</h3>
+<h4 id="testexecutor">TestExecutor</h4>
+<p>Main class responsible for test execution:</p>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestExecutor</span>:</span>
+    <span class="hljs-string">"""Handles test execution and lifecycle management"""</span>
+    
+    <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">execute</span><span class="hljs-params">(self, test_spec: TestSpec)</span> -&gt; TestResult:</span>
+        <span class="hljs-string">"""Execute a single test specification"""</span>
+        <span class="hljs-keyword">pass</span>
+        
+    <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">execute_batch</span><span class="hljs-params">(self, specs: List[TestSpec])</span> -&gt; BatchResult:</span>
+        <span class="hljs-string">"""Execute multiple test specifications"""</span>
+        <span class="hljs-keyword">pass</span>
+</div></code></pre>
+<h4 id="testgenerator">TestGenerator</h4>
+<p>Handles test script generation:</p>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestGenerator</span>:</span>
+    <span class="hljs-string">"""Generates test scripts from specifications"""</span>
+    
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">generate</span><span class="hljs-params">(self, spec: TestSpec)</span> -&gt; str:</span>
+        <span class="hljs-string">"""Generate a test script from specification"""</span>
+        <span class="hljs-keyword">pass</span>
+        
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">validate</span><span class="hljs-params">(self, script: str)</span> -&gt; bool:</span>
+        <span class="hljs-string">"""Validate generated test script"""</span>
+        <span class="hljs-keyword">pass</span>
+</div></code></pre>
+
+</body>
+</html>

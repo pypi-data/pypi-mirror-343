@@ -1,0 +1,69 @@
+{{ protected_content }}"""
+{{ file_description }}
+"""
+
+import pytest
+import logging
+import os
+from datetime import datetime
+
+# Import the BaseTest from the installed VAssureAI framework package
+try:
+    from vassureai.utils.base_test import BaseTest
+    from vassureai.utils.config import Config # Import framework config if needed
+except ImportError:
+    raise ImportError("Could not import VAssureAI components. Ensure the 'vassure_ai' package is installed correctly.")
+
+logger = logging.getLogger(__name__)
+
+class BaseTestAdapter(BaseTest):
+    """ 
+    Adapter class for the VAssureAI BaseTest.
+    Inherits from the framework's BaseTest and can be used to add 
+    project-specific setup, teardown, or helper methods common to all tests 
+    in this project.
+    """
+    __test__ = False # Prevent pytest from collecting this adapter class
+
+    @pytest.fixture(autouse=True)
+    def setup_test_environment(self, request):
+        """ 
+        Setup fixture for each test function using this adapter.
+        It automatically runs the framework's base setup and sets the test name.
+        """
+        # Get the name of the test function
+        self.test_name = request.node.name
+        logger.info(f"--- Starting test: {self.test_name} ---")
+        
+        # Call the framework's base setup using super()
+        # The framework's BaseTest.setup_base should handle directory creation, 
+        # LLM init, report init etc., using the project's current working directory.
+        super().setup_base() 
+        
+        # --- Project-Specific Setup --- 
+        # Add any project-specific setup logic here, e.g.:
+        # self.db_connection = connect_to_database()
+        # self.load_test_data(self.test_name)
+        # ----------------------------- 
+
+        yield # Test function runs here
+
+        # --- Project-Specific Teardown ---
+        # Add any project-specific teardown logic here, e.g.:
+        # self.db_connection.close()
+        # ------------------------------
+        logger.info(f"--- Finished test: {self.test_name} ---")
+
+    # --- Project-Specific Helper Methods ---
+    # def login_to_application(self):
+    #     """Example project-specific helper"""
+    #     login_steps = [
+    #         f"Navigate to {Config.BASE_URL}",
+    #         f"Enter username {os.getenv('USERNAME')}",
+    #         f"Enter password {os.getenv('PASSWORD')}",
+    #         "Click login button"
+    #     ]
+    #     # Note: You would typically run these steps using self._execute_test or similar
+    #     pass 
+    # -------------------------------------
+

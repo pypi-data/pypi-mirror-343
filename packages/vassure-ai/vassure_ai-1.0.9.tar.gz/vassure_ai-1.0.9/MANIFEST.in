@@ -1,0 +1,9 @@
+include README.md
+include requirements.txt
+include pytest.ini
+
+recursive-include docs/readme *.*
+recursive-include docs/technical *.*
+recursive-include docs/user *.*
+recursive-include vassureai/templates *.*
+recursive-include vassureai/docs *.*

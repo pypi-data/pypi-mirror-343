@@ -1,0 +1,15 @@
+{
+  "test_name": "create_deviation",
+  "timestamp": "20250426_221550",
+  "duration": 143.212517,
+  "status": "COMPLETED",
+  "success_rate": 89.47368421052632,
+  "system_metrics": {
+    "cpu_usage_percent": 1.2,
+    "memory_usage_percent": 85.0,
+    "memory_available_mb": 1186.0078125,
+    "disk_usage_percent": 10.1,
+    "disk_free_gb": 837.7876205444336
+  },
+  "steps": []
+}
