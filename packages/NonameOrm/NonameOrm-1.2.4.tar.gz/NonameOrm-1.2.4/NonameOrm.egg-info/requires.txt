@@ -1,0 +1,5 @@
+Faker
+astor
+case-convert
+aiosqlite
+pydantic
