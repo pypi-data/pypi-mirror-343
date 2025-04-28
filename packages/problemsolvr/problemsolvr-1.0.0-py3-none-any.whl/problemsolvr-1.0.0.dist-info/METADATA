@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: problemsolvr
+Version: 1.0.0
+Summary: An easy-to-use Python library for solving graph problems using classic search algorithms like BFS, DFS, A*, and Greedy with visualization support.
+Home-page: https://github.com/yourusername/problemsolvr
+Author: Zain ul Abideen
+Author-email: zainthenpc03@gmail.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: networkx
+
+# ProblemSolvr 🚀
+
+Hey there! 👋
+
+Welcome to **ProblemSolvr** — a simple, fun, and powerful Python library to solve problems using classic AI search algorithms.
+
+---
+
+## ✨ What is this?
+
+ProblemSolvr is a library that me and my buddy built together — with full josh, night coding sessions, aur dimaag ki dahi banake 😅.  
+We wanted to make solving problems (like graph search, maze solving, puzzles) **super easy** for everyone.  
+No boring long codes, no stress — just simple function calls, aur kaam ho gaya!
+
+---
+
+## 🧠 What can you do with it?
+
+- Solve problems using:
+  - Breadth-First Search (BFS)
+  - Depth-First Search (DFS)
+  - A* Search (with heuristic)
+  - Greedy Best-First Search (with heuristic)
+- Visualize the solution path on the graph
+- See how many steps it took and how fast it solved
+- Compare different algorithms easily
+
+---
+
+## 📦 Installation
+
+(After it's uploaded on PyPi)
+
+```bash
+pip install problemsolvr
