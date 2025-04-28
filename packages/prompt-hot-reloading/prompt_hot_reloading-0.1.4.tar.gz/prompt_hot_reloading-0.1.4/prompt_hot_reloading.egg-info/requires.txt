@@ -1,0 +1,5 @@
+watchdog
+readerwriterlock
+
+[:extra == "s3"]
+boto3
