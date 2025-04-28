@@ -1,0 +1,8 @@
+passagemath_bliss-10.5.27.dist-info/RECORD,,
+passagemath_bliss-10.5.27.dist-info/WHEEL,sha256=B2uwOWH4X5oQiQDTdUWaKh8oSlPDeVqDzTF0FgwlyHA,109
+passagemath_bliss-10.5.27.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+passagemath_bliss-10.5.27.dist-info/METADATA,sha256=XGKaAo6nWdW94FMk23lYOwE_RtGFOgiSqAA6eMSVf-M,2776
+passagemath_bliss.dylibs/libbliss.dylib,sha256=x4aMpqr4fWx0MwMtqNYgrZeh_X5ClAX244oe7PYOFR8,215920
+sage/all__sagemath_bliss.py,sha256=2p3JOEnbjaX22LWk6f1yfiAvhMMkcvNXwTp_NcGw6pM,44
+sage/graphs/all__sagemath_bliss.py,sha256=2p3JOEnbjaX22LWk6f1yfiAvhMMkcvNXwTp_NcGw6pM,44
+sage/graphs/bliss.cpython-311-darwin.so,sha256=voE7ljWXmYGLmWvmTdtdSg1SJxx_UY0uMw99bdZ6isA,203808
