@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "qengine"
+version = "0.0.2"
+authors = [
+  { name="Ben Lesnik"},
+]
+description = "PyPi repository to facilitate accessibility into Quantum Applications Prototyping (QAP) and associated R&D"
+readme = "README.md"
+requires-python = ">=3.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/BenLesnik/qengine"
