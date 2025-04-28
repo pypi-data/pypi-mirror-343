@@ -1,0 +1,172 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "findmyorder"
+version = "3.0.0"
+description = "A python package to identify and parse order for trade execution."
+authors = [
+  { name = "mraniki", email = "8766259+mraniki@users.noreply.github.com" },
+]
+license = "MIT"
+readme = "README.md"
+keywords = ["trading", "order", "trade","buy","sell"]
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+  "dynaconf>=3.2.0",
+  "loguru>=0.6.0",
+  "pyparsing>=3.0.9",
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/mraniki/findmyorder"
+"Changelog" =  "https://github.com/mraniki/findmyorder/blob/dev/CHANGELOG.rst"
+"Support" =  "https://github.com/mraniki/findmyorder/discussions"
+"Issues" =  "https://github.com/mraniki/findmyorder/issues"
+
+
+[project.optional-dependencies]
+dev = [
+  "python-semantic-release>=8.0.8",
+  "ruff~=0.7",
+  "pre-commit~=3.3",
+]
+test = [
+  "pytest~=8.0",
+  "pytest-cov~=5.0",
+  "pytest-asyncio~=0.24",
+  "pytest-mock~=3.11",
+  "pytest-loguru~=0.4",
+]
+docs = [
+  "sphinx==7.4.7",
+  "pydata-sphinx-theme~=0.14",
+  "sphinx-hoverxref~=1.3",
+  "sphinx_copybutton==0.5.2",
+  "myst_parser~=4.0",
+  "sphinx_design~=0.6",
+]
+
+[tool.setuptools]
+packages = ["findmyorder"]
+
+
+[tool.ruff]
+exclude = [
+  ".github/*",
+  "docs/*",
+]
+
+[tool.ruff.lint]
+select = [
+  "E",
+  "F",
+  "I",
+  "W"
+]
+
+fixable = ["ALL"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pylint.exceptions]
+overgeneral-exceptions = [
+    "builtins.BaseException",
+    "builtins.Exception",
+    "builtins.RuntimeError",
+]
+
+
+[tool.pytest.ini_options]
+pythonpath = "."
+testpaths = "tests"
+python_classes = "Test*"
+log_format = "%(asctime)s - %(levelname)s - %(name)s - %(message)s"
+log_level = "DEBUG"
+addopts = """
+-v
+--show-capture=stderr
+"""
+asyncio_mode = "auto"
+
+[tool.coverage.run]
+omit = [
+    "tests/*",
+    "examples/*",
+    "docs/*",
+    "*/config.py"
+]
+ 
+[tool.bandit]
+exclude_dirs = ["tests","docs"]
+skips = ["B101","B104"]
+
+[tool.semantic_release]
+upload_to_vcs_release = true
+version_variables = ["findmyorder/__init__.py:__version__"]
+commit_parser = "emoji"
+version_toml = [
+   "pyproject.toml:project.version",
+   ]
+
+[tool.semantic_release.commit_parser_options]
+major_tags = [
+    "BREAKING",
+    "💥",
+    ":boom:",
+  ]
+minor_tags = ["feat",
+    "🥚",":egg:",
+    "🚀",":rocket:",
+    "💄",":lipstick:",
+    "✨",":sparkles:",
+]
+
+patch_tags = ["fix","bump","Update",
+    "🎨",":art:",
+    "🐛",":bug:",
+    "🚑",":ambulance:",
+    "⚡",":zap:",
+    "🔥",":fire:",
+    "🚨",":rotating_light:",
+    "♻️",":recycle:",
+    "🔧",":wrench:",
+    "⬆️",":arrow_up:",
+    "🩹",":adhesive_bandage:",
+    "👷",":construction_worker:",
+    "📝",":memo:",
+    "🔒",":lock:",
+    "👽",":alien:",
+    "💬",":speech_balloon:",
+    "🥅",":goal_net:",
+    "✅",":white_check_mark:",
+    "🐳",":whale:",
+    "🙈",":see_no_evil:",
+    "⚗️",":alembic:",
+    "🧐",":monocle_face:",
+    "🔇",":mute:",
+    "🔊",":volume:",
+]
+
+[tool.semantic_release.changelog]
+changelog_file = "CHANGELOG.md"
+exclude_commit_patterns = []
+
+[tool.semantic_release.branches.main]
+match = "(main|master|dev)"
+prerelease_token = "rc"
+prerelease = false
+
+[tool.semantic_release.publish]
+dist_glob_patterns = ["dist/*"]
+upload_to_vcs_release = true
