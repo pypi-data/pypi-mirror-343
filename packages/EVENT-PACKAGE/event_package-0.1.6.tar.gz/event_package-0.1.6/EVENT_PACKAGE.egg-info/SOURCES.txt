@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+EVENT_PACKAGE/__init__.py
+EVENT_PACKAGE/cli.py
+EVENT_PACKAGE/daily_event.py
+EVENT_PACKAGE/debugger_daily.py
+EVENT_PACKAGE/hourly_event.py
+EVENT_PACKAGE/try_except vs try_finally.py
+EVENT_PACKAGE.egg-info/PKG-INFO
+EVENT_PACKAGE.egg-info/SOURCES.txt
+EVENT_PACKAGE.egg-info/dependency_links.txt
+EVENT_PACKAGE.egg-info/entry_points.txt
+EVENT_PACKAGE.egg-info/requires.txt
+EVENT_PACKAGE.egg-info/top_level.txt
