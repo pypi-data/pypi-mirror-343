@@ -1,0 +1,10 @@
+README.md
+setup.py
+bangtex/__init__.py
+bangtex/cli.py
+bangtex/converter.py
+bangtex.egg-info/PKG-INFO
+bangtex.egg-info/SOURCES.txt
+bangtex.egg-info/dependency_links.txt
+bangtex.egg-info/entry_points.txt
+bangtex.egg-info/top_level.txt

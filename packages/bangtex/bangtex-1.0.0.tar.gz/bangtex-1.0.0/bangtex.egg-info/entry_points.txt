@@ -1,0 +1,2 @@
+[console_scripts]
+bangtex = bangtex.cli:main

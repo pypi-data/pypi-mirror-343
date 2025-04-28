@@ -1,0 +1,42 @@
+Metadata-Version: 2.2
+Name: bangtex
+Version: 1.0.0
+Summary: Unicode UTF-8 Bangla to Bangtex converter
+Home-page: https://github.com/username/bangtex
+Author: Rakib Mollah
+Author-email: rakib1703115@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# Bangtex
+
+Unicode UTF-8 Bangla to Bangtex converter
+
+This program will convert a unicode utf8 encoded Bangla source text file for TeX/LaTeX into bangtex format.
+
+## Installation
+
+```bash
+pip install bangtex
+```
+
+## Usage
+
+```bash
+from bangtex import convert_text
+
+bangla_text = "বাংলা টেক্সট"
+bangtex_text = convert_text(bangla_text)
+print(bangtex_text)
+```
