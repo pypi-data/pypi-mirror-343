@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+version_file = "itango/_version.py"
+
+[project]
+name = "itango"
+description = "An interactive Tango client"
+dynamic = ["version"]
+authors = [{ name = "Tiago Coutinho" }]
+maintainers = [{ name = "Benjamin Bertrand" }]
+requires-python = ">=3.9"
+keywords = ["pytango", "ipython"]
+readme = "README.rst"
+license = "LGPL-3.0-or-later"
+dependencies = ["pytango>=9.3.0", "ipython>=8.5,<10.0", "packaging"]
+classifiers = [
+    "Framework :: IPython",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Topic :: System :: Shells",
+]
+
+[project.optional-dependencies]
+qt = ["qtconsole"]
+tests = ["pytest", "pytest-cov"]
+
+[tool.setuptools]
+packages = ["itango"]
+
+[project.urls]
+Homepage = "https://www.tango-controls.org/"
+Repository = "https://gitlab.com/tango-controls/itango"
+Documentation = "https://itango.readthedocs.io"
+
+[project.scripts]
+itango = "itango:run"
+itango3 = "itango:run"
+
+[project.gui-scripts]
+itango-qt = "itango:run_qt"
+itango3-qt = "itango:run_qt"
+
+[tool.ruff.lint]
+# Enable flake8-bugbear (B) and (I) isort rules, in addition to the defaults.
+select = ["E4", "E7", "E9", "F", "B", "I"]
+
+[tool.pytest.ini_options]
+addopts = "-v --cov"
+testpaths = [
+    "tests"
+]
+
+[tool.coverage.run]
+source_pkgs = ["itango"]

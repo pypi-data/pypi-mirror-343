@@ -1,0 +1,10 @@
+pytango>=9.3.0
+ipython<10.0,>=8.5
+packaging
+
+[qt]
+qtconsole
+
+[tests]
+pytest
+pytest-cov
