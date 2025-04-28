@@ -1,0 +1,10 @@
+---
+github_actions:
+  - changed-files:
+      - any-glob-to-any-file: ".github/**"
+dev_container:
+  - changed-files:
+      - any-glob-to-any-file: ".devcontainer/**"
+neatfile:
+  - changed-files:
+      - any-glob-to-any-file: "src/**"
