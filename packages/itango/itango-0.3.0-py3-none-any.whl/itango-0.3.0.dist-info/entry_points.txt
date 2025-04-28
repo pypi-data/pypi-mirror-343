@@ -1,0 +1,7 @@
+[console_scripts]
+itango = itango:run
+itango3 = itango:run
+
+[gui_scripts]
+itango-qt = itango:run_qt
+itango3-qt = itango:run_qt
