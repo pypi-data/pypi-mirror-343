@@ -1,0 +1,2 @@
+[console_scripts]
+ansible-aap-api-client-cli = ansible_aap_api_client:cli
