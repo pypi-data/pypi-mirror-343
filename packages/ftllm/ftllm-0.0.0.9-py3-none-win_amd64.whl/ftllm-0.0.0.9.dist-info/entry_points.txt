@@ -1,0 +1,2 @@
+[console_scripts]
+ftllm = ftllm.cli:main
