@@ -1,0 +1,8 @@
+baostock>=0.8.9
+pandas>=2.2.3
+numpy>=1.26.0
+tushare>=1.4.19
+beautifulsoup4>=4.13.3
+requests>=2.32.3
+SQLAlchemy>=2.0.38
+PyMySQL>=1.1.1

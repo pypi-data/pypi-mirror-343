@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+build/datawhale.egg-info/PKG-INFO
+build/datawhale.egg-info/SOURCES.txt
+build/datawhale.egg-info/dependency_links.txt
+build/datawhale.egg-info/requires.txt
+build/datawhale.egg-info/top_level.txt
+datawhale/__init__.py
