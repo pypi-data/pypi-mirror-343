@@ -1,0 +1,8 @@
+fastcore
+matplotlib
+numpy
+pandas
+IPython
+
+[dev]
+nbdev
