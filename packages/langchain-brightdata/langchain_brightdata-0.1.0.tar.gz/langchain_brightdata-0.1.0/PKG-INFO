@@ -1,0 +1,67 @@
+Metadata-Version: 2.4
+Name: langchain-brightdata
+Version: 0.1.0
+Summary: Bright Data tools for LangChain
+Author: Bright Data
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: langchain-core>=0.3.56
+Requires-Dist: pydantic>=2.11.3
+Requires-Dist: requests>=2.32.0
+Requires-Dist: aiohttp>=3.11.0
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# LangChain Bright Data Tools
+
+This package integrates Bright Data's services with LangChain.
+
+## Tools Included
+
+- **BrightDataSERP**: Perform search engine queries with geo-targeting
+- **BrightDataUnblocker**: Access websites that might be geo-restricted
+- **BrightDataWebScraperAPI**: Extract structured data from websites
+
+## Installation
+
+```bash
+pip install langchain-brightdata
+```
+
+## Usage
+
+```python
+
+from langchain_brightdata import BrightDataSERP
+
+# Initialize the tool with your API key
+search_tool = BrightDataSERP(bright_data_api_key="your-api-key")
+
+# Use the tool
+results = search_tool.invoke({
+    "query": "artificial intelligence news",
+    "search_engine": "google",
+    "country": "us"
+})
+
+```
+## Authentication
+
+You'll need a Bright Data API key. You can set it as an environment variable:
+
+```bash
+export BRIGHT_DATA_API_KEY="your-api-key"
+
+```
+
+Or pass it directly when initializing the tools.
