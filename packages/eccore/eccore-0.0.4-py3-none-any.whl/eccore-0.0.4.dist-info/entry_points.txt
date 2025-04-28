@@ -1,0 +1,2 @@
+[nbdev]
+eccore = eccore._modidx:d

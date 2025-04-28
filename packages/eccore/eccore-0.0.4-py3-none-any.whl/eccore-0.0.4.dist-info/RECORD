@@ -1,0 +1,12 @@
+eccore/__init__.py,sha256=1mptEzQihbdyqqzMgdns_j5ZGK9gz7hR2bsgA_TnjO4,22
+eccore/_modidx.py,sha256=WpMkzxMvNYgdSz7FLTTRAJ6unHsttA6VpUQ83zWH5XE,7806
+eccore/core.py,sha256=gr0tdRS1k7_o539E81dVapsNC-PHTJFp6_ynWfLVvqw,17294
+eccore/dev_utils.py,sha256=zytxmSpVHCt2qjVdwhQKPxX_cqPKMiNJ3_Sn9C4kgok,4841
+eccore/ipython.py,sha256=-5BkbWprkx_XhNgVR6lZL4MGGyUImPb_SH4WM_1no4k,5555
+eccore/plotting.py,sha256=rmUdBvsrOjXN9xOMz-KY93Svp6DCEpxHdkzgrPYb4-A,5739
+eccore-0.0.4.dist-info/LICENSE,sha256=iFAUMS1Ur9TF0qK5emBxpYnfaUrodM2PXnRw-jXw9hs,11377
+eccore-0.0.4.dist-info/METADATA,sha256=GZJT6bZPxizhxRWWFZUKsUw0KBbCJ-u9QHayT6ewzRI,1427
+eccore-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+eccore-0.0.4.dist-info/entry_points.txt,sha256=DxqKELbzVEpAAC0SiFRyNL4ARUqZ5T7HbsSz_Iz7MCs,34
+eccore-0.0.4.dist-info/top_level.txt,sha256=BmqjGjmqQLfaw1z0bkJvsv5ayJjYqzfV4jrr_AtqYyw,7
+eccore-0.0.4.dist-info/RECORD,,
