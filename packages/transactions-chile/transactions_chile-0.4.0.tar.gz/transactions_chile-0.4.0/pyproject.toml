@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "transactions_chile"
+version = "0.4.0"
+description = "A command-line tool for converting bank statements from Excel to CSV format with support for several Chilean banks."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "Jose Cañete", email = "josecannete@gmail.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "pandas>=2.0.0",
+    "openpyxl>=3.1.0",
+    "click>=8.1.0",
+    "rich>=13.4.0",
+    "xlrd>=2.0.1",
+    "pandera>=0.23.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "parameterized>=0.9.0",
+    "pre-commit>=4.2.0",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.1.1",
+    "ruff>=0.11.5",
+]
+
+[project.scripts]
+transactions-chile = "transactions_chile.cli:main"
+
+[project.urls]
+"Homepage" = "https://github.com/josecannete/transactions-chile"
+"Bug Tracker" = "https://github.com/josecannete/transactions-chile/issues"
