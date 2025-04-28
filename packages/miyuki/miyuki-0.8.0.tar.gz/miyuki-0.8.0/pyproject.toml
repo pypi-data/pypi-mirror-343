@@ -1,0 +1,58 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# --- CRITICAL: Use 'miyuki' here for 'pip install miyuki' ---
+# !!! NOTE: This name might already be taken or reserved on PyPI !!!
+# If upload fails due to the name, you MUST choose something else (e.g., miyuki-reborn)
+name = "miyuki"
+
+# --- CRITICAL: Set your first version number ---
+# Increment this every time you upload a new version (e.g., 0.8.1, 0.9.0)
+version = "0.8.0" # Or 1.0.0 if you consider it stable
+
+authors = [
+    { name="notmiyukisasaki", email="anon@example.com" }, # Replace with your actual email if desired
+    # { name="MiyukiQAQ (Original Author)" } # Optional acknowledgement
+]
+description = "Revived tool for downloading videos from MissAV website, with Cloudflare support."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.8" # Keep or adjust as needed
+classifiers = [
+    "Development Status :: 4 - Beta", # Or 5 - Production/Stable
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Multimedia :: Video :: Capture",
+    "Topic :: Utilities",
+]
+keywords = ["missav", "downloader", "video", "cloudscraper", "archive"]
+dependencies = [
+    "cloudscraper",
+    "curl_cffi",
+]
+
+[project.urls]
+Homepage = "https://github.com/notmiyukisasaki/Miyuki-Reborn" # <<< CHANGE TO YOUR ACTUAL GITHUB REPO URL
+Issues = "https://github.com/notmiyukisasaki/Miyuki-Reborn/issues" # <<< CHANGE TO YOUR ACTUAL GITHUB REPO URL
+
+# --- CRITICAL: This makes the 'miyuki' command work ---
+[project.scripts]
+miyuki = "miyuki.main:main" # Command 'miyuki' runs the main function in miyuki/main.py
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["miyuki*"]
+exclude = ["tests*"]
