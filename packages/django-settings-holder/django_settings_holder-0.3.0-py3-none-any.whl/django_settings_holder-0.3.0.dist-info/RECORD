@@ -1,0 +1,10 @@
+settings_holder/__init__.py,sha256=JD5EF6Nvymn1xVCeyjwlQZH-7Gk6oz2-I6HqK5HDz9g,170
+settings_holder/fixtures.py,sha256=bSk2Y3KbKXmZYGrtmAO-Qy1ug3swMWg1wmdOTVhhjMc,486
+settings_holder/holder.py,sha256=UzhNC5aOBqCl9HVWAiHV8VojvPr_sDOTgfl3QT4QFUg,8919
+settings_holder/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+settings_holder/utils.py,sha256=2-3mYCKAYbbiGdiFqyangDNo0P6iR6aE3rKE1PT6izI,3516
+django_settings_holder-0.3.0.dist-info/LICENSE,sha256=1N9adiyLzxUm4_OQ7XuHnMlOS1g9M8s3mjO9C-EvV8k,1064
+django_settings_holder-0.3.0.dist-info/METADATA,sha256=msUbCRR5GQR-RXG__1Dy57AlhudCxon9dhcAviwDpOw,3953
+django_settings_holder-0.3.0.dist-info/WHEEL,sha256=RaoafKOydTQ7I_I3JTrPCg6kUmTgtm4BornzOqyEfJ8,88
+django_settings_holder-0.3.0.dist-info/entry_points.txt,sha256=vPqp1Tp6QJJsZqsnwxOx02fr9DrkWxS6W1_tJo57POI,60
+django_settings_holder-0.3.0.dist-info/RECORD,,
