@@ -1,0 +1,11 @@
+runlocal_tools/__init__.py,sha256=jxjQ9gMYE-GFMik1Y1PyyEX6vnm8llnFxcjn_ss-w-g,185
+runlocal_tools/main.py,sha256=cg98_Y5feTXeGxM7zXJiqOpPiQqgZtGrYpocfP27xUY,141
+runlocal_tools/backend/ml_model.py,sha256=Hg9eWCR0WJ33hNo5aI-kGHPm_toRw14Lx3foX7FhYpA,3084
+runlocal_tools/backend/coreml/coreml_model.py,sha256=njU60akRl1-1fY0BQWYKWdPWwtJ3fl4dlClEap-XaEY,16409
+runlocal_tools/backend/onnx/onnx_model.py,sha256=OumzGtUU9mW5Gbwqi5fwmXxbRCxB5fFf9izx3v_qkqQ,17987
+runlocal_tools/dtypes/upload.py,sha256=MVMMLwBxevZblZL__yyQW2FU3xkzDCxlq4x8O5efH0c,810
+runlocal_tools-0.0.2.dist-info/licenses/LICENSE,sha256=oxA9-juFBCBko0t5sgbp4gsOl--8j_ekp8jqLVLIVJw,1069
+runlocal_tools-0.0.2.dist-info/METADATA,sha256=BpvH5JwVLgBNJrFrbOIM-F7qvmGRNGtmWXmGzUFwn3I,1080
+runlocal_tools-0.0.2.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+runlocal_tools-0.0.2.dist-info/top_level.txt,sha256=yP26QJNYUOtuQO4E9KvOOOC0Rvwpscd3WHpvYs9952Y,15
+runlocal_tools-0.0.2.dist-info/RECORD,,
