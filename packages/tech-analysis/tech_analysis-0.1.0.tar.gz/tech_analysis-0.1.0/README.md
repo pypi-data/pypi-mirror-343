@@ -1,0 +1,45 @@
+# tech_analysis
+
+`tech_analysis` is a **pure Python**, dependency-free technical analysis library for financial markets. It includes a wide array of technical indicators, overlays, price action patterns, performance metrics, and risk management tools — designed for traders, quants, and researchers.
+
+> No NumPy. No pandas. Just raw Python logic — fully portable and customizable.
+
+---
+
+## Features
+
+- **Indicators**: RSI, MACD, ATR, CCI, TRIX, Bollinger Bands, ROC, Stochastic, etc.
+- **Volume Tools**: OBV, PVT, MFI, Chaikin, Ease of Movement
+- **Price Patterns**: is_inverted_hammer,
+is_shooting_star,
+is_morning_star,
+is_evening_star,
+is_bullish_harami,
+is_bearish_harami,
+is_three_white_soldiers,
+is_three_black_crows,
+is_tweezer_top,
+is_tweezer_bottom,
+is_piercing_line,
+is_dark_cloud_cover,
+is_rising_three_methods,
+is_falling_three_methods,
+is_inside_bar,
+is_outside_bar,
+is_marubozu,
+is_inside_day_breakout,
+break_of_structure,
+- **Breadth Indicators**: Advance/Decline Line, A/D Ratio, New High-Low
+- **Overlays**: SMA, EMA, Donchian Channels, MA Ribbons
+- **Risk Management**: Kelly Criterion, Max Drawdown, Position Sizing, Monte Carlo
+- **Performance Metrics**: Sharpe, Sortino, Calmar, CAGR, Beta, Volatility
+- **forecast**: 
+
+- **100% Pure Python**: No external packages required
+
+---
+
+## Installation
+
+```bash
+pip install tech_analysis
