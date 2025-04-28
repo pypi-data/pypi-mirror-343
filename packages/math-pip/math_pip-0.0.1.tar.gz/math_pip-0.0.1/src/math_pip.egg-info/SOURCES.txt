@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/math_pip/__init__.py
+src/math_pip/math_operations.py
+src/math_pip/version.py
+src/math_pip.egg-info/PKG-INFO
+src/math_pip.egg-info/SOURCES.txt
+src/math_pip.egg-info/dependency_links.txt
+src/math_pip.egg-info/requires.txt
+src/math_pip.egg-info/top_level.txt
