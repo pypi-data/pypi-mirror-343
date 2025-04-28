@@ -1,0 +1,2 @@
+[console_scripts]
+data-quality-assessment = data_quality_assessment.app:main
