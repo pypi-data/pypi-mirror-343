@@ -1,0 +1,17 @@
+# Pip requirements file for packages needed for installation.
+
+# Note: The dependencies in this file will become the dependencies stated
+# in the Pypi package metadata.
+
+
+# Direct dependencies for installation (must be consistent with minimum-constraints-install.txt)
+
+# The typing-extensions features used by nocaselist are in standard Python on Python>=3.10
+# nocaselist 2.0 requires typing-extensions>=3.10
+# safety 3.0 requires typing-extensions>=4.7.1
+typing-extensions>=4.7.1; python_version >= '3.8' and python_version <= '3.9'
+
+
+# Indirect dependencies for installation that are needed for some reason (must be consistent with minimum-constraints-install.txt)
+
+# None
