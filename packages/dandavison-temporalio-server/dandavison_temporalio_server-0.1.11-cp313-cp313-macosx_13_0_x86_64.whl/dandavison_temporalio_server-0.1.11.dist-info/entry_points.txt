@@ -1,0 +1,2 @@
+[console_scripts]
+temporal-server = temporalio_server.main:run
