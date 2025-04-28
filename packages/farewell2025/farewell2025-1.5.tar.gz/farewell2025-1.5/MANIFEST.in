@@ -1,0 +1,3 @@
+include farewell_package/farewell.mp3
+include farewell_package/farewell.png
+include farewell_package/trigger_farewell.py
