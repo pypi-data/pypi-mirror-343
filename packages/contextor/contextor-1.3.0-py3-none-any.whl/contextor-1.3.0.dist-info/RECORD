@@ -1,0 +1,14 @@
+contextor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+contextor/__main__.py,sha256=5lkkYzDBWVdGhmsVsuWa_dFqzAg1R0nkWGrIonbAKX0,237
+contextor/cli.py,sha256=3Of8S05Q6X9QkRxEgXFDZPve7QTmew37A8mibxklZa8,7835
+contextor/main.py,sha256=nQ_eypeqUPSxyjVGa_3o4e6AUfd7fOkgjmKnqfn7xXg,24018
+contextor/utils.py,sha256=jw2Tm1rl9oHa_nCbByO_dkSEyP9s4zysS_M48NFqeJU,2686
+contextor/signatures/__init__.py,sha256=ePNxrv1OaNzN3032-iqqN7NTY1dCSN9o5gXBJgP6btA,384
+contextor/signatures/markdown.py,sha256=rlhlih0h19W_xdW-q7DTmFLbVeOU1A0NHfjSfpBig5A,2435
+contextor/signatures/processor.py,sha256=l_mVGOxX7uT-s_XHnC4ijiWSd3mF7PakpRxWhJZhfc4,4845
+contextor/signatures/python.py,sha256=vSHdFeGMv12B2bW_9XFpm9FrnmS0B2Mh_NlCip5nthE,8266
+contextor-1.3.0.dist-info/METADATA,sha256=EHLLY0BGnjkDqPZAc7QIkNJ_MnkanDJMNeRIqi11MJI,6599
+contextor-1.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+contextor-1.3.0.dist-info/entry_points.txt,sha256=KO8cATK6ApDf1ZA2qvK2bostu_0pHZrUKv2FTPrMsRA,52
+contextor-1.3.0.dist-info/licenses/LICENSE,sha256=DQfB4SZczdcY6a80z4svS1rcWDFziUViCClyjZQP6hI,1068
+contextor-1.3.0.dist-info/RECORD,,
