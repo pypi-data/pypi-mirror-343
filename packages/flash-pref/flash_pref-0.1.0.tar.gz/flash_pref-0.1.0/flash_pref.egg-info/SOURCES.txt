@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+flash_pref/__init__.py
+flash_pref/shared_prefix.py
+flash_pref.egg-info/PKG-INFO
+flash_pref.egg-info/SOURCES.txt
+flash_pref.egg-info/dependency_links.txt
+flash_pref.egg-info/requires.txt
+flash_pref.egg-info/top_level.txt
+tests/test_flash_pref.py
