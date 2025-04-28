@@ -1,0 +1,16 @@
+sofia_agent/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sofia_agent/cli.py,sha256=6yT4mJh8Fw7867GxFIo7dH-GhIrQIs5_MleNQqb4KIQ,4532
+sofia_agent/config.py,sha256=AEO5KWTc_SysrEI8hAKDK8M6Pu00CtTQwsCQ2VsLw00,1701
+sofia_agent/constants.py,sha256=rAOiitGV_LSETkuYj1crT637QoGe0x0ug1987ZoCFes,525
+sofia_agent/core.py,sha256=jVO2_-Ib00k58ey0ePWG3PABTu9x7dJTBY9Y1bmwugQ,8026
+sofia_agent/llms.py,sha256=QxR7F3tRzaKa2dGmHW90P-dnmL6fF5bpmKG_sBTt-XY,4655
+sofia_agent/models/__init__.py,sha256=pPgqq_fsq8T0zPINL8hefUd5Z5795C96v2eYzU6qdGY,23
+sofia_agent/models/flow.py,sha256=aDQtg4ibBXUxYnl8b8dXc6yT_WbFmPV5EwN-1BtR4zA,2555
+sofia_agent/models/tool.py,sha256=s_QAa4BMz_3KLqkdPPVwEczfKo5llHVkQVnRUu4061k,1792
+sofia_agent/utils/__init__.py,sha256=g7pj7XXWfanCwrU8MsWCp3In5TW1WgaDNwHHr78iHPg,46
+sofia_agent/utils/logging.py,sha256=NcZrA2S1EoGqgJqYwba_xlY8gXc37kTnVbvhiVv8abY,930
+sofia_agent/utils/utils.py,sha256=FQfHNvWKiYhMh6UC3nBnRX4sysaLeiuEbPqBL0aMz7c,716
+sofia_agent-0.1.3.dist-info/METADATA,sha256=9JeexNI3c5EkeKFwtSqVtMzBMPTBqZfz8oqZEtB4O64,3689
+sofia_agent-0.1.3.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+sofia_agent-0.1.3.dist-info/entry_points.txt,sha256=8pQzf9T2Ka6gmd1NTcULKve_vdswxtMmxOBWeKBYyIw,40
+sofia_agent-0.1.3.dist-info/RECORD,,
