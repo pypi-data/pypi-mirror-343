@@ -1,0 +1,16 @@
+[project]
+name = "django-ninja-drf"
+version = "0.1.0"
+description = "Tools to make migration from DRF to Django Ninja easier"
+readme = "README.md"
+authors = [
+    { name = "Vitaliy Kucheryaviy", email = "ppr.vitaly@gmail.com" }
+]
+requires-python = ">=3.8"
+dependencies = [
+    "django-ninja>=1.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

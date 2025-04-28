@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: django-ninja-drf
+Version: 0.1.0
+Summary: Tools to make migration from DRF to Django Ninja easier
+Author-email: Vitaliy Kucheryaviy <ppr.vitaly@gmail.com>
+Requires-Python: >=3.8
+Requires-Dist: django-ninja>=1.0.0
+Description-Content-Type: text/markdown
+
+# Django Ninja DRF
+
+Tools to make migration from DRF to Django Ninja easier
