@@ -1,0 +1,12 @@
+osfm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+osfm/__main__.py,sha256=Li4NrKHdnukHWi4G0OC79Eq5BTufHnmLVTSrZ7AVacc,953
+osfm/client.py,sha256=b4WN6CdfkUOmBBYiGxGhvs3UewqxYd-ZNh0QuY6LxaQ,5239
+osfm/clientfunc.py,sha256=NRFUWSrou0n9eVD5eGjhdrePI4UDUo16WxCsFbwCj6g,9083
+osfm/server.py,sha256=43Iamxud6ZZMIiLPtNiuvEkmoRVAuZv-9paGmK1LbpM,22729
+osfm/utils.py,sha256=erEMDG9xg8XIlVcB0x1Ev_eATIMLZeteid76ycBnos4,3186
+osfm-1.0.0.data/scripts/__main__.py,sha256=Li4NrKHdnukHWi4G0OC79Eq5BTufHnmLVTSrZ7AVacc,953
+osfm-1.0.0.dist-info/licenses/LICENSE,sha256=3tXs8z0jkbOE9k7QDYQ5x_lNKdke65Oqb2-7PGuQHDo,35824
+osfm-1.0.0.dist-info/METADATA,sha256=97TTpLUkUB98NQqubJM1lCmzIpY8Obc3pQ5uPqOYMq4,329
+osfm-1.0.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+osfm-1.0.0.dist-info/top_level.txt,sha256=Ng7SkRqONZ7gMCzJWLuWmer8Uazi_AAD58btCTICjs4,5
+osfm-1.0.0.dist-info/RECORD,,
