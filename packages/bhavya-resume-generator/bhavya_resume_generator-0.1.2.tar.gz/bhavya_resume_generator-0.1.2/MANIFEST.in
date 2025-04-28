@@ -1,0 +1,4 @@
+include LICENSE
+include README.md
+recursive-include resume_generator *.py
+recursive-include resume_generator/examples *.py 
