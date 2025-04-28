@@ -1,0 +1,279 @@
+default:
+    _from: 'gemini-2-flash'
+openrouter:
+    provider: openai
+    api_key: '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'
+    base_url: 'https://openrouter.ai/api/v1'
+    model_settings:
+        extra_headers:
+            HTTP-Referer: "https://github.com/socrateslee/paipe"
+            X-Title: "paipe"
+dict:
+    _from: 'openrouter'
+    model: 'moonshotai/moonlight-16b-a3b-instruct:free'
+    system_prompt:
+        >-
+        你是一个字典助手，给用户提供字典查询服务。
+        如果用户输入的是英语单词，请给出该单词的音标和解释。
+        如果用户输入的是中文词语，请给出该词语的英语翻译。
+        直接提供目标内容，不要提供其他信息。
+shortcommit:
+    _from: 'llama4s'
+    system_prompt: 'You are a git commit message generator, you will generate a one sentence commit message based on the diff(no more than 50 words), do not use symbol `.'
+cncommit:
+    _from: 'hunyuan-lite'
+    system_prompt: '你是git commit信息生成助手，你可以根据本次修改的diff来生成中文的commit信息，务必使用中文，不超过50字。'
+releasenotes:
+    _from: 'glmz1'
+    system_prompt:
+        >-
+        You are elegant release notes generator.
+        You will generate a release notes based on commit messages(or even diff).
+        Use unordered list, each item one line, no detail description.
+        Contain no bump version commit, no doc edit.
+        Emoji is allowed.
+        No extra information.
+commit:
+    _from: 'llama4s'
+    system_prompt: 'You are a git commit message generator, you will generate a commit message based on the diff, the commit message should be no more than 50 words, use unordered list, do not use symbol `.'
+aliyun-qwen2:
+    provider: openai
+    api_key: 'sk-07edce68d02945d6970dff3426880498'
+    base_url: 'https://dashscope.aliyuncs.com/compatible-mode/v1'
+    model: 'qwen2-72b-instruct'
+    model_settings:
+        response_format:
+            type: json_object
+comic-4:
+    _from: deepseek-r1
+    system_prompt:
+        >-
+        You are a crazy and innovative comic drawer.
+        You need to users' demand into a 4-panel comic.
+        Requirments:
+        - simple black and white xkcd style
+        - try to make detail the core idea or scene
+        - carefully make sure characters, objects, and texts do not overlap with each other
+        - do not use dialog box to wrap text
+        - put text near the speaker character
+        - direct output svg in a code block
+        - no html
+comic-1:
+    _from: deepseek-r1
+    system_prompt:
+        >-
+        You are a crazy and innovative comic drawer.
+        You need to users' demand into a 1-panel comic.
+        Requirments:
+        - simple black and white xkcd style
+        - try to make detail the core idea or scene
+        - carefully make sure characters, objects, and texts do not overlap with each other
+        - do not use dialog box to wrap text
+        - put text near the speaker character
+        - direct output svg in a code block
+        - no html
+ascii:
+    _from: deepseek-r1
+    system_prompt:
+        >-
+        You are a crazy and innovative ASCII comic artist.
+        You need to users' demand into a 1-panel ASCII art comic.
+        Requirments:
+        - xkcd style
+        - make sure the detail are considered ine the work
+        - carefully make sure characters, objects, and texts not twisted or overlapped with each other
+        - carefully make sure text alighnment is correct
+        - put text near the speaker character
+        - direct output the result in 'ascii' code block
+        - no html
+gemini-25-pro:
+    _from: 'openrouter'
+    model: 'google/gemini-2.5-pro-exp-03-25:free'
+gemini-2-pro:
+    _from: 'openrouter'
+    model: 'google/gemini-2.0-pro-exp-02-05:free'
+gemini-2-flash:
+    _from: 'openrouter'
+    model: 'google/gemini-2.0-flash-exp:free'
+gemini-2-flash-thinking:
+    _from: 'openrouter'
+    model: 'google/gemini-2.0-flash-thinking-exp:free'
+qwen-vl-25:
+    _from: 'openrouter'
+    model: 'qwen/qwen2.5-vl-32b-instruct:free'
+qwen-vl-plus:
+    _from: 'openrouter'
+    model: 'qwen/qwen-vl-plus:free'
+qwen-vl:
+    _from: 'openrouter'
+    model: 'qwen/qwen2.5-vl-72b-instruct:free'
+qwq:
+    _from: 'openrouter'
+    model: 'qwen/qwq-32b:free'
+molmo:
+    _from: 'openrouter'
+    model: 'allenai/molmo-7b-d:free'
+uitars:
+    _from: 'openrouter'
+    model: 'bytedance-research/ui-tars-72b:free'
+r1-llama70b:
+    _from: 'openrouter'
+    model: 'deepseek/deepseek-r1-distill-llama-70b:free'
+deepseek-r1:
+    _from: 'openrouter'
+    model: 'deepseek/deepseek-r1:free'
+dolphin3-r1:
+    _from: 'openrouter'
+    model: 'cognitivecomputations/dolphin3.0-r1-mistral-24b:free'
+deepseek-v3:
+    _from: 'openrouter'
+    model: 'deepseek/deepseek-chat-v3-0324:free'
+dolphin-3:
+    _from: 'openrouter'
+    model: 'cognitivecomputations/dolphin3.0-mistral-24b:free'
+roguerose:
+    _from: 'openrouter'
+    model: 'sophosympatheia/rogue-rose-103b-v0.2:free'
+llama4m:
+    _from: 'openrouter'
+    model: 'meta-llama/llama-4-maverick:free'
+llama4s:
+    _from: 'openrouter'
+    model: 'meta-llama/llama-4-scout:free'
+llama33:
+    _from: 'openrouter'
+    model: 'meta-llama/llama-3.3-70b-instruct:free'
+llama32-90b:
+    _from: 'openrouter'
+    model: 'meta-llama/llama-3.2-90b-vision-instruct:free'
+llama32-1b:
+    _from: 'openrouter'
+    model: 'meta-llama/llama-3.2-1b-instruct:free'
+nvllama31-8b:
+    _from: 'openrouter'
+    model: 'nvidia/llama-3.1-nemotron-nano-8b-v1:free'
+nvllama33:
+    _from: 'openrouter'
+    model: 'nvidia/llama-3.3-nemotron-super-49b-v1:free'
+nvllama31:
+    _from: 'openrouter'
+    model: 'nvidia/llama-3.1-nemotron-ultra-253b-v1:free'
+gemma2:
+    _from: 'openrouter'
+    model: 'google/gemma-2-9b-it:free'
+gemma3:
+    _from: 'openrouter'
+    base_url: 'https://openrouter.ai/api/v1'
+    model: 'google/gemma-3-27b-it:free'
+phi3-mini:
+    _from: 'openrouter'
+    model: 'microsoft/phi-3-mini-128k-instruct:free'
+phi3-medium:
+    _from: 'openrouter'
+    model: 'microsoft/phi-3-medium-128k-instruct:free'
+test:
+    provider: test
+mistral:
+    provider: mistral
+    api_key: LD0wbV8lH6m6lshYjW9d4fETj6LpChVb
+    model: mistral-large-latest
+pixtral:
+    provider: mistral
+    api_key: LD0wbV8lH6m6lshYjW9d4fETj6LpChVb
+    model: pixtral-12b-2409
+hg-llama-uc:
+    provider: openai
+    base_url: "https://router.huggingface.co/hf-inference/v1"
+    api_key: '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'
+    model: 'chuanli11/Llama-3.2-3B-Instruct-uncensored'
+groq-mixtral:
+    provider: groq
+    api_key: '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'
+    model: 'mixtral-8x7b-32768'
+cohere:
+    provider: cohere
+    api_key: '0HuLB5EDfvYogEliWRHKWozBszqL9AvyFR2shMcS'
+    model: 'command-r-plus-08-2024'
+glm-4:
+    provider: openai
+    api_key: '642d648549a542f2b8a94ae7ab133a5a.U8D5NKQ64ZpTzft2'
+    base_url: 'https://open.bigmodel.cn/api/paas/v4/'
+    model: 'glm-4-flash'
+glm-4v:
+    provider: openai
+    api_key: '642d648549a542f2b8a94ae7ab133a5a.U8D5NKQ64ZpTzft2'
+    base_url: 'https://open.bigmodel.cn/api/paas/v4/'
+    model: 'glm-4v-flash'
+tg-llama-vision:
+    provider: openai
+    api_key: 'tgp_v1_4tyCmASEctDn5H8DtpgogRXVdNAu2JUD5GF5jE5ZlFk'
+    base_url: 'https://api.together.xyz/v1'
+    model: 'meta-llama/Llama-Vision-Free'
+moonshot:
+    _from: 'openrouter'
+    model: 'moonshotai/moonlight-16b-a3b-instruct:free'
+kimivl:
+    _from: 'openrouter'
+    model: 'moonshotai/kimi-vl-a3b-thinking:free'   
+deephermes:
+    _from: 'openrouter'
+    model: 'nousresearch/deephermes-3-llama-3-8b-preview:free'
+reka3:
+    _from: 'openrouter'
+    model: 'rekaai/reka-flash-3:free'
+    model_settings:
+      #max_tokens: 500
+      extra_body: 
+        transforms: ["middle-out"]
+      #  reasoning:
+      #    exclude: false
+olympic-coder:
+    _from: 'openrouter'
+    model: 'open-r1/olympiccoder-32b:free'
+mistral31:
+    _from: 'openrouter'
+    model: 'mistralai/mistral-small-3.1-24b-instruct:free'
+hunyuan-lite:
+    provider: openai
+    api_key: 'sk-shyZT2DVmtoonSXrOQvIIqr7AZFQtXxZ3zlhiIX5JqBjndsI'
+    base_url: 'https://api.hunyuan.cloud.tencent.com/v1'
+    model: 'hunyuan-lite'
+spark-lite:
+    provider: openai
+    api_key: 'qdLNtBeqEHZvGUhzZsLJ:YsgfSMJiVLLviYsPIPpn'
+    base_url: 'https://spark-api-open.xf-yun.com/v1'
+    model: 'lite'
+spark-lite:
+    provider: openai
+    api_key: 'qdLNtBeqEHZvGUhzZsLJ:YsgfSMJiVLLviYsPIPpn'
+    base_url: 'https://spark-api-open.xf-yun.com/v1'
+    model: 'lite'
+deepseek-v3base:
+    _from: 'openrouter'
+    model: 'deepseek-ai/DeepSeek-V3-Base'
+llama4s-chutes:
+    provider: openai
+    api_key: 'cpk_0af132f444164517a8d76ec5e7ba954b.ef36e13c23fb55f987a9710849c54c20.XAt6XXCYLdKi6fxerpQejWnK2ngNwEmQ'
+    base_url: 'https://llm.chutes.ai/v1'
+    model: 'chutesai/Llama-4-Scout-17B-16E-Instruct'
+quasar:
+    _from: 'openrouter'
+    model: 'openrouter/quasar-alpha'
+deepcoder:
+    _from: 'openrouter'
+    model: 'agentica-org/deepcoder-14b-preview:free'
+glmz1:
+    _from: 'openrouter'
+    model: 'thudm/glm-z1-32b:free'
+glm4:
+    _from: 'openrouter'
+    model: 'thudm/glm-4-32b:free'
+glmz1-9b:
+    _from: 'openrouter'
+    model: 'thudm/glm-z1-9b:free'
+glm4-9b:
+    _from: 'openrouter'
+    model: 'thudm/glm-4-9b:free'
+dsr1:
+    _from: 'openrouter'
+    model: 'microsoft/mai-ds-r1:free'
