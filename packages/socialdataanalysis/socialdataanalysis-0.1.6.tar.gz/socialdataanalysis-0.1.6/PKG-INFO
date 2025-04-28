@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: socialdataanalysis
+Version: 0.1.6
+Summary: Funções personalizadas para análise de dados nas ciências sociais.
+Home-page: https://github.com/rcmergulhao/socialdataanalysis
+Project-URL: Source, https://github.com/rcmergulhao/socialdataanalysis
+Project-URL: Documentation, https://github.com/rcmergulhao/socialdataanalysis#readme
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: altair
+Requires-Dist: factor-analyzer
+Requires-Dist: ipython
+Requires-Dist: pandas
+Requires-Dist: prince
+Requires-Dist: pyreadstat
+Requires-Dist: pingouin
+Requires-Dist: plotly
+Requires-Dist: networkx
+Requires-Dist: numpy
+Requires-Dist: requests
+Requires-Dist: statsmodels
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: seaborn
+Requires-Dist: sympy
+Requires-Dist: tabulate
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# socialdataanalysis
