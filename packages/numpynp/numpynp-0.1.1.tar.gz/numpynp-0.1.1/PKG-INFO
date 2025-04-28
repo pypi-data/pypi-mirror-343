@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: numpynp
+Version: 0.1.1
+Summary: A library that provides assignments as text variables
+Author: OMK
+Author-email: gangurdenishant07@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-python
+Dynamic: summary
+
+# My TextLib
+
+A Python package that provides assignment texts as importable variables.
+Educational Purposes 
+## Example
+
+```python
+from numpynp import Emotion
+print(Emotion)

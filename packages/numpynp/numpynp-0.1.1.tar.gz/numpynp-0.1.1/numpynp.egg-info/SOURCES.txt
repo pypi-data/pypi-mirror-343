@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+numpynp/BFSDFS.txt
+numpynp/BUBBLEMERGE.txt
+numpynp/Emotion.txt
+numpynp/Housing.txt
+numpynp/PARALLELREDUCTION.txt
+numpynp/Plant.txt
+numpynp/VECTORMATRIX.txt
+numpynp/__init__.py
+numpynp.egg-info/PKG-INFO
+numpynp.egg-info/SOURCES.txt
+numpynp.egg-info/dependency_links.txt
+numpynp.egg-info/top_level.txt

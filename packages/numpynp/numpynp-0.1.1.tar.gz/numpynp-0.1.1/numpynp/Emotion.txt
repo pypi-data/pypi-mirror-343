@@ -1,0 +1,113 @@
+
+import numpy as np
+import pandas as pd
+import tensorflow as tf
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Embedding, Dense, Flatten, Dropout, LSTM
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report
+
+#
+
+df = pd.read_csv(r"C:\Users\gayat\Downloads\imdb\IMDB Dataset.csv")
+df
+
+#
+
+df.isnull().sum()
+
+#
+
+# Label Encoding: Convert 'positive' to 1 and 'negative' to 0
+df['sentiment'] = df['sentiment'].map({'positive': 1, 'negative': 0})
+df
+
+#
+
+
+# Splitting data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(df['review'], df['sentiment'], test_size=0.2, random_state=42)
+
+# Text Preprocessing: Tokenization & Padding
+vocab_size = 10000  # Number of unique words to keep
+max_length = 200  # Max review length
+oov_token = "<OOV>"  # Out of vocabulary token
+
+# Initialize Tokenizer
+tokenizer = Tokenizer(num_words=vocab_size, oov_token=oov_token)
+tokenizer.fit_on_texts(X_train)
+
+# Convert text to sequences
+X_train_seq = tokenizer.texts_to_sequences(X_train)
+X_test_seq = tokenizer.texts_to_sequences(X_test)
+
+# Pad sequences to ensure uniform input size
+X_train_pad = pad_sequences(X_train_seq, maxlen=max_length, padding='post', truncating='post')
+X_test_pad = pad_sequences(X_test_seq, maxlen=max_length, padding='post', truncating='post')
+
+# Build the Deep Neural Network Model
+model = Sequential([
+    Embedding(vocab_size, 128, input_length=max_length),  # Embedding layer
+    LSTM(64, return_sequences=True),  # LSTM layer for sequential data
+    LSTM(32),  # Another LSTM layer
+    Dropout(0.5),  # Dropout to prevent overfitting
+    Dense(32, activation='relu'),  # Dense hidden layer
+    Dense(1, activation='sigmoid')  # Output layer for binary classification
+])
+
+# Compile the Model
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+# Train the Model
+history = model.fit(X_train_pad, y_train, epochs=20, batch_size=32, validation_data=(X_test_pad, y_test))
+
+# Evaluate the Model
+y_pred_prob = model.predict(X_test_pad)
+y_pred = (y_pred_prob > 0.5).astype(int)  # Convert probabilities to binary labels
+
+#
+
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Test Accuracy: {accuracy:.4f}")
+print("Classification Report:\n", classification_report(y_test, y_pred))
+
+# Analyze Misclassifications
+misclassified_idx = np.where(y_pred.flatten() != y_test.values)[0]
+print(f"Number of Misclassified Samples: {len(misclassified_idx)}")
+print("\nSome Misclassified Reviews:")
+for i in misclassified_idx[:5]:  # Show 5 misclassified reviews
+    print("\nReview:", X_test.iloc[i])
+    print("True Sentiment:", "Positive" if y_test.iloc[i] == 1 else "Negative")
+    print("Predicted Sentiment:", "Positive" if y_pred[i] == 1 else "Negative")
+
+#
+
+import matplotlib.pyplot as plt
+
+plt.plot(history.history['accuracy'], label='Train Accuracy')
+plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
+plt.xlabel('Epochs')
+plt.ylabel('Accuracy')
+plt.legend()
+plt.title('Model Accuracy')
+plt.show()
+
+#
+
+sample_review = "This movie was absolutely amazing, I loved every bit of it!"
+
+# Step 1: Preprocess
+sample_seq = tokenizer.texts_to_sequences([sample_review])
+sample_pad = pad_sequences(sample_seq, maxlen=max_length, padding='post', truncating='post')
+
+# Step 2: Predict
+prediction = model.predict(sample_pad)
+
+# Step 3: Interpret
+print(f"Confidence Score: {prediction[0][0]}")
+if prediction[0][0] > 0.5:
+    print("Predicted Sentiment: Positive 😊")
+else:
+    print("Predicted Sentiment: Negative 😞")

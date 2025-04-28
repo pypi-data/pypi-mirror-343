@@ -1,0 +1,122 @@
+import pandas as pd
+import numpy as np
+import tensorflow as tf
+from tensorflow import keras
+from keras import layers
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import r2_score,mean_squared_error,mean_absolute_error
+
+#
+
+import random
+seed_value=42 
+random.seed(seed_value)
+np.random.seed(seed_value)
+tf.random.set_seed(seed_value)
+
+#
+
+data=pd.read_csv("boston_housing.csv")
+data.head()
+
+#
+
+data.isnull().sum()
+
+#
+
+data.info()
+
+#
+
+data.describe()
+
+#
+
+x=data.drop(columns=["MEDV"])
+y=data["MEDV"].values
+
+#
+
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=42)
+
+#
+
+scaler=StandardScaler()
+x_train=scaler.fit_transform(x_train)
+x_test=scaler.transform(x_test)
+
+#
+
+model=tf.keras.Sequential([
+    tf.keras.layers.Input(shape=(13,),name='input-layer'),
+    tf.keras.layers.Dense(128,activation='relu',name='hidden-layer-1'),
+    tf.keras.layers.BatchNormalization(name='batch-normalization-1'),
+    tf.keras.layers.Dropout(0.2,name='dropout-layer-1'),
+    tf.keras.layers.Dense(64,activation='relu',name='hidden-layer-2'),
+    tf.keras.layers.BatchNormalization(name='batch-normalization-2'),
+    tf.keras.layers.Dropout(0.2,name='dropout-layer-2'),
+    tf.keras.layers.Dense(1,name='output-layer')
+])
+
+#
+
+model.compile(optimizer="adam",loss="mean_squared_error")
+
+#
+
+history=model.fit(x_train,y_train,epochs=100,batch_size=32,validation_data=(x_test,y_test))
+
+#
+
+y_pred=model.predict(x_test)
+
+#
+    
+model.summary()
+
+#
+
+mse=mean_squared_error(y_test,y_pred)
+rmse=np.sqrt(mse)
+r2=r2_score(y_test,y_pred)
+mae=mean_absolute_error(y_test,y_pred)
+
+#
+
+print(f'Mean Squared Error (MSE): {mse}')
+print(f'Root Mean Squared Error (RMSE): {rmse}')
+print(f'R² Score: {r2}')
+print(f'Mean Absolute Error (MAE): {mae}')
+
+#
+
+import matplotlib.pyplot as plt
+# Plotting predicted vs actual values
+plt.figure(figsize=(8,6))
+plt.scatter(y_test, y_pred, color='blue', alpha=0.6)
+plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], color='red', linestyle='--')  # Ideal line
+plt.title('Predicted vs Actual Values')
+plt.xlabel('Actual Prices')
+plt.ylabel('Predicted Prices')
+plt.show()
+
+#
+
+# Plotting training and validation loss curves
+plt.plot(history.history['loss'], label='Training Loss')
+plt.plot(history.history['val_loss'], label='Validation Loss')
+plt.title('Training and Validation Loss')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.legend()
+plt.show()
+
+#
+
+
+
+
+
+
