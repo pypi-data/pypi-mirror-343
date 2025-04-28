@@ -1,0 +1,12 @@
+tdavec/__init__.py,sha256=5c2fZv04IoyRRTINYmhXsxEQfl5MxGvfPbkNkw8fg58,370
+tdavec/tdavec_core.c,sha256=TeP0ksF81sq_819HlJvymDQQz65vd0TcO7Ub0boEaOM,2009748
+tdavec/tdavec_core.cpython-312-darwin.so,sha256=p7BU0va3i3SSlUvLHgYmc90NqcOZRyw4GFxyUxt4Fk4,475136
+tdavec/tdavec_core.pyx,sha256=ClyYaQ-SjyxivNz3-S915mtdOQTWlkvQ4l_m1Bc261k,25261
+tdavec/unit_test.py,sha256=LF5t4LGrISx3Cv4NGC2F2tdAqc1PB5yNUI1bR0VqN_Q,12298
+tdavec/vectorizer.py,sha256=KIpOynoMzvNM1MEa-QBwaTfCtzVsXqfkH8aLTl8gdTI,6882
+tdavec-0.1.41.dist-info/licenses/LICENSE,sha256=qkMqFKex3g54YzVCFqmxoY7ifXsDbaUVFtWtnJeCJx8,1068
+tdavec-0.1.41.dist-info/licenses/LICENSE.md,sha256=WF4l749ZRqUr8q7WjVvs_Di-lKhmOqAcGzHYiqV_HeM,34904
+tdavec-0.1.41.dist-info/METADATA,sha256=1ffDk_80gCJnaLDxivKHvE2-m0ElaXm8JN_aw2RBfk8,178
+tdavec-0.1.41.dist-info/WHEEL,sha256=jNkZNt5A4LdgCbVLVScFqKo27Rt-Q4PNPfVE--qAA54,111
+tdavec-0.1.41.dist-info/top_level.txt,sha256=Z_sd0jf1Hp8k-bkKnevQ_MP12TCtLGuwqb8fQTXXrwE,7
+tdavec-0.1.41.dist-info/RECORD,,

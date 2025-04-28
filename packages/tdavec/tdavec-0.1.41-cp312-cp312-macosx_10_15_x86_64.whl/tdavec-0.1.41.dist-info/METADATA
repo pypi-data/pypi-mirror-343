@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: tdavec
+Version: 0.1.41
+License-File: LICENSE
+License-File: LICENSE.md
+Requires-Dist: numpy==1.26.4
+Requires-Dist: ripser==0.6.8
+Dynamic: license-file
