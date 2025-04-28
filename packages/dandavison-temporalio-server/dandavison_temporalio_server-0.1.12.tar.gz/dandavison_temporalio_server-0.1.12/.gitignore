@@ -1,0 +1,11 @@
+__pycache__/
+.hatch/
+.venv
+*.egg-info
+*.tar.gz
+*.zip
+build/
+dist/
+src/temporalio_server/bin/
+temp_build_test_bin/
+wheels/
