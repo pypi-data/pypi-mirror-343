@@ -1,0 +1,65 @@
+[project]
+name = "errortrace-pro"
+version = "0.3.0"
+description = "Enhanced exception handling for Python with visual tracebacks, solution suggestions, and cloud logging"
+authors = [
+    {name = "Hamed Esam", email = "info@hamedesam.info"},
+]
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Debuggers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["exception", "traceback", "debugging", "error handling", "cloud logging"]
+dependencies = [
+    "colorama>=0.4.4",
+    "rich>=13.8.1",
+]
+
+[project.optional-dependencies]
+rich = ["rich>=10.0.0"]
+cli = ["click>=7.0.0"]
+all = [
+    "rich>=10.0.0",
+    "click>=7.0.0",
+    "flask>=2.0.0",
+]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "isort>=5.0.0",
+    "build>=0.10.0",
+    "twine>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Hamed233/ErrorTrace-Pro"
+Issues = "https://github.com/Hamed233/ErrorTrace-Pro/issues"
+
+[project.scripts]
+errortrace = "errortrace_pro.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["errortrace_pro"]
+
+[tool.setuptools.package-data]
+errortrace_pro = ["data/*.json"]
