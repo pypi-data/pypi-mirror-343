@@ -1,0 +1,20 @@
+{
+    "name": "Signal Indicator Functionality",
+    "module": "Energizer Sub-1GHz",
+    "purpose": "Test functionality for supported sub1g signal indicator cycle & repetitions sets of values",
+    "documentation": "https://community.wiliot.com/customers/s/article/Wiliot-Network-Sub1-Ghz-Energizer-module",
+    "initialCondition": "1 GW and at least 1 BRG configured to defaults",
+    "procedure": ["Test prolog",
+    "rssi_threshold - check the if rssi value is between 0 to -25.",
+    "brg0_tx_brg1_rx (for all EP's)- one brg is transmitter and the second is receiver, we expect to receive signal indicator packets for all energy patterns",
+    "brg0_tx_brg1_rx ( only israel ep) - one brg is transmitter and the second is receiver, we expect to receive signal indicator packets in the specified energy pattern",
+    "brg0_none_brg1_rx - One BRG will be configured as signal indicator rx, but no tx, so we don't expect to receive signal indicator packets.",
+    "brg0_rxtx_brg1_rxtx - Both BRG's will be configured to be transmitters and receivers, with different tx params for each one. we expect to see signal indicator packets from both BRG's, according to the tx params.",
+    "Test epilog"],
+    "expectedOutcome": "All phases passes successfully",
+    "mandatory": 0,
+    "multiBridgeTest": 1,
+    "gwOnlyTest": 0,
+    "internalBridge": 1,
+    "allSupportedValues": []
+}
