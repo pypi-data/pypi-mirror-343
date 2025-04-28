@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: algoinfinite
+Version: 0.1.7
+Summary: A collection of algorithms and data structures in Python.
+Home-page: UNKNOWN
+Author: Madan Mohan Behera
+Author-email: madanmohan14072002@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# AlgoInfinite
+
+A collection of algorithms and data structures in Python.
+
+## Installation
+
+```bash
+pip install algoinfinite
+
+```
+## Usage
+
+```python
+from algoinfinite import *
+```
+
+## Command Line Usage
+```bash
+madan-hello
+```
+## Included workflows
+- **algoinfinite**: A collection of algorithms and data structures in Python.
+
