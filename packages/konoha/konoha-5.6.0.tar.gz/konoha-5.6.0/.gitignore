@@ -1,0 +1,14 @@
+__pycache__
+
+.*
+!.gitignore
+!.github
+
+/build
+/dist
+/konoha.egg-info
+
+# Sphinx documentation
+docs/build/
+
+/venv
