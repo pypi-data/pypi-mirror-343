@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "impactmap"
+version = "0.0.3"
+description = "Official Python SDK for the ImpactMap API"
+authors = [
+    { name = "ImpactMap.io" }
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "requests>=2.25.1"
+]
