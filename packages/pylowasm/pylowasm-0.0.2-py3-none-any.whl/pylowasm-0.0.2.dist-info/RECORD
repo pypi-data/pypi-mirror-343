@@ -1,0 +1,12 @@
+pylowasm/__init__.py,sha256=kEXamFC9qsuW2Md933HYqotzTF-C3Hjz92qBIKb4sA4,4179
+pylowasm/pyregister.py,sha256=pBoLIFZvNk_pBp6cWLGx4hHMxDCCzaNDIPJ40KX9RC8,1588
+pylowasm/bin/32/libpyregister.a,sha256=k5XR8evHoWd2WaOm8H9RaZGimJTr_HrQT4eu1yb8nsw,3214
+pylowasm/bin/32/libpyregister.so,sha256=IdzDB2M-wPK7jzF-db4veIKcut7KgUeciRPYPVXMmLQ,37592
+pylowasm/bin/32/pyregister.dll,sha256=i_5GXwBOelcBqt9vCYGDcXmyXvhUWwUkgfccpnhjhuo,2548717
+pylowasm/bin/64/libpyregister.a,sha256=3qQtzoPtXeGErubtS0dtGmnP2kRtndYZa2RrKpLUD5g,3774
+pylowasm/bin/64/libpyregister64.so,sha256=9DgYEOK_soTUuzelnqo4Ce2YtqmmcSWDKfATuREJZtI,1927712
+pylowasm/bin/64/pyregister.dll,sha256=lKULZ7YK73X141YE5gs-fbp6vYsEf-d4wiwqoFzkOec,2552647
+pylowasm-0.0.2.dist-info/METADATA,sha256=EwriE8DsXAW-lVV43rK4BH3BWsudc499zxnqWn_5Zrs,292
+pylowasm-0.0.2.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+pylowasm-0.0.2.dist-info/top_level.txt,sha256=ivALsanheWW8lCHZVMSwqi7O1HPjpfxy_ZPXNBOgSpM,9
+pylowasm-0.0.2.dist-info/RECORD,,
