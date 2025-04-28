@@ -1,0 +1,47 @@
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.3.5",
+    "pytest-asyncio>=0.26.0",
+    "ipdb>=0.13.13",
+]
+
+[project]
+name = "tinybridge"
+version = "0.1.4"
+description = "TinyDB bridge implementation for asyncio-based applications"
+readme = "README.md"
+license = "MIT"
+authors = [
+  { name = "Anton Petrov", email = "mrprfrm@gmail.com" },
+]
+requires-python = ">=3.9"
+classifiers = [
+    "Topic :: Database",
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Developers",
+    "Typing :: Typed",
+]
+license-files = ["LICEN[CS]E*"]
+dependencies = ["tinydb", "result"]
+
+[project.urls]
+Homepage = "https://github.com/mrprfrm/tinybridge"
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+only-include = [
+    "README.md",
+    "LICENSE",
+    "tinybridge",
+    "tests",
+]
+
+[tool.hatch.build.targets.wheel]
+only-include = ["tinybridge", "LICENSE", "README.md"]
