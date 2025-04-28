@@ -1,0 +1,9 @@
+temporalio_server/__init__.py,sha256=XP5M7c9D-FSGCMCoi0GfrnKKbJF8lL3kEJ2WY9ohXfk,8805
+temporalio_server/main.py,sha256=xHFyxjS_LCjv641Bur2AtFMqG8dCdGIy2DGPgs5CabI,1530
+temporalio_server/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+temporalio_server/bin/temporal.exe,sha256=1IIHuru6nXD29yi3UEGAwLWX_6BOtOHs1B1lianklyU,105995776
+dandavison_temporalio_server-0.1.12.dist-info/METADATA,sha256=psxfKwpxAPOP4D83tMqL_N48uCNd4PVdWqEg2cUrULU,3079
+dandavison_temporalio_server-0.1.12.dist-info/WHEEL,sha256=sMxNQqJ4t1Gl5kWicXn8u0iE51JTYdfcyZmUTVjj7dk,96
+dandavison_temporalio_server-0.1.12.dist-info/entry_points.txt,sha256=zWYL5MzeygJOuIYf1p8FbB655ShtmGSQb8SS_19_s2E,63
+dandavison_temporalio_server-0.1.12.dist-info/licenses/LICENSE,sha256=3qSam6SotsNrcCaZBrAEdMs2MRrQp0bKp3CYhixPXKQ,1088
+dandavison_temporalio_server-0.1.12.dist-info/RECORD,,
