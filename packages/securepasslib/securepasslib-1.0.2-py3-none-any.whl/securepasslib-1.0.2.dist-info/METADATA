@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: securepasslib
+Version: 1.0.2
+Summary: Secure password validation, strength analysis, generation, and breach checking library
+Home-page: https://github.com/mituso89/securepass
+Author: Tuan Nguyen
+Author-email: nguyenhuutuan1306@gmail.com
+Project-URL: Documentation, https://github.com/mituso89/securepasslib
+Project-URL: Source, https://github.com/mituso89/securepasslib
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: click
+
+# SecurePassLib 🔒
+
+A professional Python library for secure password management:  
+✅ Password validation  
+✅ Password strength analysis  
+✅ Breach checking (HaveIBeenPwned API)  
+✅ Secure password generation  
+✅ CLI tool support  
+
+Built with security standards and flexibility in mind.
+
+---
+
+## ✨ Features
+
+- **Password Validation**
+  - Customizable password policies (min length, digits, specials, etc.)
+  - Predefined validation errors for easy integration.
+
+- **Password Strength Analysis**
+  - Entropy calculation (bits) based on character pool size.
+  - Text-based strength scoring (Very Weak → Very Strong).
+  - Smart password improvement suggestions.
+
+- **Password Generation**
+  - Random secure password generator.
+  - Template-based password generation (customizable patterns like `LL-DD-SS`).
+  - Word-based, human-friendly password formats.
+
+- **Password Breach Checking**
+  - Safe checking using k-Anonymity model against HaveIBeenPwned API.
+  - No full password is ever sent to external servers.
+
+- **CLI Tools**
+  - Generate, validate, analyze, breach-check passwords directly from terminal.
+
+---
+
+## 📦 Installation
+
+```bash
+pip install securepasslib
+
+
+
