@@ -1,0 +1,20 @@
+{
+    "name": "Signal Indicator BLE5 E2/E3 Pixels",
+    "module": "Energizer 2.4GHz",
+    "purpose": "verify Energizer 2.4GHz signal indicator functionality for BLE_5.0 in CHANNEL_10 for E2/E3 pixels modulation",
+    "documentation": "https://community.wiliot.com/customers/s/article/Bridge-to-Bridge-Signal-Indicator",
+    "initialCondition": "Bridge configured to defaults",
+    "procedure": ["Test prolog",
+    "rssi_threshold - check the if rssi value is between 0 to -25.",
+    "brg0_tx_brg1_rx - one brg is transmitter and the second is receiver, we expect to get the same values from the receiver, according to the tx params",
+    "brg0_none_brg1_rx - One rx BRG without any tx BRG. We don't expect to see any signal indicator packets.",
+    "brg0_rxtx_brg1_rxtx - Both BRG's will be configured to be transmitters and receivers, with different tx params for each one. we expect to see signal indicator packets from both BRG's, according to the tx params.",
+    "brg0_tx_brg1_none - One BRG will be configured as signal indicator tx, but no rx, so we don't expect to receive signal indicator packets.",
+    "Test epilog"],
+    "expectedOutcome": "All phases passed successfully!",
+    "mandatory": 0,
+    "multiBridgeTest": 1,
+    "gwOnlyTest": 0,
+    "internalBridge": 1,
+    "allSupportedValues": ["rssi_threshold", "brg0_tx_brg1_rx", "brg0_none_brg1_rx", "brg0_rxtx_brg1_rxtx", "brg0_tx_brg1_none"]
+}
