@@ -1,0 +1,205 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🧮 Main Commands for Using gSOMOs &mdash; gSOMOs 0.9.5 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="canonical" href="https://gsomos.readthedocs.io/SOMOs_examples.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=61b282d3"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="📚 Dependencies" href="SOMOs_dependencies.html" />
+    <link rel="prev" title="📄 Scientific Documentation" href="SOMOs_SciDoc.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            gSOMOs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="SOMOs_SciDoc.html">📄 Scientific Documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">🧮 Main Commands for Using gSOMOs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#load-gaussian-log-files">📂 Load Gaussian Log Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analyze-cosine-similarity-between-orbitals">📈 Analyze Cosine Similarity Between Orbitals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-routine">Main routine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heatmap">Heatmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tsne-analyzis-and-plot">tSNE analyzis and plot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#projection-analysis">📊 Projection Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Main routine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Heatmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#projection-of-the-occupied-alpha-mos-on-the-space-spanned-by-the-beta-occupied-mos">Projection of the occupied alpha MOs on the space spanned by the beta occupied MOs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SOMOs_dependencies.html">📚 Dependencies</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">gSOMOs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">🧮 Main Commands for Using gSOMOs</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/SOMOs_examples.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="main-commands-for-using-gsomos">
+<h1>🧮 Main Commands for Using gSOMOs<a class="headerlink" href="#main-commands-for-using-gsomos" title="Link to this heading"></a></h1>
+<div style="text-align: center;">
+  <img src="_static/pyPCBanner.svg" alt="gSOMOs Banner" width="800px">
+</div>
+<br>
+<p>This page summarizes the essential commands you need to use gSOMOs, along with a short explanation for each.
+Working examples are vailable in a <a class="reference external" href="https://github.com/rpoteau/gSOMOs/blob/main/SOMOs-examples.ipynb">gSOMOs Examples Jupyter Notebook on GitHub</a></p>
+<hr class="docutils" />
+<section id="load-gaussian-log-files">
+<h2>📂 Load Gaussian Log Files<a class="headerlink" href="#load-gaussian-log-files" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">somos</span><span class="w"> </span><span class="kn">import</span> <span class="n">io</span>
+
+<span class="n">alpha_df</span><span class="p">,</span> <span class="n">beta_df</span><span class="p">,</span> <span class="n">alpha_mat</span><span class="p">,</span> <span class="n">beta_mat</span><span class="p">,</span> <span class="n">nbasis</span><span class="p">,</span> <span class="n">overlap_matrix</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">load_mos_from_cclib</span><span class="p">(</span><span class="n">logfolder</span><span class="p">,</span> <span class="n">logfile</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>→ Loads alpha and beta molecular orbitals, coefficients, overlap matrix, and other information from a Gaussian log file. It is usually done internally. Whatever the way you decide to load a G09 or G16 log file - that can be gzipped to save disk space - dont forget to initialize <code class="docutils literal notranslate"><span class="pre">logfolder</span></code> (eg <code class="docutils literal notranslate"><span class="pre">logfolder</span> <span class="pre">=</span> <span class="pre">&quot;./logs&quot;</span></code>) and <code class="docutils literal notranslate"><span class="pre">logfile</span></code> (eg <code class="docutils literal notranslate"><span class="pre">logfile</span></code> = “H2CO.log.gz”)</p>
+</section>
+<hr class="docutils" />
+<section id="analyze-cosine-similarity-between-orbitals">
+<h2>📈 Analyze Cosine Similarity Between Orbitals<a class="headerlink" href="#analyze-cosine-similarity-between-orbitals" title="Link to this heading"></a></h2>
+<section id="main-routine">
+<h3>Main routine<a class="headerlink" href="#main-routine" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">somos</span><span class="w"> </span><span class="kn">import</span> <span class="n">cosim</span>
+
+<span class="n">listMOs</span><span class="p">,</span> <span class="n">coeffMOs</span><span class="p">,</span> <span class="n">nBasis</span><span class="p">,</span> <span class="n">dfSOMOs</span><span class="p">,</span> <span class="n">S</span> <span class="o">=</span> <span class="n">cosim</span><span class="o">.</span><span class="n">analyzeSi</span> <span class="n">milarity</span><span class="p">(</span><span class="n">logfolder</span><span class="p">,</span> <span class="n">logfile</span><span class="p">)</span>
+
+<span class="n">cosim</span><span class="o">.</span><span class="n">save_similarity_per_somo_from_df</span><span class="p">(</span><span class="n">dfSOMOs</span><span class="p">,</span> <span class="n">listMOs</span><span class="p">,</span> <span class="n">coeffMOs</span><span class="p">,</span> <span class="n">nBasis</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">logfolder</span><span class="p">,</span> <span class="n">logfile</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>→ Calculates cosine similarities between alpha and beta orbitals to identify SOMO candidates. Saves results to Excel files.</p>
+</section>
+<section id="heatmap">
+<h3>Heatmap<a class="headerlink" href="#heatmap" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cosim</span><span class="o">.</span><span class="n">heatmap_MOs</span><span class="p">(</span><span class="n">listMOs</span><span class="p">,</span> <span class="n">coeffMOs</span><span class="p">,</span> <span class="n">nBasis</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">logfolder</span><span class="p">,</span> <span class="n">logfile</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>→ Interactive cosine similarity heatmap between alpha and beta MOs around the HOMO-LUMO frontier</p>
+</section>
+<section id="tsne-analyzis-and-plot">
+<h3>tSNE analyzis and plot<a class="headerlink" href="#tsne-analyzis-and-plot" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cosim</span><span class="o">.</span><span class="n">tsne</span><span class="p">(</span><span class="n">listMOs</span><span class="p">,</span> <span class="n">coeffMOs</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">logfolder</span><span class="p">,</span><span class="n">logfile</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>→ Performs a t-SNE projection of molecular orbitals (alpha and beta) using a cosine similarity
+metric invariant to phase, and displays an interactive Plotly visualization</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="projection-analysis">
+<h2>📊 Projection Analysis<a class="headerlink" href="#projection-analysis" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3>Main routine<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">somos</span><span class="w"> </span><span class="kn">import</span> <span class="n">proj</span>
+
+<span class="n">df_proj</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">proj</span><span class="o">.</span><span class="n">project_occupied_alpha_onto_beta</span><span class="p">(</span><span class="n">logfolder</span><span class="p">,</span> <span class="n">logfile</span><span class="p">)</span>
+<span class="n">proj</span><span class="o">.</span><span class="n">projection_heatmap_from_df</span><span class="p">(</span><span class="n">df_proj</span><span class="p">,</span> <span class="n">logfolder</span><span class="p">,</span> <span class="n">logfile</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>→ Projects occupied alpha orbitals onto virtual beta orbitals and generates a heatmap of the projection matrix.</p>
+</section>
+<section id="id2">
+<h3>Heatmap<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">proj</span><span class="o">.</span><span class="n">projection_heatmap_from_df</span><span class="p">(</span><span class="n">df_proj</span><span class="p">,</span> <span class="n">info</span><span class="p">[</span><span class="s2">&quot;nbasis&quot;</span><span class="p">],</span> <span class="n">logfolder</span><span class="p">,</span> <span class="n">logfile</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>→ Generates an interactive heatmap visualization of the main projections
+between occupied/virtual alpha and beta molecular orbitals (MOs) from a Gaussian log file</p>
+</section>
+<section id="projection-of-the-occupied-alpha-mos-on-the-space-spanned-by-the-beta-occupied-mos">
+<h3>Projection of the occupied alpha MOs on the space spanned by the beta occupied MOs<a class="headerlink" href="#projection-of-the-occupied-alpha-mos-on-the-space-spanned-by-the-beta-occupied-mos" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">somos</span><span class="w"> </span><span class="kn">import</span> <span class="n">proj</span>
+
+<span class="n">proj</span><span class="o">.</span><span class="n">diagonalize_alpha_occ_to_beta_occ_and_virt_separately</span><span class="p">(</span><span class="n">logfolder</span><span class="p">,</span><span class="n">logfile</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>→ Projects occupied alpha orbitals separately onto beta occupied and beta virtual subspaces,
+diagonalizes the two projection matrices, and analyzes dominant contributions</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="SOMOs_SciDoc.html" class="btn btn-neutral float-left" title="📄 Scientific Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="SOMOs_dependencies.html" class="btn btn-neutral float-right" title="📚 Dependencies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Romuald Poteau.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

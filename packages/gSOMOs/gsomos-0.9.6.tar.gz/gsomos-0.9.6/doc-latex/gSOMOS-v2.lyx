@@ -1,0 +1,2178 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children no
+\language english
+\language_package none
+\inputencoding utf8
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family sfdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+SOMO Identification
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+
+\size footnotesize
+R.
+ Poteau,
+ romuald.poteau@univ-tlse3.fr,
+ LPCNO
+\end_layout
+
+\begin_layout Date
+
+\size footnotesize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+To identify singly occupied molecular orbitals (
+\series bold
+SOMOs
+\series default
+) in open-shell systems,
+ we employed two complementary schemes:
+ (i) orbital projection analysis,
+ and (ii) cosine similarity mapping.
+ Both approaches compare the sets of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ molecular orbitals obtained from unrestricted calculations.
+ The projection scheme evaluates the squared overlap of each 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ orbital with the 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbital space using the atomic orbital overlap matrix,
+ allowing for a quantitative decomposition of each 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ orbital across the 
+\begin_inset Formula $\beta$
+\end_inset
+
+ manifold.
+ In contrast,
+ the cosine similarity approach measures the angular similarity between 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbitals based on their MO coefficients,
+ identifying pairs of orbitals with nearly identical spatial character.
+ Together,
+ these methods help identify SOMOs as occupied 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ orbitals that lack a clear counterpart among the occupied 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbitals.
+ Instead,
+ they show strong projections onto the 
+\begin_inset Formula $\beta$
+\end_inset
+
+ virtual space and minimal overlap with the 
+\begin_inset Formula $\beta$
+\end_inset
+
+ occupied space —
+ a characteristic signature of magnetic (unpaired) molecular orbitals in open-shell systems.
+\end_layout
+
+\begin_layout Section
+Similarity schemes
+\end_layout
+
+\begin_layout Subsection
+Projection of occupied 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ MOs onto the 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbital space
+\end_layout
+
+\begin_layout Standard
+Given a Gaussian log file from an unrestricted DFT calculation,
+ we extract the molecular orbital (MO) coefficients for both 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbitals (
+\family typewriter
+pop=full
+\family default
+ keyword),
+ along with the AO overlap matrix 
+\begin_inset Formula $\boldsymbol{S}$
+\end_inset
+
+ (
+\family typewriter
+iop(3/33=1)
+\family default
+ keyword) and the printing of the basis set (
+\family typewriter
+gfprint gfinput
+\family default
+ keywords).
+ The analysis focuses on evaluating how each occupied 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ orbital projects onto the full space spanned by all 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbitals,
+ which includes both occupied and virtual ones.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\boldsymbol{\Phi}_{i}^{\alpha}\in\mathbb{R}^{1\times n_{\text{basis}}}$
+\end_inset
+
+ be the coefficient vector of the 
+\begin_inset Formula $i$
+\end_inset
+
+-th occupied 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ orbital,
+ and let 
+\begin_inset Formula $\boldsymbol{\Phi}^{\beta}\in\mathbb{R}^{N\times n_{\text{basis}}}$
+\end_inset
+
+ be the matrix of all 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbitals stored row-wise,
+ where 
+\begin_inset Formula $N=n_{\beta}$
+\end_inset
+
+ is the total number of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbitals.
+ The projection vector is computed as:
+ 
+\begin_inset Formula 
+\[
+\mathbf{v}_{i}=<\phi_{i}^{\alpha}|\phi^{\beta}>=\boldsymbol{\Phi}_{i}^{\alpha}\cdot\boldsymbol{S}\cdot(\boldsymbol{\Phi}^{\beta})^{T}\in\mathbb{R}^{1\times N}
+\]
+
+\end_inset
+
+The squared norm 
+\begin_inset Formula $\|\mathbf{v}_{i}\|^{2}$
+\end_inset
+
+ gives the total overlap of the 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ orbital with the 
+\begin_inset Formula $\beta$
+\end_inset
+
+ space.
+\end_layout
+
+\begin_layout Standard
+To differentiate between the contributions from occupied and virtual 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbitals,
+ we split the projection:
+ 
+\begin_inset Formula 
+\begin{align*}
+\mathbf{v}_{i}^{\text{occ}} & =<\phi_{i}^{\alpha}|\phi_{\mathrm{occ}}^{\beta}>=\boldsymbol{\Phi}_{i}^{\alpha}\cdot\boldsymbol{S}\cdot(\boldsymbol{\Phi}_{\text{occ}}^{\beta})^{T}\\
+\mathbf{v}_{i}^{\text{virt}} & =<\phi_{i}^{\alpha}|\phi_{\mathrm{virt}}^{\beta}>=\boldsymbol{\Phi}_{i}^{\alpha}\cdot\boldsymbol{S}\cdot(\boldsymbol{\Phi}_{\text{virt}}^{\beta})^{T}
+\end{align*}
+
+\end_inset
+
+We then compute:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\|\mathbf{v}_{i}^{\text{occ}}\|^{2}$
+\end_inset
+
+ = projection of 
+\begin_inset Formula $|\phi_{i}^{\alpha}>$
+\end_inset
+
+ onto occupied 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbitals
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\|\mathbf{v}_{i}^{\text{virt}}\|^{2}$
+\end_inset
+
+ = projection of 
+\begin_inset Formula $|\phi_{i}^{\alpha}>$
+\end_inset
+
+ onto virtual 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbitals
+\end_layout
+
+\begin_layout Standard
+The total projection norm is decomposed to analyze how concentrated or spread the projection is across 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbitals:
+ 
+\end_layout
+
+\begin_layout Itemize
+The three largest values among the squared projections 
+\begin_inset Formula $v_{ij}^{2}$
+\end_inset
+
+ are summed to compute 
+\series bold
+
+\begin_inset Quotes eld
+\end_inset
+
+Top 1 (%)
+\series default
+
+\begin_inset Quotes erd
+\end_inset
+
+,
+ 
+\series bold
+
+\begin_inset Quotes eld
+\end_inset
+
+Top 2 (%)
+\series default
+
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\series bold
+
+\begin_inset Quotes eld
+\end_inset
+
+Top 3 (%)
+\series default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\series bold
+Top 1 (%)
+\series default
+ can also bee seen as a 
+\series bold
+dominance ratio
+\series default
+,
+ 
+\emph on
+i.e
+\emph default
+.
+ the quantity is defined as the largest single squared projection divided by the total projection norm:
+ 
+\begin_inset Formula $\max_{j}v_{ij}^{2}/\|\mathbf{v}_{i}\|^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The 
+\begin_inset Quotes eld
+\end_inset
+
+
+\series bold
+
+\begin_inset Formula $\beta$
+\end_inset
+
+ MOs >15%
+\series default
+
+\begin_inset Quotes erd
+\end_inset
+
+ column lists all 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbitals contributing more than the specified percentage to the squared projection norm,
+ along with their contribution in the format 
+\begin_inset Formula $[j,p_{j}]$
+\end_inset
+
+,
+ where 
+\begin_inset Formula $j$
+\end_inset
+
+ is the index (1-based) and 
+\begin_inset Formula $p_{j}$
+\end_inset
+
+ the percentage contribution.
+ For the most important contribution,
+ it is nothing else than the 
+\series bold
+dominance ratio
+\series default
+.
+ It provides a direct quantitative decomposition of each 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ orbital onto the 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbital basis.
+ Each entry explicitly identifies the 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbital(s) that significantly compose the corresponding 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ orbital,
+ along with their respective percentage contributions
+\end_layout
+
+\begin_layout Standard
+An orbital is flagged as a 
+\series bold
+SOMO candidate
+\series default
+ if its projection onto the virtual 
+\begin_inset Formula $\beta$
+\end_inset
+
+ space exceeds 0.5 and its projection onto the occupied 
+\begin_inset Formula $\beta$
+\end_inset
+
+ space is below 0.5:
+ 
+\begin_inset Formula 
+\[
+\|\mathbf{v}_{i}^{\text{virt}}\|^{2}>0.5\quad\text{and}\quad\|\mathbf{v}_{i}^{\text{occ}}\|^{2}<0.5
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Cosine similarity of MOs
+\end_layout
+
+\begin_layout Standard
+The identification of singly occupied molecular orbitals (SOMOs) can also be achieved through the computation of the cosine similarity between pairs of molecular orbitals (MOs) derived from unrestricted spin density functional theory (DFT) calculations.
+ Specifically,
+ we computed similarities between 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ spin orbitals,
+ taking into account the non-orthogonality of the basis set used in quantum chemical calculations.
+\end_layout
+
+\begin_layout Standard
+Let us denote two molecular orbital coefficient vectors as 
+\begin_inset Formula $\boldsymbol{\Phi}_{i}^{\alpha}$
+\end_inset
+
+ (for alpha-spin orbitals) and 
+\begin_inset Formula $\boldsymbol{\Phi}_{j}^{\beta}$
+\end_inset
+
+ (for beta-spin orbitals).
+ Each vector has dimensions corresponding to the number of basis functions used in the calculation,
+ denoted by 
+\begin_inset Formula $n_{\text{basis}}$
+\end_inset
+
+.
+ Given the overlap matrix 
+\begin_inset Formula $\boldsymbol{S}$
+\end_inset
+
+ (dimension 
+\begin_inset Formula $n_{\text{basis}}\times n_{\text{basis}}$
+\end_inset
+
+),
+ obtained from the quantum chemistry calculation,
+ the scalar product between two coefficient vectors accounting for basis overlap is defined as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\langle\phi_{i}^{\alpha}|\phi_{j}^{\beta}\rangle=\boldsymbol{\Phi}_{i}^{\alpha T}\boldsymbol{S}\boldsymbol{\Phi}_{j}^{\beta}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus,
+ the cosine similarity between two molecular orbitals 
+\begin_inset Formula $\boldsymbol{\Phi}_{i}^{\alpha}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{\Phi}_{j}^{\beta}$
+\end_inset
+
+ accounting for the basis overlap matrix,
+ 
+\begin_inset Formula $\boldsymbol{S}$
+\end_inset
+
+,
+ is given by:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\text{cosine similarity}(\boldsymbol{\Phi}_{i}^{\alpha},\boldsymbol{\Phi}_{j}^{\beta})=\frac{\boldsymbol{\Phi}_{i}^{\alpha T}\boldsymbol{S}\Phi_{j}^{\beta}}{\sqrt{\boldsymbol{\Phi}_{i}^{\alpha T}\boldsymbol{S}\boldsymbol{\Phi}_{i}^{\alpha}}\sqrt{\boldsymbol{\Phi}_{j}^{\beta T}\boldsymbol{S}\boldsymbol{\Phi}_{j}^{\beta}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The similarity matrix constructed from these cosine similarities was then used to optimally match 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbitals employing the Hungarian algorithm,
+ ensuring maximal global similarity.
+ Also known as the Kuhn–Munkres algorithm,
+ it is a classic method used to solve the assignment problem:
+ given a cost matrix,
+ it finds the optimal one-to-one assignment (or matching) that minimizes (or maximizes) the total cost (or similarity).
+ It is provided by the 
+\family typewriter
+scipy.optimize.linear_sum_assignment
+\family default
+ function.
+ 
+\end_layout
+
+\begin_layout Standard
+Orbital pairs with high cosine similarity,
+ particularly those involving occupied alpha-spin orbitals matched to virtual beta-spin orbitals (or vice versa),
+ can also be identified as potential candidates for SOMOs.
+ This method provides a robust and quantitatively precise approach to identifying SOMOs in unrestricted DFT calculations,
+ facilitating detailed analyses of electronic structures in open-shell systems.
+\end_layout
+
+\begin_layout Subsection
+Brief discussion
+\end_layout
+
+\begin_layout Standard
+The projection technique quantifies how much each 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ orbital overlaps with the entire 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbital space by computing the squared norm of the projection vector using the AO overlap matrix.
+ This provides an absolute,
+ physically meaningful measure of orbital mixing,
+ especially relevant when analyzing partial spin contamination or magnetic character.
+ In contrast,
+ cosine similarity evaluates the angle between two orbital vectors,
+ yielding a dimensionless similarity score between -1 and 1.
+ It's more suited for comparing the shape of orbitals than their actual physical contribution to each other.
+ While cosine similarity is useful for clustering and pattern recognition,
+ the projection approach is generally more precise when it comes to quantifying actual contributions and mixing between spin orbitals,
+ especially in systems with open-shell or near-degenerate character.
+\end_layout
+
+\begin_layout Section
+Examples
+\end_layout
+
+\begin_layout Subsection
+Formaldehyde (H
+\begin_inset Formula $_{2}$
+\end_inset
+
+CO)
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Projection-of-alpha2beta-H2CO"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+ presents simplified projection data of occupied 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ orbitals onto 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbitals for the lowest triplet state,
+ T
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+,
+ of formaldehyde.
+ It is adapted from the dataframe created by the 
+\family typewriter
+project_occupied_alpha_onto_beta()
+\family default
+ function.
+ Orbitals identified as SOMO indicate significant projection onto virtual 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbitals and negligible projection onto occupied 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbitals.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+alignment document
+wide false
+sideways true
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\size small
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="9">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\boldsymbol{\alpha}$
+\end_inset
+
+
+\series bold
+ MO 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Occ 
+\series default
+
+\begin_inset Formula $\boldsymbol{\alpha}$
+\end_inset
+
+
+\series bold
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Energy (Ha) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+P² 
+\begin_inset Formula $\boldsymbol{\beta_{\mathrm{virt}}}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+P² 
+\begin_inset Formula $\boldsymbol{\beta_{\mathrm{occ}}}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+\begin_inset Formula $\boldsymbol{\beta}$
+\end_inset
+
+ MO* 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Occ 
+\begin_inset Formula $\boldsymbol{\beta}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+SOMO?
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset Formula $\boldsymbol{\beta}$
+\end_inset
+
+ MOs >20%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rowcolor{yellow!30}
+\end_layout
+
+\end_inset
+
+
+\size small
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+O 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+-0.204 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+0.996 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+0.004 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+9 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+V 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Y 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+9:
+ 96.2%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rowcolor{yellow!30}
+\end_layout
+
+\end_inset
+
+
+\size small
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+O 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+-0.367 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+0.895 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+0.105 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+8 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+V 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Y 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+8:
+ 88.4%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+O 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+-0.438 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+0.005 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+0.995 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+7 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+O 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+N 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+7:
+ 97.5%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+O 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+-0.487 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+0.000 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+1.000 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+O 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+N 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+6:
+ 97.9%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+O 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+-0.529 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+0.106 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+0.894 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+5 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+O 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+N 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+5:
+ 89.4%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+O 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+-0.672 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+0.002 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+0.998 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+4 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+O 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+N 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+4:
+ 99.4%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+O 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+-1.096 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+0.001 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+0.999 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+O 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+N 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3:
+ 99.6%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+O 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+-10.238 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+0.000 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+1.000 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+O 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+N 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+2:
+ 100.0%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+O 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+-19.240 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+0.000 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+1.000 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+O 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+N 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family sans
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1:
+ 100.0%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Projection-of-alpha2beta-H2CO"
+
+\end_inset
+
+Projection of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ molecular orbitals onto 
+\begin_inset Formula $\beta$
+\end_inset
+
+ space for formaldehyde (H
+\begin_inset Formula $_{2}$
+\end_inset
+
+CO),
+ highlighting SOMOs.
+ 
+\series bold
+\size small
+P² 
+\begin_inset Formula $\boldsymbol{\beta_{\mathrm{virt}}}$
+\end_inset
+
+
+\series default
+\size default
+ and 
+\series bold
+\size small
+P² 
+\begin_inset Formula $\boldsymbol{\beta_{\mathrm{occ}}}$
+\end_inset
+
+
+\series default
+\size default
+ are 
+\begin_inset Formula $\|\mathbf{v}_{i}^{\text{occ}}\|^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\|\mathbf{v}_{i}^{\text{virt}}\|^{2}$
+\end_inset
+
+ ,
+ respectively (see text)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A heatmap can generated to visualize the main projection contributions of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ molecular orbitals onto 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbitals.
+ The color intensity reflects the percentage contribution of each 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbital to the total projection norm of a given 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ orbital.
+ Only contributions above 20% were retained for clarity.
+ Red dashed lines indicate the HOMO–LUMO frontier for both spin channels (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Similarity-of-alphaWithBeta-H2CO"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+a).
+ This analysis is very close to the heatmap generated after the cosine similarity between 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ MOs (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Similarity-of-alphaWithBeta-H2CO"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+b)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename H2CO_T1_g09_wOverlaps_projection_heatmap-C.png
+	lyxscale 30
+	width 8cm
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename H2CO_T1_g09_wOverlaps_heatmap-C.png
+	lyxscale 30
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Similarity-of-alphaWithBeta-H2CO"
+
+\end_inset
+
+similarity of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ MOs of the first triplet state of H
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+CO around the HOMO-LUMO frontier.
+ (a) Projection of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ MOs onto the full space spanned by all 
+\begin_inset Formula $\beta$
+\end_inset
+
+ orbitals (only contributions above 20% were retained for clarity);
+ (b) Cosine similarity.
+ Dashed lines mark the HOMO/LUMO boundaries for 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ (horizontal) and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ (vertical) spin orbitals.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
