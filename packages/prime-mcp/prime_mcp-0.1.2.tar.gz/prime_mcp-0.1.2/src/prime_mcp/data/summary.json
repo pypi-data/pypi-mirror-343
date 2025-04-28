@@ -1,0 +1,5 @@
+{
+    "issue_id": "JIRA-123",
+    "summary": "The main purpose of this ticket is to implement a feature that stores the Slack token in the AccountInfo table, enabling the notification service to retrieve the token directly from the database instead of fetching it from Slack each time. This enhancement aims to improve the efficiency and reliability of the notification process by reducing external dependencies and latency.\n\nThe ticket outlines the need to update the AccountInfo schema, ensure secure storage of the Slack token, and modify the notification service to utilize the stored token. However, it does not specify the stakeholders, the deployment environment, or the acceptance criteria. Additional details in these areas would be required for a comprehensive implementation plan.",
+    "short": "The task is to implement a feature that saves the Slack token in the AccountInfo table, allowing the notification service to retrieve it from the database for future notifications. This will improve the efficiency and reliability of the notification process by reducing the need to fetch the token from Slack each time."
+}
