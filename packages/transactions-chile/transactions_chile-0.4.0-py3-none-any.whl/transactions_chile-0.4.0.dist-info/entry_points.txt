@@ -1,0 +1,2 @@
+[console_scripts]
+transactions-chile = transactions_chile.cli:main

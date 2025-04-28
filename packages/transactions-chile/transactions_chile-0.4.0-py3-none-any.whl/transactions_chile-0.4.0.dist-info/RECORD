@@ -1,0 +1,9 @@
+transactions_chile/__init__.py,sha256=6DO4R0so3pdJSHSebLoWKFU_dhkJss_Zpht2FJp8iCc,137
+transactions_chile/bank_transactions.py,sha256=NihG_nudVTp1cARlns-5N5YKhgBKlSYuPmLZN4Cx728,23941
+transactions_chile/cli.py,sha256=QYe8Ie479XJh9K50ILsxSDJ1pXmu15JvN8XdT9hDjdo,7052
+transactions_chile/schemas.py,sha256=XkxVrsfV0kRP-Dhf7bZY4aR3awmP8eAOSAoou_E5pCA,336
+transactions_chile-0.4.0.dist-info/METADATA,sha256=79QR69utv7A7zGqX-r1WagqjYNufNgayNvJLqLoaBEE,5989
+transactions_chile-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+transactions_chile-0.4.0.dist-info/entry_points.txt,sha256=UCFpz-8XVhIWrgupZdT6iujmISzdyhSujTzCCAuHN4I,67
+transactions_chile-0.4.0.dist-info/licenses/LICENSE,sha256=wWC1xWHZNW0iKxVb5Bhs5uQ95DApkDFsixb3dD2PGCc,1068
+transactions_chile-0.4.0.dist-info/RECORD,,
