@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+chatgpt_uoapi/__init__.py
+chatgpt_uoapi/app.py
+chatgpt_uoapi.egg-info/PKG-INFO
+chatgpt_uoapi.egg-info/SOURCES.txt
+chatgpt_uoapi.egg-info/dependency_links.txt
+chatgpt_uoapi.egg-info/requires.txt
+chatgpt_uoapi.egg-info/top_level.txt
