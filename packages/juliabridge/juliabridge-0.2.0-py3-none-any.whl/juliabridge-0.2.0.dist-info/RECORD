@@ -1,0 +1,8 @@
+juliabridge/__init__.py,sha256=5qFfMyCZ9kJk1NEBR9F9lH0l9uqMtbfF2UdP38rUP1U,97
+juliabridge/bridge.jl,sha256=yoDe1t9gAJC-RZjK3srLm6DERDu9za9qBPzKEKxUIcQ,2607
+juliabridge/main.py,sha256=8Rpt_u1lDyvNBeendzVCmAQwGygUPrNauEH3QSieVGE,11442
+juliabridge/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+juliabridge-0.2.0.dist-info/METADATA,sha256=UuyyUmOdXrVZaryEiJEJsDMdhVECidq6kPKfwJiR4zM,793
+juliabridge-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+juliabridge-0.2.0.dist-info/licenses/LICENSE,sha256=8YgoZihU2LEDi6PDEfao0bX5hBbGpBRtRy795xTFg6c,1064
+juliabridge-0.2.0.dist-info/RECORD,,
