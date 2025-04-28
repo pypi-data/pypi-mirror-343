@@ -1,0 +1,3 @@
+ 
+recursive-include farewell_package *.png
+recursive-include farewell_package *.mp3
