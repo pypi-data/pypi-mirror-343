@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: lib-fetcher-image
+Version: 1.0
+Summary: Library for search images
+Home-page: https://github.com/YuranIgnatenko/lib-fetch-image
+Author: Yurij
+Author-email: yuran.ignatenko@yanderx.ru
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: fake_useragent
+Requires-Dist: Pillow
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
