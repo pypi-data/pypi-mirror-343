@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+typecli/__init__.py
+typecli/lib.py
+typecli.egg-info/PKG-INFO
+typecli.egg-info/SOURCES.txt
+typecli.egg-info/dependency_links.txt
+typecli.egg-info/top_level.txt

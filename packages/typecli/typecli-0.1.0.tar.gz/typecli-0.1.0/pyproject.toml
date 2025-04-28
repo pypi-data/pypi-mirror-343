@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "typecli"
+version = "0.1.0"
+description = "A declarative CLI Parser"
+authors = [{ name = "peichenzh", email = "1981336562@qq.com" }]
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = ["Programming Language :: Python :: 3"]
