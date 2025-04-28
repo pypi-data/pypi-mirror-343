@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/telegram_sleuth/__init__.py
+src/telegram_sleuth.egg-info/PKG-INFO
+src/telegram_sleuth.egg-info/SOURCES.txt
+src/telegram_sleuth.egg-info/dependency_links.txt
+src/telegram_sleuth.egg-info/top_level.txt
