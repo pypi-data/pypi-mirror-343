@@ -1,0 +1,10 @@
+matplotlib_sankey/__init__.py,sha256=1_BkFKWc5IsotEarp0lzZpFXQBvew07qnplc0_QNUkA,148
+matplotlib_sankey/_patches.py,sha256=3xYWHhAgbBD6yYF_qfqHezchZVAbXFUL9zSGhi-l3_A,3941
+matplotlib_sankey/_plotting.py,sha256=w3EEKSj2QT0XjpUt4juDjVvnPXyTt8VcYpe9BJ35Jow,10580
+matplotlib_sankey/_types.py,sha256=4BhTH8vndjpF8QZjW7l43xLvOdMYlFTPLVcu3KX3a_Q,274
+matplotlib_sankey/_utils.py,sha256=3CwG1cjuqh24tSKTzpvYxM7pew_o9ix0zalVYX0mr-I,3246
+matplotlib_sankey/_version.py,sha256=HfjVOrpTnmZ-xVFCYSVmX50EXaBQeJteUHG-PD6iQs8,22
+matplotlib_sankey-0.2.1.dist-info/licenses/LICENSE,sha256=pKQY7EaklCnxWGJNlxr2OrDtJrb6MuqlcDj-x4jHKmU,1071
+matplotlib_sankey-0.2.1.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+matplotlib_sankey-0.2.1.dist-info/METADATA,sha256=UTPYBlLKk2hJzRVE4up3ZkYZ1FU_PJL4z-pypEEwbjU,2797
+matplotlib_sankey-0.2.1.dist-info/RECORD,,
