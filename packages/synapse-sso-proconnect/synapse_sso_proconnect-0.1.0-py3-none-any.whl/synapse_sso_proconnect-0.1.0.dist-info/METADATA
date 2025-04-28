@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: synapse-sso-proconnect
+Version: 0.1.0
+Summary: A short description of what your package does
+Home-page: https://github.com/jpd/synapse-sso-proconnect
+Author: JPD Tester
+Author-email: jpdtester04@email.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
