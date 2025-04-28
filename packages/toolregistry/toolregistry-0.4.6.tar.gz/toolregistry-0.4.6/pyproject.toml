@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toolregistry"
+version = "0.4.6"
+authors = [{ name = "Oaklight", email = "oaklight@gmx.com" }]
+description = "A library for managing tool registries"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "pydantic>=1.5.1",
+    "loguru>=0.7.3",
+    "deprecated>=1.2.18",
+    "dill>=0.4.0",
+    "httpx>=0.28.1",
+    "fake-useragent>=2.0.0",
+    "beautifulsoup4>=4.13.4",
+]
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.6.0"] # Add mcp optional dependencies here
+openapi = [
+    "prance>=23.6.21.0",
+    "openapi-spec-validator>=0.7.1",
+    "PyYAML>=6.0.2",
+] # Add openapi optional dependencies here
+dev = [
+    "mypy>=1.14.1",
+    "build>=1.2.2.post1",
+    "twine>=6.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Oaklight/ToolRegistry"
+
+# Note: Standard TOML does not support imports from other TOML files
+# When installing with mcp extras (toolregistry[mcp]), Python >= 3.10 is required
+# The mcp package dependencies should be listed in this file
+[tool.setuptools.packages.find]
+where = ["src"]
