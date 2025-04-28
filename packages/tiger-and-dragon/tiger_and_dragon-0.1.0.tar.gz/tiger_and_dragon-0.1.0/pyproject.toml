@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tiger-and-dragon"
+version = "0.1.0"
+description = "A Python script to calculate and display the Heavenly Stem (Jikkan) and Earthly Branch (Eto/Junishi) for a given date."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+# author = { name = "Massn", email = "massn23579@gmail.com" }
+# urls = { Homepage = "https://github.com/your_username/tiger-and-dragon" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.scripts]
+tiger-and-dragon = "tiger_and_dragon.main:main"
+
+[tool.uv]
+dev-dependencies = ["pytest>=8.3.5"]

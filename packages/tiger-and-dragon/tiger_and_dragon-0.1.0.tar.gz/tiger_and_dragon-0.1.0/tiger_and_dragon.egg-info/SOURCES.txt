@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+tiger_and_dragon/main.py
+tiger_and_dragon/test_main.py
+tiger_and_dragon.egg-info/PKG-INFO
+tiger_and_dragon.egg-info/SOURCES.txt
+tiger_and_dragon.egg-info/dependency_links.txt
+tiger_and_dragon.egg-info/entry_points.txt
+tiger_and_dragon.egg-info/top_level.txt

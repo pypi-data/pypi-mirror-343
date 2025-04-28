@@ -1,0 +1,2 @@
+[console_scripts]
+tiger-and-dragon = tiger_and_dragon.main:main
