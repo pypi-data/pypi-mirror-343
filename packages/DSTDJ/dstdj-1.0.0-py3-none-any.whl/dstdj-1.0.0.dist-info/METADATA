@@ -1,0 +1,27 @@
+Metadata-Version: 2.2
+Name: DSTDJ
+Version: 1.0.0
+Summary: SBMP
+Home-page: 
+Author: Daksh Rathod
+Author-email: dakshbrathod@gmail.com
+License: MIT
+Keywords: dstdj
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: keywords
+Dynamic: license
+Dynamic: summary
+
+# SBMP
+
+CHANGE LOG
+==========
