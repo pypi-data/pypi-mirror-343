@@ -1,0 +1,9 @@
+dist
+docs
+hidden
+natural_pdf
+natural_pdf_index
+notebooks
+output
+pdfs
+results
