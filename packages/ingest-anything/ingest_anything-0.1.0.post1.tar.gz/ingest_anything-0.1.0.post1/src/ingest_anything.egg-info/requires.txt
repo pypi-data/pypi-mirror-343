@@ -1,0 +1,8 @@
+chonkie[all]
+llama-index
+llama-index-embeddings-huggingface
+llama-index-vector-stores-qdrant
+fastembed
+pydantic
+pdfitdown
+llama-index-readers-docling
