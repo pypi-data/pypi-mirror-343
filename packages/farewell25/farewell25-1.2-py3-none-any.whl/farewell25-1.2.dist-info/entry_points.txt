@@ -1,0 +1,2 @@
+[console_scripts]
+farewell25 = farewell25.trigger_farewell:show_farewell
