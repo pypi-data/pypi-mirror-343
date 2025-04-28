@@ -1,0 +1,11 @@
+pydantic
+structlog
+numpy
+ollama
+openai
+anthropic
+tiktoken
+parsedatetime
+pytz
+serpapi
+colorama
