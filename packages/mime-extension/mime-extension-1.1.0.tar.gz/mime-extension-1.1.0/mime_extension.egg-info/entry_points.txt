@@ -1,0 +1,2 @@
+[console_scripts]
+mime-extension = mime_extension.main:main
