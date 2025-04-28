@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/smcphub/__init__.py
+src/smcphub/__main__.py
+src/smcphub/server.py
+src/smcphub_server.egg-info/PKG-INFO
+src/smcphub_server.egg-info/SOURCES.txt
+src/smcphub_server.egg-info/dependency_links.txt
+src/smcphub_server.egg-info/requires.txt
+src/smcphub_server.egg-info/top_level.txt
