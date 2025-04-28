@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+ai_tutors/__init__.py
+ai_tutors/client.py
+ai_tutors.egg-info/PKG-INFO
+ai_tutors.egg-info/SOURCES.txt
+ai_tutors.egg-info/dependency_links.txt
+ai_tutors.egg-info/requires.txt
+ai_tutors.egg-info/top_level.txt
