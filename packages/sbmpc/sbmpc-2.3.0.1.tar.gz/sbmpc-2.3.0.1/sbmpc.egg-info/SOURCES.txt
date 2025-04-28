@@ -1,0 +1,9 @@
+LICENSE
+README.txt
+setup.py
+sbmpc/__init__.py
+sbmpc/sbmp.py
+sbmpc.egg-info/PKG-INFO
+sbmpc.egg-info/SOURCES.txt
+sbmpc.egg-info/dependency_links.txt
+sbmpc.egg-info/top_level.txt
