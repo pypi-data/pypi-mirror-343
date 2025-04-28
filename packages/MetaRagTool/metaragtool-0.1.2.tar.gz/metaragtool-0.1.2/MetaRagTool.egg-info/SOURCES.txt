@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+MetaRagTool/__init__.py
+MetaRagTool.egg-info/PKG-INFO
+MetaRagTool.egg-info/SOURCES.txt
+MetaRagTool.egg-info/dependency_links.txt
+MetaRagTool.egg-info/top_level.txt
