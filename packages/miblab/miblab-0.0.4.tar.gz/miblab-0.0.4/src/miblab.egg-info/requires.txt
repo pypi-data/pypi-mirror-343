@@ -1,0 +1,7 @@
+importlib-resources>=1.1.0
+
+[data]
+requests
+
+[report]
+pylatex
